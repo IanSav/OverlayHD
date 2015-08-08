@@ -1,1 +1,1 @@
-This is a test.
+This is the home for the OverlayHD skin and management plugin for use on Beyonwiz T Series PVRs.
