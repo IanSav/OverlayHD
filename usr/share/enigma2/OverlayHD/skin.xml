@@ -1,0 +1,1557 @@
+<skin>
+<!--
+ |	OverlayHD skin based on easy-skin-aus-hd refined and enhanced by IanSav.
+ +-->
+
+	<output id="0">
+		<resolution xres="1280" yres="720" bpp="32" />
+	</output>
+
+	<colors>
+		<color name="Black" value="#00000000" />
+		<color name="Blue" value="#000000ff" />
+		<color name="Coral" value="#00ff7f50" />
+		<color name="Cyan" value="#0000ffff" />
+		<color name="DarkerBlue" value="#0000022b" />
+		<color name="DarkerGrey" value="#00555555" />
+		<color name="DarkGrey" value="#00a9a9a9" />
+		<color name="DeepBlue" value="#00000636" />
+		<color name="DeepGrey" value="#00363636" />
+		<color name="DeepPink" value="#00ff1493" />
+		<color name="DimGrey" value="#00696969" />
+		<color name="DodgerBlue" value="#001e90ff" />
+		<color name="DullBlue" value="#0000056f" />
+		<color name="DullGreen" value="#00389416" />
+		<color name="DullRed" value="#00ff4040" />
+		<color name="DullYellow" value="#00bab329" />
+		<color name="EgyptianBlue" value="#001034A6" />
+		<color name="Gainsboro" value="#00dcdcdc" />
+		<color name="Gold" value="#00f0b400" />
+		<color name="Green" value="#0000ff00" />
+		<color name="Grey" value="#00a0a0a0" />
+		<color name="GreyBlue" value="#004D5375" /><!-- Only in DynDNS -->
+		<color name="Indigo" value="#004b0082" />
+		<color name="LightBlue" value="#0053a9ff" />
+		<color name="LightGrey" value="#00d3d3d3" />
+		<color name="LightRed" value="#00ff2525" />
+		<color name="LightSlateBlue" value="#006565ff" />
+		<color name="Magenta" value="#00ff00ff" />
+		<color name="Maroon" value="#00800000" />
+		<color name="MediumBlue" value="#000000CD" />
+		<color name="MidnightBlue" value="#00191970" />
+		<color name="Navy" value="#00000080" />
+		<color name="Orange" value="#00ffa500" />
+		<color name="OrangeRed" value="#00ff4500" />
+		<color name="OxfordBlue" value="#00002147" />
+		<color name="Pink" value="#00ffc0cb" />
+		<color name="Purple" value="#00800080" />
+		<color name="Red" value="#00ff0000" />
+		<color name="RoyalBlue" value="#004169E1" />
+		<color name="SaddleBrown" value="#008b4513" />
+		<color name="Silver" value="#00c0c0c0" />
+		<color name="Tan" value="#00d2b48c" />
+		<color name="Teal" value="#00008080" />
+		<color name="WarmYellow" value="#00fff000" />
+		<color name="White" value="#00ffffff" />
+		<color name="Yellow" value="#00ffff00" />
+
+		<color name="ScreenBackground" value="#3f000000" />
+		<color name="ScreenSaverBackground" value="#00000000" />
+		<color name="ScreenTransparent" value="#ffffffff" />
+		<color name="MediaBackground" value="Black" />
+		<color name="StatusBackground" value="#ff000000" />
+		<color name="TransparentBackground" value="#ff000000" />
+
+		<color name="BannerBackground" value="Black" /><!-- Defunct - Replace with Border -->
+		<color name="BannerBorder" value="Black" />
+		<color name="BannerClock" value="White" />
+		<color name="BannerTitle" value="White" />
+		<color name="BannerClockWhite" value="#10ffffff" />
+		<color name="BannerClockBlue" value="#1053a9ff" />
+
+		<color name="ButtonBlue" value="#0018188b" />
+		<color name="ButtonGreen" value="#001f771f" />
+		<color name="ButtonRed" value="#009f1313" />
+		<color name="ButtonText" value="White" />
+		<color name="ButtonYellow" value="#00a08500" />
+
+<!--
+ |		These entries were defined for the EPG grid but are now reported as invalid!
+ |		- EntryBackgroundColorNow = "#0000056f"
+ |		- EntryBackgroundColorNowSelected = "#00d8c664"
+ |		- EntryForegroundColorNow = "White"
+ |		- EntryForegroundColorNowSelected = "Black"
+ +-->
+		<color name="EPGBackground" value="Black" />
+		<color name="EPGProgram" value="Gold" />
+		<color name="EPGTimes" value="Grey" />
+		<color name="EPGDuration" value="Grey" />
+		<color name="EPGRating" value="Grey" />
+		<color name="EPGDetails" value="White" />
+		<color name="EPGTimeLineBorderColour" value="ScreenBackground" />
+		<color name="EPGTimeLineColour" value="#00FEE620" />
+		<color name="EPGGridBackground" value="#4100022b" />
+		<color name="EPGEntryBackgroundColor" value="#4100022b" />
+		<color name="EPGEntryBackgroundColorSelected" value="#41333333" />
+		<color name="EPGEntryForegroundColor" value="#00999999" />
+		<color name="EPGEntryForegroundColorSelected" value="White" />
+		<color name="EPGRecordBackgroundColor" value="#41110000" />
+		<color name="EPGRecordBackgroundColorSelected" value="#41333333" />
+		<color name="EPGRecordForegroundColor" value="#00bb0000" />
+		<color name="EPGRecordForegroundColorSelected" value="Red" />
+		<color name="EPGServiceBackgroundColor" value="#4100123b" />
+		<color name="EPGServiceBackgroundColorNow" value="#4100056f" />
+		<color name="EPGServiceForegroundColor" value="#00999999" />
+		<color name="EPGServiceForegroundColorNow" value="White" />
+		<color name="EPGZapBackgroundColor" value="#41001100" />
+		<color name="EPGZapBackgroundColorSelected" value="#41333333" />
+		<color name="EPGZapForegroundColor" value="#00009900" />
+		<color name="EPGZapForegroundColorSelected" value="#0000ff00" />
+		<color name="EPGPIGBackground" value="Black" />
+		<color name="EPGPIGBorder" value="Black" /><!--#0015215b-->
+		<color name="EPGPIGColour" value="WarmYellow" /><!--#00FEE620-->
+		<color name="EPGPIGProgressBackground" value="DeepGrey" />
+		<color name="EPGPIGProgressColour" value="WarmYellow" />
+		<color name="EPGPIGProgressBorder" value="WarmYellow" />
+		<color name="EPGPIGTimeLineBorderColour" value="ScreenBackground" />
+		<color name="EPGPIGTimeLineColour" value="DullYellow" /><!--#00FEE620-->
+		<color name="EPGPIGGridBackground" value="Orange" /><!--#0000022b - Not Used!-->
+		<color name="EPGPIGEntryBackgroundColor" value="DarkerBlue" /><!--#0000022b-->
+		<color name="EPGPIGEntryBackgroundColorSelected" value="Yellow" /><!--#00d8c653-->
+		<color name="EPGPIGEntryForegroundColor" value="White" />
+		<color name="EPGPIGEntryForegroundColorSelected" value="Black" />
+		<color name="EPGPIGRecordBackgroundColor" value="DullRed" /><!--#008a0000-->
+		<color name="EPGPIGRecordBackgroundColorSelected" value="Red" /><!--#00FF3737-->
+		<color name="EPGPIGRecordForegroundColor" value="White" />
+		<color name="EPGPIGRecordForegroundColorSelected" value="Black" />
+		<color name="EPGPIGServiceBackgroundColor" value="DeepBlue" /><!--#0000022b-->
+		<color name="EPGPIGServiceBackgroundColorNow" value="Blue" /><!--#0000056f-->
+		<color name="EPGPIGServiceForegroundColor" value="White" />
+		<color name="EPGPIGServiceForegroundColorNow" value="White" />
+		<color name="EPGPIGZapBackgroundColor" value="DullGreen" /><!--#00006f00-->
+		<color name="EPGPIGZapBackgroundColorSelected" value="Green" /><!--#0055FF37-->
+		<color name="EPGPIGZapForegroundColor" value="White" />
+		<color name="EPGPIGZapForegroundColorSelected" value="Black" />
+
+		<color name="EPGProgramChannel" value="White" />
+		<color name="EPGProgramDateTime" value="White" />
+		<color name="EPGProgramDescription" value="Silver" />
+		<color name="EPGProgramDuration" value="White" />
+		<color name="EPGProgramExtendedDescription" value="Grey" />
+		<color name="EPGProgramName" value="White" />
+
+		<color name="FindCharacter" value="Gold" />
+		<color name="FootnoteBackground" value="ScreenBackground" />
+		<color name="FootnoteText" value="DimGrey" />
+
+		<color name="HelpPress" value="DullYellow" />
+
+		<color name="InfoBackground" value="ScreenBackground" />
+		<color name="InfoBouquet" value="LightBlue" />
+		<color name="InfoBroadcaster" value="LightBlue" />
+		<color name="InfoChannel" value="LightBlue" />
+		<color name="InfoDetailsNext" value="White" />
+		<color name="InfoDetailsNow" value="White" />
+		<color name="InfoDiskStats" value="DullYellow" />
+		<color name="InfoDurationNext" value="LightBlue" />
+		<color name="InfoDurationNow" value="LightBlue" />
+		<color name="InfoFileSizeNext" value="LightBlue" />
+		<color name="InfoFileSizeNow" value="LightBlue" />
+		<color name="InfoLCN" value="LightBlue" />
+		<color name="InfoMediaLength" value="LightBlue" />
+		<color name="InfoMediaName" value="LightBlue" />
+		<color name="InfoProgramNext" value="White" />
+		<color name="InfoProgramNow" value="White" />
+		<color name="InfoProgressBorder" value="Silver" />
+		<color name="InfoRatingNext" value="Grey" />
+		<color name="InfoRatingNow" value="Grey" />
+		<color name="InfoRecording" value="DullRed" />
+		<color name="InfoRecordingProgress" value="DeepGrey" /><!-- #22363636 -->
+		<color name="InfoTimesNext" value="Grey" />
+		<color name="InfoTimesNow" value="Grey" />
+
+		<color name="MenuBackground" value="ScreenBackground" />
+		<color name="MenuSelected" value="DodgerBlue" /><!-- #251357a3 -->
+		<color name="MenuText" value="White" />
+		<color name="MenuTextSelected" value="White" />
+
+		<color name="PictureBackground" value="ScreenBackground" />
+		<color name="PictureLabel" value="DullGreen" />
+		<color name="PictureLabelBorder" value="Black" />
+
+		<color name="Pinstripe" value="DarkerGrey" />
+
+		<color name="Resolution" value="Silver" />
+		<color name="ResolutionBackground" value="ScreenBackground" />
+
+		<color name="ScreenDebug" value="DarkerGrey" />
+		<color name="SMSHelperBackground" value="ScreenBackground" />
+		<color name="SMSHelperText" value="White" />
+
+		<color name="Text" value="White" />
+		<color name="TextBackground" value="ScreenBackground" />
+		<color name="TextIndented" value="Grey" />
+		<color name="TextLabel" value="Grey" />
+		<color name="TextWaiting" value="Gold" />
+
+		<color name="TimeShiftBorder" value="#1130608f" />
+		<color name="TimeShiftData" value="Silver" />
+
+		<color name="TunerBackground" value="ScreenBackground" />
+		<color name="TunerBER" value="#00ff2000" />
+		<color name="TunerBorder" value="#1130608f" />
+		<color name="TunerCurrent" value="#00389416" />
+		<color name="TunerIdle" value="#00666666" />
+		<color name="TunerLabel" value="#0079bfff" />
+		<color name="TunerNormal" value="#00cccccc" />
+		<color name="TunerRecording" value="#00daa82d" />
+
+		<color name="WeatherData" value="White" />
+		<color name="WeatherLabel" value="#008f8f8f" />
+		<color name="WeatherProvider" value="#00ffa500" />
+		<color name="WeatherWait" value="#00dcdcdc" />
+
+		<!-- Enigma2 Hardcoded Colours And Backgrounds -->
+		<color name="transparent" value="#ffffffff" />
+
+		<!-- Legacy Colours Yet To Be Updated / Integrated -->
+		<color name="background" value="#3f000000" />
+		<color name="bluette" value="#006565ff" />
+		<color name="crypt_emm" value="#0c1a58a5" />
+		<color name="darkgrey" value="#00666666" />
+		<color name="foreground" value="#00dddddd" />
+		<color name="grey" value="#00999999" />
+		<color name="infobar-frgrnd" value="#00ff00ff" />
+		<color name="infobar_sunken" value="#0000ff00" />
+		<color name="transparent2" value="#ff000000" />
+		<color name="transpBlack" value="#30000000" />
+		<color name="un252b4247" value="#252b4247" />
+		<color name="un808888" value="#00808888" />
+		<color name="unc3c3c9" value="#00c3c3c9" />
+		<color name="uncccccc" value="#00cccccc" />
+		<color name="window-bg" value="#00333333" />
+		<color name="window-fg" value="#00999999" />
+
+		<!-- Unused colours - Kept here in case they are needed...
+		<color name="abackground" value="#1300070d" />
+		<color name="background2" value="#25000000" />
+		<color name="border1" value="#004872a0" />	# DarkerLightBlue
+		<color name="colorsel" value="#00ffffff" />
+		<color name="crypt_back" value="#25000000" />
+		<color name="crypt_ecm" value="#00bcb5e6" />
+		<color name="dark" value="#00294a6b" />
+		<color name="fondoazul" value="#0001090f" />
+		<color name="listbox" value="#0075a6ff" />
+		<color name="naranja" value="#00daa82d" />
+		<color name="progresoazul" value="#1130608f" />
+		<color name="rds_text_bg" value="#00003258" />
+		<color name="red" value="#00ff2525" />
+		<color name="rssviewtop" value="#00005050" />
+		<color name="rssviewtop2" value="#0038465b" />
+		<color name="rwhite" value="#00ffffff" />
+		<color name="tibline" value="#001d77aa" />
+		<color name="titulos" value="#006cbcf0" />
+		<color name="transpWhite" value="#77ffffff" />
+		<color name="transpyellow" value="#33bab329" />
+		<color name="twhite" value="#10ffffff" />
+		<color name="un0" value="#00000000" />
+		<color name="ungrisalt" value="#11161616" />
+		<color name="white" value="#00ffffff" />
+		-->
+	</colors>
+
+	<fonts>
+		<font name="BannerClock" filename="Roboto-Black.ttf" scale="100" />
+		<font name="BannerTitle" filename="Roboto-Black.ttf" scale="100" />
+
+		<font name="Fancy" filename="goodtime.ttf" scale="100" />
+		<font name="LCD" filename="ds_digital.ttf" scale="100" />
+		<font name="Regular" filename="nmsbd.ttf" scale="100" />
+		<font name="Fine" filename="md_khmurabi_10.ttf" scale="100" />
+		<font name="Replacement" filename="ae_AlMateen.ttf" replacement="1" scale="100" />
+		<font name="Console" filename="tuxtxt.ttf" scale="100" />
+		<font name="Named" filename="Roboto-Bold.ttf" scale="100" />
+		<font name="Named" filename="md_khmurabi_10.ttf" scale="100" />
+		<font name="mediaportal" filename="md_khmurabi_10.ttf" scale="100" />
+		<alias name="Fixed" font="Console" size="20" height="25" />
+		<!--
+		<alias name="Body" font="Regular" size="20" height="25" />
+		<alias name="ChoiceList" font="Regular" size="20" height="25" />
+		<alias name="TextNormal" font="Regular" size="20" height="24" />
+		-->
+	</fonts>
+
+	<windowstyle id="0" type="skinned">
+		<title font="Named;23" offset="20,8" />
+		<!--
+		<color name="Background" color="#30000000" />
+		<color name="LabelForeground" color="#00dddddd" />
+		<color name="ListboxBackground" color="#30000000" />
+		<color name="ListboxForeground" color="#00dddddd" />
+		<color name="ListboxSelectedBackground" color="#251357a3" />
+		<color name="ListboxSelectedForeground" color="White" />
+		<color name="ListboxMarkedBackground" color="#253658a4" />
+		<color name="ListboxMarkedForeground" color="Red" />
+		<color name="ListboxMarkedAndSelectedBackground" color="#253658a4" />
+		<color name="ListboxMarkedAndSelectedForeground" color="#00800000" />
+		<color name="WindowTitleBackground" color="#30000000" />
+		<color name="WindowTitleForeground" color="#0075a6ff" />
+		-->
+		<color name="Background" color="ScreenBackground" />
+		<color name="LabelForeground" color="Text" />
+		<color name="ListboxBackground" color="MenuBackground" />
+		<color name="ListboxForeground" color="MenuText" />
+		<color name="ListboxSelectedBackground" color="MenuSelected" />
+		<color name="ListboxSelectedForeground" color="MenuTextSelected" />
+		<color name="ListboxMarkedBackground" color="MenuBackground" />
+		<color name="ListboxMarkedForeground" color="MenuText" />
+		<color name="ListboxMarkedAndSelectedBackground" color="MenuSelected" />
+		<color name="ListboxMarkedAndSelectedForeground" color="MenuTextSelected" />
+		<color name="WindowTitleBackground" color="ScreenBackground" />
+		<color name="WindowTitleForeground" color="Gold" />
+		<borderset name="bsWindow">
+			<pixmap filename="borders/b_tl.png" pos="bpTopLeft" />
+			<pixmap filename="borders/b_t.png" pos="bpTop" />
+			<pixmap filename="borders/b_tr.png" pos="bpTopRight" />
+			<pixmap filename="borders/b_l.png" pos="bpLeft" />
+			<pixmap filename="borders/b_r.png" pos="bpRight" />
+			<pixmap filename="borders/b_bl.png" pos="bpBottomLeft" />
+			<pixmap filename="borders/b_b.png" pos="bpBottom" />
+			<pixmap filename="borders/b_br.png" pos="bpBottomRight" />
+		</borderset>
+		<borderset name="bsListboxEntry">
+			<pixmap filename="borders/tib-v.png" pos="bpTop" />
+			<pixmap filename="borders/tib-v.png" pos="bpBottom" />
+		</borderset>
+	</windowstyle>
+
+	<windowstyle id="1" type="skinned">
+		<color name="Background" color="Black" />
+		<color name="LabelForeground" color="White" />
+		<color name="ListboxBackground" color="Black" />
+		<color name="ListboxForeground" color="White" />
+		<color name="ListboxSelectedBackground" color="Black" />
+		<color name="ListboxSelectedForeground" color="White" />
+		<color name="ListboxMarkedBackground" color="Black" />
+		<color name="ListboxMarkedForeground" color="White" />
+		<color name="ListboxMarkedAndSelectedBackground" color="Black" />
+		<color name="ListboxMarkedAndSelectedForeground" color="White" />
+		<color name="WindowTitleForeground" color="White" />
+		<color name="WindowTitleBackground" color="Black" />
+	</windowstyle>
+
+<!-- Screen Templates To Provide The Date, Time, Headings And Buttons -->
+
+	<screen name="ScreenTemplate">
+		<panel name="ScreenTemplateDebug" />
+		<panel position="50,35" size="305,25">
+			<panel name="ClockBannerPanel" />
+		</panel>
+		<widget source="Title" render="Label" position="360,30" size="870,35" borderColor="BannerBorder" borderWidth="1" font="BannerTitle;25" foregroundColor="BannerTitle" halign="right" transparent="1" />
+		<eLabel position="50,65" size="1180,2" backgroundColor="Pinstripe" />
+		<eLabel position="50,660" size="1180,2" backgroundColor="Pinstripe" />
+	</screen>
+
+	<screen name="ScreenTemplateDebug">
+		<!--
+		<widget source="global.SkinName" render="Label" position="10,10" size="1260,20" font="Regular;15" foregroundColor="ScreenDebug" transparent="1">
+			<convert type="ConfigEntryTest">config.OverlayHD.show_debugscreens,True</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		-->
+	</screen>
+
+<!-- MENU Button -->
+
+	<screen name="ScreenTemplateButtonMenu">
+		<ePixmap pixmap="buttons/button_block_menu.png" position="50,670" size="50,35" alphatest="blend" transparent="1" />
+	</screen>
+
+<!-- INFO Button -->
+
+	<screen name="ScreenTemplateButtonInfo">
+		<ePixmap pixmap="buttons/button_block_info.png" position="110,670" size="50,35" alphatest="blend" transparent="1" />
+	</screen>
+
+<!--
+ |	When the colour button text variables are rationalised then the two widget definitions
+ |	can be combined into a single definition.
+ +-->
+
+<!-- RED Button -->
+
+	<screen name="ScreenTemplateButtonRed">
+		<ePixmap pixmap="buttons/button_block_red.png" position="170,670" size="225,60" alphatest="on" transparent="1" />
+		<widget name="key_red" position="170,670" size="225,36" backgroundColor="ButtonRed" font="Regular;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget source="key_red" render="Label" position="170,670" size="225,36" backgroundColor="ButtonRed" font="Regular;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
+	</screen>
+
+<!-- GREEN Button -->
+
+	<screen name="ScreenTemplateButtonGreen">
+		<ePixmap pixmap="buttons/button_block_green.png" position="410,670" size="225,60" alphatest="on" transparent="1" />
+		<widget name="key_green" position="410,670" size="225,36" backgroundColor="ButtonGreen" font="Regular;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget source="key_green" render="Label" position="410,670" size="225,36" backgroundColor="ButtonGreen" font="Regular;20" halign="center" foregroundColor="ButtonText" transparent="1" valign="center" zPosition="+1" />
+	</screen>
+
+<!-- YELLOW Button -->
+
+	<screen name="ScreenTemplateButtonYellow">
+		<ePixmap pixmap="buttons/button_block_yellow.png" position="650,670" size="225,60" alphatest="on" transparent="1" />
+		<widget name="key_yellow" position="650,670" size="225,36" backgroundColor="ButtonYellow" font="Regular;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget source="key_yellow" render="Label" position="650,670" size="225,36" backgroundColor="ButtonYellow" font="Regular;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
+	</screen>
+
+<!-- BLUE Button -->
+
+	<screen name="ScreenTemplateButtonBlue">
+		<ePixmap pixmap="buttons/button_block_blue.png" position="890,670" size="225,60" alphatest="on" transparent="1" />
+		<widget name="key_blue" position="890,670" size="225,36" backgroundColor="ButtonBlue" font="Regular;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget source="key_blue" render="Label" position="890,670" size="225,36" backgroundColor="ButtonBlue" font="Regular;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
+	</screen>
+
+<!-- All Four Colour Buttons -->
+
+	<screen name="ScreenTemplateButtonColours">
+		<panel name="ScreenTemplateButtonRed" />
+		<panel name="ScreenTemplateButtonGreen" />
+		<panel name="ScreenTemplateButtonYellow" />
+		<panel name="ScreenTemplateButtonBlue" />
+	</screen>
+
+	<screen name="ScreenTemplateButtonColourBacks">
+		<ePixmap pixmap="buttons/button_block_red.png" position="170,670" size="225,60" alphatest="on" transparent="1" />
+		<ePixmap pixmap="buttons/button_block_green.png" position="410,670" size="225,60" alphatest="on" transparent="1" />
+		<ePixmap pixmap="buttons/button_block_yellow.png" position="650,670" size="225,60" alphatest="on" transparent="1" />
+		<ePixmap pixmap="buttons/button_block_blue.png" position="890,670" size="225,60" alphatest="on" transparent="1" />
+	</screen>
+
+<!-- TEXT Button -->
+
+	<screen name="ScreenTemplateButtonText">
+		<ePixmap pixmap="buttons/button_block_text.png" position="1120,670" size="50,35" alphatest="blend" transparent="1" />
+	</screen>
+
+	<screen name="ScreenTemplateButtonTextVKey">
+		<widget name="VKeyIcon" pixmap="buttons/button_block_text.png" position="1120,670" size="50,35" alphatest="blend" transparent="1" />
+		<panel name="ScreenTemplateSMSHelper" />
+	</screen>
+
+<!-- HELP Button -->
+
+	<screen name="ScreenTemplateButtonHelp">
+		<ePixmap pixmap="buttons/button_block_help.png" position="1180,670" size="50,35" alphatest="blend" transparent="1" />
+	</screen>
+
+<!-- SMS Text Entry Helper Window -->
+
+	<screen name="ScreenTemplateSMSHelper">
+		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="50,350" size="340,250" alphatest="on" transparent="1" zPosition="+1" />
+	</screen>
+
+	<screen name="NumericalTextInputHelpDialog" position="150,195" size="340,250" backgroundColor="ScreenBackground" flags="wfNoBorder" zPosition="+1">
+		<eLabel position="0,0" size="340,2" backgroundColor="Pinstripe" />
+		<eLabel position="0,248" size="340,2" backgroundColor="Pinstripe" />
+		<eLabel position="0,0" size="2,250" backgroundColor="Pinstripe" />
+		<eLabel position="338,0" size="2,250" backgroundColor="Pinstripe" />
+		<widget name="key1" position="10,30" size="105,40" backgroundColor="SMSHelperBackground" font="Console;17" foregroundColor="SMSHelperText" halign="center" valign="center" />
+		<widget name="key2" position="125,30" size="90,40" backgroundColor="SMSHelperBackground" font="Console;17" foregroundColor="SMSHelperText" halign="center" valign="center" />
+		<widget name="key3" position="225,30" size="105,40" backgroundColor="SMSHelperBackground" font="Console;17" foregroundColor="SMSHelperText" halign="center" valign="center" />
+		<widget name="key4" position="10,80" size="105,40" backgroundColor="SMSHelperBackground" font="Console;17" foregroundColor="SMSHelperText" halign="center" valign="center" />
+		<widget name="key5" position="125,80" size="90,40" backgroundColor="SMSHelperBackground" font="Console;17" foregroundColor="SMSHelperText" halign="center" valign="center" />
+		<widget name="key6" position="225,80" size="105,40" backgroundColor="SMSHelperBackground" font="Console;17" foregroundColor="SMSHelperText" halign="center" valign="center" />
+		<widget name="key7" position="10,130" size="105,40" backgroundColor="SMSHelperBackground" font="Console;17" foregroundColor="SMSHelperText" halign="center" valign="center" />
+		<widget name="key8" position="125,130" size="90,40" backgroundColor="SMSHelperBackground" font="Console;17" foregroundColor="SMSHelperText" halign="center" valign="center" />
+		<widget name="key9" position="225,130" size="105,40" backgroundColor="SMSHelperBackground" font="Console;17" foregroundColor="SMSHelperText" halign="center" valign="center" />
+		<widget name="help1" position="10,180" size="80,40" backgroundColor="SMSHelperBackground" font="Console;17" foregroundColor="SMSHelperText" halign="center" valign="center" />
+		<widget name="key0" position="100,180" size="140,40" backgroundColor="SMSHelperBackground" font="Console;17" foregroundColor="SMSHelperText" halign="center" valign="center" />
+		<widget name="help2" position="250,180" size="80,40" backgroundColor="SMSHelperBackground" font="Console;17" foregroundColor="SMSHelperText" halign="center" valign="center" />
+	</screen>
+ 
+<!-- MENU - Generic Main Menu -->
+
+	<screen name="Menu" title="Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColourBacks" />
+		<ePixmap pixmap="menus/menu_default.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" zPosition="+1" /> -->
+		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (20, 0), size = (790, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),
+					],
+				"fonts": [gFont("Regular", 25)],
+				"itemHeight": 35
+				}
+			</convert>
+		</widget>
+	</screen>
+
+<!-- MENU - Enhanced Generic Main Menu -->
+
+	<screen name="MenuEnhanced" title="Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColourBacks" />
+		<ePixmap pixmap="menus/menu_default.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" zPosition="+1" /> -->
+		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (65, 0), size = (655, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),
+					MultiContentEntryText(pos = (740, 0), size = (50, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4),
+					MultiContentEntryPixmapAlphaTest(pos = (20, 5), size = (35, 25), png = 5)
+					],
+				"fonts": [gFont("Regular", 25)],
+				"itemHeight": 35
+				}
+			</convert>
+		</widget>
+	</screen>
+
+<!-- MENU - Beyonwiz Main Menu -->
+
+	<screen name="GeneralMenu" title="Main Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplateDebug" />
+		<panel position="50,35" size="305,25">
+			<panel name="ClockBannerPanel" />
+		</panel>
+		<widget source="Title" render="Label" position="360,30" size="870,35" borderColor="BannerBorder" borderWidth="1" font="BannerTitle;25" foregroundColor="BannerTitle" halign="right" transparent="1" />
+		<eLabel position="50,65" size="1180,2" backgroundColor="Pinstripe" />
+		<widget source="id_mainmenu_ext" render="Micon" path="gmenu/" position="0,170" size="1280,180" alphatest="on" transparent="1" zPosition="2" />
+		<widget name="list" position="0,360" size="1280,76" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="1" />
+		<widget name="list_sub_0" position="15,440" size="250,250" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="1" />
+		<widget name="list_sub_1" position="265,440" size="250,250" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="1" />
+		<widget name="list_sub_2" position="515,440" size="250,250" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="1" />
+		<widget name="list_sub_3" position="765,440" size="250,250" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="1" />
+		<widget name="list_sub_4" position="1015,440" size="250,250" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="1" />
+		<widget name="up_sub_0" pixmap="gmenu/gmenu_up.png" position="122,430" size="35,10" alphatest="on" zPosition="2" />
+		<widget name="up_sub_1" pixmap="gmenu/gmenu_up.png" position="372,430" size="35,10" alphatest="on" zPosition="2" />
+		<widget name="up_sub_2" pixmap="gmenu/gmenu_up.png" position="622,430" size="35,10" alphatest="on" zPosition="2" />
+		<widget name="up_sub_3" pixmap="gmenu/gmenu_up.png" position="872,430" size="35,10" alphatest="on" zPosition="2" />
+		<widget name="up_sub_4" pixmap="gmenu/gmenu_up.png" position="1122,430" size="35,10" alphatest="on" zPosition="2" />
+		<widget name="down_sub_0" pixmap="gmenu/gmenu_down.png" position="122,690" size="35,10" alphatest="on" zPosition="2" />
+		<widget name="down_sub_1" pixmap="gmenu/gmenu_down.png" position="372,690" size="35,10" alphatest="on" zPosition="2" />
+		<widget name="down_sub_2" pixmap="gmenu/gmenu_down.png" position="622,690" size="35,10" alphatest="on" zPosition="2" />
+		<widget name="down_sub_3" pixmap="gmenu/gmenu_down.png" position="872,690" size="35,10" alphatest="on" zPosition="2" />
+		<widget name="down_sub_4" pixmap="gmenu/gmenu_down.png" position="1122,690" size="35,10" alphatest="on" zPosition="2" />
+	</screen>
+
+<!-- HELP - Generic Help Menu -->
+
+	<screen name="HelpMenu" title="Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColourBacks" />
+		<panel name="ScreenTemplateButtonHelp" />
+		<panel position="150,110" size="154,500">
+			<panel name="ScreenTemplateRemote" />
+		</panel>
+		<widget source="list" render="Listbox" position="400,80" size="830,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"templates":
+					{
+					"default": (25,
+						[
+						MultiContentEntryText(pos = (0, 0), size = (810, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),  # Help label
+						MultiContentEntryText(pos = (20, 0), size = (790, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2)  # Help item
+						]),
+					"extended": (50,
+						[
+						MultiContentEntryText(pos = (0, 0), size = (810, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),  # Help label
+						MultiContentEntryText(pos = (20, 0), size = (790, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2),  # Help item
+						MultiContentEntryText(pos = (0, 25), size = (810, 25), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, color = 0x00AAAAAA, color_sel = 0x00AAAAAA, text = 3),  # Help label (tupple with 1)
+						MultiContentEntryText(pos = (20, 25), size = (790, 25), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, color = 0x00AAAAAA, color_sel = 0x00AAAAAA, text = 4),  # Help item (tupple with 2)
+						])
+					},
+				"fonts": [gFont("Regular", 20), gFont("Regular", 20)],
+				"itemHeight": 25
+				}
+			</convert>
+		</widget>
+		<widget name="longshift_key0" position="400,620" size="830,30" backgroundColor="TextBackground" font="Regular;25" foregroundColor="HelpPress" halign="right" transparent="1" />
+		<widget name="longshift_key1" position="400,620" size="830,30" backgroundColor="TextBackground" font="Regular;25" foregroundColor="HelpPress" halign="right" transparent="1" />
+	</screen>
+
+<!-- MENU > Setup - Beyonwiz Top Level Setup Menu -->
+
+	<screen name="ScreenTemplateFrame405x485">
+		<eLabel position="0,0" size="405,2" backgroundColor="Pinstripe" />
+		<eLabel position="0,484" size="405,2" backgroundColor="Pinstripe" />
+		<eLabel position="0,0" size="2,485" backgroundColor="Pinstripe" />
+		<eLabel position="403,0" size="2,485" backgroundColor="Pinstripe" />
+	</screen>
+
+	<screen name="GeneralSetupOld" title="Setup Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel position="400,80" size="405,485">
+			<panel name="ScreenTemplateFrame405x485" />
+		</panel>
+		<widget name="list" position="410,90" size="385,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" zPosition="+1" />
+		<panel position="825,80" size="405,485">
+			<panel name="ScreenTemplateFrame405x485" />
+		</panel>
+		<widget name="sublist" position="835,90" size="385,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" zPosition="+1" />
+		<panel name="ScreenTemplateDescription2" />
+	</screen>
+
+	<screen name="GeneralSetup" title="Setup Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel position="400,80" size="405,485">
+			<panel name="ScreenTemplateFrame405x485" />
+		</panel>
+		<widget source="list" render="Listbox" position="410,90" size="385,455" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (20, 0), size = (300, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
+					MultiContentEntryText(pos = (320, 0), size = (35, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 2),
+					# MultiContentEntryText(pos = (40, 35), size = (310, 20), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3)
+					],
+				"fonts": [gFont("Regular", 25), gFont("Regular", 15)],
+				"itemHeight": 35,
+				}
+			</convert>
+		</widget>
+		<panel position="825,80" size="405,485">
+			<panel name="ScreenTemplateFrame405x485" />
+		</panel>
+		<widget source="sublist" render="Listbox" position="835,90" size="385,455" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (20, 0), size = (365, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
+					# MultiContentEntryText(pos = (40, 35), size = (345, 20), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2)
+					],
+				"fonts": [gFont("Regular", 20), gFont("Regular", 15)],
+				"itemHeight": 35
+				}
+			</convert>
+		</widget>
+		<panel name="ScreenTemplateDescription2" />
+	</screen>
+
+<!-- MENU > Setup > *Item* - Generic Setup Menus -->
+
+	<screen name="Setup" title="Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonTextVKey" />
+		<!-- The hardcoded default image is a kludge to get around the fact that many
+			screens copy the base Setup code and will not have all the latest features! -->
+		<ePixmap pixmap="menus/setup_default.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="id_mainmenu_ext" render="Micon" path="menus/" position="50,100" size="300,500" alphatest="on" transparent="1" zPosition="+1" />
+		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" /> -->
+		<panel name="ScreenTemplateConfig4" />
+		<!-- <panel name="ScreenTemplateEmpty4" /> -->
+		<panel name="ScreenTemplateFootnote4" />
+		<panel name="ScreenTemplateDescription4" />
+	</screen>
+
+	<!-- 
+	<screen name="ScreenTemplateEmpty4">
+		<widget name="menuempty" position="400,80" size="830,420" backgroundColor="TextBackground" font="Regular;25" foregroundColor="Text" halign="center" transparent="1" valign="center" zPosition="+1" />
+	</screen>
+	-->
+
+	<screen name="ScreenTemplateFootnote4">
+		<widget name="footnote" position="420,510" size="250,25" backgroundColor="FootnoteBackground" font="Regular;20" foregroundColor="FootnoteText" transparent="1" valign="center" />
+	</screen>
+
+<!-- MENU > Setup > *Item* - Generic Setup Templates -->
+
+	<screen name="ScreenTemplateSetup">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonTextVKey" />
+		<!-- The hardcoded default image is a kludge to get around the fact that many
+			screens copy the base Setup code and will not have all the latest features! -->
+		<ePixmap pixmap="menus/setup_default.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" zPosition="+1" /> -->
+		<panel name="ScreenTemplateConfig4" />
+		<!-- <panel name="ScreenTemplateEmpty4" /> -->
+		<panel name="ScreenTemplateFootnote4" />
+		<panel name="ScreenTemplateDescription4" />
+	</screen>
+
+<!--
+ |	When the menu list and help text variables are rationalised the the Config 
+ |	and Help blocks can be simplified and folded into the base templates.
+ +-->
+
+<!-- Configuration items with no text window -->
+
+	<screen name="ScreenTemplateBookmarkList0">
+		<widget name="bookmarklist" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<screen name="ScreenTemplateCheckList0">
+		<widget name="checkList" position="400,80" size="830,545" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<screen name="ScreenTemplateConfig0">
+		<widget name="config" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<screen name="ScreenTemplateEntries0">
+		<widget name="entries" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<screen name="ScreenTemplateDetailText0">
+		<widget name="detailtext" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<screen name="ScreenTemplateEntriesTall0">
+		<widget name="entries" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<screen name="ScreenTemplateFileList0">
+		<widget name="filelist" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<screen name="ScreenTemplateList0">
+		<widget name="list" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<screen name="ScreenTemplateMenu0">
+		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (20, 0), size = (790, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0)
+					],
+				"fonts": [gFont("Regular", 25)],
+				"itemHeight": 35
+				}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="ScreenTemplatePlugList0">
+		<widget name="list" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<screen name="ScreenTemplateSConfig0">
+		<widget source="config" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (20, 0), size = (790, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1)
+					],
+				"fonts": [gFont("Regular", 25)],
+				"itemHeight": 35
+				}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="ScreenTemplateServiceList0">
+		<widget name="servicelist" position="400,80" size="830,535" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<screen name="ScreenTemplateOverlayText0">
+		<widget name="text" position="400,80" size="830,550" backgroundColor="TextBackground" font="Regular;25" foregroundColor="Text" halign="center" transparent="1" valign="center" zPosition="+1" />
+	</screen>
+	
+<!-- Configuration items with a two line text window -->
+
+	<screen name="ScreenTemplateConfig2">
+		<widget name="config" position="400,80" size="830,490" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<screen name="ScreenTemplateEntries2">
+		<widget name="entries" position="400,80" size="830,490" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+<!-- Text component of configuration items with a two line text window -->
+
+	<screen name="ScreenTemplateFrame830x70">
+		<eLabel position="400,590" size="830,2" backgroundColor="Pinstripe" />
+		<eLabel position="400,660" size="830,2" backgroundColor="Pinstripe" />
+		<eLabel position="400,590" size="2,70" backgroundColor="Pinstripe" />
+		<eLabel position="1228,590" size="2,70" backgroundColor="Pinstripe" />
+	</screen>
+
+	<screen name="ScreenTemplateDescription2">
+		<panel name="ScreenTemplateFrame830x70" />
+		<widget name="description" position="410,600" size="810,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="ScreenTemplateHelp2">
+		<panel name="ScreenTemplateFrame830x70" />
+		<widget source="help" render="Label" position="410,600" size="810,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="ScreenTemplateInformation2">
+		<panel name="ScreenTemplateFrame830x70" />
+		<widget name="information" position="410,600" size="810,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="ScreenTemplateIntroduction2">
+		<panel name="ScreenTemplateFrame830x70" />
+		<widget name="introduction" position="410,600" size="810,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="ScreenTemplateSHelp2">
+		<panel name="ScreenTemplateFrame830x70" />
+		<widget source="help" render="Label" position="410,600" size="810,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="ScreenTemplateSDescription2">
+		<panel name="ScreenTemplateFrame830x70" />
+		<widget source="description" render="Label" position="410,600" size="810,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="ScreenTemplateSInformation2">
+		<panel name="ScreenTemplateFrame830x70" />
+		<widget source="information" render="Label" position="410,600" size="810,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="ScreenTemplateSIntroduction2">
+		<panel name="ScreenTemplateFrame830x70" />
+		<widget source="introduction" render="Label" position="410,600" size="810,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="ScreenTemplateSStatus2">
+		<panel name="ScreenTemplateFrame830x70" />
+		<widget source="status" render="Label" position="410,600" size="810,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="ScreenTemplateStatus2">
+		<panel name="ScreenTemplateFrame830x70" />
+		<widget source="status" render="Label" position="410,600" size="810,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="ScreenTemplateText2">
+		<panel name="ScreenTemplateFrame830x70" />
+		<widget name="text" position="410,600" size="810,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+<!-- Configuration items with a four line text window -->
+
+	<screen name="ScreenTemplateCheckList4">
+		<widget name="checkList" position="400,80" size="830,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<screen name="ScreenTemplateConfig4">
+		<widget name="config" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<screen name="ScreenTemplateDeviceList4">
+		<widget name="devicelist" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<screen name="ScreenTemplateEntries4">
+		<widget name="entries" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<screen name="ScreenTemplateFileList4">
+		<widget name="file_list" position="400,80" size="830,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<screen name="ScreenTemplateHDDList4">
+		<widget name="hddlist" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<screen name="ScreenTemplateList4">
+		<widget source="list" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" selectionDisabled="0" transparent="1"> <!--  itemHeight="35" -->
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (20, 0), size = (790, 35), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0), # index 0 is the name
+					],
+				"fonts": [gFont("Regular", 25)],
+				"itemHeight": 35
+				}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="ScreenTemplateListLeft4">
+		<widget name="list_left" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<screen name="ScreenTemplateLogList4">
+		<widget name="loglist" position="400,80" size="830,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<screen name="ScreenTemplateMountConfig4">
+		<widget source="config" render="Listbox" position="400,80" size="830,420" backgroundColorSelected="MenuSelected" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (75, 0), size = (715, 35), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0), # index 0 is the Menu Title
+					MultiContentEntryText(pos = (95, 35), size = (695, 25), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2, color = 0x00999999, color_sel = 0x00999999), # index 2 is the Description
+					MultiContentEntryPixmapAlphaTest(pos = (20, 6), size = (48, 48), png = 3), # index 3 is the pixmap
+					],
+				"fonts": [gFont("Regular", 25),gFont("Regular", 20)],
+				"itemHeight": 60
+				}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="ScreenTemplateSkinList4">
+		<widget name="SkinList" position="400,80" size="540,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="1" />
+		<!--
+		<widget name="SkinList" position="400,80" size="540,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (20, 0), size = (500, 35), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0)
+					],
+				"fonts": [gFont("Regular", 25)],
+				"itemHeight": 35
+				}
+			</convert>
+		</widget>
+		-->
+	</screen>
+
+	<screen name="ScreenTemplateSoftList4">
+		<widget name="list" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<screen name="ScreenTemplateTimerList4">
+		<widget name="timerlist" position="400,80" size="830,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+<!-- Text component of configuration items with a four line text window -->
+
+	<screen name="ScreenTemplateFrame830x120">
+		<eLabel position="400,540" size="830,2" backgroundColor="Pinstripe" />
+		<eLabel position="400,660" size="830,2" backgroundColor="Pinstripe" />
+		<eLabel position="400,540" size="2,120" backgroundColor="Pinstripe" />
+		<eLabel position="1228,540" size="2,120" backgroundColor="Pinstripe" />
+	</screen>
+
+	<screen name="ScreenTemplateConnStatus4">
+		<panel name="ScreenTemplateFrame830x120" />
+		<widget name="ConnStatus" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="ScreenTemplateDescription4">
+		<panel name="ScreenTemplateFrame830x120" />
+		<widget name="description" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="ScreenTemplateDetail4">
+		<widget name="detailtext" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="ScreenTemplateHelp4">
+		<panel name="ScreenTemplateFrame830x120" />
+		<widget source="help" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="ScreenTemplateInfo4">
+		<panel name="ScreenTemplateFrame830x120" />
+		<widget name="info" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="ScreenTemplateIntroduction4">
+		<panel name="ScreenTemplateFrame830x120" />
+		<widget name="introduction" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="ScreenTemplateLab4">
+		<panel name="ScreenTemplateFrame830x120" />
+		<widget name="lab1" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="ScreenTemplateLogEntry4">
+		<panel name="ScreenTemplateFrame830x120" />
+		<widget name="logentry" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" /><!--Console-->
+	</screen>
+
+	<screen name="ScreenTemplateListHead4">
+		<panel name="ScreenTemplateFrame830x120" />
+		<widget name="list_left_head" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="ScreenTemplateSDescription4">
+		<panel name="ScreenTemplateFrame830x120" />
+		<widget source="description" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="ScreenTemplateSHelp4">
+		<panel name="ScreenTemplateFrame830x120" />
+		<widget source="help" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="ScreenTemplateSInfo4">
+		<panel name="ScreenTemplateFrame830x120" />
+		<widget source="info" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="ScreenTemplateSIntroduction24">
+		<panel name="ScreenTemplateFrame830x120" />
+		<widget source="introduction2" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="ScreenTemplateSIntroduction4">
+		<panel name="ScreenTemplateFrame830x120" />
+		<widget source="introduction" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="ScreenTemplateSStatus4">
+		<panel name="ScreenTemplateFrame830x120" />
+		<widget source="status" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="ScreenTemplateStatus4">
+		<panel name="ScreenTemplateFrame830x120" />
+		<widget source="status" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="ScreenTemplateText4">
+		<panel name="ScreenTemplateFrame830x120" />
+		<widget name="text" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="ScreenTemplateURL4">
+		<panel name="ScreenTemplateFrame830x120" />
+		<widget name="url" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="ScreenTemplateWDG4">
+		<panel name="ScreenTemplateFrame830x120" />
+		<widget name="wdg_label_instruction" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+<!-- Configuration items with a four line text window and extra configuration data -->
+
+	<screen name="ScreenTemplateConfigShort">
+		<widget name="config" position="400,80" size="830,325" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<screen name="ScreenTemplateMenuListShort">
+		<widget name="menulist" position="400,80" size="830,375" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+<!-- Panel To Display The Banner Formatted Time (305 x 25 pixels) -->
+
+	<screen name="ClockBannerPanel" title="Current Time" flags="wfNoBorder">
+		<ePixmap pixmap="icons/clock.png" position="0,4" size="14,14" alphatest="blend" />
+		<widget source="global.CurrentTime" render="Label" position="25,0" size="280,25" borderColor="BannerBorder" borderWidth="1" font="BannerClock;20" foregroundColor="BannerClock" transparent="1">
+			<convert type="ClockToText">Format:%a %e-%b-%Y  %H:%M</convert>
+		</widget>
+	</screen>
+
+<!--
+ |	To set the default style of clock to use on all InfoBars rename one of the two 
+ |	following templates from "ClockTypeTemplate" where "Type" is either "Digital" 
+ |	or "Analogue" to "ClockTemplate".  The default template is the digital clock.
+ +-->
+
+<!-- Screen Template To Display The Time As A Digital Clock -->
+
+	<screen name="ClockTemplate" title="Digital Current Time" flags="wfNoBorder">
+		<eLabel position="1080,10" size="190,60" backgroundColor="ScreenBackground" />
+		<widget source="global.CurrentTime" render="Label" position="1080,15" size="170,20" backgroundColor="TextBackground" font="Regular;18" foregroundColor="BannerClockBlue" halign="right" transparent="1" zPosition="+1">
+			<convert type="ClockToText">Format:%a %e-%b-%Y</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1100,35" size="120,28" backgroundColor="TextBackground" font="Regular;26" foregroundColor="BannerClockWhite" halign="right" transparent="1" valign="top" zPosition="+1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1220,37" size="30,20" backgroundColor="TextBackground" font="Regular;18" foregroundColor="BannerClockWhite" halign="right" transparent="1" valign="top" zPosition="+1">
+			<convert type="ClockToText">Format::%S</convert>
+		</widget>
+	</screen>
+
+<!-- Screen Template To Display The Time As An Analogue Clock -->
+
+	<screen name="ClockAnalogueTemplate" title="Analogue Current Time" flags="wfNoBorder">
+		<!-- Clock background -->
+		<eLabel position="1000,10" size="210,30" backgroundColor="ScreenBackground" />
+		<!-- Clock date -->
+		<widget source="global.CurrentTime" render="Label" position="1000,15" size="170,20" backgroundColor="TextBackground" font="Regular;18" foregroundColor="BannerClockBlue" halign="right" transparent="1" zPosition="+1">
+			<convert type="ClockToText">Format:%a %e-%b-%Y</convert>
+		</widget>
+		<!-- Clock face -->
+		<ePixmap pixmap="images/clock_face.png" position="1180,5" size="90,90" alphatest="blend" zPosition="+1" />
+		<!-- Clock seconds hand -->
+		<widget source="global.CurrentTime" render="Analogic" position="1192,17" size="65,65" alphatest="on" borderColor="BannerClockWhite" foregroundColor="BannerClockWhite" linewidth="1" zPosition="+2">
+			<convert type="Analogiccon">AnalogSeconds</convert>
+		</widget>
+		<!-- Clock minutes hand -->
+		<widget source="global.CurrentTime" render="Analogic" position="1202,26" size="47,47" alphatest="on" borderColor="BannerClockWhite" foregroundColor="BannerClockWhite" linewidth="2" zPosition="+2">
+			<convert type="Analogiccon">AnalogMinutes</convert>
+		</widget>
+		<!-- Clock hour hand -->
+		<widget source="global.CurrentTime" render="Analogic" position="1210,35" size="30,30" alphatest="on" borderColor="BannerClockWhite" foregroundColor="BannerClockWhite" linewidth="2" zPosition="+2">
+			<convert type="Analogiccon">AnalogHours</convert>
+		</widget>
+	</screen>
+
+<!-- Panel To Display The Remote Control (154 x 500 pixels) -->
+
+	<screen name="ScreenTemplateRemote">
+		<widget name="rc" pixmaps="images/rc.png,images/rcold.png" position="0,0" size="154,500" alphatest="on" />
+		<!--
+		 |	For the key indicator pixmaps, "position" is used for
+		 |	the position of the pixmap "hotspot".
+		 |	The screen positions the pixmap relative to the
+		 |	hotspot, not the pixmap's top left corner
+		 +-->
+		<widget name="indicator_u0" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_u1" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_u2" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_u3" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_u4" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_u5" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_u6" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_u7" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_u8" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_u9" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_u10" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_u11" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_u12" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_u13" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_u14" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_u15" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l0" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l1" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l2" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l3" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l4" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l5" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l6" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l7" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l8" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l9" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l10" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l11" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l12" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l13" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l14" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l15" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<!-- Old pointers
+		<widget name="arrowdown" pixmap="images/arrowdown.png" position="-100,-100" size="37,70" alphatest="on" />
+		<widget name="arrowdown2" pixmap="images/arrowdown.png" position="-100,-100" size="37,70" alphatest="on" />
+		<widget name="arrowup" pixmap="images/arrowup.png" position="-100,-100" size="37,70" alphatest="on" />
+		<widget name="arrowup2" pixmap="images/arrowup.png" position="-100,-100" size="37,70" alphatest="on" />
+		-->
+	</screen>
+
+<!-- Panel To Display The Live TV Signal Strength And Quality Levels (160 x 30 pixels) -->
+
+	<screen name="TunerSignalPanel" title="Tuner Status" flags="wfNoBorder">
+		<!-- AGC label, bar and percentage -->
+		<widget source="session.FrontendStatus" render="FixedLabel" text="BIT ERRORS DETECTED!              " position="0,2" size="160,28" backgroundColor="TunerBER" font="Regular;8" foregroundColor="Black" halign="center" valign="center">
+			<convert type="FrontendInfo">BER</convert>
+			<convert type="ConditionalShowHide">Blink,375</convert>
+		</widget>
+		<ePixmap pixmap="icons/signal_strength.png" position="0,0" size="10,15" alphatest="blend" transparent="1" zPosition="+1" />
+		<widget source="session.FrontendStatus" render="Progress" pixmap="sliders/agc_snr.png" position="15,5" size="100,6" borderColor="TunerBorder" borderWidth="1" zPosition="+1">
+			<convert type="FrontendInfo">AGC</convert>
+		</widget>
+		<widget source="session.FrontendStatus" render="Label" position="120,0" size="40,15" backgroundColor="TunerBackground" font="Regular;15" foregroundColor="TunerNormal" halign="right" transparent="1" valign="center" zPosition="+1">
+			<convert type="FrontendInfo">AGC</convert>
+		</widget>
+		<!-- SNR label, bar and percentage -->
+		<ePixmap pixmap="icons/signal_quality.png" position="0,15" size="10,15" alphatest="blend" transparent="1" zPosition="+1" />
+		<widget source="session.FrontendStatus" render="Progress" pixmap="sliders/agc_snr.png" position="15,20" size="100,6" borderColor="TunerBorder" borderWidth="1" zPosition="+1">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+		<widget source="session.FrontendStatus" render="Label" position="120,15" size="40,15" backgroundColor="TunerBackground" font="Regular;15" foregroundColor="TunerNormal" halign="right" transparent="1" valign="center" zPosition="+1">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+	</screen>
+
+<!-- Panel To Display The Tuner Use / Activity (Size is conditional on number of enabled tuners)
+		105 x 25 pixels - 1 Tuner,
+		125 x 25 pixels - 2 Tuners,
+		145 x 25 pixels - 3 Tuners,
+		165 x 25 pixels - 4 Tuners,
+		185 x 25 pixels - 5 Tuners,
+		105 x 25 pixels - 6 Tuners,
+		225 x 25 pixels - 7 Tuners,
+		245 x 25 pixels - 8 Tuners -->
+
+	<screen name="TunerUsagePanel" title="Tuner Status" flags="wfNoBorder">
+		<!-- Display a label and icon to identify the type of tuner in use -->
+		<eLabel text="Tuner" position="0,6" size="60,18" backgroundColor="TunerBackground" font="Regular;18" foregroundColor="TunerLabel" transparent="1" />
+		<widget source="session.FrontendInfo" render="Pixmap" pixmap="icons/info_dvb-s.png" position="60,0" size="25,25" alphatest="blend" transparent="1">
+			<convert type="FrontendInfo">TYPE</convert>
+			<convert type="ValueRange">0,0</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" pixmap="icons/info_dvb-c.png" position="60,0" size="25,25" alphatest="blend" transparent="1">
+			<convert type="FrontendInfo">TYPE</convert>
+			<convert type="ValueRange">1,1</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" pixmap="icons/info_dvb-t.png" position="60,0" size="25,25" alphatest="blend" transparent="1">
+			<convert type="FrontendInfo">TYPE</convert>
+			<convert type="ValueRange">2,2</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+
+		<!-- Tuner 1 -->
+		<!-- Display unused tuner placeholders - Overwritten by tuners in use -->
+		<eLabel text="A" position="96,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerIdle" halign="center" transparent="1" />
+		<!-- Display tuners used for recording - Overwrites "unused" backgrounds -->
+		<widget source="session.TunerInfo" render="FixedLabel" text="A" position="96,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerRecording" halign="center" transparent="1" zPosition="+1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">1</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<!-- Display tuner used for live TV - Overwrites "unused" background & recording tuners -->
+		<widget source="session.FrontendInfo" render="FixedLabel" text="A" position="96,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerCurrent" halign="center" transparent="1" zPosition="+2">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">0,0</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+
+		<!-- Tuner 2 -->
+		<eLabel text="B" position="116,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerIdle" halign="center" transparent="1" />
+		<widget source="session.TunerInfo" render="FixedLabel" text="B" position="116,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerRecording" halign="center" transparent="1" zPosition="+1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">2</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="B" position="116,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerCurrent" halign="center" transparent="1" zPosition="+2">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">1,1</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+
+		<!-- Tuner 3 -->
+		<eLabel text="C" position="136,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerIdle" halign="center" transparent="1" />
+		<widget source="session.TunerInfo" render="FixedLabel" text="C" position="136,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerRecording" halign="center" transparent="1" zPosition="+1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">4</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="C" position="136,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerCurrent" halign="center" transparent="1" zPosition="+2">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">2,2</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+
+		<!-- Tuner 4 -->
+		<eLabel text="D" position="156,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerIdle" halign="center" transparent="1" />
+		<widget source="session.TunerInfo" render="FixedLabel" text="D" position="156,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerRecording" halign="center" transparent="1" zPosition="+1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">8</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="D" position="156,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerCurrent" halign="center" transparent="1" zPosition="+2">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">3,3</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+
+		<!-- Tuner 5 -->
+		<!-- <eLabel text="E" position="176,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerIdle" halign="center" transparent="1" />
+		<widget source="session.TunerInfo" render="FixedLabel" text="E" position="176,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerRecording" halign="center" transparent="1" zPosition="+1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">16</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="E" position="176,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerCurrent" halign="center" transparent="1" zPosition="+2">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">4,4</convert>
+			<convert type="ConditionalShowHide" />
+		</widget> -->
+
+		<!-- Tuner 6 -->
+		<!-- <eLabel text="F" position="196,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerIdle" halign="center" transparent="1" />
+		<widget source="session.TunerInfo" render="FixedLabel" text="F" position="196,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerRecording" halign="center" transparent="1" zPosition="+1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">32</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="F" position="196,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerCurrent" halign="center" transparent="1" zPosition="+2">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">5,5</convert>
+			<convert type="ConditionalShowHide" />
+		</widget> -->
+
+		<!-- Tuner 7 -->
+		<!-- <eLabel text="G" position="216,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerIdle" halign="center" transparent="1" />
+		<widget source="session.TunerInfo" render="FixedLabel" text="G" position="216,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerRecording" halign="center" transparent="1" zPosition="+1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">64</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="G" position="216,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerCurrent" halign="center" transparent="1" zPosition="+2">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">6,6</convert>
+			<convert type="ConditionalShowHide" />
+		</widget> -->
+
+		<!-- Tuner 8 -->
+		<!-- <eLabel text="H" position="236,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerIdle" halign="center" transparent="1" />
+		<widget source="session.TunerInfo" render="FixedLabel" text="H" position="236,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerRecording" halign="center" transparent="1" zPosition="+1">
+			<convert type="TunerInfo">TunerUseMask</convert>
+			<convert type="ValueBitTest">128</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.FrontendInfo" render="FixedLabel" text="H" position="236,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerCurrent" halign="center" transparent="1" zPosition="+2">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">7,7</convert>
+			<convert type="ConditionalShowHide" />
+		</widget> -->
+	</screen>
+
+<!-- Panel To Display The Channel Format Icons (353 x 20 pixels) -->
+
+	<screen name="ChannelFormatPanel" title="Channel Format" flags="wfNoBorder">
+		<!-- Display the recording active icon -->
+		<ePixmap pixmap="icons/info_rec_off.png" position="0,0" size="34,20" alphatest="blend" zPosition="+1" />
+		<widget source="session.RecordState" render="Pixmap" pixmap="icons/info_rec_on.png" position="0,0" size="34,20" alphatest="blend" zPosition="+2">
+			<!-- <convert type="ConfigEntryTest">config.OverlayHD.record_icon_blink,1</convert> -->
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+		<!-- Display the software update available icon -->
+		<ePixmap pixmap="icons/info_update_off.png" position="39,0" size="20,20" alphatest="blend" />
+		<widget source="global.OnlineStableUpdateState" render="Pixmap" pixmap="icons/info_update_stable.png" position="39,0" size="20,20" alphatest="blend" zPosition="+1">
+			<!-- <convert type="ConfigEntryTest">config.OverlayHD.update_icon_blink,1</convert> -->
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+		<widget source="global.OnlineUnstableUpdateState" render="Pixmap" pixmap="icons/info_update_stable.png" position="39,0" size="20,20" alphatest="blend" zPosition="+2"><!--icons/info_update_unstable.png-->
+			<!-- <convert type="ConfigEntryTest">config.OverlayHD.update_icon_blink,1</convert> -->
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+		<!-- Display the sub services available icon -->
+		<ePixmap pixmap="icons/info_sub_off.png" position="64,0" size="30,20" alphatest="blend" zPosition="+1" />
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/info_sub_on.png" position="64,0" size="30,20" alphatest="blend" zPosition="+2">
+			<convert type="ServiceInfo">SubservicesAvailable</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<!-- Display the HbbTV service available icon -->
+		<ePixmap pixmap="icons/info_hbbtv_off.png" position="99,0" size="53,20" alphatest="blend" zPosition="+1" />
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/info_hbbtv_on.png" position="99,0" size="53,20" alphatest="blend" zPosition="+2">
+			<convert type="ServiceInfo">HasHBBTV</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<!-- Display the HD video icon -->
+		<ePixmap pixmap="icons/info_hd_off.png" position="157,0" size="29,20" alphatest="blend" zPosition="+1" />
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/info_hd_on.png" position="157,0" size="29,20" alphatest="blend" zPosition="+2">
+			<convert type="ServiceInfo">VideoWidth</convert>
+			<convert type="ValueRange">721,1980</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<!-- Display the 19:9 widescreen icon -->
+		<ePixmap pixmap="icons/info_169_off.png" position="191,0" size="36,20" alphatest="blend" zPosition="+1" />
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/info_169_on.png" position="191,0" size="36,20" alphatest="blend" zPosition="+2">
+			<convert type="ServiceInfo">IsWidescreen</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<!-- Display the Dolby Digital audio icon -->
+		<ePixmap pixmap="icons/info_dolby_off.png" position="232,0" size="57,20" alphatest="blend" zPosition="+1" />
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/info_dolby_on.png" position="232,0" size="57,20" alphatest="blend" zPosition="+2">
+			<convert type="ServiceInfo">IsMultichannel</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<!-- Display the Teletext / Subtitles available icon -->
+		<ePixmap pixmap="icons/info_text_off.png" position="294,0" size="33,20" alphatest="blend" zPosition="+1" />
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/info_text_on.png" position="294,0" size="33,20" alphatest="blend" zPosition="+2">
+			<convert type="ServiceInfo">HasTelext</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<!-- Display the encrypted service icon -->
+		<ePixmap pixmap="icons/info_crypt_off.png" position="332,0" size="21,20" alphatest="blend" zPosition="+1" />
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/info_crypt_on.png" position="332,0" size="21,20" alphatest="blend" zPosition="+2">
+			<convert type="ServiceInfo">IsCrypted</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+	</screen>
+
+<!-- Panel To Display The Video Resolution (160 x 20 pixels) -->
+
+	<screen name="ResolutionPanel" title="Video Resolution" flags="wfNoBorder">
+		<widget source="session.CurrentService" render="Label" position="0,2" size="160,18" backgroundColor="ResolutionBackground" font="Regular;18" foregroundColor="Resolution" transparent="1">
+			<convert type="ServiceInfo">VideoInfo</convert>
+		</widget>
+	</screen>
+
+	<screen name="ResolutionRightPanel" title="Video Resolution" flags="wfNoBorder">
+		<widget source="session.CurrentService" render="Label" position="0,2" size="160,18" backgroundColor="ResolutionBackground" font="Regular;18" foregroundColor="Resolution" halign="right" transparent="1">
+			<convert type="ServiceInfo">VideoInfo</convert>
+		</widget>
+	</screen>
+
+<!-- Switch Menu ON/OFF Images -->
+
+	<switchpixmap>
+		<pixmap name="menu_on" filename="images/menu_on.png" />
+		<pixmap name="menu_off" filename="images/menu_off.png" />
+	</switchpixmap>
+
+<!-- Standby -->
+
+	<screen name="Standby" title="Standby" position="0,0" size="1280,720" flags="wfNoBorder" />
+
+<!-- Mute -->
+
+	<!--
+	<screen name="MuteNotify" title="Mute" position="20,20" size="100,100" backgroundColor="StatusBackground" flags="wfNoBorder" zPosition="+99">
+		<ePixmap pixmap="images/mute.png" position="0,0" size="100,100" alphatest="on" transparent="1" />
+	</screen>
+	-->
+
+	<screen name="Mute" title="Mute" position="20,10" size="50,50" backgroundColor="StatusBackground" flags="wfNoBorder" zPosition="+99">
+		<eLabel position="0,0" size="50,2" backgroundColor="Pinstripe" zPosition="+1" />
+		<eLabel position="0,48" size="50,2" backgroundColor="Pinstripe" zPosition="+1" />
+		<eLabel position="0,0" size="2,50" backgroundColor="Pinstripe" zPosition="+1" />
+		<eLabel position="48,0" size="2,50" backgroundColor="Pinstripe" zPosition="+1" />
+		<ePixmap pixmap="images/mute_50x50.png" position="0,0" size="50,50" alphatest="on" transparent="1" />
+	</screen>
+
+<!-- Volume -->
+
+	<screen name="Volume" title="Volume" position="397,50" size="485,78" backgroundColor="StatusBackground" flags="wfNoBorder" zPosition="+99">
+		<eLabel position="0,0" size="485,2" backgroundColor="Pinstripe" zPosition="+2" />
+		<eLabel position="0,76" size="485,2" backgroundColor="Pinstripe" zPosition="+2" />
+		<eLabel position="0,0" size="2,78" backgroundColor="Pinstripe" zPosition="+2" />
+		<eLabel position="484,0" size="2,78" backgroundColor="Pinstripe" zPosition="+2" />
+		<ePixmap pixmap="images/volume.png" position="0,0" size="485,78" alphatest="on" transparent="1" zPosition="+1" />
+		<widget name="Volume" position="63,25" size="335,30" backgroundColor="Black" foregroundColor="Yellow" transparent="0" />
+	</screen>
+
+<!-- Key / Button Error -->
+
+	<screen name="UnhandledKey" title="UnhandledKey" position="590,50" size="100,100" backgroundColor="StatusBackground" flags="wfNoBorder" zPosition="+99">
+		<eLabel position="0,0" size="100,2" backgroundColor="Pinstripe" zPosition="+1" />
+		<eLabel position="0,98" size="100,2" backgroundColor="Pinstripe" zPosition="+1" />
+		<eLabel position="0,0" size="2,100" backgroundColor="Pinstripe" zPosition="+1" />
+		<eLabel position="98,0" size="2,100" backgroundColor="Pinstripe" zPosition="+1" />
+		<widget name="UnhandledKeyPixmap" pixmap="images/unhandled-key.png" position="0,0" size="100,100" alphatest="on" transparent="1" />
+	</screen>
+
+<!-- Subtitle Display -->
+
+	<screen name="SubtitleDisplay" position="0,0" size="1280,720" backgroundColor="ScreenTransparent" flags="wfNoBorder" zPosition="-1" />
+
+<!-- Picture In Picture -->
+
+	<screen name="PictureInPicture" position="400,60" size="240,192" flags="wfNoBorder" zPosition="-1">
+		<widget name="video" position="0,0" size="240,192" backgroundColor="TransparentBackground" />
+	</screen>
+
+<!-- Picture In Picture Setup -->
+
+	<screen name="PiPSetup" position="center,center" size="620,180" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<widget name="text" position="10,10" size="600,160" font="Regular;23" />
+	</screen>
+
+<!-- Screen Saver -->
+
+	<screen name="Screensaver" position="0,0" size="1280,720" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
+		<widget name="picture" pixmap="images/beyonwiz.png" position="0,0" size="220,80" alphatest="on" transparent="0" />
+	</screen>
+
+<!-- Virtual Keyboard -->
+
+	<screen name="VirtualKeyBoard" title="Virtual KeyBoard" position="center,center" size="700,480" backgroundColor="ScreenBackground" zPosition="+90">
+		<eLabel position="0,0" size="700,2" backgroundColor="Pinstripe" />
+		<eLabel position="0,430" size="700,2" backgroundColor="Pinstripe" />
+		<widget name="header" position="0,30" size="700,35" backgroundColor="TextBackground" font="Regular;25" foregroundColor="Text" halign="center" noWrap="1" transparent="1" />
+		<ePixmap pixmap="buttons/vkey_text.png" position="79,85" size="542,52" alphatest="on" transparent="1" />
+		<widget name="text" position="84,90" size="532,46" font="Regular;35" halign="right" noWrap="1" transparent="1" valign="center" zPosition="+1" />
+		<widget name="list" position="80,170" size="540,225" selectionDisabled="1" transparent="1" />
+		<widget name="country" position="0,440" size="700,30" font="Regular;20" foregroundColor="HelpPress" halign="center" transparent="1" valign="center" />
+	</screen>
+
+<!-- Message Box Pop Up -->
+
+	<screen name="MessageBoxTemplate">
+		<widget name="text" position="65,10" size="100%,0" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
+		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="0,0" size="53,53" alphatest="on" transparent="1" />
+		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="0,0" size="53,53" alphatest="on" transparent="1" />
+		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="0,0" size="53,53" alphatest="on" transparent="1" />
+		<widget name="list" position="100,100" size="100%,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="1" />
+		<applet type="onLayoutFinish">
+self.autoResize()
+		</applet>
+	</screen>
+
+	<screen name="MessageBox" title="Message Selection..." position="center,center" size="60%,10" backgroundColor="ScreenBackground" zPosition="+90">
+		<panel name="MessageBoxTemplate" />
+	</screen>
+
+	<screen name="MessageBoxSimple" title="Message..." position="center,center" size="60%,10" backgroundColor="ScreenBackground" zPosition="+90">
+		<panel name="MessageBoxTemplate" />
+	</screen>
+
+<!-- Choice Box Pop Up -->
+
+	<screen name="ChoiceBox" position="center,center" size="520,130" backgroundColor="ScreenBackground" zPosition="+90">
+		<widget name="text" position="0,0" size="520,0" backgroundColor="TextBackground" font="Regular;22" foregroundColor="BannerTitle" transparent="1" />
+		<widget name="list" position="100,100" size="520,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="1" />
+		<applet type="onLayoutFinish">
+self.autoResize()
+		</applet>
+	</screen>
+
+<!-- Input Box Pop Up -->
+
+	<screen name="InputBox" title="Search" position="340,100" size="600,560" backgroundColor="ScreenBackground" zPosition="+90">
+		<widget name="text" position="10,30" size="580,30" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" halign="center" transparent="1" />
+		<eLabel position="0,80" size="600,2" backgroundColor="Pinstripe" />
+		<widget name="input" position="10,90" size="580,30" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" halign="center" transparent="1" />
+		<eLabel position="0,130" size="600,2" backgroundColor="Pinstripe" />
+	</screen>
+
+<!-- Text Box Pop Up -->
+
+	<screen name="TextBox" title="Message..." position="0,0" size="550,400" backgroundColor="ScreenBackground">
+		<widget name="text" position="0,0" size="540,390" backgroundColor="TextBackground" font="Regular;18" foregroundColor="Text" transparent="1" />
+	</screen>
+
+<!-- Command Prompt Output -->
+
+	<screen name="Console" title="Command execution..." position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<widget name="text" position="50,80" size="1180,570" backgroundColor="TextBackground" font="Console;20" foregroundColor="Text" transparent="1" />
+	</screen>
+
+<!-- Include files that define the rest of the UI -->
+
+	<!-- Load Power, Information and Timer Screens -->
+	<include filename="skin_system.xml" />
+
+	<!-- Load (Menu > Setup > *Item*) Screens -->
+	<include filename="skin_setup.xml" />
+
+	<!-- Load Wizard Screens -->
+	<include filename="skin_wizards.xml" />
+
+	<!-- Load Infobar Screens -->
+	<include filename="skin_infobars.xml" />
+
+	<!-- Load EPG Screens -->
+	<include filename="skin_epgs.xml" />
+
+	<!-- Load TV and Radio Screens -->
+	<include filename="skin_tv_radio.xml" />
+
+	<!-- Load File Manager Screens -->
+	<include filename="skin_filemanagers.xml" />
+
+	<!-- Load Music, CD, Photos, Video, Movie and DVD Screens -->
+	<include filename="skin_media.xml" />
+
+	<!-- Load Plugin Screens -->
+	<include filename="skin_plugins.xml" />
+
+	<!-- Load Other / Unclassified Screens -->
+	<include filename="skin_other.xml" />
+</skin>

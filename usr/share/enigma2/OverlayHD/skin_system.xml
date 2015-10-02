@@ -1,0 +1,551 @@
+<skin>
+<!--
+ |	Power / Restart
+ +-->
+
+<!-- MENU > Power - Power / Restart Menu -->
+
+	<screen name="menu_shutdown" title="Power / Restart" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="Menu_shutdown_legacy" />
+	</screen>
+
+	<screen name="Menu_shutdown" title="Power / Restart" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="Menu_shutdown_legacy" />
+	</screen>
+
+	<screen name="Menu_shutdown_legacy">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColourBacks" />
+		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" /> -->
+		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (20, 0), size = (700, 35), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),
+					MultiContentEntryText(pos = (740, 0), size = (50, 35), flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4),
+					],
+				"fonts": [gFont("Regular", 25)],
+				"itemHeight": 35
+				}
+			</convert>
+		</widget>
+		<widget name="charlist" position="0,0" size="0,0" transparent="1" />
+		<widget name="charframe" position="0,0" size="0,0" transparent="1" />
+		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_power_sleeptimer.png" position="50,100" size="300,500" alphatest="on" transparent="1">
+			<convert type="MenuEntryCompare">mainmenu_tasks_power_sleeptimer</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_power_standby.png" position="50,100" size="300,500" alphatest="on" transparent="1">
+			<convert type="MenuEntryCompare">mainmenu_tasks_power_standby</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_power_reboot.png" position="50,100" size="300,500" alphatest="on" transparent="1">
+			<convert type="MenuEntryCompare">mainmenu_tasks_power_reboot</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_power_shutdown.png" position="50,100" size="300,500" alphatest="on" transparent="1">
+			<convert type="MenuEntryCompare">mainmenu_tasks_power_shutdown</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_power_restartshell.png" position="50,100" size="300,500" alphatest="on" transparent="1">
+			<convert type="MenuEntryCompare">mainmenu_tasks_power_restartshell</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+	</screen>
+
+	<screen name="QuitMainloopScreen" title="Power / Restart" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<ePixmap pixmap="OverlayHD/menus/mainmenu_shuffle.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateOverlayText0" />
+	</screen>
+
+<!--
+ |	Information
+ +-->
+
+<!-- Information (MENU > Information) Menu -->
+
+	<screen name="menu_information" title="Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="Menu_information_legacy" />
+	</screen>
+
+	<screen name="Menu_information" title="Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="Menu_information_legacy" />
+	</screen>
+
+	<screen name="Menu_information_legacy" title="Information(Skin)" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColourBacks" />
+		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" /> -->
+		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (20, 0), size = (700, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),
+					MultiContentEntryText(pos = (740, 0), size = (50, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4),
+					],
+				"fonts": [gFont("Regular", 25)],
+				"itemHeight": 35
+				}
+			</convert>
+		</widget>
+		<widget name="charlist" position="0,0" size="0,0" transparent="1" />
+		<widget name="charframe" position="0,0" size="0,0" transparent="1" />
+		<!--
+		<widget source="menu" render="Micon" path="menus/" pixmap="menus/mainmenu_tasks_info.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		-->
+		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_info.png" position="50,100" size="300,500" alphatest="on" transparent="1">
+			<convert type="MenuEntryCompare">mainmenu_tasks_info_about</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_backup.png" position="50,100" size="300,500" alphatest="on" transparent="1">
+			<convert type="MenuEntryCompare">mainmenu_tasks_info_devices</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_browser.png" position="50,100" size="300,500" alphatest="on" transparent="1">
+			<convert type="MenuEntryCompare">mainmenu_tasks_info_memory</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="on" transparent="1">
+			<convert type="MenuEntryCompare">mainmenu_tasks_info_network</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tv_live.png" position="50,100" size="300,500" alphatest="on" transparent="1">
+			<convert type="MenuEntryCompare">mainmenu_tasks_info_service</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+	</screen>
+
+<!-- About Information (MENU > Information > About) Screen -->
+
+	<screen name="About" title="About" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColourBacks" />
+		<ePixmap pixmap="menus/mainmenu_tasks_info.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="list" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					# 00000000000000000000000000000 Heading
+					#  1111111 22222222222222222222 Indented Label / Value (Not wanted here so same as next)
+					# 33333333 44444444444444444444 Label / Value
+					MultiContentEntryText(pos = (20, 0), size = (790, 25), font = 0, flags = RT_HALIGN_LEFT, text = 0), # Index 0
+					MultiContentEntryText(pos = (20, 0), size = (215, 25), font = 0, flags = RT_HALIGN_LEFT, text = 1), # Index 1
+					MultiContentEntryText(pos = (260, 0), size = (530, 25), font = 0, flags = RT_HALIGN_LEFT, text = 2), # Index 2
+					MultiContentEntryText(pos = (20, 0), size = (215, 25), font = 0, flags = RT_HALIGN_LEFT, text = 3), # Index 3
+					MultiContentEntryText(pos = (260, 0), size = (530, 25), font = 0, flags = RT_HALIGN_LEFT, text = 4) # Index 4
+					],
+				"fonts": [gFont("Regular", 20)],
+				"itemHeight": 25,
+				"selectionEnabled": False
+				}
+			</convert>
+		</widget>
+		<!-- <widget name="AboutScrollLabel" position="400,80" size="830,550" font="Regular;22" transparent="1" /> -->
+	</screen>
+
+<!-- Devices Information (MENU > Information > Devices) Screen -->
+
+	<screen name="Devices" title="Device Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColourBacks" />
+		<ePixmap pixmap="menus/mainmenu_tasks_backup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="list" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					# 00000000000000000000000000000 Heading
+					#  1111111 22222222222222222222 Indented Label / Value
+					# 33333333 44444444444444444444 Label / Value
+					#  5555555 6666666666666 777777 HDD Name / HDD Type / HDD Size, DLNA type
+					#   888888 9999 AAAAAA BBBBBBBB Filesystem Name / Filesystem Type / Filesystem Size / Filesystem Free
+					#  CCCCCCCCCCCCCCCCCCCCCCCCCCCC Wide Filesystem Name
+					#  DDDDDDDDDDDDDDDDDDDDDDDDDDDD Wide DLNA Name
+					MultiContentEntryText(pos = (20, 0), size = (790, 25), font = 0, flags = RT_HALIGN_LEFT, text = 0), # Index 0
+					MultiContentEntryText(pos = (45, 0), size = (195, 25), font = 0, flags = RT_HALIGN_LEFT, text = 1, color = 0x00999999), # Index 1
+					MultiContentEntryText(pos = (260, 0), size = (530, 25), font = 0, flags = RT_HALIGN_LEFT, text = 2, color = 0x00999999), # Index 2
+					MultiContentEntryText(pos = (20, 0), size = (215, 25), font = 0, flags = RT_HALIGN_LEFT, text = 3), # Index 3
+					MultiContentEntryText(pos = (260, 0), size = (530, 25), font = 0, flags = RT_HALIGN_LEFT, text = 4), # Index 4
+					MultiContentEntryText(pos = (45, 0), size = (195, 25), font = 0, flags = RT_HALIGN_LEFT, text = 5, color = 0x00999999), # Index 5
+					MultiContentEntryText(pos = (260, 0), size = (310, 25), font = 0, flags = RT_HALIGN_LEFT, text = 6, color = 0x00999999), # Index 6
+					MultiContentEntryText(pos = (590, 0), size = (200, 25), font = 0, flags = RT_HALIGN_RIGHT, text = 7, color = 0x00999999), # Index 7
+					MultiContentEntryText(pos = (70, 0), size = (170, 25), font = 0, flags = RT_HALIGN_LEFT, text = 8, color = 0x00999999), # Index 8
+					MultiContentEntryText(pos = (260, 0), size = (110, 25), font = 0, flags = RT_HALIGN_LEFT, text = 9, color = 0x00999999), # Index 9
+					MultiContentEntryText(pos = (390, 0), size = (190, 25), font = 0, flags = RT_HALIGN_RIGHT, text = 10, color = 0x00999999), # Index A
+					MultiContentEntryText(pos = (600, 0), size = (190, 25), font = 0, flags = RT_HALIGN_RIGHT, text = 11, color = 0x00999999), # Index B
+					MultiContentEntryText(pos = (45, 0), size = (745, 25), font = 0, flags = RT_HALIGN_LEFT, text = 12, color = 0x00999999), # Index C
+					MultiContentEntryText(pos = (45, 0), size = (745, 25), font = 0, flags = RT_HALIGN_LEFT, text = 13, color = 0x00999999) # Index D
+					],
+				"fonts": [gFont("Regular", 20)],
+				"itemHeight": 25,
+				"selectionEnabled": False
+				}
+			</convert>
+		</widget>
+		<!-- <widget name="AboutScrollLabel" position="400,80" size="830,550" font="Regular;22" transparent="1" /> -->
+	</screen>
+
+<!-- Memory Information (MENU > Information > Memory) Screen -->
+
+	<screen name="SystemMemoryInfo" title="Memory Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColourBacks" />
+		<ePixmap pixmap="menus/mainmenu_tasks_browser.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="list" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					# 00000000000000000000000000000 Heading
+					#  1111111 22222222222222222222 Indented Label / Value
+					MultiContentEntryText(pos = (20, 0), size = (790, 25), font = 0, flags = RT_HALIGN_LEFT, text = 0), # Index 0
+					MultiContentEntryText(pos = (45, 0), size = (195, 25), font = 0, flags = RT_HALIGN_LEFT, text = 1, color = 0x00999999), # Index 1
+					MultiContentEntryText(pos = (260, 0), size = (530, 25), font = 0, flags = RT_HALIGN_LEFT, text = 2, color = 0x00999999) # Index 2
+					],
+				"fonts": [gFont("Regular", 20)],
+				"itemHeight": 25,
+				"selectionEnabled": False
+				}
+			</convert>
+		</widget>
+		<!-- <widget name="AboutScrollLabel" position="400,80" size="830,550" font="Regular;22" transparent="1" /> -->
+	</screen>
+
+<!-- Network Information (MENU > Information > Network) Screen -->
+
+<!--
+ |	This should be the same screen as the others of this type above except 
+ |	that some network status stuff has been grafted in as skin hacks!!!  This 
+ |	should really come from the code that populates the networking data in 
+ |	the first place.
+ +-->
+
+	<screen name="SystemNetworkInfo" title="Network Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColourBacks" />
+		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<eLabel text="Hostname:" position="420,80" size="225,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
+		<widget name="hostname" position="660,80" size="450,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
+		<eLabel text="Internet:" position="950,80" size="150,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
+		<widget name="inetstatus" pixmaps="buttons/button_small_green_off.png,buttons/button_small_green.png" position="1150,86" size="15,16" alphatest="on" transparent="1" />
+		<eLabel position="400,124" size="830,2" backgroundColor="Pinstripe" />
+		<widget source="list" render="Listbox" position="400,150" size="830,475" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					# 00000000000000000000000000000 Heading
+					#  1111111 22222222222222222222 Indented Label / Value
+					# 33333333 44444444444444444444 Label / Value
+					#  1111111 555555555 6666666666 Gateway Label / Gateway IP / Gateway Destination
+					# 33333333 777777777 888 9      Network Label / Interface Type / Link Label / Link Status Pixmap
+					MultiContentEntryText(pos = (20, 0), size = (790, 25), font = 0, flags = RT_HALIGN_LEFT, text = 0), # Index 0
+					MultiContentEntryText(pos = (45, 0), size = (195, 25), font = 0, flags = RT_HALIGN_LEFT, text = 1, color = 0x00999999), # Index 1
+					MultiContentEntryText(pos = (260, 0), size = (530, 25), font = 0, flags = RT_HALIGN_LEFT, text = 2, color = 0x00999999), # Index 2
+					MultiContentEntryText(pos = (20, 0), size = (215, 25), font = 0, flags = RT_HALIGN_LEFT, text = 3), # Index 3
+					MultiContentEntryText(pos = (260, 0), size = (530, 25), font = 0, flags = RT_HALIGN_LEFT, text = 4), # Index 4
+					MultiContentEntryText(pos = (260, 0), size = (270, 25), font = 0, flags = RT_HALIGN_LEFT, text = 5, color = 0x00999999), # Index 5
+					MultiContentEntryText(pos = (550, 0), size = (240, 25), font = 0, flags = RT_HALIGN_LEFT, text = 6, color = 0x00999999), # Index 6
+					MultiContentEntryText(pos = (260, 0), size = (270, 25), font = 0, flags = RT_HALIGN_LEFT, text = 7), # Index 7
+					MultiContentEntryText(pos = (550, 0), size = (150, 25), font = 0, flags = RT_HALIGN_LEFT, text = 8), # Index 8
+					# MultiContentEntryPixmapAlphaTest(pos = (750, 6), size = (15, 16), png = 9) # Index 9
+					MultiContentEntryPixmapAlphaTest(pos = (750, 3), size = (22, 22), png = 9) # Index 9
+					],
+				"fonts": [gFont("Regular", 20)],
+				"itemHeight": 25,
+				"selectionEnabled": False
+				}
+			</convert>
+		</widget>
+		<!--
+		<widget source="IFtext" render="Label" position="400,80" size="120,21" backgroundColor="TextBackground" font="Regular;20" halign="left" transparent="1" />
+		<widget source="IF" render="Label" position="577,80" size="600,21" backgroundColor="TextBackground" font="Regular;20" halign="left" transparent="1" />
+		<widget source="Statustext" render="Label" position="400,103" size="115,21" backgroundColor="TextBackground" font="Regular;20" halign="left" transparent="1" />
+		<widget name="statuspic" pixmaps="buttons/button_small_green.png,buttons/button_small_green_off.png" position="577,103" size="15,16" alphatest="on" transparent="1" />
+		<widget name="AboutScrollLabel" position="400,165" size="830,415" backgroundColor="TextBackground" font="Regular;22" transparent="1" />
+		-->
+	</screen>
+
+<!-- Sevice Information (MENU > Information > Service) Screens -->
+
+	<screen name="ServiceInfo" title="Service Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tv_live.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="list" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					# 0000000000 111111111111111111 Label / Value
+					MultiContentEntryText(pos = (20, 0), size = (215, 25), font = 0, flags = RT_HALIGN_LEFT, text = 0), # Index 0
+					MultiContentEntryText(pos = (260, 0), size = (530, 25), font = 0, flags = RT_HALIGN_LEFT, text = 1) # Index 1
+					],
+				"fonts": [gFont("Regular", 20)],
+				"itemHeight": 25,
+				"selectionEnabled": False
+				}
+			</convert>
+		</widget>
+	</screen>
+
+<!--
+ |	Console / Task List
+ +-->
+
+	<screen name="TaskListScreen" title="Task List" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_scan.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="tasklist" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (20, 0), size = (790, 25), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1), # Name
+					MultiContentEntryText(pos = (20, 25), size = (150, 25), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2), # State
+					MultiContentEntryProgress(pos = (190, 27), size = (480, 20), percent = -3), # Progress
+					MultiContentEntryText(pos = (690, 25), size = (100, 25), font=0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4), # Percentage
+					],
+				"fonts": [gFont("Regular", 20), gFont("Regular", 18)],
+				"itemHeight": 50
+				}
+			</convert>
+		</widget>
+	</screen>
+
+<!--
+ |	Timers
+ +-->
+
+<!-- TIMER | SLEEP - Sleep / PowerTimer Timer List Menu -->
+
+	<screen name="TimerEditList" title="Timer List" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonInfo" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateTimerList4" />
+		<panel name="ScreenTemplateDescription4" />
+	</screen>
+
+<!-- Timer Log -->
+
+	<screen name="TimerLogDefault" title="Timer Log" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateLogList4" />
+		<panel name="ScreenTemplateLogEntry4" />
+		<!--
+		<widget name="loglist" position="50,80" size="1180,400" enableWrapAround="1" font="Regular;20" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" valign="center" />
+		<widget name="logentry" position="50,540" size="1180,60" font="Console;20" transparent="1" />
+		-->
+	</screen>
+
+	<screen name="TimerLog" title="Timer Log" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateLogList4" />
+		<panel name="ScreenTemplateLogEntry4" />
+	</screen>
+
+<!-- Timer Entry -->
+
+	<screen name="TimerEntry" title="Timer Entry" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonTextVKey" />
+		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateDescription4" />
+	</screen>
+
+<!-- Timer Sanity Conflict -->
+
+	<screen name="TimerSanityConflict" title="Timer Sanity Error" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget source="lab1" render="Label" position="120,85" size="510,24" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" halign="center" transparent="1" valign="center" />
+		<widget source="lab2" render="Label" position="650,85" size="510,24" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" halign="center" transparent="1" valign="center" />
+		<widget name="timer1" position="120,115" size="510,500" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="timer2" position="650,115" size="510,500" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+<!-- Timer Selection ??? -->
+
+	<screen name="TimerSelection" title="Timer Selection" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateTimerList4" />
+		<panel name="ScreenTemplateDescription4" />
+	</screen>
+
+<!-- Timer Screens ??? -->
+
+	<screen name="TimerEdit" position="70,130" size="590,335">
+		<widget name="description" position="10,10" size="580,40" font="Regular;25" transparent="1" />
+		<widget name="lbegin" position="405,102" size="103,30" font="Regular;25" foregroundColor="LightRed" transparent="1" />
+		<widget name="lend" position="405,158" size="103,30" font="Regular;25" foregroundColor="DullGreen" transparent="1" />
+		<widget name="begin" position="508,105" size="72,35" font="Regular;25" transparent="1" />
+		<widget name="end" position="508,150" size="72,35" font="Regular;25" transparent="1" />
+		<widget name="apply" position="10,240" size="250,35" transparent="1" />
+	</screen>
+
+<!-- Original Sleep Timer List Menu ??? - Unused -->
+
+	<screen name="SleepTimerEdit" title="Sleep Timer" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<!--
+		<ePixmap pixmap="icons/clock.png" position="50,30" size="14,14" alphatest="on" zPosition="3" />
+		<widget source="global.CurrentTime" render="Label" position="75,30" size="80,22" backgroundColor="Black" font="Named;16" foregroundColor="White" halign="left" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="155,30" size="500,22" backgroundColor="Black" font="Named;16" foregroundColor="White" halign="left" transparent="1">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<eLabel position="50,102" size="1160,1" backgroundColor="Pinstripe" zPosition="2" />
+		<ePixmap pixmap="frame/frame_400x200.png" position="150,195" size="400,200" alphatest="on" zPosition="2" />
+		-->
+		<!--
+		<ePixmap pixmap="buttons/button_200x60_red.png" position="123,635" size="200,60" alphatest="on" zPosition="1" />
+		<ePixmap pixmap="buttons/button_200x60_green.png" position="398,635" size="200,60" alphatest="on" zPosition="1" />
+		<ePixmap pixmap="buttons/button_200x60_yellow.png" position="673,635" size="200,60" alphatest="on" zPosition="1" />
+		<ePixmap pixmap="buttons/button_200x60_blue.png" position="948,635" size="200,60" alphatest="on" zPosition="1" />
+		<widget name="key_red" position="123,635" size="200,36" backgroundColor="ButtonRed" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_green" position="398,635" size="200,36" backgroundColor="ButtonGreen" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_blue" position="948,635" size="200,36" backgroundColor="ButtonBlue" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
+		-->
+		<widget name="config" position="650,195" size="510,384" backgroundColor="background" font="Regular;20" halign="center" transparent="1" zPosition="2" />
+		<widget name="current_status" position="200,210" size="300,170" backgroundColor="#31000000" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
+		<eLabel position="50,625" size="1160,1" backgroundColor="Pinstripe" />
+	</screen>
+
+<!-- AutoTimer Plugin -->
+
+	<screen name="AutoTimerOverview" title="Auto Timer Overview" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonMenu" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonHelp" />
+		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateEntriesTall0" />
+	</screen>
+
+	<screen name="AutoTimerEditor" title="Auto Timer Editor" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateSHelp4" />
+	</screen>
+
+	<screen name="AutoTimerFilterEditor" title="Auto Timer Filter Editor" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonTextVKey" />
+		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig0" />
+	</screen>
+
+	<screen name="AutoTimerServiceEditor" title="Auto Timer Service Editor" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig0" />
+	</screen>
+
+	<screen name="AutoTimerImporter" title="Auto Timer Importer" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateList0" />
+	</screen>
+
+	<screen name="AutoTimerSettings" title="Auto Timer Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateSHelp4" />
+	</screen>
+
+	<screen name="AutoTimerHelp" title="Auto Timer Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateDetailText0" />
+	</screen>
+
+<!-- Cron Timer Screens -->
+
+	<screen name="CronTimers" title="Cron Manager" position="center,center" size="590,400">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="lab1" position="10,0" size="100,24" font="Regular;20" transparent="0" valign="center" />
+		<widget name="labdisabled" position="110,0" size="100,24" backgroundColor="LightRed" font="Regular;20" halign="center" valign="center" zPosition="1" />
+		<widget name="labactive" position="110,0" size="100,24" backgroundColor="DullGreen" font="Regular;20" halign="center" valign="center" zPosition="2" />
+		<widget name="lab2" position="240,0" size="150,24" font="Regular;20" transparent="0" valign="center" />
+		<widget name="labstop" position="390,0" size="100,24" backgroundColor="LightRed" font="Regular;20" halign="center" valign="center" zPosition="1" />
+		<widget name="labrun" position="390,0" size="100,24" backgroundColor="DullGreen" font="Regular;20" halign="center" valign="center" zPosition="2" />
+		<widget source="list" render="Listbox" position="10,35" size="540,325" scrollbarMode="showOnDemand">
+			<convert type="StringList" />
+		</widget>
+	</screen>
+
+<!-- VLC Transcoding Server -->
+
+	<screen name="VlcMediaListScreen" title="VlcMediaListScreen" position="90,90" size="1100,576">
+		<eLabel text="vlc player" position="800,25" size="300,22" font="Regular;20" halign="center" />
+		<eLabel position="740,100" size="540,2" backgroundColor="Pinstripe" />
+		<widget name="filelist_button_sel" pixmap="epgs/epg_now.png" position="125,100" size="1100,35" alphatest="on" zPosition="3" />
+		<widget name="playlist_button_sel" pixmap="epgs/epg_next.png" position="125,100" size="1100,35" alphatest="on" zPosition="3" />
+		<widget name="filelist_text" position="192,107" size="185,25" backgroundColor="TextBackground" font="Regular;20" halign="center" transparent="1" zPosition="4" />
+		<widget name="playlist_text" position="442,107" size="185,25" backgroundColor="TextBackground" font="Regular;20" halign="center" transparent="1" zPosition="4" />
+		<eLabel position="740,133" size="540,2" backgroundColor="Pinstripe" />
+		<widget name="filelist" position="140,145" size="500,375" scrollbarMode="showOnDemand" transparent="1" zPosition="3" />
+		<widget name="playlist" position="640,145" size="460,375" scrollbarMode="showOnDemand" transparent="1" zPosition="3" />
+		<widget name="key_red" position="240,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonRed" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_green" position="440,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonGreen" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_yellow" position="640,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonYellow" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_blue" position="840,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonBlue" halign="center" transparent="1" valign="center" zPosition="3" />
+		<eLabel position="0,525" size="1100,2" backgroundColor="Pinstripe" />
+	</screen>
+
+	<screen name="VlcServerListScreen" title="Select a VLC-Server Profile" position="90,90" size="1100,576">
+		<widget name="serverlabel" position="250,80" size="850,22" font="Regular;20" transparent="1" />
+		<eLabel position="235,110" size="860,2" backgroundColor="Pinstripe" />
+		<widget name="serverlist" position="240,130" size="800,370" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template": [
+					MultiContentEntryText(pos = (25, 7), size = (550, 30), flags = RT_HALIGN_LEFT, text = 0)
+					],
+				"fonts": [gFont("Regular", 24)],
+				"itemHeight": 40
+				}
+			</convert>
+		</widget>
+		<widget name="key_red" position="240,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonRed" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_green" position="440,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonGreen" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_yellow" position="640,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonYellow" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_blue" position="840,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonBlue" halign="center" transparent="1" valign="center" zPosition="3" />
+		<eLabel position="0,520" size="1100,2" backgroundColor="Pinstripe" />
+	</screen>
+
+	<screen name="VlcServerConfigScreen" title="Edit VLC Server" position="90,90" size="1100,576">
+		<eLabel text="vlc server config" position="800,25" size="300,22" font="Regular;20" halign="right" />
+		<eLabel position="180,47" size="920,2" backgroundColor="Pinstripe" />
+		<widget name="config" position="200,110" size="880,400" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="key_red" position="240,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonRed" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_green" position="440,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonGreen" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_yellow" position="640,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonYellow" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_blue" position="840,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonBlue" halign="center" transparent="1" valign="center" zPosition="3" />
+		<eLabel position="0,525" size="1100,2" backgroundColor="Pinstripe" />
+	</screen>
+</skin>

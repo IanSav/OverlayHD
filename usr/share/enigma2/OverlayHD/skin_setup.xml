@@ -1,0 +1,1139 @@
+<skin>
+<!-- MENU > Setup > A/V Setup > A/V Settings - Uses Generic Setup Screen -->
+
+	<!--
+	<screen name="?" title="A/V Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplateSetup" />
+	</screen>
+	-->
+
+<!-- MENU > Setup > AV Setup > Audio Sync - Uses Generic Setup Screen -->
+
+	<!--
+	<screen name="?" title="Audio Sync Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplateSetup" />
+	</screen>
+	-->
+
+<!-- MENU > Setup > AV Setup > Video Enhancement -->
+
+	<screen name="VideoEnhancementSetup" title="Video Enhancement Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplateSetup" />
+	</screen>
+
+	<screen name="VideoEnhancementPreview" title="VideoEnhancementPreview" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplateSetup" />
+		<panel name="ScreenTemplateSIntroduction4" />
+		<!--
+		<widget source="key_red" render="Label" position="85,125" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonRed" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget source="key_green" render="Label" position="300,125" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonGreen" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="config" position="5,0" size="550,60" scrollbarMode="showOnDemand" />
+		<widget source="introduction" render="Label" position="5,80" size="550,25" backgroundColor="TextBackground" font="Regular;21" halign="center" transparent="1" valign="center" zPosition="10" />
+		<eLabel position="0,115" size="560,2" backgroundColor="Pinstripe" />
+		-->
+	</screen>
+
+<!-- MENU > Setup > AV Setup > OSD Position -->
+
+	<screen name="UserInterfacePositioner" title="OSD Position Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplateSetup" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_tv.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+	</screen>
+
+<!-- MENU > Setup > AV Setup > OSD 3D Setup -->
+
+	<screen name="OSD3DSetupScreen" title="OSD Positioner" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplateSetup" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_tv.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateStatus4" />
+	</screen>
+
+<!-- MENU > Setup > AV Setup > Skin Setup -->
+
+	<screen name="SkinSelector" title="Skin Selector" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonInfo" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_tv.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateSkinList4" />
+		<eLabel position="960,80" size="270,2" backgroundColor="Pinstripe" />
+		<eLabel position="960,524" size="270,2" backgroundColor="Pinstripe" />
+		<eLabel position="960,80" size="2,445" backgroundColor="Pinstripe" />
+		<eLabel position="1228,80" size="2,445" backgroundColor="Pinstripe" />
+		<widget name="Preview" position="970,230" size="250,141" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateSIntroduction4" />
+	</screen>
+
+<!-- MENU > Setup > AV Setup > HDMI-CEC -->
+
+	<screen name="HdmiCECSetupScreen" title="HDMI CEC" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_tv.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig4" />
+		<widget source="fixed_address" render="Label" position="410,570" size="810,25" font="Regular;20" halign="center" transparent="1" valign="center" />
+		<widget source="current_address" render="Label" position="410,595" size="810,25" font="Regular;20" halign="center" transparent="1" valign="center" />
+	</screen>
+
+<!-- MENU > Setup > System > GUI Settings - Uses Generic Setup Screen -->
+
+	<!--
+	<screen name="setup_userinterface" title="GUI Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplateSetup" />
+	</screen>
+	-->
+
+<!-- MENU > Setup > System > OSD Settings - NO LONGER ENABLED IN MENUS! -->
+
+	<!--
+	<screen name="?" title="OSD Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplateSetup" />
+	</screen>
+	-->
+
+<!-- MENU > Setup > System > Button Settings - Uses Generic Setup Screen -->
+
+	<!--
+	<screen name="setup_buttonsetup" title="Button Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplateSetup" />
+	</screen>
+	-->
+
+<!-- MENU > Setup > System > Language Settings -->
+
+	<screen name="LanguageSelection" title="Language Selection" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="languages" render="Listbox" position="400,80" size="830,600" backgroundColorSelected="MenuSelected" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (85, 0), size = (705, 50), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1), # index 1 is the language name,
+					MultiContentEntryPixmap(pos = (5, 5), size = (60, 50), png = 2), # index 2 is the pixmap
+					],
+				"fonts": [gFont("Regular", 25)],
+				"itemHeight": 50
+				}
+			</convert>
+		</widget>
+	</screen>
+
+<!-- MENU > Setup > System > Time Settings - Uses Generic Setup Screen -->
+
+	<!--
+	<screen name="setup_time" title="Time Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplateSetup" />
+	</screen>
+	-->
+
+<!-- MENU > Setup > System > Front Panel Settings - Uses Generic Setup Screen -->
+
+	<!--
+	<screen name="?" title="Front Panel Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplateSetup" />
+	</screen>
+	-->
+
+<!-- MENU > Setup > System > Fan Settings - Uses Generic Setup Screen -->
+
+	<!--
+	<screen name="?" title="Fan Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplateSetup" />
+	</screen>
+	-->
+
+<!-- MENU > Setup > System > Remote Control Code Settings -->
+
+	<screen name="RCSetupScreen" title="Remote Control Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<!-- <ePixmap pixmap="menus/mainmenu_tasks_setup_system.png" position="50,100" size="300,500" alphatest="on" transparent="1" /> -->
+		<widget name="Preview" position="100,100" size="200,500" alphatest="blend" backgroundColor="TextBackground" font="Regular;18" halign="center" transparent="1" valign="center" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateFrame830x120" />
+	</screen>
+
+<!-- MENU > Setup > System > Factory Reset - Uses Internal Screen -->
+
+<!-- MENU > Setup > Tuners > Tuner Configuration - NO LONGER ENABLED IN MENUS! -->
+
+	<screen name="NimSelection" title="Choose Tuner" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget source="nimlist" render="Listbox" position="650,195" size="525,400" backgroundColorSelected="MenuSelected" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (10, 5), size = (390, 30), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the nim name,
+					MultiContentEntryText(pos = (50, 30), size = (435, 90), font = 1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is a description of the nim settings,
+					],
+				"fonts": [gFont("Regular", 20), gFont("Regular", 15)],
+				"itemHeight": 120
+				}
+			</convert>
+		</widget>
+		<eLabel text="Choose Tuner" position="200,210" size="300,170" font="Regular;20" halign="center" transparent="1" valign="center" />
+<!--####-->		<!-- <ePixmap pixmap="frame/frame_400x200.png" position="150,195" size="400,200" alphatest="on" /> -->
+	</screen>
+
+<!-- MENU > Setup > Tuners > Tuner Setup -->
+
+	<screen name="NimSetup" title="Reception Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_system.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="config" position="590,170" size="610,418" backgroundColorSelected="MenuSelected" enableWrapAround="1" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+<!-- MENU > Setup > Tuners > Location Scan -->
+
+	<screen name="IniTerrestrialLocation" title="Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_tv.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateFrame830x120" />
+	</screen>
+
+<!-- MENU > Setup > Tuners > Automatic Scan - NO LONGER ENABLED IN MENUS! -->
+
+	<screen name="ScanSimple" title="Automatic service scan" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateButtonTextVKey" />
+		<widget name="footnote" position="0,0" size="1,1" alphatest="on" transparent="1" zPosition="1" />
+		<widget name="footer" position="60,130" size="380,170" font="Regular;20" halign="center" transparent="1" valign="center" />
+	</screen>
+
+<!-- MENU > Setup > Tuners > Manual Scan -->
+
+	<screen name="ScanSetup" title="Manual service scan" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_tv.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateIntroduction4" />
+		<widget name="footnote" position="0,0" size="1,1" alphatest="on" transparent="1" zPosition="1" />
+	</screen>
+
+<!-- MENU > Setup > Tuners > Service Scan - NO LONGER ENABLED IN MENUS! -->
+
+	<screen name="ServiceScan" title="Service Scan" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<eLabel text="Scanned services:" position="675,140" size="485,35" font="Regular;28" transparent="1" />
+		<eLabel position="665,180" size="450,2" backgroundColor="White" />
+		<widget name="servicelist" position="650,195" size="485,400" backgroundColor="#33000000" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" zPosition="1" />
+<!--####-->		<!-- <ePixmap pixmap="frame/frame_400x300.png" position="150,195" size="400,300" alphatest="on" zPosition="-1" /> -->
+		<widget source="FrontendInfo" render="Pixmap" pixmap="icons/scan-s.png" position="170,210" size="64,64" alphatest="on" transparent="1" zPosition="1">
+			<convert type="FrontendInfo">TYPE</convert>
+			<convert type="ValueRange">0,0</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="FrontendInfo" render="Pixmap" pixmap="icons/scan-c.png" position="170,210" size="64,64" alphatest="on" transparent="1" zPosition="1">
+			<convert type="FrontendInfo">TYPE</convert>
+			<convert type="ValueRange">1,1</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="FrontendInfo" render="Pixmap" pixmap="icons/scan-t.png" position="170,210" size="64,64" alphatest="on" transparent="1" zPosition="1">
+			<convert type="FrontendInfo">TYPE</convert>
+			<convert type="ValueRange">2,2</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget name="scan_progress" position="245,225" size="280,14" borderWidth="1" transparent="1" zPosition="1" />
+		<widget name="network" position="245,250" size="280,25" font="Regular;20" halign="left" transparent="1" zPosition="1" />
+		<widget name="transponder" position="170,300" size="360,25" font="Regular;20" halign="center" transparent="1" zPosition="1" />
+		<widget name="scan_state" position="170,340" size="360,45" font="Regular;20" halign="center" transparent="1" valign="top" zPosition="2" />
+		<widget name="pass" position="170,385" size="360,25" font="Regular;20" halign="center" transparent="1" valign="top" zPosition="1" />
+		<widget name="done_text" position="170,410" size="360,100" font="Regular;20" halign="center" transparent="1" valign="top" zPosition="12" />
+	</screen>
+
+<!-- MENU > Setup > Tuners > Positioner Setup - NO LONGER ENABLED IN MENUS! -->
+
+	<screen name="PositionerSetup" title="Positioner setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColourBacks" />
+		<!--
+		<eLabel position="50,625" size="1160,1" backgroundColor="Pinstripe" zPosition="1" />
+		<ePixmap pixmap="icons/clock.png" position="50,30" size="14,14" alphatest="on" zPosition="3" />
+		<widget source="global.CurrentTime" render="Label" position="75,30" size="80,20" backgroundColor="TextBackground" font="Named;16" foregroundColor="White" halign="left" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="155,30" size="500,20" backgroundColor="TextBackground" font="Named;16" foregroundColor="White" halign="left" transparent="1">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<eLabel text="Positioner setup" position="890,80" size="320,22" backgroundColor="TextBackground" font="Named;20" foregroundColor="bluette" halign="right" transparent="1" zPosition="2" />
+		<eLabel position="50,101" size="1160,1" backgroundColor="Pinstripe" zPosition="2" />
+		-->
+		<widget name="list" position="650,195" size="510,384" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
+		<!--
+		<eLabel position="50,101" size="1160,1" backgroundColor="Pinstripe" zPosition="2" />
+		<ePixmap pixmap="buttons/button_200x60_red.png" position="123,635" size="200,60" alphatest="on" zPosition="1" />
+		<ePixmap pixmap="buttons/button_200x60_green.png" position="398,635" size="200,60" alphatest="on" zPosition="1" />
+		<ePixmap pixmap="buttons/button_200x60_yellow.png" position="673,635" size="200,60" alphatest="on" zPosition="1" />
+		<ePixmap pixmap="buttons/button_200x60_blue.png" position="948,635" size="200,60" alphatest="on" zPosition="1" />
+		-->
+		<widget name="red" position="123,635" size="200,36" backgroundColor="ButtonRed" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="green" position="398,635" size="200,36" backgroundColor="ButtonGreen" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="yellow" position="673,635" size="200,36" backgroundColor="ButtonYellow" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="blue" position="948,635" size="200,36" backgroundColor="ButtonBlue" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
+<!--####-->		<!-- <ePixmap pixmap="frame/frame_400x300.png" position="150,195" size="400,300" alphatest="on" /> -->
+		<eLabel text="SNR:" position="180,223" size="60,22" font="Regular;21" halign="center" transparent="1" valign="center" zPosition="1" />
+		<widget name="snr_bar" position="242,224" size="200,14" transparent="1" zPosition="1" />
+		<widget name="snr_percentage" position="463,223" size="60,22" font="Regular;21" halign="center" transparent="1" valign="center" zPosition="1" />
+		<eLabel text="BER:" position="180,260" size="60,22" font="Regular;21" halign="center" transparent="1" valign="center" zPosition="1" />
+		<widget name="ber_bar" position="242,261" size="200,14" transparent="1" zPosition="1" />
+		<widget name="ber_value" position="463,260" size="60,22" font="Regular;21" halign="center" transparent="1" valign="center" zPosition="1" />
+		<eLabel text="Lock:" position="180,334" size="60,22" font="Regular;21" halign="left" transparent="1" valign="center" zPosition="1" />
+		<eLabel text="Frequency:" position="180,371" size="150,22" font="Regular;21" halign="left" transparent="1" valign="center" zPosition="1" />
+		<eLabel text="Symbolrate:" position="180,408" size="150,22" font="Regular;21" halign="left" transparent="1" valign="center" zPosition="1" />
+		<eLabel text="FEC:" position="180,445" size="150,22" font="Regular;21" halign="left" transparent="1" valign="center" zPosition="1" />
+		<widget name="lock_state" position="370,334" size="150,22" font="Regular;21" halign="reight" transparent="1" valign="center" zPosition="1" />
+		<widget name="frequency_value" position="370,371" size="150,22" font="Regular;21" halign="reight" transparent="1" valign="center" zPosition="1" />
+		<widget name="symbolrate_value" position="370,408" size="150,22" font="Regular;21" halign="reight" transparent="1" valign="center" zPosition="1" />
+		<widget name="fec_value" position="370,445" size="150,22" font="Regular;21" halign="reight" transparent="1" valign="center" zPosition="1" />
+	</screen>
+
+	<screen name="FastScanScreen" title="FastScanScreen" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<eLabel position="50,102" size="1160,1" backgroundColor="Pinstripe" zPosition="2" />
+		<widget name="config" position="590,170" size="610,418" backgroundColorSelected="MenuSelected" enableWrapAround="1" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
+<!--####-->		<!-- <ePixmap name="textborder" pixmap="frame/frame_400x200.png" position="150,195" size="400,200" alphatest="on" zPosition="2" /> -->
+		<widget name="introduction" position="170,270" size="360,50" font="Regular;24" halign="center" transparent="1" zPosition="3" />
+		<eLabel position="50,625" size="1160,1" backgroundColor="Pinstripe" />
+	</screen>
+
+	<screen name="AutoDiseqc" title=" " position="c-250,c-100" size="500,250">
+		<widget source="statusbar" render="Label" position="10,5" size="e-10,60" font="Regular;22" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="10" />
+		<widget source="tunerstatusbar" render="Label" position="10,60" size="e-10,30" font="Regular;22" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="10" />
+		<widget name="config" position="10,100" size="e-10,100" scrollbarMode="showOnDemand" />
+		<!-- red.png not found - FIXED DEBUG - Replace with normal RED button -->
+		<!-- <ePixmap pixmap="buttons/red.png" position="c-140,e-45" size="140,40" alphatest="on" /> -->
+		<widget source="key_red" render="Label" position="c-140,e-45" size="140,40" backgroundColor="ButtonRed" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="1" />
+	</screen>
+
+<!-- MENU > Setup > Tuners > SatFinder - NO LONGER ENABLED IN MENUS! -->
+
+	<screen name="Satfinder" title="Satfinder" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<ePixmap pixmap="icons/clock.png" position="50,30" size="14,14" alphatest="on" zPosition="3" />
+		<widget source="global.CurrentTime" render="Label" position="75,30" size="80,20" backgroundColor="TextBackground" font="Named;16" foregroundColor="White" halign="left" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="155,30" size="500,20" backgroundColor="TextBackground" font="Named;16" foregroundColor="White" halign="left" transparent="1">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<eLabel position="50,102" size="1160,1" backgroundColor="Pinstripe" zPosition="2" />
+		<eLabel position="50,625" size="1160,1" backgroundColor="Pinstripe" zPosition="1" />
+		<widget name="header" position="890,80" size="320,22" backgroundColor="TextBackground" font="Named;20" foregroundColor="bluette" halign="right" transparent="1" zPosition="2" />
+		<!-- <panel name="ScreenTemplateConfig2"> -->
+		<widget name="config" position="590,170" size="610,418" backgroundColorSelected="MenuSelected" enableWrapAround="1" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
+<!--####-->		<!-- <ePixmap pixmap="frame/frame_400x400.png" position="150,195" size="400,400" alphatest="on" /> -->
+		<ePixmap pixmap="icons/dish_scan.png" position="220,250" size="119,110" alphatest="on" transparent="1" zPosition="1" />
+		<widget name="introduction" position="350,260" size="90,30" font="Regular;23" transparent="1" zPosition="2" />
+		<widget source="Frontend" render="Label" position="260,325" size="260,20" font="Regular;19" halign="center" transparent="1" valign="center" zPosition="2">
+			<convert type="FrontendInfo">SNRdB</convert>
+		</widget>
+		<eLabel name="snr" text="SNR:" position="180,405" size="60,22" font="Regular;21" halign="right" transparent="1" zPosition="1" />
+		<widget source="Frontend" render="Progress" position="242,406" size="200,14" transparent="1" zPosition="1">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+		<widget source="Frontend" render="Label" position="463,405" size="60,22" font="Regular;21" zPosition="1">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+		<eLabel name="ber" text="BER:" position="180,445" size="60,22" font="Regular;21" halign="right" transparent="1" zPosition="1" />
+		<widget source="Frontend" render="Progress" position="242,446" size="200,14" transparent="1" zPosition="1">
+			<convert type="FrontendInfo">BER</convert>
+		</widget>
+		<widget source="Frontend" render="Label" position="463,445" size="60,22" font="Regular;21" zPosition="1">
+			<convert type="FrontendInfo">BER</convert>
+		</widget>
+		<eLabel name="lock" text="Lock:" position="200,530" size="240,22" font="Regular;21" />
+		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_on.png" position="463,525" size="80,23" alphatest="on" zPosition="1">
+			<convert type="FrontendInfo">LOCK</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_off.png" position="463,525" size="80,23" alphatest="on" zPosition="1">
+			<convert type="FrontendInfo">LOCK</convert>
+			<convert type="ConditionalShowHide">Invert</convert>
+		</widget>
+	</screen>
+
+<!-- MENU > Setup > TV > Channel Selection - Uses Generic Setup Screen -->
+
+	<!--
+	<screen name="?" title="Channel Selection Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplateSetup" />
+	</screen>
+	-->
+
+<!-- MENU > Setup > TV > Recording Settings - Uses Generic Setup Screen -->
+
+	<!--
+	<screen name="setup_recording" title="Recording Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplateSetup" />
+	</screen>
+	-->
+
+<!-- MENU > Setup > TV > TimeShift Settings - Uses Generic Setup Screen -->
+
+	<!--
+	<screen name="setup_timeshift" title="Timeshift Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplateSetup" />
+	</screen>
+	-->
+
+<!-- MENU > Setup > TV > Auto Language - Uses Generic Setup Screen -->
+
+	<!--
+	<screen name="?" title="Auto Language Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplateSetup" />
+	</screen>
+	-->
+
+<!-- MENU > Setup > TV > Subtitle Settings - Uses Generic Setup Screen -->
+
+	<!--
+	<screen name="?" title="Subtitle Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplateSetup" />
+	</screen>
+	-->
+
+<!-- MENU > Setup > TV > EPG Settings - Uses Generic Setup Screen -->
+
+	<!--
+	<screen name="?" title="EPG Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplateSetup" />
+	</screen>
+	-->
+
+<!-- MENU > Setup > TV > Common Interface - NO LONGER ENABLED IN MENUS! -->
+
+	<screen name="CiSelection" title="Select Common interface" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateEntries0" />
+	</screen>
+
+	<!-- Common interface - menu -->
+
+	<screen name="MMIDialog" title="Common interface - menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateEntries0" />
+		<!-- <widget name="entries" position="590,100" size="610,500" backgroundColorSelected="MenuSelected" enableWrapAround="1" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" /> -->
+		<widget name="title" position="100,170" size="300,30" font="Regular;20" halign="center" transparent="1" valign="center" />
+		<widget name="subtitle" position="100,200" size="300,30" font="Regular;20" halign="center" transparent="1" valign="center" />
+		<widget name="bottom" position="100,230" size="300,30" font="Regular;20" halign="center" transparent="1" valign="center" />
+	</screen>
+
+<!-- MENU > Setup > TV > Parental Control -->
+
+	<screen name="ParentalControlSetup" title="Parental Control Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_parental.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateFrame830x120" />
+	</screen>
+
+	<!-- Parental Control - Services Editor -->
+
+	<screen name="ParentalControlEditor" title="Parental Control Services Editor" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_parental.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateServiceList0" />
+	</screen>
+
+	<!-- Parental Control - Change PIN -->
+
+	<screen name="ParentalControlChangePin" title="Change PIN Code" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_parental.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig0" />
+	</screen>
+
+	<!-- Service Pin Input -->
+
+	<screen name="PinInput" title="Service Pin Code Needed" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_parental.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="service" position="400,200" size="810,35" font="Regular;25" halign="center" transparent="1" valign="center" />
+		<widget name="text" position="400,300" size="810,35" font="Regular;25" halign="center" transparent="1" valign="center" />
+		<widget name="input" position="400,400" size="810,75" font="Regular;75" halign="center" transparent="1" valign="center" />
+		<widget name="tries" position="400,500" size="810,35" font="Regular;25" halign="center" transparent="1" valign="center" />
+	</screen>
+
+<!-- MENU > Setup > TV > Zap History - NO LONGER ENABLED IN MENUS! -->
+
+	<screen name="ZapHistoryConfigurator" title="Zap History Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplateSetup" />
+		<ePixmap pixmap="menus/mainmenu_tv_zaphistory.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+	</screen>
+
+<!-- MENU > Setup > Media > Picture Player -->
+
+	<!-- Settings screen "MediaPlayerSettings" -->
+
+	<screen name="PicturePlayerSetup" title="Picture Player" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplateSetup" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_photo.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+	</screen>
+
+<!-- MENU > Setup > Media > Media Player -->
+
+	<screen name="MediaPlayerSettings" title="Media Player" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplateSetup" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_movie.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+	</screen>
+
+<!-- MENU > Setup > Media > Movie Browser - NO LONGER ENABLED IN MENUS! -->
+
+	<screen name="movieBrowserConfig" title="Movie Browser Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplateSetup" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_movie.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="plugin" position="50,185" size="512,288" alphatest="blend" zPosition="1" />
+	</screen>
+
+<!-- MENU > Setup > Media > Music Browser - NO LONGER ENABLED IN MENUS! -->
+
+	<screen name="mp3BrowserConfig" title="Movie Browser Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplateSetup" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_music.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="plugin" position="50,185" size="512,288" alphatest="blend" zPosition="1" />
+	</screen>
+
+<!-- MENU > Setup > Network > Network Browser -->
+
+	<screen name="NetworkBrowser" title="Network Neighbourhood" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="list" render="Listbox" position="400,80" size="830,528" backgroundColorSelected="MenuSelected" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryPixmapAlphaTest(pos = (10, 0), size = (48, 48), png = 1), # index 1 is the expandable/expanded/verticalline icon
+					MultiContentEntryText(pos = (70, 0), size = (760, 48), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2), # index 2 is the Hostname
+					MultiContentEntryText(pos = (160, 0), size = (670, 25), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3), # index 3 is the ShareName
+					MultiContentEntryText(pos = (180, 25), size = (670, 23), font=2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4, color = 0x00999999, color_sel = 0x00999999), # index 4 is the ShareDescription
+					MultiContentEntryPixmapAlphaTest(pos = (48, 0), size = (48, 48), png = 5), # index 5 is the nfs/cifs icon
+					MultiContentEntryPixmapAlphaTest(pos = (100, 0), size = (48, 48), png = 6), # index 6 is the isMounted icon
+					],
+				"fonts": [gFont("Regular", 25), gFont("Regular", 22), gFont("Regular", 17)],
+				"itemHeight": 48
+				}
+			</convert>
+		</widget>
+		<!-- <widget source="infotext" render="Label" position="410,595" size="810,50" font="Regular;20" transparent="1" valign="center" /> -->
+	</screen>
+
+	<screen name="ScanIP" title="Scan IP Address" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig0" />
+	</screen>
+
+<!-- MENU > Setup > Network > Mount Manager -->
+
+	<screen name="AutoMountManager" title="Mount Manager" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateMountConfig4" />
+		<panel name="ScreenTemplateSIntroduction4" />
+	</screen>
+
+	<screen name="NetworkMountsMenu" title="Network Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="menulist" position="55,160" size="710,350" backgroundColorSelected="MenuSelected" enableWrapAround="1" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" />
+		<panel name="ScreenTemplateSIntroduction4" />
+	</screen>
+
+	<!-- Mount Edit -->
+
+	<screen name="AutoMountEdit" title="Mount Editor" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonTextVKey" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateSIntroduction4" />
+	</screen>
+
+	<!-- Add New Network Mount Point -->
+
+	<screen name="AutoMountView" title="Mount Viewer" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="legend1" render="Label" position="410,80" size="130,60" backgroundColor="TextBackground" font="Regular;20" transparent="1" valign="center" />
+		<widget source="legend2" render="Label" position="560,80" size="310,60" backgroundColor="TextBackground" font="Regular;20" transparent="1" valign="center" />
+		<widget source="legend3" render="Label" position="1150,80" size="80,60" backgroundColor="TextBackground" font="Regular;20" transparent="1" valign="center" />
+		<widget source="config" render="Listbox" position="400,140" size="830,360" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryPixmapAlphaTest(pos = (20, 6), size = (48, 48), png = 0), # index 0 is the isMounted pixmap
+					MultiContentEntryPixmapAlphaTest(pos = (70, 6), size = (48, 48), png = 5), # index 5 is the mounttype pixmap
+					MultiContentEntryText(pos = (160, 0), size = (370, 35), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1), # index 1 is the sharename
+					MultiContentEntryText(pos = (545, 10), size = (200, 25), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2, color = 0x00999999, color_sel = 0x00999999), # index 2 is the IPdescription
+					MultiContentEntryText(pos = (180, 35), size = (565, 25), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3, color = 0x00999999, color_sel = 0x00999999), # index 3 is the DIRdescription
+					MultiContentEntryPixmapAlphaTest(pos = (765, 15), size = (48, 48), png = 4), # index 4 is the activepng pixmap
+					],
+				"fonts": [gFont("Regular", 25),gFont("Regular", 20)],
+				"itemHeight": 60
+				}
+			</convert>
+		</widget>
+		<panel name="ScreenTemplateSIntroduction4" />
+	</screen>
+
+	<!-- User Management -->
+
+	<screen name="UserManager" title="Username Manager" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_parental.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="config" render="Listbox" position="400,80" size="830,430" backgroundColorSelected="MenuSelected" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (90, 0), size = (715, 60), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0), # index 0 is the name
+					MultiContentEntryPixmapAlphaTest(pos = (20, 6), size = (48, 48), png = 3), # index 3 is the status pixmap
+					],
+				"fonts": [gFont("Regular", 25)],
+				"itemHeight": 60
+				}
+			</convert>
+		</widget>
+		<panel name="ScreenTemplateSIntroduction4" />
+	</screen>
+
+	<screen name="UserDialog" title="Username Editor" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonTextVKey" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_parental.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateSIntroduction4" />
+	</screen>
+
+<!-- MENU > Setup > Network > Network Adapter Selection -->
+
+	<screen name="NetworkAdapterSelection" title="Select Network Adapter" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonHelp" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="list" render="Listbox" position="400,80" size="830,420" scrollbarMode="showOnDemand" transparent="1" zPosition="10">
+			<convert type="TemplatedMultiContent"><!-- iface, name, description, interfacepng, defaultpng, activepng, divpng -->				
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (100, 0), size = (690, 35), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1), # index 1 is the interfacename
+					MultiContentEntryText(pos = (120, 35), size = (670, 25), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2, color = 0x00999999, color_sel = 0x00999999), # index 2 is the description
+					MultiContentEntryPixmapAlphaTest(pos = (20, 3), size = (54, 54), png = 3), # index 3 is the interface pixmap
+					MultiContentEntryPixmapAlphaTest(pos = (80, 38), size = (15, 16), png = 4), # index 4 is the default pixmap
+					],
+				"fonts": [gFont("Regular", 25), gFont("Regular", 20)],
+				"itemHeight": 60
+				}
+			</convert>
+		</widget>
+		<panel name="ScreenTemplateSIntroduction4" />
+	</screen>
+
+<!-- MENU > Setup > Network > Network Adapter Selection > * > Network Settings -->
+
+	<screen name="AdapterSetupConfiguration" title="Network Connection" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonHelp" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateMenuListShort" />
+		<eLabel position="400,495" size="830,2" backgroundColor="Pinstripe" />
+		<eLabel position="400,540" size="830,2" backgroundColor="Pinstripe" />
+		<eLabel position="400,495" size="2,45" backgroundColor="Pinstripe" />
+		<eLabel position="1228,495" size="2,45" backgroundColor="Pinstripe" />
+		<widget source="IFtext" render="Label" position="410,505" size="100,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" valign="center" />
+		<widget source="IF" render="Label" position="530,505" size="450,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" valign="center" />
+		<widget source="Statustext" render="Label" position="1075,505" size="100,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" halign="right" valign="center" />
+		<widget name="statuspic" pixmaps="buttons/button_small_green.png,buttons/button_small_green_off.png" position="1195,510" size="15,16" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateSDescription4" />
+	</screen>
+
+<!-- MENU > Setup > Network > Network Adapter Selection > * > Nameserver Settings -->
+
+	<screen name="NameserverSetup" title="Name Servers" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonHelp" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateSIntroduction4" />
+	</screen>
+
+<!-- MENU > Setup > Network > Network Adapter Selection > * > Network Test -->
+
+	<screen name="NetworkAdapterTest" title="Network Test: %s" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="Adaptertext" position="55,120" size="650,25" font="Regular;22" foregroundColor="Grey" zPosition="1" />
+		<widget name="Adapter" position="55,150" size="650,25" font="Regular;22" foregroundColors="#008c8c93,#00f23d21,#001cff1c" zPosition="1" />
+		<widget name="AdapterInfo_OK" pixmap="icons/lock_on.png" position="755,135" size="38,31" alphatest="on" zPosition="2" />
+		<widget name="AdapterInfo" pixmaps="images/select300_45black.png,images/select600_50.png" position="832,127" size="318,50" zPosition="1" />
+		<widget name="AdapterInfo_Text" position="832,127" size="318,50" font="Regular;22" foregroundColors="#00ffffff,#00ffffff,#00ffffff" halign="center" transparent="1" valign="center" zPosition="2" />
+		<eLabel position="55,190" size="740,1" backgroundColor="Pinstripe" />
+		<widget name="Networktext" position="55,200" size="650,25" font="Regular;22" foregroundColor="Grey" zPosition="1" />
+		<widget name="Network" position="55,230" size="650,25" font="Regular;22" foregroundColors="#008c8c93,#00f23d21,#001cff1c" zPosition="1" />
+		<widget name="NetworkInfo_Check" pixmaps="icons/lock_on.png,icons/lock_error.png" position="755,215" size="38,31" alphatest="on" zPosition="2" />
+		<widget name="NetworkInfo" pixmaps="images/select300_45black.png,images/select600_50.png" position="832,207" size="318,50" zPosition="1" />
+		<widget name="NetworkInfo_Text" position="832,207" size="318,50" font="Regular;22" foregroundColors="#00ffffff,#00ffffff,#00ffffff" halign="center" transparent="1" valign="center" zPosition="2" />
+		<eLabel position="55,270" size="740,1" backgroundColor="Pinstripe" />
+		<widget name="Dhcptext" position="55,280" size="650,25" font="Regular;22" foregroundColor="Grey" zPosition="1" />
+		<widget name="Dhcp" position="55,310" size="650,25" font="Regular;22" foregroundColors="#008c8c93,#00f23d21,#001cff1c" zPosition="1" />
+		<widget name="DhcpInfo_Check" pixmaps="icons/lock_on.png,icons/lock_error.png" position="755,295" size="38,31" alphatest="on" zPosition="2" />
+		<widget name="DhcpInfo" pixmaps="images/select300_45black.png,images/select600_50.png" position="832,287" size="318,50" zPosition="1" />
+		<widget name="DhcpInfo_Text" position="832,287" size="318,50" font="Regular;22" foregroundColors="#00ffffff,#00ffffff,#00ffffff" halign="center" transparent="1" valign="center" zPosition="2" />
+		<eLabel position="55,350" size="740,1" backgroundColor="Pinstripe" />
+		<widget name="IPtext" position="55,360" size="650,25" font="Regular;22" foregroundColor="Grey" zPosition="1" />
+		<widget name="IP" position="55,390" size="650,25" font="Regular;22" foregroundColors="#008c8c93,#00f23d21,#001cff1c" zPosition="1" />
+		<widget name="IPInfo_Check" pixmaps="icons/lock_on.png,icons/lock_error.png" position="755,375" size="38,31" alphatest="on" zPosition="2" />
+		<widget name="IPInfo" pixmaps="images/select300_45black.png,images/select600_50.png" position="832,367" size="318,50" zPosition="1" />
+		<widget name="IPInfo_Text" position="832,367" size="318,50" font="Regular;22" foregroundColors="#00ffffff,#00ffffff,#00ffffff" halign="center" transparent="1" valign="center" zPosition="2" />
+		<eLabel position="55,430" size="740,1" backgroundColor="Pinstripe" />
+		<widget name="DNStext" position="55,440" size="650,25" font="Regular;22" foregroundColor="Grey" zPosition="1" />
+		<widget name="DNS" position="55,470" size="650,25" font="Regular;22" foregroundColors="#008c8c93,#00f23d21,#001cff1c" zPosition="1" />
+		<widget name="DNSInfo_Check" pixmaps="icons/lock_on.png,icons/lock_error.png" position="755,455" size="38,31" alphatest="on" zPosition="2" />
+		<widget name="DNSInfo" pixmaps="images/select300_45black.png,images/select600_50.png" position="832,447" size="318,50" zPosition="1" />
+		<widget name="DNSInfo_Text" position="832,447" size="318,50" font="Regular;22" foregroundColors="#00ffffff,#00ffffff,#00ffffff" halign="center" transparent="1" valign="center" zPosition="2" />
+		<eLabel position="55,510" size="740,1" backgroundColor="Pinstripe" />
+		<widget name="EditSettingsButton" pixmaps="images/select300_45black.png,images/select600_50.png" position="832,527" size="318,50" zPosition="1" />
+		<widget name="EditSettings_Text" position="832,527" size="318,50" font="Regular;22" foregroundColors="#00ffffff,#00ffffff,#00ffffff" halign="center" transparent="1" valign="center" zPosition="2" />
+		<widget name="InfoTextBorder" position="55,122" size="470,476" backgroundColor="Black" borderColor="Green" borderWidth="2" zPosition="+1" />
+		<widget name="InfoText" position="55,122" size="740,476" font="Regular;24" valign="center" zPosition="+2" />
+	</screen>
+
+<!-- MENU > Setup > Network > Network Adapter Selection > * > Restart Network - Defined Elsewhere -->
+
+<!-- MENU > Setup > Network > Network Adapter Selection > * > Scan Wireless Networks -->
+
+	<screen name="WlanScan" title="Select Wireless Network" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="list" render="Listbox" position="400,80" size="830,420" backgroundColorSelected="MenuSelected" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (20, 0), size = (530, 35), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0), # index 0 is the essid
+					MultiContentEntryText(pos = (100, 35), size = (200, 25), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 5, color = 0x00999999, color_sel = 0x00999999), # index 5 is the interface
+					MultiContentEntryText(pos = (350, 35), size = (200, 25), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4, color = 0x00999999, color_sel = 0x00999999), # index 0 is the encryption
+					MultiContentEntryText(pos = (570, 10), size = (230, 25), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2), # index 0 is the signal
+					MultiContentEntryText(pos = (570, 35), size = (230, 25), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3), # index 0 is the maxrate
+					],
+				"fonts": [gFont("Regular", 25),gFont("Regular", 20)],
+				"itemHeight": 60
+				}
+			</convert>
+		</widget>
+		<panel name="ScreenTemplateSInfo4" />
+	</screen>
+
+<!-- MENU > Setup > Network > Network Adapter Selection > * > Show WLAN Status -->
+
+	<screen name="WlanStatus" title="Wireless Network Status" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="IFtext" render="Label" position="420,80" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
+		<widget source="IF" render="Label" position="730,80" size="500,35" backgroundColor="TextBackground" font="Regular;25" halign="right" transparent="1" valign="center" />
+		<widget source="Statustext" render="Label" position="420,115" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
+		<widget name="statuspic" pixmaps="buttons/button_small_green.png,buttons/button_small_green_off.png" position="1215,123" size="15,16" alphatest="on" halign="right" transparent="1" />
+		<widget source="LabelBSSID" render="Label" position="420,150" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
+		<widget source="BSSID" render="Label" position="730,150" size="500,35" backgroundColor="TextBackground" font="Regular;25" halign="right" transparent="1" valign="center" />
+		<widget source="LabelESSID" render="Label" position="420,185" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
+		<widget source="ESSID" render="Label" position="730,185" size="500,35" backgroundColor="TextBackground" font="Regular;25" halign="right" transparent="1" valign="center" />
+		<widget source="LabelQuality" render="Label" position="420,220" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
+		<widget source="quality" render="Label" position="730,220" size="500,35" backgroundColor="TextBackground" font="Regular;25" halign="right" transparent="1" valign="center" />
+		<widget source="LabelSignal" render="Label" position="420,255" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
+		<widget source="signal" render="Label" position="730,255" size="500,35" backgroundColor="TextBackground" font="Regular;25" halign="right" transparent="1" valign="center" />
+		<widget source="LabelBitrate" render="Label" position="420,290" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
+		<widget source="bitrate" render="Label" position="730,290" size="500,35" backgroundColor="TextBackground" font="Regular;25" halign="right" transparent="1" valign="center" />
+		<widget source="LabelEnc" render="Label" position="420,325" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
+		<widget source="enc" render="Label" position="730,325" size="500,35" backgroundColor="TextBackground" font="Regular;25" halign="right" transparent="1" valign="center" />
+	</screen>
+
+<!-- MENU > Setup > Network > Network Adapter Selection > * > Network Wizard - Defined In Wizards -->
+
+<!-- MENU > Setup > Network > Network Interface -->
+
+	<screen name="AdapterSetup" title="Adapter Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonTextVKey" />
+		<panel name="ScreenTemplateButtonHelp" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfigShort" />
+		<!--
+		<widget source="introduction" render="Label" position="970,90" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
+		<widget source="Adaptertext" render="Label" position="970,130" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="Adapter" render="Label" position="970,160" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
+		<widget source="IPtext" render="Label" position="970,200" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="IP" render="Label" position="970,230" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
+		<widget source="Netmasktext" render="Label" position="970,270" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="Mask" render="Label" position="970,300" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
+		<widget source="Gatewaytext" render="Label" position="970,340" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="Gateway" render="Label" position="970,370" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
+		<widget source="DNS1text" render="Label" position="970,410" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="DNS1" render="Label" position="970,440" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
+		<widget source="DNS2text" render="Label" position="970,480" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="DNS2" render="Label" position="970,510" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
+		-->
+		<eLabel position="400,420" size="830,2" backgroundColor="Pinstripe" />
+		<eLabel position="400,540" size="830,2" backgroundColor="Pinstripe" />
+		<eLabel position="400,420" size="2,120" backgroundColor="Pinstripe" />
+		<eLabel position="1228,420" size="2,120" backgroundColor="Pinstripe" />
+		<widget source="introduction" render="Label" position="0,0" size="1,1" font="Regular;20" transparent="1" />
+		<widget source="Adaptertext" render="Label" position="410,430" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="Adapter" render="Label" position="410,455" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
+		<widget source="IPtext" render="Label" position="410,480" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="IP" render="Label" position="410,505" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
+		<widget source="Netmasktext" render="Label" position="690,430" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="Mask" render="Label" position="690,455" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
+		<widget source="Gatewaytext" render="Label" position="690,480" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="Gateway" render="Label" position="690,505" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
+		<widget source="DNS1text" render="Label" position="970,430" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="DNS1" render="Label" position="970,455" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
+		<widget source="DNS2text" render="Label" position="970,480" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="DNS2" render="Label" position="970,505" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
+		<panel name="ScreenTemplateSIntroduction24" />
+	</screen>
+
+<!-- MENU > Setup > Network > Network Restart - Defined Elsewhere -->
+
+<!-- MENU > Setup > Network > Samba -->
+
+	<screen name="NetworkSamba" title="Samba Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonMenu" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="lab1" position="420,80" size="300,35" font="Regular;25" transparent="1" valign="center" />
+		<widget name="labactive" position="730,80" size="500,35" font="Regular;22" halign="right" transparent="1" valign="center" />
+		<widget name="lab2" position="420,115" size="300,35" font="Regular;25" transparent="1" valign="center" />
+		<widget name="labstop" position="730,115" size="500,35" font="Regular;22" foregroundColor="Red" halign="right" transparent="1" valign="center" />
+		<widget name="labrun" position="730,115" size="500,35" font="Regular;22" foregroundColor="Green" halign="right" transparent="1" valign="center" />
+		<panel name="ScreenTemplateFrame830x120" />
+	</screen>
+
+	<screen name="NetworkSambaSetup" title="Samba Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonTextVKey" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateFrame830x120" />
+	</screen>
+
+<!-- MENU > Setup > Network > NFS -->
+
+	<screen name="NetworkServiceSetup" title="NFS Server Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_system.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="lab1" position="420,80" size="300,35" font="Regular;25" transparent="1" valign="center" />
+		<widget name="labactive" position="730,80" size="500,35" font="Regular;22" halign="right" transparent="1" valign="center" />
+		<widget name="lab2" position="420,115" size="300,35" font="Regular;25" transparent="1" valign="center" />
+		<widget name="labstop" position="730,115" size="500,35" font="Regular;22" foregroundColor="Red" halign="right" transparent="1" valign="center" />
+		<widget name="labrun" position="730,115" size="500,35" font="Regular;22" foregroundColor="Green" halign="right" transparent="1" valign="center" />
+		<panel name="ScreenTemplateFrame830x120" />
+	</screen>
+
+<!-- MENU > Setup > Network > FTP -->
+
+	<screen name="NetworkFtp" title="FTP Server Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="lab1" position="420,80" size="300,35" font="Regular;25" transparent="1" valign="center" />
+		<widget name="labtype" position="730,80" size="500,35" font="Regular;22" halign="right" transparent="1" valign="center" />
+		<widget name="lab2" position="420,115" size="300,35" font="Regular;25" transparent="1" valign="center" />
+		<widget name="labstop" position="730,115" size="500,35" font="Regular;22" foregroundColor="Red" halign="right" transparent="1" valign="center" />
+		<widget name="labrun" position="730,115" size="500,35" font="Regular;22" foregroundColor="Green" halign="right" transparent="1" valign="center" />
+		<panel name="ScreenTemplateFrame830x120" />
+	</screen>
+
+<!-- MENU > Setup > Network > DLNA Server -->
+
+	<screen name="NetworkMiniDLNA" title="DLNA Server Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonMenu" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="autostart" position="420,80" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
+		<widget name="labdisabled" position="730,80" size="500,35" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Red" halign="right" transparent="1" valign="center" />
+		<widget name="labactive" position="730,80" size="500,35" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Green" halign="right" transparent="1" valign="center" zPosition="+1" />
+		<widget name="status" position="420,115" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
+		<widget name="labstop" position="730,115" size="500,35" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Red" halign="right" transparent="1" valign="center" />
+		<widget name="labrun" position="730,115" size="500,35" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Green" halign="right" transparent="1" valign="center" zPosition="+1" />
+		<widget name="username" position="420,150" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
+		<widget name="labuser" position="730,150" size="500,35" backgroundColor="TextBackground" font="Regular;22" halign="right" transparent="1" valign="center" />
+		<widget name="iface" position="420,185" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
+		<widget name="labiface" position="730,185" size="500,35" backgroundColor="TextBackground" font="Regular;22" halign="right" transparent="1" valign="center" />
+		<widget name="port" position="420,220" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
+		<widget name="labport" position="730,220" size="500,35" backgroundColor="TextBackground" font="Regular;22" halign="right" transparent="1" valign="center" />
+		<widget name="serialno" position="420,255" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
+		<widget name="labserialno" position="730,255" size="500,35" backgroundColor="TextBackground" font="Regular;22" halign="right" transparent="1" valign="center" />
+		<widget name="inotify" position="420,290" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
+		<widget name="inotifyinactive" pixmap="icons/lock_error.png" position="1198,292" size="32,32" alphatest="on" transparent="1" />
+		<widget name="inotifyactive" pixmap="icons/lock_on.png" position="1198,292" size="32,32" alphatest="on" transparent="1" zPosition="+1" />
+		<widget name="tivo" position="420,325" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
+		<widget name="tivoinactive" pixmap="icons/lock_error.png" position="1198,327" size="32,32" alphatest="on" transparent="1" />
+		<widget name="tivoactive" pixmap="icons/lock_on.png" position="1198,327" size="32,32" alphatest="on" transparent="1" zPosition="+1" />
+		<widget name="dlna" position="420,360" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
+		<widget name="dlnainactive" pixmap="icons/lock_error.png" position="1198,362" size="32,32" alphatest="on" transparent="1" zPosition="2" />
+		<widget name="dlnaactive" pixmap="icons/lock_on.png" position="1198,362" size="32,32" alphatest="on" transparent="1" zPosition="3" />
+		<widget name="sharedir" position="420,395" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
+		<widget name="labsharedir" position="730,395" size="500,90" backgroundColor="TextBackground" font="Regular;22" halign="right" transparent="1" valign="top" />
+		<panel name="ScreenTemplateFrame830x120" />
+	</screen>
+
+	<screen name="NetworkuShareSetup" title="DLNA Server Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonTextVKey" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateFrame830x120" />
+	</screen>
+
+	<screen name="uShareSelection" title="DLNA Server Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateCheckList4" />
+		<panel name="ScreenTemplateFrame830x120" />
+	</screen>
+
+<!-- MENU > Setup > Network > DYN-DNS -->
+
+	<screen name="NetworkInadyn" title="DynDNS Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonMenu" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="autostart" position="710,170" size="100,24" font="Regular;20" transparent="0" valign="center" />
+		<widget name="labdisabled" position="810,170" size="100,24" backgroundColor="LightRed" font="Regular;20" halign="center" valign="center" zPosition="+1" />
+		<widget name="labactive" position="810,170" size="100,24" backgroundColor="DullGreen" font="Regular;20" halign="center" valign="center" zPosition="+2" />
+		<widget name="status" position="940,170" size="150,24" font="Regular;20" transparent="0" valign="center" />
+		<widget name="labstop" position="1090,170" size="100,24" backgroundColor="LightRed" font="Regular;20" halign="center" valign="center" zPosition="+1" />
+		<widget name="labrun" position="1090,170" size="100,24" backgroundColor="DullGreen" font="Regular;20" halign="center" valign="center" zPosition="+2" />
+		<widget name="time" position="710,220" size="260,30" font="Regular;20" transparent="1" valign="center" />
+		<widget name="labtime" position="970,220" size="100,30" backgroundColor="GreyBlue" font="Regular;20" valign="center" />
+		<widget name="username" position="710,270" size="150,30" font="Regular;20" transparent="1" valign="center" />
+		<widget name="labuser" position="860,270" size="310,30" backgroundColor="GreyBlue" font="Regular;20" valign="center" />
+		<widget name="password" position="710,320" size="150,30" font="Regular;20" transparent="1" valign="center" />
+		<widget name="labpass" position="860,320" size="310,30" backgroundColor="GreyBlue" font="Regular;20" valign="center" />
+		<widget name="alias" position="710,370" size="150,30" font="Regular;20" transparent="1" valign="center" />
+		<widget name="labalias" position="860,370" size="310,30" backgroundColor="GreyBlue" font="Regular;20" valign="center" />
+		<widget name="sinactive" pixmap="icons/lock_error.png" position="710,420" size="32,32" alphatest="on" zPosition="+1" />
+		<widget name="sactive" pixmap="icons/lock_on.png" position="710,420" size="32,32" alphatest="on" zPosition="+2" />
+		<widget name="system" position="750,420" size="100,30" font="Regular;20" transparent="1" valign="center" />
+		<widget name="labsys" position="860,420" size="310,30" backgroundColor="GreyBlue" font="Regular;20" valign="center" />
+		<panel name="ScreenTemplateFrame830x120" />
+	</screen>
+
+	<screen name="NetworkInadynSetup" title="DynDNS Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonTextVKey" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateFrame830x120" />
+	</screen>
+
+<!-- MENU > Setup > Network > Telnet -->
+
+	<screen name="NetworkTelnet" title="Telnet Server Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="lab2" position="420,80" size="300,35" font="Regular;25" transparent="1" valign="center" />
+		<widget name="labstop" position="1030,80" size="200,35" font="Regular;22" foregroundColor="LightRed" halign="right" transparent="1" valign="center" />
+		<widget name="labrun" position="1030,80" size="200,35" font="Regular;22" foregroundColor="DullGreen" halign="right" transparent="1" valign="center" />
+		<panel name="ScreenTemplateLab4" />
+	</screen>
+
+<!-- MENU > Setup > Network > * > Show Log -->
+
+	<screen name="NetworkInadynLog" title="Show Log" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<widget name="infotext" position="50,80" size="1180,565" font="Console;16" transparent="1" />
+	</screen>
+
+<!-- Unknown -->
+
+	<screen name="NetworkSetup" title="Network Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="menu" position="55,160" size="710,415" backgroundColorSelected="MenuSelected" enableWrapAround="1" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" />
+		<eLabel position="815,100" size="2,518" backgroundColor="Pinstripe" />
+		<eLabel position="55,618" size="1100,2" backgroundColor="Pinstripe" />
+		<eLabel position="55,100" size="1100,2" backgroundColor="Pinstripe" />
+	</screen>
+
+<!-- MENU > Setup > Storage > Hard Disk Setup - Uses Generic Setup Screen -->
+
+	<!--
+	<screen name="setup_harddisk" title="Hard Disk Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplateSetup" />
+	</screen>
+	-->
+
+<!-- MENU > Setup > Storage > Format Hard Disk / File System Check -->
+
+	<screen name="HarddiskSelection" title="Select HDD" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_sources.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateHDDList4" />
+		<panel name="ScreenTemplateFrame830x120" />
+	</screen>
+
+	<!-- Format Hard Disk and File System Check Confirmations -->
+
+	<screen name="HarddiskSetup" title="Harddisk Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_sources.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="model" position="420,80" size="810,35" font="Regular;25" transparent="1" valign="center" />
+		<widget name="capacity" position="420,105" size="810,35" font="Regular;25" transparent="1" valign="center" />
+		<widget name="bus" position="420,140" size="810,35" font="Regular;25" transparent="1" valign="center" />
+		<!-- These two items simulate a standard RED button.  The background is already provided so only the text remains active.
+		<widget name="initialize" position="123,670" size="200,36" backgroundColor="ButtonRed" transparent="0" />
+		-->
+		<widget name="initializetext" position="160,670" size="200,36" font="Regular;20" halign="center" transparent="1" valign="center" />
+		<panel name="ScreenTemplateFrame830x120" />
+	</screen>
+
+	<!-- Hard Disk Wait -->
+
+	<screen name="HarddiskWait" title="Hard Disk Wait" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<widget name="wait" position="390,450" size="500,25" font="Regular;23" halign="center" transparent="1" valign="center" zPosition="1" />
+	</screen>
+
+<!-- MENU > Setup > Plugins > Plugin Browser -->
+
+	<screen name="PluginBrowser" title="Plugin Browser" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonMenu" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_plugins.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="list" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<!--
+	<screen name="setup_pluginbrowsersetup" title="Package Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplateSetup" />
+	</screen>
+	-->
+
+<!-- MENU > Setup > Plugins > Download / Remove Plugins -->
+
+	<screen name="PluginDownloadBrowser" title="Downloadable Plugins" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColourBacks" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_plugin.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateOverlayText0" />
+		<panel name="ScreenTemplatePlugList0" />
+	</screen>
+
+<!-- MENU > Setup > Plugins > Package Installer -->
+
+	<!-- This menu item first displays the ChoiceBox to select the source drive containing the package. -->
+
+	<screen name="IpkgInstaller" title="Package (IPkg) Installer" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_plugin.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="list" position="400,80" size="830,500" backgroundColorSelected="MenuSelected" enableWrapAround="1" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" />
+		<widget source="introduction" render="Label" position="410,570" size="810,75" font="Regular;20" transparent="1" valign="center" />
+	</screen>
+
+<!-- MENU > Setup > Software Manager > Update Now - Uses Internal Screen -->
+
+	<screen name="UpdatePlugin" title="Software Update" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="activityslider" position="400,295" size="830,10" backgroundColor="Black" borderColor="DarkGrey" borderWidth="2" transparent="1" />
+		<widget source="package" render="Label" position="400,325" size="830,50" backgroundColor="TextBackground" font="Regular;20" halign="center" transparent="1" valign="center" />
+		<widget source="status" render="Label" position="400,395" size="830,25" backgroundColor="TextBackground" font="Regular;20" halign="center" transparent="1" valign="center" />
+		<widget name="slider" position="400,440" size="830,10" backgroundColor="Black" borderColor="DarkGrey" borderWidth="2" transparent="1" />
+	</screen>
+
+	<screen name="SoftwareUpdateChoices" title="Software Update" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateSoftList4" />
+		<panel name="ScreenTemplateText4" />
+	</screen>
+
+	<screen name="SoftwareUpdateChangeView" title="Software Changes" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<widget name="text" position="50,80" size="1180,560" font="Console;18" transparent="1" />
+	</screen>
+
+	<screen name="Ipkg" position="center,center" size="550,120">
+		<widget name="activityslider" pixmap="sliders/progress_small.png" position="0,0" size="550,5" />
+		<widget name="package" position="10,30" size="550,20" font="Regular;18" transparent="0" />
+		<widget name="status" position="10,60" size="550,45" font="Regular;18" transparent="0" />
+		<widget name="slider" pixmap="sliders/progress_big.png" position="10,100" size="530,15" borderColor="window-fg" borderWidth="2" />
+	</screen>
+
+	<screen name="InstallWizardIpkgUpdater" title=" " position="c-300,c-25" size="600,50">
+		<widget source="statusbar" render="Label" position="0,0" size="600,30" font="Regular;22" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="10" />
+	</screen>
+
+<!-- MENU > Setup > Software Manager > Update Settings - Uses Internal Screen -->
+
+	<!--
+	<screen name="setup_softwareupdate" title="Online Update Check Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplateSetup" />
+	</screen>
+	-->
+
+<!-- MENU > Setup > Software Manager > Create Backup - Uses Internal Screen -->
+
+<!-- MENU > Setup > Software Manager > Restore Backup - Uses Internal Screen -->
+
+<!-- MENU > Setup > Software Manager > Backup Settings -->
+
+	<screen name="BackupSelection" title="Select Files/Folders To Backup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_browser.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateCheckList0" />
+	</screen>
+
+<!--
+ |	Unallocated Plugin and Software Settings
+ +-->
+
+	<screen name="BackupScreen" title="Backup is running" position="135,144" size="350,310">
+		<widget name="config" position="10,10" size="330,250" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+</skin>

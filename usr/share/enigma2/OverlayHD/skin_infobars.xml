@@ -1,0 +1,454 @@
+<skin>
+<!--
+ |	Graphics layers and zPosition
+ |
+ |	The screens that make up InfoBar, SecondInfoBar and MoviePlayer
+ |	use 4 graphics layers (zPositions), -1, 0 (default), 1 and 2.
+ |
+ |	-1 Backgrounds.
+ |	 0 Main graphics layer, also used for "off" icons for status.
+ |	   indicators and "unused" state of tuner status and backgrounds
+ |	   of gauges. Default layer.
+ |	 1 First overlay, used for also used for "on" icons for status
+ |	   indicators and "recording" state of tuner status and
+ |	   active parts of gauges.
+ |	 2 Second overlay, used for "live TV" state of tuner status.
+ |
+ |	Screens DVDPlayer and RadioInfoBar do not appear to be used
+ |	in the current Enigma2 firmware (in RADIO mode, the firmware
+ |	uses Infobar).
+ +-->
+
+<!-- PVR State -->
+
+	<screen name="PVRState" position="500,70" size="174,79" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<widget name="eventname" position="12,15" size="130,25" backgroundColor="Black" font="Regular;25" foregroundColor="White" halign="center" />
+		<widget name="state" position="12,15" size="130,25" backgroundColor="Black" font="Regular;25" foregroundColor="White" halign="center" />
+		<widget name="speed" position="35,10" size="70,20" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TimeShiftData" transparent="1" />
+		<widget name="statusicon" pixmaps="icons/play.png,icons/pause.png,icons/stop.png,icons/forward.png,icons/backward.png,icons/slow.png" position="10,10" size="20,20" alphatest="on" transparent="1" />
+	</screen>
+
+<!-- OK - Main TV InfoBar Timeshift Status -->
+
+	<screen name="TimeshiftState" position="10,10" size="270,85" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<widget name="statusicon" pixmaps="icons/play.png,icons/pause.png,icons/stop.png,icons/forward.png,icons/backward.png,icons/slow.png" position="10,10" size="20,20" alphatest="on" transparent="1" />
+		<widget name="speed" position="35,10" size="70,20" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TimeShiftData" transparent="1" />
+		<widget source="session.CurrentService" render="Label" position="100,10" size="70,20" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TimeShiftData" halign="center" transparent="1">
+			<convert type="ServicePosition">Remaining</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="180,10" size="70,20" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TimeShiftData" halign="right" transparent="1">
+			<convert type="ServicePosition">Length</convert>
+		</widget>
+		<!-- This as the bar graph background that isn't required for a bordered bar graph.
+		<ePixmap pixmap="sliders/progress_back.png" position="10,38" size="250,12" alphatest="on" />
+		-->
+		<widget source="session.CurrentService" render="Progress" pixmap="sliders/progress_timeshift.png" position="10,38" size="250,12" borderColor="TimeShiftBorder" borderWidth="1" transparent="1" valign="bottom" >
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<widget name="eventname" position="10,55" size="250,20" backgroundColor="TextBackground" font="Regular;16" foregroundColor="TimeShiftData" transparent="1" />
+		<!-- This is a text version of the statusicon and speed information.  Already displayed so not needed here but must be defined to avoid skin errors!  -->
+		<widget name="state" position="0,0" size="0,0" font="Regular;20" transparent="1" />
+		<!-- These are position pointers.  Already displayed so not needed here but must be defined to avoid skin errors!  -->
+		<widget name="PTSSeekBack" position="0,0" size="0,0" pixmap="sliders/sliderdef_back.png" alphatest="on" transparent="1" />
+		<widget name="PTSSeekPointer" position="0,0" size="0,0" pixmap="sliders/position_pointer2.png" alphatest="on" transparent="1" zPosition="+1" />
+	</screen>
+
+<!-- OK / Media - Seekbar -->
+
+	<!--
+	<screen name="Seekbar" position="center,10" size="600,50" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<widget name="time" position="10,15" size="100,20" backgroundColor="TextBackground" font="Regular;20" halign="right" transparent="1" />
+		<widget name="cursor" position="0,0" size="8,18" pixmap="sliders/position_arrow.png" alphatest="on" transparent="1" zPosition="+1" />
+		<widget source="session.CurrentService" render="PositionGauge" position="120,15" size="360,20" foregroundColor="MediumBlue" pointer="sliders/position_pointer.png:720,0" transparent="1">
+			<convert type="ServicePosition">Gauge</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="490,15" size="100,20" backgroundColor="TextBackground" font="Regular;20" transparent="1">
+			<convert type="ServicePosition">Length</convert>
+		</widget>
+	</screen>
+	-->
+	<!-- This version of the Seekbar is a workaround to avoid the hard coded relationship between the cursor and progress bar (size and location)! -->
+	<screen name="Seekbar" position="center,0" size="570,50" backgroundColor="TransparentBackground" flags="wfNoBorder">
+		<eLabel position="28,10" size="512,50" backgroundColor="ScreenBackground" transparent="0" zPosition="-1" />
+		<widget name="time" position="28,23" size="100,20" backgroundColor="TextBackground" font="Regular;20" halign="right" transparent="1" />
+		<widget name="cursor" position="0,0" size="8,18" pixmap="sliders/position_arrow.png" alphatest="on" transparent="1" zPosition="+1" />
+		<widget source="session.CurrentService" render="PositionGauge" position="148,23" size="272,20" foregroundColor="MediumBlue" pointer="sliders/position_pointer.png:544,0" transparent="1">
+			<convert type="ServicePosition">Gauge</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="440,23" size="100,20" backgroundColor="TextBackground" font="Regular;20" transparent="1">
+			<convert type="ServicePosition">Length</convert>
+		</widget>
+	</screen>
+
+<!-- OK - Main TV InfoBar -->
+
+	<screen name="InfoBar" title="TV Information Bar" position="0,0" size="1280,720" backgroundColor="TransparentBackground" flags="wfNoBorder">
+		<panel name="InfoBarCommon" />
+	</screen>
+
+<!-- OK > OK - Second TV InfoBar With Now/Next Extended Information -->
+
+	<screen name="SecondInfoBar" title="Detailed Information Bar" position="0,0" size="1280,720" backgroundColor="TransparentBackground" flags="wfNoBorder">
+		<panel name="InfoBarCommon" />
+		<panel position="50,160" size="580,380">
+			<panel name="SecondInfoBarNow" />
+		</panel>
+		<panel position="650,160" size="580,380">
+			<panel name="SecondInfoBarNext" />
+		</panel>
+		<widget name="serviceNumber1" position="0,0" size="0,0" font="Regular;20" transparent="1" />
+	</screen>
+
+<!-- Common parts of TV infobars -->
+
+	<screen name="InfoBarCommon">
+		<panel name="ScreenTemplateDebug" />
+		<!-- Clock Panel Area -->
+		<panel name="ClockTemplate" />
+		<!-- InfoBar Area Background -->
+		<eLabel position="0,570" size="1280,720" backgroundColor="ScreenBackground" transparent="0" zPosition="-1" />
+		<eLabel position="172,580" size="2,130" backgroundColor="Pinstripe" />
+		<!-- Picon, LCN, Current Bouquet, Broadcast Channel Number and Broadcast Frequency Area -->
+		<widget source="session.CurrentService" render="Picon" position="30,580" size="100,60" alphatest="blend" transparent="1">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="10,640" size="140,30" backgroundColor="TextBackground" font="Regular;30" foregroundColor="InfoLCN" halign="center" transparent="1">
+			<convert type="ServiceName">ServiceNumber</convert>
+		</widget>
+		<!-- <widget source="session.CurrentService" render="Label" position="30,687" size="641,20" backgroundColor="TextBackground" font="Regular;15" foregroundColor="border1" halign="left" transparent="1">
+			<convert type="EGExtraInfo">CamName</convert>
+		</widget> -->
+		<widget source="session.CurrentService" render="Label" position="10,675" size="150,18" backgroundColor="TextBackground" font="Regular;15" foregroundColor="InfoBouquet" halign="center" noWrap="1" transparent="1">
+			<convert type="ServiceName2">%B</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="10,698" size="60,12" backgroundColor="TextBackground" font="Regular;12" foregroundColor="InfoBroadcaster" transparent="1">
+			<convert type="PliExtraInfo">TerrestrialChannelNumber</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="70,698" size="90,12" backgroundColor="TextBackground" font="Regular;12" foregroundColor="InfoBroadcaster" halign="right" transparent="1">
+			<convert type="ServiceName2">%F</convert>
+		</widget>
+		<!-- Service Name Area -->
+		<widget source="session.CurrentService" render="Label" position="182,575" size="577,30" backgroundColor="TextBackground" font="Regular;24" foregroundColor="InfoChannel" transparent="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<!-- Now Event Start & End Times, Event Name and Time Remaining Area -->
+		<widget source="session.Event_Now" render="Label" position="175,615" size="73,28" backgroundColor="TextBackground" font="Regular;21" foregroundColor="InfoTimesNow" halign="right" transparent="1" valign="center">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<eLabel text="-" position="248,615" size="20,28" backgroundColor="TextBackground" font="Regular;21" foregroundColor="InfoTimesNow" halign="center" transparent="1" valign="center" />
+		<widget source="session.Event_Now" render="Label" position="268,615" size="73,28" backgroundColor="TextBackground" font="Regular;21" foregroundColor="InfoTimesNow" transparent="1" valign="center">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="345,608" size="565,36" backgroundColor="TextBackground" font="Regular;30" foregroundColor="InfoProgramNow" noWrap="1" transparent="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="930,615" size="155,28" backgroundColor="TextBackground" font="Regular;21" foregroundColor="InfoDurationNow" halign="right" transparent="1">
+			<convert type="EventTime">Remaining</convert>
+			<convert type="RemainingToText">InMinutes</convert>
+		</widget>
+		<!-- Now Event Progress Bar Area -->
+		<ePixmap pixmap="images/progress_event_background.png" position="345,643" size="740,6" alphatest="on" transparent="1" />
+		<widget source="session.Event_Now" render="Progress" pixmap="images/progress_event.png" position="345,643" size="740,6" transparent="1" zPosition="+1">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<!-- Next Event Start & End Times, Event Name and Duration Area -->
+		<widget source="session.Event_Next" render="Label" position="175,653" size="73,28" backgroundColor="TextBackground" font="Regular;21" foregroundColor="InfoTimesNext" halign="right" transparent="1" valign="top">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<eLabel text="-" position="248,653" size="20,28" backgroundColor="TextBackground" font="Regular;21" foregroundColor="InfoTimesNext" halign="center" transparent="1" />
+		<widget source="session.Event_Next" render="Label" position="268,653" size="73,28" backgroundColor="TextBackground" font="Regular;21" foregroundColor="InfoTimesNext" transparent="1" valign="top">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="345,653" size="565,28" backgroundColor="TextBackground" font="Regular;21" foregroundColor="InfoProgramNext" noWrap="1" transparent="1" valign="top">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="930,653" size="155,28" backgroundColor="TextBackground" font="Regular;21" foregroundColor="InfoDurationNext" halign="right" transparent="1" valign="top">
+			<convert type="EventTime">Duration</convert>
+			<convert type="ClockToText">InMinutes</convert>
+		</widget>
+		<!-- Service Provider and Transmission Technology Area -->
+		<!-- <widget source="session.CurrentService" render="Label" position="182,685" size="409,60" backgroundColor="Black" font="Regular;14" foregroundColor="border1" shadowColor="#000000" shadowOffset="-2,-2" transparent="1">
+			<convert type="PliExtraInfo">TransponderInfo2line</convert>
+		</widget> -->
+		<widget source="session.CurrentService" render="Label" position="182,695" size="800,20" backgroundColor="TextBackground" font="Regular;15" foregroundColor="InfoBroadcaster" transparent="1">
+			<!-- <convert type="ServiceName2">F=%F f=%f i=%i O=%O M=%M p=%p Y=%Y r=%r o=%o c=%c l=%l h=%h m=%m g=%g b=%b e=%e</convert> -->
+			<convert type="ServiceName2">%P - %t %s</convert>
+		</widget>
+		<!-- Recording Service Name and Recording Progress Bar Area - If Recording -->
+		<widget source="session.RecordState" render="Label" position="640,685" size="270,20" backgroundColor="TextBackground" font="Regular;15" foregroundColor="InfoRecording" noWrap="1" transparent="1" valign="center">
+			<convert type="infoRecBm">NombreyCanal</convert>
+		</widget>
+		<widget source="session.RecordState" render="FixedLabel" text=" " position="640,706" size="270,4" backgroundColor="InfoRecordingProgress">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.RecordState" render="Progress" pixmap="images/progress_rec.png" position="640,706" size="270,4" borderWidth="0" transparent="1" zPosition="+1">
+			<convert type="infoRecBm">Progress</convert>
+		</widget>
+		<!-- Tuner Usage, Signal Strength & Quality, Resolution and Status Panel Area -->
+		<panel position="1105,575" size="165,25">
+			<panel name="TunerUsagePanel" />
+		</panel>
+		<panel position="1110,610" size="160,30">
+			<panel name="TunerSignalPanel" />
+		</panel>
+		<panel position="1110,660" size="160,20">
+			<panel name="ResolutionRightPanel" />
+		</panel>
+		<panel position="917,690" size="353,20">
+			<panel name="ChannelFormatPanel" />
+		</panel>
+		<widget name="serviceName" position="0,0" size="0,0" font="Regular;20" transparent="1" />
+		<widget name="serviceName1" position="0,0" size="0,0" font="Regular;20" transparent="1" />
+		<widget name="serviceNumber" position="0,0" size="0,0" font="Regular;20" transparent="1" />
+	</screen>
+
+<!-- Second TV InfoBar "Now" Extended Information -->
+
+	<screen name="SecondInfoBarNow">
+		<eLabel position="0,0" size="580,360" backgroundColor="ScreenBackground" zPosition="-1" />
+		<!-- Event Name Area -->
+		<widget source="session.Event_Now" render="Label" position="10,10" size="560,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="InfoProgramNow" noWrap="1" transparent="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<!-- Event Start & End Times and Time Remaining Area -->
+		<widget source="session.Event_Now" render="Label" position="10,35" size="50,25" backgroundColor="TextBackground" font="Regular;18" foregroundColor="InfoTimesNow" transparent="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<eLabel text="-" position="60,35" size="15,25" backgroundColor="TextBackground" font="Regular;18" foregroundColor="InfoTimesNow" halign="center" transparent="1" />
+		<widget source="session.Event_Now" render="Label" position="75,35" size="50,25" backgroundColor="TextBackground" font="Regular;18" foregroundColor="InfoTimesNow" halign="right" transparent="1">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="370,35" size="200,25" backgroundColor="TextBackground" font="Regular;18" foregroundColor="InfoDurationNow" halign="right" transparent="1">
+			<convert type="EventTime">Remaining</convert>
+			<convert type="RemainingToText">InMinutes</convert>
+		</widget>
+		<!-- Event Extended Description Area -->
+		<widget source="session.Event_Now" render="Label" position="25,70" size="530,260" backgroundColor="TextBackground" font="Regular;18" foregroundColor="InfoDetailsNow" halign="block" transparent="1">
+			<convert type="EventName">FullDescription,Separated,Trimmed</convert>
+		</widget>
+		<!-- Event Rating and Genre Area -->
+		<widget source="session.Event_Now" render="Label" position="10,330" size="80,20" backgroundColor="TextBackground" font="Regular;18" foregroundColor="InfoRatingNow" transparent="1">
+			<convert type="EventName">SmallRating</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="90,330" size="480,20" backgroundColor="TextBackground" font="Regular;18" foregroundColor="InfoRatingNow" halign="right" transparent="1">
+			<convert type="EventName">Genre</convert>
+		</widget>
+	</screen>
+
+<!-- Second TV InfoBar "Next" Extended Information -->
+
+	<screen name="SecondInfoBarNext">
+		<eLabel position="0,0" size="580,360" backgroundColor="ScreenBackground" zPosition="-1" />
+		<!-- Event Name Area -->
+		<widget source="session.Event_Next" render="Label" position="10,10" size="560,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="InfoProgramNext" noWrap="1" transparent="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<!-- Event Start & End Times and Duration Area -->
+		<widget source="session.Event_Next" render="Label" position="10,35" size="50,25" backgroundColor="TextBackground" font="Regular;18" foregroundColor="InfoTimesNext" transparent="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<eLabel text="-" position="60,35" size="15,25" backgroundColor="TextBackground" font="Regular;18" foregroundColor="InfoTimesNext" halign="center" transparent="1" />
+		<widget source="session.Event_Next" render="Label" position="75,35" size="50,25" backgroundColor="TextBackground" font="Regular;18" foregroundColor="InfoTimesNext" halign="right" transparent="1">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="370,35" size="200,25" backgroundColor="TextBackground" font="Regular;18" foregroundColor="InfoDurationNext" halign="right" transparent="1">
+			<convert type="EventTime">Remaining</convert>
+			<convert type="RemainingToText">InMinutes</convert>
+		</widget>
+		<!-- Event Extended Description Area -->
+		<widget source="session.Event_Next" render="Label" position="25,70" size="530,260" backgroundColor="TextBackground" font="Regular;18" foregroundColor="InfoDetailsNext" halign="block" transparent="1">
+			<convert type="EventName">FullDescription,Separated,Trimmed</convert>
+		</widget>
+		<!-- Event Rating and Genre Area -->
+		<widget source="session.Event_Next" render="Label" position="10,330" size="80,20" backgroundColor="TextBackground" font="Regular;18" foregroundColor="InfoRatingNext" transparent="1">
+			<convert type="EventName">SmallRating</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="90,330" size="480,20" backgroundColor="TextBackground" font="Regular;18" foregroundColor="InfoRatingNext" halign="right" transparent="1">
+			<convert type="EventName">Genre</convert>
+		</widget>
+	</screen>
+
+<!-- MEDIA > OK - Media Player InfoBar -->
+
+	<screen name="MoviePlayer" title="Media Player" position="0,0" size="1280,720" backgroundColor="TransparentBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplateDebug" />
+		<!-- Clock Panel Area -->
+		<panel name="ClockTemplate" />
+		<!-- InfoBar Area Background -->
+		<eLabel position="0,650" size="1280,70" backgroundColor="ScreenBackground" transparent="0" zPosition="-1" />
+		<eLabel position="172,660" size="2,50" backgroundColor="Pinstripe" />
+		<!-- Playback state and speed indicator -->
+		<widget name="statusicon" pixmaps="icons/media_play.png,icons/media_pause.png,icons/media_stop.png,icons/media_ff.png,icons/media_rew.png,icons/media_slow.png,icons/blank.png" position="20,661" size="48,48" alphatest="on" transparent="1" />
+		<widget name="speed" position="80,668" size="100,35" backgroundColor="TextBackground" font="Regular;35" transparent="1" valign="center" />
+		<!-- Recording length -->
+		<widget source="session.CurrentService" render="Label" position="182,660" size="100,20" backgroundColor="TextBackground" font="Regular;20" foregroundColor="InfoMediaLength" transparent="1" valign="center">
+			<convert type="ServicePosition">Length</convert>
+		</widget>
+		<!-- Recording name -->
+		<widget source="session.CurrentService" render="Label" position="182,691" size="715,22" backgroundColor="TextBackground" font="Regular;20" foregroundColor="InfoMediaName" noWrap="1" transparent="1" valign="center">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<!-- Playback progress position -->
+		<widget source="session.CurrentService" render="Label" position="293,660" size="90,18" backgroundColor="TextBackground" font="Regular;18" halign="right" transparent="1" valign="center">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<!-- Playback progress bar -->
+		<ePixmap pixmap="sliders/mpslider.png" position="393,661" size="600,16" alphatest="on" transparent="1" />
+		<widget source="session.CurrentService" render="PositionGauge" position="413,662" size="560,14" pointer="sliders/pointer.png:13,3">
+			<convert type="ServicePosition">Gauge</convert>
+		</widget>
+		<!-- Playback time remaining -->
+		<widget source="session.CurrentService" render="Label" position="1003,660" size="90,18" backgroundColor="TextBackground" font="Regular;18" transparent="1" valign="center">
+			<convert type="ServicePosition">Remaining</convert>
+		</widget>
+		<panel position="1110,660" size="160,20">
+			<panel name="ResolutionRightPanel" />
+		</panel>
+		<panel position="917,690" size="353,20">
+			<panel name="ChannelFormatPanel" />
+		</panel>
+	</screen>
+
+<!-- INFO - Event Info View -->
+
+	<screen name="EventView" title="Event View" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonMenu" />
+		<panel name="ScreenTemplateButtonInfo" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="channel" position="50,80" size="280,25" font="Regular;20" foregroundColor="EPGProgramChannel" transparent="1" />
+		<widget source="Event" render="Label" position="350,80" size="400,25" font="Regular;20" foregroundColor="EPGProgramDateTime" halign="right" transparent="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%a %e-%b-%Y  %H:%M -</convert>
+		</widget>
+		<widget source="Event" render="Label" position="760,80" size="100,25" font="Regular;20" foregroundColor="EPGProgramDateTime" transparent="1">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="Event" render="Label" position="950,80" size="280,25" font="Regular;20" foregroundColor="EPGProgramDuration" halign="right" transparent="1">
+			<convert type="EventTime">Duration</convert>
+			<convert type="ClockToText">InMinutes</convert>
+		</widget>
+
+		<widget source="Event" render="Label" position="150,160" size="980,30" font="Regular;25" foregroundColor="EPGProgramName" transparent="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="Event" render="Label" position="150,220" size="980,200" font="Regular;22" foregroundColor="EPGProgramDescription" halign="block" transparent="1">
+			<convert type="EventName">FullDescription,Trimmed,Separated</convert>
+		</widget>
+
+		<!-- <widget source="CurrentService" render="Label" position="150,460" size="980,30" font="Regular;20" foregroundColor="EPGProgramChannel" transparent="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="CurrentService" render="Label" position="150,490" size="980,30" font="Regular;20" foregroundColor="EPGProgramChannel" transparent="1">
+			<convert type="ServiceName">Provider</convert>
+		</widget> -->
+
+		<widget source="Event" render="Label" position="50,630" size="50,20" font="Regular;18" foregroundColor="White" transparent="1">
+			<convert type="EventName">SmallRating</convert>
+		</widget>
+		<widget source="Event" render="Label" position="100,630" size="540,20" font="Regular;18" foregroundColor="White" transparent="1">
+			<convert type="EventName">Rating</convert>
+		</widget>
+		<widget source="Event" render="Label" position="640,630" size="590,20" font="Regular;18" foregroundColor="White" halign="right" transparent="1">
+			<convert type="EventName">Genre</convert>
+		</widget>
+		<widget name="FullDescription" position="0,0" size="0,0" font="Regular;20" transparent="1" />
+		<widget name="datetime" position="0,0" size="0,0" font="Regular;20" transparent="1" />
+		<widget name="epg_description" position="0,0" size="0,0" font="Regular;20" transparent="1" />
+		<widget name="duration" position="0,0" size="0,0" font="Regular;20" transparent="1" />
+	</screen>
+
+<!-- MEDIA > INFO - Event Info View -->
+
+	<screen name="EventViewSimple" title="Simple Event View" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonMenu" />
+		<panel name="ScreenTemplateButtonInfo" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="channel" position="50,80" size="280,25" font="Regular;20" foregroundColor="EPGProgramChannel" transparent="1" />
+		<widget source="Event" render="Label" position="350,80" size="400,25" font="Regular;20" foregroundColor="EPGProgramDateTime" halign="right" transparent="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%a %e-%b-%Y  %H:%M -</convert>
+		</widget>
+		<widget source="Event" render="Label" position="760,80" size="100,25" font="Regular;20" foregroundColor="EPGProgramDateTime" transparent="1">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="Event" render="Label" position="950,80" size="280,25" font="Regular;20" foregroundColor="EPGProgramDuration" halign="right" transparent="1">
+			<convert type="EventTime">Duration</convert>
+			<convert type="ClockToText">InMinutes</convert>
+		</widget>
+
+		<widget source="Event" render="Label" position="150,160" size="980,30" font="Regular;25" foregroundColor="EPGProgramName" transparent="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="Event" render="Label" position="150,220" size="980,200" font="Regular;22" foregroundColor="EPGProgramDescription" halign="block" transparent="1">
+			<convert type="EventName">FullDescription,Trimmed,Separated</convert>
+		</widget>
+
+		<!-- <widget source="CurrentService" render="Label" position="150,460" size="980,30" font="Regular;20" foregroundColor="EPGProgramChannel" transparent="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="CurrentService" render="Label" position="150,490" size="980,30" font="Regular;20" foregroundColor="EPGProgramChannel" transparent="1">
+			<convert type="ServiceName">Provider</convert>
+		</widget> -->
+
+		<widget source="Event" render="Label" position="50,630" size="50,20" font="Regular;18" foregroundColor="White" transparent="1">
+			<convert type="EventName">SmallRating</convert>
+		</widget>
+		<widget source="Event" render="Label" position="100,630" size="540,20" font="Regular;18" foregroundColor="White" transparent="1">
+			<convert type="EventName">Rating</convert>
+		</widget>
+		<widget source="Event" render="Label" position="640,630" size="590,20" font="Regular;18" foregroundColor="White" halign="right" transparent="1">
+			<convert type="EventName">Genre</convert>
+		</widget>
+		<widget name="FullDescription" position="0,0" size="0,0" font="Regular;20" transparent="1" />
+		<widget name="datetime" position="0,0" size="0,0" font="Regular;20" transparent="1" />
+		<widget name="epg_description" position="0,0" size="0,0" font="Regular;20" transparent="1" />
+		<widget name="duration" position="0,0" size="0,0" font="Regular;20" transparent="1" />
+	</screen>
+
+<!-- OK - Radio InfoBar -->
+
+	<screen name="RadioInfoBar" title="Radio Information Bar" position="150,180" size="480,390" flags="wfNoBorder" zPosition="2">
+		<panel name="ScreenTemplateDebug" />
+		<widget source="session.CurrentService" render="Label" position="20,0" size="480,30" font="Regular;28" noWrap="1" transparent="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="20,40" size="460,20" font="Regular;21" noWrap="1" transparent="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<eLabel position="20,63" size="460,1" backgroundColor="#003366cc" zPosition="2" />
+		<widget source="session.Event_Now" render="Progress" position="190,81" size="300,14" transparent="1" zPosition="1">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="20,75" size="70,30" font="Regular;26" transparent="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="90,75" size="90,30" font="Regular;26" transparent="1">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Format:- %H:%M</convert>
+		</widget>
+		<widget source="RdsDecoder" render="Label" position="20,110" size="460,190" font="Regular;20" transparent="1">
+			<convert type="RdsInfo">RadioText</convert>
+		</widget>
+		<!-- i_rass.png icon is missing!!! -->
+		<widget source="RdsDecoder" render="Pixmap" pixmap="icons/i_rass.png" position="70,310" size="48,48" alphatest="on">
+			<convert type="RdsInfo">RasInteractiveAvailable</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.RecordState" render="Pixmap" pixmap="icons/i_rec.png" position="20,310" size="48,48" alphatest="on">
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+	</screen>
+</skin>

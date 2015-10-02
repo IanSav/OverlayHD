@@ -1,0 +1,286 @@
+<skin>
+<!-- Satellite Dish Movement Display -->
+
+	<screen name="Dish" title="Dish" position="20,20" size="210,230" backgroundColor="ScreenTransparent" flags="wfNoBorder" zPosition="-1">
+		<widget name="Dishpixmap" pixmap="icons/dish.png" position="20,20" size="130,160" alphatest="on" transparent="1" zPosition="-1" />
+		<widget name="turnTime" position="20,130" size="120,25" borderColor="Black" borderWidth="1" font="Regular;20" foregroundColor="Text" transparent="1" />
+		<widget name="turnSpeed" position="140,130" size="70,25" borderColor="Black" borderWidth="1" font="Regular;20" foregroundColor="Text" halign="right" transparent="1" />
+		<widget name="From" position="20,155" size="50,25" borderColor="Black" borderWidth="1" font="Regular;20" foregroundColor="Text" transparent="1" />
+		<widget name="posFrom" position="140,155" size="70,25" borderColor="Black" borderWidth="1" font="Regular;20" foregroundColor="Text" halign="right" transparent="1" />
+		<widget name="Goto" position="20,180" size="50,25" borderColor="Black" borderWidth="1" font="Regular;20" foregroundColor="Text" transparent="1" />
+		<widget name="posGoto" position="140,180" size="70,20" borderColor="Black" borderWidth="1" font="Regular;20" foregroundColor="Text" halign="right" transparent="1" />
+		<widget name="Tuner" position="20,205" size="50,17" borderColor="Black" borderWidth="1" font="Regular;20" foregroundColor="Text" transparent="1" />
+		<widget name="tunerName" position="140,205" size="70,20" borderColor="Black" borderWidth="1" font="Regular;20" foregroundColor="Text" halign="right" transparent="1" />
+	</screen>
+
+<!-- HbbTV -->
+
+	<screen name="HbbTVWindow" title="HbbTV Plugin" position="0,0" size="1280,720" backgroundColor="ScreenTransparent" flags="wfNoBorder">
+		<panel name="ScreenTemplateDebug" />
+	</screen>
+
+	<screen name="HbbTVHelper" title=" " position="0,0" size="1280,720" backgroundColor="ScreenTransparent" flags="wfNoBorder">
+		<panel name="ScreenTemplateDebug" />
+	</screen>
+
+	<screen name="HbbTVBrowserBookmarkWindow" title="HbbTV Browser Bookmarks" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="OperaBrowserBookmarkWindow" />
+	</screen>
+
+<!-- NUMBER - Direct Channel Number Zap -->
+
+	<screen name="NumberZap" title="Channel Zap..." position="center,center" size="260,79" backgroundColor="ScreenBackground"> <!--460,300-->
+		<widget name="channel" position="10,15" size="110,25" backgroundColor="InfoBackground" font="Regular;22" foregroundColor="InfoLCN" transparent="1" valign="center" />
+		<widget name="number" position="170,15" size="80,25" backgroundColor="InfoBackground" font="Regular;22" foregroundColor="InfoLCN" halign="right" transparent="1" valign="center" />
+		<widget name="servicename" position="10,45" size="240,25" backgroundColor="InfoBackground" font="Regular;22" foregroundColor="InfoChannel" halign="right" transparent="1" valign="center" />
+	</screen>
+
+<!-- BACK | PREV | NEXT - History Zap Menu -->
+
+	<screen name="HistoryZapSelectorOld" title="History Zap..." position="center,center" size="350,240" backgroundColor="ScreenBackground">
+		<widget source="menu" render="Listbox" position="0,0" size="350,240" scrollbarMode="showOnDemand" transparent="1" zPosition="2">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (10, 0), size = (20, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
+					MultiContentEntryText(pos = (40, 0), size = (290, 25), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2)
+					],
+				"fonts": [gFont("Regular", 18), gFont("Regular", 20)],
+				"itemHeight": 25
+				}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="HistoryZapSelector" title="History Zap..." position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tv_zaphistory.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryPixmapAlphaBlend(pos=(20, 10), size=(100, 60), png=6, flags = BT_SCALE),
+					MultiContentEntryText(pos = (140, 10), size = (670, 22), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 2, color = 0x009999ff, color_sel = 0x00ffffff),
+					MultiContentEntryText(pos = (125, 32), size = (10, 20), font = 2, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1),
+					MultiContentEntryText(pos = (140, 32), size = (670, 20), font = 2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3, color = 0x0066ffff, color_sel = 0x00cccccc),
+					MultiContentEntryText(pos = (140, 52), size = (670, 20), font = 3, flags = RT_HALIGN_LEFT, text = 5, color = 0x00666666, color_sel = 0x00999999),
+					],
+				"fonts": [gFont("Regular", 22), gFont("Regular", 20), gFont("Regular", 17), gFont("Regular", 16)],
+				"itemHeight": 80
+				}
+			</convert>
+		</widget>
+	</screen>
+
+<!-- ??? - ToDo! -->
+
+	<screen name="ZapHistoryBrowser" title="Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tv_zaphistory.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="list" position="590,170" size="610,415" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+<!-- FAV - TV Channel Selection -->
+
+	<screen name="ChannelSelection" title="Channel Selection" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonMenu" />
+		<panel name="ScreenTemplateButtonInfo" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonHelp" />
+		<widget name="list" position="50,80" size="640,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" colorServiceDescription="InfoProgramNow" colorServiceDescriptionSelected="InfoProgramNow" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" foregroundColorServiceNotAvail="#00777777" picServiceEventProgressbar="sliders/slider_1280x10_hfg.png" scrollbarMode="showOnDemand" serviceInfoFont="Regular;21" serviceItemHeight="50" serviceNameFont="Regular;23" serviceNumberFont="Regular;23" transparent="1" />
+		<panel position="710,80" size="165,25">
+			<panel name="TunerUsagePanel" />
+		</panel>
+		<panel position="1070,80" size="160,30">
+			<panel name="TunerSignalPanel" />
+		</panel>
+		<panel position="710,130" size="160,20">
+			<panel name="ResolutionPanel" />
+		</panel>
+		<panel position="877,130" size="353,20">
+			<panel name="ChannelFormatPanel" />
+		</panel>
+		<widget source="session.CurrentService" render="Label" position="710,155" size="320,20" backgroundColor="InfoBackground" font="Regular;15" foregroundColor="InfoChannel" transparent="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="910,155" size="320,20" backgroundColor="InfoBackground" font="Regular;15" foregroundColor="InfoBroadcaster" halign="right" transparent="1">
+			<convert type="ServiceName2">Provider</convert>
+		</widget>
+
+		<!-- <ePixmap pixmap="frame_hd.png" position="55,105" size="126,82" alphatest="on" transparent="1" zPosition="-1" />
+		<widget source="ServiceEvent" render="Picon" position="68,116" size="100,60" alphatest="blend" transparent="1" /> -->
+
+		<widget source="ServiceEvent" render="Picon" position="710,190" size="100,60" alphatest="blend" borderColor="grey" borderWidth="1" transparent="1">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="820,190" size="200,25" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoChannel" transparent="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="1030,190" size="200,25" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoBroadcaster" halign="right" transparent="1">
+			<convert type="ServiceName2">Provider</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="820,230" size="60,20" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoTimesNow" transparent="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Progress" pixmap="sliders/progress.png" position="880,238" size="290,8" borderColor="InfoProgressBorder" borderWidth="1">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="1170,230" size="60,20" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoTimesNow" halign="right" transparent="1">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+
+		<ePixmap pixmap="icons/icon_event.png" position="710,267" size="15,10" alphatest="on" />
+		<widget source="ServiceEvent" render="Label" position="730,260" size="500,24" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoProgramNow" transparent="1">
+			<convert type="EventName">NowName</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="710,294" size="80,24" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoRatingNow" transparent="1">
+			<convert type="EventName">SmallRating</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="790,294" size="446,24" backgroundColor="InfoBackground" font="Regular;18" foregroundColor="InfoRatingNow" halign="right" transparent="1">
+			<convert type="EventName">Genre</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="710,330" size="526,256" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoDetailsNow" halign="block" transparent="1"><!-- size="526,270" -->
+			<convert type="EventName">FullDescription,Trimmed,Separated</convert>
+		</widget>
+
+		<ePixmap pixmap="icons/icon_event.png" position="710,613" size="15,10" alphatest="on" />
+		<widget source="ServiceEvent" render="Label" position="730,606" size="370,24" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoProgramNext" noWrap="1" transparent="1">
+			<convert type="EventName">NextName</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="1110,606" size="52,24" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoTimesNext" transparent="1">
+			<convert type="EventTime">NextStartTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<eLabel text="-" position="1162,606" size="16,24" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoTimesNext" halign="center" transparent="1" />
+		<widget source="ServiceEvent" render="Label" position="1178,606" size="52,24" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoTimesNext" halign="right" transparent="1">
+			<convert type="EventTime">NextEndTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+
+		<ePixmap pixmap="icons/icon_event.png" position="710,637" size="15,10" alphatest="on" />
+		<widget source="ServiceEvent" render="Label" position="730,630" size="370,24" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoProgramNext" noWrap="1" transparent="1">
+			<convert type="EventName">ThirdName</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="1110,630" size="52,24" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoTimesNext" transparent="1">
+			<convert type="EventTime">ThirdStartTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<eLabel text="-" position="1162,630" size="16,24" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoTimesNext" halign="center" transparent="1" />
+		<widget source="ServiceEvent" render="Label" position="1178,630" size="52,24" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoTimesNext" halign="right" transparent="1">
+			<convert type="EventTime">ThirdEndTime</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+	</screen>
+
+<!-- Screen names change for "Simple" mode channel selection -> "SlimChannelSelection", "SimpleChannelSelection", "ChannelSelection" -->
+
+	<screen name="SimpleChannelSelection" title="Channel Selection" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonInfo" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonHelp" />
+		<ePixmap pixmap="menus/mainmenu_tv_live.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<!--
+		<widget name="list" position="50,80" size="640,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" colorServiceDescription="InfoProgramNow" colorServiceDescriptionSelected="InfoProgramNow" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" foregroundColorServiceNotAvail="#00777777" picServiceEventProgressbar="sliders/slider_1280x10_hfg.png" scrollbarMode="showOnDemand" serviceInfoFont="Regular;21" serviceItemHeight="50" serviceNameFont="Regular;23" serviceNumberFont="Regular;23" transparent="1" />
+		-->
+		<widget name="list" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" colorServiceDescription="InfoProgramNow" colorServiceDescriptionSelected="InfoProgramNow" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" foregroundColorServiceNotAvail="#00777777" picServiceEventProgressbar="sliders/slider_1280x10_hfg.png" scrollbarMode="showOnDemand" serviceInfoFont="Regular;20" serviceItemHeight="50" serviceNameFont="Regular;20" serviceNumberFont="Regular;20" transparent="1" />
+	</screen>
+
+	<!--
+	<screen name="SlimChannelSelection" position="center,center" size="560,550">
+		<widget name="list" position="0,0" size="560,420" backgroundColor="black" foregroundColorEvent="event-frgrnd" foregroundColorEventSelected="#00202020" foregroundColorServiceNotAvail="verydarkgrey" serviceItemHeight="30" serviceNumberFont="Regular;24" serviceNameFont="Regular;24" serviceInfoFont="Bold;21" transparent="1" zPosition="3" scrollbarMode="showOnDemand"/>
+		<widget source="ServiceEvent" render="Label" position="10,420" zPosition="2" size="60,25" font="Bold;22" backgroundColor="black" halign="right" noWrap="1" valign="top" foregroundColor="orange" transparent="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">
+			</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="75,420" zPosition="2" size="73,25" font="Bold;22" backgroundColor="black" noWrap="1" valign="top" foregroundColor="orange" transparent="1">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Format:- %H:%M</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="15,445" size="503,63" font="Regular;19" backgroundColor="black" foregroundColor="window-fg" valign="top" zPosition="2" transparent="1">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<panel name="MenuRed1Panel" />
+		<panel name="MenuGreen1Panel" />
+		<panel name="MenuYellow1Panel" />
+		<panel name="MenuBlue1Panel" />
+	</screen>
+	-->
+
+<!-- Channel selection - Radio -->
+
+	<screen name="ChannelSelectionRadio" title="Channel Selection" position="150,100" size="980,560" zPosition="-2">
+		<panel name="ScreenTemplateButtonColours" />
+		<!--
+		<ePixmap pixmap="buttons/button_200x60_red.png" position="90,500" size="200,60" alphatest="on" zPosition="2" />
+		<ePixmap pixmap="buttons/button_200x60_green.png" position="290,500" size="200,60" alphatest="on" zPosition="2" />
+		<ePixmap pixmap="buttons/button_200x60_yellow.png" position="490,500" size="200,60" alphatest="on" zPosition="2" />
+		<ePixmap pixmap="buttons/button_200x60_blue.png" position="690,500" size="200,60" alphatest="on" zPosition="2" />
+		<widget name="key_red" position="90,500" size="200,36" backgroundColor="ButtonRed" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_green" position="290,500" size="200,36" backgroundColor="ButtonGreen" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_yellow" position="490,500" size="200,36" backgroundColor="ButtonYellow" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_blue" position="690,500" size="200,36" backgroundColor="ButtonBlue" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
+		-->
+		<eLabel position="0,20" size="980,2" backgroundColor="#003366cc" zPosition="1" />
+		<eLabel text="Channel Selection" position="520,40" size="440,35" font="Regular;28" transparent="1" zPosition="2" />
+		<eLabel position="520,80" size="440,2" backgroundColor="Pinstripe" zPosition="2" />
+		<widget name="list" position="520,95" size="440,395" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
+		<widget source="global.CurrentTime" render="Label" position="20,40" size="460,26" backgroundColor="TextBackground" font="Regular;28" foregroundColor="BannerClock" transparent="1" zPosition="1">
+			<convert type="ClockToText">Format:%H:%M %A %d %B %Y</convert>
+		</widget>
+	</screen>
+
+<!-- AUDIO - Audio Selection Pop Up -->
+
+	<screen name="AudioSelection" title="Select Audio Track" position="300,180" size="680,330" backgroundColor="ScreenBackground">
+		<widget name="config" position="50,0" size="630,140" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showNever" transparent="1" />
+		<widget source="key_red" render="Pixmap" pixmap="buttons/key_red.png" position="5,5" size="35,25" alphatest="on" transparent="1">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_green" render="Pixmap" pixmap="buttons/key_green.png" position="5,40" size="35,25" alphatest="on" transparent="1">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_yellow" render="Pixmap" pixmap="buttons/key_yellow.png" position="5,75" size="35,25" alphatest="on" transparent="1">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_blue" render="Pixmap" pixmap="buttons/key_blue.png" position="5,110" size="35,25" alphatest="on" transparent="1">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<eLabel position="0,142" size="680,2" backgroundColor="Pinstripe" />
+		<widget source="streams" render="Listbox" position="0,145" size="680,150" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showNever" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"templates":
+					{
+					"default": (25,
+						[
+						MultiContentEntryText(pos = (0, 0),  size = (35, 25), font = 0, flags = RT_HALIGN_LEFT, text = 1), # key,
+						MultiContentEntryText(pos = (50, 0), size = (55, 25), font = 0, flags = RT_HALIGN_LEFT, text = 2), # number,
+						MultiContentEntryText(pos = (115, 0), size = (200, 25), font = 0, flags = RT_HALIGN_LEFT, text = 3), # description,
+						MultiContentEntryText(pos = (325, 0), size = (200, 25), font = 0, flags = RT_HALIGN_LEFT, text = 4), # language,
+						MultiContentEntryText(pos = (535, 0), size = (105, 25), font = 1, flags = RT_HALIGN_RIGHT, text = 5), # selection,
+						], True, "showNever"),
+					"notselected": (25,
+						[
+						MultiContentEntryText(pos = (0, 0),  size = (35, 25), font = 0, flags = RT_HALIGN_LEFT, text = 1), # key,
+						MultiContentEntryText(pos = (50, 0), size = (55, 25), font = 0, flags = RT_HALIGN_LEFT, text = 2), # number,
+						MultiContentEntryText(pos = (115, 0), size = (200, 25), font = 0, flags = RT_HALIGN_LEFT, text = 3), # description,
+						MultiContentEntryText(pos = (325, 0), size = (200, 25), font = 0, flags = RT_HALIGN_LEFT, text = 4), # language,
+						MultiContentEntryText(pos = (535, 0), size = (105, 25), font = 1, flags = RT_HALIGN_RIGHT, text = 5), # selection,
+						], False, "showNever")
+					},
+				"fonts": [gFont("Regular", 20), gFont("Regular", 20)],
+				"itemHeight": 25
+				}
+			</convert>
+		</widget>
+	</screen>
+</skin>

@@ -1,0 +1,605 @@
+<skin>
+<!--
+ |	Music
+ +-->
+
+<!-- MediaPlayer -->
+
+	<screen name="MediaPlayer" title="MediaPlayer" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonMenu" />
+		<panel name="ScreenTemplateButtonInfo" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonText" />
+		<panel name="ScreenTemplateButtonHelp" />
+		<widget name="filelist" position="50,80" size="580,325" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="playlist" position="650,80" size="580,325" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="currenttext" position="50,410" size="1180,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" halign="center" transparent="1" valign="center" />
+		<eLabel position="50,440" size="1180,2" backgroundColor="Pinstripe" />
+		<widget name="coverArt" pixmap="images/no_coverArt.png" position="50,450" size="200,200" alphatest="on" transparent="1" />
+		<widget name="titletext" position="300,450" size="100,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TextLabel" halign="right" transparent="1" valign="center" />
+		<widget name="title" position="420,450" size="810,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="artisttext" position="300,480" size="100,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TextLabel" halign="right" transparent="1" valign="center" />
+		<widget name="artist" position="420,480" size="810,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="albumtext" position="300,510" size="100,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TextLabel" halign="right" transparent="1" valign="center" />
+		<widget name="album" position="420,510" size="810,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="yeartext" position="300,540" size="100,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TextLabel" halign="right" transparent="1" valign="center" />
+		<widget name="year" position="420,540" size="810,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="genretext" position="300,570" size="100,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TextLabel" halign="right" transparent="1" valign="center" />
+		<widget name="genre" position="420,570" size="810,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<eLabel text="Repeat:" position="300,600" size="100,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TextLabel" halign="right" transparent="1" valign="center" />
+		<widget name="repeat" pixmaps="icons/repeat_off.png,icons/repeat_on.png" position="420,606" size="22,15" alphatest="on" transparent="1" />
+		<ePixmap pixmap="sliders/slider_10x400_hbg.png" position="420,635" size="400,14" alphatest="on" transparent="1" />
+		<ePixmap pixmap="sliders/slider_10_fg_ab.png" position="420,635" size="7,14" alphatest="on" transparent="1" zPosition="+2" />
+		<!-- <widget name="PositionGauge" position="142,555" size="558,14" pointer="sliders/slider_10x497_hfg.png:490,0" transparent="1" zPosition="4" /> -->
+		<widget name="PositionGauge" position="420,635" size="400,14" pointer="sliders/slider_10x497_hfg.png:490,0" transparent="1" zPosition="+1" />
+	</screen>
+
+	<screen name="MediaPlayerDirectoryBrowser" title="File Browser" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_backup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateFileList0" />
+	</screen>
+
+<!-- Last.FM -->
+
+	<screen name="LastFMScreenMain" title="Last.FM" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonMenu" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonHelp" />
+		<widget name="artist" position="100,420" size="100,19" font="Regular;18" foregroundColor="#00777777" halign="right" transparent="1" valign="top" zPosition="2" />
+		<widget name="info_artist" position="220,420" size="370,19" font="Regular;18" transparent="1" valign="top" zPosition="2" />
+		<widget name="album" position="100,445" size="100,19" font="Regular;18" foregroundColor="#00777777" halign="right" transparent="1" valign="top" zPosition="2" />
+		<widget name="info_album" position="220,445" size="370,19" font="Regular;18" transparent="1" valign="top" zPosition="2" />
+		<widget name="track" position="120,370" size="470,26" font="Regular;22" foregroundColor="#00777777" transparent="1" valign="top" zPosition="2" />
+		<widget name="info_track" position="220,370" size="370,30" font="Regular;22" halign="left" transparent="1" valign="center" zPosition="2" />
+		<widget name="duration" position="420,370" size="60,30" font="Regular;18" halign="right" transparent="1" valign="center" zPosition="2" />
+		<widget name="info_cover" pixmap="images/no_coverArt.png" position="250,150" size="200,200" alphatest="on" transparent="1" />
+		<eLabel position="665,340" size="450,2" backgroundColor="White" zPosition="2" />
+		<widget name="tablist" position="650,120" size="570,207" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
+		<widget name="streamlist" position="650,347" size="570,254" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
+		<widget name="infolabel" position="0,600" size="1280,20" font="Regular;18" halign="center" transparent="1" valign="center" zPosition="2" />
+	</screen>
+
+<!-- SHOUTCast -->
+
+	<screen name="SHOUTcastWidget" title="SHOUTcast" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonMenu" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="images/shoutcast-logo.png" position="50,80" size="120,35" alphatest="on" transparent="1" />
+		<widget name="headertext" position="190,80" size="620,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
+		<eLabel position="50,130" size="1180,2" backgroundColor="Pinstripe" />
+		<widget name="list" position="50,132" size="1180,355" backgroundColorSelected="MenuSelected" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="statustext" position="50,132" size="1180,355" backgroundColor="TextBackground" font="Regular;25" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<eLabel position="50,487" size="1180,2" backgroundColor="Pinstripe" />
+		<widget name="cover" position="50,525" size="102,110" alphatest="blend" transparent="1" />
+		<widget name="titel" position="170,525" size="1060,25" backgroundColor="TextBackground" font="Regular;20" transparent="1" valign="center" />
+		<widget name="station" position="170,555" size="1060,50" backgroundColor="TextBackground" font="Regular;20" transparent="1" valign="center" />
+		<widget name="console" position="170,610" size="1060,25" backgroundColor="TextBackground" font="Regular;20" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="SHOUTcastSetup" title="SHOUTCast Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateSMSHelper" />
+		<ePixmap pixmap="menus/mainmenu_music_bouquets.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig0" />
+	</screen>
+
+	<screen name="SHOUTcastStreamripperRecordingPath" title="Select record path for streamripper" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="target" position="400,150" size="705,22" backgroundColor="TextBackground" font="Regular;22" transparent="1" valign="center" />
+		<widget name="filelist" position="400,200" size="705,380" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
+	</screen>
+
+<!--
+ |	Photos
+ +-->
+
+<!-- Picture Player -->
+
+	<screen name="picshow" title="Picture Player" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="filelist" position="50,80" size="700,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="thn" position="814,80" size="372,280" alphatest="on" transparent="1" />
+		<eLabel position="770,375" size="460,2" backgroundColor="Pinstripe" />
+		<widget source="label" render="Label" position="770,390" size="460,160" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="top" />
+	</screen>
+
+	<!-- Only enable this screen if you wish to override the Picture Player settings which are dynamic! -->
+	<!-- <screen name="Pic_Thumb" title="Picture Thumbnails" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<eLabel position="0,0" size="1280,720" backgroundColor="PictureBackground" />
+		<widget name="frame" pixmap="pic_frame.png" position="35,30" size="190,200" alphatest="on" transparent="1" zPosition="+1" />
+
+		posX = -1
+		for x in range(self.thumbsC):
+			posY = x / self.thumbsX
+			posX += 1
+			if posX >= self.thumbsX:
+				posX = 0
+
+			absX = self.spaceX + (posX * (self.spaceX + self.picX))
+			absY = self.spaceY + (posY * (self.spaceY + self.picY))
+			self.positionlist.append((absX, absY))
+			skincontent += "<widget source=\"label" + str(x) + "\" render=\"Label\" position=\"" + str(absX + 5) + "," + str(absY + self.picY - textsize) + "\" size=\"" + str(self.picX - 10) + "," + str(textsize) + "\" font=\"Regular;14\" zPosition=\"2\" transparent=\"1\" noWrap=\"1\" foregroundColor=\"" + self.textcolor + "\" />"
+			skincontent += "<widget name=\"thumb" + str(x) + "\" position=\"" + str(absX + 5) + "," + str(absY + 5) + "\" size=\"" + str(self.picX - 10) + "," + str(self.picY - (textsize * 2)) + "\" zPosition=\"2\" transparent=\"1\" alphatest=\"on\" />"
+
+		<widget source="label1" render="Label" position="absX + 5,absY + self.picY - textsize" size="self.picX - 10,textsize" font="Regular;14" foregroundColor="PictureLabel" noWrap="1" transparent="1" zPosition="+1" />
+		<widget name="thumb1" position="absX + 5,absY + 5" size="self.picX - 10,self.picY - (textsize * 2)" alphatest="on" transparent="1" zPosition="+1" />
+		15 pictures on screen!
+	</screen> -->
+
+	<!-- Only enable this screen if you wish to override the Picture Player settings which are dynamic! -->
+	<screen name="Pic_Full_View" title="Picture Viewer" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<eLabel position="0,0" size="1280,720" backgroundColor="PictureBackground" />
+		<widget name="pic" position="30,30" size="1220,660" alphatest="on" zPosition="+1" />
+		<widget name="point" position="20,22" size="20,20" pixmap="icons/record.png" alphatest="on" transparent="1" zPosition="+2" />
+		<widget name="play_icon" position="40,22" size="20,20" pixmap="icons/ico_mp_play.png" alphatest="on" transparent="1" zPosition="+2" />
+		<widget source="file" render="Label" position="60,20" size="1170,25" borderColor="PictureLabelBorder" borderWidth="1" font="Regular;20" foregroundColor="PictureLabel" noWrap="1" transparent="1" zPosition="+2" />
+	</screen>
+
+	<screen name="Pic_Exif" title="Picture Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_photos_albums_user.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="menu" render="Listbox" position="400,80" size="830,540" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (20, 0), size = (320, 30), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, font = 0, text = 0),
+					MultiContentEntryText(pos = (360, 0), size = (450, 30), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, font = 0, text = 1)
+					],
+				"fonts": [gFont("Regular", 20)],
+				"itemHeight": 30
+				}
+			</convert>
+		</widget>
+	</screen>
+
+<!-- Flickr -->
+
+	<screen name="EcasaPictureWall" title="Flickr Featured Photos" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonHelp" />
+		<widget name="waitingtext" position="0,0" size="1280,720" backgroundColor="TextBackground" font="Regular;25" foregroundColor="Text" halign="center" transparent="1" valign="center" />
+
+		<widget name="image0" position="110,110" size="190,160" />
+		<widget name="image1" position="320,110" size="190,160" />
+		<widget name="image2" position="530,110" size="190,160" />
+		<widget name="image3" position="740,110" size="190,160" />
+		<widget name="image4" position="950,110" size="190,160" />
+
+		<widget name="image5" position="110,280" size="190,160" />
+		<widget name="image6" position="320,280" size="190,160" />
+		<widget name="image7" position="530,280" size="190,160" />
+		<widget name="image8" position="740,280" size="190,160" />
+		<widget name="image9" position="950,280" size="190,160" />
+
+		<widget name="image10" position="110,450" size="190,160" />
+		<widget name="image11" position="320,450" size="190,160" />
+		<widget name="image12" position="530,450" size="190,160" />
+		<widget name="image13" position="740,450" size="190,160" />
+		<widget name="image14" position="950,450" size="190,160" />
+		<!-- TODO: find some better picture -->
+		<widget name="highlight" position="110,272" size="190,5" />
+	</screen>
+
+<!-- Web Cams -->
+
+	<screen name="WebcamViewer" title="Webcam Viewer" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" backgroundColorSelected="MenuSelected" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (20, 0), size = (790, 35), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, font = 0, text = 0)
+					],
+				"fonts": [gFont("Regular", 25)],
+				"itemHeight": 35
+				}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="TravelWebcamviewer" title="Travel Webcam Viewer" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="list" render="Listbox" position="400,80" size="830,525" backgroundColor="TextBackground" backgroundColorSelected="MenuSelected" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"templates":
+					{
+					"default": (75,
+						[
+						MultiContentEntryPixmapAlphaTest(pos = (0, 0), size = (100, 75), png = 4), # index 4 is the thumbnail
+						MultiContentEntryText(pos = (120, 0), size = (670, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 1), # index 1 is the Title
+						MultiContentEntryText(pos = (120, 25), size = (320, 25), font = 1, color = 0x00999999, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 5), # index 5 is the Published Date
+						MultiContentEntryText(pos = (120, 50), size = (320, 25), font = 1, color = 0x00999999, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 6), # index 6 is the Views Count
+						MultiContentEntryText(pos = (460, 25), size = (330, 25), font = 1, color = 0x00999999, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 7), # index 7 is the duration
+						MultiContentEntryText(pos = (460, 50), size = (330, 25), font = 1, color = 0x00999999, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 8), # index 8 is the ratingcount
+						]),
+					"status": (75,
+						[
+						MultiContentEntryText(pos = (20, 0), size = (790, 50), font=2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 0), # index 0 is the name
+						MultiContentEntryText(pos = (20, 50), size = (790, 25), font=3, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 1), # index 2 is the description
+						])
+					},
+				"fonts": [gFont("Regular", 22),gFont("Regular", 18),gFont("Regular", 25),gFont("Regular", 20)],
+				"itemHeight": 75
+				}
+			</convert>
+		</widget>
+		<widget name="count" position="400,625" size="140,25" backgroundColor="TextBackground" font="Regular;20" transparent="1" valign="center" />
+		<widget name="page" position="560,625" size="140,25" backgroundColor="TextBackground" font="Regular;20" transparent="1" valign="center" />
+		<widget name="currentnumbers" position="990,625" size="240,25" backgroundColor="TextBackground" font="Regular;20" halign="right" transparent="1" valign="center" />
+		<widget name="thumbnail" position="0,0" size="100,75" alphatest="on" transparent="1" /><!-- Fake entry for dynamic thumbnail resizing, currently there is no other way doing this. -->
+	</screen>
+
+<!--
+ |	Videos
+ +-->
+
+<!-- DVD Player -->
+
+	<screen name="DVDPlayer" title="DVDPlayer" position="0,0" size="1280,720" backgroundColor="ScreenTransparent" flags="wfNoBorder">
+		<!-- Background -->
+		<ePixmap pixmap="images/infobar.png" position="0,70" size="1280,720" zPosition="-1" />
+		<!-- Time -->
+		<widget source="global.CurrentTime" render="Label" position="1113,661" size="95,26" backgroundColor="TextBackground" font="Named;21" foregroundColor="White" halign="right" transparent="1" valign="bottom">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<!-- Channellogo (Picon) -->
+		<eLabel position="75,605" size="95,2" backgroundColor="Pinstripe" />
+		<eLabel position="75,679" size="95,2" backgroundColor="Pinstripe" />
+		<eLabel position="75,605" size="2,75" backgroundColor="Pinstripe" />
+		<eLabel position="168,605" size="2,75" backgroundColor="Pinstripe" />
+		<!-- <ePixmap pixmap="frames/frame80_95x75.png" position="75,605" size="95,75" zPosition="1" /> -->
+		<ePixmap pixmap="images/picon_movie.png" position="87,616" size="70,53" zPosition="2" />
+		<!-- Service name -->
+		<widget source="session.CurrentService" render="Label" position="55,560" size="1170,25" backgroundColor="TextBackground" font="Named;23" foregroundColor="White" halign="center" noWrap="1" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<!-- Progressbar (movie position)-->
+		<ePixmap pixmap="sliders/mpslider.png" position="184,595" size="600,16" alphatest="on" zPosition="3" />
+		<widget source="session.CurrentService" render="PositionGauge" position="204,596" size="560,14" pointer="sliders/pointer.png:13,3" zPosition="2">
+			<convert type="ServicePosition">Gauge</convert>
+		</widget>
+		<!-- Elapsed time -->
+		<widget source="session.CurrentService" render="Label" position="184,615" size="130,20" backgroundColor="TextBackground" font="Regular;18" halign="left" shadowColor="#001d354c" shadowOffset="-1,-1" transparent="1" valign="center">
+			<convert type="ServicePosition">Position,ShowHours</convert>
+		</widget>
+		<!-- Remaining time -->
+		<widget source="session.CurrentService" render="Label" position="653,615" size="130,20" backgroundColor="TextBackground" font="Regular;18" halign="right" shadowColor="#001d354c" shadowOffset="-1,-1" transparent="1" valign="center">
+			<convert type="ServicePosition">Remaining,Negate,ShowHours</convert>
+		</widget>
+		<!-- Chapter info -->
+		<widget name="chapterLabel" position="184,645" size="380,22" backgroundColor="TextBackground" font="Regular;20" foregroundColor="unc3c3c9" transparent="1" />
+		<!-- Icons for help -->
+		<ePixmap pixmap="icons/icon_rewind.png" position="1056,594" size="36,36" alphatest="on" />
+		<ePixmap pixmap="icons/icon_play.png" position="1094,594" size="36,36" alphatest="on" />
+		<ePixmap pixmap="icons/icon_pause.png" position="1132,594" size="36,36" alphatest="on" />
+		<ePixmap pixmap="icons/icon_forward.png" position="1170,594" size="36,36" alphatest="on" />
+		<!-- Audio icon (is there multichannel audio?) -->
+		<ePixmap pixmap="icons/i_dolby.png" position="1018,594" size="36,36" alphatest="on" zPosition="1" />
+		<widget name="audioLabel" position="968,645" size="130,22" backgroundColor="TextBackground" font="Regular;18" shadowColor="#001d354c" shadowOffset="-1,-1" transparent="1" valign="bottom" />
+		<!-- Subtitle track info -->
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/i_txt.png" position="980,594" size="36,36" alphatest="on" zPosition="1">
+			<convert type="ServiceInfo">HasTelext</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget name="subtitleLabel" position="920,645" size="48,22" backgroundColor="TextBackground" font="Regular;18" shadowColor="#001d354c" shadowOffset="-1,-1" transparent="1" valign="bottom" />
+	</screen>
+
+	<screen name="TitleProperties" title="Properties of current title" position="90,100" size="1100,560">
+		<widget name="thumbnail" position="20,20" size="260,160" alphatest="on" />
+		<widget source="serviceinfo" render="Label" position="320,20" size="740,160" backgroundColor="un252b4247" font="Regular;21" transparent="1" />
+		<eLabel position="0,195" size="1100,2" backgroundColor="Pinstripe" />
+		<widget name="config" position="20,210" size="1060,300" scrollbarMode="showOnDemand" transparent="1" />
+		<eLabel position="0,518" size="1100,2" backgroundColor="Pinstripe" />
+		<widget source="key_red" render="Label" position="20,525" size="250,30" font="Regular;24" foregroundColor="ButtonRed" halign="center" valign="center" />
+		<widget source="key_green" render="Label" position="290,525" size="250,30" font="Regular;24" foregroundColor="ButtonGreen" halign="center" valign="center" />
+		<widget source="key_blue" render="Label" position="830,525" size="250,30" font="Regular;24" foregroundColor="ButtonBlue" halign="center" valign="center" />
+	</screen>
+
+	<screen name="TitleList" title="DVD Tool" position="170,90" size="920,576">
+		<widget source="title_label" render="Label" position="10,18" size="900,45" font="Regular;22" transparent="1" />
+		<widget source="error_label" render="Label" position="10,78" size="900,365" font="Regular;20" zPosition="3" />
+		<widget source="titles" render="Listbox" position="10,100" size="900,360" scrollbarMode="showOnDemand" transparent="1" zPosition="3">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (0, 0), size = (540, 20), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 Title,
+					MultiContentEntryText(pos = (0, 20), size = (430, 17), font = 1, flags = RT_HALIGN_LEFT, text = 2), # index 2 description,
+					MultiContentEntryText(pos = (560, 6), size = (120, 20), font = 1, flags = RT_HALIGN_LEFT, text = 3), # index 3 channel,
+					MultiContentEntryText(pos = (450, 20), size = (160, 17), font = 1, flags = RT_HALIGN_RIGHT, text = 4), # index 4 date,
+					MultiContentEntryText(pos = (620, 20), size = (58, 20), font = 1, flags = RT_HALIGN_LEFT, text = 5), # index 4 time,
+					],
+				"fonts": [gFont("Regular", 20), gFont("Regular", 14)],
+				"itemHeight": 37
+				}
+			</convert>
+		</widget>
+		<widget source="space_bar" render="Progress" position="10,480" size="900,26" backgroundColor="grey" borderWidth="1" />
+		<widget source="space_label" render="Label" position="20,483" size="880,22" font="Regular;18" foregroundColor="Black" halign="center" transparent="1" zPosition="2" />
+		<widget source="key_red" render="Label" position="20,535" size="195,35" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonRed" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget source="key_green" render="Label" position="245,535" size="195,35" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonGreen" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget source="key_yellow" render="Label" position="465,535" size="195,35" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonYellow" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget source="key_blue" render="Label" position="695,535" size="195,35" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonBlue" halign="center" transparent="1" valign="center" zPosition="3" />
+		<eLabel position="0,525" size="920,2" backgroundColor="Pinstripe" />
+	</screen>
+
+	<screen name="DVDMovieSelection" title="Select a movie" position="0,0" size="1280,720" flags="wfNoBorder">
+		<widget name="waitingtext" position="55,135" size="760,448" font="Regular;22" halign="center" valign="center" zPosition="4" />
+		<widget source="Service" render="Label" position="280,95" size="190,22" backgroundColor="TextBackground" font="Named;18" foregroundColor="grey" halign="center" transparent="1" zPosition="1">
+			<convert type="MovieInfo">FileSize</convert>
+		</widget>
+		<widget name="list" position="55,135" size="760,450" enableWrapAround="1" scrollbarMode="showOnDemand" />
+		<widget name="freeDiskSpace" position="55,593" size="755,25" font="Regular;22" foregroundColor="foreground" halign="center" />
+		<widget source="Service" render="Label" position="825,102" size="320,44" font="Regular;19" foregroundColor="White" halign="center" zPosition="1">
+			<convert type="MovieInfo">RecordServiceName</convert>
+		</widget>
+		<widget source="Service" render="Label" position="830,150" size="320,220" font="Regular;17" foregroundColor="grey" halign="left" zPosition="1">
+			<convert type="MovieInfo">ShortDescription</convert>
+		</widget>
+		<widget source="Service" render="Label" position="825,374" size="320,22" font="Regular;20" foregroundColor="White" halign="center" zPosition="1">
+			<convert type="ServiceTime">Duration</convert>
+			<convert type="ClockToText">AsLength</convert>
+		</widget>
+		<widget source="key_red" render="Label" position="800,635" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonRed" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget source="key_green" render="Label" position="400,635" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonGreen" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget source="key_yellow" render="Label" position="600,635" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonYellow" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="DescriptionBorder" position="0,0" size="0,0" />
+		<eLabel position="820,80" size="1,546" backgroundColor="Pinstripe" />
+		<eLabel position="55,625" size="1100,2" backgroundColor="Pinstripe" />
+		<eLabel position="55,80" size="1100,1" backgroundColor="Pinstripe" />
+		<eLabel text="Select a movie" position="835,60" size="320,20" backgroundColor="TextBackground" font="Named;16" foregroundColor="crypt_emm" halign="right" transparent="1" />
+	</screen>
+
+	<!-- This is also used by Media Player - Move to file managers? -->
+	<screen name="FileBrowser" title="DVD File Browser" position="250,150" size="780,460">
+		<widget name="filelist" position="5,10" size="770,440" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<screen name="DVDToolbox" title="DVD media toolbox" position="90,100" size="1100,560">
+		<widget source="info" render="Label" position="20,60" size="1060,100" font="Regular;22" />
+		<widget name="details" position="20,200" size="1060,200" font="Regular;20" />
+		<widget source="space_bar" render="Progress" position="10,480" size="1080,26" backgroundColor="grey" borderWidth="1" />
+		<widget source="space_label" render="Label" position="20,482" size="1060,22" font="Regular;18" foregroundColor="Black" halign="center" transparent="1" zPosition="2" />
+		<eLabel position="0,518" size="1100,2" backgroundColor="Pinstripe" />
+		<widget source="key_red" render="Label" position="20,525" size="250,30" font="Regular;24" foregroundColor="ButtonRed" halign="center" valign="center" />
+		<widget source="key_green" render="Label" position="290,525" size="250,30" font="Regular;24" foregroundColor="ButtonGreen" halign="center" valign="center" />
+		<widget source="key_yellow" render="Label" position="560,525" size="250,30" font="Regular;24" foregroundColor="ButtonYellow" halign="center" valign="center" />
+	</screen>
+
+	<screen name="CDInfo" title="CDInfo" position="90,100" size="1100,560">
+		<eLabel position="0,0" size="1100,2" backgroundColor="Pinstripe" />
+		<widget source="info" render="Label" position="20,20" size="260,200" font="Regular;21" transparent="1" />
+		<widget source="info2" render="Label" position="20,240" size="260,260" font="Regular;21" transparent="1" />
+		<eLabel position="300,0" size="2,518" backgroundColor="Pinstripe" />
+		<widget name="config" position="320,20" size="760,475" scrollbarMode="showOnDemand" transparent="1" zPosition="3" />
+		<eLabel position="0,518" size="1100,2" backgroundColor="Pinstripe" />
+		<widget source="key_red" render="Label" position="20,525" size="250,30" font="Regular;24" foregroundColor="ButtonRed" halign="center" valign="center" />
+		<widget source="key_green" render="Label" position="290,525" size="250,30" font="Regular;24" foregroundColor="ButtonGreen" halign="center" valign="center" />
+		<widget source="key_blue" render="Label" position="830,525" size="250,30" font="Regular;24" foregroundColor="ButtonBlue" halign="center" valign="center" />
+	</screen>
+
+<!-- MyTubePlayer -->
+
+	<screen name="MyTubePlayer" title="InfoBar" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" zPosition="-1">
+		<panel name="ScreenTemplateDebug" />
+		<ePixmap pixmap="images/infobar.png" position="0,70" size="1280,720" zPosition="-1" />
+		<ePixmap pixmap="icons/icon_rewind.png" position="82,601" size="36,36" alphatest="on" transparent="1" zPosition="0" />
+		<ePixmap pixmap="icons/icon_play.png" position="120,601" size="36,36" alphatest="on" transparent="1" zPosition="0" />
+		<ePixmap pixmap="icons/icon_pause.png" position="158,601" size="36,36" alphatest="on" transparent="1" zPosition="0" />
+		<ePixmap pixmap="icons/icon_forward.png" position="196,601" size="36,36" alphatest="on" transparent="1" zPosition="0" />
+		<eLabel position="55,659" size="205,1" backgroundColor="crypt_emm" zPosition="2" />
+		<widget source="session.CurrentService" render="Label" position="93,665" size="57,20" backgroundColor="TextBackground" font="Regular;18" foregroundColor="White" halign="right" transparent="1">
+			<convert type="ServiceInfo">VideoWidth</convert>
+		</widget>
+		<eLabel text="x" position="154,665" size="15,20" backgroundColor="TextBackground" font="Regular;18" foregroundColor="grey" halign="center" transparent="1" />
+		<widget source="session.CurrentService" render="Label" position="172,665" size="57,20" backgroundColor="TextBackground" font="Regular;18" foregroundColor="White" halign="left" transparent="1">
+			<convert type="ServiceInfo">VideoHeight</convert>
+		</widget>
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MyTube/plugin.png" position="1100,593" size="100,40" alphatest="on" transparent="1" zPosition="1" />
+		<widget source="global.CurrentTime" render="Label" position="1088,641" size="120,26" backgroundColor="TextBackground" font="Named;21" foregroundColor="White" halign="right" transparent="1" valign="top">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1068,667" size="140,20" backgroundColor="TextBackground" font="Named;16" foregroundColor="White" halign="right" transparent="1" valign="top">
+			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="55,560" size="1220,25" backgroundColor="TextBackground" font="Named;23" foregroundColor="White" halign="center" noWrap="1" transparent="1" valign="center">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="325,640" size="100,24" backgroundColor="TextBackground" font="Regular;21" halign="center" transparent="1" valign="center">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<ePixmap pixmap="sliders/mpslider.png" position="393,620" size="600,16" alphatest="on" zPosition="3" />
+		<widget source="session.CurrentService" render="PositionGauge" position="413,621" size="560,14" pointer="sliders/pointer.png:13,3" zPosition="2">
+			<convert type="ServicePosition">Gauge</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="960,640" size="100,24" backgroundColor="TextBackground" font="Regular;21" halign="center" transparent="1" valign="center">
+			<convert type="ServicePosition">Remaining</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="655,640" size="100,24" backgroundColor="TextBackground" font="Regular;20" halign="center" transparent="1" valign="center">
+			<convert type="ServicePosition">Length</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="655,594" size="100,22" backgroundColor="TextBackground" font="Regular;20" foregroundColor="White" halign="center" transparent="1" valign="center">
+			<convert type="ServiceInfo">Framerate</convert>
+		</widget>
+	</screen>
+
+	<screen name="MyTubeVideoHelpScreen" title="MyTubePlayerHelpScreen..." position="300,90" size="680,570">
+		<panel name="ScreenTemplateDebug" />
+		<widget name="detailtext" position="10,10" size="660,500" font="Regular;22" halign="left" transparent="1" valign="top" zPosition="3" />
+		<eLabel position="0,518" size="680,2" backgroundColor="crypt_emm" />
+		<widget name="key_red" position="50,525" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="LightRed" halign="center" transparent="1" valign="center" zPosition="3" />
+		<ePixmap pixmap="icons/plugin.png" position="570,525" size="100,40" alphatest="on" transparent="1" zPosition="4" />
+		<widget name="title" position="0,0" size="0,0" />
+	</screen>
+
+	<screen name="MyTubeVideoInfoScreen" title="MyTubePlayerMainScreen..." position="90,90" size="1100,570">
+		<panel name="ScreenTemplateDebug" />
+		<widget name="title" position="10,15" size="1080,30" backgroundColor="TextBackground" font="Regular;26" halign="left" noWrap="1" transparent="1" valign="center" zPosition="5" />
+		<widget name="author" position="20,70" size="300,25" font="Regular;22" halign="left" transparent="1" valign="top" zPosition="10" />
+		<widget name="duration" position="20,110" size="300,25" font="Regular;22" halign="left" transparent="1" valign="top" zPosition="10" />
+		<widget name="published" position="20,140" size="300,25" font="Regular;22" halign="left" transparent="1" valign="top" zPosition="10" />
+		<widget name="views" position="20,170" size="300,25" font="Regular;22" halign="left" transparent="1" valign="top" zPosition="10" />
+		<widget name="tags" position="20,200" size="300,195" font="Regular;22" halign="left" transparent="1" valign="top" zPosition="10" />
+		<widget name="starsbg" pixmap="images/starsbar_empty.png" position="125,425" size="100,20" alphatest="on" transparent="1" zPosition="5" />
+		<widget name="stars" pixmap="images/starsbar_filled.png" position="125,425" size="100,20" transparent="1" zPosition="6" />
+		<widget source="infolist" render="Listbox" position="350,60" size="740,135" scrollbarMode="showNever" selectionDisabled="1" transparent="1" zPosition="6">
+			<convert type="TemplatedMultiContent">
+				{
+				"templates":
+					{
+					"default": (135,
+						[
+						MultiContentEntryPixmapAlphaTest(pos = (10, 0), size = (180, 135), png = 0), # index 0 is the thumbnail
+						MultiContentEntryPixmapAlphaTest(pos = (190, 0), size = (180, 135), png = 1), # index 0 is the thumbnail
+						MultiContentEntryPixmapAlphaTest(pos = (370, 0), size = (180, 135), png = 2), # index 0 is the thumbnail
+						MultiContentEntryPixmapAlphaTest(pos = (550, 0), size = (180, 135), png = 3), # index 0 is the thumbnail
+						]),
+					"state": (135,
+						[
+						MultiContentEntryText(pos = (0, 35), size = (740, 65), font=2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER| RT_WRAP, text = 0), # index 0 is the name
+						])
+					},
+				"fonts": [gFont("Regular", 20),gFont("Regular", 14),gFont("Regular", 28)],
+				"itemHeight": 135
+				}
+			</convert>
+		</widget>
+		<widget name="detailtext" position="350,225" size="730,280" backgroundColor="TextBackground" font="Regular;22" foregroundColor="White" transparent="1" zPosition="10" />
+		<eLabel position="0,518" size="1100,2" backgroundColor="crypt_emm" />
+		<ePixmap pixmap="buttons/button_block_red.png" position="80,525" size="225,60" alphatest="on" zPosition="1" />
+		<widget name="key_red" position="80,525" size="200,36" backgroundColor="ButtonRed" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
+		<ePixmap pixmap="icons/plugin.png" position="980,525" size="100,40" alphatest="on" transparent="1" zPosition="4" />
+		<widget name="thumbnail" position="0,0" size="180,135" alphatest="on" /><!-- fake entry for dynamic thumbnail resizing, currently there is no other way doing this. -->
+	</screen>
+
+	<screen name="MyTubeSettingsScreen" title="MyTubeSettingsScreen" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig0" />
+	</screen>
+
+	<screen name="MyTubeTasksScreen" title="MyTubeTasksScreen" position="300,90" size="680,570" backgroundColor="ScreenBackground">
+		<panel name="ScreenTemplateDebug" />
+		<widget name="title" position="80,60" size="600,32" backgroundColor="TextBackground" font="Regular;27" halign="center" transparent="1" />
+		<widget source="tasklist" render="Listbox" position="10,100" size="640,410" scrollbarMode="showOnDemand" transparent="1" zPosition="3">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (10, 3), size = (230, 24), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the name
+					MultiContentEntryText(pos = (250, 3), size = (180, 24), font=1, flags = RT_HALIGN_RIGHT, text = 2), # index 2 is the state
+					MultiContentEntryProgress(pos = (440, 3), size = (100, 24), percent = -3), # index 3 should be progress
+					MultiContentEntryText(pos = (550, 3), size = (70, 24), font=1, flags = RT_HALIGN_RIGHT, text = 4), # index 4 is the percentage
+					],
+				"fonts": [gFont("Regular", 22),gFont("Regular", 18)],
+				"itemHeight": 30
+				}
+			</convert>
+		</widget>
+		<eLabel position="0,518" size="680,2" backgroundColor="crypt_emm" />
+		<ePixmap pixmap="buttons/button_block_red.png" position="80,525" size="225,60" alphatest="on" zPosition="1" />
+		<widget name="key_red" position="80,525" size="200,36" backgroundColor="ButtonRed" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
+		<ePixmap pixmap="icons/plugin.png" position="550,525" size="100,40" alphatest="on" transparent="1" zPosition="4" />
+		<widget name="title" position="0,0" size="0,0" />
+	</screen>
+
+	<screen name="MyTubePlayerMainScreen" title="MyTubePlayerMainScreen..." position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonMenu" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_source_youtube.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig0" />
+		<widget source="feedlist" render="Listbox" position="590,160" size="635,425" backgroundColorSelected="MenuSelected" scrollbarMode="showOnDemand" transparent="1" zPosition="2">
+			<convert type="TemplatedMultiContent">
+				{
+				"templates":
+					{
+					"default": (85,
+						[
+						MultiContentEntryPixmapAlphaTest(pos = (5, 1), size = (100, 75), png = 4),
+						MultiContentEntryText(pos = (110, 1), size = (590, 25), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 1),
+						MultiContentEntryText(pos = (110, 27), size = (300, 20), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 5),
+						MultiContentEntryText(pos = (110, 48), size = (300, 20), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 6),
+						MultiContentEntryText(pos = (400, 27), size = (200, 20), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 7),
+						MultiContentEntryText(pos = (400, 48), size = (200, 20), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 8),
+						]),
+					"state": (85,
+						[
+						MultiContentEntryText(pos = (20, 1), size = (560, 40), font=2, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 0),
+						MultiContentEntryText(pos = (20, 43), size = (560, 30), font=3, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 1),
+						])
+					},
+				"fonts": [gFont("Regular", 20),gFont("Regular", 16),gFont("Regular", 22),gFont("Regular", 18)],
+				"itemHeight": 85
+				}
+			</convert>
+		</widget>
+		<eLabel text="Info" position="948,635" size="200,36" backgroundColor="TextBackground" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="thumbnail" position="0,0" size="100,75" alphatest="on" /><!-- fake entry for dynamic thumbnail resizing, currently there is no other way doing this. -->
+		<widget name="HelpWindow" position="90,210" size="1,1" alphatest="on" transparent="1" zPosition="1" />
+		<widget name="VKeyIcon" position="0,0" size="0,0" />
+	</screen>
+
+	<screen name="MyTubeSuggestionsListScreen" position="70,140" size="502,337" backgroundColor="ScreenBackground" flags="wfNoBorder" zPosition="6">
+		<panel name="ScreenTemplateDebug" />
+		<ePixmap position="0,0" size="505,227" alphatest="on" backgroundColor="transparent" transparent="1" zPosition="-1" />
+		<widget source="suggestionslist" render="Listbox" position="0,0" size="500,325" backgroundColorSelected="MenuSelected" scrollbarMode="showOnDemand" transparent="1" zPosition="7">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (10, 1), size = (380, 24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+					MultiContentEntryText(pos = (390, 1), size = (180, 24), font=1, flags = RT_HALIGN_RIGHT, text = 1), # index 1 are the rtesults
+					],
+				"fonts": [gFont("Regular", 22),gFont("Regular", 18)],
+				"itemHeight": 25
+				}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="MyTubeHistoryScreen" position="70,140" size="505,327" backgroundColor="ScreenBackground" flags="wfNoBorder" zPosition="6">
+		<panel name="ScreenTemplateDebug" />
+		<widget source="historylist" render="Listbox" position="0,0" size="503,325" backgroundColorSelected="MenuSelected" scrollbarMode="showOnDemand" transparent="1" zPosition="7">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (10, 1), size = (340, 24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+					],
+				"fonts": [gFont("Regular", 22),gFont("Regular", 18)],
+				"itemHeight": 25
+				}
+			</convert>
+		</widget>
+	</screen>
+
+<!--
+ |	??? Unknown
+ +-->
+
+	<screen name="ViewerSelectScreen" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="list" position="590,170" size="610,415" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+</skin>

@@ -1,0 +1,949 @@
+<skin>
+<!-- Air Player Plugin -->
+
+	<screen name="AP_ConfigScreen" title="Air Player" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="config" position="400,80" size="830,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+<!-- Bluetooth Devices Manager Plugin -->
+
+	<screen name="BluetoothDevicesManager" title="Bluetooth Device Manager" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateDeviceList4" />
+		<panel name="ScreenTemplateConnStatus4" />
+		<!--
+		<widget name="devicelist" position="0,50" size="600,300" foregroundColor="#ffffff" zPosition="10" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="ConnStatus" position="0,330" size="600,150" zPosition="1" font="Regular;20" halign="center" valign="center" backgroundColor="#9f1313" foregroundColor="#ffffff" transparent="1" />
+		-->
+	</screen>
+
+	<screen name="BluetoothDevicesManagerSetup" title="Bluetooth Device Manager" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig0" />
+	</screen>
+
+<!-- Cut List Editor Plugin -->
+
+	<screen name="CutListEditor" title="CutList Editor" position="0,0" size="1280,720" backgroundColor="Black" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonMenu" />
+		<panel name="ScreenTemplateButtonHelp" />
+		<eLabel position="50,80" size="300,520" backgroundColor="Grey" />
+		<eLabel position="51,81" size="298,518" backgroundColor="Black" zPosition="+1" />
+		<widget source="cutlist" render="Listbox" position="60,90" size="280,500" scrollbarMode="showOnDemand" transparent="1" zPosition="+2">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos=(10,2), size=(170, 20), text = 1, backcolor = MultiContentTemplateColor(3)),
+					MultiContentEntryText(pos=(190,2), size=(80, 20), text = 2, flags = RT_HALIGN_CENTER, backcolor = MultiContentTemplateColor(3))
+					],
+				"fonts": [gFont("Regular", 20)],
+				"itemHeight": 25
+				}
+			</convert>
+		</widget>
+		<!-- <ePixmap pixmap="icons/mp_buttons.png" position="146,620" size="109,13" alphatest="on" transparent="1" /> -->
+		<ePixmap pixmap="icons/icon_rewind.png" position="80,620" size="36,36" alphatest="on" transparent="1" />
+		<ePixmap pixmap="icons/icon_play.png" position="130,620" size="36,36" alphatest="on" transparent="1" />
+		<ePixmap pixmap="icons/icon_pause.png" position="180,620" size="36,36" alphatest="on" transparent="1" />
+		<ePixmap pixmap="icons/icon_forward.png" position="230,620" size="36,36" alphatest="on" transparent="1" />
+		<ePixmap pixmap="icons/icon_stop.png" position="280,620" size="36,36" alphatest="on" transparent="1" />
+		<widget name="Video" position="400,80" size="830,467" />
+		<widget source="session.CurrentService" render="Label" position="400,560" size="830,25" backgroundColor="TextBackground" font="Regular;20" halign="center" transparent="1" valign="center">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget name="SeekState" position="400,585" size="100,25" backgroundColor="TextBackground" font="Regular;20" valign="center" transparent="1" />
+		<widget source="session.CurrentService" render="Label" position="520,585" size="710,25" backgroundColor="TextBackground" font="Regular;20" halign="right" transparent="1" valign="center">
+			<convert type="ServicePosition">Position,Detailed</convert>
+		</widget>
+		<widget name="Timeline" position="400,620" size="830,20" backgroundColor="Grey" foregroundColor="Black" pointer="sliders/position_arrow.png:3,5" />
+	</screen>
+
+	<screen name="CutListMenu" title="CutList Editor - Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<ePixmap pixmap="menus/mainmenu_movies_musicvideos.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateMenu0" />
+	</screen>
+
+	<!-- This appears to be a duplicate of "CutListEditor" above! -->
+
+	<screen name="TitleCutter" title="CutList Editor" position="0,0" size="1280,720" flags="wfNoBorder">
+		<eLabel position="80,125" size="300,420" backgroundColor="Grey" zPosition="1" />
+		<eLabel position="81,126" size="298,418" backgroundColor="Black" zPosition="2" />
+		<widget source="global.CurrentTime" render="Label" position="675,40" size="500,20" font="Named;18" foregroundColor="White" halign="right">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<widget source="cutlist" render="Listbox" position="90,135" size="280,400" scrollbarMode="showOnDemand" transparent="1" zPosition="3">
+			<convert type="TemplatedMultiContent">
+				{
+				"template": [
+					MultiContentEntryText(pos=(10,2), size=(170, 20), text = 1, backcolor = MultiContentTemplateColor(3)),
+					MultiContentEntryText(pos=(190,2), size=(80, 20), text = 2, flags = RT_HALIGN_CENTER, backcolor = MultiContentTemplateColor(3))
+					],
+				"fonts": [gFont("Regular", 20)],
+				"itemHeight": 25
+				}
+			</convert>
+		</widget>
+		<eLabel position="479,124" size="696,377" backgroundColor="transparent2" zPosition="3" />
+		<widget name="Video" position="479,124" size="696,377" zPosition="-10" />
+		<widget source="session.CurrentService" render="Label" position="450,510" size="790,30" backgroundColor="Black" font="Regular;18" foregroundColor="White" halign="center" transparent="1" valign="center" zPosition="3">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="450,550" size="790,25" backgroundColor="Black" font="Regular;19" foregroundColor="White" halign="center" transparent="1" valign="center" zPosition="3">
+			<convert type="ServicePosition">Position,Detailed</convert>
+		</widget>
+		<ePixmap pixmap="icons/icon_rewind.png" position="110,582" size="48,48" alphatest="on" zPosition="1" />
+		<ePixmap pixmap="icons/icon_play.png" position="158,582" size="48,48" alphatest="on" />
+		<ePixmap pixmap="icons/icon_pause.png" position="206,582" size="48,48" alphatest="on" />
+		<ePixmap pixmap="icons/icon_forward.png" position="254,582" size="48,48" alphatest="on" />
+		<ePixmap pixmap="icons/icon_stop.png" position="302,582" size="48,48" alphatest="on" />
+		<widget name="Timeline" position="479,587" size="696,20" backgroundColor="un808888" foregroundColor="Black" pointer="sliders/position_arrow.png:3,5" zPosition="3" />
+		<widget name="SeekState" position="365,585" size="100,25" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="10" />
+		<eLabel text="OK = Menu" position="1060,630" size="140,22" backgroundColor="Black" font="Regular;20" transparent="1" zPosition="1" />
+	</screen>
+
+<!-- EPGRefresh Plugin -->
+
+	<screen name="EPGRefreshConfiguration" title="EPGRefresh Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonInfo" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonHelp" />
+		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateHelp4" />
+	</screen>
+
+	<screen name="EPGRefreshServiceEditor" title="Edit Services To Refresh" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig0" />
+	</screen>
+
+	<screen name="EPGRefreshConfigurationFunctionContextMenu" title="EPGRefresh Context Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateMenu0" />
+	</screen>
+
+	<screen name="EPGRefreshConfigurationHelpContextMenu" title="EPGRefresh Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateMenu0" />
+	</screen>
+
+<!-- Front Panel Update Plugin -->
+
+	<screen name="FirmwareUpgrade" title="Firmware Upgrade" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_factoryreset.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="oldversion_label" position="420,80" size="390,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
+		<widget name="oldversion" position="1030,80" size="200,35" backgroundColor="TextBackground" font="Regular;22" halign="right" transparent="1" valign="center" />
+		<widget name="newversion_label" position="420,115" size="390,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
+		<widget name="newversion" position="1030,115" size="200,35" backgroundColor="TextBackground" font="Regular;22" halign="right" transparent="1" valign="center" />
+		<panel name="ScreenTemplateStatus4" />
+	</screen>
+
+	<screen name="Filebrowser" title="File Browser" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_factoryreset.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateFileList4" />
+		<panel name="ScreenTemplateStatus4" />
+	</screen>
+
+<!-- Gmail Plugin -->
+
+	<screen name="GmailSetup" title="Gmail Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonTextVKey" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateInfo4" />
+	</screen>
+
+	<screen name="Gmailbodyviewer" title="Gmail - View Mail" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="author" position="123,140" size="1020,30" font="Regular;20" foregroundColor="DullYellow" halign="left" transparent="1" />
+		<widget name="tdate" position="123,170" size="1020,30" font="Regular;20" foregroundColor="DullYellow" halign="left" transparent="1" />
+		<widget name="text" position="center,210" size="1020,400" font="Regular;22" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
+	</screen>
+
+	<screen name="Gmailfeedsscrn" title="Gmail - Mail List" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="menu" position="center,center" size="1020,500" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
+		<widget name="info" position="center,center" size="620,300" font="Regular;24" foregroundColor="#00ffffff" halign="center" transparent="1" valign="center" zPosition="4" />
+	</screen>
+
+<!-- Gmail News Plugin -->
+
+	<screen name="GnewsFeedScreenList" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<eLabel text="Google News" position="890,80" size="320,22" backgroundColor="TextBackground" font="Named;20" foregroundColor="crypt_emm" halign="right" transparent="1" zPosition="2" />
+		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="mylist" position="590,150" size="610,440" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<screen name="GnewsFeedScreenContent" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="info" position="890,80" size="320,22" backgroundColor="TextBackground" font="Named;20" foregroundColor="crypt_emm" halign="right" transparent="1" zPosition="2" />
+		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="45,155" size="300,500" />
+		<widget name="mylist" position="360,150" size="830,430" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<screen name="FMenusimple" title="Feed" position="center,center" size="920,600" flags="wfNoBorder">
+		<widget name="titel" position="20,0" size="560,130" backgroundColor="TextBackground" font="Regular;24" foregroundColor="DullYellow" halign="left" transparent="1" valign="center" zPosition="1" />
+		<widget name="leagueNumberWidget" position="830,60" size="90,30" font="Regular;20" foregroundColor="DullYellow" halign="left" transparent="1" />
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/GoogleNews/images/arrows.png" position="830,20" size="60,40" alphatest="on" transparent="1" zPosition="4" />
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/GoogleNews/images/slider.png" position="15,88" size="890,12" alphatest="blend" backgroundColor="transparent" transparent="1" />
+		<widget name="text" position="20,100" size="880,400" font="Regular;22" />
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/GoogleNews/images/slider.png" position="15,510" size="890,5" alphatest="blend" backgroundColor="transparent" transparent="1" />
+	</screen>
+
+<!-- HbbTV Plugin -->
+
+	<!-- HbbTVHelper -->
+
+<!-- IMDb Plugin -->
+
+	<screen name="IMDB" title="IMDb Details Plugin" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonMenu" />
+		<!-- <panel name="ScreenTemplateButtonInfo" /> -->
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="titellabel" position="200,120" size="950,30" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="menu" position="50,180" size="1180,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="1" zPosition="3" />
+		<widget name="poster" position="50,80" size="110,180" alphatest="blend" />
+		<widget name="detailslabel" position="200,80" size="950,180" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" />
+		<widget name="castlabel" position="50,280" size="1180,350" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" />
+		<widget name="extralabel" position="50,80" size="1180,550" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" />
+		<widget name="starsbg" pixmap="images/starsbar_empty.png" position="1020,80" size="210,21" alphatest="blend" transparent="1" />
+		<widget name="stars" pixmap="images/starsbar_filled.png" position="1020,80" size="210,21" alphatest="blend" transparent="1" zPosition="+1" />
+		<widget name="ratinglabel" position="1020,105" size="210,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Gold" halign="right" transparent="1" />
+		<widget name="statusbar" position="50,630" size="1180,20" backgroundColor="TextBackground" font="Regular;16" foregroundColor="Grey" transparent="1" />
+	</screen>
+
+<!-- Media Portal Plugin -->
+
+	<screen name="haupt_Screen" position="0,0" size="1280,720" flags="wfNoBorder">
+		<panel name="ScreenTemplateDebug" />
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/liquidblue/images/mpback.png" position="0,0" size="1280,720" zPosition="-1" />
+		<widget source="session.VideoPicture" render="Pig" position="886,22" size="328,186" backgroundColor="transparent" zPosition="3" />
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/liquidblue/images/buttongrey.png" position="1160,555" size="90,36" alphatest="blend" backgroundColor="#26181d20" zPosition="1" />
+		<eLabel text="Menu " position="1160,555" size="90,36" backgroundColor="#26181d20" font="mediaportal;18" foregroundColor="#00ffffff" halign="center" transparent="1" valign="center" zPosition="1" />
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/tec/images/buttonglas.png" position="1160,555" size="90,36" alphatest="blend" zPosition="2" />
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/liquidblue/images/buttongrey.png" position="1160,605" size="90,36" alphatest="blend" backgroundColor="#26181d20" zPosition="1" />
+		<eLabel text=" Help " position="1160,605" size="90,36" backgroundColor="#26181d20" font="mediaportal;18" foregroundColor="#00ffffff" halign="center" transparent="1" valign="center" zPosition="1" />
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/tec/images/buttonglas.png" position="1160,605" size="90,36" alphatest="blend" zPosition="2" />
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/liquidblue/images/buttongrey.png" position="1160,655" size="90,36" alphatest="blend" backgroundColor="#26181d20" zPosition="1" />
+		<eLabel text=" Exit " position="1160,655" size="90,36" backgroundColor="#26181d20" font="mediaportal;18" foregroundColor="#00ffffff" halign="center" transparent="1" valign="center" zPosition="1" />
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/tec/images/buttonglas.png" position="1160,655" size="90,36" alphatest="blend" zPosition="2" />
+		<!-- select screen -->
+		<widget name="Mediatheken" position="40,165" size="280,30" backgroundColor="#26181d20" font="mediaportal;26" foregroundColor="#00ffffff" halign="left" transparent="1" zPosition="5" />
+		<widget name="mediatheken" position="40,210" size="280,480" backgroundColor="#26181d20" foregroundColor="#00bbbbbb" scrollbarMode="showOnDemand" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/liquidblue/images/sel.png" transparent="1" />
+		<widget name="Grauzone" position="322,165" size="280,30" backgroundColor="#26181d20" font="mediaportal;26" foregroundColor="#00ffffff" halign="left" transparent="1" zPosition="5" />
+		<widget name="grauzone" position="322,210" size="280,480" backgroundColor="#26181d20" foregroundColor="#00bbbbbb" scrollbarMode="showOnDemand" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/liquidblue/images/sel.png" transparent="1" />
+		<widget name="Funsport" position="604,165" size="280,30" backgroundColor="#26181d20" font="mediaportal;26" foregroundColor="#00ffffff" halign="left" transparent="1" zPosition="5" />
+		<widget name="funsport" position="604,210" size="280,480" backgroundColor="#26181d20" foregroundColor="#00bbbbbb" scrollbarMode="showOnDemand" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/liquidblue/images/sel.png" transparent="1" />
+		<widget name="Porn" position="886,215" size="280,30" backgroundColor="#26181d20" font="mediaportal;26" foregroundColor="#00ffffff" halign="left" transparent="1" zPosition="5" />
+		<widget name="porn" position="886,255" size="280,455" backgroundColor="#26181d20" foregroundColor="#00bbbbbb" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/liquidblue/images/sel.png" transparent="1" />
+		<widget name="name" position="77,102" size="600,40" backgroundColor="#26181d20" font="mediaportal;32" foregroundColor="#00ffffff" halign="center" transparent="1" valign="center" />
+		<eLabel name="Videoback" position="885,21" size="330,188" backgroundColor="#00ffffff" foregroundColor="#00ffffff" zPosition="0" />
+	</screen>
+
+	<screen name="hauptScreenSetup" position="0,0" size="1280,720" flags="wfNoBorder">
+		<panel name="ScreenTemplateDebug" />
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/liquidblue/images/mpback.png" position="0,0" size="1280,720" zPosition="-1" />
+		<widget source="global.CurrentTime" render="Label" position="840,42" size="300,28" backgroundColor="#26181d20" font="mediaportal;25" foregroundColor="#00bbbbbb" halign="left" transparent="1">
+			<convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1140,42" size="100,28" backgroundColor="#26181d20" font="mediaportal;25" foregroundColor="#00bbbbbb" halign="center" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="session.VideoPicture" render="Pig" position="913,136" size="328,186" backgroundColor="transparent" zPosition="3" />
+		<eLabel name="Videoback" position="912,135" size="330,188" backgroundColor="#00ffffff" foregroundColor="#00ffffff" zPosition="0" />
+		<widget name="title" position="55,108" size="850,55" backgroundColor="#26181d20" font="mediaportal;26" foregroundColor="#00bbbbbb" halign="left" transparent="1" valign="center" zPosition="1" />
+		<widget name="config" position="55,173" size="830,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" itemHeight="50" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
+		<widget name="name" position="914,368" size="330,30" backgroundColor="#26181d20" font="mediaportal;28" foregroundColor="#00ffffff" halign="center" transparent="1" valign="top" />
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/liquidblue/images/setup.png" position="989,424" size="176,200" alphatest="on" zPosition="1" />
+	</screen>
+
+<!-- Movie Cut Plugin -->
+
+	<screen name="AdvancedCutInput" title="Cut Parameter Input" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_movies_musicvideos.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig0" />
+	</screen>
+
+<!-- OpenWeb Interface Plugin -->
+
+	<screen name="OpenWebifConfig" title="OpenWebIf Configuration" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateLab4" />
+	</screen>
+
+<!-- Opera Web Browser Plugin -->
+
+	<screen name="OperaBrowser" title="Opera Web Browser" position="0,0" size="1280,720" backgroundColor="ScreenTransparent" flags="wfNoBorder">
+		<widget name="topArea" position="50,30" size="1180,30" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
+		<widget name="bottomArea" position="810,30" size="410,30" backgroundColor="Black" font="Regular;20" halign="right" transparent="1" valign="center" zPosition="+1" />
+		<widget name="menuitemFile" position="60,30" size="150,30" backgroundColor="Black" font="Regular;20" foregroundColors="#9f1313,#a08500"  transparent="1" valign="center" zPosition="+1" />
+		<widget name="menuitemTool" position="210,30" size="150,30" backgroundColor="Black" font="Regular;20" foregroundColors="#9f1313,#a08500" transparent="1" valign="center" zPosition="+1" />
+		<widget name="menuitemHelp" position="360,30" size="150,30" backgroundColor="Black" font="Regular;20" foregroundColors="#9f1313,#a08500" transparent="1" valign="center" zPosition="+1" />
+		<widget name="menulist" position="100,540" size="200,150" backgroundColor="Black" scrollbarMode="showOnDemand" zPosition="+2" />
+		<widget name="submenulist" position="302,540" size="200,150" backgroundColor="Black" scrollbarMode="showOnDemand" zPosition="+2" />
+	</screen>
+	<!--
+	<screen name="OperaBrowser" title="Opera Browser" position="0,0" size="1280,720" backgroundColor="ScreenTransparent" flags="wfNoBorder">
+		<widget name="topArea" position="0,0" size="1280,60" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
+		<widget name="menuitemFile" position="30,20" size="150,30" backgroundColor="Black" font="Regular;20" foregroundColors="#9f1313,#a08500" halign="center" valign="center" zPosition="+1" />
+		<widget name="menuitemTool" position="180,20" size="150,30" backgroundColor="Black" font="Regular;20" foregroundColors="#9f1313,#a08500" halign="center" valign="center" zPosition="+1" />
+		<widget name="menuitemHelp" position="330,20" size="150,30" backgroundColor="Black" font="Regular;20" foregroundColors="#9f1313,#a08500" halign="center" valign="center" zPosition="+1" />
+		<widget name="menulist" position="50,60" size="200,150" backgroundColor="Black" scrollbarMode="showOnDemand" zPosition="+2" />
+		<widget name="submenulist" position="252,60" size="200,150" backgroundColor="Black" scrollbarMode="showOnDemand" zPosition="+2" />
+		<widget name="bottomArea" position="0,640" size="1280,80" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
+	</screen>
+	-->
+
+	<screen name="OperaBrowserBookmarkWindow" title="Browser Bookmarks" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/menu_photo_years.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="buttons/key_0.png" position="50,625" size="35,25" alphatest="on" transparent="1" />
+		<widget source="key_0" render="Label" position="100,625" size="300,25" font="Regular;20" valign="center" transparent="1" />
+		<panel name="ScreenTemplateBookmarkList0" />
+	</screen>
+
+	<screen name="BookmarkEditWindow" title="Browser Bookmark Edit" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonTextVKey" />
+		<ePixmap pixmap="menus/menu_photo_years.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig0" />
+	</screen>
+
+	<screen name="OperaBrowserPreferenceWindow" title="Browser Preferences" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateURL4" />
+	</screen>
+
+	<screen name="BrowserHelpWindow" title="Browser Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+	</screen>
+
+<!-- Simple Unmount Plugin -->
+
+	<screen name="SimpleUmount" title="Simple Umount" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColourBacks" />
+		<widget name="wdg_config" position="400,80" size="830,35" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" transparent="1" valign="center" />
+		<widget name="wdg_label_legend_1" position="400,150" size="130,35" backgroundColor="TextBackground" font="Regular;25" foregroundColor="Grey" transparent="1" valign="center" />
+		<widget name="wdg_label_legend_2" position="565,150" size="180,35" backgroundColor="TextBackground" font="Regular;25" foregroundColor="Grey" transparent="1" valign="center" />
+		<widget name="wdg_label_legend_3" position="790,150" size="180,35" backgroundColor="TextBackground" font="Regular;25" foregroundColor="Grey" transparent="1" valign="center" />
+		<widget name="wdg_label_legend_4" position="1000,150" size="130,35" backgroundColor="TextBackground" font="Regular;25" foregroundColor="Grey" transparent="1" valign="center" />
+		<widget name="wdg_menulist_device" position="400,185" size="830,350" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="Console;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" transparent="1" valign="center" />
+		<panel name="ScreenTemplateWDG4" />
+	</screen>
+
+<!-- Software Management Plugin -->
+
+	<screen name="UpdatePluginMenu" title="Softwaremanager..." position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonMenu" />
+		<!-- <panel name="ScreenTemplateButtonInfo" /> -->
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_factoryreset.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="menu" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (20, 0), size = (680, 35), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
+					MultiContentEntryText(pos = (740, 0), size = (50, 35), flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = '>')
+					],
+				"fonts": [gFont("Regular", 25)],
+				"itemHeight": 35
+				}
+			</convert>
+		</widget>
+		<panel name="ScreenTemplateFrame830x120" />
+		<widget source="menu" render="Listbox" position="410,520" size="810,125" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showNever" selectionDisabled="1" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (0, 0), size = (810, 125), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 2), # index 0 is the MenuText,
+					],
+				"fonts": [gFont("Regular", 20)],
+				"itemHeight": 125
+				}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="SoftwareManagerSetup" title="Software Manager Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonMenu" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_factoryreset.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateSIntroduction4" />
+	</screen>
+
+	<screen name="SoftwareManagerInfo" title="Softwaremanager informations" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_factoryreset.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateList4" />
+		<panel name="ScreenTemplateSIntroduction4" />
+	</screen>
+
+	<screen name="PluginManager" title="Extensions management" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<!-- <panel name="ScreenTemplateButtonInfo" /> -->
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonHelp" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_factoryreset.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="list" render="Listbox" position="400,80" size="830,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"templates":
+					{
+					"default": (50,
+						[
+						MultiContentEntryText(pos = (20, 0), size = (740, 25), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0), # index 0 is the name
+						MultiContentEntryText(pos = (40, 25), size = (720, 25), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2, color = 0x00999999), # index 2 is the description
+						MultiContentEntryPixmapAlphaTest(pos = (760, 1), size = (48, 48), png = 5), # index 5 is the status pixmap
+						# MultiContentEntryPixmapAlphaTest(pos = (0, 49), size = (650, 2), png = 6), # index 6 is the div pixmap
+						]),
+					"category": (50,
+						[
+						MultiContentEntryText(pos = (20, 0), size = (790, 25), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0), # index 0 is the name
+						MultiContentEntryText(pos = (40, 25), size = (770, 25), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1, color = 0x00999999), # index 1 is the description
+						# MultiContentEntryPixmapAlphaTest(pos = (0, 38), size = (650, 2), png = 3), # index 3 is the div pixmap
+						])
+					},
+				"fonts": [gFont("Regular", 22),gFont("Regular", 18)],
+				"itemHeight": 50
+				}
+			</convert>
+		</widget>
+		<panel name="ScreenTemplateSStatus4" />
+	</screen>
+
+	<screen name="PluginManagerHelp" title="Extensions management" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_factoryreset.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="list" render="Listbox" position="400,80" size="830,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (80, 0), size = (740, 25), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0), # index 0 is the name
+					MultiContentEntryText(pos = (100, 25), size = (720, 25), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1, color = 0x00999999), # index 1 is the state
+					MultiContentEntryPixmapAlphaTest(pos = (20, 1), size = (48, 48), png = 2), # index 2 is the status pixmap
+					# MultiContentEntryPixmapAlphaTest(pos = (0, 49), size = (550, 2), png = 3), # index 3 is the div pixmap
+					],
+				"fonts": [gFont("Regular", 22), gFont("Regular", 18)],
+				"itemHeight": 50
+				}
+			</convert>
+		</widget>
+		<panel name="ScreenTemplateSStatus4" />
+	</screen>
+
+	<screen name="PluginDetails" title="Plugin details" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_factoryreset.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="author" render="Label" position="400,120" size="830,35" backgroundColor="TextBackground" font="Regular;25" foregroundColor="Text" halign="center" transparent="1" valign="center" />
+		<widget name="screenshot" position="650,160" size="330,350" alphatest="blend" />
+		<panel name="ScreenTemplateDetail4" />
+		<!--
+		<widget name="statuspic" position="1053, 34" size="48,48" alphatest="on" transparent="1" />
+		<widget name="divpic" position="500,80" size="600,2" alphatest="on" transparent="1" />
+		-->
+	</screen>
+
+	<!-- "Select Backup Files" same as MENU > Setup > Software Manager > Select Backup Files -->
+
+	<screen name="RestoreMenu" title="Restore Backups" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_factoryreset.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateFileList0" />
+	</screen>
+
+	<screen name="PacketManager" title="Package Manager" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_factoryreset.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="list" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1"><!-- scrollbarMode="showNever" selectionDisabled="1" -->
+			<convert type="TemplatedMultiContent">
+				{
+				"template": [
+					MultiContentEntryText(pos = (20, 0), size = (740, 25), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0), # index 0 is the name
+					MultiContentEntryText(pos = (40, 25), size = (720, 25), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2, color = 0x00999999), # index 2 is the description
+					MultiContentEntryPixmapAlphaTest(pos = (760, 1), size = (48, 48), png = 4), # index 4 is the status pixmap
+					# MultiContentEntryPixmapAlphaTest(pos = (5, 58), size = (0, 0), png = 5), # index 4 is the div pixmap
+					],
+				"fonts": [gFont("Regular", 22),gFont("Regular", 18)],
+				"itemHeight": 50
+				}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="PluginManagerInfo" title="Extensions management" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget source="list" render="Listbox" position="500,80" size="730,463" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (60, 0), size = (250, 24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+					MultiContentEntryText(pos = (60, 25), size = (640, 24), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the state
+					MultiContentEntryPixmapAlphaTest(pos = (0, 1), size = (48, 48), png = 2), # index 2 is the status pixmap
+					# MultiContentEntryPixmapAlphaTest(pos = (0, 49), size = (650, 2), png = 3), # index 3 is the div pixmap
+					],
+				"fonts": [gFont("Regular", 22), gFont("Regular", 18)],
+				"itemHeight": 50
+				}
+			</convert>
+		</widget>
+<!--####-->		<!-- <ePixmap pixmap="frame/frame_400x300.png" position="60,185" size="400,300" alphatest="on" transparent="1" zPosition="2" /> -->
+		<widget source="status" render="Label" position="85,205" size="350,260" font="Regular;22" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="3" />
+	</screen>
+
+	<screen name="IPKGMenu" title="Select IPKG Source" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_factoryreset.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateFileList0" />
+	</screen>
+
+	<screen name="IPKGSource" title="IPKG Source" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_factoryreset.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="text" position="50,620" size="1180,35" font="Regular;25" transparent="1" valign="center" />
+	</screen>
+
+<!-- Transcoding Plugin -->
+
+	<screen name="TranscodingSetup" title="Transcoding Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonTextVKey" />
+		<ePixmap pixmap="menus/mainmenu_movies_bouquets.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateFootnote4" />
+		<panel name="ScreenTemplateDescription4" />
+		<!--
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_system.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="config" position="590,170" size="610,415" backgroundColorSelected="MenuSelected" enableWrapAround="1" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="description" position="100,210" size="300,170" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="2" />
+		<widget name="text" position="590,510" size="610,30" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="2" />
+		-->
+	</screen>
+
+<!-- Weather Plugin -->
+
+	<screen name="MeteoMain" title="Weather" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColourBacks" />
+		<!-- Column 1 -->
+		<widget name="lab1" position="60,95" size="220,20" font="Regular;16" foregroundColor="WeatherWait" halign="right" transparent="1" valign="top" />
+		<widget name="lab1b" position="285,95" size="210,20" font="Regular;16" foregroundColor="WeatherProvider" halign="left" transparent="1" valign="top" />
+		<widget name="lab2" position="60,120" size="440,30" font="Regular;24" foregroundColor="WeatherData" halign="center" transparent="1" valign="top" />
+		<widget name="lab3" position="60,155" size="440,20" font="Regular;18" foregroundColor="WeatherLabel" halign="center" transparent="1" valign="top" />
+		<widget name="lab4" position="50,220" size="180,80" font="Regular;80" foregroundColor="WeatherData" halign="right" transparent="1" valign="top" />
+		<widget name="lab4b" position="220,220" size="40,30" font="Regular;24" foregroundColor="WeatherData" halign="right" transparent="1" valign="top" />
+		<widget name="lab5" position="260,185" size="250,180" alphatest="blend" transparent="1" />
+		<widget name="lab6" position="60,367" size="440,30" font="Regular;23" foregroundColor="WeatherData" halign="center" transparent="1" valign="top" />
+		<widget name="lab7" position="50,420" size="150,24" font="Regular;19" foregroundColor="WeatherLabel" halign="right" transparent="1" valign="top" />
+		<widget name="lab7b" position="215,420" size="280,24" font="Regular;19" foregroundColor="WeatherData" halign="left" transparent="1" valign="top" />
+		<widget name="lab8" position="50,450" size="150,24" font="Regular;19" foregroundColor="WeatherLabel" halign="right" transparent="1" valign="top" />
+		<widget name="lab8b" position="215,450" size="285,24" font="Regular;19" foregroundColor="WeatherData" halign="left" transparent="1" valign="top" />
+		<widget name="lab9" position="50,480" size="150,24" font="Regular;19" foregroundColor="WeatherLabel" halign="right" transparent="1" valign="top" />
+		<widget name="lab9b" position="215,480" size="285,24" font="Regular;19" foregroundColor="WeatherData" halign="left" transparent="1" valign="top" />
+		<widget name="lab10" position="50,510" size="150,24" font="Regular;19" foregroundColor="WeatherLabel" halign="right" transparent="1" valign="top" />
+		<widget name="lab10b" position="215,510" size="285,24" font="Regular;19" foregroundColor="WeatherData" halign="left" transparent="1" valign="top" />
+		<widget name="lab11" position="50,540" size="150,24" font="Regular;19" foregroundColor="WeatherLabel" halign="right" transparent="1" valign="top" />
+		<widget name="lab11b" position="215,540" size="285,24" font="Regular;19" foregroundColor="WeatherData" halign="left" transparent="1" valign="top" />
+		<widget name="lab12" position="50,570" size="150,24" font="Regular;19" foregroundColor="WeatherLabel" halign="right" transparent="1" valign="top" />
+		<widget name="lab12b" position="215,570" size="285,24" font="Regular;19" foregroundColor="WeatherData" halign="left" transparent="1" valign="top" />
+		<!-- Column 2 -->
+		<widget name="lab13" position="800,120" size="430,30" font="Regular;24" foregroundColor="WeatherData" halign="center" transparent="1" valign="top" />
+		<widget name="lab14" position="850,170" size="65,24" font="Regular;19" foregroundColor="WeatherLabel" halign="left" transparent="1" valign="top" />
+		<widget name="lab14b" position="915,170" size="90,24" font="Regular;19" foregroundColor="WeatherData" halign="left" transparent="1" valign="top" />
+		<widget name="lab15" position="1015,170" size="60,24" font="Regular;19" foregroundColor="WeatherLabel" halign="left" transparent="1" valign="top" />
+		<widget name="lab15b" position="1075,170" size="60,24" font="Regular;19" foregroundColor="WeatherData" halign="left" transparent="1" valign="top" />
+		<widget name="lab16" position="850,200" size="220,26" font="Regular;22" foregroundColor="WeatherData" halign="left" transparent="1" valign="top" />
+		<widget name="lab17" position="1130,150" size="100,100" alphatest="blend" transparent="1" />
+		<widget name="lab18" position="800,300" size="430,30" font="Regular;24" foregroundColor="WeatherData" halign="center" transparent="1" valign="top" />
+		<widget name="lab19" position="850,350" size="65,24" font="Regular;19" foregroundColor="WeatherLabel" halign="left" transparent="1" valign="top" />
+		<widget name="lab19b" position="915,350" size="90,24" font="Regular;19" foregroundColor="WeatherData" halign="left" transparent="1" valign="top" />
+		<widget name="lab20" position="1015,350" size="60,24" font="Regular;19" foregroundColor="WeatherLabel" halign="left" transparent="1" valign="top" />
+		<widget name="lab20b" position="1075,350" size="60,24" font="Regular;19" foregroundColor="WeatherData" halign="left" transparent="1" valign="top" />
+		<widget name="lab21" position="850,380" size="220,26" font="Regular;22" foregroundColor="WeatherData" halign="left" transparent="1" valign="top" />
+		<widget name="lab22" position="1130,320" size="100,100" alphatest="blend" transparent="1" />
+		<widget name="lab23" position="810,470" size="420,30" font="Regular;24" foregroundColor="WeatherData" halign="center" transparent="1" valign="top" />
+		<widget name="lab24" position="920,510" size="100,22" font="Regular;18" foregroundColor="WeatherLabel" halign="right" transparent="1" valign="top" />
+		<widget name="lab24b" position="1030,510" size="120,22" font="Regular;18" foregroundColor="WeatherData" halign="left" transparent="1" valign="top" />
+		<widget name="lab25" position="920,535" size="100,22" font="Regular;18" foregroundColor="WeatherLabel" halign="left" transparent="1" valign="top" />
+		<widget name="lab25b" position="1030,535" size="120,22" font="Regular;18" foregroundColor="WeatherData" halign="left" transparent="1" valign="top" />
+		<widget name="lab26" position="920,560" size="100,22" font="Regular;18" foregroundColor="WeatherLabel" halign="right" transparent="1" valign="top" />
+		<widget name="lab26b" position="1030,560" size="200,22" font="Regular;18" foregroundColor="WeatherData" halign="left" transparent="1" valign="top" />
+		<widget name="lab27" position="920,585" size="100,22" font="Regular;18" foregroundColor="WeatherLabel" halign="right" transparent="1" valign="top" />
+		<widget name="lab27b" position="1030,585" size="200,22" font="Regular;18" foregroundColor="WeatherData" halign="left" transparent="1" valign="top" />
+		<!-- This is actually the RED button but the code isn't compatible with the normal button system!
+		<widget name="lab28" position="790,595" size="16,16" alphatest="blend" transparent="1" />
+		<widget name="lab28a" position="800,590" size="20,20" font="Regular;18" foregroundColor="#8F8F8F" halign="right" transparent="1" valign="top" />
+		-->
+		<widget name="lab28" position="0,0" size="0,0" alphatest="blend" transparent="1" />
+		<widget name="lab28a" position="0,0" size="0,0" font="Regular;18" transparent="1" />
+		<widget name="lab28b" position="170,670" size="225,36" backgroundColor="ButtonRed" font="Regular;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
+	</screen>
+
+	<screen name="MeteoSelectCity" title="Select City" position="center,center" size="620,500" backgroundColor="ScreenBackground">
+		<widget source="list" render="Listbox" position="10,10" size="600,460" backgroundColorSelected="MenuSelected" font="Regular;20" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="StringList" />
+		</widget>
+		<widget name="lab1" position="10,470" size="600,30" font="Regular;25" halign="center" transparent="1" />
+	</screen>
+
+	<!-- These screens do not appear to be active! -->
+
+	<screen name="MainWheaterPlugin" title="AccuWeatherWeatherPlugin: Select Source" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="list" position="9,29" size="642,140" scrollbarMode="showOnDemand" />
+		<!--
+		<widget name="key_green" position="345,209" size="140,40" backgroundColor="ButtonRed" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+		<ePixmap name="green" pixmap="skin_default/buttons/green.png" position="346,209" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+		<widget name="key_yellow" position="510,209" size="140,40" backgroundColor="ButtonYellow" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+		<ePixmap name="yellow" pixmap="skin_default/buttons/yellow.png" position="511,209" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+		-->
+		<ePixmap name="chekgreen" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/checkok.png" position="323,218" size="24,24" alphatest="on" transparent="1" zPosition="4" />
+	</screen>
+	<!--
+	<screen name="MainWheaterPlugin" title="AccuWeatherWeatherPlugin: Select Source" position="center,center" size="660,258">
+		<widget name="list" position="9,29" size="642,140" scrollbarMode="showOnDemand" />
+		<widget name="key_green" position="345,209" size="140,40" backgroundColor="ButtonRed" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+		<ePixmap name="green" pixmap="skin_default/buttons/green.png" position="346,209" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+		<widget name="key_yellow" position="510,209" size="140,40" backgroundColor="ButtonYellow" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+		<ePixmap name="chekgreen" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/checkok.png" position="323,218" size="24,24" alphatest="on" transparent="1" zPosition="4" />
+		<ePixmap name="yellow" pixmap="skin_default/buttons/yellow.png" position="511,209" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+	</screen>
+	-->
+
+	<screen name="ForecaWeatherPlugin" title="AccuWeather - foreca.com" position="center,65" size="970,625">
+		<widget name="lugar" position="36,3" size="512,28" backgroundColor="TextBackground" font="Regular;23" transparent="1" valign="center" zPosition="2" />
+		<widget name="info_entradas" position="753,3" size="166,22" backgroundColor="TextBackground" font="Regular;16" halign="right" transparent="1" zPosition="3" />
+		<widget name="current_icon" position="7,46" size="74,74" alphatest="blend" zPosition="1" />\n
+		<widget name="temperatura" position="98,79" size="98,30" backgroundColor="TextBackground" font="Regular;26" halign="left" noWrap="1" transparent="1" zPosition="3" />
+		<widget name="condicion" position="201,48" size="270,225" backgroundColor="TextBackground" font="Regular;18" transparent="1" valign="top" zPosition="1" />
+		<widget name="viento" position="7,147" size="191,65" backgroundColor="TextBackground" font="Regular;17" transparent="1" valign="top" zPosition="1" />
+		<eLabel name="lin0" position="473,25" size="1,250" backgroundColor="#05303030" zPosition="1" />
+		<widget name="dia1" position="561,29" size="400,25" backgroundColor="TextBackground" font="Regular;22" halign="left" transparent="1" valign="center" zPosition="1" />
+		<widget name="icono_dia1" position="479,29" size="79,79" alphatest="blend" zPosition="1" />
+		<widget name="info_dia1" position="561,53" size="412,55" backgroundColor="TextBackground" font="Regular;17" halign="left" transparent="1" valign="top" zPosition="1" />
+		<widget name="dia2" position="561,112" size="400,25" backgroundColor="TextBackground" font="Regular;22" halign="left" transparent="1" valign="center" zPosition="1" />
+		<widget name="icono_dia2" position="479,112" size="79,79" alphatest="blend" zPosition="1" />
+		<widget name="info_dia2" position="561,136" size="412,55" backgroundColor="TextBackground" font="Regular;17" halign="left" transparent="1" valign="top" zPosition="1" />
+		<widget name="dia3" position="561,194" size="400,25" backgroundColor="TextBackground" font="Regular;22" halign="left" transparent="1" valign="center" zPosition="1" />
+		<widget name="icono_dia3" position="479,194" size="79,79" alphatest="blend" zPosition="1" />
+		<widget name="info_dia3" position="561,218" size="412,55" backgroundColor="TextBackground" font="Regular;17" halign="left" transparent="1" valign="top" zPosition="1" />
+		<widget name="statustext" position="0,23" size="970,605" backgroundColor="#10bfbfbf" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="2" />
+		<widget name="ico_left" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/nm_left-fs8.png" position="15,3" size="16,26" alphatest="blend" zPosition="1" />
+		<widget name="ico_right" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/nm_right-fs8.png" position="930,3" size="16,26" alphatest="blend" zPosition="1" />
+		<widget name="ico_menu" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/menu.png" position="750,355" size="35,25" alphatest="blend" zPosition="1" />
+		<widget name="texto_menu" position="786,356" size="182,25" font="Regular;16" noWrap="1" transparent="1" zPosition="1" />
+		<widget name="ico_l" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/izq-fs8.png" position="750,413" size="35,25" alphatest="blend" zPosition="1" />
+		<widget name="texto_l" position="786,414" size="182,25" font="Regular;16" noWrap="1" transparent="1" zPosition="1" />
+		<widget name="ico_r" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/dch-fs8.png" position="750,444" size="35,25" alphatest="blend" zPosition="1" />
+		<widget name="texto_r" position="786,445" size="181,25" font="Regular;16" noWrap="1" transparent="1" zPosition="1" />
+		<eLabel name="lin1" position="10,278" size="951,1" backgroundColor="#05303030" zPosition="1" />
+		<eLabel name="lin2" position="726,288" size="1,330" backgroundColor="#05303030" zPosition="1" />
+		<widget name="ico_blue" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/green.png" position="750,544" size="35,25" alphatest="blend" zPosition="1" />
+		<widget name="texto_blue" position="786,545" size="182,25" font="Regular;16" noWrap="1" transparent="1" zPosition="1" />
+
+		<widget name="satelite" position="132,59" size="720,480" alphatest="blend" transparent="1" zPosition="10" />
+		<widget name="statustext2" position="0,3" size="970,627" font="Regular;20" halign="center" transparent="0" valign="center" zPosition="8" />
+		<widget name="barra" position="11,288" size="702,330" alphatest="blend" zPosition="2" />
+		<widget name="info_barra" position="62,308" size="600,290" font="Regular;20" halign="center" transparent="0" valign="center" zPosition="1" />
+		<ePixmap name="logofuente" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/icono1-fs8.png" position="10,213" size="107,63" alphatest="blend" transparent="1" zPosition="1" />
+		<widget name="le_barra" position="132,542" size="600,35" alphatest="blend" zPosition="10" />
+		<widget name="ico_temp" position="59,46" size="74,74" alphatest="blend" zPosition="2" />
+
+		<widget name="fondo_detalle" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/fondolista-fs8.png" position="0,31" size="948,594" alphatest="blend" zPosition="10" />
+		<widget name="detallado" position="0,31" size="970,594" scrollbarMode="showOnDemand" zPosition="8" />
+
+		<widget name="ico_red" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/red.png" position="750,504" size="35,25" alphatest="blend" zPosition="1" />
+		<widget name="texto_red" position="786,505" size="182,25" font="Regular;16" noWrap="1" transparent="1" zPosition="1" />
+		<widget name="ico_vie" position="5,132" size="29,40" alphatest="blend" zPosition="2" />
+		<widget name="barrapix_arr" position="0,31" size="970,594" alphatest="blend" transparent="1" zPosition="9" />
+		<widget name="barrapix_abj" position="0,0" size="20,20" alphatest="blend" transparent="1" zPosition="9" />
+	</screen>
+
+	<screen name="AccuWeatherPlugin" title="AccuWeather - accuwheater.com" position="center,center" size="970,560">
+		<widget name="lugar" position="36,3" size="512,28" backgroundColor="TextBackground" font="Regular;23" transparent="1" valign="center" zPosition="2" />
+		<widget name="info_entradas" position="753,3" size="166,22" backgroundColor="TextBackground" font="Regular;16" halign="right" transparent="1" zPosition="3" />
+		<widget name="current_icon" position="32,46" size="74,74" alphatest="blend" zPosition="1" />
+		<widget name="temperatura" position="100,61" size="78,30" backgroundColor="TextBackground" font="Regular;26" halign="right" noWrap="1" transparent="1" zPosition="1" />
+		<widget name="condicion" position="201,63" size="360,20" backgroundColor="TextBackground" font="Regular;18" transparent="1" zPosition="1" />
+		<widget name="viento" position="201,90" size="360,20" backgroundColor="TextBackground" font="Regular;18" transparent="1" zPosition="1" />
+		<widget name="humedad" position="201,115" size="360,20" backgroundColor="TextBackground" font="Regular;18" transparent="1" zPosition="1" />
+		<widget name="rocio" position="201,140" size="360,20" backgroundColor="TextBackground" font="Regular;18" transparent="1" zPosition="1" />
+		<widget name="presion" position="201,165" size="360,20" backgroundColor="TextBackground" font="Regular;18" transparent="1" zPosition="1" />
+		<widget name="tendencia" position="201,190" size="360,20" backgroundColor="TextBackground" font="Regular;18" transparent="1" zPosition="1" />
+		<widget name="visibilidad" position="201,215" size="360,20" backgroundColor="TextBackground" font="Regular;18" transparent="1" zPosition="1" />
+		<widget name="sol" position="201,240" size="360,20" backgroundColor="TextBackground" font="Regular;18" transparent="1" zPosition="1" />
+		<eLabel name="lin0" position="573,25" size="1,255" backgroundColor="#10404040" zPosition="1" />
+		<widget name="icono1" position="584,30" size="79,79" alphatest="blend" zPosition="1" />
+		<widget name="hora1" position="673,38" size="180,22" backgroundColor="TextBackground" font="Regular;18" halign="left" transparent="1" valign="center" zPosition="1" />
+		<widget name="temperatura1" position="673,57" size="180,22" backgroundColor="TextBackground" font="Regular;18" halign="left" transparent="1" valign="center" zPosition="1" />
+		<widget name="condicion1" position="673,76" size="295,22" backgroundColor="TextBackground" font="Regular;16" halign="left" noWrap="1" transparent="1" valign="center" zPosition="1" />
+		<widget name="icono2" position="584,115" size="79,79" alphatest="blend" zPosition="1" />
+		<widget name="hora2" position="673,123" size="180,22" backgroundColor="TextBackground" font="Regular;18" halign="left" transparent="1" valign="center" zPosition="1" />
+		<widget name="temperatura2" position="673,143" size="180,22" backgroundColor="TextBackground" font="Regular;18" halign="left" transparent="1" valign="center" zPosition="1" />
+		<widget name="condicion2" position="673,163" size="295,22" backgroundColor="TextBackground" font="Regular;16" halign="left" noWrap="1" transparent="1" valign="center" zPosition="1" />
+		<widget name="icono3" position="584,200" size="79,79" alphatest="blend" zPosition="1" />
+		<widget name="hora3" position="673,208" size="180,22" backgroundColor="TextBackground" font="Regular;18" halign="left" transparent="1" valign="center" zPosition="1" />
+		<widget name="temperatura3" position="673,228" size="180,22" backgroundColor="TextBackground" font="Regular;18" halign="left" transparent="1" valign="center" zPosition="1" />
+		<widget name="condicion3" position="673,248" size="295,22" backgroundColor="TextBackground" font="Regular;16" halign="left" noWrap="1" transparent="1" valign="center" zPosition="1" />
+		<widget name="dia1" position="24,297" size="280,26" backgroundColor="TextBackground" font="Regular;22" halign="center" transparent="1" valign="center" zPosition="1" />
+		<widget name="icono_dia1" position="124,326" size="79,79" alphatest="blend" zPosition="1" />
+		<widget name="info_dia1" position="24,409" size="280,90" backgroundColor="TextBackground" font="Regular;18" halign="center" transparent="1" valign="top" zPosition="1" />
+		<widget name="dia2" position="342,297" size="280,26" backgroundColor="TextBackground" font="Regular;22" halign="center" transparent="1" valign="center" zPosition="1" />
+		<widget name="icono_dia2" position="442,327" size="79,79" alphatest="blend" zPosition="1" />
+		<widget name="info_dia2" position="342,409" size="280,90" backgroundColor="TextBackground" font="Regular;18" halign="center" transparent="1" valign="bottom" zPosition="1" />
+		<widget name="dia3" position="655,296" size="280,26" backgroundColor="TextBackground" font="Regular;22" halign="center" transparent="1" valign="center" zPosition="1" />
+		<widget name="icono_dia3" position="755,327" size="79,79" alphatest="blend" zPosition="1" />
+		<widget name="info_dia3" position="655,409" size="280,90" backgroundColor="TextBackground" font="Regular;18" halign="center" transparent="1" valign="bottom" zPosition="1" />
+
+		<widget name="statustext" position="0,23" size="570,261" backgroundColor="#10bfbfbf" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="0" />
+		<widget name="ico_left" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/nm_left-fs8.png" position="15,3" size="16,26" alphatest="blend" zPosition="1" />
+		<widget name="ico_right" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/nm_right-fs8.png" position="930,3" size="16,26" alphatest="blend" zPosition="1" />
+		<widget name="ico_menu" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/menu.png" position="775,527" size="35,25" alphatest="blend" zPosition="1" />
+		<widget name="texto_menu" position="811,528" size="141,25" font="Regular;16" transparent="1" zPosition="1" />
+		<widget name="ico_l" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/izq-fs8.png" position="8,527" size="35,25" alphatest="blend" zPosition="1" />
+		<widget name="texto_l" position="43,528" size="117,25" font="Regular;16" transparent="1" zPosition="1" />
+		<widget name="ico_r" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/dch-fs8.png" position="170,527" size="35,25" alphatest="blend" zPosition="1" />
+		<widget name="texto_r" position="206,528" size="141,25" font="Regular;16" transparent="1" zPosition="1" />
+		<eLabel name="lin1" position="10,288" size="951,1" backgroundColor="#10444444" zPosition="1" />
+		<eLabel name="lin2" position="10,510" size="951,1" backgroundColor="#10444444" zPosition="1" />
+		<eLabel name="lin3" position="323,297" size="1,200" backgroundColor="#10404040" zPosition="1" />
+		<eLabel name="lin4" position="636,297" size="1,200" backgroundColor="#10404040" zPosition="1" />
+
+		<widget name="hora" position="100,90" size="78,20" backgroundColor="TextBackground" font="Regular;18" halign="right" transparent="1" zPosition="1" />
+		<widget name="ico_blue" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/green.png" position="350,527" size="35,25" alphatest="blend" zPosition="1" />
+		<widget name="texto_blue" position="385,528" size="241,25" font="Regular;16" transparent="1" zPosition="1" />
+
+		<widget name="satelite" position="180,20" size="640,480" alphatest="blend" transparent="1" zPosition="9" />
+		<widget name="statustext2" position="0,0" size="970,560" font="Regular;20" halign="center" transparent="0" valign="center" zPosition="8" />
+		<widget name="barra" position="301,507" size="406,45" alphatest="blend" zPosition="10" />
+		<ePixmap name="logofuente" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/icono1-fs8.png" position="10,213" size="107,63" alphatest="blend" transparent="1" zPosition="1" />
+	</screen>
+
+	<screen name="GoogleWeatherPlugin" title="Weather Info - google.com" position="center,center" size="770,470">
+		<ePixmap name="logofuente" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/icono0-fs8.png" position="655,94" size="107,63" alphatest="blend" transparent="1" zPosition="1" />
+		<widget name="caption" position="36,21" size="526,28" font="Regular;22" transparent="1" valign="center" zPosition="2" />
+		<widget name="info_entradas" position="566,23" size="166,28" font="Regular;16" halign="right" transparent="1" zPosition="3" />
+		<widget name="currentTemp" position="115,66" size="78,30" font="Regular;26" noWrap="1" transparent="1" zPosition="3" />
+		<widget name="condition" position="201,63" size="536,20" font="Regular;18" transparent="1" zPosition="1" />
+		<widget name="wind_condition" position="201,85" size="536,20" font="Regular;18" transparent="1" zPosition="1" />
+		<widget name="weekday1" position="9,187" size="180,22" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="1" />
+		<widget name="weekday1_icon" position="56,211" size="74,74" alphatest="blend" zPosition="1" />
+		<widget name="weekday1_temp" position="9,285" size="180,130" font="Regular;16" halign="center" transparent="1" valign="top" zPosition="1" />
+		<widget name="weekday2" position="199,187" size="180,22" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="1" />
+		<widget name="weekday2_icon" position="252,211" size="74,74" alphatest="blend" zPosition="1" />
+		<widget name="weekday2_temp" position="199,285" size="180,130" font="Regular;16" halign="center" transparent="1" valign="bottom" zPosition="1" />
+		<widget name="weekday3" position="389,187" size="180,22" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="1" />
+		<widget name="weekday3_icon" position="445,211" size="74,74" alphatest="blend" zPosition="1" />
+		<widget name="weekday3_temp" position="389,285" size="180,130" font="Regular;16" halign="center" transparent="1" valign="bottom" zPosition="1" />
+		<widget name="weekday4" position="579,187" size="180,22" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="1" />
+		<widget name="weekday4_icon" position="628,211" size="74,74" alphatest="blend" zPosition="1" />
+		<widget name="weekday4_temp" position="579,285" size="180,130" font="Regular;16" halign="center" transparent="1" valign="bottom" zPosition="1" />
+		<widget name="statustext" position="0,23" size="768,140" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="0" />
+		<widget name="ico_left" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/nm_left-fs8.png" position="10,21" size="16,26" alphatest="blend" zPosition="1" />
+		<widget name="ico_right" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/nm_right-fs8.png" position="743,21" size="16,26" alphatest="blend" zPosition="1" />
+		<widget name="current_icon" position="8,50" size="74,74" alphatest="blend" zPosition="1" />
+		<widget name="ico_menu" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/menu.png" position="584,434" size="35,25" alphatest="blend" zPosition="1" />
+		<widget name="texto_menu" position="619,438" size="141,25" font="Regular;16" transparent="1" zPosition="1" />
+		<widget name="ico_l" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/izq-fs8.png" position="5,434" size="35,25" alphatest="blend" zPosition="1" />
+		<widget name="texto_l" position="40,438" size="117,25" font="Regular;16" transparent="1" zPosition="1" />
+		<widget name="ico_r" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/AccuWeather/image/dch-fs8.png" position="160,434" size="35,25" alphatest="blend" zPosition="1" />
+		<widget name="texto_r" position="195,438" size="141,25" font="Regular;16" transparent="1" zPosition="1" />
+		<eLabel name="lin1" position="10,164" size="751,1" backgroundColor="#10444444" zPosition="1" />
+		<eLabel name="lin2" position="10,420" size="751,1" backgroundColor="#10444444" zPosition="1" />
+		<eLabel name="lin3" position="193,185" size="1,210" backgroundColor="#10404040" zPosition="1" />
+		<eLabel name="lin4" position="383,185" size="1,210" backgroundColor="#10404040" zPosition="1" />
+		<eLabel name="lin5" position="573,185" size="1,210" backgroundColor="#10404040" zPosition="1" />
+		<widget name="ico_temp" position="59,50" size="74,74" alphatest="blend" zPosition="2" />
+	</screen>
+
+	<screen name="WeatherPluginEntriesListConfigScreenfore" title="WeatherPlugin: List of Entries (foreca.com)" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="city" position="605,115" size="150,50" font="Regular;20" halign="left" />
+		<widget name="language" position="735,115" size="150,50" font="Regular;20" halign="left" />
+		<widget name="entrylist" position="590,170" size="610,415" backgroundColorSelected="MenuSelected" enableWrapAround="1" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<screen name="WeatherPluginEntryConfigScreenfore" title="WeatherPlugin: Edit Entry (foreca.com)" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateConfig0" />
+	</screen>
+
+	<screen name="WeatherPluginEntriesListConfigScreenacu" title="WeatherPlugin: List of Entries (accuwheater.com)" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="city" position="5,0" size="150,50" font="Regular;20" halign="left" />
+		<widget name="language" position="155,0" size="150,50" font="Regular;20" halign="left" />
+		<widget name="entrylist" position="0,50" size="750,300" scrollbarMode="showOnDemand" />
+		<!--
+		<widget name="key_red" position="0,350" size="140,40" backgroundColor="ButtonRed" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+		<widget name="key_green" position="140,350" size="140,40" backgroundColor="ButtonGreen" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+		<widget name="key_yellow" position="280,350" size="140,40" backgroundColor="ButtonYellow" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+		<widget name="key_blue" position="420,350" size="140,40" backgroundColor="ButtonBlue" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+		<ePixmap name="red" pixmap="skin_default/buttons/red.png" position="0,350" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+		<ePixmap name="green" pixmap="skin_default/buttons/green.png" position="140,350" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+		<ePixmap name="yellow" pixmap="skin_default/buttons/yellow.png" position="280,350" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+		<ePixmap name="blue" pixmap="skin_default/buttons/blue.png" position="420,350" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+		-->
+	</screen>
+	<!--
+	<screen name="WeatherPluginEntriesListConfigScreenacu" title="WeatherPlugin: List of Entries (accuwheater.com)" position="center,center" size="750,400">
+		<widget name="city" position="5,0" size="150,50" font="Regular;20" halign="left" />
+		<widget name="language" position="155,0" size="150,50" font="Regular;20" halign="left" />
+		<widget name="entrylist" position="0,50" size="750,300" scrollbarMode="showOnDemand" />
+		<widget name="key_red" position="0,350" size="140,40" backgroundColor="ButtonRed" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+		<widget name="key_green" position="140,350" size="140,40" backgroundColor="ButtonGreen" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+		<widget name="key_yellow" position="280,350" size="140,40" backgroundColor="ButtonYellow" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+		<widget name="key_blue" position="420,350" size="140,40" backgroundColor="ButtonBlue" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+		<ePixmap name="red" pixmap="skin_default/buttons/red.png" position="0,350" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+		<ePixmap name="green" pixmap="skin_default/buttons/green.png" position="140,350" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+		<ePixmap name="yellow" pixmap="skin_default/buttons/yellow.png" position="280,350" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+		<ePixmap name="blue" pixmap="skin_default/buttons/blue.png" position="420,350" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+	</screen>
+	-->
+
+	<screen name="WeatherPluginEntriesListConfigScreen" title="WeatherPlugin: List of Entries (google.com)" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="city" position="5,0" size="150,50" font="Regular;20" halign="left" />
+		<widget name="language" position="155,0" size="150,50" font="Regular;20" halign="left" />
+		<widget name="entrylist" position="0,50" size="750,300" scrollbarMode="showOnDemand" />
+		<!--
+		<widget name="key_red" position="0,350" size="140,40" backgroundColor="ButtonRed" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+		<widget name="key_green" position="140,350" size="140,40" backgroundColor="ButtonGreen" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+		<widget name="key_yellow" position="280,350" size="140,40" backgroundColor="ButtonYellow" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+		<widget name="key_blue" position="420,350" size="140,40" backgroundColor="ButtonBlue" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+		<ePixmap name="red" pixmap="skin_default/buttons/red.png" position="0,350" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+		<ePixmap name="green" pixmap="skin_default/buttons/green.png" position="140,350" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+		<ePixmap name="yellow" pixmap="skin_default/buttons/yellow.png" position="280,350" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+		<ePixmap name="blue" pixmap="skin_default/buttons/blue.png" position="420,350" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+		-->
+	</screen>
+	<!--
+	<screen name="WeatherPluginEntriesListConfigScreen" title="WeatherPlugin: List of Entries (google.com)" position="center,center" size="750,400">
+		<widget name="city" position="5,0" size="150,50" font="Regular;20" halign="left" />
+		<widget name="language" position="155,0" size="150,50" font="Regular;20" halign="left" />
+		<widget name="entrylist" position="0,50" size="750,300" scrollbarMode="showOnDemand" />
+		<widget name="key_red" position="0,350" size="140,40" backgroundColor="ButtonRed" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+		<widget name="key_green" position="140,350" size="140,40" backgroundColor="ButtonGreen" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+		<widget name="key_yellow" position="280,350" size="140,40" backgroundColor="ButtonYellow" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+		<widget name="key_blue" position="420,350" size="140,40" backgroundColor="ButtonBlue" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+		<ePixmap name="red" pixmap="skin_default/buttons/red.png" position="0,350" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+		<ePixmap name="green" pixmap="skin_default/buttons/green.png" position="140,350" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+		<ePixmap name="yellow" pixmap="skin_default/buttons/yellow.png" position="280,350" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+		<ePixmap name="blue" pixmap="skin_default/buttons/blue.png" position="420,350" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+	</screen>
+	-->
+
+	<screen name="WeatherPluginEntryConfigScreenacu" title="WeatherPlugin: Edit Entry (accuwheater.com)" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="config" position="20,10" size="720,200" scrollbarMode="showOnDemand" />
+		<!--
+		<ePixmap name="red" pixmap="skin_default/buttons/red.png" position="10,225" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+		<ePixmap name="green" pixmap="skin_default/buttons/green.png" position="167,225" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+		<ePixmap name="blue" pixmap="skin_default/buttons/blue.png" position="319,225" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+		<widget name="key_red" position="10,225" size="140,40" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+		<widget name="key_green" position="166,225" size="140,40" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+		<widget name="key_blue" position="319,225" size="140,40" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+		-->
+	</screen>
+	<!--
+	<screen name="WeatherPluginEntryConfigScreenacu" title="WeatherPlugin: Edit Entry (accuwheater.com)" position="center,center" size="750,276">
+		<widget name="config" position="20,10" size="720,200" scrollbarMode="showOnDemand" />
+		<ePixmap name="red" pixmap="skin_default/buttons/red.png" position="10,225" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+		<ePixmap name="green" pixmap="skin_default/buttons/green.png" position="167,225" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+		<ePixmap name="blue" pixmap="skin_default/buttons/blue.png" position="319,225" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+		<widget name="key_red" position="10,225" size="140,40" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+		<widget name="key_green" position="166,225" size="140,40" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+		<widget name="key_blue" position="319,225" size="140,40" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+	</screen>
+	-->
+
+	<screen name="WeatherPluginEntryConfigScreen" title="WeatherPlugin: Edit Entry (google.com)" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="config" position="20,10" size="720,200" scrollbarMode="showOnDemand" />
+		<!--
+		<ePixmap name="red" pixmap="skin_default/buttons/red.png" position="10,225" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+		<ePixmap name="green" pixmap="skin_default/buttons/green.png" position="167,225" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+		<ePixmap name="blue" pixmap="skin_default/buttons/blue.png" position="319,225" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+		<widget name="key_red" position="10,225" size="140,40" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+		<widget name="key_green" position="166,225" size="140,40" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+		<widget name="key_blue" position="319,225" size="140,40" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+		-->
+	</screen>
+	<!--
+	<screen name="WeatherPluginEntryConfigScreen" title="WeatherPlugin: Edit Entry (google.com)" position="center,center" size="750,276">
+		<widget name="config" position="20,10" size="720,200" scrollbarMode="showOnDemand" />
+		<ePixmap name="red" pixmap="skin_default/buttons/red.png" position="10,225" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+		<ePixmap name="green" pixmap="skin_default/buttons/green.png" position="167,225" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+		<ePixmap name="blue" pixmap="skin_default/buttons/blue.png" position="319,225" size="140,40" alphatest="on" transparent="1" zPosition="4" />
+		<widget name="key_red" position="10,225" size="140,40" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+		<widget name="key_green" position="166,225" size="140,40" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+		<widget name="key_blue" position="319,225" size="140,40" font="Regular;21" foregroundColor="White" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="5" />
+	</screen>
+	-->
+</skin>
