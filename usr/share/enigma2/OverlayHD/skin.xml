@@ -977,6 +977,12 @@ The widget height should be 5 * itemHeight.
 		<widget name="detailtext" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
+	<screen name="ScreenTemplateHDMICEC4">
+		<panel name="ScreenTemplateFrame830x120" />
+		<widget source="fixed_address" render="Label" position="410,570" size="810,25" font="Regular;20" halign="center" transparent="1" valign="center" />
+		<widget source="current_address" render="Label" position="410,595" size="810,25" font="Regular;20" halign="center" transparent="1" valign="center" />
+	</screen>
+
 	<screen name="ScreenTemplateHelp4">
 		<panel name="ScreenTemplateFrame830x120" />
 		<widget source="help" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />

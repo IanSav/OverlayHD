@@ -71,8 +71,7 @@
 		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_tv.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
-		<widget source="fixed_address" render="Label" position="410,570" size="810,25" font="Regular;20" halign="center" transparent="1" valign="center" />
-		<widget source="current_address" render="Label" position="410,595" size="810,25" font="Regular;20" halign="center" transparent="1" valign="center" />
+		<panel name="ScreenTemplateHDMICEC4" />
 	</screen>
 
 <!-- MENU > Setup > System > GUI Settings - Uses Generic Setup Screen -->
@@ -721,25 +720,25 @@
 		<eLabel position="55,190" size="740,1" backgroundColor="Pinstripe" />
 		<widget name="Networktext" position="55,200" size="650,25" font="Regular;22" foregroundColor="Grey" zPosition="1" />
 		<widget name="Network" position="55,230" size="650,25" font="Regular;22" foregroundColors="#008c8c93,#00f23d21,#001cff1c" zPosition="1" />
-		<widget name="NetworkInfo_Check" pixmaps="icons/lock_on.png,icons/lock_error.png" position="755,215" size="38,31" alphatest="on" zPosition="2" />
+		<widget name="NetworkInfo_Check" pixmaps="icons/lock_on.png,icons/lock_off.png" position="755,215" size="38,31" alphatest="on" zPosition="2" />
 		<widget name="NetworkInfo" pixmaps="images/select300_45black.png,images/select600_50.png" position="832,207" size="318,50" zPosition="1" />
 		<widget name="NetworkInfo_Text" position="832,207" size="318,50" font="Regular;22" foregroundColors="#00ffffff,#00ffffff,#00ffffff" halign="center" transparent="1" valign="center" zPosition="2" />
 		<eLabel position="55,270" size="740,1" backgroundColor="Pinstripe" />
 		<widget name="Dhcptext" position="55,280" size="650,25" font="Regular;22" foregroundColor="Grey" zPosition="1" />
 		<widget name="Dhcp" position="55,310" size="650,25" font="Regular;22" foregroundColors="#008c8c93,#00f23d21,#001cff1c" zPosition="1" />
-		<widget name="DhcpInfo_Check" pixmaps="icons/lock_on.png,icons/lock_error.png" position="755,295" size="38,31" alphatest="on" zPosition="2" />
+		<widget name="DhcpInfo_Check" pixmaps="icons/lock_on.png,icons/lock_off.png" position="755,295" size="38,31" alphatest="on" zPosition="2" />
 		<widget name="DhcpInfo" pixmaps="images/select300_45black.png,images/select600_50.png" position="832,287" size="318,50" zPosition="1" />
 		<widget name="DhcpInfo_Text" position="832,287" size="318,50" font="Regular;22" foregroundColors="#00ffffff,#00ffffff,#00ffffff" halign="center" transparent="1" valign="center" zPosition="2" />
 		<eLabel position="55,350" size="740,1" backgroundColor="Pinstripe" />
 		<widget name="IPtext" position="55,360" size="650,25" font="Regular;22" foregroundColor="Grey" zPosition="1" />
 		<widget name="IP" position="55,390" size="650,25" font="Regular;22" foregroundColors="#008c8c93,#00f23d21,#001cff1c" zPosition="1" />
-		<widget name="IPInfo_Check" pixmaps="icons/lock_on.png,icons/lock_error.png" position="755,375" size="38,31" alphatest="on" zPosition="2" />
+		<widget name="IPInfo_Check" pixmaps="icons/lock_on.png,icons/lock_off.png" position="755,375" size="38,31" alphatest="on" zPosition="2" />
 		<widget name="IPInfo" pixmaps="images/select300_45black.png,images/select600_50.png" position="832,367" size="318,50" zPosition="1" />
 		<widget name="IPInfo_Text" position="832,367" size="318,50" font="Regular;22" foregroundColors="#00ffffff,#00ffffff,#00ffffff" halign="center" transparent="1" valign="center" zPosition="2" />
 		<eLabel position="55,430" size="740,1" backgroundColor="Pinstripe" />
 		<widget name="DNStext" position="55,440" size="650,25" font="Regular;22" foregroundColor="Grey" zPosition="1" />
 		<widget name="DNS" position="55,470" size="650,25" font="Regular;22" foregroundColors="#008c8c93,#00f23d21,#001cff1c" zPosition="1" />
-		<widget name="DNSInfo_Check" pixmaps="icons/lock_on.png,icons/lock_error.png" position="755,455" size="38,31" alphatest="on" zPosition="2" />
+		<widget name="DNSInfo_Check" pixmaps="icons/lock_on.png,icons/lock_off.png" position="755,455" size="38,31" alphatest="on" zPosition="2" />
 		<widget name="DNSInfo" pixmaps="images/select300_45black.png,images/select600_50.png" position="832,447" size="318,50" zPosition="1" />
 		<widget name="DNSInfo_Text" position="832,447" size="318,50" font="Regular;22" foregroundColors="#00ffffff,#00ffffff,#00ffffff" halign="center" transparent="1" valign="center" zPosition="2" />
 		<eLabel position="55,510" size="740,1" backgroundColor="Pinstripe" />
@@ -922,13 +921,13 @@
 		<widget name="serialno" position="420,255" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
 		<widget name="labserialno" position="730,255" size="500,35" backgroundColor="TextBackground" font="Regular;22" halign="right" transparent="1" valign="center" />
 		<widget name="inotify" position="420,290" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
-		<widget name="inotifyinactive" pixmap="icons/lock_error.png" position="1198,292" size="32,32" alphatest="on" transparent="1" />
+		<widget name="inotifyinactive" pixmap="icons/lock_off.png" position="1198,292" size="32,32" alphatest="on" transparent="1" />
 		<widget name="inotifyactive" pixmap="icons/lock_on.png" position="1198,292" size="32,32" alphatest="on" transparent="1" zPosition="+1" />
 		<widget name="tivo" position="420,325" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
-		<widget name="tivoinactive" pixmap="icons/lock_error.png" position="1198,327" size="32,32" alphatest="on" transparent="1" />
+		<widget name="tivoinactive" pixmap="icons/lock_off.png" position="1198,327" size="32,32" alphatest="on" transparent="1" />
 		<widget name="tivoactive" pixmap="icons/lock_on.png" position="1198,327" size="32,32" alphatest="on" transparent="1" zPosition="+1" />
 		<widget name="dlna" position="420,360" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
-		<widget name="dlnainactive" pixmap="icons/lock_error.png" position="1198,362" size="32,32" alphatest="on" transparent="1" zPosition="2" />
+		<widget name="dlnainactive" pixmap="icons/lock_off.png" position="1198,362" size="32,32" alphatest="on" transparent="1" zPosition="2" />
 		<widget name="dlnaactive" pixmap="icons/lock_on.png" position="1198,362" size="32,32" alphatest="on" transparent="1" zPosition="3" />
 		<widget name="sharedir" position="420,395" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
 		<widget name="labsharedir" position="730,395" size="500,90" backgroundColor="TextBackground" font="Regular;22" halign="right" transparent="1" valign="top" />
@@ -973,7 +972,7 @@
 		<widget name="labpass" position="860,320" size="310,30" backgroundColor="GreyBlue" font="Regular;20" valign="center" />
 		<widget name="alias" position="710,370" size="150,30" font="Regular;20" transparent="1" valign="center" />
 		<widget name="labalias" position="860,370" size="310,30" backgroundColor="GreyBlue" font="Regular;20" valign="center" />
-		<widget name="sinactive" pixmap="icons/lock_error.png" position="710,420" size="32,32" alphatest="on" zPosition="+1" />
+		<widget name="sinactive" pixmap="icons/lock_off.png" position="710,420" size="32,32" alphatest="on" zPosition="+1" />
 		<widget name="sactive" pixmap="icons/lock_on.png" position="710,420" size="32,32" alphatest="on" zPosition="+2" />
 		<widget name="system" position="750,420" size="100,30" font="Regular;20" transparent="1" valign="center" />
 		<widget name="labsys" position="860,420" size="310,30" backgroundColor="GreyBlue" font="Regular;20" valign="center" />
