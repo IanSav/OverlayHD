@@ -72,7 +72,7 @@
 		<ePixmap pixmap="images/shoutcast-logo.png" position="50,80" size="120,35" alphatest="on" transparent="1" />
 		<widget name="headertext" position="190,80" size="620,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
 		<eLabel position="50,130" size="1180,2" backgroundColor="Pinstripe" />
-		<widget name="list" position="50,132" size="1180,355" backgroundColorSelected="MenuSelected" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="list" position="50,132" size="1180,355" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1" />
 		<widget name="statustext" position="50,132" size="1180,355" backgroundColor="TextBackground" font="Regular;25" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<eLabel position="50,487" size="1180,2" backgroundColor="Pinstripe" />
 		<widget name="cover" position="50,525" size="102,110" alphatest="blend" transparent="1" />
@@ -198,7 +198,7 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" backgroundColorSelected="MenuSelected" scrollbarMode="showOnDemand" transparent="1">
+		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -216,7 +216,7 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<widget source="list" render="Listbox" position="400,80" size="830,525" backgroundColor="TextBackground" backgroundColorSelected="MenuSelected" scrollbarMode="showOnDemand" transparent="1">
+		<widget source="list" render="Listbox" position="400,80" size="830,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
 				"templates":
@@ -225,10 +225,10 @@
 						[
 						MultiContentEntryPixmapAlphaTest(pos = (0, 0), size = (100, 75), png = 4), # index 4 is the thumbnail
 						MultiContentEntryText(pos = (120, 0), size = (670, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 1), # index 1 is the Title
-						MultiContentEntryText(pos = (120, 25), size = (320, 25), font = 1, color = 0x00999999, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 5), # index 5 is the Published Date
-						MultiContentEntryText(pos = (120, 50), size = (320, 25), font = 1, color = 0x00999999, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 6), # index 6 is the Views Count
-						MultiContentEntryText(pos = (460, 25), size = (330, 25), font = 1, color = 0x00999999, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 7), # index 7 is the duration
-						MultiContentEntryText(pos = (460, 50), size = (330, 25), font = 1, color = 0x00999999, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 8), # index 8 is the ratingcount
+						MultiContentEntryText(pos = (120, 25), size = (320, 25), font = 1, color = "TextIndented", color_sel = "TextIndentedSelected", flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 5), # index 5 is the Published Date
+						MultiContentEntryText(pos = (120, 50), size = (320, 25), font = 1, color = "TextIndented", color_sel = "TextIndentedSelected", flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 6), # index 6 is the Views Count
+						MultiContentEntryText(pos = (460, 25), size = (330, 25), font = 1, color = "TextIndented", color_sel = "TextIndentedSelected", flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 7), # index 7 is the duration
+						MultiContentEntryText(pos = (460, 50), size = (330, 25), font = 1, color = "TextIndented", color_sel = "TextIndentedSelected", flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 8), # index 8 is the ratingcount
 						]),
 					"status": (75,
 						[
@@ -265,7 +265,6 @@
 		<eLabel position="75,679" size="95,2" backgroundColor="Pinstripe" />
 		<eLabel position="75,605" size="2,75" backgroundColor="Pinstripe" />
 		<eLabel position="168,605" size="2,75" backgroundColor="Pinstripe" />
-		<!-- <ePixmap pixmap="frames/frame80_95x75.png" position="75,605" size="95,75" zPosition="1" /> -->
 		<ePixmap pixmap="images/picon_movie.png" position="87,616" size="70,53" zPosition="2" />
 		<!-- Service name -->
 		<widget source="session.CurrentService" render="Label" position="55,560" size="1170,25" backgroundColor="TextBackground" font="Named;23" foregroundColor="White" halign="center" noWrap="1" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center">
@@ -528,7 +527,7 @@
 		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_source_youtube.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<panel name="ScreenTemplateConfig0" />
-		<widget source="feedlist" render="Listbox" position="590,160" size="635,425" backgroundColorSelected="MenuSelected" scrollbarMode="showOnDemand" transparent="1" zPosition="2">
+		<widget source="feedlist" render="Listbox" position="590,160" size="635,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1" zPosition="2">
 			<convert type="TemplatedMultiContent">
 				{
 				"templates":
@@ -562,7 +561,7 @@
 	<screen name="MyTubeSuggestionsListScreen" position="70,140" size="502,337" backgroundColor="ScreenBackground" flags="wfNoBorder" zPosition="6">
 		<panel name="ScreenTemplateDebug" />
 		<ePixmap position="0,0" size="505,227" alphatest="on" backgroundColor="transparent" transparent="1" zPosition="-1" />
-		<widget source="suggestionslist" render="Listbox" position="0,0" size="500,325" backgroundColorSelected="MenuSelected" scrollbarMode="showOnDemand" transparent="1" zPosition="7">
+		<widget source="suggestionslist" render="Listbox" position="0,0" size="500,325" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1" zPosition="7">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -579,7 +578,7 @@
 
 	<screen name="MyTubeHistoryScreen" position="70,140" size="505,327" backgroundColor="ScreenBackground" flags="wfNoBorder" zPosition="6">
 		<panel name="ScreenTemplateDebug" />
-		<widget source="historylist" render="Listbox" position="0,0" size="503,325" backgroundColorSelected="MenuSelected" scrollbarMode="showOnDemand" transparent="1" zPosition="7">
+		<widget source="historylist" render="Listbox" position="0,0" size="503,325" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1" zPosition="7">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":

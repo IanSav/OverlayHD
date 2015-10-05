@@ -63,10 +63,10 @@
 				"template":
 					[
 					MultiContentEntryPixmapAlphaBlend(pos=(20, 10), size=(100, 60), png=6, flags = BT_SCALE),
-					MultiContentEntryText(pos = (140, 10), size = (670, 22), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 2, color = 0x009999ff, color_sel = 0x00ffffff),
+					MultiContentEntryText(pos = (140, 10), size = (670, 22), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 2, color = "EPGChannel", color_sel = "EPGChannelSelected"),
 					MultiContentEntryText(pos = (125, 32), size = (10, 20), font = 2, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1),
-					MultiContentEntryText(pos = (140, 32), size = (670, 20), font = 2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3, color = 0x0066ffff, color_sel = 0x00cccccc),
-					MultiContentEntryText(pos = (140, 52), size = (670, 20), font = 3, flags = RT_HALIGN_LEFT, text = 5, color = 0x00666666, color_sel = 0x00999999),
+					MultiContentEntryText(pos = (140, 32), size = (670, 20), font = 2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3, color = "EPGProgram", color_sel = "EPGProgramSelected"),
+					MultiContentEntryText(pos = (140, 52), size = (670, 20), font = 3, flags = RT_HALIGN_LEFT, text = 5, color = "EPGTimes", color_sel = "EPGTimesSelected"),
 					],
 				"fonts": [gFont("Regular", 22), gFont("Regular", 20), gFont("Regular", 17), gFont("Regular", 16)],
 				"itemHeight": 80
@@ -92,7 +92,7 @@
 		<panel name="ScreenTemplateButtonInfo" />
 		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateButtonHelp" />
-		<widget name="list" position="50,80" size="640,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" colorServiceDescription="InfoProgramNow" colorServiceDescriptionSelected="InfoProgramNow" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" foregroundColorServiceNotAvail="#00777777" picServiceEventProgressbar="sliders/slider_1280x10_hfg.png" scrollbarMode="showOnDemand" serviceInfoFont="Regular;21" serviceItemHeight="50" serviceNameFont="Regular;23" serviceNumberFont="Regular;23" transparent="1" />
+		<widget name="list" position="50,80" size="640,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" colorServiceDescription="InfoProgramNow" colorServiceDescriptionSelected="InfoProgramNow" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" foregroundColorServiceNotAvail="#00777777" picServiceEventProgressbar="sliders/slider_1280x10_hfg.png" scrollbarMode="showOnDemand" serviceInfoFont="Regular;21" serviceItemHeight="50" serviceNameFont="Regular;23" serviceNumberFont="Regular;23" transparent="1" />
 		<panel position="710,80" size="165,25">
 			<panel name="TunerUsagePanel" />
 		</panel>
@@ -188,9 +188,9 @@
 		<panel name="ScreenTemplateButtonHelp" />
 		<ePixmap pixmap="menus/mainmenu_tv_live.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<!--
-		<widget name="list" position="50,80" size="640,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" colorServiceDescription="InfoProgramNow" colorServiceDescriptionSelected="InfoProgramNow" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" foregroundColorServiceNotAvail="#00777777" picServiceEventProgressbar="sliders/slider_1280x10_hfg.png" scrollbarMode="showOnDemand" serviceInfoFont="Regular;21" serviceItemHeight="50" serviceNameFont="Regular;23" serviceNumberFont="Regular;23" transparent="1" />
+		<widget name="list" position="50,80" size="640,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" colorServiceDescription="InfoProgramNow" colorServiceDescriptionSelected="InfoProgramNow" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" foregroundColorServiceNotAvail="#00777777" picServiceEventProgressbar="sliders/slider_1280x10_hfg.png" scrollbarMode="showOnDemand" serviceInfoFont="Regular;21" serviceItemHeight="50" serviceNameFont="Regular;23" serviceNumberFont="Regular;23" transparent="1" />
 		-->
-		<widget name="list" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" colorServiceDescription="InfoProgramNow" colorServiceDescriptionSelected="InfoProgramNow" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" foregroundColorServiceNotAvail="#00777777" picServiceEventProgressbar="sliders/slider_1280x10_hfg.png" scrollbarMode="showOnDemand" serviceInfoFont="Regular;20" serviceItemHeight="50" serviceNameFont="Regular;20" serviceNumberFont="Regular;20" transparent="1" />
+		<widget name="list" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" colorServiceDescription="InfoProgramNow" colorServiceDescriptionSelected="InfoProgramNow" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" foregroundColorServiceNotAvail="#00777777" picServiceEventProgressbar="sliders/slider_1280x10_hfg.png" scrollbarMode="showOnDemand" serviceInfoFont="Regular;20" serviceItemHeight="50" serviceNameFont="Regular;20" serviceNumberFont="Regular;20" transparent="1" />
 	</screen>
 
 	<!--

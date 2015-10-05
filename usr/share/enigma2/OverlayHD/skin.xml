@@ -62,7 +62,6 @@
 		<color name="StatusBackground" value="#ff000000" />
 		<color name="TransparentBackground" value="#ff000000" />
 
-		<color name="BannerBackground" value="Black" /><!-- Defunct - Replace with Border -->
 		<color name="BannerBorder" value="Black" />
 		<color name="BannerClock" value="White" />
 		<color name="BannerTitle" value="White" />
@@ -82,31 +81,37 @@
  |		- EntryForegroundColorNow = "White"
  |		- EntryForegroundColorNowSelected = "Black"
  +-->
-		<color name="EPGBackground" value="Black" />
+		<color name="EPGBackground" value="ScreenBackground" />
+		<color name="EPGLCN" value="White" />
+		<color name="EPGChannel" value="LightBlue" />
+		<color name="EPGChannelSelected" value="Blue" />
+		<color name="EPGProvider" value="White" />
 		<color name="EPGProgram" value="Gold" />
+		<color name="EPGProgramSelected" value="Yellow" />
 		<color name="EPGTimes" value="Grey" />
+		<color name="EPGTimesSelected" value="Silver" />
 		<color name="EPGDuration" value="Grey" />
 		<color name="EPGRating" value="Grey" />
 		<color name="EPGDetails" value="White" />
 		<color name="EPGTimeLineBorderColour" value="ScreenBackground" />
-		<color name="EPGTimeLineColour" value="#00FEE620" />
-		<color name="EPGGridBackground" value="#4100022b" />
-		<color name="EPGEntryBackgroundColor" value="#4100022b" />
-		<color name="EPGEntryBackgroundColorSelected" value="#41333333" />
-		<color name="EPGEntryForegroundColor" value="#00999999" />
-		<color name="EPGEntryForegroundColorSelected" value="White" />
-		<color name="EPGRecordBackgroundColor" value="#41110000" />
-		<color name="EPGRecordBackgroundColorSelected" value="#41333333" />
-		<color name="EPGRecordForegroundColor" value="#00bb0000" />
-		<color name="EPGRecordForegroundColorSelected" value="Red" />
-		<color name="EPGServiceBackgroundColor" value="#4100123b" />
-		<color name="EPGServiceBackgroundColorNow" value="#4100056f" />
-		<color name="EPGServiceForegroundColor" value="#00999999" />
+		<color name="EPGTimeLineColour" value="DullYellow" /><!--#00FEE620-->
+		<color name="EPGGridBackground" value="Orange" /><!--#4100022b - Not Used!-->
+		<color name="EPGEntryBackgroundColor" value="DarkerBlue" /><!--#4100022b-->
+		<color name="EPGEntryBackgroundColorSelected" value="Yellow" /><!--#41333333-->
+		<color name="EPGEntryForegroundColor" value="White" /><!--#00999999-->
+		<color name="EPGEntryForegroundColorSelected" value="Black" /><!--White-->
+		<color name="EPGRecordBackgroundColor" value="DullRed" /><!--#41110000-->
+		<color name="EPGRecordBackgroundColorSelected" value="Red" /><!--#41333333-->
+		<color name="EPGRecordForegroundColor" value="White" /><!--#00bb0000-->
+		<color name="EPGRecordForegroundColorSelected" value="Black" /><!--Red-->
+		<color name="EPGServiceBackgroundColor" value="DeepBlue" /><!--#4100123b-->
+		<color name="EPGServiceBackgroundColorNow" value="Blue" /><!--#4100056f-->
+		<color name="EPGServiceForegroundColor" value="White" /><!--#00999999-->
 		<color name="EPGServiceForegroundColorNow" value="White" />
-		<color name="EPGZapBackgroundColor" value="#41001100" />
-		<color name="EPGZapBackgroundColorSelected" value="#41333333" />
-		<color name="EPGZapForegroundColor" value="#00009900" />
-		<color name="EPGZapForegroundColorSelected" value="#0000ff00" />
+		<color name="EPGZapBackgroundColor" value="DullGreen" /><!--#41001100-->
+		<color name="EPGZapBackgroundColorSelected" value="Green" /><!--#41333333-->
+		<color name="EPGZapForegroundColor" value="White" /><!--#00009900-->
+		<color name="EPGZapForegroundColorSelected" value="Black" /><!--#0000ff00-->
 		<color name="EPGPIGBackground" value="Black" />
 		<color name="EPGPIGBorder" value="Black" /><!--#0015215b-->
 		<color name="EPGPIGColour" value="WarmYellow" /><!--#00FEE620-->
@@ -132,13 +137,6 @@
 		<color name="EPGPIGZapBackgroundColorSelected" value="Green" /><!--#0055FF37-->
 		<color name="EPGPIGZapForegroundColor" value="White" />
 		<color name="EPGPIGZapForegroundColorSelected" value="Black" />
-
-		<color name="EPGProgramChannel" value="White" />
-		<color name="EPGProgramDateTime" value="White" />
-		<color name="EPGProgramDescription" value="Silver" />
-		<color name="EPGProgramDuration" value="White" />
-		<color name="EPGProgramExtendedDescription" value="Grey" />
-		<color name="EPGProgramName" value="White" />
 
 		<color name="FindCharacter" value="Gold" />
 		<color name="FootnoteBackground" value="ScreenBackground" />
@@ -190,7 +188,9 @@
 
 		<color name="Text" value="White" />
 		<color name="TextBackground" value="ScreenBackground" />
+		<color name="TextSelected" value="White" />
 		<color name="TextIndented" value="Grey" />
+		<color name="TextIndentedSelected" value="Silver" />
 		<color name="TextLabel" value="Grey" />
 		<color name="TextWaiting" value="Gold" />
 
@@ -205,6 +205,9 @@
 		<color name="TunerLabel" value="#0079bfff" />
 		<color name="TunerNormal" value="#00cccccc" />
 		<color name="TunerRecording" value="#00daa82d" />
+
+		<color name="VolumeBackground" value="Black" />
+		<color name="VolumeColour" value="Blue" />
 
 		<color name="WeatherData" value="White" />
 		<color name="WeatherLabel" value="#008f8f8f" />
@@ -449,7 +452,7 @@
 		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="50,350" size="340,250" alphatest="on" transparent="1" zPosition="+1" />
 	</screen>
 
-	<screen name="NumericalTextInputHelpDialog" position="150,195" size="340,250" backgroundColor="ScreenBackground" flags="wfNoBorder" zPosition="+1">
+	<screen name="NumericalTextInputHelpDialog" position="50,350" size="340,250" backgroundColor="ScreenBackground" flags="wfNoBorder" zPosition="+1">
 		<eLabel position="0,0" size="340,2" backgroundColor="Pinstripe" />
 		<eLabel position="0,248" size="340,2" backgroundColor="Pinstripe" />
 		<eLabel position="0,0" size="2,250" backgroundColor="Pinstripe" />
@@ -514,6 +517,11 @@
 
 <!-- MENU - Beyonwiz Main Menu -->
 
+<!--
+Main list: selectedColor="#00ffffff" enabledColor="#00dddddd" offColor="#00777777" font="Regular;23" itemHeight="76" (default values shown)
+Sublists: selectedColor="#00ffffff" enabledColor="#00999999" offColor="#00555555" font="Regular;22" itemHeight="50" (default values shown)
+The widget height should be 5 * itemHeight.
+-->
 	<screen name="GeneralMenu" title="Main Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplateDebug" />
 		<panel position="50,35" size="305,25">
@@ -522,12 +530,12 @@
 		<widget source="Title" render="Label" position="360,30" size="870,35" borderColor="BannerBorder" borderWidth="1" font="BannerTitle;25" foregroundColor="BannerTitle" halign="right" transparent="1" />
 		<eLabel position="50,65" size="1180,2" backgroundColor="Pinstripe" />
 		<widget source="id_mainmenu_ext" render="Micon" path="gmenu/" position="0,170" size="1280,180" alphatest="on" transparent="1" zPosition="2" />
-		<widget name="list" position="0,360" size="1280,76" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="1" />
-		<widget name="list_sub_0" position="15,440" size="250,250" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="1" />
-		<widget name="list_sub_1" position="265,440" size="250,250" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="1" />
-		<widget name="list_sub_2" position="515,440" size="250,250" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="1" />
-		<widget name="list_sub_3" position="765,440" size="250,250" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="1" />
-		<widget name="list_sub_4" position="1015,440" size="250,250" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="1" />
+		<widget name="list" position="0,360" size="1280,76" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showNever" transparent="1" />
+		<widget name="list_sub_0" position="15,440" size="250,250" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showNever" transparent="1" />
+		<widget name="list_sub_1" position="265,440" size="250,250" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showNever" transparent="1" />
+		<widget name="list_sub_2" position="515,440" size="250,250" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showNever" transparent="1" />
+		<widget name="list_sub_3" position="765,440" size="250,250" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showNever" transparent="1" />
+		<widget name="list_sub_4" position="1015,440" size="250,250" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showNever" transparent="1" />
 		<widget name="up_sub_0" pixmap="gmenu/gmenu_up.png" position="122,430" size="35,10" alphatest="on" zPosition="2" />
 		<widget name="up_sub_1" pixmap="gmenu/gmenu_up.png" position="372,430" size="35,10" alphatest="on" zPosition="2" />
 		<widget name="up_sub_2" pixmap="gmenu/gmenu_up.png" position="622,430" size="35,10" alphatest="on" zPosition="2" />
@@ -563,8 +571,8 @@
 						[
 						MultiContentEntryText(pos = (0, 0), size = (810, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),  # Help label
 						MultiContentEntryText(pos = (20, 0), size = (790, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2),  # Help item
-						MultiContentEntryText(pos = (0, 25), size = (810, 25), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, color = 0x00AAAAAA, color_sel = 0x00AAAAAA, text = 3),  # Help label (tupple with 1)
-						MultiContentEntryText(pos = (20, 25), size = (790, 25), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, color = 0x00AAAAAA, color_sel = 0x00AAAAAA, text = 4),  # Help item (tupple with 2)
+						MultiContentEntryText(pos = (0, 25), size = (810, 25), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, color = "DarkGrey", color_sel = "Silver", text = 3),  # Help label (tupple with 1)
+						MultiContentEntryText(pos = (20, 25), size = (790, 25), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, color = "DarkGrey", color_sel = "Silver", text = 4),  # Help item (tupple with 2)
 						])
 					},
 				"fonts": [gFont("Regular", 20), gFont("Regular", 20)],
@@ -649,7 +657,7 @@
 		<!-- The hardcoded default image is a kludge to get around the fact that many
 			screens copy the base Setup code and will not have all the latest features! -->
 		<ePixmap pixmap="menus/setup_default.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<widget source="id_mainmenu_ext" render="Micon" path="menus/" position="50,100" size="300,500" alphatest="on" transparent="1" zPosition="+1" />
+		<!-- <widget source="id_mainmenu_ext" render="Micon" path="menus/" position="50,100" size="300,500" alphatest="on" transparent="1" zPosition="+1" /> -->
 		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" /> -->
 		<panel name="ScreenTemplateConfig4" />
 		<!-- <panel name="ScreenTemplateEmpty4" /> -->
@@ -761,7 +769,7 @@
 	</screen>
 
 	<screen name="ScreenTemplateOverlayText0">
-		<widget name="text" position="400,80" size="830,550" backgroundColor="TextBackground" font="Regular;25" foregroundColor="Text" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="text" position="400,80" size="830,550" backgroundColor="TextBackground" font="Regular;25" foregroundColor="TextWaiting" halign="center" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 	
 <!-- Configuration items with a two line text window -->
@@ -865,7 +873,7 @@
 	</screen>
 
 	<screen name="ScreenTemplateList4">
-		<widget source="list" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" selectionDisabled="0" transparent="1"> <!--  itemHeight="35" -->
+		<widget source="list" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" selectionDisabled="0" transparent="1"> <!--  itemHeight="35" -->
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -880,21 +888,37 @@
 	</screen>
 
 	<screen name="ScreenTemplateListLeft4">
-		<widget name="list_left" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="list_left" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
 
 	<screen name="ScreenTemplateLogList4">
 		<widget name="loglist" position="400,80" size="830,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
 
+	<screen name="ScreenTemplateMenuList4">
+		<widget source="list" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryPixmapAlphaBlend(pos = (20, 2), size = (31, 31), png = 1),
+					MultiContentEntryText(pos = (70, 0), size = (720, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0)
+					],
+				"fonts": [gFont("Regular", 25)],
+				"itemHeight": 35
+				}
+			</convert>
+		</widget>
+	</screen>
+
 	<screen name="ScreenTemplateMountConfig4">
-		<widget source="config" render="Listbox" position="400,80" size="830,420" backgroundColorSelected="MenuSelected" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1">
+		<widget source="config" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
 					[
 					MultiContentEntryText(pos = (75, 0), size = (715, 35), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0), # index 0 is the Menu Title
-					MultiContentEntryText(pos = (95, 35), size = (695, 25), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2, color = 0x00999999, color_sel = 0x00999999), # index 2 is the Description
+					MultiContentEntryText(pos = (95, 35), size = (695, 25), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2, color = "TextIndented", color_sel = "TextIndentedSelected"), # index 2 is the Description
 					MultiContentEntryPixmapAlphaTest(pos = (20, 6), size = (48, 48), png = 3), # index 3 is the pixmap
 					],
 				"fonts": [gFont("Regular", 25),gFont("Regular", 20)],
@@ -1423,7 +1447,7 @@
 		<eLabel position="0,0" size="2,78" backgroundColor="Pinstripe" zPosition="+2" />
 		<eLabel position="484,0" size="2,78" backgroundColor="Pinstripe" zPosition="+2" />
 		<ePixmap pixmap="images/volume.png" position="0,0" size="485,78" alphatest="on" transparent="1" zPosition="+1" />
-		<widget name="Volume" position="63,25" size="335,30" backgroundColor="Black" foregroundColor="Yellow" transparent="0" />
+		<widget name="Volume" position="63,25" size="335,30" backgroundColor="VolumeBackground" foregroundColor="VolumeColour" transparent="0" />
 	</screen>
 
 <!-- Key / Button Error -->
@@ -1477,7 +1501,7 @@
 		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="0,0" size="53,53" alphatest="on" transparent="1" />
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="0,0" size="53,53" alphatest="on" transparent="1" />
 		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="0,0" size="53,53" alphatest="on" transparent="1" />
-		<widget name="list" position="100,100" size="100%,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="1" />
+		<widget name="list" position="100,100" size="100%,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1" />
 		<applet type="onLayoutFinish">
 self.autoResize()
 		</applet>
@@ -1495,7 +1519,7 @@ self.autoResize()
 
 	<screen name="ChoiceBox" position="center,center" size="520,130" backgroundColor="ScreenBackground" zPosition="+90">
 		<widget name="text" position="0,0" size="520,0" backgroundColor="TextBackground" font="Regular;22" foregroundColor="BannerTitle" transparent="1" />
-		<widget name="list" position="100,100" size="520,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="1" />
+		<widget name="list" position="100,100" size="520,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1" />
 		<applet type="onLayoutFinish">
 self.autoResize()
 		</applet>

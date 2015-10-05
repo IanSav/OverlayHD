@@ -113,7 +113,7 @@
 		<ePixmap pixmap="icons/rass_logo.png" position="675,143" size="50,21" alphatest="on" transparent="1" />
 		<eLabel text="Interactive" position="735,140" size="485,35" font="Regular;28" transparent="1" zPosition="2" />
 		<eLabel position="665,180" size="450,2" backgroundColor="White" zPosition="2" />
-		<widget name="Marker" position="650,195" size="510,400" backgroundColor="#33000000" backgroundColorSelected="MenuSelected" foregroundColor="Blue" transparent="1" zPosition="2" />
+		<widget name="Marker" position="650,195" size="510,400" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
 		<eLabel text="0" position="670,210" size="16,25" font="Regular;21" transparent="1" zPosition="3" />
 		<eLabel text="Index" position="1065,210" size="60,25" font="Regular;21" transparent="1" zPosition="3" />
 		<eLabel text="1" position="670,260" size="16,25" font="Regular;21" transparent="1" zPosition="3" />
@@ -188,7 +188,7 @@
 	</screen>
 
 	<screen name="QuickSubtitlesConfigMenu" title="Subtitle settings" position="50,50" size="480,405" backgroundColor="#7f000000" flags="wfNoBorder">
-		<widget name="config" position="5,5" size="470,365" backgroundColorSelected="MenuSelected" enableWrapAround="1" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="config" position="5,5" size="470,365" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" />
 		<widget name="videofps" position="5,380" size="470,20" backgroundColor="#41000000" font="Regular;16" foregroundColor="White" halign="left" transparent="1" valign="center" zPosition="2" />
 	</screen>
 
@@ -509,13 +509,13 @@
 	<screen name="ServerEditor" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<widget name="config" position="590,145" size="610,450" backgroundColorSelected="MenuSelected" enableWrapAround="1" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="config" position="590,145" size="610,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
 
 	<screen name="StreamingChannelFromServerScreen" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<widget name="list" position="590,145" size="610,450" backgroundColorSelected="MenuSelected" enableWrapAround="1" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="list" position="590,145" size="610,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" />
 <!--####-->		<!-- <ePixmap pixmap="frame/frame_400x200.png" position="50,195" size="400,200" alphatest="on" /> -->
 		<widget source="statusbar" render="Label" position="60,205" size="380,180" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="2" />
 	</screen>

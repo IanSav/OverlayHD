@@ -17,7 +17,7 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColourBacks" />
 		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" /> -->
-		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1">
+		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -56,6 +56,7 @@
 
 	<screen name="QuitMainloopScreen" title="Power / Restart" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColourBacks" />
 		<ePixmap pixmap="OverlayHD/menus/mainmenu_shuffle.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<panel name="ScreenTemplateOverlayText0" />
 	</screen>
@@ -78,7 +79,7 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColourBacks" />
 		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" /> -->
-		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1">
+		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -166,19 +167,19 @@
 					#  CCCCCCCCCCCCCCCCCCCCCCCCCCCC Wide Filesystem Name
 					#  DDDDDDDDDDDDDDDDDDDDDDDDDDDD Wide DLNA Name
 					MultiContentEntryText(pos = (20, 0), size = (790, 25), font = 0, flags = RT_HALIGN_LEFT, text = 0), # Index 0
-					MultiContentEntryText(pos = (45, 0), size = (195, 25), font = 0, flags = RT_HALIGN_LEFT, text = 1, color = 0x00999999), # Index 1
-					MultiContentEntryText(pos = (260, 0), size = (530, 25), font = 0, flags = RT_HALIGN_LEFT, text = 2, color = 0x00999999), # Index 2
+					MultiContentEntryText(pos = (45, 0), size = (195, 25), font = 0, flags = RT_HALIGN_LEFT, text = 1, color = "TextIndented"), # Index 1
+					MultiContentEntryText(pos = (260, 0), size = (530, 25), font = 0, flags = RT_HALIGN_LEFT, text = 2, color = "TextIndented"), # Index 2
 					MultiContentEntryText(pos = (20, 0), size = (215, 25), font = 0, flags = RT_HALIGN_LEFT, text = 3), # Index 3
 					MultiContentEntryText(pos = (260, 0), size = (530, 25), font = 0, flags = RT_HALIGN_LEFT, text = 4), # Index 4
-					MultiContentEntryText(pos = (45, 0), size = (195, 25), font = 0, flags = RT_HALIGN_LEFT, text = 5, color = 0x00999999), # Index 5
-					MultiContentEntryText(pos = (260, 0), size = (310, 25), font = 0, flags = RT_HALIGN_LEFT, text = 6, color = 0x00999999), # Index 6
-					MultiContentEntryText(pos = (590, 0), size = (200, 25), font = 0, flags = RT_HALIGN_RIGHT, text = 7, color = 0x00999999), # Index 7
-					MultiContentEntryText(pos = (70, 0), size = (170, 25), font = 0, flags = RT_HALIGN_LEFT, text = 8, color = 0x00999999), # Index 8
-					MultiContentEntryText(pos = (260, 0), size = (110, 25), font = 0, flags = RT_HALIGN_LEFT, text = 9, color = 0x00999999), # Index 9
-					MultiContentEntryText(pos = (390, 0), size = (190, 25), font = 0, flags = RT_HALIGN_RIGHT, text = 10, color = 0x00999999), # Index A
-					MultiContentEntryText(pos = (600, 0), size = (190, 25), font = 0, flags = RT_HALIGN_RIGHT, text = 11, color = 0x00999999), # Index B
-					MultiContentEntryText(pos = (45, 0), size = (745, 25), font = 0, flags = RT_HALIGN_LEFT, text = 12, color = 0x00999999), # Index C
-					MultiContentEntryText(pos = (45, 0), size = (745, 25), font = 0, flags = RT_HALIGN_LEFT, text = 13, color = 0x00999999) # Index D
+					MultiContentEntryText(pos = (45, 0), size = (195, 25), font = 0, flags = RT_HALIGN_LEFT, text = 5, color = "TextIndented"), # Index 5
+					MultiContentEntryText(pos = (260, 0), size = (310, 25), font = 0, flags = RT_HALIGN_LEFT, text = 6, color = "TextIndented"), # Index 6
+					MultiContentEntryText(pos = (590, 0), size = (200, 25), font = 0, flags = RT_HALIGN_RIGHT, text = 7, color = "TextIndented"), # Index 7
+					MultiContentEntryText(pos = (70, 0), size = (170, 25), font = 0, flags = RT_HALIGN_LEFT, text = 8, color = "TextIndented"), # Index 8
+					MultiContentEntryText(pos = (260, 0), size = (110, 25), font = 0, flags = RT_HALIGN_LEFT, text = 9, color = "TextIndented"), # Index 9
+					MultiContentEntryText(pos = (390, 0), size = (190, 25), font = 0, flags = RT_HALIGN_RIGHT, text = 10, color = "TextIndented"), # Index A
+					MultiContentEntryText(pos = (600, 0), size = (190, 25), font = 0, flags = RT_HALIGN_RIGHT, text = 11, color = "TextIndented"), # Index B
+					MultiContentEntryText(pos = (45, 0), size = (745, 25), font = 0, flags = RT_HALIGN_LEFT, text = 12, color = "TextIndented"), # Index C
+					MultiContentEntryText(pos = (45, 0), size = (745, 25), font = 0, flags = RT_HALIGN_LEFT, text = 13, color = "TextIndented") # Index D
 					],
 				"fonts": [gFont("Regular", 20)],
 				"itemHeight": 25,
@@ -203,8 +204,8 @@
 					# 00000000000000000000000000000 Heading
 					#  1111111 22222222222222222222 Indented Label / Value
 					MultiContentEntryText(pos = (20, 0), size = (790, 25), font = 0, flags = RT_HALIGN_LEFT, text = 0), # Index 0
-					MultiContentEntryText(pos = (45, 0), size = (195, 25), font = 0, flags = RT_HALIGN_LEFT, text = 1, color = 0x00999999), # Index 1
-					MultiContentEntryText(pos = (260, 0), size = (530, 25), font = 0, flags = RT_HALIGN_LEFT, text = 2, color = 0x00999999) # Index 2
+					MultiContentEntryText(pos = (45, 0), size = (195, 25), font = 0, flags = RT_HALIGN_LEFT, text = 1, color = "TextIndented"), # Index 1
+					MultiContentEntryText(pos = (260, 0), size = (530, 25), font = 0, flags = RT_HALIGN_LEFT, text = 2, color = "TextIndented") # Index 2
 					],
 				"fonts": [gFont("Regular", 20)],
 				"itemHeight": 25,
@@ -244,12 +245,12 @@
 					#  1111111 555555555 6666666666 Gateway Label / Gateway IP / Gateway Destination
 					# 33333333 777777777 888 9      Network Label / Interface Type / Link Label / Link Status Pixmap
 					MultiContentEntryText(pos = (20, 0), size = (790, 25), font = 0, flags = RT_HALIGN_LEFT, text = 0), # Index 0
-					MultiContentEntryText(pos = (45, 0), size = (195, 25), font = 0, flags = RT_HALIGN_LEFT, text = 1, color = 0x00999999), # Index 1
-					MultiContentEntryText(pos = (260, 0), size = (530, 25), font = 0, flags = RT_HALIGN_LEFT, text = 2, color = 0x00999999), # Index 2
+					MultiContentEntryText(pos = (45, 0), size = (195, 25), font = 0, flags = RT_HALIGN_LEFT, text = 1, color = "TextIndented"), # Index 1
+					MultiContentEntryText(pos = (260, 0), size = (530, 25), font = 0, flags = RT_HALIGN_LEFT, text = 2, color = "TextIndented"), # Index 2
 					MultiContentEntryText(pos = (20, 0), size = (215, 25), font = 0, flags = RT_HALIGN_LEFT, text = 3), # Index 3
 					MultiContentEntryText(pos = (260, 0), size = (530, 25), font = 0, flags = RT_HALIGN_LEFT, text = 4), # Index 4
-					MultiContentEntryText(pos = (260, 0), size = (270, 25), font = 0, flags = RT_HALIGN_LEFT, text = 5, color = 0x00999999), # Index 5
-					MultiContentEntryText(pos = (550, 0), size = (240, 25), font = 0, flags = RT_HALIGN_LEFT, text = 6, color = 0x00999999), # Index 6
+					MultiContentEntryText(pos = (260, 0), size = (270, 25), font = 0, flags = RT_HALIGN_LEFT, text = 5, color = "TextIndented"), # Index 5
+					MultiContentEntryText(pos = (550, 0), size = (240, 25), font = 0, flags = RT_HALIGN_LEFT, text = 6, color = "TextIndented"), # Index 6
 					MultiContentEntryText(pos = (260, 0), size = (270, 25), font = 0, flags = RT_HALIGN_LEFT, text = 7), # Index 7
 					MultiContentEntryText(pos = (550, 0), size = (150, 25), font = 0, flags = RT_HALIGN_LEFT, text = 8), # Index 8
 					# MultiContentEntryPixmapAlphaTest(pos = (750, 6), size = (15, 16), png = 9) # Index 9
@@ -503,8 +504,8 @@
 	<screen name="VlcMediaListScreen" title="VlcMediaListScreen" position="90,90" size="1100,576">
 		<eLabel text="vlc player" position="800,25" size="300,22" font="Regular;20" halign="center" />
 		<eLabel position="740,100" size="540,2" backgroundColor="Pinstripe" />
-		<widget name="filelist_button_sel" pixmap="epgs/epg_now.png" position="125,100" size="1100,35" alphatest="on" zPosition="3" />
-		<widget name="playlist_button_sel" pixmap="epgs/epg_next.png" position="125,100" size="1100,35" alphatest="on" zPosition="3" />
+		<widget name="filelist_button_sel" pixmap="epg/epg_now.png" position="125,100" size="1100,35" alphatest="on" zPosition="3" />
+		<widget name="playlist_button_sel" pixmap="epg/epg_next.png" position="125,100" size="1100,35" alphatest="on" zPosition="3" />
 		<widget name="filelist_text" position="192,107" size="185,25" backgroundColor="TextBackground" font="Regular;20" halign="center" transparent="1" zPosition="4" />
 		<widget name="playlist_text" position="442,107" size="185,25" backgroundColor="TextBackground" font="Regular;20" halign="center" transparent="1" zPosition="4" />
 		<eLabel position="740,133" size="540,2" backgroundColor="Pinstripe" />

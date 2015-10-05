@@ -6,7 +6,7 @@
 
 	<screen name="WizardTemplate" title="Welcome..." position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColourBacks" />
+		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateButtonTextVKey" />
 		<ePixmap name="wizard" pixmap="images/wizard.png" position="230,250" size="220,220" alphatest="on" transparent="1" />
 		<eLabel position="500,80" size="730,2" backgroundColor="Pinstripe" />
@@ -59,12 +59,10 @@
 
 <!-- Wizard Notification Box -->
 
-	<!--
 	<screen name="NotificationBox" title="Wizard Notification" position="150,40" size="503,66" backgroundColor="#202020" flags="wfNoBorder" zPosition="100">
 		<eLabel position="0,0" size="500,63" backgroundColor="#c0c0c0" zPosition="-1" />
 		<widget source="text" render="Label" position="5,5" size="490,53" font="Regular;18" halign="center" valign="center" zPosition="100" />
 	</screen>
-	-->
 
 <!-- Network Wizard -->
 
@@ -94,7 +92,7 @@
 
 	<screen name="LanguageWizard" title="Language Selection" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="WizardTemplate" />
-		<widget source="languages" render="Listbox" position="500,350" size="730,300" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1">
+		<widget source="languages" render="Listbox" position="500,350" size="730,300" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -147,29 +145,26 @@
 		<widget name="errors" position="500,350" size="730,280" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" valign="top" />
 	</screen>
 
-<!-- Remote Tuner Scanner Wizard -->
-
-	<screen name="RemoteTunerScanner" title="IPTV Server Scanner" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="WizardList" />
-	</screen>
-
-<!-- Remote Tuner Server Downloader Wizard -->
-
-	<screen name="RemoteTunerServerDownloader" title="IPTV Server Channel Downloader" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<!-- <eLabel text="IPTV Server Channel Downloader" position="575,40" size="585,35" font="Regular;28" transparent="1" zPosition="2" /> -->
-		<panel name="WizardConfig" />
-	</screen>
-
-<!-- Remote Tuner Server Editor Wizard -->
-
-	<screen name="RemoteTunerServerEditor" title="IPTV Server Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<!-- <eLabel text="IPTV Server Setup" position="575,40" size="585,35" font="Regular;28" transparent="1" zPosition="2" /> -->
-		<panel name="WizardConfig" />
-	</screen>
-
 <!-- Final "Congratulations" Setup Wizard -->
 
 	<screen name="IniEndWizard" title="Welcome..." position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="WizardTemplate" />
 	</screen>
+
+<!-- Remote IP Tuner Scanner Wizard -->
+
+	<!-- Moved to skin_setup.xml
+	<screen name="RemoteTunerScanner" title="IPTV Server Scanner" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="WizardList" />
+	</screen>
+
+	<screen name="RemoteTunerServerDownloader" title="IPTV Server Channel Downloader" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="WizardConfig" />
+	</screen>
+
+	<screen name="RemoteTunerServerEditor" title="IPTV Server Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="WizardConfig" />
+	</screen>
+	-->
+
 </skin>

@@ -63,7 +63,7 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<widget name="list_head" position="50,80" size="1180,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" />
-		<widget name="filedata" position="50,115" size="1180,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="filedata" position="50,115" size="1180,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
 
 	<screen name="ArchiverMenuScreen" title="File Commander - Archiver" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
@@ -99,7 +99,7 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<widget name="list_left_head" position="50,80" size="1180,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" />
-		<widget name="list_left" position="50,115" size="1180,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="list_left" position="50,115" size="1180,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
 
 	<screen name="UnpackInfoScreen" title="File Commander - Archiver" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
@@ -252,7 +252,6 @@
 		<panel name="ScreenTemplateButtonHelp" />
 		<ePixmap pixmap="menus/mainmenu_tasks_browser.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<panel name="ScreenTemplateFrame830x70" />
-		<!-- <ePixmap pixmap="frames/frame_830x70.png" position="400,585" size="830,75" alphatest="on" /> -->
 		<widget name="filelist" position="400,80" size="830,230" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
 		<widget name="textbook" position="400,330" size="830,30" backgroundColor="darkgrey" font="Regular;24" foregroundColor="Black" valign="center" />
 		<widget name="booklist" position="400,360" size="830,200" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" zPosition="2" />
@@ -273,7 +272,6 @@
 		<panel name="ScreenTemplateButtonHelp" />
 		<ePixmap pixmap="menus/mainmenu_tasks_browser.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<panel name="ScreenTemplateFrame830x70" />
-		<!-- <ePixmap pixmap="frames/frame_830x70.png" position="400,585" size="830,75" alphatest="on" /> -->
 		<widget name="filelist" position="400,80" size="830,230" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
 		<widget name="textbook" position="400,330" size="830,30" backgroundColor="darkgrey" font="Regular;24" foregroundColor="Black" valign="center" />
 		<widget name="booklist" position="400,360" size="830,200" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" zPosition="2" />
@@ -294,7 +292,6 @@
 		<!-- <panel name="ScreenTemplateButtonHelp" /> -->
 		<ePixmap pixmap="menus/mainmenu_tasks_browser.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<panel name="ScreenTemplateFrame830x70" />
-		<!-- <ePixmap pixmap="frames/frame_830x70.png" position="400,585" size="830,75" alphatest="on" /> -->
 		<widget name="filelist" position="400,80" size="830,230" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
 		<widget name="textbook" position="400,330" size="830,30" backgroundColor="darkgrey" font="Regular;24" foregroundColor="Black" valign="center" />
 		<widget name="booklist" position="400,360" size="830,200" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" zPosition="2" />

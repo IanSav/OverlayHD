@@ -280,10 +280,8 @@
 
 	<screen name="MoviePlayer" title="Media Player" position="0,0" size="1280,720" backgroundColor="TransparentBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplateDebug" />
-		<!-- Clock Panel Area -->
 		<panel name="ClockTemplate" />
-		<!-- InfoBar Area Background -->
-		<eLabel position="0,650" size="1280,70" backgroundColor="ScreenBackground" transparent="0" zPosition="-1" />
+		<eLabel position="0,650" size="1280,70" backgroundColor="ScreenBackground" transparent="1" zPosition="-1" />
 		<eLabel position="172,660" size="2,50" backgroundColor="Pinstripe" />
 		<!-- Playback state and speed indicator -->
 		<widget name="statusicon" pixmaps="icons/media_play.png,icons/media_pause.png,icons/media_stop.png,icons/media_ff.png,icons/media_rew.png,icons/media_slow.png,icons/blank.png" position="20,661" size="48,48" alphatest="on" transparent="1" />
@@ -324,41 +322,41 @@
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonInfo" />
 		<panel name="ScreenTemplateButtonColours" />
-		<widget name="channel" position="50,80" size="280,25" font="Regular;20" foregroundColor="EPGProgramChannel" transparent="1" />
-		<widget source="Event" render="Label" position="350,80" size="400,25" font="Regular;20" foregroundColor="EPGProgramDateTime" halign="right" transparent="1">
+		<widget name="channel" position="50,80" size="280,25" backgroundColor="EPGBackground" font="Regular;20" foregroundColor="EPGChannel" transparent="1" />
+		<widget source="Event" render="Label" position="350,80" size="400,25" backgroundColor="EPGBackground" font="Regular;20" foregroundColor="EPGTimes" halign="right" transparent="1">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Format:%a %e-%b-%Y  %H:%M -</convert>
 		</widget>
-		<widget source="Event" render="Label" position="760,80" size="100,25" font="Regular;20" foregroundColor="EPGProgramDateTime" transparent="1">
+		<widget source="Event" render="Label" position="760,80" size="100,25" backgroundColor="EPGBackground" font="Regular;20" foregroundColor="EPGTimes" transparent="1">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<widget source="Event" render="Label" position="950,80" size="280,25" font="Regular;20" foregroundColor="EPGProgramDuration" halign="right" transparent="1">
+		<widget source="Event" render="Label" position="950,80" size="280,25" backgroundColor="EPGBackground" font="Regular;20" foregroundColor="EPGDuration" halign="right" transparent="1">
 			<convert type="EventTime">Duration</convert>
 			<convert type="ClockToText">InMinutes</convert>
 		</widget>
 
-		<widget source="Event" render="Label" position="150,160" size="980,30" font="Regular;25" foregroundColor="EPGProgramName" transparent="1">
+		<widget source="Event" render="Label" position="50,160" size="1180,30" backgroundColor="EPGBackground" font="Regular;25" foregroundColor="EPGProgram" transparent="1">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="Event" render="Label" position="150,220" size="980,200" font="Regular;22" foregroundColor="EPGProgramDescription" halign="block" transparent="1">
+		<widget source="Event" render="Label" position="50,220" size="1180,403" backgroundColor="EPGBackground" font="Regular;22" foregroundColor="EPGDetails" halign="block" transparent="1">
 			<convert type="EventName">FullDescription,Trimmed,Separated</convert>
 		</widget>
-
-		<!-- <widget source="CurrentService" render="Label" position="150,460" size="980,30" font="Regular;20" foregroundColor="EPGProgramChannel" transparent="1">
+		<!--
+		<widget source="CurrentService" render="Label" position="50,460" size="1180,30" backgroundColor="EPGBackground" font="Regular;20" foregroundColor="EPGChannel" transparent="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget source="CurrentService" render="Label" position="150,490" size="980,30" font="Regular;20" foregroundColor="EPGProgramChannel" transparent="1">
+		<widget source="CurrentService" render="Label" position="50,490" size="1180,30" backgroundColor="EPGBackground" font="Regular;20" foregroundColor="EPGProvider" transparent="1">
 			<convert type="ServiceName">Provider</convert>
-		</widget> -->
-
-		<widget source="Event" render="Label" position="50,630" size="50,20" font="Regular;18" foregroundColor="White" transparent="1">
+		</widget>
+		-->
+		<widget source="Event" render="Label" position="50,630" size="40,25" backgroundColor="EPGBackground" font="Regular;20" foregroundColor="EPGRating" transparent="1">
 			<convert type="EventName">SmallRating</convert>
 		</widget>
-		<widget source="Event" render="Label" position="100,630" size="540,20" font="Regular;18" foregroundColor="White" transparent="1">
+		<widget source="Event" render="Label" position="110,630" size="540,25" backgroundColor="EPGBackground" font="Regular;20" foregroundColor="EPGRating" transparent="1">
 			<convert type="EventName">Rating</convert>
 		</widget>
-		<widget source="Event" render="Label" position="640,630" size="590,20" font="Regular;18" foregroundColor="White" halign="right" transparent="1">
+		<widget source="Event" render="Label" position="640,630" size="590,25" backgroundColor="EPGBackground" font="Regular;20" foregroundColor="EPGRating" halign="right" transparent="1">
 			<convert type="EventName">Genre</convert>
 		</widget>
 		<widget name="FullDescription" position="0,0" size="0,0" font="Regular;20" transparent="1" />
@@ -370,51 +368,7 @@
 <!-- MEDIA > INFO - Event Info View -->
 
 	<screen name="EventViewSimple" title="Simple Event View" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonMenu" />
-		<panel name="ScreenTemplateButtonInfo" />
-		<panel name="ScreenTemplateButtonColours" />
-		<widget name="channel" position="50,80" size="280,25" font="Regular;20" foregroundColor="EPGProgramChannel" transparent="1" />
-		<widget source="Event" render="Label" position="350,80" size="400,25" font="Regular;20" foregroundColor="EPGProgramDateTime" halign="right" transparent="1">
-			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">Format:%a %e-%b-%Y  %H:%M -</convert>
-		</widget>
-		<widget source="Event" render="Label" position="760,80" size="100,25" font="Regular;20" foregroundColor="EPGProgramDateTime" transparent="1">
-			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText">Format:%H:%M</convert>
-		</widget>
-		<widget source="Event" render="Label" position="950,80" size="280,25" font="Regular;20" foregroundColor="EPGProgramDuration" halign="right" transparent="1">
-			<convert type="EventTime">Duration</convert>
-			<convert type="ClockToText">InMinutes</convert>
-		</widget>
-
-		<widget source="Event" render="Label" position="150,160" size="980,30" font="Regular;25" foregroundColor="EPGProgramName" transparent="1">
-			<convert type="EventName">Name</convert>
-		</widget>
-		<widget source="Event" render="Label" position="150,220" size="980,200" font="Regular;22" foregroundColor="EPGProgramDescription" halign="block" transparent="1">
-			<convert type="EventName">FullDescription,Trimmed,Separated</convert>
-		</widget>
-
-		<!-- <widget source="CurrentService" render="Label" position="150,460" size="980,30" font="Regular;20" foregroundColor="EPGProgramChannel" transparent="1">
-			<convert type="ServiceName">Name</convert>
-		</widget>
-		<widget source="CurrentService" render="Label" position="150,490" size="980,30" font="Regular;20" foregroundColor="EPGProgramChannel" transparent="1">
-			<convert type="ServiceName">Provider</convert>
-		</widget> -->
-
-		<widget source="Event" render="Label" position="50,630" size="50,20" font="Regular;18" foregroundColor="White" transparent="1">
-			<convert type="EventName">SmallRating</convert>
-		</widget>
-		<widget source="Event" render="Label" position="100,630" size="540,20" font="Regular;18" foregroundColor="White" transparent="1">
-			<convert type="EventName">Rating</convert>
-		</widget>
-		<widget source="Event" render="Label" position="640,630" size="590,20" font="Regular;18" foregroundColor="White" halign="right" transparent="1">
-			<convert type="EventName">Genre</convert>
-		</widget>
-		<widget name="FullDescription" position="0,0" size="0,0" font="Regular;20" transparent="1" />
-		<widget name="datetime" position="0,0" size="0,0" font="Regular;20" transparent="1" />
-		<widget name="epg_description" position="0,0" size="0,0" font="Regular;20" transparent="1" />
-		<widget name="duration" position="0,0" size="0,0" font="Regular;20" transparent="1" />
+		<panel name="EventView" />
 	</screen>
 
 <!-- OK - Radio InfoBar -->
