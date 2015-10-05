@@ -22,6 +22,8 @@
 		<item level="3" text="SMS Helper background colour" description="Select a colour for the SMS helper background.">config.plugins.skin.OverlayHD.SMSHelperBackgroundColour</item>
 		<item level="3" text="SMS Helper background transparency" description="Select a colour for the SMS helper background transparency.">config.plugins.skin.OverlayHD.SMSHelperBackgroundTransparency</item>
 		<item level="0" text="SMS Helper text colour" description="Select a colour for the SMS helper text.">config.plugins.skin.OverlayHD.SMSHelperText</item>
+		<item level="0" text="Volume control background colour" description="Select a colour for the background of the volume control slider bar.">config.plugins.skin.OverlayHD.VolumeBackground</item>
+		<item level="0" text="Volume control colour" description="Select a colour for the volume control slider bar.">config.plugins.skin.OverlayHD.VolumeColour</item>
 		<item level="0" text="Movie selection find character colour" description=" ">config.plugins.skin.OverlayHD.FindCharacter</item>
 		<item level="3" text="Info background colour" description="Select a colour for info background.">config.plugins.skin.OverlayHD.InfoBackgroundColour</item>
 		<item level="3" text="Info background transparency" description="Select a colour for info background transparency.">config.plugins.skin.OverlayHD.InfoBackgroundTransparency</item>

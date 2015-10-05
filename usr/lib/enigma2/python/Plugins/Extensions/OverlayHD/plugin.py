@@ -1,6 +1,6 @@
 #====================================================
 # OverlayHD Skin Manager
-# Version Date - 22-Sep-2015
+# Version Date - 2-Oct-2015
 # Version Number - 1.10
 # Coding by IanSav
 #====================================================
@@ -23,15 +23,19 @@ colour_choices = [
 	("Blue", _("Blue")),
 	("Coral", _("Coral")),
 	("Cyan", _("Cyan")),
+	("DarkerBlue", _("Darker Blue")),
 	("DarkerGrey", _("Darker Grey")),
 	("DarkGrey", _("Dark Grey")),
+	("DeepBlue", _("Deep Blue")),
 	("DeepGrey", _("Deep Grey")),
 	("DeepPink", _("Deep Pink")),
 	("DimGrey", _("Dim Grey")),
 	("DodgerBlue", _("Dodger Blue")),
+	("DullBlue", _("Dull Blue")),
 	("DullGreen", _("Dull Green")),
 	("DullRed", _("Dull Red")),
 	("DullYellow", _("Dull Yellow")),
+	("EgyptianBlue", _("Egyptian Blue")),
 	("Gainsboro", _("Gainsboro")),
 	("Gold", _("Gold")),
 	("Green", _("Green")),
@@ -45,6 +49,7 @@ colour_choices = [
 	("Magenta", _("Magenta")),
 	("Maroon", _("Maroon")),
 	("MediumBlue", _("Medium Blue")),
+	("MidnightBlue", _("Midnight Blue")),
 	("Navy", _("Navy")),
 	("Orange", _("Orange")),
 	("OrangeRed", _("Orange Red")),
@@ -110,6 +115,8 @@ config.plugins.skin.OverlayHD.Text = ConfigSelection(default="White", choices=co
 config.plugins.skin.OverlayHD.SMSHelperBackgroundColour = ConfigSelection(default="Black", choices=colour_choices)
 config.plugins.skin.OverlayHD.SMSHelperBackgroundTransparency = ConfigSelection(default="0x00000001", choices=background_choice + transparency_choices)
 config.plugins.skin.OverlayHD.SMSHelperText = ConfigSelection(default="White", choices=colour_choices)
+config.plugins.skin.OverlayHD.VolumeBackground = ConfigSelection(default="Black", choices=colour_choices)
+config.plugins.skin.OverlayHD.VolumeColour = ConfigSelection(default="Blue", choices=colour_choices)
 config.plugins.skin.OverlayHD.FindCharacter = ConfigSelection(default="Gold", choices=colour_choices)
 config.plugins.skin.OverlayHD.InfoBackgroundColour = ConfigSelection(default="Black", choices=colour_choices)
 config.plugins.skin.OverlayHD.InfoBackgroundTransparency = ConfigSelection(default="0x00000001", choices=background_choice + transparency_choices)
@@ -136,55 +143,58 @@ config.plugins.skin.OverlayHD.InfoMediaLength = ConfigSelection(default="LightBl
 config.plugins.skin.OverlayHD.InfoDiskStats = ConfigSelection(default="DullYellow", choices=colour_choices)
 config.plugins.skin.OverlayHD.TunerBackgroundColour = ConfigSelection(default="Black", choices=colour_choices)
 
+config.plugins.skin.OverlayHD.GraphicalEPGTransparency = ConfigSelection(default="0x00000001", choices=background_choice + transparency_choices)
+config.plugins.skin.OverlayHD.InfobarEPGTransparency = ConfigSelection(default="0x00000001", choices=background_choice + transparency_choices)
 config.plugins.skin.OverlayHD.EPGBackground = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGProgram = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGTimes = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGDuration = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGRating = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGDetails = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGTimeLineBorderColour = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGTimeLineColour = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGGridBackground = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGEntryBackgroundColor = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGEntryBackgroundColorSelected = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGEntryForegroundColor = ConfigSelection(default="Black", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGProgram = ConfigSelection(default="Gold", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGTimes = ConfigSelection(default="Grey", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGDuration = ConfigSelection(default="Grey", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGRating = ConfigSelection(default="Grey", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGDetails = ConfigSelection(default="White", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGTimeLineBorderColour = ConfigSelection(default="ScreenBackground", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGTimeLineColour = ConfigSelection(default="DullYellow", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGGridBackground = ConfigSelection(default="Orange", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGEntryBackgroundColor = ConfigSelection(default="DarkerBlue", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGEntryBackgroundColorSelected = ConfigSelection(default="Yellow", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGEntryForegroundColor = ConfigSelection(default="White", choices=colour_choices)
 config.plugins.skin.OverlayHD.EPGEntryForegroundColorSelected = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGRecordBackgroundColor = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGRecordBackgroundColorSelected = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGRecordForegroundColor = ConfigSelection(default="Black", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGEntryForegroundColorNowSelected = ConfigSelection(default="Black", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGRecordBackgroundColor = ConfigSelection(default="DullRed", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGRecordBackgroundColorSelected = ConfigSelection(default="Red", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGRecordForegroundColor = ConfigSelection(default="White", choices=colour_choices)
 config.plugins.skin.OverlayHD.EPGRecordForegroundColorSelected = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGServiceBackgroundColor = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGServiceBackgroundColorNow = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGServiceForegroundColor = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGServiceForegroundColorNow = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGZapBackgroundColor = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGZapBackgroundColorSelected = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGZapForegroundColor = ConfigSelection(default="Black", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGServiceBackgroundColor = ConfigSelection(default="DeepBlue", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGServiceBackgroundColorNow = ConfigSelection(default="Blue", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGServiceForegroundColor = ConfigSelection(default="White", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGServiceForegroundColorNow = ConfigSelection(default="White", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGZapBackgroundColor = ConfigSelection(default="DullGreen", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGZapBackgroundColorSelected = ConfigSelection(default="Green", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGZapForegroundColor = ConfigSelection(default="White", choices=colour_choices)
 config.plugins.skin.OverlayHD.EPGZapForegroundColorSelected = ConfigSelection(default="Black", choices=colour_choices)
 config.plugins.skin.OverlayHD.EPGPIGBackground = ConfigSelection(default="Black", choices=colour_choices)
 config.plugins.skin.OverlayHD.EPGPIGBorder = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGPIGColour = ConfigSelection(default="Black", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGPIGColour = ConfigSelection(default="WarmYellow", choices=colour_choices)
 config.plugins.skin.OverlayHD.EPGPIGProgressBackground = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGPIGProgressColour = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGPIGProgressBorder = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGPIGTimeLineBorderColour = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGPIGTimeLineColour = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGPIGGridBackground = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGPIGEntryBackgroundColor = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGPIGEntryBackgroundColorSelected = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGPIGEntryForegroundColor = ConfigSelection(default="Black", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGPIGProgressColour = ConfigSelection(default="WarmYellow", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGPIGProgressBorder = ConfigSelection(default="WarmYellow", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGPIGTimeLineBorderColour = ConfigSelection(default="ScreenBackground", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGPIGTimeLineColour = ConfigSelection(default="DullYellow", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGPIGGridBackground = ConfigSelection(default="Orange", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGPIGEntryBackgroundColor = ConfigSelection(default="DarkerBlue", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGPIGEntryBackgroundColorSelected = ConfigSelection(default="Yellow", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGPIGEntryForegroundColor = ConfigSelection(default="White", choices=colour_choices)
 config.plugins.skin.OverlayHD.EPGPIGEntryForegroundColorSelected = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGPIGRecordBackgroundColor = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGPIGRecordBackgroundColorSelected = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGPIGRecordForegroundColor = ConfigSelection(default="Black", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGPIGRecordBackgroundColor = ConfigSelection(default="DullRed", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGPIGRecordBackgroundColorSelected = ConfigSelection(default="Red", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGPIGRecordForegroundColor = ConfigSelection(default="White", choices=colour_choices)
 config.plugins.skin.OverlayHD.EPGPIGRecordForegroundColorSelected = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGPIGServiceBackgroundColor = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGPIGServiceBackgroundColorNow = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGPIGServiceForegroundColor = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGPIGServiceForegroundColorNow = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGPIGZapBackgroundColor = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGPIGZapBackgroundColorSelected = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.EPGPIGZapForegroundColor = ConfigSelection(default="Black", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGPIGServiceBackgroundColor = ConfigSelection(default="DeepBlue", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGPIGServiceBackgroundColorNow = ConfigSelection(default="Blue", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGPIGServiceForegroundColor = ConfigSelection(default="White", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGPIGServiceForegroundColorNow = ConfigSelection(default="White", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGPIGZapBackgroundColor = ConfigSelection(default="DullGreen", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGPIGZapBackgroundColorSelected = ConfigSelection(default="Green", choices=colour_choices)
+config.plugins.skin.OverlayHD.EPGPIGZapForegroundColor = ConfigSelection(default="White", choices=colour_choices)
 config.plugins.skin.OverlayHD.EPGPIGZapForegroundColorSelected = ConfigSelection(default="Black", choices=colour_choices)
 
 config.plugins.skin.OverlayHD.TunerBackgroundTransparency = ConfigSelection(default="0x00000001", choices=background_choice + transparency_choices)
@@ -271,59 +281,115 @@ class OverlayHDSkinManager(Setup):
 		self.close()
 
 	def default(self):
-		if config.skin.primary_skin.getValue() == "OverlayHD/skin.xml":
-			print "[OverlayHD] OverlayHD Skin Manager - Setting OverlayHD skin to default settings."
+		if config.skin.primary_skin.value == "OverlayHD/skin.xml":
+			print "[OverlayHD] Setting skin to default settings."
 			self.process = False
-			config.plugins.skin.OverlayHD.ScreenBackgroundColour.setValue("Black")
-			config.plugins.skin.OverlayHD.ScreenBackgroundTransparency.setValue("0x3f000000")
-			config.plugins.skin.OverlayHD.BannerClock.setValue("White")
-			config.plugins.skin.OverlayHD.BannerTitle.setValue("White")
-			config.plugins.skin.OverlayHD.Pinstripe.setValue("DarkerGrey")
-			config.plugins.skin.OverlayHD.MenuBackgroundColour.setValue("Black")
-			config.plugins.skin.OverlayHD.MenuBackgroundTransparency.setValue("0x00000001")
-			config.plugins.skin.OverlayHD.MenuSelectedColour.setValue("DodgerBlue")
-			config.plugins.skin.OverlayHD.MenuSelectedTransparency.setValue("0x26000000")
-			config.plugins.skin.OverlayHD.MenuText.setValue("White")
-			config.plugins.skin.OverlayHD.MenuTextSelected.setValue("White")
-			config.plugins.skin.OverlayHD.FootnoteBackgroundColour.setValue("Black")
-			config.plugins.skin.OverlayHD.FootnoteBackgroundTransparency.setValue("0x00000001")
-			config.plugins.skin.OverlayHD.FootnoteText.setValue("DimGrey")
-			config.plugins.skin.OverlayHD.TextBackgroundColour.setValue("Black")
-			config.plugins.skin.OverlayHD.TextBackgroundTransparency.setValue("0x00000001")
-			config.plugins.skin.OverlayHD.Text.setValue("White")
-			config.plugins.skin.OverlayHD.SMSHelperBackgroundColour.setValue("Black")
-			config.plugins.skin.OverlayHD.SMSHelperBackgroundTransparency.setValue("0x00000001")
-			config.plugins.skin.OverlayHD.SMSHelperText.setValue("White")
-			config.plugins.skin.OverlayHD.FindCharacter.setValue("Gold")
-			config.plugins.skin.OverlayHD.InfoBackgroundColour.setValue("Black")
-			config.plugins.skin.OverlayHD.InfoBackgroundTransparency.setValue("0x00000001")
-			config.plugins.skin.OverlayHD.InfoLCN.setValue("LightBlue")
-			config.plugins.skin.OverlayHD.InfoChannel.setValue("LightBlue")
-			config.plugins.skin.OverlayHD.InfoBroadcaster.setValue("LightBlue")
-			config.plugins.skin.OverlayHD.InfoBouquet.setValue("LightBlue")
-			config.plugins.skin.OverlayHD.InfoProgramNow.setValue("White")
-			config.plugins.skin.OverlayHD.InfoTimesNow.setValue("Grey")
-			config.plugins.skin.OverlayHD.InfoDurationNow.setValue("LightBlue")
-			config.plugins.skin.OverlayHD.InfoFileSizeNow.setValue("LightBlue")
-			config.plugins.skin.OverlayHD.InfoDetailsNow.setValue("White")
-			config.plugins.skin.OverlayHD.InfoRatingNow.setValue("Grey")
-			config.plugins.skin.OverlayHD.InfoProgramNext.setValue("White")
-			config.plugins.skin.OverlayHD.InfoTimesNext.setValue("Grey")
-			config.plugins.skin.OverlayHD.InfoDurationNext.setValue("LightBlue")
-			config.plugins.skin.OverlayHD.InfoFileSizeNext.setValue("LightBlue")
-			config.plugins.skin.OverlayHD.InfoDetailsNext.setValue("White")
-			config.plugins.skin.OverlayHD.InfoRatingNext.setValue("Grey")
-			config.plugins.skin.OverlayHD.InfoRecording.setValue("DullRed")
-			config.plugins.skin.OverlayHD.InfoRecordingProgress.setValue("DeepGrey")
-			config.plugins.skin.OverlayHD.InfoMediaName.setValue("LightBlue")
-			config.plugins.skin.OverlayHD.InfoMediaLength.setValue("LightBlue")
-			config.plugins.skin.OverlayHD.InfoDiskStats.setValue("DullYellow")
-			config.plugins.skin.OverlayHD.TunerBackgroundColour.setValue("Black")
-			config.plugins.skin.OverlayHD.TunerBackgroundTransparency.setValue("0x00000001")
+			config.plugins.skin.OverlayHD.ScreenBackgroundColour.value = "Black"
+			config.plugins.skin.OverlayHD.ScreenBackgroundTransparency.value = "0x3f000000"
+			config.plugins.skin.OverlayHD.BannerClock.value = "White"
+			config.plugins.skin.OverlayHD.BannerTitle.value = "White"
+			config.plugins.skin.OverlayHD.Pinstripe.value = "DarkerGrey"
+			config.plugins.skin.OverlayHD.MenuBackgroundColour.value = "Black"
+			config.plugins.skin.OverlayHD.MenuBackgroundTransparency.value = "0x00000001"
+			config.plugins.skin.OverlayHD.MenuSelectedColour.value = "DodgerBlue"
+			config.plugins.skin.OverlayHD.MenuSelectedTransparency.value = "0x26000000"
+			config.plugins.skin.OverlayHD.MenuText.value = "White"
+			config.plugins.skin.OverlayHD.MenuTextSelected.value = "White"
+			config.plugins.skin.OverlayHD.FootnoteBackgroundColour.value = "Black"
+			config.plugins.skin.OverlayHD.FootnoteBackgroundTransparency.value = "0x00000001"
+			config.plugins.skin.OverlayHD.FootnoteText.value = "DimGrey"
+			config.plugins.skin.OverlayHD.TextBackgroundColour.value = "Black"
+			config.plugins.skin.OverlayHD.TextBackgroundTransparency.value = "0x00000001"
+			config.plugins.skin.OverlayHD.Text.value = "White"
+			config.plugins.skin.OverlayHD.SMSHelperBackgroundColour.value = "Black"
+			config.plugins.skin.OverlayHD.SMSHelperBackgroundTransparency.value = "0x00000001"
+			config.plugins.skin.OverlayHD.SMSHelperText.value = "White"
+			config.plugins.skin.OverlayHD.VolumeBackground.value = "Black"
+			config.plugins.skin.OverlayHD.VolumeColour.value = "Blue"
+			config.plugins.skin.OverlayHD.FindCharacter.value = "Gold"
+			config.plugins.skin.OverlayHD.InfoBackgroundColour.value = "Black"
+			config.plugins.skin.OverlayHD.InfoBackgroundTransparency.value = "0x00000001"
+			config.plugins.skin.OverlayHD.InfoLCN.value = "LightBlue"
+			config.plugins.skin.OverlayHD.InfoChannel.value = "LightBlue"
+			config.plugins.skin.OverlayHD.InfoBroadcaster.value = "LightBlue"
+			config.plugins.skin.OverlayHD.InfoBouquet.value = "LightBlue"
+			config.plugins.skin.OverlayHD.InfoProgramNow.value = "White"
+			config.plugins.skin.OverlayHD.InfoTimesNow.value = "Grey"
+			config.plugins.skin.OverlayHD.InfoDurationNow.value = "LightBlue"
+			config.plugins.skin.OverlayHD.InfoFileSizeNow.value = "LightBlue"
+			config.plugins.skin.OverlayHD.InfoDetailsNow.value = "White"
+			config.plugins.skin.OverlayHD.InfoRatingNow.value = "Grey"
+			config.plugins.skin.OverlayHD.InfoProgramNext.value = "White"
+			config.plugins.skin.OverlayHD.InfoTimesNext.value = "Grey"
+			config.plugins.skin.OverlayHD.InfoDurationNext.value = "LightBlue"
+			config.plugins.skin.OverlayHD.InfoFileSizeNext.value = "LightBlue"
+			config.plugins.skin.OverlayHD.InfoDetailsNext.value = "White"
+			config.plugins.skin.OverlayHD.InfoRatingNext.value = "Grey"
+			config.plugins.skin.OverlayHD.InfoRecording.value = "DullRed"
+			config.plugins.skin.OverlayHD.InfoRecordingProgress.value = "DeepGrey"
+			config.plugins.skin.OverlayHD.InfoMediaName.value = "LightBlue"
+			config.plugins.skin.OverlayHD.InfoMediaLength.value = "LightBlue"
+			config.plugins.skin.OverlayHD.InfoDiskStats.value = "DullYellow"
+			config.plugins.skin.OverlayHD.TunerBackgroundColour.value = "Black"
+			config.plugins.skin.OverlayHD.TunerBackgroundTransparency.value = "0x00000001"
+			config.plugins.skin.OverlayHD.GraphicalEPGTransparency.value = "0x00000001"
+			config.plugins.skin.OverlayHD.InfobarEPGTransparency.value = "0x00000001"
+			config.plugins.skin.OverlayHD.EPGBackground.value = "Black"
+			config.plugins.skin.OverlayHD.EPGProgram.value = "Gold"
+			config.plugins.skin.OverlayHD.EPGTimes.value = "Grey"
+			config.plugins.skin.OverlayHD.EPGDuration.value = "Grey"
+			config.plugins.skin.OverlayHD.EPGRating.value = "Grey"
+			config.plugins.skin.OverlayHD.EPGDetails.value = "White"
+			config.plugins.skin.OverlayHD.EPGTimeLineBorderColour.value = "ScreenBackground"
+			config.plugins.skin.OverlayHD.EPGTimeLineColour.value = "DullYellow"
+			config.plugins.skin.OverlayHD.EPGGridBackground.value = "Orange"
+			config.plugins.skin.OverlayHD.EPGEntryBackgroundColor.value = "DarkerBlue"
+			config.plugins.skin.OverlayHD.EPGEntryBackgroundColorSelected.value = "Yellow"
+			config.plugins.skin.OverlayHD.EPGEntryForegroundColor.value = "White"
+			config.plugins.skin.OverlayHD.EPGEntryForegroundColorSelected.value = "Black"
+			config.plugins.skin.OverlayHD.EPGEntryForegroundColorNowSelected.value = "Black"
+			config.plugins.skin.OverlayHD.EPGRecordBackgroundColor.value = "DullRed"
+			config.plugins.skin.OverlayHD.EPGRecordBackgroundColorSelected.value = "Red"
+			config.plugins.skin.OverlayHD.EPGRecordForegroundColor.value = "White"
+			config.plugins.skin.OverlayHD.EPGRecordForegroundColorSelected.value = "Black"
+			config.plugins.skin.OverlayHD.EPGServiceBackgroundColor.value = "DeepBlue"
+			config.plugins.skin.OverlayHD.EPGServiceBackgroundColorNow.value = "Blue"
+			config.plugins.skin.OverlayHD.EPGServiceForegroundColor.value = "White"
+			config.plugins.skin.OverlayHD.EPGServiceForegroundColorNow.value = "White"
+			config.plugins.skin.OverlayHD.EPGZapBackgroundColor.value = "DullGreen"
+			config.plugins.skin.OverlayHD.EPGZapBackgroundColorSelected.value = "Green"
+			config.plugins.skin.OverlayHD.EPGZapForegroundColor.value = "White"
+			config.plugins.skin.OverlayHD.EPGZapForegroundColorSelected.value = "Black"
+			config.plugins.skin.OverlayHD.EPGPIGBackground.value = "Black"
+			config.plugins.skin.OverlayHD.EPGPIGBorder.value = "Black"
+			config.plugins.skin.OverlayHD.EPGPIGColour.value = "WarmYellow"
+			config.plugins.skin.OverlayHD.EPGPIGProgressBackground.value = "DeepGrey"
+			config.plugins.skin.OverlayHD.EPGPIGProgressColour.value = "WarmYellow"
+			config.plugins.skin.OverlayHD.EPGPIGProgressBorder.value = "WarmYellow"
+			config.plugins.skin.OverlayHD.EPGPIGTimeLineBorderColour.value = "ScreenBackground"
+			config.plugins.skin.OverlayHD.EPGPIGTimeLineColour.value = "DullYellow"
+			config.plugins.skin.OverlayHD.EPGPIGGridBackground.value = "Orange"
+			config.plugins.skin.OverlayHD.EPGPIGEntryBackgroundColor.value = "DarkerBlue"
+			config.plugins.skin.OverlayHD.EPGPIGEntryBackgroundColorSelected.value = "Yellow"
+			config.plugins.skin.OverlayHD.EPGPIGEntryForegroundColor.value = "White"
+			config.plugins.skin.OverlayHD.EPGPIGEntryForegroundColorSelected.value = "Black"
+			config.plugins.skin.OverlayHD.EPGPIGRecordBackgroundColor.value = "DullRed"
+			config.plugins.skin.OverlayHD.EPGPIGRecordBackgroundColorSelected.value = "Red"
+			config.plugins.skin.OverlayHD.EPGPIGRecordForegroundColor.value = "White"
+			config.plugins.skin.OverlayHD.EPGPIGRecordForegroundColorSelected.value = "Black"
+			config.plugins.skin.OverlayHD.EPGPIGServiceBackgroundColor.value = "DeepBlue"
+			config.plugins.skin.OverlayHD.EPGPIGServiceBackgroundColorNow.value = "Blue"
+			config.plugins.skin.OverlayHD.EPGPIGServiceForegroundColor.value = "White"
+			config.plugins.skin.OverlayHD.EPGPIGServiceForegroundColorNow.value = "White"
+			config.plugins.skin.OverlayHD.EPGPIGZapBackgroundColor.value = "DullGreen"
+			config.plugins.skin.OverlayHD.EPGPIGZapBackgroundColorSelected.value = "Green"
+			config.plugins.skin.OverlayHD.EPGPIGZapForegroundColor.value = "White"
+			config.plugins.skin.OverlayHD.EPGPIGZapForegroundColorSelected.value = "Black"
+
 			self.process = True
 			self.applySettings()
 		else:
-			print "[OverlayHD] OverlayHD Skin Manager - OverlayHD is not the active skin!"
+			print "[OverlayHD] OverlayHD is not the active skin!"
 
 	def changedSettings(self):
 		changed = 0
@@ -345,62 +411,119 @@ class OverlayHDSkinManager(Setup):
 		self["config"].setCurrentIndex(index)
 
 def buildColour(colour, transparency):
-	if colour.getValue() != "0x00000001":
-		trans = long(transparency.getValue(), 0x10)
+	if colour.value != "0x00000001":
+		trans = long(transparency.value, 0x10)
 	else:
-		trans = long(config.plugins.skin.OverlayHD.ScreenBackgroundTransparency.getValue(), 0x10)
-	return gRGB(colorNames[colour.getValue()].argb() | trans)
+		trans = long(config.plugins.skin.OverlayHD.ScreenBackgroundTransparency.value, 0x10)
+	return gRGB(colorNames[colour.value].argb() | trans)
 
 def applySkinSettings():
-	if config.skin.primary_skin.getValue() == "OverlayHD/skin.xml":
-		print "[OverlayHD] OverlayHD Skin Manager - Applying OverlayHD skin settings."
-		colorNames["ScreenBackground"] = gRGB(colorNames[config.plugins.skin.OverlayHD.ScreenBackgroundColour.getValue()].argb() |
-							long(config.plugins.skin.OverlayHD.ScreenBackgroundTransparency.getValue(), 0x10))
-		colorNames["BannerClock"] = colorNames[config.plugins.skin.OverlayHD.BannerClock.getValue()]
-		colorNames["BannerTitle"] = colorNames[config.plugins.skin.OverlayHD.BannerTitle.getValue()]
-		colorNames["Pinstripe"] = colorNames[config.plugins.skin.OverlayHD.Pinstripe.getValue()]
+	if config.skin.primary_skin.value == "OverlayHD/skin.xml":
+		print "[OverlayHD] Applying OverlayHD skin settings."
+		colorNames["ScreenBackground"] = gRGB(colorNames[config.plugins.skin.OverlayHD.ScreenBackgroundColour.value].argb() |
+							long(config.plugins.skin.OverlayHD.ScreenBackgroundTransparency.value, 0x10))
+		colorNames["BannerClock"] = colorNames[config.plugins.skin.OverlayHD.BannerClock.value]
+		colorNames["BannerTitle"] = colorNames[config.plugins.skin.OverlayHD.BannerTitle.value]
+		colorNames["Pinstripe"] = colorNames[config.plugins.skin.OverlayHD.Pinstripe.value]
 		# colorNames["MenuBackground"] = buildColour(config.plugins.skin.OverlayHD.MenuBackgroundColour, config.plugins.skin.OverlayHD.MenuBackgroundTransparency)
 		colorNames["MenuBackground"] = colorNames["ScreenBackground"]
 		colorNames["MenuSelected"] = buildColour(config.plugins.skin.OverlayHD.MenuSelectedColour, config.plugins.skin.OverlayHD.MenuSelectedTransparency)
-		colorNames["MenuText"] = colorNames[config.plugins.skin.OverlayHD.MenuText.getValue()]
-		colorNames["MenuTextSelected"] = colorNames[config.plugins.skin.OverlayHD.MenuTextSelected.getValue()]
+		colorNames["MenuText"] = colorNames[config.plugins.skin.OverlayHD.MenuText.value]
+		colorNames["MenuTextSelected"] = colorNames[config.plugins.skin.OverlayHD.MenuTextSelected.value]
 		# colorNames["FootnoteBackground"] = buildColour(config.plugins.skin.OverlayHD.FootnoteBackgroundColour, config.plugins.skin.OverlayHD.FootnoteBackgroundTransparency)
 		colorNames["FootnoteBackground"] = colorNames["ScreenBackground"]
-		colorNames["FootnoteText"] = colorNames[config.plugins.skin.OverlayHD.FootnoteText.getValue()]
+		colorNames["FootnoteText"] = colorNames[config.plugins.skin.OverlayHD.FootnoteText.value]
 		# colorNames["TextBackground"] = buildColour(config.plugins.skin.OverlayHD.TextBackgroundColour, config.plugins.skin.OverlayHD.TextBackgroundTransparency)
 		colorNames["TextBackground"] = colorNames["ScreenBackground"]
-		colorNames["Text"] = colorNames[config.plugins.skin.OverlayHD.Text.getValue()]
+		colorNames["Text"] = colorNames[config.plugins.skin.OverlayHD.Text.value]
 		# colorNames["SMSHelperBackground"] = buildColour(config.plugins.skin.OverlayHD.SMSHelperBackgroundColour, config.plugins.skin.OverlayHD.SMSHelperBackgroundTransparency)
 		colorNames["SMSHelperBackground"] = colorNames["ScreenBackground"]
-		colorNames["SMSHelperText"] = colorNames[config.plugins.skin.OverlayHD.SMSHelperText.getValue()]
-		colorNames["FindCharacter"] = colorNames[config.plugins.skin.OverlayHD.FindCharacter.getValue()]
+		colorNames["SMSHelperText"] = colorNames[config.plugins.skin.OverlayHD.SMSHelperText.value]
+		colorNames["VolumeBackground"] = colorNames[config.plugins.skin.OverlayHD.VolumeBackground.value]
+		colorNames["VolumeColour"] = colorNames[config.plugins.skin.OverlayHD.VolumeColour.value]
+		colorNames["FindCharacter"] = colorNames[config.plugins.skin.OverlayHD.FindCharacter.value]
 		# colorNames["InfoBackground"] = buildColour(config.plugins.skin.OverlayHD.InfoBackgroundColour, config.plugins.skin.OverlayHD.InfoBackgroundTransparency)
 		colorNames["InfoBackground"] = colorNames["ScreenBackground"]
-		colorNames["InfoLCN"] = colorNames[config.plugins.skin.OverlayHD.InfoLCN.getValue()]
-		colorNames["InfoChannel"] = colorNames[config.plugins.skin.OverlayHD.InfoChannel.getValue()]
-		colorNames["InfoBroadcaster"] = colorNames[config.plugins.skin.OverlayHD.InfoBroadcaster.getValue()]
-		colorNames["InfoBouquet"] = colorNames[config.plugins.skin.OverlayHD.InfoBouquet.getValue()]
-		colorNames["InfoProgramNow"] = colorNames[config.plugins.skin.OverlayHD.InfoProgramNow.getValue()]
-		colorNames["InfoTimesNow"] = colorNames[config.plugins.skin.OverlayHD.InfoTimesNow.getValue()]
-		colorNames["InfoDurationNow"] = colorNames[config.plugins.skin.OverlayHD.InfoDurationNow.getValue()]
-		colorNames["InfoFileSizeNow"] = colorNames[config.plugins.skin.OverlayHD.InfoFileSizeNow.getValue()]
-		colorNames["InfoDetailsNow"] = colorNames[config.plugins.skin.OverlayHD.InfoDetailsNow.getValue()]
-		colorNames["InfoRatingNow"] = colorNames[config.plugins.skin.OverlayHD.InfoRatingNow.getValue()]
-		colorNames["InfoProgramNext"] = colorNames[config.plugins.skin.OverlayHD.InfoProgramNext.getValue()]
-		colorNames["InfoTimesNext"] = colorNames[config.plugins.skin.OverlayHD.InfoTimesNext.getValue()]
-		colorNames["InfoDurationNext"] = colorNames[config.plugins.skin.OverlayHD.InfoDurationNext.getValue()]
-		colorNames["InfoFileSizeNext"] = colorNames[config.plugins.skin.OverlayHD.InfoFileSizeNext.getValue()]
-		colorNames["InfoDetailsNext"] = colorNames[config.plugins.skin.OverlayHD.InfoDetailsNext.getValue()]
-		colorNames["InfoRatingNext"] = colorNames[config.plugins.skin.OverlayHD.InfoRatingNext.getValue()]
-		colorNames["InfoRecording"] = colorNames[config.plugins.skin.OverlayHD.InfoRecording.getValue()]
-		colorNames["InfoRecordingProgress"] = colorNames[config.plugins.skin.OverlayHD.InfoRecordingProgress.getValue()]
-		colorNames["InfoMediaName"] = colorNames[config.plugins.skin.OverlayHD.InfoMediaName.getValue()]
-		colorNames["InfoMediaLength"] = colorNames[config.plugins.skin.OverlayHD.InfoMediaLength.getValue()]
-		colorNames["InfoDiskStats"] = colorNames[config.plugins.skin.OverlayHD.InfoDiskStats.getValue()]
+		colorNames["InfoLCN"] = colorNames[config.plugins.skin.OverlayHD.InfoLCN.value]
+		colorNames["InfoChannel"] = colorNames[config.plugins.skin.OverlayHD.InfoChannel.value]
+		colorNames["InfoBroadcaster"] = colorNames[config.plugins.skin.OverlayHD.InfoBroadcaster.value]
+		colorNames["InfoBouquet"] = colorNames[config.plugins.skin.OverlayHD.InfoBouquet.value]
+		colorNames["InfoProgramNow"] = colorNames[config.plugins.skin.OverlayHD.InfoProgramNow.value]
+		colorNames["InfoTimesNow"] = colorNames[config.plugins.skin.OverlayHD.InfoTimesNow.value]
+		colorNames["InfoDurationNow"] = colorNames[config.plugins.skin.OverlayHD.InfoDurationNow.value]
+		colorNames["InfoFileSizeNow"] = colorNames[config.plugins.skin.OverlayHD.InfoFileSizeNow.value]
+		colorNames["InfoDetailsNow"] = colorNames[config.plugins.skin.OverlayHD.InfoDetailsNow.value]
+		colorNames["InfoRatingNow"] = colorNames[config.plugins.skin.OverlayHD.InfoRatingNow.value]
+		colorNames["InfoProgramNext"] = colorNames[config.plugins.skin.OverlayHD.InfoProgramNext.value]
+		colorNames["InfoTimesNext"] = colorNames[config.plugins.skin.OverlayHD.InfoTimesNext.value]
+		colorNames["InfoDurationNext"] = colorNames[config.plugins.skin.OverlayHD.InfoDurationNext.value]
+		colorNames["InfoFileSizeNext"] = colorNames[config.plugins.skin.OverlayHD.InfoFileSizeNext.value]
+		colorNames["InfoDetailsNext"] = colorNames[config.plugins.skin.OverlayHD.InfoDetailsNext.value]
+		colorNames["InfoRatingNext"] = colorNames[config.plugins.skin.OverlayHD.InfoRatingNext.value]
+		colorNames["InfoRecording"] = colorNames[config.plugins.skin.OverlayHD.InfoRecording.value]
+		colorNames["InfoRecordingProgress"] = colorNames[config.plugins.skin.OverlayHD.InfoRecordingProgress.value]
+		colorNames["InfoMediaName"] = colorNames[config.plugins.skin.OverlayHD.InfoMediaName.value]
+		colorNames["InfoMediaLength"] = colorNames[config.plugins.skin.OverlayHD.InfoMediaLength.value]
+		colorNames["InfoDiskStats"] = colorNames[config.plugins.skin.OverlayHD.InfoDiskStats.value]
 		# colorNames["TunerBackground"] = buildColour(config.plugins.skin.OverlayHD.TunerBackgroundColour, config.plugins.skin.OverlayHD.TunerBackgroundTransparency)
 		colorNames["TunerBackground"] = colorNames["ScreenBackground"]
+		# colorNames["GraphicalEPGTransparency"] = buildColour(config.plugins.skin.OverlayHD.InfoBackgroundColour, config.plugins.skin.OverlayHD.InfoBackgroundTransparency)
+		colorNames["GraphicalEPGTransparency"] = colorNames["ScreenBackground"]
+		# colorNames["InfobarEPGTransparency"] = buildColour(config.plugins.skin.OverlayHD.InfoBackgroundColour, config.plugins.skin.OverlayHD.InfoBackgroundTransparency)
+		colorNames["InfobarEPGTransparency"] = colorNames["ScreenBackground"]
+		colorNames["EPGBackground"] = colorNames[config.plugins.skin.OverlayHD.EPGBackground.value]
+		colorNames["EPGProgram"] = colorNames[config.plugins.skin.OverlayHD.EPGProgram.value]
+		colorNames["EPGTimes"] = colorNames[config.plugins.skin.OverlayHD.EPGTimes.value]
+		colorNames["EPGDuration"] = colorNames[config.plugins.skin.OverlayHD.EPGDuration.value]
+		colorNames["EPGRating"] = colorNames[config.plugins.skin.OverlayHD.EPGRating.value]
+		colorNames["EPGDetails"] = colorNames[config.plugins.skin.OverlayHD.EPGDetails.value]
+		colorNames["EPGTimeLineBorderColour"] = colorNames[config.plugins.skin.OverlayHD.EPGTimeLineBorderColour.value]
+		colorNames["EPGTimeLineColour"] = colorNames[config.plugins.skin.OverlayHD.EPGTimeLineColour.value]
+		colorNames["EPGGridBackground"] = colorNames[config.plugins.skin.OverlayHD.EPGGridBackground.value]
+		colorNames["EPGEntryBackgroundColor"] = colorNames[config.plugins.skin.OverlayHD.EPGEntryBackgroundColor.value]
+		colorNames["EPGEntryBackgroundColorSelected"] = colorNames[config.plugins.skin.OverlayHD.EPGEntryBackgroundColorSelected.value]
+		colorNames["EPGEntryForegroundColor"] = colorNames[config.plugins.skin.OverlayHD.EPGEntryForegroundColor.value]
+		colorNames["EPGEntryForegroundColorSelected"] = colorNames[config.plugins.skin.OverlayHD.EPGEntryForegroundColorSelected.value]
+		colorNames["EPGEntryForegroundColorNowSelected"] = colorNames[config.plugins.skin.OverlayHD.EPGEntryForegroundColorNowSelected.value]
+		colorNames["EPGRecordBackgroundColor"] = colorNames[config.plugins.skin.OverlayHD.EPGRecordBackgroundColor.value]
+		colorNames["EPGRecordBackgroundColorSelected"] = colorNames[config.plugins.skin.OverlayHD.EPGRecordBackgroundColorSelected.value]
+		colorNames["EPGRecordForegroundColor"] = colorNames[config.plugins.skin.OverlayHD.EPGRecordForegroundColor.value]
+		colorNames["EPGRecordForegroundColorSelected"] = colorNames[config.plugins.skin.OverlayHD.EPGRecordForegroundColorSelected.value]
+		colorNames["EPGServiceBackgroundColor"] = colorNames[config.plugins.skin.OverlayHD.EPGServiceBackgroundColor.value]
+		colorNames["EPGServiceBackgroundColorNow"] = colorNames[config.plugins.skin.OverlayHD.EPGServiceBackgroundColorNow.value]
+		colorNames["EPGServiceForegroundColor"] = colorNames[config.plugins.skin.OverlayHD.EPGServiceForegroundColor.value]
+		colorNames["EPGServiceForegroundColorNow"] = colorNames[config.plugins.skin.OverlayHD.EPGServiceForegroundColorNow.value]
+		colorNames["EPGZapBackgroundColor"] = colorNames[config.plugins.skin.OverlayHD.EPGZapBackgroundColor.value]
+		colorNames["EPGZapBackgroundColorSelected"] = colorNames[config.plugins.skin.OverlayHD.EPGZapBackgroundColorSelected.value]
+		colorNames["EPGZapForegroundColor"] = colorNames[config.plugins.skin.OverlayHD.EPGZapForegroundColor.value]
+		colorNames["EPGZapForegroundColorSelected"] = colorNames[config.plugins.skin.OverlayHD.EPGZapForegroundColorSelected.value]
+		colorNames["EPGPIGBackground"] = colorNames[config.plugins.skin.OverlayHD.EPGPIGBackground.value]
+		colorNames["EPGPIGBorder"] = colorNames[config.plugins.skin.OverlayHD.EPGPIGBorder.value]
+		colorNames["EPGPIGColour"] = colorNames[config.plugins.skin.OverlayHD.EPGPIGColour.value]
+		colorNames["EPGPIGProgressBackground"] = colorNames[config.plugins.skin.OverlayHD.EPGPIGProgressBackground.value]
+		colorNames["EPGPIGProgressColour"] = colorNames[config.plugins.skin.OverlayHD.EPGPIGProgressColour.value]
+		colorNames["EPGPIGProgressBorder"] = colorNames[config.plugins.skin.OverlayHD.EPGPIGProgressBorder.value]
+		colorNames["EPGPIGTimeLineBorderColour"] = colorNames[config.plugins.skin.OverlayHD.EPGPIGTimeLineBorderColour.value]
+		colorNames["EPGPIGTimeLineColour"] = colorNames[config.plugins.skin.OverlayHD.EPGPIGTimeLineColour.value]
+		colorNames["EPGPIGGridBackground"] = colorNames[config.plugins.skin.OverlayHD.EPGPIGGridBackground.value]
+		colorNames["EPGPIGEntryBackgroundColor"] = colorNames[config.plugins.skin.OverlayHD.EPGPIGEntryBackgroundColor.value]
+		colorNames["EPGPIGEntryBackgroundColorSelected"] = colorNames[config.plugins.skin.OverlayHD.EPGPIGEntryBackgroundColorSelected.value]
+		colorNames["EPGPIGEntryForegroundColor"] = colorNames[config.plugins.skin.OverlayHD.EPGPIGEntryForegroundColor.value]
+		colorNames["EPGPIGEntryForegroundColorSelected"] = colorNames[config.plugins.skin.OverlayHD.EPGPIGEntryForegroundColorSelected.value]
+		colorNames["EPGPIGRecordBackgroundColor"] = colorNames[config.plugins.skin.OverlayHD.EPGPIGRecordBackgroundColor.value]
+		colorNames["EPGPIGRecordBackgroundColorSelected"] = colorNames[config.plugins.skin.OverlayHD.EPGPIGRecordBackgroundColorSelected.value]
+		colorNames["EPGPIGRecordForegroundColor"] = colorNames[config.plugins.skin.OverlayHD.EPGPIGRecordForegroundColor.value]
+		colorNames["EPGPIGRecordForegroundColorSelected"] = colorNames[config.plugins.skin.OverlayHD.EPGPIGRecordForegroundColorSelected.value]
+		colorNames["EPGPIGServiceBackgroundColor"] = colorNames[config.plugins.skin.OverlayHD.EPGPIGServiceBackgroundColor.value]
+		colorNames["EPGPIGServiceBackgroundColorNow"] = colorNames[config.plugins.skin.OverlayHD.EPGPIGServiceBackgroundColorNow.value]
+		colorNames["EPGPIGServiceForegroundColor"] = colorNames[config.plugins.skin.OverlayHD.EPGPIGServiceForegroundColor.value]
+		colorNames["EPGPIGServiceForegroundColorNow"] = colorNames[config.plugins.skin.OverlayHD.EPGPIGServiceForegroundColorNow.value]
+		colorNames["EPGPIGZapBackgroundColor"] = colorNames[config.plugins.skin.OverlayHD.EPGPIGZapBackgroundColor.value]
+		colorNames["EPGPIGZapBackgroundColorSelected"] = colorNames[config.plugins.skin.OverlayHD.EPGPIGZapBackgroundColorSelected.value]
+		colorNames["EPGPIGZapForegroundColor"] = colorNames[config.plugins.skin.OverlayHD.EPGPIGZapForegroundColor.value]
+		colorNames["EPGPIGZapForegroundColorSelected"] = colorNames[config.plugins.skin.OverlayHD.EPGPIGZapForegroundColorSelected.value]
 	else:
-		print "[OverlayHD] OverlayHD Skin Manager - OverlayHD is not the active skin!"
+		print "[OverlayHD] OverlayHD is not the active skin!"
 
 
 def start_menu_main(menuid, **kwargs):
@@ -422,7 +545,7 @@ def autostart(reason, **kwargs):
 
 def Plugins(**kwargs):
 	list = []
-	if config.plugins.skin.OverlayHD.always_active.getValue() or config.skin.primary_skin.getValue() == "OverlayHD/skin.xml":
+	if config.plugins.skin.OverlayHD.always_active.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
 			description="OverlayHD Skin Manager version 1.10", icon="OverlayHD.png", fnc=main))

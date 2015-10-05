@@ -1,0 +1,8 @@
+echo "Patching old OverlayHD settings to new format..."
+cd /etc/enigma2
+init 4
+sync
+sleep 5
+sed -i -e 's/^config\.OverlayHD\./config.plugins.skin.OverlayHD./' settings
+init 3
+echo "Done!"
