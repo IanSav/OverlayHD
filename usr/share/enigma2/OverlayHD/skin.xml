@@ -55,6 +55,12 @@
 		<color name="White" value="#00ffffff" />
 		<color name="Yellow" value="#00ffff00" />
 
+		<color name="ButtonBlue" value="#0018188b" />
+		<color name="ButtonGreen" value="#001f771f" />
+		<color name="ButtonRed" value="#009f1313" />
+		<color name="ButtonText" value="White" />
+		<color name="ButtonYellow" value="#00a08500" />
+
 		<color name="ScreenBackground" value="#3f000000" />
 		<color name="ScreenSaverBackground" value="#00000000" />
 		<color name="ScreenTransparent" value="#ffffffff" />
@@ -64,16 +70,9 @@
 
 		<color name="BannerBorder" value="Black" />
 		<color name="BannerClock" value="White" />
+		<color name="BannerClockBlue" value="LightBlue" />
+		<color name="BannerClockWhite" value="White" />
 		<color name="BannerTitle" value="White" />
-		<color name="BannerClockWhite" value="#10ffffff" />
-		<color name="BannerClockBlue" value="#1053a9ff" />
-
-		<color name="ButtonBlue" value="#0018188b" />
-		<color name="ButtonGreen" value="#001f771f" />
-		<color name="ButtonRed" value="#009f1313" />
-		<color name="ButtonText" value="White" />
-		<color name="ButtonYellow" value="#00a08500" />
-
 <!--
  |		These entries were defined for the EPG grid but are now reported as invalid!
  |		- EntryBackgroundColorNow = "#0000056f"
@@ -142,7 +141,7 @@
 		<color name="FootnoteBackground" value="ScreenBackground" />
 		<color name="FootnoteText" value="DimGrey" />
 
-		<color name="HelpPress" value="DullYellow" />
+		<color name="HelpPress" value="Yellow" />
 
 		<color name="InfoBackground" value="ScreenBackground" />
 		<color name="InfoBouquet" value="LightBlue" />
@@ -176,7 +175,6 @@
 		<color name="PictureBackground" value="ScreenBackground" />
 		<color name="PictureLabel" value="DullGreen" />
 		<color name="PictureLabelBorder" value="Black" />
-
 		<color name="Pinstripe" value="DarkerGrey" />
 
 		<color name="Resolution" value="Silver" />
@@ -193,10 +191,8 @@
 		<color name="TextIndentedSelected" value="Silver" />
 		<color name="TextLabel" value="Grey" />
 		<color name="TextWaiting" value="Gold" />
-
 		<color name="TimeShiftBorder" value="#1130608f" />
 		<color name="TimeShiftData" value="Silver" />
-
 		<color name="TunerBackground" value="ScreenBackground" />
 		<color name="TunerBER" value="#00ff2000" />
 		<color name="TunerBorder" value="#1130608f" />
@@ -214,9 +210,6 @@
 		<color name="WeatherProvider" value="#00ffa500" />
 		<color name="WeatherWait" value="#00dcdcdc" />
 
-		<!-- Enigma2 Hardcoded Colours And Backgrounds -->
-		<color name="transparent" value="#ffffffff" />
-
 		<!-- Legacy Colours Yet To Be Updated / Integrated -->
 		<color name="background" value="#3f000000" />
 		<color name="bluette" value="#006565ff" />
@@ -226,6 +219,7 @@
 		<color name="grey" value="#00999999" />
 		<color name="infobar-frgrnd" value="#00ff00ff" />
 		<color name="infobar_sunken" value="#0000ff00" />
+		<color name="transparent" value="#ffffffff" />
 		<color name="transparent2" value="#ff000000" />
 		<color name="transpBlack" value="#30000000" />
 		<color name="un252b4247" value="#252b4247" />
