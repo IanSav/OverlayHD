@@ -190,7 +190,7 @@
 		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<widget name="menu" position="center,center" size="1020,500" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
-		<widget name="info" position="center,center" size="620,300" font="Regular;24" foregroundColor="#00ffffff" halign="center" transparent="1" valign="center" zPosition="4" />
+		<widget name="info" position="center,center" size="620,300" font="Regular;24" foregroundColor="White" halign="center" transparent="1" valign="center" zPosition="4" />
 	</screen>
 
 <!-- Gmail News Plugin -->
@@ -252,25 +252,25 @@
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/liquidblue/images/mpback.png" position="0,0" size="1280,720" zPosition="-1" />
 		<widget source="session.VideoPicture" render="Pig" position="886,22" size="328,186" backgroundColor="transparent" zPosition="3" />
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/liquidblue/images/buttongrey.png" position="1160,555" size="90,36" alphatest="blend" backgroundColor="#26181d20" zPosition="1" />
-		<eLabel text="Menu " position="1160,555" size="90,36" backgroundColor="#26181d20" font="mediaportal;18" foregroundColor="#00ffffff" halign="center" transparent="1" valign="center" zPosition="1" />
+		<eLabel text="Menu " position="1160,555" size="90,36" backgroundColor="#26181d20" font="mediaportal;18" foregroundColor="White" halign="center" transparent="1" valign="center" zPosition="1" />
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/tec/images/buttonglas.png" position="1160,555" size="90,36" alphatest="blend" zPosition="2" />
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/liquidblue/images/buttongrey.png" position="1160,605" size="90,36" alphatest="blend" backgroundColor="#26181d20" zPosition="1" />
-		<eLabel text=" Help " position="1160,605" size="90,36" backgroundColor="#26181d20" font="mediaportal;18" foregroundColor="#00ffffff" halign="center" transparent="1" valign="center" zPosition="1" />
+		<eLabel text=" Help " position="1160,605" size="90,36" backgroundColor="#26181d20" font="mediaportal;18" foregroundColor="White" halign="center" transparent="1" valign="center" zPosition="1" />
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/tec/images/buttonglas.png" position="1160,605" size="90,36" alphatest="blend" zPosition="2" />
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/liquidblue/images/buttongrey.png" position="1160,655" size="90,36" alphatest="blend" backgroundColor="#26181d20" zPosition="1" />
-		<eLabel text=" Exit " position="1160,655" size="90,36" backgroundColor="#26181d20" font="mediaportal;18" foregroundColor="#00ffffff" halign="center" transparent="1" valign="center" zPosition="1" />
+		<eLabel text=" Exit " position="1160,655" size="90,36" backgroundColor="#26181d20" font="mediaportal;18" foregroundColor="White" halign="center" transparent="1" valign="center" zPosition="1" />
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/tec/images/buttonglas.png" position="1160,655" size="90,36" alphatest="blend" zPosition="2" />
 		<!-- select screen -->
-		<widget name="Mediatheken" position="40,165" size="280,30" backgroundColor="#26181d20" font="mediaportal;26" foregroundColor="#00ffffff" halign="left" transparent="1" zPosition="5" />
+		<widget name="Mediatheken" position="40,165" size="280,30" backgroundColor="#26181d20" font="mediaportal;26" foregroundColor="White" halign="left" transparent="1" zPosition="5" />
 		<widget name="mediatheken" position="40,210" size="280,480" backgroundColor="#26181d20" foregroundColor="#00bbbbbb" scrollbarMode="showOnDemand" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/liquidblue/images/sel.png" transparent="1" />
-		<widget name="Grauzone" position="322,165" size="280,30" backgroundColor="#26181d20" font="mediaportal;26" foregroundColor="#00ffffff" halign="left" transparent="1" zPosition="5" />
+		<widget name="Grauzone" position="322,165" size="280,30" backgroundColor="#26181d20" font="mediaportal;26" foregroundColor="White" halign="left" transparent="1" zPosition="5" />
 		<widget name="grauzone" position="322,210" size="280,480" backgroundColor="#26181d20" foregroundColor="#00bbbbbb" scrollbarMode="showOnDemand" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/liquidblue/images/sel.png" transparent="1" />
-		<widget name="Funsport" position="604,165" size="280,30" backgroundColor="#26181d20" font="mediaportal;26" foregroundColor="#00ffffff" halign="left" transparent="1" zPosition="5" />
+		<widget name="Funsport" position="604,165" size="280,30" backgroundColor="#26181d20" font="mediaportal;26" foregroundColor="White" halign="left" transparent="1" zPosition="5" />
 		<widget name="funsport" position="604,210" size="280,480" backgroundColor="#26181d20" foregroundColor="#00bbbbbb" scrollbarMode="showOnDemand" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/liquidblue/images/sel.png" transparent="1" />
-		<widget name="Porn" position="886,215" size="280,30" backgroundColor="#26181d20" font="mediaportal;26" foregroundColor="#00ffffff" halign="left" transparent="1" zPosition="5" />
+		<widget name="Porn" position="886,215" size="280,30" backgroundColor="#26181d20" font="mediaportal;26" foregroundColor="White" halign="left" transparent="1" zPosition="5" />
 		<widget name="porn" position="886,255" size="280,455" backgroundColor="#26181d20" foregroundColor="#00bbbbbb" selectionPixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/liquidblue/images/sel.png" transparent="1" />
-		<widget name="name" position="77,102" size="600,40" backgroundColor="#26181d20" font="mediaportal;32" foregroundColor="#00ffffff" halign="center" transparent="1" valign="center" />
-		<eLabel name="Videoback" position="885,21" size="330,188" backgroundColor="#00ffffff" foregroundColor="#00ffffff" zPosition="0" />
+		<widget name="name" position="77,102" size="600,40" backgroundColor="#26181d20" font="mediaportal;32" foregroundColor="White" halign="center" transparent="1" valign="center" />
+		<eLabel name="Videoback" position="885,21" size="330,188" backgroundColor="White" foregroundColor="White" zPosition="0" />
 	</screen>
 
 	<screen name="hauptScreenSetup" position="0,0" size="1280,720" flags="wfNoBorder">
@@ -283,10 +283,10 @@
 			<convert type="ClockToText">Default</convert>
 		</widget>
 		<widget source="session.VideoPicture" render="Pig" position="913,136" size="328,186" backgroundColor="transparent" zPosition="3" />
-		<eLabel name="Videoback" position="912,135" size="330,188" backgroundColor="#00ffffff" foregroundColor="#00ffffff" zPosition="0" />
+		<eLabel name="Videoback" position="912,135" size="330,188" backgroundColor="White" foregroundColor="White" zPosition="0" />
 		<widget name="title" position="55,108" size="850,55" backgroundColor="#26181d20" font="mediaportal;26" foregroundColor="#00bbbbbb" halign="left" transparent="1" valign="center" zPosition="1" />
 		<widget name="config" position="55,173" size="830,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1"  foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
-		<widget name="name" position="914,368" size="330,30" backgroundColor="#26181d20" font="mediaportal;28" foregroundColor="#00ffffff" halign="center" transparent="1" valign="top" />
+		<widget name="name" position="914,368" size="330,30" backgroundColor="#26181d20" font="mediaportal;28" foregroundColor="White" halign="center" transparent="1" valign="top" />
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/liquidblue/images/setup.png" position="989,424" size="176,200" alphatest="on" zPosition="1" />
 	</screen>
 
@@ -586,7 +586,7 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColourBacks" />
 		<!-- Column 1 -->
-		<widget name="lab1" position="60,95" size="220,20" font="Regular;16" foregroundColor="WeatherWait" halign="right" transparent="1" valign="top" />
+		<widget name="lab1" position="60,95" size="220,20" font="Regular;16" foregroundColor="WeatherLabel" halign="right" transparent="1" valign="top" />
 		<widget name="lab1b" position="285,95" size="210,20" font="Regular;16" foregroundColor="WeatherProvider" halign="left" transparent="1" valign="top" />
 		<widget name="lab2" position="60,120" size="440,30" font="Regular;24" foregroundColor="WeatherData" halign="center" transparent="1" valign="top" />
 		<widget name="lab3" position="60,155" size="440,20" font="Regular;18" foregroundColor="WeatherLabel" halign="center" transparent="1" valign="top" />

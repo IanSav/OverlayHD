@@ -29,7 +29,7 @@
 		<color name="Gold" value="#00f0b400" />
 		<color name="Green" value="#0000ff00" />
 		<color name="Grey" value="#00a0a0a0" />
-		<color name="GreyBlue" value="#004D5375" /><!-- Only in DynDNS -->
+		<color name="GreyBlue" value="#004D5375" />
 		<color name="Indigo" value="#004b0082" />
 		<color name="LightBlue" value="#0053a9ff" />
 		<color name="LightGrey" value="#00d3d3d3" />
@@ -39,11 +39,13 @@
 		<color name="Maroon" value="#00800000" />
 		<color name="MediumBlue" value="#000000CD" />
 		<color name="MidnightBlue" value="#00191970" />
+		<color name="Mustard" value="#00d8c653" />
 		<color name="Navy" value="#00000080" />
 		<color name="Orange" value="#00ffa500" />
 		<color name="OrangeRed" value="#00ff4500" />
 		<color name="OxfordBlue" value="#00002147" />
 		<color name="Pink" value="#00ffc0cb" />
+		<color name="PowderBlue" value="#0079bfff" />
 		<color name="Purple" value="#00800080" />
 		<color name="Red" value="#00ff0000" />
 		<color name="RoyalBlue" value="#004169E1" />
@@ -70,8 +72,8 @@
 
 		<color name="BannerBorder" value="Black" />
 		<color name="BannerClock" value="White" />
-		<color name="BannerClockBlue" value="LightBlue" />
-		<color name="BannerClockWhite" value="White" />
+		<color name="BannerClockDate" value="LightBlue" />
+		<color name="BannerClockTime" value="White" />
 		<color name="BannerTitle" value="White" />
 <!--
  |		These entries were defined for the EPG grid but are now reported as invalid!
@@ -80,60 +82,55 @@
  |		- EntryForegroundColorNow = "White"
  |		- EntryForegroundColorNowSelected = "Black"
  +-->
-		<color name="EPGBackground" value="ScreenBackground" />
-		<color name="EPGLCN" value="White" />
+		<color name="EPGBackground" value="Black" />
 		<color name="EPGChannel" value="LightBlue" />
 		<color name="EPGChannelSelected" value="Blue" />
-		<color name="EPGProvider" value="White" />
-		<color name="EPGProgram" value="Gold" />
-		<color name="EPGProgramSelected" value="Yellow" />
+		<color name="EPGDetails" value="White" />
+		<color name="EPGDuration" value="Grey" />
+		<color name="EPGGridBackground" value="Orange" />
+		<color name="EPGLCN" value="White" />
+		<color name="EPGOverlayBorder" value="Black" />
+		<color name="EPGOverlayColour" value="WarmYellow" />
+		<color name="EPGProgram" value="White" />
+		<color name="EPGProgramSelected" value="White" />
+		<color name="EPGProgressBackground" value="DeepGrey" />
+		<color name="EPGProgressBorder" value="WarmYellow" />
+		<color name="EPGProgressColour" value="WarmYellow" />
+		<color name="EPGProvider" value="LightBlue" />
+		<color name="EPGRating" value="Grey" />
+		<color name="EPGTimeLineColour" value="Yellow" />
 		<color name="EPGTimes" value="Grey" />
 		<color name="EPGTimesSelected" value="Silver" />
-		<color name="EPGDuration" value="Grey" />
-		<color name="EPGRating" value="Grey" />
-		<color name="EPGDetails" value="White" />
-		<color name="EPGTimeLineBorderColour" value="ScreenBackground" />
-		<color name="EPGTimeLineColour" value="DullYellow" /><!--#00FEE620-->
-		<color name="EPGGridBackground" value="Orange" /><!--#4100022b - Not Used!-->
-		<color name="EPGEntryBackgroundColor" value="DarkerBlue" /><!--#4100022b-->
-		<color name="EPGEntryBackgroundColorSelected" value="Yellow" /><!--#41333333-->
-		<color name="EPGEntryForegroundColor" value="White" /><!--#00999999-->
-		<color name="EPGEntryForegroundColorSelected" value="Black" /><!--White-->
-		<color name="EPGRecordBackgroundColor" value="DullRed" /><!--#41110000-->
-		<color name="EPGRecordBackgroundColorSelected" value="Red" /><!--#41333333-->
-		<color name="EPGRecordForegroundColor" value="White" /><!--#00bb0000-->
-		<color name="EPGRecordForegroundColorSelected" value="Black" /><!--Red-->
-		<color name="EPGServiceBackgroundColor" value="DeepBlue" /><!--#4100123b-->
-		<color name="EPGServiceBackgroundColorNow" value="Blue" /><!--#4100056f-->
-		<color name="EPGServiceForegroundColor" value="White" /><!--#00999999-->
+		<color name="EPGEntryBackgroundColor" value="DarkerBlue" />
+		<color name="EPGEntryBackgroundColorSelected" value="Yellow" />
+		<color name="EPGEntryForegroundColor" value="White" />
+		<color name="EPGEntryForegroundColorSelected" value="Black" />
+		<color name="EPGRecordBackgroundColor" value="DullRed" />
+		<color name="EPGRecordBackgroundColorSelected" value="Red" />
+		<color name="EPGRecordForegroundColor" value="White" />
+		<color name="EPGRecordForegroundColorSelected" value="Black" />
+		<color name="EPGServiceBackgroundColor" value="DeepBlue" />
+		<color name="EPGServiceBackgroundColorNow" value="Blue" />
+		<color name="EPGServiceForegroundColor" value="White" />
 		<color name="EPGServiceForegroundColorNow" value="White" />
-		<color name="EPGZapBackgroundColor" value="DullGreen" /><!--#41001100-->
-		<color name="EPGZapBackgroundColorSelected" value="Green" /><!--#41333333-->
-		<color name="EPGZapForegroundColor" value="White" /><!--#00009900-->
-		<color name="EPGZapForegroundColorSelected" value="Black" /><!--#0000ff00-->
-		<color name="EPGPIGBackground" value="Black" />
-		<color name="EPGPIGBorder" value="Black" /><!--#0015215b-->
-		<color name="EPGPIGColour" value="WarmYellow" /><!--#00FEE620-->
-		<color name="EPGPIGProgressBackground" value="DeepGrey" />
-		<color name="EPGPIGProgressColour" value="WarmYellow" />
-		<color name="EPGPIGProgressBorder" value="WarmYellow" />
-		<color name="EPGPIGTimeLineBorderColour" value="ScreenBackground" />
-		<color name="EPGPIGTimeLineColour" value="DullYellow" /><!--#00FEE620-->
-		<color name="EPGPIGGridBackground" value="Orange" /><!--#0000022b - Not Used!-->
-		<color name="EPGPIGEntryBackgroundColor" value="DarkerBlue" /><!--#0000022b-->
-		<color name="EPGPIGEntryBackgroundColorSelected" value="Yellow" /><!--#00d8c653-->
+		<color name="EPGZapBackgroundColor" value="DullGreen" />
+		<color name="EPGZapBackgroundColorSelected" value="Green" />
+		<color name="EPGZapForegroundColor" value="White" />
+		<color name="EPGZapForegroundColorSelected" value="Black" />
+		<color name="EPGPIGEntryBackgroundColor" value="DarkerBlue" />
+		<color name="EPGPIGEntryBackgroundColorSelected" value="Yellow" />
 		<color name="EPGPIGEntryForegroundColor" value="White" />
 		<color name="EPGPIGEntryForegroundColorSelected" value="Black" />
-		<color name="EPGPIGRecordBackgroundColor" value="DullRed" /><!--#008a0000-->
-		<color name="EPGPIGRecordBackgroundColorSelected" value="Red" /><!--#00FF3737-->
+		<color name="EPGPIGRecordBackgroundColor" value="DullRed" />
+		<color name="EPGPIGRecordBackgroundColorSelected" value="Red" />
 		<color name="EPGPIGRecordForegroundColor" value="White" />
 		<color name="EPGPIGRecordForegroundColorSelected" value="Black" />
-		<color name="EPGPIGServiceBackgroundColor" value="DeepBlue" /><!--#0000022b-->
-		<color name="EPGPIGServiceBackgroundColorNow" value="Blue" /><!--#0000056f-->
+		<color name="EPGPIGServiceBackgroundColor" value="DeepBlue" />
+		<color name="EPGPIGServiceBackgroundColorNow" value="Blue" />
 		<color name="EPGPIGServiceForegroundColor" value="White" />
 		<color name="EPGPIGServiceForegroundColorNow" value="White" />
-		<color name="EPGPIGZapBackgroundColor" value="DullGreen" /><!--#00006f00-->
-		<color name="EPGPIGZapBackgroundColorSelected" value="Green" /><!--#0055FF37-->
+		<color name="EPGPIGZapBackgroundColor" value="DullGreen" />
+		<color name="EPGPIGZapBackgroundColorSelected" value="Green" />
 		<color name="EPGPIGZapForegroundColor" value="White" />
 		<color name="EPGPIGZapForegroundColorSelected" value="Black" />
 
@@ -168,7 +165,8 @@
 		<color name="InfoTimesNow" value="Grey" />
 
 		<color name="MenuBackground" value="ScreenBackground" />
-		<color name="MenuSelected" value="DodgerBlue" /><!-- #251357a3 -->
+		<color name="MenuDisabled" value="LightGrey" />
+		<color name="MenuSelected" value="DodgerBlue" />
 		<color name="MenuText" value="White" />
 		<color name="MenuTextSelected" value="White" />
 
@@ -191,24 +189,23 @@
 		<color name="TextIndentedSelected" value="Silver" />
 		<color name="TextLabel" value="Grey" />
 		<color name="TextWaiting" value="Gold" />
-		<color name="TimeShiftBorder" value="#1130608f" />
+		<color name="TimeShiftBorder" value="LightBlue" />
 		<color name="TimeShiftData" value="Silver" />
 		<color name="TunerBackground" value="ScreenBackground" />
-		<color name="TunerBER" value="#00ff2000" />
-		<color name="TunerBorder" value="#1130608f" />
-		<color name="TunerCurrent" value="#00389416" />
-		<color name="TunerIdle" value="#00666666" />
-		<color name="TunerLabel" value="#0079bfff" />
-		<color name="TunerNormal" value="#00cccccc" />
-		<color name="TunerRecording" value="#00daa82d" />
+		<color name="TunerBER" value="OrangeRed" />
+		<color name="TunerBorder" value="Grey" />
+		<color name="TunerCurrent" value="DullGreen" />
+		<color name="TunerData" value="Silver" />
+		<color name="TunerIdle" value="DimGrey" />
+		<color name="TunerLabel" value="PowderBlue" />
+		<color name="TunerRecording" value="Orange" />
 
 		<color name="VolumeBackground" value="Black" />
-		<color name="VolumeColour" value="Blue" />
+		<color name="VolumeColour" value="LightBlue" />
 
 		<color name="WeatherData" value="White" />
-		<color name="WeatherLabel" value="#008f8f8f" />
-		<color name="WeatherProvider" value="#00ffa500" />
-		<color name="WeatherWait" value="#00dcdcdc" />
+		<color name="WeatherLabel" value="Grey" />
+		<color name="WeatherProvider" value="Orange" />
 
 		<!-- Legacy Colours Yet To Be Updated / Integrated -->
 		<color name="background" value="#3f000000" />
@@ -217,15 +214,11 @@
 		<color name="darkgrey" value="#00666666" />
 		<color name="foreground" value="#00dddddd" />
 		<color name="grey" value="#00999999" />
-		<color name="infobar-frgrnd" value="#00ff00ff" />
-		<color name="infobar_sunken" value="#0000ff00" />
 		<color name="transparent" value="#ffffffff" />
 		<color name="transparent2" value="#ff000000" />
-		<color name="transpBlack" value="#30000000" />
 		<color name="un252b4247" value="#252b4247" />
 		<color name="un808888" value="#00808888" />
 		<color name="unc3c3c9" value="#00c3c3c9" />
-		<color name="uncccccc" value="#00cccccc" />
 		<color name="window-bg" value="#00333333" />
 		<color name="window-fg" value="#00999999" />
 
@@ -238,6 +231,8 @@
 		<color name="crypt_ecm" value="#00bcb5e6" />
 		<color name="dark" value="#00294a6b" />
 		<color name="fondoazul" value="#0001090f" />
+		<color name="infobar-frgrnd" value="#00ff00ff" />
+		<color name="infobar_sunken" value="#0000ff00" />
 		<color name="listbox" value="#0075a6ff" />
 		<color name="naranja" value="#00daa82d" />
 		<color name="progresoazul" value="#1130608f" />
@@ -248,6 +243,7 @@
 		<color name="rwhite" value="#00ffffff" />
 		<color name="tibline" value="#001d77aa" />
 		<color name="titulos" value="#006cbcf0" />
+		<color name="transpBlack" value="#30000000" />
 		<color name="transpWhite" value="#77ffffff" />
 		<color name="transpyellow" value="#33bab329" />
 		<color name="twhite" value="#10ffffff" />
@@ -512,9 +508,9 @@
 <!-- MENU - Beyonwiz Main Menu -->
 
 <!--
-Main list: selectedColor="#00ffffff" enabledColor="#00dddddd" offColor="#00777777" font="Regular;23" itemHeight="76" (default values shown)
-Sublists: selectedColor="#00ffffff" enabledColor="#00999999" offColor="#00555555" font="Regular;22" itemHeight="50" (default values shown)
-The widget height should be 5 * itemHeight.
+	Main list: selectedColor="#00ffffff" enabledColor="#00dddddd" offColor="#00777777" font="Regular;23" itemHeight="76" (default values shown)
+	Sublists: selectedColor="#00ffffff" enabledColor="#00999999" offColor="#00555555" font="Regular;22" itemHeight="50" (default values shown)
+	The widget height should be 5 * itemHeight.
 -->
 	<screen name="GeneralMenu" title="Main Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplateDebug" />
@@ -523,23 +519,23 @@ The widget height should be 5 * itemHeight.
 		</panel>
 		<widget source="Title" render="Label" position="360,30" size="870,35" borderColor="BannerBorder" borderWidth="1" font="BannerTitle;25" foregroundColor="BannerTitle" halign="right" transparent="1" />
 		<eLabel position="50,65" size="1180,2" backgroundColor="Pinstripe" />
-		<widget source="id_mainmenu_ext" render="Micon" path="gmenu/" position="0,170" size="1280,180" alphatest="on" transparent="1" zPosition="2" />
-		<widget name="list" position="0,360" size="1280,76" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showNever" transparent="1" />
-		<widget name="list_sub_0" position="15,440" size="250,250" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showNever" transparent="1" />
-		<widget name="list_sub_1" position="265,440" size="250,250" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showNever" transparent="1" />
-		<widget name="list_sub_2" position="515,440" size="250,250" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showNever" transparent="1" />
-		<widget name="list_sub_3" position="765,440" size="250,250" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showNever" transparent="1" />
-		<widget name="list_sub_4" position="1015,440" size="250,250" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showNever" transparent="1" />
-		<widget name="up_sub_0" pixmap="gmenu/gmenu_up.png" position="122,430" size="35,10" alphatest="on" zPosition="2" />
-		<widget name="up_sub_1" pixmap="gmenu/gmenu_up.png" position="372,430" size="35,10" alphatest="on" zPosition="2" />
-		<widget name="up_sub_2" pixmap="gmenu/gmenu_up.png" position="622,430" size="35,10" alphatest="on" zPosition="2" />
-		<widget name="up_sub_3" pixmap="gmenu/gmenu_up.png" position="872,430" size="35,10" alphatest="on" zPosition="2" />
-		<widget name="up_sub_4" pixmap="gmenu/gmenu_up.png" position="1122,430" size="35,10" alphatest="on" zPosition="2" />
-		<widget name="down_sub_0" pixmap="gmenu/gmenu_down.png" position="122,690" size="35,10" alphatest="on" zPosition="2" />
-		<widget name="down_sub_1" pixmap="gmenu/gmenu_down.png" position="372,690" size="35,10" alphatest="on" zPosition="2" />
-		<widget name="down_sub_2" pixmap="gmenu/gmenu_down.png" position="622,690" size="35,10" alphatest="on" zPosition="2" />
-		<widget name="down_sub_3" pixmap="gmenu/gmenu_down.png" position="872,690" size="35,10" alphatest="on" zPosition="2" />
-		<widget name="down_sub_4" pixmap="gmenu/gmenu_down.png" position="1122,690" size="35,10" alphatest="on" zPosition="2" />
+		<widget source="id_mainmenu_ext" render="Micon" path="gmenu/" position="0,275" size="1280,180" alphatest="on" transparent="1" />
+		<widget name="list" position="0,455" size="1280,50" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="1" />
+		<widget name="list_sub_0" position="15,515" size="250,175" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" enableWrapAround="1" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="1" />
+		<widget name="list_sub_1" position="265,515" size="250,175" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" enableWrapAround="1" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="1" />
+		<widget name="list_sub_2" position="515,515" size="250,175" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" enableWrapAround="1" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="1" />
+		<widget name="list_sub_3" position="765,515" size="250,175" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" enableWrapAround="1" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="1" />
+		<widget name="list_sub_4" position="1015,515" size="250,175" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" enableWrapAround="1" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="1" />
+		<widget name="up_sub_0" pixmap="gmenu/gmenu_up.png" position="122,505" size="35,10" alphatest="on" transparent="1" />
+		<widget name="up_sub_1" pixmap="gmenu/gmenu_up.png" position="372,505" size="35,10" alphatest="on" transparent="1" />
+		<widget name="up_sub_2" pixmap="gmenu/gmenu_up.png" position="622,505" size="35,10" alphatest="on" transparent="1" />
+		<widget name="up_sub_3" pixmap="gmenu/gmenu_up.png" position="872,505" size="35,10" alphatest="on" transparent="1" />
+		<widget name="up_sub_4" pixmap="gmenu/gmenu_up.png" position="1122,505" size="35,10" alphatest="on" transparent="1" />
+		<widget name="down_sub_0" pixmap="gmenu/gmenu_down.png" position="122,690" size="35,10" alphatest="on" transparent="1" />
+		<widget name="down_sub_1" pixmap="gmenu/gmenu_down.png" position="372,690" size="35,10" alphatest="on" transparent="1" />
+		<widget name="down_sub_2" pixmap="gmenu/gmenu_down.png" position="622,690" size="35,10" alphatest="on" transparent="1" />
+		<widget name="down_sub_3" pixmap="gmenu/gmenu_down.png" position="872,690" size="35,10" alphatest="on" transparent="1" />
+		<widget name="down_sub_4" pixmap="gmenu/gmenu_down.png" position="1122,690" size="35,10" alphatest="on" transparent="1" />
 	</screen>
 
 <!-- HELP - Generic Help Menu -->
@@ -1086,13 +1082,13 @@ The widget height should be 5 * itemHeight.
 
 	<screen name="ClockTemplate" title="Digital Current Time" flags="wfNoBorder">
 		<eLabel position="1080,10" size="190,60" backgroundColor="ScreenBackground" />
-		<widget source="global.CurrentTime" render="Label" position="1080,15" size="170,20" backgroundColor="TextBackground" font="Regular;18" foregroundColor="BannerClockBlue" halign="right" transparent="1" zPosition="+1">
+		<widget source="global.CurrentTime" render="Label" position="1080,15" size="170,20" backgroundColor="TextBackground" font="Regular;18" foregroundColor="BannerClockDate" halign="right" transparent="1" zPosition="+1">
 			<convert type="ClockToText">Format:%a %e-%b-%Y</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1100,35" size="120,28" backgroundColor="TextBackground" font="Regular;26" foregroundColor="BannerClockWhite" halign="right" transparent="1" valign="top" zPosition="+1">
+		<widget source="global.CurrentTime" render="Label" position="1100,35" size="120,28" backgroundColor="TextBackground" font="Regular;26" foregroundColor="BannerClockTime" halign="right" transparent="1" valign="top" zPosition="+1">
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1220,37" size="30,20" backgroundColor="TextBackground" font="Regular;18" foregroundColor="BannerClockWhite" halign="right" transparent="1" valign="top" zPosition="+1">
+		<widget source="global.CurrentTime" render="Label" position="1220,37" size="30,20" backgroundColor="TextBackground" font="Regular;18" foregroundColor="BannerClockTime" halign="right" transparent="1" valign="top" zPosition="+1">
 			<convert type="ClockToText">Format::%S</convert>
 		</widget>
 	</screen>
@@ -1103,21 +1099,21 @@ The widget height should be 5 * itemHeight.
 		<!-- Clock background -->
 		<eLabel position="1000,10" size="210,30" backgroundColor="ScreenBackground" />
 		<!-- Clock date -->
-		<widget source="global.CurrentTime" render="Label" position="1000,15" size="170,20" backgroundColor="TextBackground" font="Regular;18" foregroundColor="BannerClockBlue" halign="right" transparent="1" zPosition="+1">
+		<widget source="global.CurrentTime" render="Label" position="1000,15" size="170,20" backgroundColor="TextBackground" font="Regular;18" foregroundColor="BannerClockDate" halign="right" transparent="1" zPosition="+1">
 			<convert type="ClockToText">Format:%a %e-%b-%Y</convert>
 		</widget>
 		<!-- Clock face -->
 		<ePixmap pixmap="images/clock_face.png" position="1180,5" size="90,90" alphatest="blend" zPosition="+1" />
 		<!-- Clock seconds hand -->
-		<widget source="global.CurrentTime" render="Analogic" position="1192,17" size="65,65" alphatest="on" borderColor="BannerClockWhite" foregroundColor="BannerClockWhite" linewidth="1" zPosition="+2">
+		<widget source="global.CurrentTime" render="Analogic" position="1192,17" size="65,65" alphatest="on" borderColor="BannerClockTime" foregroundColor="BannerClockTime" linewidth="1" zPosition="+2">
 			<convert type="Analogiccon">AnalogSeconds</convert>
 		</widget>
 		<!-- Clock minutes hand -->
-		<widget source="global.CurrentTime" render="Analogic" position="1202,26" size="47,47" alphatest="on" borderColor="BannerClockWhite" foregroundColor="BannerClockWhite" linewidth="2" zPosition="+2">
+		<widget source="global.CurrentTime" render="Analogic" position="1202,26" size="47,47" alphatest="on" borderColor="BannerClockTime" foregroundColor="BannerClockTime" linewidth="2" zPosition="+2">
 			<convert type="Analogiccon">AnalogMinutes</convert>
 		</widget>
 		<!-- Clock hour hand -->
-		<widget source="global.CurrentTime" render="Analogic" position="1210,35" size="30,30" alphatest="on" borderColor="BannerClockWhite" foregroundColor="BannerClockWhite" linewidth="2" zPosition="+2">
+		<widget source="global.CurrentTime" render="Analogic" position="1210,35" size="30,30" alphatest="on" borderColor="BannerClockTime" foregroundColor="BannerClockTime" linewidth="2" zPosition="+2">
 			<convert type="Analogiccon">AnalogHours</convert>
 		</widget>
 	</screen>
@@ -1184,7 +1180,7 @@ The widget height should be 5 * itemHeight.
 		<widget source="session.FrontendStatus" render="Progress" pixmap="sliders/agc_snr.png" position="15,5" size="100,6" borderColor="TunerBorder" borderWidth="1" zPosition="+1">
 			<convert type="FrontendInfo">AGC</convert>
 		</widget>
-		<widget source="session.FrontendStatus" render="Label" position="120,0" size="40,15" backgroundColor="TunerBackground" font="Regular;15" foregroundColor="TunerNormal" halign="right" transparent="1" valign="center" zPosition="+1">
+		<widget source="session.FrontendStatus" render="Label" position="120,0" size="40,15" backgroundColor="TunerBackground" font="Regular;15" foregroundColor="TunerData" halign="right" transparent="1" valign="center" zPosition="+1">
 			<convert type="FrontendInfo">AGC</convert>
 		</widget>
 		<!-- SNR label, bar and percentage -->
@@ -1192,7 +1188,7 @@ The widget height should be 5 * itemHeight.
 		<widget source="session.FrontendStatus" render="Progress" pixmap="sliders/agc_snr.png" position="15,20" size="100,6" borderColor="TunerBorder" borderWidth="1" zPosition="+1">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
-		<widget source="session.FrontendStatus" render="Label" position="120,15" size="40,15" backgroundColor="TunerBackground" font="Regular;15" foregroundColor="TunerNormal" halign="right" transparent="1" valign="center" zPosition="+1">
+		<widget source="session.FrontendStatus" render="Label" position="120,15" size="40,15" backgroundColor="TunerBackground" font="Regular;15" foregroundColor="TunerData" halign="right" transparent="1" valign="center" zPosition="+1">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
 	</screen>

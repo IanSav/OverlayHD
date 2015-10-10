@@ -716,34 +716,34 @@
 		<widget name="Adapter" position="55,150" size="650,25" font="Regular;22" foregroundColors="#008c8c93,#00f23d21,#001cff1c" zPosition="1" />
 		<widget name="AdapterInfo_OK" pixmap="icons/lock_on.png" position="755,135" size="38,31" alphatest="on" zPosition="2" />
 		<widget name="AdapterInfo" pixmaps="images/select300_45black.png,images/select600_50.png" position="832,127" size="318,50" zPosition="1" />
-		<widget name="AdapterInfo_Text" position="832,127" size="318,50" font="Regular;22" foregroundColors="#00ffffff,#00ffffff,#00ffffff" halign="center" transparent="1" valign="center" zPosition="2" />
+		<widget name="AdapterInfo_Text" position="832,127" size="318,50" font="Regular;22" foregroundColors="White,White,White" halign="center" transparent="1" valign="center" zPosition="2" />
 		<eLabel position="55,190" size="740,1" backgroundColor="Pinstripe" />
 		<widget name="Networktext" position="55,200" size="650,25" font="Regular;22" foregroundColor="Grey" zPosition="1" />
 		<widget name="Network" position="55,230" size="650,25" font="Regular;22" foregroundColors="#008c8c93,#00f23d21,#001cff1c" zPosition="1" />
 		<widget name="NetworkInfo_Check" pixmaps="icons/lock_on.png,icons/lock_off.png" position="755,215" size="38,31" alphatest="on" zPosition="2" />
 		<widget name="NetworkInfo" pixmaps="images/select300_45black.png,images/select600_50.png" position="832,207" size="318,50" zPosition="1" />
-		<widget name="NetworkInfo_Text" position="832,207" size="318,50" font="Regular;22" foregroundColors="#00ffffff,#00ffffff,#00ffffff" halign="center" transparent="1" valign="center" zPosition="2" />
+		<widget name="NetworkInfo_Text" position="832,207" size="318,50" font="Regular;22" foregroundColors="White,White,White" halign="center" transparent="1" valign="center" zPosition="2" />
 		<eLabel position="55,270" size="740,1" backgroundColor="Pinstripe" />
 		<widget name="Dhcptext" position="55,280" size="650,25" font="Regular;22" foregroundColor="Grey" zPosition="1" />
 		<widget name="Dhcp" position="55,310" size="650,25" font="Regular;22" foregroundColors="#008c8c93,#00f23d21,#001cff1c" zPosition="1" />
 		<widget name="DhcpInfo_Check" pixmaps="icons/lock_on.png,icons/lock_off.png" position="755,295" size="38,31" alphatest="on" zPosition="2" />
 		<widget name="DhcpInfo" pixmaps="images/select300_45black.png,images/select600_50.png" position="832,287" size="318,50" zPosition="1" />
-		<widget name="DhcpInfo_Text" position="832,287" size="318,50" font="Regular;22" foregroundColors="#00ffffff,#00ffffff,#00ffffff" halign="center" transparent="1" valign="center" zPosition="2" />
+		<widget name="DhcpInfo_Text" position="832,287" size="318,50" font="Regular;22" foregroundColors="White,White,White" halign="center" transparent="1" valign="center" zPosition="2" />
 		<eLabel position="55,350" size="740,1" backgroundColor="Pinstripe" />
 		<widget name="IPtext" position="55,360" size="650,25" font="Regular;22" foregroundColor="Grey" zPosition="1" />
 		<widget name="IP" position="55,390" size="650,25" font="Regular;22" foregroundColors="#008c8c93,#00f23d21,#001cff1c" zPosition="1" />
 		<widget name="IPInfo_Check" pixmaps="icons/lock_on.png,icons/lock_off.png" position="755,375" size="38,31" alphatest="on" zPosition="2" />
 		<widget name="IPInfo" pixmaps="images/select300_45black.png,images/select600_50.png" position="832,367" size="318,50" zPosition="1" />
-		<widget name="IPInfo_Text" position="832,367" size="318,50" font="Regular;22" foregroundColors="#00ffffff,#00ffffff,#00ffffff" halign="center" transparent="1" valign="center" zPosition="2" />
+		<widget name="IPInfo_Text" position="832,367" size="318,50" font="Regular;22" foregroundColors="White,White,White" halign="center" transparent="1" valign="center" zPosition="2" />
 		<eLabel position="55,430" size="740,1" backgroundColor="Pinstripe" />
 		<widget name="DNStext" position="55,440" size="650,25" font="Regular;22" foregroundColor="Grey" zPosition="1" />
 		<widget name="DNS" position="55,470" size="650,25" font="Regular;22" foregroundColors="#008c8c93,#00f23d21,#001cff1c" zPosition="1" />
 		<widget name="DNSInfo_Check" pixmaps="icons/lock_on.png,icons/lock_off.png" position="755,455" size="38,31" alphatest="on" zPosition="2" />
 		<widget name="DNSInfo" pixmaps="images/select300_45black.png,images/select600_50.png" position="832,447" size="318,50" zPosition="1" />
-		<widget name="DNSInfo_Text" position="832,447" size="318,50" font="Regular;22" foregroundColors="#00ffffff,#00ffffff,#00ffffff" halign="center" transparent="1" valign="center" zPosition="2" />
+		<widget name="DNSInfo_Text" position="832,447" size="318,50" font="Regular;22" foregroundColors="White,White,White" halign="center" transparent="1" valign="center" zPosition="2" />
 		<eLabel position="55,510" size="740,1" backgroundColor="Pinstripe" />
 		<widget name="EditSettingsButton" pixmaps="images/select300_45black.png,images/select600_50.png" position="832,527" size="318,50" zPosition="1" />
-		<widget name="EditSettings_Text" position="832,527" size="318,50" font="Regular;22" foregroundColors="#00ffffff,#00ffffff,#00ffffff" halign="center" transparent="1" valign="center" zPosition="2" />
+		<widget name="EditSettings_Text" position="832,527" size="318,50" font="Regular;22" foregroundColors="White,White,White" halign="center" transparent="1" valign="center" zPosition="2" />
 		<widget name="InfoTextBorder" position="55,122" size="470,476" backgroundColor="Black" borderColor="Green" borderWidth="2" zPosition="+1" />
 		<widget name="InfoText" position="55,122" size="740,476" font="Regular;24" valign="center" zPosition="+2" />
 	</screen>
