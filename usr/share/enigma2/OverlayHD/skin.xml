@@ -510,7 +510,7 @@
 <!--
 	Main list: selectedColor="#00ffffff" enabledColor="#00dddddd" offColor="#00777777" font="Regular;23" itemHeight="76" (default values shown)
 	Sublists: selectedColor="#00ffffff" enabledColor="#00999999" offColor="#00555555" font="Regular;22" itemHeight="50" (default values shown)
-	The widget height should be 5 * itemHeight.
+	The widget height should be 6 * itemHeight.
 -->
 	<screen name="GeneralMenu" title="Main Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplateDebug" />
@@ -520,7 +520,6 @@
 		<widget source="Title" render="Label" position="360,30" size="870,35" borderColor="BannerBorder" borderWidth="1" font="BannerTitle;25" foregroundColor="BannerTitle" halign="right" transparent="1" />
 		<eLabel position="50,65" size="1180,2" backgroundColor="Pinstripe" />
 		<widget source="id_mainmenu_ext" render="Micon" path="gmenu/" position="0,275" size="1280,180" alphatest="on" transparent="1" />
-		<widget name="list" position="0,455" size="1280,50" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="1" />
 		<widget name="list_sub_0" position="15,515" size="250,175" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" enableWrapAround="1" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="1" />
 		<widget name="list_sub_1" position="265,515" size="250,175" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" enableWrapAround="1" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="1" />
 		<widget name="list_sub_2" position="515,515" size="250,175" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" enableWrapAround="1" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="1" />
