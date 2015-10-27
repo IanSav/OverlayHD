@@ -72,9 +72,11 @@
 
 		<color name="BannerBorder" value="Black" />
 		<color name="BannerClock" value="White" />
+		<color name="BannerClockBackground" value="ScreenBackground" />
 		<color name="BannerClockDate" value="LightBlue" />
 		<color name="BannerClockTime" value="White" />
 		<color name="BannerTitle" value="White" />
+
 <!--
  |		These entries were defined for the EPG grid but are now reported as invalid!
  |		- EntryBackgroundColorNow = "#0000056f"
@@ -141,6 +143,8 @@
 		<color name="HelpPress" value="Yellow" />
 
 		<color name="InfoBackground" value="ScreenBackground" />
+		<color name="InfobarMediaBackground" value="ScreenBackground" />
+		<color name="InfobarTVBackground" value="ScreenBackground" />
 		<color name="InfoBouquet" value="LightBlue" />
 		<color name="InfoBroadcaster" value="LightBlue" />
 		<color name="InfoChannel" value="LightBlue" />
@@ -170,7 +174,7 @@
 		<color name="InfoTimesNow" value="Grey" />
 
 		<color name="MenuBackground" value="ScreenBackground" />
-		<color name="MenuDisabled" value="LightGrey" />
+		<color name="MenuDisabled" value="Grey" />
 		<color name="MenuSelected" value="DodgerBlue" />
 		<color name="MenuText" value="White" />
 		<color name="MenuTextSelected" value="White" />
@@ -336,8 +340,8 @@
 		<color name="ListboxMarkedForeground" color="White" />
 		<color name="ListboxMarkedAndSelectedBackground" color="Black" />
 		<color name="ListboxMarkedAndSelectedForeground" color="White" />
-		<color name="WindowTitleForeground" color="White" />
 		<color name="WindowTitleBackground" color="Black" />
+		<color name="WindowTitleForeground" color="White" />
 	</windowstyle>
 
 <!-- Screen Templates To Provide The Date, Time, Headings And Buttons -->
@@ -594,21 +598,6 @@
 		<eLabel position="0,484" size="405,2" backgroundColor="Pinstripe" />
 		<eLabel position="0,0" size="2,485" backgroundColor="Pinstripe" />
 		<eLabel position="403,0" size="2,485" backgroundColor="Pinstripe" />
-	</screen>
-
-	<screen name="GeneralSetupOld" title="Setup Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<panel position="400,80" size="405,485">
-			<panel name="ScreenTemplateFrame405x485" />
-		</panel>
-		<widget name="list" position="410,90" size="385,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" zPosition="+1" />
-		<panel position="825,80" size="405,485">
-			<panel name="ScreenTemplateFrame405x485" />
-		</panel>
-		<widget name="sublist" position="835,90" size="385,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" zPosition="+1" />
-		<panel name="ScreenTemplateDescription2" />
 	</screen>
 
 	<screen name="GeneralSetup" title="Setup Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
@@ -1116,7 +1105,7 @@
 <!-- Screen Template To Display The Time As A Digital Clock -->
 
 	<screen name="ClockTemplate" title="Digital Current Time" flags="wfNoBorder">
-		<eLabel position="1080,10" size="190,60" backgroundColor="ScreenBackground" />
+		<eLabel position="1080,10" size="190,60" backgroundColor="BannerClockBackground" />
 		<widget source="global.CurrentTime" render="Label" position="1080,15" size="170,20" backgroundColor="TextBackground" font="Regular;18" foregroundColor="BannerClockDate" halign="right" transparent="1" zPosition="+1">
 			<convert type="ClockToText">Format:%a %e-%b-%Y</convert>
 		</widget>
@@ -1132,7 +1121,7 @@
 
 	<screen name="ClockAnalogueTemplate" title="Analogue Current Time" flags="wfNoBorder">
 		<!-- Clock background -->
-		<eLabel position="1000,10" size="210,30" backgroundColor="ScreenBackground" />
+		<eLabel position="1000,10" size="210,30" backgroundColor="BannerClockBackground" />
 		<!-- Clock date -->
 		<widget source="global.CurrentTime" render="Label" position="1000,15" size="170,20" backgroundColor="TextBackground" font="Regular;18" foregroundColor="BannerClockDate" halign="right" transparent="1" zPosition="+1">
 			<convert type="ClockToText">Format:%a %e-%b-%Y</convert>

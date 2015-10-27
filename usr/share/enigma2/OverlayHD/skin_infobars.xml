@@ -23,7 +23,7 @@
 
 	<!-- This panel is shown separated from MoviePlayer when "MENU > Setup > System > GUI Settings > Show PVR status in Movie Player infobar" is set to "No". -->
 
-	<screen name="PVRState" position="10,10" size="125,65" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="PVRState" position="10,10" size="125,65" backgroundColor="InfobarMediaBackground" flags="wfNoBorder">
 		<widget name="statusicon" pixmaps="icons/play.png,icons/pause.png,icons/stop.png,icons/forward.png,icons/backward.png,icons/slow.png" position="10,10" size="20,20" alphatest="on" transparent="1" />
 		<widget name="speed" position="35,10" size="70,20" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TimeShiftData" transparent="1" />
 		<!-- The eventname always appears to be blank?!?! -->
@@ -34,7 +34,7 @@
 
 <!-- OK - Main TV InfoBar Timeshift Status -->
 
-	<screen name="TimeshiftState" position="10,10" size="270,80" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="TimeshiftState" position="10,10" size="270,80" backgroundColor="InfobarMediaBackground" flags="wfNoBorder">
 		<widget name="statusicon" pixmaps="icons/play.png,icons/pause.png,icons/stop.png,icons/forward.png,icons/backward.png,icons/slow.png" position="10,10" size="20,20" alphatest="on" transparent="1" />
 		<widget name="speed" position="35,10" size="70,20" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TimeShiftData" transparent="1" />
 		<widget source="session.CurrentService" render="Label" position="100,10" size="70,20" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TimeShiftData" halign="center" transparent="1">
@@ -76,7 +76,7 @@
 	-->
 	<!-- This version of the Seekbar is a workaround to avoid the hard coded relationship between the cursor and progress bar (size and location)! -->
 	<screen name="Seekbar" position="center,0" size="570,50" backgroundColor="TransparentBackground" flags="wfNoBorder">
-		<eLabel position="28,10" size="512,50" backgroundColor="ScreenBackground" transparent="0" zPosition="-1" />
+		<eLabel position="28,10" size="512,50" backgroundColor="InfobarMediaBackground" transparent="0" zPosition="-1" />
 		<widget name="time" position="28,23" size="100,20" backgroundColor="TextBackground" font="Regular;20" halign="right" transparent="1" />
 		<widget name="cursor" position="0,0" size="8,18" pixmap="sliders/position_arrow.png" alphatest="on" transparent="1" zPosition="+1" />
 		<widget source="session.CurrentService" render="PositionGauge" position="148,23" size="272,20" foregroundColor="MediumBlue" pointer="sliders/position_pointer.png:544,0" transparent="1">
@@ -113,7 +113,7 @@
 		<!-- Clock Panel Area -->
 		<panel name="ClockTemplate" />
 		<!-- InfoBar Area Background -->
-		<eLabel position="0,570" size="1280,720" backgroundColor="ScreenBackground" transparent="0" zPosition="-1" />
+		<eLabel position="0,570" size="1280,720" backgroundColor="InfobarTVBackground" transparent="0" zPosition="-1" />
 		<eLabel position="172,580" size="2,130" backgroundColor="Pinstripe" />
 		<!-- Picon, LCN, Current Bouquet, Broadcast Channel Number and Broadcast Frequency Area -->
 		<widget source="session.CurrentService" render="Picon" position="30,580" size="100,60" alphatest="blend" transparent="1">
@@ -229,7 +229,7 @@
 <!-- Second TV InfoBar "Now" Extended Information -->
 
 	<screen name="SecondInfoBarNow">
-		<eLabel position="0,0" size="580,360" backgroundColor="ScreenBackground" zPosition="-1" />
+		<eLabel position="0,0" size="580,360" backgroundColor="InfobarTVBackground" transparent="0" zPosition="-1" />
 		<!-- Event Name Area -->
 		<widget source="session.Event_Now" render="Label" position="10,10" size="560,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="InfoProgramNow" noWrap="1" transparent="1">
 			<convert type="EventName">Name</convert>
@@ -264,7 +264,7 @@
 <!-- Second TV InfoBar "Next" Extended Information -->
 
 	<screen name="SecondInfoBarNext">
-		<eLabel position="0,0" size="580,360" backgroundColor="ScreenBackground" zPosition="-1" />
+		<eLabel position="0,0" size="580,360" backgroundColor="InfobarTVBackground" transparent="0" zPosition="-1" />
 		<!-- Event Name Area -->
 		<widget source="session.Event_Next" render="Label" position="10,10" size="560,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="InfoProgramNext" noWrap="1" transparent="1">
 			<convert type="EventName">Name</convert>
@@ -301,7 +301,7 @@
 	<screen name="MoviePlayer" title="Media Player" position="0,0" size="1280,720" backgroundColor="TransparentBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplateDebug" />
 		<panel name="ClockTemplate" />
-		<eLabel position="0,650" size="1280,70" backgroundColor="ScreenBackground" zPosition="-1" />
+		<eLabel position="0,650" size="1280,70" backgroundColor="InfobarMediaBackground" transparent="0" zPosition="-1" />
 		<eLabel position="172,660" size="2,50" backgroundColor="Pinstripe" />
 		<!-- Playback state and speed indicator -->
 		<widget name="statusicon" pixmaps="icons/media_play.png,icons/media_pause.png,icons/media_stop.png,icons/media_ff.png,icons/media_rew.png,icons/media_slow.png,icons/blank.png" position="20,661" size="48,48" alphatest="on" transparent="1" />
