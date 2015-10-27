@@ -1100,6 +1100,7 @@
 
 	<screen name="UpdatePlugin" title="Software Update" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColourBacks" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<widget name="activityslider" position="400,295" size="830,10" backgroundColor="Black" borderColor="DarkGrey" borderWidth="2" transparent="1" />
 		<widget source="package" render="Label" position="400,325" size="830,50" backgroundColor="TextBackground" font="Regular;20" halign="center" transparent="1" valign="center" />
@@ -1109,6 +1110,7 @@
 
 	<screen name="SoftwareUpdateChoices" title="Software Update" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColourBacks" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<panel name="ScreenTemplateSoftList4" />
 		<panel name="ScreenTemplateText4" />
@@ -1116,6 +1118,7 @@
 
 	<screen name="SoftwareUpdateChangeView" title="Software Changes" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColourBacks" />
 		<widget name="text" position="50,80" size="1180,560" font="Console;18" transparent="1" />
 	</screen>
 

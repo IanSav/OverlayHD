@@ -64,6 +64,12 @@
 		<widget source="text" render="Label" position="5,5" size="490,53" font="Regular;18" halign="center" valign="center" zPosition="100" />
 	</screen>
 
+<!-- AutoTimer Wizard -->
+
+	<screen name="AutoTimerWizard" title="Welcome..." position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="WizardConfig" />
+	</screen>
+
 <!-- Network Wizard -->
 
 	<screen name="NetworkWizard" title="Welcome..." position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">

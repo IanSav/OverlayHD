@@ -21,16 +21,20 @@
 
 <!-- PVR State -->
 
-	<screen name="PVRState" position="500,70" size="174,79" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<widget name="eventname" position="12,15" size="130,25" backgroundColor="Black" font="Regular;25" foregroundColor="White" halign="center" />
-		<widget name="state" position="12,15" size="130,25" backgroundColor="Black" font="Regular;25" foregroundColor="White" halign="center" />
-		<widget name="speed" position="35,10" size="70,20" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TimeShiftData" transparent="1" />
+	<!-- This panel is shown separated from MoviePlayer when "MENU > Setup > System > GUI Settings > Show PVR status in Movie Player infobar" is set to "No". -->
+
+	<screen name="PVRState" position="10,10" size="125,65" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<widget name="statusicon" pixmaps="icons/play.png,icons/pause.png,icons/stop.png,icons/forward.png,icons/backward.png,icons/slow.png" position="10,10" size="20,20" alphatest="on" transparent="1" />
+		<widget name="speed" position="35,10" size="70,20" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TimeShiftData" transparent="1" />
+		<!-- The eventname always appears to be blank?!?! -->
+		<widget name="eventname" position="10,35" size="105,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TimeShiftData" halign="center" />
+		<!-- This is a text version of the statusicon and speed information.  Already displayed so not needed here but must be defined to avoid skin errors!  -->
+		<widget name="state" position="0,0" size="0,0" font="Regular;20" transparent="1" />
 	</screen>
 
 <!-- OK - Main TV InfoBar Timeshift Status -->
 
-	<screen name="TimeshiftState" position="10,10" size="270,85" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="TimeshiftState" position="10,10" size="270,80" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<widget name="statusicon" pixmaps="icons/play.png,icons/pause.png,icons/stop.png,icons/forward.png,icons/backward.png,icons/slow.png" position="10,10" size="20,20" alphatest="on" transparent="1" />
 		<widget name="speed" position="35,10" size="70,20" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TimeShiftData" transparent="1" />
 		<widget source="session.CurrentService" render="Label" position="100,10" size="70,20" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TimeShiftData" halign="center" transparent="1">
@@ -41,11 +45,14 @@
 		</widget>
 		<!-- This as the bar graph background that isn't required for a bordered bar graph.
 		<ePixmap pixmap="sliders/progress_back.png" position="10,38" size="250,12" alphatest="on" />
-		-->
 		<widget source="session.CurrentService" render="Progress" pixmap="sliders/progress_timeshift.png" position="10,38" size="250,12" borderColor="TimeShiftBorder" borderWidth="1" transparent="1" valign="bottom" >
 			<convert type="ServicePosition">Position</convert>
 		</widget>
-		<widget name="eventname" position="10,55" size="250,20" backgroundColor="TextBackground" font="Regular;16" foregroundColor="TimeShiftData" transparent="1" />
+		-->
+		<widget source="session.CurrentService" render="Progress" position="10,35" size="250,6" backgroundColor="TimeShiftProgressBackground" borderColor="TimeShiftProgressBorder" borderWidth="1" foregroundColor="TimeShiftProgressColour" transparent="0">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<widget name="eventname" position="10,50" size="250,20" backgroundColor="TextBackground" font="Regular;16" foregroundColor="TimeShiftData" transparent="1" />
 		<!-- This is a text version of the statusicon and speed information.  Already displayed so not needed here but must be defined to avoid skin errors!  -->
 		<widget name="state" position="0,0" size="0,0" font="Regular;20" transparent="1" />
 		<!-- These are position pointers.  Already displayed so not needed here but must be defined to avoid skin errors!  -->
@@ -149,8 +156,13 @@
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
 		<!-- Now Event Progress Bar Area -->
+		<!--
 		<ePixmap pixmap="images/progress_event_background.png" position="345,643" size="740,6" alphatest="on" transparent="1" />
 		<widget source="session.Event_Now" render="Progress" pixmap="images/progress_event.png" position="345,643" size="740,6" transparent="1" zPosition="+1">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		-->
+		<widget source="session.Event_Now" render="Progress" position="345,643" size="740,6" backgroundColor="InfoProgressBackground" borderColor="InfoProgressBorder" borderWidth="1" foregroundColor="InfoProgressColour" transparent="0">
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<!-- Next Event Start & End Times, Event Name and Duration Area -->
@@ -179,13 +191,21 @@
 			<convert type="ServiceName2">%P - %t %s</convert>
 		</widget>
 		<!-- Recording Service Name and Recording Progress Bar Area - If Recording -->
-		<widget source="session.RecordState" render="Label" position="640,685" size="270,20" backgroundColor="TextBackground" font="Regular;15" foregroundColor="InfoRecording" noWrap="1" transparent="1" valign="center">
+		<widget source="session.RecordState" render="Label" position="640,685" size="270,20" backgroundColor="TextBackground" font="Regular;15" foregroundColor="InfoRecordingColour" noWrap="1" transparent="1" valign="center">
 			<convert type="infoRecBm">NombreyCanal</convert>
 		</widget>
-		<widget source="session.RecordState" render="FixedLabel" text=" " position="640,706" size="270,4" backgroundColor="InfoRecordingProgress">
+		<!--
+		<widget source="session.RecordState" render="FixedLabel" text=" " position="640,706" size="270,4" backgroundColor="InfoRecordingBackground">
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="session.RecordState" render="Progress" pixmap="images/progress_rec.png" position="640,706" size="270,4" borderWidth="0" transparent="1" zPosition="+1">
+			<convert type="infoRecBm">Progress</convert>
+		</widget>
+		-->
+		<widget source="session.RecordState" render="FixedLabel" text=" " position="640,705" size="270,5" backgroundColor="InfoRecordingBackground" borderColor="InfoRecordingBorder" borderWidth="1" transparent="0">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.RecordState" render="Progress" position="641,706" size="268,3" foregroundColor="InfoRecordingColour" transparent="1" zPosition="+1">
 			<convert type="infoRecBm">Progress</convert>
 		</widget>
 		<!-- Tuner Usage, Signal Strength & Quality, Resolution and Status Panel Area -->
@@ -281,7 +301,7 @@
 	<screen name="MoviePlayer" title="Media Player" position="0,0" size="1280,720" backgroundColor="TransparentBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplateDebug" />
 		<panel name="ClockTemplate" />
-		<eLabel position="0,650" size="1280,70" backgroundColor="ScreenBackground" transparent="1" zPosition="-1" />
+		<eLabel position="0,650" size="1280,70" backgroundColor="ScreenBackground" zPosition="-1" />
 		<eLabel position="172,660" size="2,50" backgroundColor="Pinstripe" />
 		<!-- Playback state and speed indicator -->
 		<widget name="statusicon" pixmaps="icons/media_play.png,icons/media_pause.png,icons/media_stop.png,icons/media_ff.png,icons/media_rew.png,icons/media_slow.png,icons/blank.png" position="20,661" size="48,48" alphatest="on" transparent="1" />
@@ -295,7 +315,7 @@
 			<convert type="ServiceName">Name</convert>
 		</widget>
 		<!-- Playback progress position -->
-		<widget source="session.CurrentService" render="Label" position="293,660" size="90,18" backgroundColor="TextBackground" font="Regular;18" halign="right" transparent="1" valign="center">
+		<widget source="session.CurrentService" render="Label" position="293,660" size="90,18" backgroundColor="TextBackground" font="Regular;18" foregroundColor="InfoMediaPosition" halign="right" transparent="1" valign="center">
 			<convert type="ServicePosition">Position</convert>
 		</widget>
 		<!-- Playback progress bar -->
@@ -304,7 +324,7 @@
 			<convert type="ServicePosition">Gauge</convert>
 		</widget>
 		<!-- Playback time remaining -->
-		<widget source="session.CurrentService" render="Label" position="1003,660" size="90,18" backgroundColor="TextBackground" font="Regular;18" transparent="1" valign="center">
+		<widget source="session.CurrentService" render="Label" position="1003,660" size="90,18" backgroundColor="TextBackground" font="Regular;18" foregroundColor="InfoMediaRemaining" transparent="1" valign="center">
 			<convert type="ServicePosition">Remaining</convert>
 		</widget>
 		<panel position="1110,660" size="160,20">
