@@ -253,7 +253,9 @@
 
 <!-- DVD Player -->
 
-	<screen name="DVDPlayer" title="DVDPlayer" position="0,0" size="1280,720" backgroundColor="ScreenTransparent" flags="wfNoBorder">
+	<screen name="DVDOverlay" title="DVD Overlay" position="0,0" size="1280,720" backgroundColor="ScreenTransparent" flags="wfNoBorder" zPosition="-1" />
+
+	<screen name="DVDPlayer" title="DVD Player" position="0,0" size="1280,720" backgroundColor="ScreenTransparent" flags="wfNoBorder">
 		<!-- Background -->
 		<ePixmap pixmap="images/infobar.png" position="0,70" size="1280,720" zPosition="-1" />
 		<!-- Time -->
@@ -299,6 +301,43 @@
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget name="subtitleLabel" position="920,645" size="48,22" backgroundColor="TextBackground" font="Regular;18" shadowColor="#001d354c" shadowOffset="-1,-1" transparent="1" valign="bottom" />
+	</screen>
+
+	<screen name="DVDPlayerNew" title="DVD Player" position="0,0" size="1280,720" backgroundColor="TransparentBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplateDebug" />
+		<panel name="ClockTemplate" />
+		<eLabel position="0,650" size="1280,70" backgroundColor="InfobarMediaBackground" transparent="0" zPosition="-1" />
+		<eLabel position="172,660" size="2,50" backgroundColor="Pinstripe" />
+		<!-- Playback state and speed indicator -->
+		<widget name="statusicon" pixmaps="icons/media_play.png,icons/media_pause.png,icons/media_stop.png,icons/media_ff.png,icons/media_rew.png,icons/media_slow.png,icons/blank.png" position="20,661" size="48,48" alphatest="on" transparent="1" />
+		<widget name="speed" position="80,668" size="100,35" backgroundColor="TextBackground" font="Regular;35" transparent="1" valign="center" />
+		<!-- Recording length -->
+		<widget source="session.CurrentService" render="Label" position="182,660" size="100,20" backgroundColor="TextBackground" font="Regular;20" foregroundColor="InfoMediaLength" transparent="1" valign="center">
+			<convert type="ServicePosition">Length</convert>
+		</widget>
+		<!-- Recording name -->
+		<widget source="session.CurrentService" render="Label" position="182,691" size="715,22" backgroundColor="TextBackground" font="Regular;20" foregroundColor="InfoMediaName" noWrap="1" transparent="1" valign="center">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<!-- Playback progress position -->
+		<widget source="session.CurrentService" render="Label" position="293,660" size="90,18" backgroundColor="TextBackground" font="Regular;18" foregroundColor="InfoMediaPosition" halign="right" transparent="1" valign="center">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<!-- Playback progress bar -->
+		<ePixmap pixmap="sliders/mpslider.png" position="393,661" size="600,16" alphatest="on" transparent="1" />
+		<widget source="session.CurrentService" render="PositionGauge" position="413,662" size="560,14" pointer="sliders/pointer.png:13,3">
+			<convert type="ServicePosition">Gauge</convert>
+		</widget>
+		<!-- Playback time remaining -->
+		<widget source="session.CurrentService" render="Label" position="1003,660" size="90,18" backgroundColor="TextBackground" font="Regular;18" foregroundColor="InfoMediaRemaining" transparent="1" valign="center">
+			<convert type="ServicePosition">Remaining</convert>
+		</widget>
+		<panel position="1110,660" size="160,20">
+			<panel name="ResolutionRightPanel" />
+		</panel>
+		<panel position="917,690" size="353,20">
+			<panel name="ChannelFormatPanel" />
+		</panel>
 	</screen>
 
 	<screen name="TitleProperties" title="Properties of current title" position="90,100" size="1100,560">
@@ -393,6 +432,11 @@
 		<widget source="key_red" render="Label" position="20,525" size="250,30" font="Regular;24" foregroundColor="ButtonRed" halign="center" valign="center" />
 		<widget source="key_green" render="Label" position="290,525" size="250,30" font="Regular;24" foregroundColor="ButtonGreen" halign="center" valign="center" />
 		<widget source="key_blue" render="Label" position="830,525" size="250,30" font="Regular;24" foregroundColor="ButtonBlue" halign="center" valign="center" />
+	</screen>
+
+	<screen name="ChapterZap" title="Chapter" position="235,255" size="250,60">
+		<widget name="chapter" position="35,15" size="110,25" font="Regular;23" />
+		<widget name="number" position="145,15" size="80,25" halign="right" font="Regular;23" />
 	</screen>
 
 <!-- MyTubePlayer -->

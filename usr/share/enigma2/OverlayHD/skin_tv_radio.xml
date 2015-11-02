@@ -118,11 +118,14 @@
 		<widget source="ServiceEvent" render="Picon" position="710,190" size="100,60" alphatest="blend" borderColor="grey" borderWidth="1" transparent="1">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="820,190" size="200,25" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoChannel" transparent="1">
+		<widget source="ServiceEvent" render="Label" position="820,190" size="180,25" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoChannel" transparent="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="1030,190" size="200,25" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoBroadcaster" halign="right" transparent="1">
+		<widget source="ServiceEvent" render="Label" position="1010,190" size="220,25" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoBroadcaster" halign="right" transparent="1">
 			<convert type="ServiceName2">Provider</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="820,215" size="410,12" backgroundColor="InfoBackground" font="Regular;12" foregroundColor="InfoBroadcaster" halign="right" transparent="1">
+			<convert type="ServiceName2">%F</convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="820,230" size="60,20" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoTimesNow" transparent="1">
 			<convert type="EventTime">StartTime</convert>
