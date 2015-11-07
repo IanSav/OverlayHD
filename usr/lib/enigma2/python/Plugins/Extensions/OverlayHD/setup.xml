@@ -54,6 +54,8 @@
 		<item level="0" text="Info recordings progress colour" description="Select a colour to be used when displaying a recording's progress bar.">config.plugins.skin.OverlayHD.InfoRecordingProgress</item>
 		<item level="0" text="Info media name colour" description="Select a colour to be used when displaying a media file's name in Media Player.">config.plugins.skin.OverlayHD.InfoMediaName</item>
 		<item level="0" text="Info media length colour" description="Select a colour to be used when displaying a media file's length in Media Player.">config.plugins.skin.OverlayHD.InfoMediaLength</item>
+		<item level="0" text="Info media position colour" description="Select a colour to be used when displaying a media file's position time in Media Player.">config.plugins.skin.OverlayHD.InfoMediaPosition</item>
+		<item level="0" text="Info media remaining colour" description="Select a colour to be used when displaying a media file's remaining time in Media Player.">config.plugins.skin.OverlayHD.InfoMediaRemaining</item>
 		<item level="0" text="Info disk information colour" description="Select a colour to be used when displaying the disk information in Media Player.">config.plugins.skin.OverlayHD.InfoDiskStats</item>
 		<item level="0" text="EPG program LCN colour" description="Select a colour to be used when displaying an EPG based program LCN.">config.plugins.skin.OverlayHD.EPGLCN</item>
 		<item level="0" text="EPG program channel colour" description="Select a colour to be used when displaying an EPG based program channel.">config.plugins.skin.OverlayHD.EPGChannel</item>

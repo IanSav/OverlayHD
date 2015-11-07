@@ -1,7 +1,7 @@
 #====================================================
 # OverlayHD Skin Manager
-# Version Date - 26-Oct-2015
-# Version Number - 1.16
+# Version Date - 4-Nov-2015
+# Version Number - 1.17
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
@@ -171,6 +171,8 @@ config.plugins.skin.OverlayHD.InfoFileSizeNow = ConfigSelection(default="LightBl
 config.plugins.skin.OverlayHD.InfoLCN = ConfigSelection(default="LightBlue", choices=colour_choices)
 config.plugins.skin.OverlayHD.InfoMediaLength = ConfigSelection(default="LightBlue", choices=colour_choices)
 config.plugins.skin.OverlayHD.InfoMediaName = ConfigSelection(default="LightBlue", choices=colour_choices)
+config.plugins.skin.OverlayHD.InfoMediaPosition = ConfigSelection(default="White", choices=colour_choices)
+config.plugins.skin.OverlayHD.InfoMediaRemaining = ConfigSelection(default="White", choices=colour_choices)
 config.plugins.skin.OverlayHD.InfoProgramNext = ConfigSelection(default="White", choices=colour_choices)
 config.plugins.skin.OverlayHD.InfoProgramNow = ConfigSelection(default="White", choices=colour_choices)
 config.plugins.skin.OverlayHD.InfoProgressBorder = ConfigSelection(default="Grey", choices=colour_choices)
@@ -374,6 +376,8 @@ class OverlayHDSkinManager(Setup):
 			config.plugins.skin.OverlayHD.InfoLCN.value = "LightBlue"
 			config.plugins.skin.OverlayHD.InfoMediaLength.value = "LightBlue"
 			config.plugins.skin.OverlayHD.InfoMediaName.value = "LightBlue"
+			config.plugins.skin.OverlayHD.InfoMediaPosition.value = "White"
+			config.plugins.skin.OverlayHD.InfoMediaRemaining.value = "White"
 			config.plugins.skin.OverlayHD.InfoProgramNext.value = "White"
 			config.plugins.skin.OverlayHD.InfoProgramNow.value = "White"
 			config.plugins.skin.OverlayHD.InfoProgressBorder.value = "Grey"
@@ -538,6 +542,8 @@ def applySkinSettings():
 		colorNames["InfoLCN"] = colorNames[config.plugins.skin.OverlayHD.InfoLCN.value]
 		colorNames["InfoMediaLength"] = colorNames[config.plugins.skin.OverlayHD.InfoMediaLength.value]
 		colorNames["InfoMediaName"] = colorNames[config.plugins.skin.OverlayHD.InfoMediaName.value]
+		colorNames["InfoMediaPosition"] = colorNames[config.plugins.skin.OverlayHD.InfoMediaPosition.value]
+		colorNames["InfoMediaRemaining"] = colorNames[config.plugins.skin.OverlayHD.InfoMediaRemaining.value]
 		colorNames["InfoProgramNext"] = colorNames[config.plugins.skin.OverlayHD.InfoProgramNext.value]
 		colorNames["InfoProgramNow"] = colorNames[config.plugins.skin.OverlayHD.InfoProgramNow.value]
 		colorNames["InfoProgressBorder"] = colorNames[config.plugins.skin.OverlayHD.InfoProgressBorder.value]
@@ -606,5 +612,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.always_active.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.16", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.17", icon="OverlayHD.png", fnc=main))
 	return list
