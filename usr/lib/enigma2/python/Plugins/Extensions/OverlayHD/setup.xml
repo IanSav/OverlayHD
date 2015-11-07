@@ -2,123 +2,130 @@
 <setupxml>
 	<setup key="OverlayHDSkinManager" title="OverlayHD Skin Manager" separation="0" menuimage="menus/mainmenu_tasks_setup_default.png">
 		<item level="2" text="OverlayHD plugin always active" description="Setting this to True causes the OverlayHD Skin Manager plugin to always be active / available even if the skin is not currently selected.  This allows skin settings to be changed any time even though they are only used when the skin is active.  Setting this to False makes the plugin active only when the skin is active.">config.plugins.skin.OverlayHD.always_active</item>
-		<item level="0" text="Screen background colour" description="Select a colour for the screen background.">config.plugins.skin.OverlayHD.ScreenBackgroundColour</item>
-		<item level="0" text="Screen background transparency" description="Select the screen background transparency.">config.plugins.skin.OverlayHD.ScreenBackgroundTransparency</item>
-		<item level="0" text="Banner clock colour" description="Select a colour for the banner clock display.">config.plugins.skin.OverlayHD.BannerClock</item>
-		<item level="0" text="Banner title colour" description="Select a colour for the banner title display.">config.plugins.skin.OverlayHD.BannerTitle</item>
-		<item level="0" text="Pinstripe colour" description="Select a colour for all pinstripes.">config.plugins.skin.OverlayHD.Pinstripe</item>
-		<item level="0" text="Pop up clock date colour" description="Select a colour for the pop up clock date display.">config.plugins.skin.OverlayHD.BannerClockDate</item>
-		<item level="0" text="Pop up clock time colour" description="Select a colour for the pop up clock time display.">config.plugins.skin.OverlayHD.BannerClockTime</item>
-		<item level="3" text="Menu background colour" description="Select a colour for the menu background.">config.plugins.skin.OverlayHD.MenuBackgroundColour</item>
-		<item level="3" text="Menu background transparency" description="Select the menu background transparency.">config.plugins.skin.OverlayHD.MenuBackgroundTransparency</item>
-		<item level="1" text="Menu item highlight colour" description="Select a colour for the menu item selection highlight.">config.plugins.skin.OverlayHD.MenuSelectedColour</item>
-		<item level="1" text="Menu item highlight transparency" description="Select the menu item selection highlight transparency.">config.plugins.skin.OverlayHD.MenuSelectedTransparency</item>
-		<item level="1" text="Menu item text colour" description="Select a colour for menu item text.">config.plugins.skin.OverlayHD.MenuText</item>
-		<item level="1" text="Menu item selected text colour" description="Select a colour for the currently selected menu item text.">config.plugins.skin.OverlayHD.MenuTextSelected</item>
-		<item level="1" text="Menu item disabled text colour" description="Select a colour disabled menu item text.">config.plugins.skin.OverlayHD.MenuDisabled</item>
-		<item level="3" text="Menu footnote background colour" description="Select a colour for the menu footnote background.">config.plugins.skin.OverlayHD.FootnoteBackgroundColour</item>
-		<item level="3" text="Menu footnote background transparency" description="Select the menu footnote background transparency.">config.plugins.skin.OverlayHD.FootnoteBackgroundTransparency</item>
-		<item level="0" text="Menu footnote colour" description="Select a colour to be used for the Setup menu footnote (Restart Required) text.">config.plugins.skin.OverlayHD.FootnoteText</item>
-		<item level="3" text="Text background colour" description="Select a colour for text background.">config.plugins.skin.OverlayHD.TextBackgroundColour</item>
-		<item level="3" text="Text background transparency" description="Select a colour for text background transparency.">config.plugins.skin.OverlayHD.TextBackgroundTransparency</item>
-		<item level="0" text="Text colour" description="Select a colour for general text used for descriptions and help text.">config.plugins.skin.OverlayHD.Text</item>
-		<item level="0" text="Text selected colour" description="Select a colour for selected descriptions and help text.">config.plugins.skin.OverlayHD.TextSelected</item>
-		<item level="0" text="Text indented colour" description="Select a colour for indented descriptions and help text.">config.plugins.skin.OverlayHD.TextIndented</item>
-		<item level="0" text="Text indented selected colour" description="Select a colour for indented and selected description and help text.">config.plugins.skin.OverlayHD.TextIndentedSelected</item>
-		<item level="0" text="Text label colour" description="Select a colour for text used as labels.">config.plugins.skin.OverlayHD.TextLabel</item>
-		<item level="0" text="Text waiting colour" description="Select a colour for text used in temporary waiting screens while the screen content is being loaded.">config.plugins.skin.OverlayHD.TextWaiting</item>
-		<item level="3" text="SMS Helper background colour" description="Select a colour for the SMS helper background.">config.plugins.skin.OverlayHD.SMSHelperBackgroundColour</item>
-		<item level="3" text="SMS Helper background transparency" description="Select a colour for the SMS helper background transparency.">config.plugins.skin.OverlayHD.SMSHelperBackgroundTransparency</item>
-		<item level="0" text="SMS Helper text colour" description="Select a colour for the SMS helper text.">config.plugins.skin.OverlayHD.SMSHelperText</item>
-		<item level="0" text="Help information text colour" description="Select a colour for additional button help text in the help menu.">config.plugins.skin.OverlayHD.HelpPress</item>
-		<item level="0" text="Movie selection find character colour" description="Select a colour for the search letter pop up in Media Player.">config.plugins.skin.OverlayHD.FindCharacter</item>
-		<item level="3" text="Info background colour" description="Select a colour for info background.">config.plugins.skin.OverlayHD.InfoBackgroundColour</item>
-		<item level="3" text="Info background transparency" description="Select a colour for info background transparency.">config.plugins.skin.OverlayHD.InfoBackgroundTransparency</item>
-		<item level="0" text="Info LCN colour" description="Select a colour to be used when displaying a LCN.">config.plugins.skin.OverlayHD.InfoLCN</item>
-		<item level="0" text="Info channel name colour" description="Select a colour to be used when displaying a channel name.">config.plugins.skin.OverlayHD.InfoChannel</item>
-		<item level="0" text="Info broadcaster name colour" description="Select a colour to be used when displaying a broadcaster's name.">config.plugins.skin.OverlayHD.InfoBroadcaster</item>
-		<item level="0" text="Info bouquet colour" description="Select a colour to be used when displaying a bouquet.">config.plugins.skin.OverlayHD.InfoBouquet</item>
-		<item level="0" text="Info Now program name colour" description="Select a colour to be used when displaying a current program's name.">config.plugins.skin.OverlayHD.InfoProgramNow</item>
-		<item level="0" text="Info Next program name colour" description="Select a colour to be used when displaying the next or later program's name.">config.plugins.skin.OverlayHD.InfoProgramNext</item>
-		<item level="0" text="Info Now program times colour" description="Select a colour to be used when displaying a current program's start and/or end times.">config.plugins.skin.OverlayHD.InfoTimesNow</item>
-		<item level="0" text="Info Next program times colour" description="Select a colour to be used when displaying the next or later program's start and/or end times.">config.plugins.skin.OverlayHD.InfoTimesNext</item>
-		<item level="0" text="Info Now program duration colour" description="Select a colour to be used when displaying a current program's duration.">config.plugins.skin.OverlayHD.InfoDurationNow</item>
-		<item level="0" text="Info Next program duration colour" description="Select a colour to be used when displaying the next or later program's duration.">config.plugins.skin.OverlayHD.InfoDurationNext</item>
-		<item level="0" text="Info Now program file size colour" description="Select a colour to be used when displaying a current program's file size.">config.plugins.skin.OverlayHD.InfoFileSizeNow</item>
-		<item level="0" text="Info Next program file size colour" description="Select a colour to be used when displaying the next or later program's file size.">config.plugins.skin.OverlayHD.InfoFileSizeNext</item>
-		<item level="0" text="Info Now program details colour" description="Select a colour to be used when displaying a current program's details.">config.plugins.skin.OverlayHD.InfoDetailsNow</item>
-		<item level="0" text="Info Next program details colour" description="Select a colour to be used when displaying the next or later program's details.">config.plugins.skin.OverlayHD.InfoDetailsNext</item>
-		<item level="0" text="Info Now program ratings colour" description="Select a colour to be used when displaying a current program's rating or genre.">config.plugins.skin.OverlayHD.InfoRatingNow</item>
-		<item level="0" text="Info Next program ratings colour" description="Select a colour to be used when displaying the next or later program's rating or genre.">config.plugins.skin.OverlayHD.InfoRatingNext</item>
-		<item level="0" text="Info recording details colour" description="Select a colour to be used when displaying a recording's details.">config.plugins.skin.OverlayHD.InfoRecording</item>
-		<item level="0" text="Info recordings progress colour" description="Select a colour to be used when displaying a recording's progress bar.">config.plugins.skin.OverlayHD.InfoRecordingProgress</item>
-		<item level="0" text="Info media name colour" description="Select a colour to be used when displaying a media file's name in Media Player.">config.plugins.skin.OverlayHD.InfoMediaName</item>
-		<item level="0" text="Info media length colour" description="Select a colour to be used when displaying a media file's length in Media Player.">config.plugins.skin.OverlayHD.InfoMediaLength</item>
-		<item level="0" text="Info media position colour" description="Select a colour to be used when displaying a media file's position time in Media Player.">config.plugins.skin.OverlayHD.InfoMediaPosition</item>
-		<item level="0" text="Info media remaining colour" description="Select a colour to be used when displaying a media file's remaining time in Media Player.">config.plugins.skin.OverlayHD.InfoMediaRemaining</item>
-		<item level="0" text="Info disk information colour" description="Select a colour to be used when displaying the disk information in Media Player.">config.plugins.skin.OverlayHD.InfoDiskStats</item>
-		<item level="0" text="EPG program LCN colour" description="Select a colour to be used when displaying an EPG based program LCN.">config.plugins.skin.OverlayHD.EPGLCN</item>
-		<item level="0" text="EPG program channel colour" description="Select a colour to be used when displaying an EPG based program channel.">config.plugins.skin.OverlayHD.EPGChannel</item>
-		<item level="0" text="EPG program channel colour selected" description="Select a colour to be used when displaying a selected EPG based program channel.">config.plugins.skin.OverlayHD.EPGChannelSelected</item>
-		<item level="0" text="EPG program provider colour" description="Select a colour to be used when displaying an EPG based program provider.">config.plugins.skin.OverlayHD.EPGProvider</item>
-		<item level="0" text="EPG program title colour" description="Select a colour to be used when displaying an EPG based program title.">config.plugins.skin.OverlayHD.EPGProgram</item>
-		<item level="0" text="EPG program title colour selected" description="Select a colour to be used when displaying a selected EPG based program title.">config.plugins.skin.OverlayHD.EPGProgramSelected</item>
-		<item level="0" text="EPG program start / end times colour" description="Select a colour to be used when displaying an EPG based program start / end times.">config.plugins.skin.OverlayHD.EPGTimes</item>
-		<item level="0" text="EPG program start / end times colour selected" description="Select a colour to be used when displaying a selected EPG based program start / end times.">config.plugins.skin.OverlayHD.EPGTimesSelected</item>
-		<item level="0" text="EPG program duration colour" description="Select a colour to be used when displaying an EPG based program duration.">config.plugins.skin.OverlayHD.EPGDuration</item>
-		<item level="0" text="EPG program rating / genre colour" description="Select a colour to be used when displaying an EPG based program rating / genre.">config.plugins.skin.OverlayHD.EPGRating</item>
-		<item level="0" text="EPG program details colour" description="Select a colour to be used when displaying an EPG based program details.">config.plugins.skin.OverlayHD.EPGDetails</item>
-		<item level="0" text="EPG time line colour" description="Select a colour to be used for the EPG grid time line.">config.plugins.skin.OverlayHD.EPGTimeLine</item>
-		<item level="3" text="EPG grid background colour" description="Select a colour to be used for the EPG grid background.">config.plugins.skin.OverlayHD.EPGGridBackground</item>
-		<item level="1" text="EPG grid transparency" description="Select a background transparency to be used for text based EPG grid data.">config.plugins.skin.OverlayHD.EPGTransparency</item>
-		<item level="1" text="EPG grid background colour" description="Select a background colour to be used for EPG grid programs.">config.plugins.skin.OverlayHD.EPGEntryBackgroundColor</item>
-		<item level="1" text="EPG grid background selected colour" description="Select a background colour to be used for EPG grid selected programs.">config.plugins.skin.OverlayHD.EPGEntryBackgroundColorSelected</item>
-		<item level="1" text="EPG grid foreground colour" description="Select a foreground colour to be used for EPG grid programs.">config.plugins.skin.OverlayHD.EPGEntryForegroundColor</item>
-		<item level="1" text="EPG grid foreground selected colour" description="Select a foreground colour to be used for EPG grid selected programs.">config.plugins.skin.OverlayHD.EPGEntryForegroundColorSelected</item>
-		<item level="1" text="EPG grid recording background colour" description="Select a background colour to be used for EPG grid recordings.">config.plugins.skin.OverlayHD.EPGRecordBackgroundColor</item>
-		<item level="1" text="EPG grid recording selected background colour" description="Select a background colour to be used for EPG grid selected recordings.">config.plugins.skin.OverlayHD.EPGRecordBackgroundColorSelected</item>
-		<item level="1" text="EPG grid recording foreground colour" description="Select a foreground colour to be used for EPG grid recordings.">config.plugins.skin.OverlayHD.EPGRecordForegroundColor</item>
-		<item level="1" text="EPG grid recording selected foreground colour" description="Select a foreground colour to be used for EPG grid selected recordings.">config.plugins.skin.OverlayHD.EPGRecordForegroundColorSelected</item>
-		<item level="1" text="EPG grid service background colour" description="Select a background colour to be used for EPG grid services.">config.plugins.skin.OverlayHD.EPGServiceBackgroundColor</item>
-		<item level="1" text="EPG grid current service background colour" description="Select a background colour to be used for EPG current service.">config.plugins.skin.OverlayHD.EPGServiceBackgroundColorNow</item>
-		<item level="1" text="EPG grid service foreground colour" description="Select a foreground colour to be used for EPG grid services.">config.plugins.skin.OverlayHD.EPGServiceForegroundColor</item>
-		<item level="1" text="EPG grid current service foreground colour" description="Select a foreground colour to be used for EPG grid current service.">config.plugins.skin.OverlayHD.EPGServiceForegroundColorNow</item>
-		<item level="1" text="EPG grid zap recording background colour" description="Select a background colour to be used for EPG grid zap recordings.">config.plugins.skin.OverlayHD.EPGZapBackgroundColor</item>
-		<item level="1" text="EPG grid zap recording selected background colour" description="Select a background colour to be used for EPG grid selected zap recordings.">config.plugins.skin.OverlayHD.EPGZapBackgroundColorSelected</item>
-		<item level="1" text="EPG grid zap recording foreground colour" description="Select a foreground colour to be used for EPG grid zap recordings.">config.plugins.skin.OverlayHD.EPGZapForegroundColor</item>
-		<item level="1" text="EPG grid zap recording selected foreground colour" description="Select a foreground colour to be used for EPG grid selected zap recordings.">config.plugins.skin.OverlayHD.EPGZapForegroundColorSelected</item>
-		<item level="0" text="EPG PIG background colour" description="Select a background colour to be used for EPG screens using a Picture In Graphic (PIG).">config.plugins.skin.OverlayHD.EPGBackground</item>
-		<item level="0" text="EPG PIG overlay text border colour" description="Select a border colour for text overlays on the PIG.">config.plugins.skin.OverlayHD.EPGOverlayBorder</item>
-		<item level="0" text="EPG PIG overlay text colour" description="Select a colour for text overlays on the PIG.">config.plugins.skin.OverlayHD.EPGOverlayColour</item>
-		<item level="0" text="EPG PIG progress bar background colour" description="Select a background colour for the current PIG program progress bar.">config.plugins.skin.OverlayHD.EPGProgressBackground</item>
-		<item level="0" text="EPG PIG progress bar border colour" description="Select a border colour for the current PIG program progess bar.">config.plugins.skin.OverlayHD.EPGProgressBorder</item>
-		<item level="0" text="EPG PIG progress bar colour" description="Select a colour for the current PIG program progress bar.">config.plugins.skin.OverlayHD.EPGProgressColour</item>
-		<item level="3" text="Picture display background colour" description="Select a colour for the picture display background.">config.plugins.skin.OverlayHD.PictureBackgroundColour</item>
-		<item level="3" text="Picture display background transparency" description="Select a colour for the picture display background transparency.">config.plugins.skin.OverlayHD.PictureBackgroundTransparency</item>
-		<item level="0" text="Picture label colour" description="Select a colour to be used when displaying the disk information in Media Player.">config.plugins.skin.OverlayHD.PictureLabel</item>
-		<item level="0" text="Picture label border colour" description="Select a colour to be used when displaying the disk information in Media Player.">config.plugins.skin.OverlayHD.PictureLabelBorder</item>
-		<item level="0" text="Screen resolution text colour" description="Select a colour for the screen resolution text.">config.plugins.skin.OverlayHD.Resolution</item>
-		<item level="3" text="Screen resolution background colour" description="Select a colour for the screen resolution background.">config.plugins.skin.OverlayHD.ResolutionBackgroundColour</item>
-		<item level="3" text="Screen resolution background transparency" description="Select a colour for the screen resolution background transparency.">config.plugins.skin.OverlayHD.ResolutionBackgroundTransparency</item>
-		<item level="0" text="Timeshift progress bar border colour" description="Select a colour for the border of the timeshift progress bar.">config.plugins.skin.OverlayHD.TimeShiftBorder</item>
-		<item level="0" text="Timeshift data text colour" description="Select a colour for the timeshift data text.">config.plugins.skin.OverlayHD.TimeShiftData</item>
-		<item level="3" text="Tuner background colour" description="Select a colour for tuner info background.">config.plugins.skin.OverlayHD.TunerBackgroundColour</item>
-		<item level="3" text="Tuner background transparency" description="Select a colour for tuner info background transparency.">config.plugins.skin.OverlayHD.TunerBackgroundTransparency</item>
-		<item level="1" text="Tuner signal error colour" description="Select a colour to be used to indicate poor tuner signal quality (BER > 0).">config.plugins.skin.OverlayHD.TunerBER</item>
-		<item level="1" text="Tuner signal border colour" description="Select a colour to be used as the border colour for the tuner signal bar graphs.">config.plugins.skin.OverlayHD.TunerBorder</item>
-		<item level="1" text="Tuner signal levels colour" description="Select a colour to be used for the current tuner signal and quality levels.">config.plugins.skin.OverlayHD.TunerData</item>
-		<item level="1" text="Tuner type label colour" description="Select a colour to be used for the tuner type label.">config.plugins.skin.OverlayHD.TunerLabel</item>
-		<item level="1" text="Tuner idle colour" description="Select a colour to be used for all idle tuners.">config.plugins.skin.OverlayHD.TunerIdle</item>
-		<item level="1" text="Tuner active colour" description="Select a colour to be used for all active tuners.">config.plugins.skin.OverlayHD.TunerCurrent</item>
-		<item level="1" text="Tuner recording colour" description="Select a colour to be used for all tuners involved with recordings.">config.plugins.skin.OverlayHD.TunerRecording</item>
-		<item level="0" text="Volume control background colour" description="Select a colour for the background of the volume control slider bar.">config.plugins.skin.OverlayHD.VolumeBackground</item>
-		<item level="0" text="Volume control colour" description="Select a colour for the volume control slider bar.">config.plugins.skin.OverlayHD.VolumeColour</item>
-		<item level="0" text="Weather data text colour" description="Select a colour for the weather data text.">config.plugins.skin.OverlayHD.WeatherData</item>
-		<item level="0" text="Weather data label text colour" description="Select a colour for the weather data label text.">config.plugins.skin.OverlayHD.WeatherLabel</item>
-		<item level="0" text="Weather data provider text colour" description="Select a colour for the weather data provider text.">config.plugins.skin.OverlayHD.WeatherProvider</item>
-		<item level="3" text="Display skin names" description="When enabled, the current screen name is shown on the top left corner of most screens. This can be used to identify problematic screens.">config.plugins.skin.OverlayHD.show_debugscreens</item>
-		<item level="3" text="REC icon blinks" description="When enabled, the REC icon will be displayed blinking.">config.plugins.skin.OverlayHD.record_icon_blink</item>
-		<item level="3" text="Firmare update icon blinks" description="When enabled, the firmware update available icon will be displayed blinking.">config.plugins.skin.OverlayHD.update_icon_blink</item>
-		<item level="3" text="Use Enhanced Menu" description="When enabled, menus are shown with the numeric fast access button to the left of each menu item. (The numbers are always available even if not shown.)">config.plugins.skin.OverlayHD.use_enhanced_menu</item>
+		<item level="0" text="Screen background colour" description="Choose a colour for the user interface screen background.">config.plugins.skin.OverlayHD.ScreenBackgroundColour</item>
+		<item level="0" text="Screen background transparency" description="Choose the level of user interface screen background transparency.">config.plugins.skin.OverlayHD.ScreenBackgroundTransparency</item>
+		<item level="0" text="Banner clock colour" description="Choose a colour for the banner clock display.">config.plugins.skin.OverlayHD.BannerClock</item>
+		<item level="0" text="Banner title colour" description="Choose a colour for the banner title display.">config.plugins.skin.OverlayHD.BannerTitle</item>
+		<item level="0" text="Pinstripe colour" description="Choose a colour for all pinstripes.">config.plugins.skin.OverlayHD.Pinstripe</item>
+		<item level="1" text="Pop up clock background colour" description="Choose a colour for the pop up clock background.">config.plugins.skin.OverlayHD.BannerClockBackgroundColour</item>
+		<item level="1" text="Pop up clock background transparency" description="Choose a colour for the pop up clock background transparency.">config.plugins.skin.OverlayHD.BannerClockBackgroundTransparency</item>
+		<item level="0" text="Pop up clock date colour" description="Choose a colour for the pop up clock date display.">config.plugins.skin.OverlayHD.BannerClockDate</item>
+		<item level="0" text="Pop up clock time colour" description="Choose a colour for the pop up clock time display.">config.plugins.skin.OverlayHD.BannerClockTime</item>
+		<item level="3" text="Menu background colour" description="Choose a colour for menu backgrounds.">config.plugins.skin.OverlayHD.MenuBackgroundColour</item>
+		<item level="3" text="Menu background transparency" description="Choose the level of menu background transparency.">config.plugins.skin.OverlayHD.MenuBackgroundTransparency</item>
+		<item level="1" text="Menu item highlight colour" description="Choose a colour for menu item selection highlights.">config.plugins.skin.OverlayHD.MenuSelectedColour</item>
+		<item level="1" text="Menu item highlight transparency" description="Choose the level of menu item selection highlight transparency.">config.plugins.skin.OverlayHD.MenuSelectedTransparency</item>
+		<item level="1" text="Menu item text colour" description="Choose a colour for menu item text.">config.plugins.skin.OverlayHD.MenuText</item>
+		<item level="1" text="Menu item selected text colour" description="Choose a colour for the currently selected item menu text.">config.plugins.skin.OverlayHD.MenuTextSelected</item>
+		<item level="1" text="Menu item disabled text colour" description="Choose a colour for disabled item menu text.">config.plugins.skin.OverlayHD.MenuDisabled</item>
+		<item level="3" text="Menu footnote background colour" description="Choose a colour for the menu footnote backgrounds.">config.plugins.skin.OverlayHD.FootnoteBackgroundColour</item>
+		<item level="3" text="Menu footnote background transparency" description="Choose the level of menu footnote background transparency.">config.plugins.skin.OverlayHD.FootnoteBackgroundTransparency</item>
+		<item level="0" text="Menu footnote colour" description="Choose a colour for Setup menu footnote text. (e.g. Restart Required)">config.plugins.skin.OverlayHD.FootnoteText</item>
+		<item level="3" text="Text background colour" description="Choose a colour for text backgrounds.">config.plugins.skin.OverlayHD.TextBackgroundColour</item>
+		<item level="3" text="Text background transparency" description="Choose the level of text background transparency.">config.plugins.skin.OverlayHD.TextBackgroundTransparency</item>
+		<item level="0" text="Text colour" description="Choose a text colour for general descriptions and help.">config.plugins.skin.OverlayHD.Text</item>
+		<item level="0" text="Text selected colour" description="Choose a text colour for selected descriptions and help.">config.plugins.skin.OverlayHD.TextSelected</item>
+		<item level="0" text="Text indented colour" description="Choose a text colour for indented descriptions and help.">config.plugins.skin.OverlayHD.TextIndented</item>
+		<item level="0" text="Text indented selected colour" description="Choose a text colour for indented and selected descriptions and help.">config.plugins.skin.OverlayHD.TextIndentedSelected</item>
+		<item level="0" text="Text label colour" description="Choose a text colour for labels.">config.plugins.skin.OverlayHD.TextLabel</item>
+		<item level="0" text="Text waiting colour" description="Choose a text colour for content loading screens.">config.plugins.skin.OverlayHD.TextWaiting</item>
+		<item level="3" text="SMS Helper background colour" description="Choose a colour for the SMS helper background.">config.plugins.skin.OverlayHD.SMSHelperBackgroundColour</item>
+		<item level="3" text="SMS Helper background transparency" description="Choose the level of SMS helper background transparency.">config.plugins.skin.OverlayHD.SMSHelperBackgroundTransparency</item>
+		<item level="0" text="SMS Helper text colour" description="Choose a colour for the SMS helper text.">config.plugins.skin.OverlayHD.SMSHelperText</item>
+		<item level="0" text="Help information text colour" description="Choose a colour for help menu additional button help text.">config.plugins.skin.OverlayHD.HelpPress</item>
+		<item level="0" text="Movie selection find character colour" description="Choose a colour for the search letter pop up in Media Player.">config.plugins.skin.OverlayHD.FindCharacter</item>
+		<item level="3" text="Info background colour" description="Choose a colour for info background.">config.plugins.skin.OverlayHD.InfoBackgroundColour</item>
+		<item level="3" text="Info background transparency" description="Choose the level of info background transparency.">config.plugins.skin.OverlayHD.InfoBackgroundTransparency</item>
+		<item level="1" text="Media Infobar background colour" description="Choose a colour for the Media Player infobar background.">config.plugins.skin.OverlayHD.InfobarMediaBackgroundColour</item>
+		<item level="1" text="Media Infobar background transparency" description="Choose the level of Media Player infobar background transparency.">config.plugins.skin.OverlayHD.InfobarMediaBackgroundTransparency</item>
+		<item level="1" text="TV Infobar background colour" description="Choose a colour for the TV infobar background.">config.plugins.skin.OverlayHD.InfobarTVBackgroundColour</item>
+		<item level="1" text="TV Infobar background transparency" description="Choose the level of TV infobar background transparency.">config.plugins.skin.OverlayHD.InfobarTVBackgroundTransparency</item>
+		<item level="0" text="Info LCN colour" description="Choose a colour for displaying a LCN.">config.plugins.skin.OverlayHD.InfoLCN</item>
+		<item level="0" text="Info channel name colour" description="Choose a colour for displaying a channel name.">config.plugins.skin.OverlayHD.InfoChannel</item>
+		<item level="0" text="Info broadcaster name colour" description="Choose a colour for displaying a broadcaster's name.">config.plugins.skin.OverlayHD.InfoBroadcaster</item>
+		<item level="0" text="Info bouquet colour" description="Choose a colour for displaying a bouquet name.">config.plugins.skin.OverlayHD.InfoBouquet</item>
+		<item level="0" text="Info Now program name colour" description="Choose a colour for displaying a current program's name.">config.plugins.skin.OverlayHD.InfoProgramNow</item>
+		<item level="0" text="Info Next program name colour" description="Choose a colour for displaying the next or later program's name.">config.plugins.skin.OverlayHD.InfoProgramNext</item>
+		<item level="0" text="Info Now program times colour" description="Choose a colour for displaying a current program's start and/or end times.">config.plugins.skin.OverlayHD.InfoTimesNow</item>
+		<item level="0" text="Info Next program times colour" description="Choose a colour for displaying the next or later program's start and/or end times.">config.plugins.skin.OverlayHD.InfoTimesNext</item>
+		<item level="0" text="Info Now program duration colour" description="Choose a colour for displaying a current program's duration.">config.plugins.skin.OverlayHD.InfoDurationNow</item>
+		<item level="0" text="Info Next program duration colour" description="Choose a colour for displaying the next or later program's duration.">config.plugins.skin.OverlayHD.InfoDurationNext</item>
+		<item level="0" text="Info Now program file size colour" description="Choose a colour for displaying a current program's file size.">config.plugins.skin.OverlayHD.InfoFileSizeNow</item>
+		<item level="0" text="Info Next program file size colour" description="Choose a colour for displaying the next or later program's file size.">config.plugins.skin.OverlayHD.InfoFileSizeNext</item>
+		<item level="0" text="Info Now program details colour" description="Choose a colour for displaying a current program's details.">config.plugins.skin.OverlayHD.InfoDetailsNow</item>
+		<item level="0" text="Info Next program details colour" description="Choose a colour for displaying the next or later program's details.">config.plugins.skin.OverlayHD.InfoDetailsNext</item>
+		<item level="0" text="Info Now program ratings colour" description="Choose a colour for displaying a current program's rating or genre.">config.plugins.skin.OverlayHD.InfoRatingNow</item>
+		<item level="0" text="Info Next program ratings colour" description="Choose a colour for displaying the next or later program's rating or genre.">config.plugins.skin.OverlayHD.InfoRatingNext</item>
+		<item level="0" text="Info recording progress bar background colour" description="Choose a background colour for the recording progress bar.">config.plugins.skin.OverlayHD.InfoRecordingBackground</item>
+		<item level="0" text="Info recording progress bar border colour" description="Choose a border colour for the recording progress bar.">config.plugins.skin.OverlayHD.InfoRecordingBorder</item>
+		<item level="0" text="Info recording details and progress bar colour" description="Choose a colour for displaying the recording details and progress bar.">config.plugins.skin.OverlayHD.InfoRecordingColour</item>
+		<item level="0" text="Info media name colour" description="Choose a colour for displaying a media file's name in Media Player.">config.plugins.skin.OverlayHD.InfoMediaName</item>
+		<item level="0" text="Info media length colour" description="Choose a colour for displaying a media file's length in Media Player.">config.plugins.skin.OverlayHD.InfoMediaLength</item>
+		<item level="0" text="Info media position colour" description="Choose a colour for displaying a media file's position time in Media Player.">config.plugins.skin.OverlayHD.InfoMediaPosition</item>
+		<item level="0" text="Info media remaining colour" description="Choose a colour for displaying a media file's remaining time in Media Player.">config.plugins.skin.OverlayHD.InfoMediaRemaining</item>
+		<item level="0" text="Info disk information colour" description="Choose a colour for displaying the disk information in Media Player.">config.plugins.skin.OverlayHD.InfoDiskStats</item>
+		<item level="0" text="EPG program LCN colour" description="Choose a colour for displaying an EPG based program LCN.">config.plugins.skin.OverlayHD.EPGLCN</item>
+		<item level="0" text="EPG program channel colour" description="Choose a colour for displaying an EPG based program channel.">config.plugins.skin.OverlayHD.EPGChannel</item>
+		<item level="0" text="EPG program channel colour selected" description="Choose a colour for displaying a selected EPG based program channel.">config.plugins.skin.OverlayHD.EPGChannelSelected</item>
+		<item level="0" text="EPG program provider colour" description="Choose a colour for displaying an EPG based program provider.">config.plugins.skin.OverlayHD.EPGProvider</item>
+		<item level="0" text="EPG program title colour" description="Choose a colour for displaying an EPG based program title.">config.plugins.skin.OverlayHD.EPGProgram</item>
+		<item level="0" text="EPG program title colour selected" description="Choose a colour for displaying a selected EPG based program title.">config.plugins.skin.OverlayHD.EPGProgramSelected</item>
+		<item level="0" text="EPG program start / end times colour" description="Choose a colour for displaying an EPG based program start / end times.">config.plugins.skin.OverlayHD.EPGTimes</item>
+		<item level="0" text="EPG program start / end times colour selected" description="Choose a colour for displaying a selected EPG based program start / end times.">config.plugins.skin.OverlayHD.EPGTimesSelected</item>
+		<item level="0" text="EPG program duration colour" description="Choose a colour for displaying an EPG based program duration.">config.plugins.skin.OverlayHD.EPGDuration</item>
+		<item level="0" text="EPG program rating / genre colour" description="Choose a colour for displaying an EPG based program rating / genre.">config.plugins.skin.OverlayHD.EPGRating</item>
+		<item level="0" text="EPG program details colour" description="Choose a colour for displaying an EPG based program details.">config.plugins.skin.OverlayHD.EPGDetails</item>
+		<item level="0" text="EPG time line colour" description="Choose a colour for the EPG grid time line.">config.plugins.skin.OverlayHD.EPGTimeLine</item>
+		<item level="3" text="EPG grid background colour" description="Choose a colour for the EPG grid background.">config.plugins.skin.OverlayHD.EPGGridBackground</item>
+		<item level="1" text="EPG grid transparency" description="Choose the level of background transparency for text based EPG grid data.">config.plugins.skin.OverlayHD.EPGTransparency</item>
+		<item level="1" text="EPG grid background colour" description="Choose a background colour for EPG grid programs.">config.plugins.skin.OverlayHD.EPGEntryBackgroundColor</item>
+		<item level="1" text="EPG grid background selected colour" description="Choose a background colour for EPG grid selected programs.">config.plugins.skin.OverlayHD.EPGEntryBackgroundColorSelected</item>
+		<item level="1" text="EPG grid foreground colour" description="Choose a foreground colour for EPG grid programs.">config.plugins.skin.OverlayHD.EPGEntryForegroundColor</item>
+		<item level="1" text="EPG grid foreground selected colour" description="Choose a foreground colour for EPG grid selected programs.">config.plugins.skin.OverlayHD.EPGEntryForegroundColorSelected</item>
+		<item level="1" text="EPG grid recording background colour" description="Choose a background colour for EPG grid recordings.">config.plugins.skin.OverlayHD.EPGRecordBackgroundColor</item>
+		<item level="1" text="EPG grid recording selected background colour" description="Choose a background colour for EPG grid selected recordings.">config.plugins.skin.OverlayHD.EPGRecordBackgroundColorSelected</item>
+		<item level="1" text="EPG grid recording foreground colour" description="Choose a foreground colour for EPG grid recordings.">config.plugins.skin.OverlayHD.EPGRecordForegroundColor</item>
+		<item level="1" text="EPG grid recording selected foreground colour" description="Choose a foreground colour for EPG grid selected recordings.">config.plugins.skin.OverlayHD.EPGRecordForegroundColorSelected</item>
+		<item level="1" text="EPG grid service background colour" description="Choose a background colour for EPG grid services.">config.plugins.skin.OverlayHD.EPGServiceBackgroundColor</item>
+		<item level="1" text="EPG grid current service background colour" description="Choose a background colour for EPG current service.">config.plugins.skin.OverlayHD.EPGServiceBackgroundColorNow</item>
+		<item level="1" text="EPG grid service foreground colour" description="Choose a foreground colour for EPG grid services.">config.plugins.skin.OverlayHD.EPGServiceForegroundColor</item>
+		<item level="1" text="EPG grid current service foreground colour" description="Choose a foreground colour for EPG grid current service.">config.plugins.skin.OverlayHD.EPGServiceForegroundColorNow</item>
+		<item level="1" text="EPG grid zap recording background colour" description="Choose a background colour for EPG grid zap recordings.">config.plugins.skin.OverlayHD.EPGZapBackgroundColor</item>
+		<item level="1" text="EPG grid zap recording selected background colour" description="Choose a background colour for EPG grid selected zap recordings.">config.plugins.skin.OverlayHD.EPGZapBackgroundColorSelected</item>
+		<item level="1" text="EPG grid zap recording foreground colour" description="Choose a foreground colour for EPG grid zap recordings.">config.plugins.skin.OverlayHD.EPGZapForegroundColor</item>
+		<item level="1" text="EPG grid zap recording selected foreground colour" description="Choose a foreground colour for EPG grid selected zap recordings.">config.plugins.skin.OverlayHD.EPGZapForegroundColorSelected</item>
+		<item level="0" text="EPG PIG background colour" description="Choose a background colour for EPG screens using a Picture In Graphic (PIG).">config.plugins.skin.OverlayHD.EPGBackground</item>
+		<item level="0" text="EPG PIG overlay text border colour" description="Choose a border colour for PIG text overlays.">config.plugins.skin.OverlayHD.EPGOverlayBorder</item>
+		<item level="0" text="EPG PIG overlay text colour" description="Choose a colour for PIG text overlays.">config.plugins.skin.OverlayHD.EPGOverlayColour</item>
+		<item level="0" text="EPG PIG progress bar background colour" description="Choose a background colour for the PIG current program progress bar.">config.plugins.skin.OverlayHD.EPGProgressBackground</item>
+		<item level="0" text="EPG PIG progress bar border colour" description="Choose a border colour for the PIG current program progess bar.">config.plugins.skin.OverlayHD.EPGProgressBorder</item>
+		<item level="0" text="EPG PIG progress bar colour" description="Choose a colour for the PIG current program progress bar.">config.plugins.skin.OverlayHD.EPGProgressColour</item>
+		<item level="3" text="Picture display background colour" description="Choose a colour for the picture display background.">config.plugins.skin.OverlayHD.PictureBackgroundColour</item>
+		<item level="3" text="Picture display background transparency" description="Choose the level of picture display background transparency.">config.plugins.skin.OverlayHD.PictureBackgroundTransparency</item>
+		<item level="0" text="Picture label colour" description="Choose a colour for displaying picture labels.">config.plugins.skin.OverlayHD.PictureLabel</item>
+		<item level="0" text="Picture label border colour" description="Choose a border colour for displaying picture labels.">config.plugins.skin.OverlayHD.PictureLabelBorder</item>
+		<item level="0" text="Screen resolution text colour" description="Choose a colour for the screen resolution text.">config.plugins.skin.OverlayHD.Resolution</item>
+		<item level="3" text="Screen resolution background colour" description="Choose a colour for the screen resolution background.">config.plugins.skin.OverlayHD.ResolutionBackgroundColour</item>
+		<item level="3" text="Screen resolution background transparency" description="Choose the level of screen resolution background transparency.">config.plugins.skin.OverlayHD.ResolutionBackgroundTransparency</item>
+		<item level="0" text="Timeshift progress bar border colour" description="Choose a border colour for the timeshift progress bar.">config.plugins.skin.OverlayHD.TimeShiftBorder</item>
+		<item level="0" text="Timeshift data text colour" description="Choose a colour for the timeshift data text.">config.plugins.skin.OverlayHD.TimeShiftData</item>
+		<item level="3" text="Tuner background colour" description="Choose a colour for tuner info background.">config.plugins.skin.OverlayHD.TunerBackgroundColour</item>
+		<item level="3" text="Tuner background transparency" description="Choose the level of tuner info background transparency.">config.plugins.skin.OverlayHD.TunerBackgroundTransparency</item>
+		<item level="1" text="Tuner signal error colour" description="Choose a background colour to indicate poor tuner signal quality (BER > 0).">config.plugins.skin.OverlayHD.TunerBER</item>
+		<item level="1" text="Tuner signal border colour" description="Choose a border colour for the tuner signal and quality bar graphs.">config.plugins.skin.OverlayHD.TunerBorder</item>
+		<item level="1" text="Tuner signal levels colour" description="Choose a colour for the tuner signal and quality levels.">config.plugins.skin.OverlayHD.TunerData</item>
+		<item level="1" text="Tuner type label colour" description="Choose a colour for the tuner type label.">config.plugins.skin.OverlayHD.TunerLabel</item>
+		<item level="1" text="Tuner idle colour" description="Choose a colour for idle tuners.">config.plugins.skin.OverlayHD.TunerIdle</item>
+		<item level="1" text="Tuner active colour" description="Choose a colour for active tuners.">config.plugins.skin.OverlayHD.TunerCurrent</item>
+		<item level="1" text="Tuner recording colour" description="Choose a colour for tuners used during recordings.">config.plugins.skin.OverlayHD.TunerRecording</item>
+		<item level="0" text="Volume control background colour" description="Choose a colour for the volume control background.">config.plugins.skin.OverlayHD.VolumeBackground</item>
+		<item level="0" text="Volume control colour" description="Choose a colour for the volume control slider bar.">config.plugins.skin.OverlayHD.VolumeColour</item>
+		<item level="0" text="Weather data text colour" description="Choose a colour for the weather text.">config.plugins.skin.OverlayHD.WeatherData</item>
+		<item level="0" text="Weather data label text colour" description="Choose a colour for the weather labels.">config.plugins.skin.OverlayHD.WeatherLabel</item>
+		<item level="0" text="Weather data provider text colour" description="Choose a colour for the weather data provider.">config.plugins.skin.OverlayHD.WeatherProvider</item>
+		<item level="3" text="Display skin names" description="Enable to display the current screen name in the top left corner of most screens. This can be used to identify problematic screens.">config.plugins.skin.OverlayHD.show_debugscreens</item>
+		<item level="3" text="REC icon blinks" description="Enable to display the REC icon blinking.">config.plugins.skin.OverlayHD.record_icon_blink</item>
+		<item level="3" text="Firmare update icon blinks" description="Enable to display the firmware update available icon blinking.">config.plugins.skin.OverlayHD.update_icon_blink</item>
+		<item level="3" text="Use Enhanced Menu" description="Enable to display menus with the numeric fast access button on the left of each menu item. (The numbers are always available even if not shown.)">config.plugins.skin.OverlayHD.use_enhanced_menu</item>
 	</setup>
 </setupxml>

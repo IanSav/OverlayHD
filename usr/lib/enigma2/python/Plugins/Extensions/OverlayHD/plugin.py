@@ -1,7 +1,7 @@
 #====================================================
 # OverlayHD Skin Manager
-# Version Date - 4-Nov-2015
-# Version Number - 1.17
+# Version Date - 8-Nov-2015
+# Version Number - 1.18
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
@@ -108,6 +108,8 @@ config.plugins.skin.OverlayHD.ScreenBackgroundTransparency = ConfigSelection(def
 
 config.plugins.skin.OverlayHD.BannerBorder = ConfigSelection(default="Black", choices=colour_choices)
 config.plugins.skin.OverlayHD.BannerClock = ConfigSelection(default="White", choices=colour_choices)
+config.plugins.skin.OverlayHD.BannerClockBackgroundColour = ConfigSelection(default="Background", choices=background_choice + colour_choices)
+config.plugins.skin.OverlayHD.BannerClockBackgroundTransparency = ConfigSelection(default="Background", choices=background_choice + transparency_choices)
 config.plugins.skin.OverlayHD.BannerClockDate = ConfigSelection(default="LightBlue", choices=colour_choices)
 config.plugins.skin.OverlayHD.BannerClockTime = ConfigSelection(default="White", choices=colour_choices)
 config.plugins.skin.OverlayHD.BannerTitle = ConfigSelection(default="White", choices=colour_choices)
@@ -158,6 +160,10 @@ config.plugins.skin.OverlayHD.HelpPress = ConfigSelection(default="Yellow", choi
 
 config.plugins.skin.OverlayHD.InfoBackgroundColour = ConfigSelection(default="Background", choices=background_choice + colour_choices)
 config.plugins.skin.OverlayHD.InfoBackgroundTransparency = ConfigSelection(default="Background", choices=background_choice + transparency_choices)
+config.plugins.skin.OverlayHD.InfobarMediaBackgroundColour = ConfigSelection(default="Background", choices=background_choice + colour_choices)
+config.plugins.skin.OverlayHD.InfobarMediaBackgroundTransparency = ConfigSelection(default="Background", choices=background_choice + transparency_choices)
+config.plugins.skin.OverlayHD.InfobarTVBackgroundColour = ConfigSelection(default="Background", choices=background_choice + colour_choices)
+config.plugins.skin.OverlayHD.InfobarTVBackgroundTransparency = ConfigSelection(default="Background", choices=background_choice + transparency_choices)
 config.plugins.skin.OverlayHD.InfoBouquet = ConfigSelection(default="LightBlue", choices=colour_choices)
 config.plugins.skin.OverlayHD.InfoBroadcaster = ConfigSelection(default="LightBlue", choices=colour_choices)
 config.plugins.skin.OverlayHD.InfoChannel = ConfigSelection(default="LightBlue", choices=colour_choices)
@@ -175,11 +181,14 @@ config.plugins.skin.OverlayHD.InfoMediaPosition = ConfigSelection(default="White
 config.plugins.skin.OverlayHD.InfoMediaRemaining = ConfigSelection(default="White", choices=colour_choices)
 config.plugins.skin.OverlayHD.InfoProgramNext = ConfigSelection(default="White", choices=colour_choices)
 config.plugins.skin.OverlayHD.InfoProgramNow = ConfigSelection(default="White", choices=colour_choices)
+config.plugins.skin.OverlayHD.InfoProgressBackground = ConfigSelection(default="DeepGrey", choices=colour_choices)
 config.plugins.skin.OverlayHD.InfoProgressBorder = ConfigSelection(default="Grey", choices=colour_choices)
+config.plugins.skin.OverlayHD.InfoProgressColour = ConfigSelection(default="Green", choices=colour_choices)
 config.plugins.skin.OverlayHD.InfoRatingNext = ConfigSelection(default="Grey", choices=colour_choices)
 config.plugins.skin.OverlayHD.InfoRatingNow = ConfigSelection(default="Grey", choices=colour_choices)
-config.plugins.skin.OverlayHD.InfoRecording = ConfigSelection(default="DullRed", choices=colour_choices)
-config.plugins.skin.OverlayHD.InfoRecordingProgress = ConfigSelection(default="DeepGrey", choices=colour_choices)
+config.plugins.skin.OverlayHD.InfoRecordingBackground = ConfigSelection(default="DeepGrey", choices=colour_choices)
+config.plugins.skin.OverlayHD.InfoRecordingBorder = ConfigSelection(default="Grey", choices=colour_choices)
+config.plugins.skin.OverlayHD.InfoRecordingColour = ConfigSelection(default="OrangeRed", choices=colour_choices)
 config.plugins.skin.OverlayHD.InfoTimesNext = ConfigSelection(default="Grey", choices=colour_choices)
 config.plugins.skin.OverlayHD.InfoTimesNow = ConfigSelection(default="Grey", choices=colour_choices)
 
@@ -213,7 +222,9 @@ config.plugins.skin.OverlayHD.TextIndented = ConfigSelection(default="Grey", cho
 config.plugins.skin.OverlayHD.TextIndentedSelected = ConfigSelection(default="Silver", choices=colour_choices)
 config.plugins.skin.OverlayHD.TextLabel = ConfigSelection(default="Grey", choices=colour_choices)
 config.plugins.skin.OverlayHD.TextWaiting = ConfigSelection(default="Gold", choices=colour_choices)
+config.plugins.skin.OverlayHD.TimeShiftBackground = ConfigSelection(default="DeepGrey", choices=colour_choices)
 config.plugins.skin.OverlayHD.TimeShiftBorder = ConfigSelection(default="Grey", choices=colour_choices)
+config.plugins.skin.OverlayHD.TimeShiftColour = ConfigSelection(default="Green", choices=colour_choices)
 config.plugins.skin.OverlayHD.TimeShiftData = ConfigSelection(default="Silver", choices=colour_choices)
 config.plugins.skin.OverlayHD.TunerBackgroundColour = ConfigSelection(default="Background", choices=background_choice + colour_choices)
 config.plugins.skin.OverlayHD.TunerBackgroundTransparency = ConfigSelection(default="Background", choices=background_choice + transparency_choices)
@@ -317,6 +328,8 @@ class OverlayHDSkinManager(Setup):
 			config.plugins.skin.OverlayHD.ScreenBackgroundTransparency.value = "0x3f000000"
 			config.plugins.skin.OverlayHD.BannerBorder.value = "Black"
 			config.plugins.skin.OverlayHD.BannerClock.value = "White"
+			config.plugins.skin.OverlayHD.BannerClockBackgroundColour.value = "Background"
+			config.plugins.skin.OverlayHD.BannerClockBackgroundTransparency.value = "Background"
 			config.plugins.skin.OverlayHD.BannerClockDate.value = "LightBlue"
 			config.plugins.skin.OverlayHD.BannerClockTime.value = "White"
 			config.plugins.skin.OverlayHD.BannerTitle.value = "White"
@@ -363,6 +376,10 @@ class OverlayHDSkinManager(Setup):
 			config.plugins.skin.OverlayHD.HelpPress.value = "Yellow"
 			config.plugins.skin.OverlayHD.InfoBackgroundColour.value = "Background"
 			config.plugins.skin.OverlayHD.InfoBackgroundTransparency.value = "Background"
+			config.plugins.skin.OverlayHD.InfobarMediaBackgroundColour.value = "Background"
+			config.plugins.skin.OverlayHD.InfobarMediaBackgroundTransparency.value = "Background"
+			config.plugins.skin.OverlayHD.InfobarTVBackgroundColour.value = "Background"
+			config.plugins.skin.OverlayHD.InfobarTVBackgroundTransparency.value = "Background"
 			config.plugins.skin.OverlayHD.InfoBouquet.value = "LightBlue"
 			config.plugins.skin.OverlayHD.InfoBroadcaster.value = "LightBlue"
 			config.plugins.skin.OverlayHD.InfoChannel.value = "LightBlue"
@@ -380,11 +397,14 @@ class OverlayHDSkinManager(Setup):
 			config.plugins.skin.OverlayHD.InfoMediaRemaining.value = "White"
 			config.plugins.skin.OverlayHD.InfoProgramNext.value = "White"
 			config.plugins.skin.OverlayHD.InfoProgramNow.value = "White"
+			config.plugins.skin.OverlayHD.InfoProgressBackground.value = "DeepGrey"
 			config.plugins.skin.OverlayHD.InfoProgressBorder.value = "Grey"
+			config.plugins.skin.OverlayHD.InfoProgressColour.value = "Green"
 			config.plugins.skin.OverlayHD.InfoRatingNext.value = "Grey"
 			config.plugins.skin.OverlayHD.InfoRatingNow.value = "Grey"
-			config.plugins.skin.OverlayHD.InfoRecording.value = "DullRed"
-			config.plugins.skin.OverlayHD.InfoRecordingProgress.value = "DeepGrey"
+			config.plugins.skin.OverlayHD.InfoRecordingBackground.value = "DeepGrey"
+			config.plugins.skin.OverlayHD.InfoRecordingBorder.value = "Grey"
+			config.plugins.skin.OverlayHD.InfoRecordingColour.value = "OrangeRed"
 			config.plugins.skin.OverlayHD.InfoTimesNext.value = "Grey"
 			config.plugins.skin.OverlayHD.InfoTimesNow.value = "Grey"
 			config.plugins.skin.OverlayHD.MenuBackgroundColour.value = "Background"
@@ -413,7 +433,9 @@ class OverlayHDSkinManager(Setup):
 			config.plugins.skin.OverlayHD.TextIndentedSelected.value = "Silver"
 			config.plugins.skin.OverlayHD.TextLabel.value = "Grey"
 			config.plugins.skin.OverlayHD.TextWaiting.value = "Gold"
+			config.plugins.skin.OverlayHD.TimeShiftBackground.value = "DeepGrey"
 			config.plugins.skin.OverlayHD.TimeShiftBorder.value = "Grey"
+			config.plugins.skin.OverlayHD.TimeShiftColour.value = "Green"
 			config.plugins.skin.OverlayHD.TimeShiftData.value = "Silver"
 			config.plugins.skin.OverlayHD.TunerBackgroundColour.value = "Background"
 			config.plugins.skin.OverlayHD.TunerBackgroundTransparency.value = "Background"
@@ -471,6 +493,7 @@ def applySkinSettings():
 							long(config.plugins.skin.OverlayHD.ScreenBackgroundTransparency.value, 0x10))
 		colorNames["BannerBorder"] = colorNames[config.plugins.skin.OverlayHD.BannerBorder.value]
 		colorNames["BannerClock"] = colorNames[config.plugins.skin.OverlayHD.BannerClock.value]
+		colorNames["BannerClockBackground"] = buildColour(config.plugins.skin.OverlayHD.BannerClockBackgroundColour, config.plugins.skin.OverlayHD.BannerClockBackgroundTransparency)
 		colorNames["BannerClockDate"] = colorNames[config.plugins.skin.OverlayHD.BannerClockDate.value]
 		colorNames["BannerClockTime"] = colorNames[config.plugins.skin.OverlayHD.BannerClockTime.value]
 		colorNames["BannerTitle"] = colorNames[config.plugins.skin.OverlayHD.BannerTitle.value]
@@ -529,6 +552,8 @@ def applySkinSettings():
 		colorNames["FootnoteText"] = colorNames[config.plugins.skin.OverlayHD.FootnoteText.value]
 		colorNames["HelpPress"] = colorNames[config.plugins.skin.OverlayHD.HelpPress.value]
 		colorNames["InfoBackground"] = buildColour(config.plugins.skin.OverlayHD.InfoBackgroundColour, config.plugins.skin.OverlayHD.InfoBackgroundTransparency)
+		colorNames["InfobarMediaBackground"] = buildColour(config.plugins.skin.OverlayHD.InfobarMediaBackgroundColour, config.plugins.skin.OverlayHD.InfobarMediaBackgroundTransparency)
+		colorNames["InfobarTVBackground"] = buildColour(config.plugins.skin.OverlayHD.InfobarTVBackgroundColour, config.plugins.skin.OverlayHD.InfobarTVBackgroundTransparency)
 		colorNames["InfoBouquet"] = colorNames[config.plugins.skin.OverlayHD.InfoBouquet.value]
 		colorNames["InfoBroadcaster"] = colorNames[config.plugins.skin.OverlayHD.InfoBroadcaster.value]
 		colorNames["InfoChannel"] = colorNames[config.plugins.skin.OverlayHD.InfoChannel.value]
@@ -546,11 +571,14 @@ def applySkinSettings():
 		colorNames["InfoMediaRemaining"] = colorNames[config.plugins.skin.OverlayHD.InfoMediaRemaining.value]
 		colorNames["InfoProgramNext"] = colorNames[config.plugins.skin.OverlayHD.InfoProgramNext.value]
 		colorNames["InfoProgramNow"] = colorNames[config.plugins.skin.OverlayHD.InfoProgramNow.value]
+		colorNames["InfoProgressBackground"] = colorNames[config.plugins.skin.OverlayHD.InfoProgressBackground.value]
 		colorNames["InfoProgressBorder"] = colorNames[config.plugins.skin.OverlayHD.InfoProgressBorder.value]
+		colorNames["InfoProgressColour"] = colorNames[config.plugins.skin.OverlayHD.InfoProgressColour.value]
 		colorNames["InfoRatingNext"] = colorNames[config.plugins.skin.OverlayHD.InfoRatingNext.value]
 		colorNames["InfoRatingNow"] = colorNames[config.plugins.skin.OverlayHD.InfoRatingNow.value]
-		colorNames["InfoRecording"] = colorNames[config.plugins.skin.OverlayHD.InfoRecording.value]
-		colorNames["InfoRecordingProgress"] = colorNames[config.plugins.skin.OverlayHD.InfoRecordingProgress.value]
+		colorNames["InfoRecordingBackground"] = colorNames[config.plugins.skin.OverlayHD.InfoRecordingBackground.value]
+		colorNames["InfoRecordingBorder"] = colorNames[config.plugins.skin.OverlayHD.InfoRecordingBorder.value]
+		colorNames["InfoRecordingColour"] = colorNames[config.plugins.skin.OverlayHD.InfoRecordingColour.value]
 		colorNames["InfoTimesNext"] = colorNames[config.plugins.skin.OverlayHD.InfoTimesNext.value]
 		colorNames["InfoTimesNow"] = colorNames[config.plugins.skin.OverlayHD.InfoTimesNow.value]
 		colorNames["MenuBackground"] = buildColour(config.plugins.skin.OverlayHD.MenuBackgroundColour, config.plugins.skin.OverlayHD.MenuBackgroundTransparency)
@@ -571,7 +599,9 @@ def applySkinSettings():
 		colorNames["TextSelected"] = colorNames[config.plugins.skin.OverlayHD.TextSelected.value]
 		colorNames["TextIndented"] = colorNames[config.plugins.skin.OverlayHD.TextIndented.value]
 		colorNames["TextIndentedSelected"] = colorNames[config.plugins.skin.OverlayHD.TextIndentedSelected.value]
+		colorNames["TimeShiftBackground"] = colorNames[config.plugins.skin.OverlayHD.TimeShiftBackground.value]
 		colorNames["TimeShiftBorder"] = colorNames[config.plugins.skin.OverlayHD.TimeShiftBorder.value]
+		colorNames["TimeShiftColour"] = colorNames[config.plugins.skin.OverlayHD.TimeShiftColour.value]
 		colorNames["TimeShiftData"] = colorNames[config.plugins.skin.OverlayHD.TimeShiftData.value]
 		colorNames["TunerBackground"] = buildColour(config.plugins.skin.OverlayHD.TunerBackgroundColour, config.plugins.skin.OverlayHD.TunerBackgroundTransparency)
 		colorNames["TunerBER"] = colorNames[config.plugins.skin.OverlayHD.TunerBER.value]
@@ -612,5 +642,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.always_active.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.17", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.18", icon="OverlayHD.png", fnc=main))
 	return list
