@@ -1,7 +1,7 @@
 #====================================================
 # OverlayHD Skin Manager
 # Version Date - 5-Jan-2016
-# Version Number - 1.19
+# Version Number - 1.20
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
@@ -15,7 +15,7 @@ from Screens.MessageBox import MessageBox
 from Screens.Setup import Setup
 from Screens.Standby import TryQuitMainloop
 from enigma import gRGB
-from skin import dom_screens, colorNames
+from skin import dom_screens, colorNames, reloadWindowstyles
 import xml.etree.cElementTree
 
 colour_choices = [
@@ -221,6 +221,7 @@ config.plugins.skin.OverlayHD.Resolution = ConfigSelection(default="Silver", cho
 config.plugins.skin.OverlayHD.ResolutionBackgroundColour = ConfigSelection(default="Background", choices=background_choice + colour_choices)
 config.plugins.skin.OverlayHD.ResolutionBackgroundTransparency = ConfigSelection(default="Background", choices=background_choice + transparency_choices)
 
+config.plugins.skin.OverlayHD.Scrollbar = ConfigSelection(default="Gainsboro", choices=colour_choices)
 config.plugins.skin.OverlayHD.SMSHelperBackgroundColour = ConfigSelection(default="Background", choices=background_choice + colour_choices)
 config.plugins.skin.OverlayHD.SMSHelperBackgroundTransparency = ConfigSelection(default="Background", choices=background_choice + transparency_choices)
 config.plugins.skin.OverlayHD.SMSHelperText = ConfigSelection(default="White", choices=colour_choices)
@@ -433,6 +434,7 @@ class OverlayHDSkinManager(Setup):
 			config.plugins.skin.OverlayHD.Resolution.value = "Silver"
 			config.plugins.skin.OverlayHD.ResolutionBackgroundColour.value = "Background"
 			config.plugins.skin.OverlayHD.ResolutionBackgroundTransparency.value = "Background"
+			config.plugins.skin.OverlayHD.Scrollbar.value = "Gainsboro"
 			config.plugins.skin.OverlayHD.SMSHelperBackgroundColour.value = "Background"
 			config.plugins.skin.OverlayHD.SMSHelperBackgroundTransparency.value = "Background"
 			config.plugins.skin.OverlayHD.SMSHelperText.value = "White"
@@ -603,6 +605,7 @@ def applySkinSettings():
 		colorNames["Pinstripe"] = colorNames[config.plugins.skin.OverlayHD.Pinstripe.value]
 		colorNames["Resolution"] = colorNames[config.plugins.skin.OverlayHD.Resolution.value]
 		colorNames["ResolutionBackground"] = buildColour(config.plugins.skin.OverlayHD.ResolutionBackgroundColour, config.plugins.skin.OverlayHD.ResolutionBackgroundTransparency)
+		colorNames["Scrollbar"] = colorNames[config.plugins.skin.OverlayHD.Scrollbar.value]
 		colorNames["SMSHelperBackground"] = buildColour(config.plugins.skin.OverlayHD.SMSHelperBackgroundColour, config.plugins.skin.OverlayHD.SMSHelperBackgroundTransparency)
 		colorNames["SMSHelperText"] = colorNames[config.plugins.skin.OverlayHD.SMSHelperText.value]
 		colorNames["TextBackground"] = buildColour(config.plugins.skin.OverlayHD.TextBackgroundColour, config.plugins.skin.OverlayHD.TextBackgroundTransparency)
@@ -627,6 +630,7 @@ def applySkinSettings():
 		colorNames["WeatherData"] = colorNames[config.plugins.skin.OverlayHD.WeatherData.value]
 		colorNames["WeatherLabel"] = colorNames[config.plugins.skin.OverlayHD.WeatherLabel.value]
 		colorNames["WeatherProvider"] = colorNames[config.plugins.skin.OverlayHD.WeatherProvider.value]
+		reloadWindowstyles()
 	else:
 		print "[OverlayHD] OverlayHD is not the active skin!"
 
@@ -653,5 +657,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.always_active.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.19", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.20", icon="OverlayHD.png", fnc=main))
 	return list
