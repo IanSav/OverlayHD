@@ -286,14 +286,17 @@
 		<font name="Replacement" filename="ae_AlMateen.ttf" replacement="1" scale="100" />
 		<font name="Console" filename="tuxtxt.ttf" scale="100" />
 		<font name="Named" filename="Roboto-Bold.ttf" scale="100" />
-		<font name="Named" filename="md_khmurabi_10.ttf" scale="100" />
-		<font name="mediaportal" filename="md_khmurabi_10.ttf" scale="100" />
-		<alias name="Fixed" font="Console" size="20" height="25" />
 		<!--
-		<alias name="Body" font="Regular" size="20" height="25" />
-		<alias name="ChoiceList" font="Regular" size="20" height="25" />
-		<alias name="TextNormal" font="Regular" size="20" height="24" />
+		<font name="Named" filename="md_khmurabi_10.ttf" scale="100" />
 		-->
+		<font name="mediaportal" filename="md_khmurabi_10.ttf" scale="100" />
+		<alias name="Body" font="Regular" size="20" height="25" width="18" />
+		<alias name="ChoiceList" font="Regular" size="25" height="35" width="20" />
+		<alias name="TextNormal" font="Regular" size="20" height="24" />
+		<alias name="Fixed" font="Console" size="20" height="25" />
+		<alias name="OverlayHDFancy" font="Fancy" size="20" height="25" />
+		<alias name="OverlayHDFine" font="Fine" size="20" height="25" />
+		<alias name="OverlayHDRegular" font="Regular" size="20" height="25" />
 	</fonts>
 
 	<windowstyle id="0" type="skinned">
