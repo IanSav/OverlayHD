@@ -1,7 +1,7 @@
 #====================================================
 # OverlayHD Skin Manager
 # Version Date - 5-Jan-2016
-# Version Number - 1.20
+# Version Number - 1.21
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
@@ -464,8 +464,8 @@ class OverlayHDSkinManager(Setup):
 			config.plugins.skin.OverlayHD.WeatherData.value = "White"
 			config.plugins.skin.OverlayHD.WeatherLabel.value = "Grey"
 			config.plugins.skin.OverlayHD.WeatherProvider.value = "Orange"
-			self.process = True
 			self.applySettings()
+			self.process = True
 		else:
 			print "[OverlayHD] OverlayHD is not the active skin!"
 
@@ -473,13 +473,10 @@ class OverlayHDSkinManager(Setup):
 		changed = 0
 		for x in self['config'].list:
 			if x[1].isChanged():
-				changed += 1
-		if changed:
-			# print "[OverlayHD] Entries changed!"
-			return True
-		else:
-			# print "[OverlayHD] Entries NOT changed!"
-			return False
+				# print "[OverlayHD] Entries changed!"
+				return True
+		# print "[OverlayHD] Entries NOT changed!"
+		return False
 
 	def applySettings(self):
 		index = self["config"].getCurrentIndex()
@@ -657,5 +654,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.always_active.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.20", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.21", icon="OverlayHD.png", fnc=main))
 	return list
