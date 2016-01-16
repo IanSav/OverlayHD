@@ -1158,6 +1158,29 @@
  |	Unallocated Plugin and Software Settings
  +-->
 
+<!-- ButtonSetup -->
+
+	<screen name="ButtonSetup" title="Button Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateChoiceShort" />
+		<panel name="ScreenTemplateChosenShort" />
+		<panel name="ScreenTemplateDescription4" />
+		<!--
+		<widget name="list" position="0,45" size="580,300" scrollbarMode="showOnDemand"/>
+		<widget name="choosen" position="0,350" size="580,100" scrollbarMode="showOnDemand" foregroundColor="secondFG"/>
+		<widget name="description" position="0,480" size="580,60" font="Regular;18" halign="center" valign="center" transparent="0" zPosition="1"/>
+		-->
+	</screen>
+
+	<screen name="ButtonSetupSelect" title="Button Setup Selection" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateChoiceShort" />
+		<panel name="ScreenTemplateChosenShort" />
+		<panel name="ScreenTemplateDescription4" />
+	</screen>
+
 	<screen name="BackupScreen" title="Backup is running" position="135,144" size="350,310">
 		<widget name="config" position="10,10" size="330,250" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
