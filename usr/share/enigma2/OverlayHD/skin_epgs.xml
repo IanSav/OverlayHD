@@ -1,4 +1,12 @@
 <skin>
+<!-- EPG (Long) - EPG Extensions Selection List -->
+
+	<screen name="EPGExtensionsList" title="EPG Extensions" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColourBacks" />
+		<panel name="ScreenTemplateChoiceList4" />
+	</screen>
+
 <!-- EPG - Graphical EPG (Text and Graphics Modes) -->
 
 	<screen name="GraphicalEPG" title="Graphical EPG" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
@@ -317,6 +325,20 @@
 		<widget source="Event" render="Label" position="50,550" size="1180,95" backgroundColor="TextBackground" font="Regular;20" foregroundColor="EPGDetails" halign="block" transparent="1">
 			<convert type="EventName">FullDescription,Trimmed,NotSeparated</convert>
 		</widget>
+	</screen>
+
+<!-- EPG > REC - Record Pop Up Menu -->
+
+	<screen name="RecordTimerQuestion" title="Timer" position="center,center" size="240,80" flags="wfNoBorder" zPosition="+4">
+		<widget source="Title" render="Label" position="0,0" size="0,0" font="BannerTitle;25" foregroundColor="BannerTitle" transparent="1" />
+		<widget name="text" position="0,0" size="0,0" font="Regular;25" foregroundColor="BannerTitle" transparent="1" />
+		<widget name="list" position="5,5" size="230,70" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" />
+	</screen>
+
+	<screen name="RecordTimerQuestion1" title="Timer" position="center,center" size="240,115" flags="wfNoBorder" zPosition="+4">
+		<widget source="Title" render="Label" position="0,0" size="0,0" font="BannerTitle;25" foregroundColor="BannerTitle" transparent="1" />
+		<widget name="text" position="0,0" size="0,0" font="Regular;25" foregroundColor="BannerTitle" transparent="1" />
+		<widget name="list" position="5,5" size="230,105" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" />
 	</screen>
 
 <!-- EPG > YELLOW - EPG Search -->

@@ -1,14 +1,6 @@
 <skin>
-	<screen name="ServiceInfoSimple" title="Service info" position="center,center" size="650,300">
-		<widget name="infolist" position="0,0" size="650,300" selectionDisabled="1" />
-	</screen>
-
 	<screen name="BouquetSelector" position="center,center" size="560,550" backgroundColor="ScreenBackground">
 		<widget name="menu" position="0,0" size="560,512" backgroundColor="TextBackground" enableWrapAround="1" foregroundColor="White" itemHeight="30" scrollbarMode="showOnDemand" transparent="0" />
-	</screen>
-
-	<screen name="ChannelContextMenu" position="center,center" size="560,550" backgroundColor="ScreenBackground">
-		<widget name="menu" position="0,0" size="580,480" backgroundColor="background" foregroundColor="White" itemHeight="30" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
 	<screen name="clockDisplay" position="center,center" size="300,300">
@@ -493,16 +485,6 @@
 		<widget source="key_green" render="Label" position="330,305" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonGreen" halign="center" transparent="1" valign="center" zPosition="1" />
 		<widget name="config" position="10,10" size="580,240" transparent="1" />
 		<eLabel position="0,290" size="600,1" backgroundColor="Pinstripe" />
-	</screen>
-
-	<screen name="RecordTimerQuestion" position="center,center" size="240,70" flags="wfNoBorder" zPosition="5">
-		<widget name="text" position="0,0" size="0,0" font="Regular;22" />
-		<widget name="list" position="10,10" size="220,50" enableWrapAround="1" />
-	</screen>
-
-	<screen name="RecordTimerQuestion1" position="center,center" size="240,95" flags="wfNoBorder" zPosition="5">
-		<widget name="text" position="0,0" size="0,0" font="Regular;22" />
-		<widget name="list" position="10,10" size="220,75" enableWrapAround="1" />
 	</screen>
 
 	<screen name="ServerEditor" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">

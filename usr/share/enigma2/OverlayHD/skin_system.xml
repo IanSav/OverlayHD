@@ -294,6 +294,10 @@
 		</widget>
 	</screen>
 
+	<screen name="ServiceInfoSimple" title="Service Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ServiceInfo" />
+	</screen>
+
 <!--
  |	Console / Task List
  +-->
