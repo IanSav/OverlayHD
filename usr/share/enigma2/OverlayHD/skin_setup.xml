@@ -1112,7 +1112,7 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColourBacks" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<panel name="ScreenTemplateSoftList4" />
+		<panel name="ScreenTemplateChoiceList4" />
 		<panel name="ScreenTemplateText4" />
 	</screen>
 
