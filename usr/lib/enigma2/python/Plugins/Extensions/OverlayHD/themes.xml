@@ -1,0 +1,52 @@
+<themes>
+	<theme name="Default">
+		<element name="ScreenBackgroundColour" value="Black" />
+		<element name="ScreenBackgroundTransparency" value="0x3f000000" />
+		<element name="BannerClock" value="White" />
+		<element name="BannerTitle" value="White" />
+		<element name="Pinstripe" value="DarkerGrey" />
+		<element name="MenuBackgroundColour" value="Black" />
+		<element name="MenuBackgroundTransparency" value="0x00000001" />
+		<element name="MenuSelectedColour" value="DodgerBlue" />
+		<element name="MenuSelectedTransparency" value="0x26000000" />
+		<element name="MenuText" value="White" />
+		<element name="MenuTextSelected" value="White" />
+		<element name="FootnoteBackgroundColour" value="Black" />
+		<element name="FootnoteBackgroundTransparency" value="0x00000001" />
+		<element name="FootnoteText" value="DimGrey" />
+		<element name="TextBackgroundColour" value="Black" />
+		<element name="TextBackgroundTransparency" value="0x00000001" />
+		<element name="Text" value="White" />
+		<element name="SMSHelperBackgroundColour" value="Black" />
+		<element name="SMSHelperBackgroundTransparency" value="0x00000001" />
+		<element name="SMSHelperText" value="White" />
+		<element name="FindCharacter" value="Gold" />
+		<element name="InfoBackgroundColour" value="Black" />
+		<element name="InfoBackgroundTransparency" value="0x00000001" />
+		<element name="InfoLCN" value="LightBlue" />
+		<element name="InfoChannel" value="LightBlue" />
+		<element name="InfoBroadcaster" value="LightBlue" />
+		<element name="InfoBouquet" value="LightBlue" />
+		<element name="InfoProgramNow" value="White" />
+		<element name="InfoTimesNow" value="Grey" />
+		<element name="InfoDurationNow" value="LightBlue" />
+		<element name="InfoFileSizeNow" value="LightBlue" />
+		<element name="InfoDetailsNow" value="White" />
+		<element name="InfoRatingNow" value="Grey" />
+		<element name="InfoProgramNext" value="White" />
+		<element name="InfoTimesNext" value="Grey" />
+		<element name="InfoDurationNext" value="LightBlue" />
+		<element name="InfoFileSizeNext" value="LightBlue" />
+		<element name="InfoDetailsNext" value="White" />
+		<element name="InfoRatingNext" value="Grey" />
+		<element name="InfoRecording" value="DullRed" />
+		<element name="InfoRecordingProgress" value="DeepGrey" />
+		<element name="InfoMediaName" value="LightBlue" />
+		<element name="InfoMediaLength" value="LightBlue" />
+		<element name="InfoDiskStats" value="DullYellow" />
+		<element name="TunerBackgroundColour" value="Black" />
+		<element name="TunerBackgroundTransparency" value="0x00000001" />
+	</theme>
+	<theme name="Red" base="Default">
+	</theme>
+</themes>
