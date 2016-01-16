@@ -198,6 +198,7 @@
 		<color name="Resolution" value="Silver" />
 		<color name="ResolutionBackground" value="ScreenBackground" />
 
+		<color name="Scrollbar" value="Gainsboro" />
 		<color name="SMSHelperBackground" value="ScreenBackground" />
 		<color name="SMSHelperText" value="White" />
 
@@ -312,7 +313,7 @@
 		<color name="WindowTitleForeground" color="#0075a6ff" />
 		-->
 		<color name="Background" color="ScreenBackground" />
-		<color name="LabelForeground" color="Text" />
+		<color name="LabelForeground" color="Scrollbar" />
 		<color name="ListboxBackground" color="MenuBackground" />
 		<color name="ListboxForeground" color="MenuText" />
 		<color name="ListboxSelectedBackground" color="MenuSelected" />
