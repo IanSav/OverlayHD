@@ -1,7 +1,7 @@
 #====================================================
 # OverlayHD Skin Manager
 # Version Date - 8-Jan-2016
-# Version Number - 1.23
+# Version Number - 1.24
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
@@ -167,7 +167,6 @@ colour_choices = [
 	("Coral", _("Coral")),
 	("Cyan", _("Cyan")),
 	("DarkerBlue", _("Darker Blue")),
-	("DarkerGrey", _("Darker Grey")),
 	("DarkGrey", _("Dark Grey")),
 	("DavysGrey", _("Davy's Grey")),
 	("DeepBlue", _("Deep Blue")),
@@ -316,6 +315,15 @@ class OverlayHDSkinManager(Setup):
 
 	def changeSettings(self, configElement):
 		if self.process:
+			# for (label, colour, transparency) in screen_elements:
+			# 	if colour is None or transparency is None:
+			# 		if configElement == eval("config.plugins.skin.OverlayHD.%s" % label):
+			# 			print "[OverlayHD] DEBUG (changeSettings): '%s' = '%s'" % (label, configElement.value)
+			# 	else:
+			# 		if colour is not None and configElement == eval("config.plugins.skin.OverlayHD.%sColour" % label):
+			# 			print "[OverlayHD] DEBUG (changeSettings): '%sColour' = '%s'" % (label, configElement.value)
+			# 		if transparency is not None and configElement == eval("config.plugins.skin.OverlayHD.%sTransparency" % label):
+			# 			print "[OverlayHD] DEBUG (changeSettings): '%sTransparency' = '%s'" % (label, configElement.value)
 			self.applySettings()
 
 	def myExecBegin(self):
@@ -463,5 +471,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.always_active.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.23", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.24", icon="OverlayHD.png", fnc=main))
 	return list
