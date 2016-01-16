@@ -1,7 +1,7 @@
 #====================================================
 # OverlayHD Skin Manager
-# Version Date - 8-Nov-2015
-# Version Number - 1.18
+# Version Date - 5-Jan-2016
+# Version Number - 1.19
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
@@ -19,13 +19,16 @@ from skin import dom_screens, colorNames
 import xml.etree.cElementTree
 
 colour_choices = [
+	("Arsenic", _("Arsenic")),
 	("Black", _("Black")),
 	("Blue", _("Blue")),
+	("Charcoal", _("Charcoal")),
 	("Coral", _("Coral")),
 	("Cyan", _("Cyan")),
 	("DarkerBlue", _("Darker Blue")),
 	("DarkerGrey", _("Darker Grey")),
 	("DarkGrey", _("Dark Grey")),
+	("DavysGrey", _("Davy's Grey")),
 	("DeepBlue", _("Deep Blue")),
 	("DeepGrey", _("Deep Grey")),
 	("DeepPink", _("Deep Pink")),
@@ -35,13 +38,17 @@ colour_choices = [
 	("DullGreen", _("Dull Green")),
 	("DullRed", _("Dull Red")),
 	("DullYellow", _("Dull Yellow")),
+	("EerieBlack", _("Eerie Black")),
 	("EgyptianBlue", _("Egyptian Blue")),
 	("Gainsboro", _("Gainsboro")),
 	("Gold", _("Gold")),
 	("Green", _("Green")),
 	("Grey", _("Grey")),
 	("GreyBlue", _("Grey Blue")),
+	("Gunmetal", _("Gunmetal")),
 	("Indigo", _("Indigo")),
+	("Jet", _("Jet")),
+	("Licorice", _("Licorice")),
 	("LightBlue", _("Light Blue")),
 	("LightGrey", _("Light Grey")),
 	("LightRed", _("Light Red")),
@@ -52,16 +59,20 @@ colour_choices = [
 	("MidnightBlue", _("Midnight Blue")),
 	("Mustard", _("Mustard")),
 	("Navy", _("Navy")),
+	("Onyx", _("Onyx")),
 	("Orange", _("Orange")),
 	("OrangeRed", _("Orange Red")),
+	("OuterSpace", _("Outer Space")),
 	("OxfordBlue", _("Oxford Blue")),
 	("Pink", _("Pink")),
 	("PowderBlue", _("Powder Blue")),
 	("Purple", _("Purple")),
+	("Raven", _("Raven")),
 	("Red", _("Red")),
 	("RoyalBlue", _("Royal Blue")),
 	("SaddleBrown", _("Saddle Brown")),
 	("Silver", _("Silver")),
+	("SmokyBlack", _("Smoky Black")),
 	("Tan", _("Tan")),
 	("Teal", _("Teal")),
 	("WarmYellow", _("Warm Yellow")),
@@ -204,7 +215,7 @@ config.plugins.skin.OverlayHD.PictureBackgroundColour = ConfigSelection(default=
 config.plugins.skin.OverlayHD.PictureBackgroundTransparency = ConfigSelection(default="Background", choices=background_choice + transparency_choices)
 config.plugins.skin.OverlayHD.PictureLabel = ConfigSelection(default="DullGreen", choices=colour_choices)
 config.plugins.skin.OverlayHD.PictureLabelBorder = ConfigSelection(default="Black", choices=colour_choices)
-config.plugins.skin.OverlayHD.Pinstripe = ConfigSelection(default="DarkerGrey", choices=colour_choices)
+config.plugins.skin.OverlayHD.Pinstripe = ConfigSelection(default="DavysGrey", choices=colour_choices)
 
 config.plugins.skin.OverlayHD.Resolution = ConfigSelection(default="Silver", choices=colour_choices)
 config.plugins.skin.OverlayHD.ResolutionBackgroundColour = ConfigSelection(default="Background", choices=background_choice + colour_choices)
@@ -418,7 +429,7 @@ class OverlayHDSkinManager(Setup):
 			config.plugins.skin.OverlayHD.PictureBackgroundTransparency.value = "Background"
 			config.plugins.skin.OverlayHD.PictureLabel.value = "DullGreen"
 			config.plugins.skin.OverlayHD.PictureLabelBorder.value = "Black"
-			config.plugins.skin.OverlayHD.Pinstripe.value = "DarkerGrey"
+			config.plugins.skin.OverlayHD.Pinstripe.value = "DavysGrey"
 			config.plugins.skin.OverlayHD.Resolution.value = "Silver"
 			config.plugins.skin.OverlayHD.ResolutionBackgroundColour.value = "Background"
 			config.plugins.skin.OverlayHD.ResolutionBackgroundTransparency.value = "Background"
@@ -642,5 +653,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.always_active.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.18", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.19", icon="OverlayHD.png", fnc=main))
 	return list
