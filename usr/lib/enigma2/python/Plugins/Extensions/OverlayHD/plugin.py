@@ -1,7 +1,7 @@
 #====================================================
 # OverlayHD Skin Manager
-# Version Date - 5-Jan-2016
-# Version Number - 1.21
+# Version Date - 7-Jan-2016
+# Version Number - 1.22
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
@@ -14,6 +14,7 @@ from Plugins.Plugin import PluginDescriptor
 from Screens.MessageBox import MessageBox
 from Screens.Setup import Setup
 from Screens.Standby import TryQuitMainloop
+from Tools.Directories import resolveFilename, SCOPE_CURRENT_PLUGIN
 from enigma import gRGB
 from skin import dom_screens, colorNames, reloadWindowstyles
 import xml.etree.cElementTree
@@ -279,13 +280,14 @@ class OverlayHDSkinManager(Setup):
 
 		self["key_red"] = StaticText(_("Cancel"))
 		self["key_green"] = StaticText(_("OK"))
-		self["key_yellow"] = StaticText()
+		self["key_yellow"] = StaticText(_("Themes"))
 		self["key_blue"] = StaticText(_("Default"))
 
 		self['actions'] = ActionMap(['OkCancelActions', 'ColorActions'],
 		{
 			"red" : self.cancel,
 			"green": self.save,
+			"yellow": self.theme,
 			"blue": self.default,
 			"cancel": self.cancel
 		}, -1)
@@ -331,6 +333,17 @@ class OverlayHDSkinManager(Setup):
 		if answer is True:
 			self.session.open(TryQuitMainloop, retvalue=3)
 		self.close()
+
+	def theme(self):
+		themebox = self.session.open(MessageBox, _("Themes are not yet available."), MessageBox.TYPE_INFO, 5)
+		themebox.setTitle(self.setup_title)
+		try:
+			file = open(resolveFilename(SCOPE_CURRENT_PLUGIN, "OverlayHD/themes.xml"), "r")
+			themes = xml.etree.cElementTree.parse(file)
+			file.close()
+		except:
+			pass
+		# Not yet implemented!
 
 	def default(self):
 		if config.skin.primary_skin.value == "OverlayHD/skin.xml":
@@ -654,5 +667,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.always_active.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.21", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.22", icon="OverlayHD.png", fnc=main))
 	return list
