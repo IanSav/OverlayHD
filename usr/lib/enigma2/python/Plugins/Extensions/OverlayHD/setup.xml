@@ -7,12 +7,13 @@
 		<item level="0" text="Banner clock colour" description="Choose a colour for the banner clock display.">config.plugins.skin.OverlayHD.BannerClock</item>
 		<item level="0" text="Banner title colour" description="Choose a colour for the banner title display.">config.plugins.skin.OverlayHD.BannerTitle</item>
 		<item level="0" text="Pinstripe colour" description="Choose a colour for all pinstripes.">config.plugins.skin.OverlayHD.Pinstripe</item>
-		<item level="1" text="Pop up clock background colour" description="Choose a colour for the pop up clock background.">config.plugins.skin.OverlayHD.BannerClockBackgroundColour</item>
+		<item level="1" text="Scrollbar colour" description="Choose a colour for all scrollbars.">config.plugins.skin.OverlayHD.Scrollbar</item>
+		<item level="3" text="Pop up clock background colour" description="Choose a colour for the pop up clock background.">config.plugins.skin.OverlayHD.BannerClockBackgroundColour</item>
 		<item level="1" text="Pop up clock background transparency" description="Choose a colour for the pop up clock background transparency.">config.plugins.skin.OverlayHD.BannerClockBackgroundTransparency</item>
 		<item level="0" text="Pop up clock date colour" description="Choose a colour for the pop up clock date display.">config.plugins.skin.OverlayHD.BannerClockDate</item>
 		<item level="0" text="Pop up clock time colour" description="Choose a colour for the pop up clock time display.">config.plugins.skin.OverlayHD.BannerClockTime</item>
-		<item level="3" text="Menu background colour" description="Choose a colour for menu backgrounds.">config.plugins.skin.OverlayHD.MenuBackgroundColour</item>
-		<item level="3" text="Menu background transparency" description="Choose the level of menu background transparency.">config.plugins.skin.OverlayHD.MenuBackgroundTransparency</item>
+		<item level="1" text="Menu background colour" description="Choose a colour for menu backgrounds.">config.plugins.skin.OverlayHD.MenuBackgroundColour</item>
+		<item level="1" text="Menu background transparency" description="Choose the level of menu background transparency.">config.plugins.skin.OverlayHD.MenuBackgroundTransparency</item>
 		<item level="1" text="Menu item highlight colour" description="Choose a colour for menu item selection highlights.">config.plugins.skin.OverlayHD.MenuSelectedColour</item>
 		<item level="1" text="Menu item highlight transparency" description="Choose the level of menu item selection highlight transparency.">config.plugins.skin.OverlayHD.MenuSelectedTransparency</item>
 		<item level="1" text="Menu item text colour" description="Choose a colour for menu item text.">config.plugins.skin.OverlayHD.MenuText</item>
@@ -36,9 +37,9 @@
 		<item level="0" text="Movie selection find character colour" description="Choose a colour for the search letter pop up in Media Player.">config.plugins.skin.OverlayHD.FindCharacter</item>
 		<item level="3" text="Info background colour" description="Choose a colour for info background.">config.plugins.skin.OverlayHD.InfoBackgroundColour</item>
 		<item level="3" text="Info background transparency" description="Choose the level of info background transparency.">config.plugins.skin.OverlayHD.InfoBackgroundTransparency</item>
-		<item level="1" text="Media Infobar background colour" description="Choose a colour for the Media Player infobar background.">config.plugins.skin.OverlayHD.InfobarMediaBackgroundColour</item>
+		<item level="3" text="Media Infobar background colour" description="Choose a colour for the Media Player infobar background.">config.plugins.skin.OverlayHD.InfobarMediaBackgroundColour</item>
 		<item level="1" text="Media Infobar background transparency" description="Choose the level of Media Player infobar background transparency.">config.plugins.skin.OverlayHD.InfobarMediaBackgroundTransparency</item>
-		<item level="1" text="TV Infobar background colour" description="Choose a colour for the TV infobar background.">config.plugins.skin.OverlayHD.InfobarTVBackgroundColour</item>
+		<item level="3" text="TV Infobar background colour" description="Choose a colour for the TV infobar background.">config.plugins.skin.OverlayHD.InfobarTVBackgroundColour</item>
 		<item level="1" text="TV Infobar background transparency" description="Choose the level of TV infobar background transparency.">config.plugins.skin.OverlayHD.InfobarTVBackgroundTransparency</item>
 		<item level="0" text="Info LCN colour" description="Choose a colour for displaying a LCN.">config.plugins.skin.OverlayHD.InfoLCN</item>
 		<item level="0" text="Info channel name colour" description="Choose a colour for displaying a channel name.">config.plugins.skin.OverlayHD.InfoChannel</item>
@@ -56,6 +57,9 @@
 		<item level="0" text="Info Next program details colour" description="Choose a colour for displaying the next or later program's details.">config.plugins.skin.OverlayHD.InfoDetailsNext</item>
 		<item level="0" text="Info Now program ratings colour" description="Choose a colour for displaying a current program's rating or genre.">config.plugins.skin.OverlayHD.InfoRatingNow</item>
 		<item level="0" text="Info Next program ratings colour" description="Choose a colour for displaying the next or later program's rating or genre.">config.plugins.skin.OverlayHD.InfoRatingNext</item>
+		<item level="0" text="Info progress bar background colour" description="Choose a background colour for the progress bar.">config.plugins.skin.OverlayHD.InfoProgressBackground</item>
+		<item level="0" text="Info progress bar border colour" description="Choose a border colour for the progress bar.">config.plugins.skin.OverlayHD.InfoProgressBorder</item>
+		<item level="0" text="Info progress bar colour" description="Choose a colour for displaying the progress bar.">config.plugins.skin.OverlayHD.InfoProgressColour</item>
 		<item level="0" text="Info recording progress bar background colour" description="Choose a background colour for the recording progress bar.">config.plugins.skin.OverlayHD.InfoRecordingBackground</item>
 		<item level="0" text="Info recording progress bar border colour" description="Choose a border colour for the recording progress bar.">config.plugins.skin.OverlayHD.InfoRecordingBorder</item>
 		<item level="0" text="Info recording details and progress bar colour" description="Choose a colour for displaying the recording details and progress bar.">config.plugins.skin.OverlayHD.InfoRecordingColour</item>
@@ -101,13 +105,15 @@
 		<item level="0" text="EPG PIG progress bar border colour" description="Choose a border colour for the PIG current program progess bar.">config.plugins.skin.OverlayHD.EPGProgressBorder</item>
 		<item level="0" text="EPG PIG progress bar colour" description="Choose a colour for the PIG current program progress bar.">config.plugins.skin.OverlayHD.EPGProgressColour</item>
 		<item level="3" text="Picture display background colour" description="Choose a colour for the picture display background.">config.plugins.skin.OverlayHD.PictureBackgroundColour</item>
-		<item level="3" text="Picture display background transparency" description="Choose the level of picture display background transparency.">config.plugins.skin.OverlayHD.PictureBackgroundTransparency</item>
+		<item level="1" text="Picture display background transparency" description="Choose the level of picture display background transparency.">config.plugins.skin.OverlayHD.PictureBackgroundTransparency</item>
 		<item level="0" text="Picture label colour" description="Choose a colour for displaying picture labels.">config.plugins.skin.OverlayHD.PictureLabel</item>
 		<item level="0" text="Picture label border colour" description="Choose a border colour for displaying picture labels.">config.plugins.skin.OverlayHD.PictureLabelBorder</item>
 		<item level="0" text="Screen resolution text colour" description="Choose a colour for the screen resolution text.">config.plugins.skin.OverlayHD.Resolution</item>
 		<item level="3" text="Screen resolution background colour" description="Choose a colour for the screen resolution background.">config.plugins.skin.OverlayHD.ResolutionBackgroundColour</item>
 		<item level="3" text="Screen resolution background transparency" description="Choose the level of screen resolution background transparency.">config.plugins.skin.OverlayHD.ResolutionBackgroundTransparency</item>
+		<item level="0" text="Timeshift progress bar background colour" description="Choose a background colour for the timeshift progress bar.">config.plugins.skin.OverlayHD.TimeShiftBackground</item>
 		<item level="0" text="Timeshift progress bar border colour" description="Choose a border colour for the timeshift progress bar.">config.plugins.skin.OverlayHD.TimeShiftBorder</item>
+		<item level="0" text="Timeshift progress bar colour" description="Choose a colour for displaying the timeshift progress bar.">config.plugins.skin.OverlayHD.TimeShiftColour</item>
 		<item level="0" text="Timeshift data text colour" description="Choose a colour for the timeshift data text.">config.plugins.skin.OverlayHD.TimeShiftData</item>
 		<item level="3" text="Tuner background colour" description="Choose a colour for tuner info background.">config.plugins.skin.OverlayHD.TunerBackgroundColour</item>
 		<item level="3" text="Tuner background transparency" description="Choose the level of tuner info background transparency.">config.plugins.skin.OverlayHD.TunerBackgroundTransparency</item>
