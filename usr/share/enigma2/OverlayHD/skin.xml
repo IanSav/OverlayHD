@@ -8,13 +8,16 @@
 	</output>
 
 	<colors>
+		<color name="Arsenic" value="#003B444B" />
 		<color name="Black" value="#00000000" />
 		<color name="Blue" value="#000000ff" />
 		<color name="Coral" value="#00ff7f50" />
+		<color name="Charcoal" value="#0036454f" />
 		<color name="Cyan" value="#0000ffff" />
 		<color name="DarkerBlue" value="#0000022b" />
-		<color name="DarkerGrey" value="#00555555" />
 		<color name="DarkGrey" value="#00a9a9a9" />
+		<color name="DavysGrey" value="#00555555" />
+		<color name="DarkerGrey" value="#00555555" /><!-- Previous name for this colour code! -->
 		<color name="DeepBlue" value="#00000636" />
 		<color name="DeepGrey" value="#00363636" />
 		<color name="DeepPink" value="#00ff1493" />
@@ -24,13 +27,17 @@
 		<color name="DullGreen" value="#00389416" />
 		<color name="DullRed" value="#00ff4040" />
 		<color name="DullYellow" value="#00bab329" />
+		<color name="EerieBlack" value="#001B1B1B" />
 		<color name="EgyptianBlue" value="#001034A6" />
 		<color name="Gainsboro" value="#00dcdcdc" />
 		<color name="Gold" value="#00f0b400" />
 		<color name="Green" value="#0000ff00" />
 		<color name="Grey" value="#00a0a0a0" />
 		<color name="GreyBlue" value="#004D5375" />
+		<color name="Gunmetal" value="#002a3439" />
 		<color name="Indigo" value="#004b0082" />
+		<color name="Jet" value="#00343434" />
+		<color name="Licorice" value="#001A1110" />
 		<color name="LightBlue" value="#0053a9ff" />
 		<color name="LightGrey" value="#00d3d3d3" />
 		<color name="LightRed" value="#00ff2525" />
@@ -41,16 +48,20 @@
 		<color name="MidnightBlue" value="#00191970" />
 		<color name="Mustard" value="#00d8c653" />
 		<color name="Navy" value="#00000080" />
+		<color name="Onyx" value="#00353839" />
 		<color name="Orange" value="#00ffa500" />
 		<color name="OrangeRed" value="#00ff4500" />
+		<color name="OuterSpace" value="#00414A4C" />
 		<color name="OxfordBlue" value="#00002147" />
 		<color name="Pink" value="#00ffc0cb" />
 		<color name="PowderBlue" value="#0079bfff" />
 		<color name="Purple" value="#00800080" />
+		<color name="Raven" value="#00141A16" />
 		<color name="Red" value="#00ff0000" />
 		<color name="RoyalBlue" value="#004169E1" />
 		<color name="SaddleBrown" value="#008b4513" />
 		<color name="Silver" value="#00c0c0c0" />
+		<color name="SmokyBlack" value="#00100C08" />
 		<color name="Tan" value="#00d2b48c" />
 		<color name="Teal" value="#00008080" />
 		<color name="WarmYellow" value="#00fff000" />
