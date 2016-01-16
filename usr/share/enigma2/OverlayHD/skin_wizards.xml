@@ -30,7 +30,7 @@
  
 	<screen name="WizardList" title="Welcome..." position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="WizardTemplate" />
-		<widget source="list" render="Listbox" position="500,350" size="730,280" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1">
+		<widget source="list" render="Listbox" position="500,350" size="730,280" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<!-- <convert type="StringList" /> -->
 			<convert type="TemplatedMultiContent">
 				{
@@ -54,7 +54,7 @@
  
 	<screen name="WizardConfig" title="Welcome..." position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="WizardList" />
-		<widget name="config" position="500,350" size="730,280" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="config" position="500,350" size="730,280" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
 <!-- Wizard Notification Box -->
@@ -98,7 +98,7 @@
 
 	<screen name="LanguageWizard" title="Language Selection" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="WizardTemplate" />
-		<widget source="languages" render="Listbox" position="500,350" size="730,300" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1">
+		<widget source="languages" render="Listbox" position="500,350" size="730,300" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":

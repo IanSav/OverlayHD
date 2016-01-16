@@ -12,8 +12,8 @@
 		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateButtonText" />
 		<panel name="ScreenTemplateButtonHelp" />
-		<widget name="filelist" position="50,80" size="580,325" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1" />
-		<widget name="playlist" position="650,80" size="580,325" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="filelist" position="50,80" size="580,325" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="playlist" position="650,80" size="580,325" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 		<widget name="currenttext" position="50,410" size="1180,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" halign="center" transparent="1" valign="center" />
 		<eLabel position="50,440" size="1180,2" backgroundColor="Pinstripe" />
 		<widget name="coverArt" pixmap="images/no_coverArt.png" position="50,450" size="200,200" alphatest="on" transparent="1" />
@@ -72,7 +72,7 @@
 		<ePixmap pixmap="images/shoutcast-logo.png" position="50,80" size="120,35" alphatest="on" transparent="1" />
 		<widget name="headertext" position="190,80" size="620,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
 		<eLabel position="50,130" size="1180,2" backgroundColor="Pinstripe" />
-		<widget name="list" position="50,132" size="1180,355" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="list" position="50,132" size="1180,355" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 		<widget name="statustext" position="50,132" size="1180,355" backgroundColor="TextBackground" font="Regular;25" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<eLabel position="50,487" size="1180,2" backgroundColor="Pinstripe" />
 		<widget name="cover" position="50,525" size="102,110" alphatest="blend" transparent="1" />
@@ -106,7 +106,7 @@
 	<screen name="picshow" title="Picture Player" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<widget name="filelist" position="50,80" size="700,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="filelist" position="50,80" size="700,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 		<widget name="thn" position="814,80" size="372,280" alphatest="on" transparent="1" />
 		<eLabel position="770,375" size="460,2" backgroundColor="Pinstripe" />
 		<widget source="label" render="Label" position="770,390" size="460,160" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="top" />
@@ -198,7 +198,7 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1">
+		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -216,7 +216,7 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<widget source="list" render="Listbox" position="400,80" size="830,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1">
+		<widget source="list" render="Listbox" position="400,80" size="830,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"templates":
@@ -566,7 +566,7 @@
 		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_source_youtube.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<panel name="ScreenTemplateConfig0" />
-		<widget source="feedlist" render="Listbox" position="590,160" size="635,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1" zPosition="2">
+		<widget source="feedlist" render="Listbox" position="590,160" size="635,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" zPosition="2">
 			<convert type="TemplatedMultiContent">
 				{
 				"templates":
@@ -599,7 +599,7 @@
 
 	<screen name="MyTubeSuggestionsListScreen" position="70,140" size="502,337" backgroundColor="ScreenBackground" flags="wfNoBorder" zPosition="6">
 		<ePixmap position="0,0" size="505,227" alphatest="on" backgroundColor="transparent" transparent="1" zPosition="-1" />
-		<widget source="suggestionslist" render="Listbox" position="0,0" size="500,325" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1" zPosition="7">
+		<widget source="suggestionslist" render="Listbox" position="0,0" size="500,325" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" zPosition="7">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -615,7 +615,7 @@
 	</screen>
 
 	<screen name="MyTubeHistoryScreen" position="70,140" size="505,327" backgroundColor="ScreenBackground" flags="wfNoBorder" zPosition="6">
-		<widget source="historylist" render="Listbox" position="0,0" size="503,325" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1" zPosition="7">
+		<widget source="historylist" render="Listbox" position="0,0" size="503,325" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" zPosition="7">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -636,6 +636,6 @@
 	<screen name="ViewerSelectScreen" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<widget name="list" position="590,170" size="610,415" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="list" position="590,170" size="610,415" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 </skin>

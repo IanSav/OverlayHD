@@ -53,7 +53,7 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tv_zaphistory.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1">
+		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -77,7 +77,7 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tv_zaphistory.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<widget name="list" position="590,170" size="610,415" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="list" position="590,170" size="610,415" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
 <!-- FAV - TV Channel Selection -->
@@ -88,7 +88,7 @@
 		<panel name="ScreenTemplateButtonInfo" />
 		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateButtonHelp" />
-		<widget name="list" position="50,80" size="640,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" colorServiceDescription="InfoProgramNow" colorServiceDescriptionSelected="InfoProgramNow" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" foregroundColorServiceNotAvail="#00777777" picServiceEventProgressbar="sliders/slider_1280x10_hfg.png" scrollbarMode="showOnDemand" serviceInfoFont="Regular;21" serviceItemHeight="50" serviceNameFont="Regular;23" serviceNumberFont="Regular;23" transparent="1" />
+		<widget name="list" position="50,80" size="640,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" colorServiceDescription="InfoProgramNow" colorServiceDescriptionSelected="InfoProgramNow" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" foregroundColorServiceNotAvail="#00777777" picServiceEventProgressbar="sliders/slider_1280x10_hfg.png" scrollbarMode="showOnDemand" serviceInfoFont="Regular;21" serviceItemHeight="50" serviceNameFont="Regular;23" serviceNumberFont="Regular;23" transparent="0" />
 		<panel position="710,80" size="165,25">
 			<panel name="TunerUsagePanel" />
 		</panel>
@@ -187,9 +187,9 @@
 		<panel name="ScreenTemplateButtonHelp" />
 		<ePixmap pixmap="menus/mainmenu_tv_live.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<!--
-		<widget name="list" position="50,80" size="640,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" colorServiceDescription="InfoProgramNow" colorServiceDescriptionSelected="InfoProgramNow" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" foregroundColorServiceNotAvail="#00777777" picServiceEventProgressbar="sliders/slider_1280x10_hfg.png" scrollbarMode="showOnDemand" serviceInfoFont="Regular;21" serviceItemHeight="50" serviceNameFont="Regular;23" serviceNumberFont="Regular;23" transparent="1" />
+		<widget name="list" position="50,80" size="640,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" colorServiceDescription="InfoProgramNow" colorServiceDescriptionSelected="InfoProgramNow" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" foregroundColorServiceNotAvail="#00777777" picServiceEventProgressbar="sliders/slider_1280x10_hfg.png" scrollbarMode="showOnDemand" serviceInfoFont="Regular;21" serviceItemHeight="50" serviceNameFont="Regular;23" serviceNumberFont="Regular;23" transparent="0" />
 		-->
-		<widget name="list" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" colorServiceDescription="InfoProgramNow" colorServiceDescriptionSelected="InfoProgramNow" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" foregroundColorServiceNotAvail="#00777777" picServiceEventProgressbar="sliders/slider_1280x10_hfg.png" scrollbarMode="showOnDemand" serviceInfoFont="Regular;20" serviceItemHeight="50" serviceNameFont="Regular;20" serviceNumberFont="Regular;20" transparent="1" />
+		<widget name="list" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" colorServiceDescription="InfoProgramNow" colorServiceDescriptionSelected="InfoProgramNow" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" foregroundColorServiceNotAvail="#00777777" picServiceEventProgressbar="sliders/slider_1280x10_hfg.png" scrollbarMode="showOnDemand" serviceInfoFont="Regular;20" serviceItemHeight="50" serviceNameFont="Regular;20" serviceNumberFont="Regular;20" transparent="0" />
 	</screen>
 
 	<!--
@@ -240,7 +240,7 @@
 <!-- AUDIO - Audio Selection Pop Up -->
 
 	<screen name="AudioSelection" title="Select Audio Track" position="300,180" size="680,330" backgroundColor="ScreenBackground">
-		<widget name="config" position="50,0" size="630,140" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showNever" transparent="1" />
+		<widget name="config" position="50,0" size="630,140" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showNever" transparent="0" />
 		<widget source="key_red" render="Pixmap" pixmap="buttons/key_red.png" position="5,5" size="35,25" alphatest="on" transparent="1">
 			<convert type="ConditionalShowHide" />
 		</widget>
@@ -254,7 +254,7 @@
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<eLabel position="0,142" size="680,2" backgroundColor="Pinstripe" />
-		<widget source="streams" render="Listbox" position="0,145" size="680,150" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showNever" transparent="1">
+		<widget source="streams" render="Listbox" position="0,145" size="680,150" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showNever" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"templates":
