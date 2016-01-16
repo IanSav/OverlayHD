@@ -248,7 +248,6 @@
 <!-- Media Portal Plugin -->
 
 	<screen name="haupt_Screen" position="0,0" size="1280,720" flags="wfNoBorder">
-		<panel name="ScreenTemplateDebug" />
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/liquidblue/images/mpback.png" position="0,0" size="1280,720" zPosition="-1" />
 		<widget source="session.VideoPicture" render="Pig" position="886,22" size="328,186" backgroundColor="transparent" zPosition="3" />
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/liquidblue/images/buttongrey.png" position="1160,555" size="90,36" alphatest="blend" backgroundColor="#26181d20" zPosition="1" />
@@ -274,7 +273,6 @@
 	</screen>
 
 	<screen name="hauptScreenSetup" position="0,0" size="1280,720" flags="wfNoBorder">
-		<panel name="ScreenTemplateDebug" />
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/liquidblue/images/mpback.png" position="0,0" size="1280,720" zPosition="-1" />
 		<widget source="global.CurrentTime" render="Label" position="840,42" size="300,28" backgroundColor="#26181d20" font="mediaportal;25" foregroundColor="#00bbbbbb" halign="left" transparent="1">
 			<convert type="ClockToText">Format:%A, %d.%m.%Y</convert>

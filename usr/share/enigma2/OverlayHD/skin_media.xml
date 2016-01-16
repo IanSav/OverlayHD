@@ -304,7 +304,6 @@
 	</screen>
 
 	<screen name="DVDPlayerNew" title="DVD Player" position="0,0" size="1280,720" backgroundColor="TransparentBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplateDebug" />
 		<panel name="ClockTemplate" />
 		<eLabel position="0,650" size="1280,70" backgroundColor="InfobarMediaBackground" transparent="0" zPosition="-1" />
 		<eLabel position="172,660" size="2,50" backgroundColor="Pinstripe" />
@@ -442,7 +441,6 @@
 <!-- MyTubePlayer -->
 
 	<screen name="MyTubePlayer" title="InfoBar" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" zPosition="-1">
-		<panel name="ScreenTemplateDebug" />
 		<ePixmap pixmap="images/infobar.png" position="0,70" size="1280,720" zPosition="-1" />
 		<ePixmap pixmap="icons/icon_rewind.png" position="82,601" size="36,36" alphatest="on" transparent="1" zPosition="0" />
 		<ePixmap pixmap="icons/icon_play.png" position="120,601" size="36,36" alphatest="on" transparent="1" zPosition="0" />
@@ -485,7 +483,6 @@
 	</screen>
 
 	<screen name="MyTubeVideoHelpScreen" title="MyTubePlayerHelpScreen..." position="300,90" size="680,570">
-		<panel name="ScreenTemplateDebug" />
 		<widget name="detailtext" position="10,10" size="660,500" font="Regular;22" halign="left" transparent="1" valign="top" zPosition="3" />
 		<eLabel position="0,518" size="680,2" backgroundColor="crypt_emm" />
 		<widget name="key_red" position="50,525" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="LightRed" halign="center" transparent="1" valign="center" zPosition="3" />
@@ -494,7 +491,6 @@
 	</screen>
 
 	<screen name="MyTubeVideoInfoScreen" title="MyTubePlayerMainScreen..." position="90,90" size="1100,570">
-		<panel name="ScreenTemplateDebug" />
 		<widget name="title" position="10,15" size="1080,30" backgroundColor="TextBackground" font="Regular;26" halign="left" noWrap="1" transparent="1" valign="center" zPosition="5" />
 		<widget name="author" position="20,70" size="300,25" font="Regular;22" halign="left" transparent="1" valign="top" zPosition="10" />
 		<widget name="duration" position="20,110" size="300,25" font="Regular;22" halign="left" transparent="1" valign="top" zPosition="10" />
@@ -541,7 +537,6 @@
 	</screen>
 
 	<screen name="MyTubeTasksScreen" title="MyTubeTasksScreen" position="300,90" size="680,570" backgroundColor="ScreenBackground">
-		<panel name="ScreenTemplateDebug" />
 		<widget name="title" position="80,60" size="600,32" backgroundColor="TextBackground" font="Regular;27" halign="center" transparent="1" />
 		<widget source="tasklist" render="Listbox" position="10,100" size="640,410" scrollbarMode="showOnDemand" transparent="1" zPosition="3">
 			<convert type="TemplatedMultiContent">
@@ -603,7 +598,6 @@
 	</screen>
 
 	<screen name="MyTubeSuggestionsListScreen" position="70,140" size="502,337" backgroundColor="ScreenBackground" flags="wfNoBorder" zPosition="6">
-		<panel name="ScreenTemplateDebug" />
 		<ePixmap position="0,0" size="505,227" alphatest="on" backgroundColor="transparent" transparent="1" zPosition="-1" />
 		<widget source="suggestionslist" render="Listbox" position="0,0" size="500,325" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1" zPosition="7">
 			<convert type="TemplatedMultiContent">
@@ -621,7 +615,6 @@
 	</screen>
 
 	<screen name="MyTubeHistoryScreen" position="70,140" size="505,327" backgroundColor="ScreenBackground" flags="wfNoBorder" zPosition="6">
-		<panel name="ScreenTemplateDebug" />
 		<widget source="historylist" render="Listbox" position="0,0" size="503,325" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="1" zPosition="7">
 			<convert type="TemplatedMultiContent">
 				{

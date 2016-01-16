@@ -15,13 +15,9 @@
 
 <!-- HbbTV -->
 
-	<screen name="HbbTVWindow" title="HbbTV Plugin" position="0,0" size="1280,720" backgroundColor="ScreenTransparent" flags="wfNoBorder">
-		<panel name="ScreenTemplateDebug" />
-	</screen>
+	<screen name="HbbTVWindow" title="HbbTV Plugin" position="0,0" size="1280,720" backgroundColor="ScreenTransparent" flags="wfNoBorder" />
 
-	<screen name="HbbTVHelper" title=" " position="0,0" size="1280,720" backgroundColor="ScreenTransparent" flags="wfNoBorder">
-		<panel name="ScreenTemplateDebug" />
-	</screen>
+	<screen name="HbbTVHelper" title=" " position="0,0" size="1280,720" backgroundColor="ScreenTransparent" flags="wfNoBorder" />
 
 	<screen name="HbbTVBrowserBookmarkWindow" title="HbbTV Browser Bookmarks" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="OperaBrowserBookmarkWindow" />

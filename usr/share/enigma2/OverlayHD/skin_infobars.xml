@@ -109,7 +109,6 @@
 <!-- Common parts of TV infobars -->
 
 	<screen name="InfoBarCommon">
-		<panel name="ScreenTemplateDebug" />
 		<!-- Clock Panel Area -->
 		<panel name="ClockTemplate" />
 		<!-- InfoBar Area Background -->
@@ -299,7 +298,6 @@
 <!-- MEDIA > OK - Media Player InfoBar -->
 
 	<screen name="MoviePlayer" title="Media Player" position="0,0" size="1280,720" backgroundColor="TransparentBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplateDebug" />
 		<panel name="ClockTemplate" />
 		<eLabel position="0,650" size="1280,70" backgroundColor="InfobarMediaBackground" transparent="0" zPosition="-1" />
 		<eLabel position="172,660" size="2,50" backgroundColor="Pinstripe" />
@@ -394,7 +392,6 @@
 <!-- OK - Radio InfoBar -->
 
 	<screen name="RadioInfoBar" title="Radio Information Bar" position="150,180" size="480,390" flags="wfNoBorder" zPosition="2">
-		<panel name="ScreenTemplateDebug" />
 		<widget source="session.CurrentService" render="Label" position="20,0" size="480,30" font="Regular;28" noWrap="1" transparent="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>

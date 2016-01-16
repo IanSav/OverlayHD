@@ -187,7 +187,6 @@
 		<color name="Resolution" value="Silver" />
 		<color name="ResolutionBackground" value="ScreenBackground" />
 
-		<color name="ScreenDebug" value="DarkerGrey" />
 		<color name="SMSHelperBackground" value="ScreenBackground" />
 		<color name="SMSHelperText" value="White" />
 
@@ -347,22 +346,12 @@
 <!-- Screen Templates To Provide The Date, Time, Headings And Buttons -->
 
 	<screen name="ScreenTemplate">
-		<panel name="ScreenTemplateDebug" />
 		<panel position="50,35" size="305,25">
 			<panel name="ClockBannerPanel" />
 		</panel>
 		<widget source="Title" render="Label" position="360,30" size="870,35" borderColor="BannerBorder" borderWidth="1" font="BannerTitle;25" foregroundColor="BannerTitle" halign="right" transparent="1" />
 		<eLabel position="50,65" size="1180,2" backgroundColor="Pinstripe" />
 		<eLabel position="50,660" size="1180,2" backgroundColor="Pinstripe" />
-	</screen>
-
-	<screen name="ScreenTemplateDebug">
-		<!--
-		<widget source="global.SkinName" render="Label" position="10,10" size="1260,20" font="Regular;15" foregroundColor="ScreenDebug" transparent="1">
-			<convert type="ConfigEntryTest">config.OverlayHD.show_debugscreens,True</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		-->
 	</screen>
 
 <!-- MENU Button -->
@@ -524,7 +513,6 @@
 	The widget height should be 6 * itemHeight.
 -->
 	<screen name="GeneralMenu" title="Main Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplateDebug" />
 		<panel position="50,35" size="305,25">
 			<panel name="ClockBannerPanel" />
 		</panel>
