@@ -37,7 +37,7 @@
 		<widget source="Event" render="Label" position="50,135" size="1180,70" backgroundColor="TextBackground" font="Regular;20" foregroundColor="EPGDetails" halign="block" transparent="1">
 			<convert type="EventName">FullDescription,Trimmed,NotSeparated</convert>
 		</widget>
-		<widget name="timeline_text" position="50,220" size="1180,30" TimelineTicksOn="yes" TimelineTickAlignment="right" TimelineTextPadding="2" backgroundColor="TextBackground" borderWidth="0" font="Regular;20" foregroundColor="EPGTimeLineColour" transparent="1" />
+		<widget name="timeline_text" position="50,220" size="1180,30" TimelineTicksOn="yes" TimelineTickAlignment="right" TimelineTextPadding="2" backgroundColor="TextBackground" borderWidth="0" font="Regular;20" foregroundColor="EPGTimeLine" transparent="1" />
 		<widget name="timeline0" position="50,242" size="2,7" pixmap="epg/timeline-tick.png" alphatest="blend" zPosition="+1" />
 		<widget name="timeline1" position="50,242" size="2,7" pixmap="epg/timeline-tick.png" alphatest="blend" zPosition="+1" />
 		<widget name="timeline2" position="50,242" size="2,7" pixmap="epg/timeline-tick.png" alphatest="blend" zPosition="+1" />
@@ -98,7 +98,7 @@
 		<widget source="session.Event_Now" render="Progress" position="930,250" size="300,5" backgroundColor="EPGProgressBackground" borderColor="EPGProgressBorder" borderWidth="1" foregroundColor="EPGProgressColour" transparent="0">
 			<convert type="EventTime">Progress</convert>
 		</widget>
-		<widget name="timeline_text" position="50,260" size="1180,30" TimelineTicksOn="yes" TimelineTickAlignment="right" TimelineTextPadding="2" backgroundColor="EPGBackground" borderWidth="0" font="Regular;20" foregroundColor="EPGTimeLineColour" transparent="1" />
+		<widget name="timeline_text" position="50,260" size="1180,30" TimelineTicksOn="yes" TimelineTickAlignment="right" TimelineTextPadding="2" backgroundColor="EPGBackground" borderWidth="0" font="Regular;20" foregroundColor="EPGTimeLine" transparent="1" />
 		<widget name="timeline0" position="50,282" size="2,7" pixmap="epg/timeline-tick.png" alphatest="blend" zPosition="+1" />
 		<widget name="timeline1" position="50,282" size="2,7" pixmap="epg/timeline-tick.png" alphatest="blend" zPosition="+1" />
 		<widget name="timeline2" position="50,282" size="2,7" pixmap="epg/timeline-tick.png" alphatest="blend" zPosition="+1" />
@@ -154,7 +154,7 @@
 		</widget>
 		<eLabel position="0,525" size="1280,195" backgroundColor="ScreenBackground" zPosition="-1" />
 		<widget name="bouquetlist" position="50,530" size="1180,125" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showNever" transparent="0" zPosition="+3" />
-		<widget name="timeline_text" position="50,530" size="1180,30" TimelineTicksOn="yes" TimelineTickAlignment="right" TimelineTextPadding="2" backgroundColor="TextBackground" borderWidth="0" font="Regular;20" foregroundColor="EPGTimeLineColour" transparent="1" />
+		<widget name="timeline_text" position="50,530" size="1180,30" TimelineTicksOn="yes" TimelineTickAlignment="right" TimelineTextPadding="2" backgroundColor="TextBackground" borderWidth="0" font="Regular;20" foregroundColor="EPGTimeLine" transparent="1" />
 		<widget name="timeline0" position="50,552" size="2,7" pixmap="epg/timeline-tick.png" alphatest="blend" zPosition="+1" />
 		<widget name="timeline1" position="50,552" size="2,7" pixmap="epg/timeline-tick.png" alphatest="blend" zPosition="+1" />
 		<widget name="timeline2" position="50,552" size="2,7" pixmap="epg/timeline-tick.png" alphatest="blend" zPosition="+1" />
@@ -243,10 +243,10 @@
 		<widget name="now_button_sel" pixmap="epg/now_next_more_on.png" position="50,80" size="152,34" alphatest="on" />
 		<widget name="next_button_sel" pixmap="epg/now_next_more_on.png" position="210,80" size="152,34" alphatest="on" />
 		<widget name="more_button_sel" pixmap="epg/now_next_more_on.png" position="370,80" size="152,34" alphatest="on" />
-		<widget name="now_text" text="NOW" position="50,80" size="154,34" backgroundColor="Grey" font="Regular;20" foregroundColor="EPGTimeLineColour" halign="center" transparent="1" valign="center" zPosition="+1" />
-		<widget name="next_text" text="NEXT" position="210,80" size="154,34" backgroundColor="Grey" font="Regular;20" foregroundColor="EPGTimeLineColour" halign="center" transparent="1" valign="center" zPosition="+1" />
-		<widget name="more_text" text="MORE" position="370,80" size="154,34" backgroundColor="Grey" font="Regular;20" foregroundColor="EPGTimeLineColour" halign="center" transparent="1" valign="center" zPosition="+1" />
-		<widget name="date" position="530,80" size="200,34" backgroundColor="EPGBackground" font="Regular;20" foregroundColor="EPGTimeLineColour" transparent="1" valign="center" />
+		<widget name="now_text" text="NOW" position="50,80" size="154,34" backgroundColor="Grey" font="Regular;20" foregroundColor="EPGTimeLine" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="next_text" text="NEXT" position="210,80" size="154,34" backgroundColor="Grey" font="Regular;20" foregroundColor="EPGTimeLine" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="more_text" text="MORE" position="370,80" size="154,34" backgroundColor="Grey" font="Regular;20" foregroundColor="EPGTimeLine" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="date" position="530,80" size="200,34" backgroundColor="EPGBackground" font="Regular;20" foregroundColor="EPGTimeLine" transparent="1" valign="center" />
 		<widget name="list" position="50,115" size="660,540" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 		<widget source="session.VideoPicture" render="Pig" position="730,80" size="500,282" backgroundColor="TransparentBackground" />
 		<widget source="session.CurrentService" render="Label" position="730,80" size="500,20" borderColor="EPGOverlayBorder" borderWidth="1" font="Regular;17" foregroundColor="EPGOverlayColour" halign="center" noWrap="1" transparent="1" valign="top">

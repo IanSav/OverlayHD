@@ -49,7 +49,7 @@
 			<convert type="ServicePosition">Position</convert>
 		</widget>
 		-->
-		<widget source="session.CurrentService" render="Progress" position="10,35" size="250,6" backgroundColor="TimeShiftProgressBackground" borderColor="TimeShiftProgressBorder" borderWidth="1" foregroundColor="TimeShiftProgressColour" transparent="0">
+		<widget source="session.CurrentService" render="Progress" position="10,35" size="250,6" backgroundColor="TimeShiftBackground" borderColor="TimeShiftBorder" borderWidth="1" foregroundColor="TimeShiftColour" transparent="0">
 			<convert type="ServicePosition">Position</convert>
 		</widget>
 		<widget name="eventname" position="10,50" size="250,20" backgroundColor="TextBackground" font="Regular;16" foregroundColor="TimeShiftData" transparent="1" />
