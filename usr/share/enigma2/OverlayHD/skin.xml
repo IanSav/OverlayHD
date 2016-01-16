@@ -100,7 +100,7 @@
 		<color name="EPGProgressColour" value="WarmYellow" />
 		<color name="EPGProvider" value="LightBlue" />
 		<color name="EPGRating" value="Grey" />
-		<color name="EPGTimeLineColour" value="Yellow" />
+		<color name="EPGTimeLine" value="Yellow" />
 		<color name="EPGTimes" value="Grey" />
 		<color name="EPGTimesSelected" value="Silver" />
 		<color name="EPGEntryBackgroundColor" value="DarkerBlue" />
@@ -182,7 +182,7 @@
 		<color name="PictureBackground" value="ScreenBackground" />
 		<color name="PictureLabel" value="DullGreen" />
 		<color name="PictureLabelBorder" value="Black" />
-		<color name="Pinstripe" value="DarkerGrey" />
+		<color name="Pinstripe" value="DavysGrey" />
 
 		<color name="Resolution" value="Silver" />
 		<color name="ResolutionBackground" value="ScreenBackground" />
@@ -198,9 +198,9 @@
 		<color name="TextLabel" value="Grey" />
 		<color name="TextWaiting" value="Gold" />
 		<color name="TimeShiftData" value="Silver" />
-		<color name="TimeShiftProgressBackground" value="DeepGrey" />
-		<color name="TimeShiftProgressBorder" value="Grey" />
-		<color name="TimeShiftProgressColour" value="Green" />
+		<color name="TimeShiftBackground" value="DeepGrey" />
+		<color name="TimeShiftBorder" value="Grey" />
+		<color name="TimeShiftColour" value="Green" />
 		<color name="TunerBackground" value="ScreenBackground" />
 		<color name="TunerBER" value="OrangeRed" />
 		<color name="TunerBorder" value="Grey" />
