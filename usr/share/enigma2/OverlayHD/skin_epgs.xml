@@ -330,13 +330,13 @@
 <!-- EPG > REC - Record Pop Up Menu -->
 
 	<screen name="RecordTimerQuestion" title="Timer" position="center,center" size="240,80" flags="wfNoBorder" zPosition="+4">
-		<widget source="Title" render="Label" position="0,0" size="0,0" font="BannerTitle;25" foregroundColor="BannerTitle" transparent="1" />
+		<widget source="Title" render="Label" position="0,0" size="0,0" font="TitleFont;25" foregroundColor="BannerTitle" transparent="1" />
 		<widget name="text" position="0,0" size="0,0" font="Regular;25" foregroundColor="BannerTitle" transparent="1" />
 		<widget name="list" position="5,5" size="230,70" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" />
 	</screen>
 
 	<screen name="RecordTimerQuestion1" title="Timer" position="center,center" size="240,115" flags="wfNoBorder" zPosition="+4">
-		<widget source="Title" render="Label" position="0,0" size="0,0" font="BannerTitle;25" foregroundColor="BannerTitle" transparent="1" />
+		<widget source="Title" render="Label" position="0,0" size="0,0" font="TitleFont;25" foregroundColor="BannerTitle" transparent="1" />
 		<widget name="text" position="0,0" size="0,0" font="Regular;25" foregroundColor="BannerTitle" transparent="1" />
 		<widget name="list" position="5,5" size="230,105" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" />
 	</screen>
