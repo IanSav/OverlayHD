@@ -108,7 +108,7 @@
 
 <!-- MEDIA - Movie Selection Menu -->
 
-	<screen name="MovieSelection" title="Select Movie" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="MovieSelection" title="Media Selection" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonInfo" />
@@ -160,7 +160,7 @@
 		<widget name="DescriptionBorder" position="0,0" size="0,0" backgroundColor="ScreenBackground" />
 	</screen>
 
-	<screen name="MovieSelectionSlim" title="Select Movie" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="MovieSelectionSlim" title="Media Selection" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonInfo" />
@@ -199,56 +199,52 @@
 		<widget name="DescriptionBorder" position="0,0" size="0,0" backgroundColor="ScreenBackground" />
 	</screen>
 
-	<screen name="MovieListBookmarks" title="Movie List Bookmarks" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="MovieSelectionLocations" title="Media Selection Locations" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColourBacks" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_video.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<panel name="ScreenTemplateList0" />
-		<widget name="text" position="50,80" size="330,100" font="Regular;20" transparent="1" valign="center" />
+		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />
 	</screen>
 
-	<screen name="MovieListLocations" title="Movie List Locations" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="MovieSelectionOnEnd" title="Media Selection On End Of Media" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColourBacks" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_video.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<panel name="ScreenTemplateList0" />
-		<widget name="text" position="50,80" size="330,100" font="Regular;20" transparent="1" valign="center" />
+		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />
 	</screen>
 
-	<screen name="MovieListOnEnd" title="Movie List On End Of Movie" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="MovieSelectionRecordings" title="Media Selection Recordings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColourBacks" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_video.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<panel name="ScreenTemplateList0" />
-		<widget name="text" position="50,80" size="330,100" font="Regular;20" transparent="1" valign="center" />
+		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />
 	</screen>
 
-	<screen name="MovieListRecordings" title="Movie List Recordings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="MovieSelectionSort" title="Media Selection Sort" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColourBacks" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_video.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<panel name="ScreenTemplateList0" />
-		<widget name="text" position="50,80" size="330,100" font="Regular;20" transparent="1" valign="center" />
+		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />
 	</screen>
 
-	<screen name="MovieListSort" title="Movie List Sort" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColourBacks" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_video.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<panel name="ScreenTemplateList0" />
-		<widget name="text" position="50,80" size="330,100" font="Regular;20" transparent="1" valign="center" />
+	<screen name="MovieListTags" title="Media Selection Tags" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="MovieSelectionTags" />
 	</screen>
 
-	<screen name="MovieListTags" title="Movie List Tags" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="MovieSelectionTags" title="Media Selection Tags" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColourBacks" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_video.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<panel name="ScreenTemplateList0" />
-		<widget name="text" position="50,80" size="330,100" font="Regular;20" transparent="1" valign="center" />
+		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />
 	</screen>
 
 	<!-- MovieSelectionMenu -->
-	<screen name="MovieContextMenu" title="Movie Selection Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="MovieContextMenu" title="Media Selection Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateButtonTextVKey" />
@@ -274,7 +270,7 @@
 -->
 
 	<!-- MovieSelectionSetup -->
-	<screen name="MovieBrowserConfiguration" title="Movie Selection Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="MovieBrowserConfiguration" title="Media Selection Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateButtonTextVKey" />
