@@ -299,6 +299,18 @@
 	</screen>
 
 <!--
+ |	Extension List
+ +-->
+
+	<screen name="ExtensionsList" title="Choose Extension" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColourBacks" />
+		<ePixmap pixmap="menus/mainmenu_plugins.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateList0" />
+		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />
+	</screen>
+
+<!--
  |	Console / Task List
  +-->
 
@@ -366,6 +378,7 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateButtonTextVKey" />
+		<panel name="ScreenTemplateButtonHelp" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateDescription4" />
