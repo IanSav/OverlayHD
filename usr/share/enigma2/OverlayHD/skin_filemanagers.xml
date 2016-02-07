@@ -70,9 +70,9 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_source_mount.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<panel name="ScreenTemplateListLeft4" />
-		<panel name="ScreenTemplateListHead4" />
-		<widget name="unpacking" position="0,0" size="1,1" font="Regular;20" transparent="1" />
+		<panel name="ScreenTemplateListLeftHead" />
+		<panel name="ScreenTemplateListLeftMenu4" />
+		<panel name="ScreenTemplateUnpacking4" />
 	</screen>
 
 	<screen name="GunzipMenuScreen" title="File Commander - Archiver" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
@@ -98,8 +98,8 @@
 	<screen name="ArchiverInfoScreen" title="File Commander - Archiver" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<widget name="list_left_head" position="50,80" size="1180,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" />
-		<widget name="list_left" position="50,115" size="1180,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
+		<panel name="ScreenTemplateListLeftHead" />
+		<panel name="ScreenTemplateListLeftData0" />
 	</screen>
 
 	<screen name="UnpackInfoScreen" title="File Commander - Archiver" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">

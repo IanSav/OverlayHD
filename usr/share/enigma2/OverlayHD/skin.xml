@@ -872,6 +872,12 @@
  |	and Help blocks can be simplified and folded into the base templates.
  +-->
 
+<!-- Heading for configuration and/or data lists -->
+
+	<screen name="ScreenTemplateListLeftHead">
+		<widget name="list_left_head" position="50,80" size="1180,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
 <!-- Configuration items with no text window -->
 
 	<screen name="ScreenTemplateBookmarkList0">
@@ -909,6 +915,11 @@
 	<screen name="ScreenTemplateList0">
 		<!-- Font and ItemHeight are taken from the font alias ChoiceList. -->
 		<widget name="list" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+	</screen>
+
+	<screen name="ScreenTemplateListLeftData0">
+		<!-- Font and ItemHeight are taken from the font alias FileList (To be created! ####). -->
+		<widget name="list_left" position="50,115" size="1180,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateMenu0">
@@ -1096,8 +1107,9 @@
 		</widget>
 	</screen>
 
-	<screen name="ScreenTemplateListLeft4">
-		<widget name="list_left" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+	<screen name="ScreenTemplateListLeftMenu4">
+		<!-- Font and ItemHeight are taken from the font alias ChoiceList. -->
+		<widget name="list_left" position="400,115" size="830,385" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateLogList4">
@@ -1213,11 +1225,6 @@
 		<widget name="logentry" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" /><!--Console-->
 	</screen>
 
-	<screen name="ScreenTemplateListHead4">
-		<panel name="ScreenTemplateFrame830x120" />
-		<widget name="list_left_head" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
-	</screen>
-
 	<screen name="ScreenTemplateSDescription4">
 		<panel name="ScreenTemplateFrame830x120" />
 		<widget source="description" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
@@ -1256,6 +1263,12 @@
 	<screen name="ScreenTemplateText4">
 		<panel name="ScreenTemplateFrame830x120" />
 		<widget name="text" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="ScreenTemplateUnpacking4">
+		<panel name="ScreenTemplateFrame830x120" />
+		<!-- Font and ItemHeight are taken from the font alias ChoiceList (? #### ?). -->
+		<widget name="unpacking" position="410,550" size="810,100" backgroundColor="TextBackground" foregroundColor="Text" transparent="1" /><!--valign="center"-->
 	</screen>
 
 	<screen name="ScreenTemplateURL4">
