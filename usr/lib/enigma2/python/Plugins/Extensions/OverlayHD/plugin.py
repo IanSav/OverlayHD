@@ -1,14 +1,15 @@
 #====================================================
 # OverlayHD Skin Manager
-# Version Date - 8-Jan-2016
-# Version Number - 1.24
+# Version Date - 30-Jan-2016
+# Version Number - 1.25
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
 #====================================================
 
 from Components.ActionMap import ActionMap
-from Components.Sources.StaticText import StaticText
+# from Components.Sources.StaticText import StaticText
+from Components.Button import Button
 from Components.config import config, ConfigSubsection, ConfigYesNo, ConfigEnableDisable, ConfigSelection
 from Plugins.Plugin import PluginDescriptor
 from Screens.MessageBox import MessageBox
@@ -16,10 +17,18 @@ from Screens.Setup import Setup
 from Screens.Standby import TryQuitMainloop
 from Tools.Directories import resolveFilename, SCOPE_CURRENT_PLUGIN
 from enigma import gRGB
-from skin import dom_screens, colorNames, reloadWindowstyles
+from skin import dom_screens, colorNames, reloadWindowstyles, fonts
 import xml.etree.cElementTree
 
-screen_elements = (
+button_screens = (
+	"ScreenTemplateButtonRed",
+	"ScreenTemplateButtonGreen",
+	"ScreenTemplateButtonYellow",
+	"ScreenTemplateButtonBlue",
+	"ScreenTemplateButtonColourBacks"
+)
+
+colour_elements = (
 	("BannerBorder", "Black", None),
 	("BannerClock", "White", None),
 	("BannerClockBackground", "Background", "Background"),
@@ -246,15 +255,49 @@ transparency_choices = [
 	("0xff000000", _("100% (Transparent)"))
 ]
 
+banner_font_choices = [
+	("ArialNarrow", _("Arial Narrow")),
+	("GoodTimes", _("Good Times")),
+	("KhammuRabi", _("Khammu Rabi")),
+	("NemesisFlatline", _("Nemesis Flatline")),
+	("RobotoBlack", _("Roboto Black")),
+	("ValisEnigma", _("Valis Enigma"))
+]
+
+text_font_choices = [
+	("ArialNarrow", _("Arial Narrow")),
+	("KhammuRabi", _("Khammu Rabi")),
+	("NemesisFlatline", _("Nemesis Flatline")),
+	("ValisEnigma", _("Valis Enigma"))
+]
+
+fixed_font_choices = [
+	("AndaleMono", _("Andale Mono")),
+	("MPluss1M", _("M+ 1M")),
+	("VeraSansMono", _("Vera Sans Mono"))
+]
+
+font_elements = (
+	("ClockFont", "RobotoBlack", banner_font_choices),
+	("TitleFont", "RobotoBlack", banner_font_choices),
+	("ButtonFont", "NemesisFlatline", text_font_choices),
+	("FixedFont", "MPluss1M", fixed_font_choices),
+	("MenuFont", "NemesisFlatline", text_font_choices),
+	("SMSHelperFont", "MPluss1M", fixed_font_choices),
+	("Regular", "NemesisFlatline", text_font_choices),
+	("TextFont", "NemesisFlatline", text_font_choices)
+)
+
 config.plugins.skin = ConfigSubsection()
 config.plugins.skin.OverlayHD = ConfigSubsection()
 config.plugins.skin.OverlayHD.always_active = ConfigYesNo(default=False)
+config.plugins.skin.OverlayHD.ButtonStyle = ConfigSelection(default="Block", choices=[("Bar", "Bar"), ("Block", "Block"), ("Button", "Button"), ("Legacy", "Legacy"), ("Wizard", "Wizard")])
 config.plugins.skin.OverlayHD.record_icon_blink = ConfigYesNo(default=True)
 config.plugins.skin.OverlayHD.show_debugscreens = ConfigEnableDisable(default=False)
 config.plugins.skin.OverlayHD.update_icon_blink = ConfigYesNo(default=True)
 config.plugins.skin.OverlayHD.use_enhanced_menu = ConfigEnableDisable(default=False)
 
-for (label, colour, transparency) in screen_elements:
+for (label, colour, transparency) in colour_elements:
 	if colour is None or transparency is None:
 		if colour is not None:
 			setattr(config.plugins.skin.OverlayHD, label, ConfigSelection(default=colour, choices=colour_choices))
@@ -273,6 +316,10 @@ for (label, colour, transparency) in screen_elements:
 		setattr(config.plugins.skin.OverlayHD, "%s%s" % (label, "Transparency"), ConfigSelection(default=transparency, choices=t_choices))
 		# print "[OverlayHD] DEBUG (definition): '%sColour' = '%s'" % (label, colour)
 		# print "[OverlayHD] DEBUG (definition): '%sTransparency' = '%s'" % (label, transparency)
+
+for (label, font, font_table) in font_elements:
+	setattr(config.plugins.skin.OverlayHD, label, ConfigSelection(default=font, choices=font_table))
+	# print "[OverlayHD] DEBUG (definition): '%s' = '%s' (%s)" % (label, font, font_table)
 
 
 class OverlayHDSkinManager(Setup):
@@ -296,10 +343,10 @@ class OverlayHDSkinManager(Setup):
 		self.setup_title = _("OverlayHD Skin Manager")
 		self.process = False
 
-		self["key_red"] = StaticText(_("Cancel"))
-		self["key_green"] = StaticText(_("OK"))
-		self["key_yellow"] = StaticText(_("Themes"))
-		self["key_blue"] = StaticText(_("Default"))
+		self["key_red"] = Button(_("Cancel"))
+		self["key_green"] = Button(_("OK"))
+		self["key_yellow"] = Button(_("Themes"))  # "Save Theme" - Only enable if changed.
+		self["key_blue"] = Button(_("Default"))
 
 		self['actions'] = ActionMap(['OkCancelActions', 'ColorActions'],
 		{
@@ -315,7 +362,7 @@ class OverlayHDSkinManager(Setup):
 
 	def changeSettings(self, configElement):
 		if self.process:
-			# for (label, colour, transparency) in screen_elements:
+			# for (label, colour, transparency) in colour_elements:
 			# 	if colour is None or transparency is None:
 			# 		if configElement == eval("config.plugins.skin.OverlayHD.%s" % label):
 			# 			print "[OverlayHD] DEBUG (changeSettings): '%s' = '%s'" % (label, configElement.value)
@@ -362,21 +409,84 @@ class OverlayHDSkinManager(Setup):
 		self.close()
 
 	def theme(self):
-		themebox = self.session.open(MessageBox, _("Themes are not yet available."), MessageBox.TYPE_INFO, 5)
-		themebox.setTitle(self.setup_title)
-		try:
-			file = open(resolveFilename(SCOPE_CURRENT_PLUGIN, "OverlayHD/themes.xml"), "r")
-			themes = xml.etree.cElementTree.parse(file)
-			file.close()
-		except:
-			pass
-		# Not yet implemented!
+		if config.skin.primary_skin.value == "OverlayHD/skin.xml":
+			#themebox = self.session.open(MessageBox, _("Themes are not yet available."), MessageBox.TYPE_INFO, 5)
+			#themebox.setTitle(self.setup_title)
+			try:
+				file = open(resolveFilename(SCOPE_CURRENT_PLUGIN, "Extensions/OverlayHD/themes.xml"), "r")
+				self.dom_themes = xml.etree.cElementTree.parse(file)
+				file.close()
+			except (IOError, OSError), err:
+				self.dom_themes = None
+				print "[OverlayHD] Error opening themes file! (%s)" % str(err)
+			if self.dom_themes:
+				themes = self.dom_themes.findall("theme")
+				print "[OverlayHD] Theme count = %d" % len(themes)
+				for theme in themes:
+					print "[OverlayHD] Theme = '%s'" % theme.get("name", None)
+					buttons = theme.findall("button")
+					for button in buttons:
+						print "[OverlayHD] Button = '%s'" % button.get("name", None)
+					colours = theme.findall("colour")
+					for colour in colours:
+						print "[OverlayHD] Colour = '%s'" % colour.get("name", None)
+					fonts = theme.findall("font")
+					for font in fonts:
+						print "[OverlayHD] Font = '%s'" % font.get("name", None)
+					self.loadTheme("IanSav")
+			else:
+				themebox = self.session.open(MessageBox, _("Unable to open/access themes!\n\n%s") % str(err), MessageBox.TYPE_ERROR, 10)
+				themebox.setTitle(self.setup_title)
+		else:
+			print "[OverlayHD] OverlayHD is not the active skin!"
+
+	def loadTheme(self, name):
+		themes = self.dom_themes.findall("theme")
+		for theme in themes:
+			n = theme.get("name", None)
+			if n != name:
+				continue
+			print "[OverlayHD] Loading theme '%s'" % name
+			self.process = False
+			buttons = theme.findall("button")
+			for button in buttons:
+				name = button.get("name", None)
+				value = button.get("value", None)
+				print "[OverlayHD] Theme button = '%s', value = '%s'" % (name, value)
+				if name and value:
+					item = eval("config.plugins.skin.OverlayHD.%s" % name)
+					item.value = value
+			colours = theme.findall("colour")
+			for colour in colours:
+				name = colour.get("name", None)
+				value = colour.get("value", None)
+				print "[OverlayHD] Theme colour = '%s', value = '%s'" % (name, value)
+				if name and value:
+					item = eval("config.plugins.skin.OverlayHD.%s" % name)
+					item.value = value
+			fonts = theme.findall("font")
+			for font in fonts:
+				name = font.get("name", None)
+				value = font.get("value", None)
+				print "[OverlayHD] Theme font = '%s', value = '%s'" % (name, value)
+				if name and value:
+					item = eval("config.plugins.skin.OverlayHD.%s" % name)
+					item.value = value
+			self.applySettings()
+			self.process = True
+
+	def saveTheme(self, name):
+		# None
+		# Default
+		# name list
+		pass
 
 	def default(self):
 		if config.skin.primary_skin.value == "OverlayHD/skin.xml":
 			print "[OverlayHD] Setting skin to default settings."
 			self.process = False
-			for (label, colour, transparency) in screen_elements:
+			config.plugins.skin.OverlayHD.ButtonStyle.value = config.plugins.skin.OverlayHD.ButtonStyle.default
+			for (label, colour, transparency) in colour_elements:
 				if colour is None or transparency is None:
 					item = eval("config.plugins.skin.OverlayHD.%s" % label)
 					item.value = item.default
@@ -388,6 +498,10 @@ class OverlayHDSkinManager(Setup):
 					item = eval("config.plugins.skin.OverlayHD.%sTransparency" % label)
 					item.value = item.default
 					# print "[OverlayHD] DEBUG (default): '%sTransparency' = '%s'" % (label, item.default)
+			for (label, font, font_table) in font_elements:
+				item = eval("config.plugins.skin.OverlayHD.%s" % label)
+				item.value = item.default
+				# print "[OverlayHD] DEBUG (default): '%s' = '%s'" % (label, item.default)
 			self.applySettings()
 			self.process = True
 		else:
@@ -412,7 +526,16 @@ class OverlayHDSkinManager(Setup):
 def applySkinSettings():
 	if config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		print "[OverlayHD] Applying OverlayHD skin settings."
-		for (label, colour, transparency) in screen_elements:
+		for screen in button_screens:
+			elements, path = dom_screens.get(screen, (None, None))
+			if elements:
+				# print "[OverlayHD] Screen = '%s'" % screen
+				element = elements.find("panel")
+				name = element.get("name", None)
+				if name:
+					# print "[OverlayHD] Name = '%s'" % name
+					element.set("name", "%s%s" % (screen, config.plugins.skin.OverlayHD.ButtonStyle.value))
+		for (label, colour, transparency) in colour_elements:
 			if transparency is None:
 				item = eval("config.plugins.skin.OverlayHD.%s" % label)
 				piglabel = "%s%s%s" % (label[0:3], "PIG", label[3:])
@@ -444,6 +567,12 @@ def applySkinSettings():
 					tran = long(tran, 0x10)
 				colorNames[label] = gRGB(colorNames[col].argb() | tran)
 				# print "[OverlayHD] DEBUG (apply) 6: '%s' = '%s + 0x%08X'" % (label, col, tran)
+		for (label, font, font_table) in font_elements:
+			data = list(fonts[label])
+			item = eval("config.plugins.skin.OverlayHD.%s" % label)
+			data[0] = item.value
+			fonts[label] = tuple(data)
+			# print "[OverlayHD] DEBUG (apply): '%s' = '%s'" % (label, item.value)
 		reloadWindowstyles()
 	else:
 		print "[OverlayHD] OverlayHD is not the active skin!"
@@ -471,5 +600,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.always_active.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.24", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.25", icon="OverlayHD.png", fnc=main))
 	return list
