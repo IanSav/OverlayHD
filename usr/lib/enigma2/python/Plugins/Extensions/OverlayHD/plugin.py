@@ -1,17 +1,19 @@
 #====================================================
 # OverlayHD Skin Manager
-# Version Date - 21-Feb-2016
-# Version Number - 1.26
+# Version Date - 22-Feb-2016
+# Version Number - 1.27
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
 #====================================================
 
-from Components.ActionMap import ActionMap
+from Components.ActionMap import HelpableActionMap
 from Components.Button import Button
 from Components.config import config, ConfigSubsection, ConfigYesNo, ConfigEnableDisable, ConfigSelection
 from Plugins.Plugin import PluginDescriptor
+from Screens.HelpMenu import HelpableScreen
 from Screens.MessageBox import MessageBox
+from Screens.Screen import Screen
 from Screens.Setup import Setup
 from Screens.Standby import TryQuitMainloop
 from Tools.Directories import resolveFilename, SCOPE_CURRENT_PLUGIN
@@ -321,7 +323,7 @@ for (label, font, font_table) in font_elements:
 	# print "[OverlayHD] DEBUG (definition): Font '%s' = '%s' (%s)" % (label, font, font_table)
 
 
-class OverlayHDSkinManager(Setup):
+class OverlayHDSkinManager(Setup, HelpableScreen):
 	ALLOW_SUSPEND = True
 
 	skin = """
@@ -329,6 +331,7 @@ class OverlayHDSkinManager(Setup):
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateButtonTextVKey" />
+		<panel name="ScreenTemplateButtonHelp" />
 		<ePixmap pixmap="menus/setup_default.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" zPosition="+1" />
 		<panel name="ScreenTemplateConfig4" />
@@ -336,9 +339,11 @@ class OverlayHDSkinManager(Setup):
 		<panel name="ScreenTemplateDescription4" />
 	</screen>"""
 
-	def __init__(self, session, args = None):
+	def __init__(self, session):
 		Setup.__init__(self, session=session, setup="OverlayHDSkinManager", plugin="Extensions/OverlayHD")
  		self.skin = OverlayHDSkinManager.skin
+		self.skinName = ["OverlayHDSkinManager", "Setup"]
+		HelpableScreen.__init__(self)
 		self.setup_title = _("OverlayHD Skin Manager")
 		self.process = False
 
@@ -347,14 +352,14 @@ class OverlayHDSkinManager(Setup):
 		self["key_yellow"] = Button(_("Themes"))  # "Save Theme" - Only enable if changed.
 		self["key_blue"] = Button(_("Default"))
 
-		self["actions"] = ActionMap(["OkCancelActions", "ColorActions"],
-		{
-			"red" : self.cancel,
-			"green": self.save,
-			"yellow": self.theme,
-			"blue": self.default,
-			"cancel": self.cancel
-		}, -1)
+		self["actions"] = HelpableActionMap(self, ["OkCancelActions", "ColorActions"], {
+			"ok": (self.save, _("Save and apply any changes")),
+			"cancel": (self.cancel, _("Cancel and discard any changes")),
+			"red" : (self.cancel, _("Cancel and discard any changes")),
+			"green": (self.save, _("Save and apply any changes")),
+			"yellow": (self.theme, _("Manage themes")),
+			"blue": (self.default, _("Apply and save the default skin"))
+		}, description=_("Basic Functions"))
 
 		self.onExecBegin.append(self.myExecBegin)
 		self.onExecEnd.append(self.myExecEnd)
@@ -591,5 +596,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.always_active.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.26", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.27", icon="OverlayHD.png", fnc=main))
 	return list
