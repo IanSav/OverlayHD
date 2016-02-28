@@ -1,8 +1,13 @@
 <!--suppress XmlUnboundNsPrefix-->
 <setupxml>
 	<setup key="OverlayHDSkinManager" title="OverlayHD Skin Manager" separation="0" menuimage="menus/mainmenu_tasks_setup_default.png">
-		<item level="2" text="OverlayHD plugin always active" description="Setting this to True causes the OverlayHD Skin Manager plugin to always be active / available even if the skin is not currently selected.  This allows skin settings to be changed any time even though they are only used when the skin is active.  Setting this to False makes the plugin active only when the skin is active.">config.plugins.skin.OverlayHD.always_active</item>
+		<item level="2" text="OverlayHD plugin always active" description="Setting this to True causes the OverlayHD Skin Manager plugin to always be active / available even if the skin is not currently selected.  This allows skin settings to be changed any time even though they are only used when the skin is active.  Setting this to False makes the plugin active only when the skin is active.">config.plugins.skin.OverlayHD.AlwaysActive</item>
+		<item level="0" text="Background image" description="Choose a background image to be used while the system starts / boots.">config.plugins.skin.OverlayHD.BackgroundImage</item>
+		<item level="0" text="Spinner style" description="Choose a spinner animation for the system busy spinner.">config.plugins.skin.OverlayHD.Spinner</item>
 		<item level="0" text="Button style" description="Choose a button style for the colour button bar.">config.plugins.skin.OverlayHD.ButtonStyle</item>
+		<item level="3" text="Use Enhanced Menu" description="Enable to display menus with the numeric fast access button on the left of each menu item. (The numbers are always available even if not shown.)">config.plugins.skin.OverlayHD.EnhancedMenu</item>
+		<item level="0" text="REC icon blinks" description="Enable to display the REC icon blinking.">config.plugins.skin.OverlayHD.RecordBlink</item>
+		<item level="0" text="Firmare update icon blinks" description="Enable to display the firmware update available icon blinking.">config.plugins.skin.OverlayHD.UpdateBlink</item>
 		<item level="0" text="Screen background colour" description="Choose a colour for the user interface screen background.">config.plugins.skin.OverlayHD.ScreenBackgroundColour</item>
 		<item level="0" text="Screen background transparency" description="Choose the level of user interface screen background transparency.">config.plugins.skin.OverlayHD.ScreenBackgroundTransparency</item>
 		<item level="0" text="Banner clock colour" description="Choose a colour for the banner clock display.">config.plugins.skin.OverlayHD.BannerClock</item>
@@ -132,13 +137,11 @@
 		<item level="0" text="Weather data provider text colour" description="Choose a colour for the weather data provider.">config.plugins.skin.OverlayHD.WeatherProvider</item>
 		<item level="0" text="Title font" description="Choose a font for the heading title text.">config.plugins.skin.OverlayHD.TitleFont</item>
 		<item level="0" text="Clock font" description="Choose a font for the heading clock text.">config.plugins.skin.OverlayHD.ClockFont</item>
-		<item level="0" text="Button font" description="Choose a font for the heading clock text.">config.plugins.skin.OverlayHD.ButtonFont</item>
-		<item level="0" text="Menu font" description="Choose a font for the heading clock text.">config.plugins.skin.OverlayHD.MenuFont</item>
-		<item level="0" text="Text font" description="Choose a font for the heading clock text.">config.plugins.skin.OverlayHD.TextFont</item>
-		<item level="0" text="Fixed font" description="Choose a font for the heading clock text.">config.plugins.skin.OverlayHD.FixedFont</item>
-		<item level="3" text="Display skin names" description="Enable to display the current screen name in the top left corner of most screens. This can be used to identify problematic screens.">config.plugins.skin.OverlayHD.show_debugscreens</item>
-		<item level="3" text="REC icon blinks" description="Enable to display the REC icon blinking.">config.plugins.skin.OverlayHD.record_icon_blink</item>
-		<item level="3" text="Firmare update icon blinks" description="Enable to display the firmware update available icon blinking.">config.plugins.skin.OverlayHD.update_icon_blink</item>
-		<item level="3" text="Use Enhanced Menu" description="Enable to display menus with the numeric fast access button on the left of each menu item. (The numbers are always available even if not shown.)">config.plugins.skin.OverlayHD.use_enhanced_menu</item>
+		<item level="0" text="Button font" description="Choose a font for the button bar text.">config.plugins.skin.OverlayHD.ButtonFont</item>
+		<item level="0" text="Description font" description="Choose a font for the description and information box text.">config.plugins.skin.OverlayHD.DescriptionFont</item>
+		<item level="0" text="Help font" description="Choose a font for the help text.">config.plugins.skin.OverlayHD.HelpFont</item>
+		<item level="0" text="Menu font" description="Choose a font for the menu item text.">config.plugins.skin.OverlayHD.MenuFont</item>
+		<item level="0" text="Text font" description="Choose a font for general text.">config.plugins.skin.OverlayHD.TextFont</item>
+		<item level="0" text="Fixed font" description="Choose a font for fixed pitch / mono spaced text.">config.plugins.skin.OverlayHD.FixedFont</item>
 	</setup>
 </setupxml>
