@@ -1576,17 +1576,14 @@
 		<!-- Display the recording active icon -->
 		<ePixmap pixmap="icons/info_rec_off.png" position="0,0" size="34,20" alphatest="blend" zPosition="+1" />
 		<widget source="session.RecordState" render="Pixmap" pixmap="icons/info_rec_on.png" position="0,0" size="34,20" alphatest="blend" zPosition="+2">
-			<!-- <convert type="ConfigEntryTest">config.OverlayHD.record_icon_blink,1</convert> -->
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 		<!-- Display the software update available icon -->
 		<ePixmap pixmap="icons/info_update_off.png" position="39,0" size="20,20" alphatest="blend" />
 		<widget source="global.OnlineStableUpdateState" render="Pixmap" pixmap="icons/info_update_stable.png" position="39,0" size="20,20" alphatest="blend" zPosition="+1">
-			<!-- <convert type="ConfigEntryTest">config.OverlayHD.update_icon_blink,1</convert> -->
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 		<widget source="global.OnlineUnstableUpdateState" render="Pixmap" pixmap="icons/info_update_stable.png" position="39,0" size="20,20" alphatest="blend" zPosition="+2"><!--icons/info_update_unstable.png-->
-			<!-- <convert type="ConfigEntryTest">config.OverlayHD.update_icon_blink,1</convert> -->
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 		<!-- Display the sub services available icon -->
