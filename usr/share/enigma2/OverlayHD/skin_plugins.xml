@@ -360,6 +360,39 @@
 		<panel name="ScreenTemplateButtonColours" />
 	</screen>
 
+<!-- OverlayHD Manager Plugin -->
+
+	<screen name="OverlayHDSkinManager" title="OverlayHD Skin Manager" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonTextVKey" />
+		<panel name="ScreenTemplateButtonHelp" />
+		<ePixmap pixmap="menus/mainmenu_tv_channel.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateFootnote4" />
+		<panel name="ScreenTemplateDescription4" />
+	</screen>
+
+	<screen name="OverlayHDThemeManager" title="OverlayHD Theme Manager" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonText" />
+		<panel name="ScreenTemplateButtonHelp" />
+		<ePixmap pixmap="menus/mainmenu_tv_channel.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="themes" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (20, 0), size = (790, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),
+					],
+				"fonts": [parseFont("MenuFont;25")],
+				"itemHeight": 35
+				}
+			</convert>
+		</widget>
+	</screen>
+
 <!-- Simple Unmount Plugin -->
 
 	<screen name="SimpleUmount" title="Simple Umount" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
