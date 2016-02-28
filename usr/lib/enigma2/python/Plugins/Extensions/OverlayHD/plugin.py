@@ -1,7 +1,7 @@
 #====================================================
 # OverlayHD Skin Manager
-# Version Date - 27-Feb-2016
-# Version Number - 1.33
+# Version Date - 28-Feb-2016
+# Version Number - 1.34
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
@@ -434,7 +434,7 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 		    x[1].cancel()
 		self.applySettings()
 		self.close()
-		
+
 	def save(self):
 		self.process = False
 		if self.changedSettings():
@@ -796,6 +796,20 @@ def applySkinSettings():
 						name = element.get("name", None)
 						if name:
 							element.set("name", "%s%s" % (screen, config.plugins.skin.OverlayHD.ButtonStyle.value))
+			elif label == "RecordBlink":
+				elements, path = dom_screens.get("ChannelFormatPanel", (None, None))
+				if elements:
+					widgets = elements.findall("widget")
+					for widget in widgets:
+						if widget.get("source", "") == "session.RecordState":
+							converts = widget.findall("convert")
+							for convert in converts:
+								if convert.get("type", "") == "ConditionalShowHide":
+									if config.plugins.skin.OverlayHD.RecordBlink.value:
+										convert.text = "Blink"
+									else:
+										convert.text = ""
+									break
 			elif label == "Spinner":
 				linkname = resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/spinner")
 				if islink(linkname):
@@ -807,6 +821,20 @@ def applySkinSettings():
 					except (IOError, OSError), (err, errmsg):
 						errtext = "Error %d: %s - '%s'" % (err, errmsg, linkname)
 						print "[OverlayHD] Error linking spinner directory! (%s)" % errtext
+			elif label == "UpdateBlink":
+				elements, path = dom_screens.get("ChannelFormatPanel", (None, None))
+				if elements:
+					widgets = elements.findall("widget")
+					for widget in widgets:
+						if widget.get("source", "") in ("global.OnlineStableUpdateState", "global.OnlineUnstableUpdateState"):
+							converts = widget.findall("convert")
+							for convert in converts:
+								if convert.get("type", "") == "ConditionalShowHide":
+									if config.plugins.skin.OverlayHD.UpdateBlink.value:
+										convert.text = "Blink"
+									else:
+										convert.text = ""
+									break
 		reloadWindowstyles()
 	else:
 		print "[OverlayHD] OverlayHD is not the active skin!"
@@ -834,5 +862,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.33", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.34", icon="OverlayHD.png", fnc=main))
 	return list
