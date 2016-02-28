@@ -303,6 +303,7 @@
 		<alias name="FileMonoFont" font="MPluss1M" size="20" height="25" width="18" />
 		<alias name="FilePropFont" font="ValisEnigma" size="20" height="25" width="18" />
 		<alias name="FixedFont" font="VeraSansMono" size="20" height="25" width="18" />
+		<alias name="HelpFont" font="NemesisFlatline" size="20" height="25" width="18" />
 		<alias name="LCD" font="DSDigital" size="20" height="25" width="18" />
 		<alias name="mediaportal" font="KhammuRabi" size="20" height="25" width="18" />
 		<alias name="MenuFont" font="NemesisFlatline" size="25" height="35" width="20" />
@@ -678,14 +679,12 @@
 					MultiContentEntryText(pos = (20, 0), size = (790, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),
 					MultiContentEntryText(pos = (740, 0), size = (50, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4),
 					],
-				"fonts": [gFont("Regular", 25)],
+				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
 				}
 			</convert>
 		</widget>
 	</screen>
-
-<!-- MENU - Enhanced Generic Main Menu -->
 
 	<screen name="MenuEnhanced" title="Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
@@ -701,7 +700,7 @@
 					MultiContentEntryText(pos = (740, 0), size = (50, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4),
 					MultiContentEntryPixmapAlphaTest(pos = (20, 5), size = (35, 25), png = 5)
 					],
-				"fonts": [gFont("Regular", 25)],
+				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
 				}
 			</convert>
@@ -727,11 +726,11 @@
 		<widget name="up_sub_2" pixmap="gmenu/gmenu_up.png" position="622,470" size="35,10" alphatest="on" transparent="1" />
 		<widget name="up_sub_3" pixmap="gmenu/gmenu_up.png" position="872,470" size="35,10" alphatest="on" transparent="1" />
 		<widget name="up_sub_4" pixmap="gmenu/gmenu_up.png" position="1122,470" size="35,10" alphatest="on" transparent="1" />
-		<widget name="list_sub_0" position="15,480" size="250,210" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" enableWrapAround="1" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="0" />
-		<widget name="list_sub_1" position="265,480" size="250,210" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" enableWrapAround="1" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="0" />
-		<widget name="list_sub_2" position="515,480" size="250,210" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" enableWrapAround="1" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="0" />
-		<widget name="list_sub_3" position="765,480" size="250,210" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" enableWrapAround="1" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="0" />
-		<widget name="list_sub_4" position="1015,480" size="250,210" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" enableWrapAround="1" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="0" />
+		<widget name="list_sub_0" position="15,480" size="250,210" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="0" />
+		<widget name="list_sub_1" position="265,480" size="250,210" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="0" />
+		<widget name="list_sub_2" position="515,480" size="250,210" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="0" />
+		<widget name="list_sub_3" position="765,480" size="250,210" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="0" />
+		<widget name="list_sub_4" position="1015,480" size="250,210" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="0" />
 		<widget name="down_sub_0" pixmap="gmenu/gmenu_down.png" position="122,690" size="35,10" alphatest="on" transparent="1" />
 		<widget name="down_sub_1" pixmap="gmenu/gmenu_down.png" position="372,690" size="35,10" alphatest="on" transparent="1" />
 		<widget name="down_sub_2" pixmap="gmenu/gmenu_down.png" position="622,690" size="35,10" alphatest="on" transparent="1" />
@@ -766,13 +765,13 @@
 						MultiContentEntryText(pos = (20, 25), size = (790, 25), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, color = "DarkGrey", color_sel = "Silver", text = 4),  # Help item (tupple with 2)
 						])
 					},
-				"fonts": [gFont("Regular", 20), gFont("Regular", 20)],
+				"fonts": [parseFont("HelpFont;20"), parseFont("HelpFont;20")],
 				"itemHeight": 25
 				}
 			</convert>
 		</widget>
-		<widget name="longshift_key0" position="400,620" size="830,30" backgroundColor="TextBackground" font="Regular;25" foregroundColor="HelpPress" halign="right" transparent="1" />
-		<widget name="longshift_key1" position="400,620" size="830,30" backgroundColor="TextBackground" font="Regular;25" foregroundColor="HelpPress" halign="right" transparent="1" />
+		<widget name="longshift_key0" position="400,620" size="830,30" backgroundColor="TextBackground" font="HelpFont;25" foregroundColor="HelpPress" halign="right" transparent="1" />
+		<widget name="longshift_key1" position="400,620" size="830,30" backgroundColor="TextBackground" font="HelpFont;25" foregroundColor="HelpPress" halign="right" transparent="1" />
 	</screen>
 
 	<screen name="MPHelp" title="XML Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
@@ -807,7 +806,7 @@
 					MultiContentEntryText(pos = (320, 0), size = (35, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 2),
 					# MultiContentEntryText(pos = (40, 35), size = (310, 20), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3)
 					],
-				"fonts": [gFont("Regular", 25), gFont("Regular", 15)],
+				"fonts": [parseFont("MenuFont;25"), parseFont("MenuFont;15")],
 				"itemHeight": 35,
 				}
 			</convert>
@@ -823,7 +822,7 @@
 					MultiContentEntryText(pos = (20, 0), size = (365, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
 					# MultiContentEntryText(pos = (40, 35), size = (345, 20), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2)
 					],
-				"fonts": [gFont("Regular", 20), gFont("Regular", 15)],
+				"fonts": [parseFont("MenuFont;25"), parseFont("MenuFont;15")],
 				"itemHeight": 35
 				}
 			</convert>
@@ -888,7 +887,7 @@
 <!-- Configuration items with no text window -->
 
 	<screen name="ScreenTemplateBookmarkList0">
-		<widget name="bookmarklist" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="bookmarklist" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateCheckList0">
@@ -896,15 +895,15 @@
 	</screen>
 
 	<screen name="ScreenTemplateConfig0">
-		<widget name="config" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="config" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateDetailText0">
-		<widget name="detailtext" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="detailtext" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateEntries0">
-		<widget name="entries" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="entries" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateEntriesTall0">
@@ -935,7 +934,7 @@
 	</screen>
 
 	<screen name="ScreenTemplatePlugList0">
-		<widget name="list" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="list" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateSConfig0">
@@ -997,11 +996,11 @@
 <!-- Configuration items with a two line text window -->
 
 	<screen name="ScreenTemplateConfig2">
-		<widget name="config" position="400,80" size="830,490" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="config" position="400,80" size="830,490" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateEntries2">
-		<widget name="entries" position="400,80" size="830,490" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="entries" position="400,80" size="830,490" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
 <!-- Text component of configuration items with a two line text window -->
@@ -1015,57 +1014,57 @@
 
 	<screen name="ScreenTemplateDescription2">
 		<panel name="ScreenTemplateFrame830x70" />
-		<widget name="description" position="410,600" size="810,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="description" position="410,600" size="810,50" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateHelp2">
 		<panel name="ScreenTemplateFrame830x70" />
-		<widget source="help" render="Label" position="410,600" size="810,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="help" render="Label" position="410,600" size="810,50" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateInformation2">
 		<panel name="ScreenTemplateFrame830x70" />
-		<widget name="information" position="410,600" size="810,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="information" position="410,600" size="810,50" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateIntroduction2">
 		<panel name="ScreenTemplateFrame830x70" />
-		<widget name="introduction" position="410,600" size="810,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="introduction" position="410,600" size="810,50" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateSHelp2">
 		<panel name="ScreenTemplateFrame830x70" />
-		<widget source="help" render="Label" position="410,600" size="810,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="help" render="Label" position="410,600" size="810,50" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateSDescription2">
 		<panel name="ScreenTemplateFrame830x70" />
-		<widget source="description" render="Label" position="410,600" size="810,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="description" render="Label" position="410,600" size="810,50" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateSInformation2">
 		<panel name="ScreenTemplateFrame830x70" />
-		<widget source="information" render="Label" position="410,600" size="810,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="information" render="Label" position="410,600" size="810,50" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateSIntroduction2">
 		<panel name="ScreenTemplateFrame830x70" />
-		<widget source="introduction" render="Label" position="410,600" size="810,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="introduction" render="Label" position="410,600" size="810,50" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateSStatus2">
 		<panel name="ScreenTemplateFrame830x70" />
-		<widget source="status" render="Label" position="410,600" size="810,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="status" render="Label" position="410,600" size="810,50" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateStatus2">
 		<panel name="ScreenTemplateFrame830x70" />
-		<widget source="status" render="Label" position="410,600" size="810,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="status" render="Label" position="410,600" size="810,50" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateText2">
 		<panel name="ScreenTemplateFrame830x70" />
-		<widget name="text" position="410,600" size="810,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="text" position="410,600" size="810,50" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 <!-- Configuration items with a four line text window -->
@@ -1080,15 +1079,15 @@
 	</screen>
 
 	<screen name="ScreenTemplateConfig4">
-		<widget name="config" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="config" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateDeviceList4">
-		<widget name="devicelist" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="devicelist" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateEntries4">
-		<widget name="entries" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="entries" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateFileList4">
@@ -1096,7 +1095,7 @@
 	</screen>
 
 	<screen name="ScreenTemplateHDDList4">
-		<widget name="hddlist" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="hddlist" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateList4">
@@ -1157,9 +1156,9 @@
 	</screen>
 
 	<screen name="ScreenTemplateSkinList4">
-		<widget name="SkinList" position="400,80" size="540,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="SkinList" position="400,80" size="540,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 		<!--
-		<widget name="SkinList" position="400,80" size="540,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0">
+		<widget name="SkinList" position="400,80" size="540,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -1189,87 +1188,87 @@
 
 	<screen name="ScreenTemplateConnStatus4">
 		<panel name="ScreenTemplateFrame830x120" />
-		<widget name="ConnStatus" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="ConnStatus" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateDescription4">
 		<panel name="ScreenTemplateFrame830x120" />
-		<widget name="description" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="description" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateDetail4">
-		<widget name="detailtext" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="detailtext" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateHDMICEC4">
 		<panel name="ScreenTemplateFrame830x120" />
-		<widget source="fixed_address" render="Label" position="410,570" size="810,25" font="Regular;20" halign="center" transparent="1" valign="center" />
-		<widget source="current_address" render="Label" position="410,595" size="810,25" font="Regular;20" halign="center" transparent="1" valign="center" />
+		<widget source="fixed_address" render="Label" position="410,570" size="810,25" font="DescriptionFont;20" halign="center" transparent="1" valign="center" />
+		<widget source="current_address" render="Label" position="410,595" size="810,25" font="DescriptionFont;20" halign="center" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateHelp4">
 		<panel name="ScreenTemplateFrame830x120" />
-		<widget source="help" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="help" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateInfo4">
 		<panel name="ScreenTemplateFrame830x120" />
-		<widget name="info" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="info" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateIntroduction4">
 		<panel name="ScreenTemplateFrame830x120" />
-		<widget name="introduction" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="introduction" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateLab4">
 		<panel name="ScreenTemplateFrame830x120" />
-		<widget name="lab1" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="lab1" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateLogEntry4">
 		<panel name="ScreenTemplateFrame830x120" />
-		<widget name="logentry" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" /><!--Console-->
+		<widget name="logentry" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" /><!--Console-->
 	</screen>
 
 	<screen name="ScreenTemplateSDescription4">
 		<panel name="ScreenTemplateFrame830x120" />
-		<widget source="description" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="description" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateSHelp4">
 		<panel name="ScreenTemplateFrame830x120" />
-		<widget source="help" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="help" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateSInfo4">
 		<panel name="ScreenTemplateFrame830x120" />
-		<widget source="info" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="info" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateSIntroduction24">
 		<panel name="ScreenTemplateFrame830x120" />
-		<widget source="introduction2" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="introduction2" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateSIntroduction4">
 		<panel name="ScreenTemplateFrame830x120" />
-		<widget source="introduction" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="introduction" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateSStatus4">
 		<panel name="ScreenTemplateFrame830x120" />
-		<widget source="status" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="status" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateStatus4">
 		<panel name="ScreenTemplateFrame830x120" />
-		<widget source="status" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="status" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateText4">
 		<panel name="ScreenTemplateFrame830x120" />
-		<widget name="text" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="text" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateUnpacking4">
@@ -1280,12 +1279,12 @@
 
 	<screen name="ScreenTemplateURL4">
 		<panel name="ScreenTemplateFrame830x120" />
-		<widget name="url" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="url" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateWDG4">
 		<panel name="ScreenTemplateFrame830x120" />
-		<widget name="wdg_label_instruction" position="410,550" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="wdg_label_instruction" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 <!-- Configuration items with a four line text window and extra configuration data -->
@@ -1301,11 +1300,11 @@
 	</screen>
 
 	<screen name="ScreenTemplateConfigShort">
-		<widget name="config" position="400,80" size="830,325" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="config" position="400,80" size="830,325" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateMenuListShort">
-		<widget name="menulist" position="400,80" size="830,375" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="menulist" position="400,80" size="830,375" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
 <!-- Panel To Display The Banner Formatted Time (305 x 25 pixels) -->
