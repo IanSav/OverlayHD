@@ -1,7 +1,7 @@
 #====================================================
 # OverlayHD Skin Manager
-# Version Date - 24-Feb-2016
-# Version Number - 1.29
+# Version Date - 25-Feb-2016
+# Version Number - 1.30
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
@@ -18,9 +18,12 @@ from Screens.Screen import Screen
 from Screens.Setup import Setup
 from Screens.Standby import TryQuitMainloop
 from Screens.VirtualKeyBoard import VirtualKeyBoard
-from Tools.Directories import resolveFilename, SCOPE_CURRENT_PLUGIN
+from Tools.Directories import resolveFilename, SCOPE_CURRENT_SKIN, SCOPE_CURRENT_PLUGIN
 from enigma import gRGB
+from os import listdir, symlink, unlink
+from os.path import islink
 from skin import dom_screens, colorNames, reloadWindowstyles, fonts
+import errno, shutil
 import xml.etree.cElementTree
 
 colour_elements = (
@@ -291,11 +294,16 @@ button_choices = [
 	("Wizard", "Wizard")
 ]
 
+spinner_choices = [
+	(None, "Default")
+]
+
 option_elements = (
 	("AlwaysActive", False, ConfigYesNo, None),
 	("ButtonStyle", "Block", ConfigSelection, button_choices),
 	("EnhancedMenu", False, ConfigEnableDisable, None),
 	("RecordBlink", True, ConfigYesNo, None),
+	("Spinner", "Balls", ConfigSelection, spinner_choices),
 	("UpdateBlink", True, ConfigYesNo, None)
 )
 
@@ -333,6 +341,9 @@ for (label, colour, transparency) in colour_elements:
 for (label, font, font_table) in font_elements:
 	setattr(config.plugins.skin.OverlayHD, label, ConfigSelection(default=font, choices=font_table))
 	# print "[OverlayHD] DEBUG (definition): Font '%s' = '%s' (%s)" % (label, font, font_table)
+
+for fname in sorted(listdir(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/spinners"))):
+	spinner_choices.append((fname, fname))
 
 for (label, default, config_type, option_table) in option_elements:
 	if option_table:
@@ -758,6 +769,17 @@ def applySkinSettings():
 						name = element.get("name", None)
 						if name:
 							element.set("name", "%s%s" % (screen, config.plugins.skin.OverlayHD.ButtonStyle.value))
+			elif label == "Spinner":
+				linkname = resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/spinner")
+				if islink(linkname):
+					unlink(linkname)
+				item = eval("config.plugins.skin.OverlayHD.%s" % label).value
+				if item is not None:
+					try:
+						symlink(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/spinners/%s" % item), linkname)
+					except (IOError, OSError), (err, errmsg):
+						errtext = "Error %d: %s - '%s'" % (err, errmsg, linkname)
+						print "[OverlayHD] Error linking spinner directory! (%s)" % errtext
 		reloadWindowstyles()
 	else:
 		print "[OverlayHD] OverlayHD is not the active skin!"
@@ -785,5 +807,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.29", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.30", icon="OverlayHD.png", fnc=main))
 	return list
