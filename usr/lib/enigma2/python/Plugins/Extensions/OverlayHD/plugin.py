@@ -1,7 +1,7 @@
 #====================================================
 # OverlayHD Skin Manager
 # Version Date - 27-Feb-2016
-# Version Number - 1.32
+# Version Number - 1.33
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
@@ -53,16 +53,16 @@ colour_elements = (
 	("EPGTimes", "Grey", None),
 	("EPGTimesSelected", "Silver", None),
 	("EPGTransparency", None, "Background"),
-	("EPGEntryBackgroundColor", "DarkerBlue", None),
-	("EPGEntryBackgroundColorSelected", "Yellow", None),
+	("EPGEntryBackgroundColor", "MidBlack", None),
+	("EPGEntryBackgroundColorSelected", "Grey", None),
 	("EPGEntryForegroundColor", "White", None),
 	("EPGEntryForegroundColorSelected", "Black", None),
 	("EPGRecordBackgroundColor", "DullRed", None),
 	("EPGRecordBackgroundColorSelected", "Red", None),
 	("EPGRecordForegroundColor", "White", None),
 	("EPGRecordForegroundColorSelected", "Black", None),
-	("EPGServiceBackgroundColor", "DeepBlue", None),
-	("EPGServiceBackgroundColorNow", "Blue", None),
+	("EPGServiceBackgroundColor", "OffBlack", None),
+	("EPGServiceBackgroundColorNow", "DavysGrey", None),
 	("EPGServiceForegroundColor", "White", None),
 	("EPGServiceForegroundColorNow", "White", None),
 	("EPGZapBackgroundColor", "DullGreen", None),
@@ -203,9 +203,11 @@ colour_choices = [
 	("Magenta", _("Magenta")),
 	("Maroon", _("Maroon")),
 	("MediumBlue", _("Medium Blue")),
+	("MidBlack", _("Mid Black")),
 	("MidnightBlue", _("Midnight Blue")),
 	("Mustard", _("Mustard")),
 	("Navy", _("Navy")),
+	("OffBlack", _("Off Black")),
 	("Onyx", _("Onyx")),
 	("Orange", _("Orange")),
 	("OrangeRed", _("Orange Red")),
@@ -832,5 +834,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.32", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.33", icon="OverlayHD.png", fnc=main))
 	return list
