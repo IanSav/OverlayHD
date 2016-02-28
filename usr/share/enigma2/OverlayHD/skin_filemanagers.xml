@@ -170,14 +170,17 @@
 		<widget name="waitingtext" position="50,80" size="1180,500" backgroundColor="TextBackground" font="Regular;25" foregroundColor="TextWaiting" halign="center" transparent="1" valign="center" zPosition="+2" />
 		<widget name="list" position="50,80" size="1180,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 		<widget name="chosenletter" position="50,80" size="1180,500" font="Regular;100" foregroundColor="FindCharacter" halign="center" transparent="1" valign="center" zPosition="+1" />
-		<widget source="Service" render="Label" position="50,530" size="480,25" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoChannel" noWrap="1" transparent="1">
+		<widget source="Service" render="Label" position="50,530" size="385,25" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoChannel" noWrap="1" transparent="1">
 			<convert type="MovieInfo">RecordServiceName</convert>
 		</widget>
-		<widget source="Service" render="Label" position="555,530" size="200,25" backgroundColor="InfoBackground" font="Regular;20" halign="right" foregroundColor="InfoDurationNow" transparent="1">
+		<widget source="Service" render="Label" position="445,530" size="150,25" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoFileSizeNow" halign="right" transparent="1">
+			<convert type="MovieInfo">FileSize</convert>
+		</widget>
+		<widget source="Service" render="Label" position="605,530" size="150,25" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoDurationNow" halign="right" transparent="1">
 			<convert type="ServiceTime">Duration</convert>
 			<convert type="ClockToText">AsLength</convert>
 		</widget>
-		<widget source="Service" render="Label" position="50,560" size="705,95" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoDetailsNow" transparent="1">
+		<widget source="Service" render="Label" position="50,560" size="705,95" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoDetailsNow" halign="block" transparent="1">
 			<convert type="MovieInfo">MetaDescription</convert>
 		</widget>
 		<widget name="numFolders" position="775,530" size="220,25" font="Regular;20" foregroundColor="InfoDiskStats" transparent="1" />
