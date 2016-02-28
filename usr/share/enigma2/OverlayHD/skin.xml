@@ -659,9 +659,13 @@
 		<widget name="help2" position="250,180" size="80,60" backgroundColor="SMSHelperBackground" font="SMSHelperFont;22" foregroundColor="SMSHelperText" halign="center" valign="center" />
 	</screen>
  
-<!-- MENU - Generic Main Menu -->
+<!-- MENU - Generic And Enhanced Main Menus -->
 
 	<screen name="Menu" title="Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="MenuGeneric" />
+	</screen>
+
+	<screen name="MenuGeneric" title="Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColourBacks" />
 		<ePixmap pixmap="menus/menu_default.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
@@ -672,6 +676,7 @@
 				"template":
 					[
 					MultiContentEntryText(pos = (20, 0), size = (790, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),
+					MultiContentEntryText(pos = (740, 0), size = (50, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4),
 					],
 				"fonts": [gFont("Regular", 25)],
 				"itemHeight": 35
