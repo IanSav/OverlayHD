@@ -1,14 +1,13 @@
 #====================================================
 # OverlayHD Skin Manager
-# Version Date - 30-Jan-2016
-# Version Number - 1.25
+# Version Date - 21-Feb-2016
+# Version Number - 1.26
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
 #====================================================
 
 from Components.ActionMap import ActionMap
-# from Components.Sources.StaticText import StaticText
 from Components.Button import Button
 from Components.config import config, ConfigSubsection, ConfigYesNo, ConfigEnableDisable, ConfigSelection
 from Plugins.Plugin import PluginDescriptor
@@ -301,10 +300,10 @@ for (label, colour, transparency) in colour_elements:
 	if colour is None or transparency is None:
 		if colour is not None:
 			setattr(config.plugins.skin.OverlayHD, label, ConfigSelection(default=colour, choices=colour_choices))
-			# print "[OverlayHD] DEBUG (definition): '%s' = '%s'" % (label, colour)
+			# print "[OverlayHD] DEBUG (definition): Colour '%s' = '%s'" % (label, colour)
 		if transparency is not None:
 			setattr(config.plugins.skin.OverlayHD, label, ConfigSelection(default=transparency, choices=transparency_choices))
-			# print "[OverlayHD] DEBUG (definition): '%s' = '%s'" % (label, transparency)
+			# print "[OverlayHD] DEBUG (definition): Colour '%s' = '%s'" % (label, transparency)
 	else:
 		if label == "ScreenBackground":
 			c_choices = colour_choices
@@ -314,12 +313,12 @@ for (label, colour, transparency) in colour_elements:
 			t_choices = background_choice + transparency_choices
 		setattr(config.plugins.skin.OverlayHD, "%s%s" % (label, "Colour"), ConfigSelection(default=colour, choices=c_choices))
 		setattr(config.plugins.skin.OverlayHD, "%s%s" % (label, "Transparency"), ConfigSelection(default=transparency, choices=t_choices))
-		# print "[OverlayHD] DEBUG (definition): '%sColour' = '%s'" % (label, colour)
-		# print "[OverlayHD] DEBUG (definition): '%sTransparency' = '%s'" % (label, transparency)
+		# print "[OverlayHD] DEBUG (definition): Colour '%sColour' = '%s'" % (label, colour)
+		# print "[OverlayHD] DEBUG (definition): Colour '%sTransparency' = '%s'" % (label, transparency)
 
 for (label, font, font_table) in font_elements:
 	setattr(config.plugins.skin.OverlayHD, label, ConfigSelection(default=font, choices=font_table))
-	# print "[OverlayHD] DEBUG (definition): '%s' = '%s' (%s)" % (label, font, font_table)
+	# print "[OverlayHD] DEBUG (definition): Font '%s' = '%s' (%s)" % (label, font, font_table)
 
 
 class OverlayHDSkinManager(Setup):
@@ -348,7 +347,7 @@ class OverlayHDSkinManager(Setup):
 		self["key_yellow"] = Button(_("Themes"))  # "Save Theme" - Only enable if changed.
 		self["key_blue"] = Button(_("Default"))
 
-		self['actions'] = ActionMap(['OkCancelActions', 'ColorActions'],
+		self["actions"] = ActionMap(["OkCancelActions", "ColorActions"],
 		{
 			"red" : self.cancel,
 			"green": self.save,
@@ -374,18 +373,18 @@ class OverlayHDSkinManager(Setup):
 			self.applySettings()
 
 	def myExecBegin(self):
-		for x in self['config'].list:
+		for x in self["config"].list:
 			x[1].addNotifier(self.changeSettings)
 		self.process = True
 
 	def myExecEnd(self):
 		self.process = False
-		for x in self['config'].list:
+		for x in self["config"].list:
 			x[1].removeNotifier(self.changeSettings)
 
 	def cancel(self):
 		self.process = False
-		for x in self['config'].list:
+		for x in self["config"].list:
 		    x[1].cancel()
 		self.applySettings()
 		self.close()
@@ -393,11 +392,11 @@ class OverlayHDSkinManager(Setup):
 	def save(self):
 		self.process = False
 		if self.changedSettings():
-			for x in self['config'].list:
+			for x in self["config"].list:
 				x[1].save()
 			config.plugins.skin.OverlayHD.save()
 			self.applySettings()
-			restartbox = self.session.openWithCallback(self.restartGUI, MessageBox, _("GUI needs a restart to apply any new settings.\n\n"
+			restartbox = self.session.openWithCallback(self.restartGUI, MessageBox, _("The GUI needs to be restarted to apply the changes.\n\n"
 				"Do you want to restart the GUI now?"), MessageBox.TYPE_YESNO)
 			restartbox.setTitle(self.setup_title)
 		else:
@@ -509,11 +508,11 @@ class OverlayHDSkinManager(Setup):
 
 	def changedSettings(self):
 		changed = 0
-		for x in self['config'].list:
+		for x in self["config"].list:
 			if x[1].isChanged():
-				# print "[OverlayHD] Entries changed!"
+				# print "[OverlayHD] Entries changed."
 				return True
-		# print "[OverlayHD] Entries NOT changed!"
+		# print "[OverlayHD] Entries NOT changed."
 		return False
 
 	def applySettings(self):
@@ -533,7 +532,6 @@ def applySkinSettings():
 				element = elements.find("panel")
 				name = element.get("name", None)
 				if name:
-					# print "[OverlayHD] Name = '%s'" % name
 					element.set("name", "%s%s" % (screen, config.plugins.skin.OverlayHD.ButtonStyle.value))
 		for (label, colour, transparency) in colour_elements:
 			if transparency is None:
@@ -542,8 +540,6 @@ def applySkinSettings():
 				if label in derived_foreground_elements:
 					colorNames[label] = colorNames[item.value]
 					colorNames[piglabel] = colorNames[item.value]
-					# print "[OverlayHD] DEBUG (apply) 1: '%s' = '%s'" % (label, item.value)
-					# print "[OverlayHD] DEBUG (apply) 2: '%s' = '%s'" % (piglabel, item.value)
 				elif label in derived_background_elements:
 					if config.plugins.skin.OverlayHD.EPGTransparency.value == "Background":
 						tran = long(config.plugins.skin.OverlayHD.ScreenBackgroundTransparency.value, 0x10)
@@ -551,11 +547,8 @@ def applySkinSettings():
 						tran = long(config.plugins.skin.OverlayHD.EPGTransparency.value, 0x10)
 					colorNames[label] = gRGB(colorNames[item.value].argb() | tran)
 					colorNames[piglabel] = colorNames[item.value]
-					# print "[OverlayHD] DEBUG (apply) 3: '%s' = '%s + 0x%08X'" % (label, item.value, transparency)
-					# print "[OverlayHD] DEBUG (apply) 4: '%s' = '%s'" % (piglabel, item.value)
 				else:
 					colorNames[label] = colorNames[item.value]
-					# print "[OverlayHD] DEBUG (apply) 5: '%s' = '%s'" % (label, item.value)
 			elif colour is not None:
 				col = eval("config.plugins.skin.OverlayHD.%sColour" % label).value
 				if col == "Background":
@@ -566,13 +559,11 @@ def applySkinSettings():
 				else:
 					tran = long(tran, 0x10)
 				colorNames[label] = gRGB(colorNames[col].argb() | tran)
-				# print "[OverlayHD] DEBUG (apply) 6: '%s' = '%s + 0x%08X'" % (label, col, tran)
 		for (label, font, font_table) in font_elements:
 			data = list(fonts[label])
 			item = eval("config.plugins.skin.OverlayHD.%s" % label)
 			data[0] = item.value
 			fonts[label] = tuple(data)
-			# print "[OverlayHD] DEBUG (apply): '%s' = '%s'" % (label, item.value)
 		reloadWindowstyles()
 	else:
 		print "[OverlayHD] OverlayHD is not the active skin!"
@@ -600,5 +591,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.always_active.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.25", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.26", icon="OverlayHD.png", fnc=main))
 	return list
