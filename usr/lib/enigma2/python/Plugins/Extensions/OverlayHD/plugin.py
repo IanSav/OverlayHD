@@ -1,7 +1,7 @@
 #====================================================
 # OverlayHD Skin Manager
-# Version Date - 22-Feb-2016
-# Version Number - 1.27
+# Version Date - 23-Feb-2016
+# Version Number - 1.28
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
@@ -20,14 +20,6 @@ from Tools.Directories import resolveFilename, SCOPE_CURRENT_PLUGIN
 from enigma import gRGB
 from skin import dom_screens, colorNames, reloadWindowstyles, fonts
 import xml.etree.cElementTree
-
-button_screens = (
-	"ScreenTemplateButtonRed",
-	"ScreenTemplateButtonGreen",
-	"ScreenTemplateButtonYellow",
-	"ScreenTemplateButtonBlue",
-	"ScreenTemplateButtonColourBacks"
-)
 
 colour_elements = (
 	("BannerBorder", "Black", None),
@@ -289,14 +281,32 @@ font_elements = (
 	("TextFont", "NemesisFlatline", text_font_choices)
 )
 
+button_choices = [
+	("Bar", "Bar"),
+	("Block", "Block"),
+	("Button", "Button"),
+	("Legacy", "Legacy"),
+	("Wizard", "Wizard")
+]
+
+option_elements = (
+	("AlwaysActive", False, ConfigYesNo, None),
+	("ButtonStyle", "Block", ConfigSelection, button_choices),
+	("EnhancedMenu", False, ConfigEnableDisable, None),
+	("RecordBlink", True, ConfigYesNo, None),
+	("UpdateBlink", True, ConfigYesNo, None)
+)
+
+button_screens = (
+	"ScreenTemplateButtonRed",
+	"ScreenTemplateButtonGreen",
+	"ScreenTemplateButtonYellow",
+	"ScreenTemplateButtonBlue",
+	"ScreenTemplateButtonColourBacks"
+)
+
 config.plugins.skin = ConfigSubsection()
 config.plugins.skin.OverlayHD = ConfigSubsection()
-config.plugins.skin.OverlayHD.always_active = ConfigYesNo(default=False)
-config.plugins.skin.OverlayHD.ButtonStyle = ConfigSelection(default="Block", choices=[("Bar", "Bar"), ("Block", "Block"), ("Button", "Button"), ("Legacy", "Legacy"), ("Wizard", "Wizard")])
-config.plugins.skin.OverlayHD.record_icon_blink = ConfigYesNo(default=True)
-config.plugins.skin.OverlayHD.show_debugscreens = ConfigEnableDisable(default=False)
-config.plugins.skin.OverlayHD.update_icon_blink = ConfigYesNo(default=True)
-config.plugins.skin.OverlayHD.use_enhanced_menu = ConfigEnableDisable(default=False)
 
 for (label, colour, transparency) in colour_elements:
 	if colour is None or transparency is None:
@@ -321,6 +331,13 @@ for (label, colour, transparency) in colour_elements:
 for (label, font, font_table) in font_elements:
 	setattr(config.plugins.skin.OverlayHD, label, ConfigSelection(default=font, choices=font_table))
 	# print "[OverlayHD] DEBUG (definition): Font '%s' = '%s' (%s)" % (label, font, font_table)
+
+for (label, default, config_type, option_table) in option_elements:
+	if option_table:
+		setattr(config.plugins.skin.OverlayHD, label, config_type(default=default, choices=option_table))
+	else:
+		setattr(config.plugins.skin.OverlayHD, label, config_type(default=default))
+	# print "[OverlayHD] DEBUG (definition): Option '%s' = '%s' (%s)" % (label, default, option_table)
 
 
 class OverlayHDSkinManager(Setup, HelpableScreen):
@@ -506,6 +523,10 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 				item = eval("config.plugins.skin.OverlayHD.%s" % label)
 				item.value = item.default
 				# print "[OverlayHD] DEBUG (default): '%s' = '%s'" % (label, item.default)
+			for (label, default, config_type, option_table) in option_elements:
+				item = eval("config.plugins.skin.OverlayHD.%s" % label)
+				item.value = item.default
+				# print "[OverlayHD] DEBUG (default): '%s' = '%s'" % (label, item.default)
 			self.applySettings()
 			self.process = True
 		else:
@@ -530,30 +551,22 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 def applySkinSettings():
 	if config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		print "[OverlayHD] Applying OverlayHD skin settings."
-		for screen in button_screens:
-			elements, path = dom_screens.get(screen, (None, None))
-			if elements:
-				# print "[OverlayHD] Screen = '%s'" % screen
-				element = elements.find("panel")
-				name = element.get("name", None)
-				if name:
-					element.set("name", "%s%s" % (screen, config.plugins.skin.OverlayHD.ButtonStyle.value))
 		for (label, colour, transparency) in colour_elements:
 			if transparency is None:
-				item = eval("config.plugins.skin.OverlayHD.%s" % label)
+				item = eval("config.plugins.skin.OverlayHD.%s" % label).value
 				piglabel = "%s%s%s" % (label[0:3], "PIG", label[3:])
 				if label in derived_foreground_elements:
-					colorNames[label] = colorNames[item.value]
-					colorNames[piglabel] = colorNames[item.value]
+					colorNames[label] = colorNames[item]
+					colorNames[piglabel] = colorNames[item]
 				elif label in derived_background_elements:
 					if config.plugins.skin.OverlayHD.EPGTransparency.value == "Background":
 						tran = long(config.plugins.skin.OverlayHD.ScreenBackgroundTransparency.value, 0x10)
 					else:
 						tran = long(config.plugins.skin.OverlayHD.EPGTransparency.value, 0x10)
-					colorNames[label] = gRGB(colorNames[item.value].argb() | tran)
-					colorNames[piglabel] = colorNames[item.value]
+					colorNames[label] = gRGB(colorNames[item].argb() | tran)
+					colorNames[piglabel] = colorNames[item]
 				else:
-					colorNames[label] = colorNames[item.value]
+					colorNames[label] = colorNames[item]
 			elif colour is not None:
 				col = eval("config.plugins.skin.OverlayHD.%sColour" % label).value
 				if col == "Background":
@@ -566,9 +579,17 @@ def applySkinSettings():
 				colorNames[label] = gRGB(colorNames[col].argb() | tran)
 		for (label, font, font_table) in font_elements:
 			data = list(fonts[label])
-			item = eval("config.plugins.skin.OverlayHD.%s" % label)
-			data[0] = item.value
+			data[0] = eval("config.plugins.skin.OverlayHD.%s" % label).value
 			fonts[label] = tuple(data)
+		for (label, default, config_type, options_table) in option_elements:
+			if label == "ButtonStyle":
+				for screen in button_screens:
+					elements, path = dom_screens.get(screen, (None, None))
+					if elements:
+						element = elements.find("panel")
+						name = element.get("name", None)
+						if name:
+							element.set("name", "%s%s" % (screen, config.plugins.skin.OverlayHD.ButtonStyle.value))
 		reloadWindowstyles()
 	else:
 		print "[OverlayHD] OverlayHD is not the active skin!"
@@ -593,8 +614,8 @@ def autostart(reason, **kwargs):
 
 def Plugins(**kwargs):
 	list = []
-	if config.plugins.skin.OverlayHD.always_active.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
+	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.27", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.28", icon="OverlayHD.png", fnc=main))
 	return list
