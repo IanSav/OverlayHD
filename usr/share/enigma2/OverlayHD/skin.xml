@@ -8,7 +8,7 @@
 	</output>
 
 	<colors>
-		<color name="Arsenic" value="#003B444B" />
+		<color name="Arsenic" value="#003b444b" />
 		<color name="Black" value="#00000000" />
 		<color name="Blue" value="#000000ff" />
 		<color name="Coral" value="#00ff7f50" />
@@ -25,43 +25,45 @@
 		<color name="DodgerBlue" value="#001e90ff" />
 		<color name="DullBlue" value="#0000056f" />
 		<color name="DullGreen" value="#00389416" />
-		<color name="DullRed" value="#00ff4040" />
+		<color name="DullRed" value="#00c01010" />
 		<color name="DullYellow" value="#00bab329" />
-		<color name="EerieBlack" value="#001B1B1B" />
-		<color name="EgyptianBlue" value="#001034A6" />
+		<color name="EerieBlack" value="#001b1b1b" />
+		<color name="EgyptianBlue" value="#001034a6" />
 		<color name="Gainsboro" value="#00dcdcdc" />
 		<color name="Gold" value="#00f0b400" />
 		<color name="Green" value="#0000ff00" />
 		<color name="Grey" value="#00a0a0a0" />
-		<color name="GreyBlue" value="#004D5375" />
+		<color name="GreyBlue" value="#004d5375" />
 		<color name="Gunmetal" value="#002a3439" />
 		<color name="Indigo" value="#004b0082" />
 		<color name="Jet" value="#00343434" />
-		<color name="Licorice" value="#001A1110" />
+		<color name="Licorice" value="#001a1110" />
 		<color name="LightBlue" value="#0053a9ff" />
 		<color name="LightGrey" value="#00d3d3d3" />
 		<color name="LightRed" value="#00ff2525" />
 		<color name="LightSlateBlue" value="#006565ff" />
 		<color name="Magenta" value="#00ff00ff" />
 		<color name="Maroon" value="#00800000" />
-		<color name="MediumBlue" value="#000000CD" />
+		<color name="MediumBlue" value="#000000cd" />
+		<color name="MidBlack" value="#00171717" />
 		<color name="MidnightBlue" value="#00191970" />
 		<color name="Mustard" value="#00d8c653" />
 		<color name="Navy" value="#00000080" />
+		<color name="OffBlack" value="#000f0f0f" />
 		<color name="Onyx" value="#00353839" />
 		<color name="Orange" value="#00ffa500" />
 		<color name="OrangeRed" value="#00ff4500" />
-		<color name="OuterSpace" value="#00414A4C" />
+		<color name="OuterSpace" value="#00414a4c" />
 		<color name="OxfordBlue" value="#00002147" />
 		<color name="Pink" value="#00ffc0cb" />
 		<color name="PowderBlue" value="#0079bfff" />
 		<color name="Purple" value="#00800080" />
-		<color name="Raven" value="#00141A16" />
+		<color name="Raven" value="#00141a16" />
 		<color name="Red" value="#00ff0000" />
-		<color name="RoyalBlue" value="#004169E1" />
+		<color name="RoyalBlue" value="#004169e1" />
 		<color name="SaddleBrown" value="#008b4513" />
 		<color name="Silver" value="#00c0c0c0" />
-		<color name="SmokyBlack" value="#00100C08" />
+		<color name="SmokyBlack" value="#00100c08" />
 		<color name="Tan" value="#00d2b48c" />
 		<color name="Teal" value="#00008080" />
 		<color name="WarmYellow" value="#00fff000" />
@@ -115,32 +117,32 @@
 		<color name="EPGTimeLine" value="Yellow" />
 		<color name="EPGTimes" value="Grey" />
 		<color name="EPGTimesSelected" value="Silver" />
-		<color name="EPGEntryBackgroundColor" value="DarkerBlue" />
-		<color name="EPGEntryBackgroundColorSelected" value="Yellow" />
+		<color name="EPGEntryBackgroundColor" value="MidBlack" />
+		<color name="EPGEntryBackgroundColorSelected" value="Grey" />
 		<color name="EPGEntryForegroundColor" value="White" />
 		<color name="EPGEntryForegroundColorSelected" value="Black" />
 		<color name="EPGRecordBackgroundColor" value="DullRed" />
 		<color name="EPGRecordBackgroundColorSelected" value="Red" />
 		<color name="EPGRecordForegroundColor" value="White" />
 		<color name="EPGRecordForegroundColorSelected" value="Black" />
-		<color name="EPGServiceBackgroundColor" value="DeepBlue" />
-		<color name="EPGServiceBackgroundColorNow" value="Blue" />
+		<color name="EPGServiceBackgroundColor" value="OffBlack" />
+		<color name="EPGServiceBackgroundColorNow" value="DavysGrey" />
 		<color name="EPGServiceForegroundColor" value="White" />
 		<color name="EPGServiceForegroundColorNow" value="White" />
 		<color name="EPGZapBackgroundColor" value="DullGreen" />
 		<color name="EPGZapBackgroundColorSelected" value="Green" />
 		<color name="EPGZapForegroundColor" value="White" />
 		<color name="EPGZapForegroundColorSelected" value="Black" />
-		<color name="EPGPIGEntryBackgroundColor" value="DarkerBlue" />
-		<color name="EPGPIGEntryBackgroundColorSelected" value="Yellow" />
+		<color name="EPGPIGEntryBackgroundColor" value="MidBlack" />
+		<color name="EPGPIGEntryBackgroundColorSelected" value="Grey" />
 		<color name="EPGPIGEntryForegroundColor" value="White" />
 		<color name="EPGPIGEntryForegroundColorSelected" value="Black" />
 		<color name="EPGPIGRecordBackgroundColor" value="DullRed" />
 		<color name="EPGPIGRecordBackgroundColorSelected" value="Red" />
 		<color name="EPGPIGRecordForegroundColor" value="White" />
 		<color name="EPGPIGRecordForegroundColorSelected" value="Black" />
-		<color name="EPGPIGServiceBackgroundColor" value="DeepBlue" />
-		<color name="EPGPIGServiceBackgroundColorNow" value="Blue" />
+		<color name="EPGPIGServiceBackgroundColor" value="OffBlack" />
+		<color name="EPGPIGServiceBackgroundColorNow" value="DavysGrey" />
 		<color name="EPGPIGServiceForegroundColor" value="White" />
 		<color name="EPGPIGServiceForegroundColorNow" value="White" />
 		<color name="EPGPIGZapBackgroundColor" value="DullGreen" />
