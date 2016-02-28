@@ -1,7 +1,7 @@
 #====================================================
 # OverlayHD Skin Manager
-# Version Date - 25-Feb-2016
-# Version Number - 1.30
+# Version Date - 26-Feb-2016
+# Version Number - 1.31
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
@@ -19,7 +19,7 @@ from Screens.Setup import Setup
 from Screens.Standby import TryQuitMainloop
 from Screens.VirtualKeyBoard import VirtualKeyBoard
 from Tools.Directories import resolveFilename, SCOPE_CURRENT_SKIN, SCOPE_CURRENT_PLUGIN
-from enigma import gRGB
+from enigma import eEnv, gRGB
 from os import listdir, symlink, unlink
 from os.path import islink
 from skin import dom_screens, colorNames, reloadWindowstyles, fonts
@@ -286,6 +286,10 @@ font_elements = (
 	("TextFont", "NemesisFlatline", text_font_choices)
 )
 
+background_image_choices = [
+	(None, "Default")
+]
+
 button_choices = [
 	("Bar", "Bar"),
 	("Block", "Block"),
@@ -300,6 +304,7 @@ spinner_choices = [
 
 option_elements = (
 	("AlwaysActive", False, ConfigYesNo, None),
+	("BackgroundImage", "Default.mvi", ConfigSelection, background_image_choices),
 	("ButtonStyle", "Block", ConfigSelection, button_choices),
 	("EnhancedMenu", False, ConfigEnableDisable, None),
 	("RecordBlink", True, ConfigYesNo, None),
@@ -342,6 +347,8 @@ for (label, font, font_table) in font_elements:
 	setattr(config.plugins.skin.OverlayHD, label, ConfigSelection(default=font, choices=font_table))
 	# print "[OverlayHD] DEBUG (definition): Font '%s' = '%s' (%s)" % (label, font, font_table)
 
+for fname in sorted(listdir(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/backgrounds"))):
+	background_image_choices.append((fname, fname[0:-4]))
 for fname in sorted(listdir(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/spinners"))):
 	spinner_choices.append((fname, fname))
 
@@ -761,7 +768,23 @@ def applySkinSettings():
 			data[0] = eval("config.plugins.skin.OverlayHD.%s" % label).value
 			fonts[label] = tuple(data)
 		for (label, default, config_type, options_table) in option_elements:
-			if label == "ButtonStyle":
+			if label == "BackgroundImage":
+				dst = eEnv.resolve("${datadir}/backdrop.mvi")
+				try:
+					unlink(dst)
+				except:
+					pass
+				src = eval("config.plugins.skin.OverlayHD.%s" % label).value
+				try:
+					if src is None:
+						src = eEnv.resolve("${datadir}/bootlogo.mvi")
+						shutil.copy(src, dst)
+					else:
+						shutil.copy(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/backgrounds/%s" % src), dst)
+				except (IOError, OSError), (err, errmsg):
+					errtext = "Error %d: %s - '%s'" % (err, errmsg, dst)
+					print "[OverlayHD] Error copying boot logo image! (%s)" % errtext
+			elif label == "ButtonStyle":
 				for screen in button_screens:
 					elements, path = dom_screens.get(screen, (None, None))
 					if elements:
@@ -807,5 +830,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.30", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.31", icon="OverlayHD.png", fnc=main))
 	return list
