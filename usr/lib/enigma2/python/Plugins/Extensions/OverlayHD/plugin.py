@@ -1,7 +1,7 @@
 #====================================================
 # OverlayHD Skin Manager
-# Version Date - 28-Feb-2016
-# Version Number - 1.34
+# Version Date - 4-Mar-2016
+# Version Number - 1.36
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
@@ -291,7 +291,7 @@ font_elements = (
 )
 
 background_image_choices = [
-	(None, "Default")
+	("", "Default")
 ]
 
 button_choices = [
@@ -303,16 +303,16 @@ button_choices = [
 ]
 
 spinner_choices = [
-	(None, "Default")
+	("", "Default")
 ]
 
 option_elements = (
 	("AlwaysActive", False, ConfigYesNo, None),
-	("BackgroundImage", "Default.mvi", ConfigSelection, background_image_choices),
+	("BackgroundImage", "", ConfigSelection, background_image_choices),
 	("ButtonStyle", "Block", ConfigSelection, button_choices),
 	("EnhancedMenu", False, ConfigEnableDisable, None),
 	("RecordBlink", True, ConfigYesNo, None),
-	("Spinner", "Balls", ConfigSelection, spinner_choices),
+	("Spinner", "", ConfigSelection, spinner_choices),
 	("UpdateBlink", True, ConfigYesNo, None)
 )
 
@@ -405,6 +405,24 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 		self.onExecBegin.append(self.myExecBegin)
 		self.onExecEnd.append(self.myExecEnd)
 
+	def myExecBegin(self):
+		new_choices = [("", "Default")]
+		for fname in sorted(listdir(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/backgrounds"))):
+			new_choices.append((fname, fname[0:-4]))
+		config.plugins.skin.OverlayHD.BackgroundImage.setChoices(default=config.plugins.skin.OverlayHD.BackgroundImage.default, choices=new_choices)
+		new_choices = [("", "Default")]
+		for fname in sorted(listdir(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/spinners"))):
+			new_choices.append((fname, fname))
+		config.plugins.skin.OverlayHD.Spinner.setChoices(default=config.plugins.skin.OverlayHD.Spinner.default, choices=new_choices)
+		for x in self["config"].list:
+			x[1].addNotifier(self.changeSettings)
+		self.process = True
+
+	def myExecEnd(self):
+		self.process = False
+		for x in self["config"].list:
+			x[1].removeNotifier(self.changeSettings)
+
 	def changeSettings(self, configElement):
 		if self.process:
 			# for (label, colour, transparency) in colour_elements:
@@ -417,16 +435,6 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 			# 		if transparency is not None and configElement == eval("config.plugins.skin.OverlayHD.%sTransparency" % label):
 			# 			print "[OverlayHD] DEBUG (changeSettings): '%sTransparency' = '%s'" % (label, configElement.value)
 			self.applySettings()
-
-	def myExecBegin(self):
-		for x in self["config"].list:
-			x[1].addNotifier(self.changeSettings)
-		self.process = True
-
-	def myExecEnd(self):
-		self.process = False
-		for x in self["config"].list:
-			x[1].removeNotifier(self.changeSettings)
 
 	def cancel(self):
 		self.process = False
@@ -773,14 +781,14 @@ def applySkinSettings():
 			fonts[label] = tuple(data)
 		for (label, default, config_type, options_table) in option_elements:
 			if label == "BackgroundImage":
-				dst = eEnv.resolve("${datadir}/backdrop.mvi")
+				dst = eEnv.resolve("${datadir}") + "/backdrop.mvi"
 				try:
 					unlink(dst)
 				except:
 					pass
 				src = eval("config.plugins.skin.OverlayHD.%s" % label).value
 				try:
-					if src is None:
+					if src == "":
 						src = eEnv.resolve("${datadir}/bootlogo.mvi")
 						shutil.copy(src, dst)
 					else:
@@ -815,7 +823,7 @@ def applySkinSettings():
 				if islink(linkname):
 					unlink(linkname)
 				item = eval("config.plugins.skin.OverlayHD.%s" % label).value
-				if item is not None:
+				if item != "":
 					try:
 						symlink(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/spinners/%s" % item), linkname)
 					except (IOError, OSError), (err, errmsg):
@@ -862,5 +870,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.34", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.36", icon="OverlayHD.png", fnc=main))
 	return list
