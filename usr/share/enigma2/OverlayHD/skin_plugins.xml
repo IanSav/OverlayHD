@@ -231,12 +231,12 @@
 	<screen name="IMDB" title="IMDb Details Plugin" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
-		<!-- <panel name="ScreenTemplateButtonInfo" /> -->
+		<panel name="ScreenTemplateButtonInfo" />
 		<panel name="ScreenTemplateButtonColours" />
-		<widget name="titellabel" position="200,120" size="950,30" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="titellabel" position="200,80" size="950,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
 		<widget name="menu" position="50,180" size="1180,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" zPosition="3" />
 		<widget name="poster" position="50,80" size="110,180" alphatest="blend" />
-		<widget name="detailslabel" position="200,80" size="950,180" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" />
+		<widget name="detailslabel" position="200,120" size="950,180" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" />
 		<widget name="castlabel" position="50,280" size="1180,350" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" />
 		<widget name="extralabel" position="50,80" size="1180,550" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" />
 		<widget name="starsbg" pixmap="images/starsbar_empty.png" position="1020,80" size="210,21" alphatest="blend" transparent="1" />
