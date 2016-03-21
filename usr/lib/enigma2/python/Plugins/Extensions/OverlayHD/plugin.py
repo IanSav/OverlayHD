@@ -1,14 +1,14 @@
 #====================================================
 # OverlayHD Skin Manager
-# Version Date - 4-Mar-2016
-# Version Number - 1.36
+# Version Date - 11-Mar-2016
+# Version Number - 1.37
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
 #====================================================
 
 from Components.ActionMap import HelpableActionMap
-from Components.Button import Button
+from Components.Label import Label
 from Components.Sources.List import List
 from Components.config import config, ConfigSubsection, ConfigYesNo, ConfigEnableDisable, ConfigSelection
 from Plugins.Plugin import PluginDescriptor
@@ -388,10 +388,10 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 		self.setup_title = _("OverlayHD Skin Manager")
 		self.process = False
 
-		self["key_red"] = Button(_("Cancel"))
-		self["key_green"] = Button(_("OK"))
-		self["key_yellow"] = Button(_("Themes"))  # "Save Theme" - Only enable if changed.
-		self["key_blue"] = Button(_("Default"))
+		self["key_red"] = Label(_("Cancel"))
+		self["key_green"] = Label(_("OK"))
+		self["key_yellow"] = Label(_("Themes"))  # "Save Theme" - Only enable if changed.
+		self["key_blue"] = Label(_("Default"))
 
 		self["actions"] = HelpableActionMap(self, ["OkCancelActions", "ColorActions"], {
 			"ok": (self.save, _("Save and apply any changes")),
@@ -541,10 +541,10 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 		self.setup_title = _("OverlayHD Theme Manager")
 		Screen.setTitle(self, self.setup_title)
 
-		self["key_red"] = Button(_("Cancel"))
-		self["key_green"] = Button(_("Apply"))
-		self["key_yellow"] = Button(_("Delete"))
-		self["key_blue"] = Button(_("Save"))
+		self["key_red"] = Label(_("Cancel"))
+		self["key_green"] = Label(_("Apply"))
+		self["key_yellow"] = Label(_("Delete"))
+		self["key_blue"] = Label(_("Save"))
 
 		self["actions"] = HelpableActionMap(self, ["OkCancelActions", "ColorActions", "VirtualKeyboardActions"], {
 			"ok": (self.applyTheme, _("Apply theme, return to Skin Manager")),
@@ -870,5 +870,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.36", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.37", icon="OverlayHD.png", fnc=main))
 	return list
