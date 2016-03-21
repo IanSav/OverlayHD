@@ -2,6 +2,7 @@
 <setupxml>
 	<setup key="OverlayHDSkinManager" title="OverlayHD Skin Manager" separation="0" menuimage="menus/mainmenu_tasks_setup_default.png">
 		<item level="2" text="OverlayHD plugin always active" description="Setting this to Yes causes the OverlayHD Skin Manager plugin to always be active / available even if the skin is not currently selected.  This allows skin settings to be changed any time even though they are only used when the skin is active.  Setting this to No makes the plugin active only when the skin is active.">config.plugins.skin.OverlayHD.AlwaysActive</item>
+		<item level="1" text="Sort OverlayHD themes by name" description="Setting this to Yes causes the themes in the OverlayHD Theme Manager list to be sorted by the theme name.">config.plugins.skin.OverlayHD.SortThemes</item>
 		<item level="0" text="Background image" description="Choose a background image to be used while the system starts / boots.">config.plugins.skin.OverlayHD.BackgroundImage</item>
 		<item level="0" text="Spinner style" description="Choose a spinner animation for the system busy spinner.">config.plugins.skin.OverlayHD.Spinner</item>
 		<item level="0" text="Clock style" description="Choose a clock style for the banner and pop-up clocks.  (The Analogue clock style sets the banner clock style to 12 Hour mode.)">config.plugins.skin.OverlayHD.ClockStyle</item>

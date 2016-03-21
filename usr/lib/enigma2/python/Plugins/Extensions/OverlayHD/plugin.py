@@ -1,7 +1,7 @@
 #====================================================
 # OverlayHD Skin Manager
-# Version Date - 14-Mar-2016
-# Version Number - 1.39
+# Version Date - 20-Mar-2016
+# Version Number - 1.40
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
@@ -12,6 +12,7 @@ from Components.Label import Label
 from Components.Sources.List import List
 from Components.config import config, ConfigSubsection, ConfigYesNo, ConfigEnableDisable, ConfigSelection
 from Plugins.Plugin import PluginDescriptor
+from Screens.ChoiceBox import ChoiceBox
 from Screens.HelpMenu import HelpableScreen
 from Screens.MessageBox import MessageBox
 from Screens.Screen import Screen
@@ -319,6 +320,7 @@ option_elements = (
 	("ClockStyle", "24Hour", ConfigSelection, clock_choices),
 	("EnhancedMenu", False, ConfigEnableDisable, None),
 	("RecordBlink", True, ConfigYesNo, None),
+	("SortThemes", False, ConfigYesNo, None),
 	("Spinner", "", ConfigSelection, spinner_choices),
 	("UpdateBlink", True, ConfigYesNo, None)
 )
@@ -462,9 +464,9 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 				x[1].save()
 			config.plugins.skin.OverlayHD.save()
 			self.applySettings()
-			restartbox = self.session.openWithCallback(self.restartGUI, MessageBox, _("The GUI needs to be restarted to apply the changes.\n\n"
+			popup = self.session.openWithCallback(self.restartGUI, MessageBox, _("The GUI needs to be restarted to apply the changes.\n\n"
 				"Do you want to restart the GUI now?"), MessageBox.TYPE_YESNO)
-			restartbox.setTitle(self.setup_title)
+			popup.setTitle(self.setup_title)
 		else:
 			self.close()
 
@@ -527,8 +529,8 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 	skin = """
 	<screen name="OverlayHDThemeManager" title="OverlayHD Theme Manager" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonColours" />
-		<panel name="ScreenTemplateButtonText" />
 		<panel name="ScreenTemplateButtonHelp" />
 		<ePixmap pixmap="menus/setup_default.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<widget source="themes" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
@@ -555,39 +557,44 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 
 		self["key_red"] = Label(_("Cancel"))
 		self["key_green"] = Label(_("Apply"))
-		self["key_yellow"] = Label(_("Delete"))
-		self["key_blue"] = Label(_("Save"))
+		self["key_yellow"] = Label(_("Save"))
+		self["key_blue"] = Label(_("Create"))
 
-		self["actions"] = HelpableActionMap(self, ["OkCancelActions", "ColorActions", "VirtualKeyboardActions"], {
+		self["actions"] = HelpableActionMap(self, ["OkCancelActions", "ColorActions", "MenuActions"], {
 			"ok": (self.applyTheme, _("Apply the currently highlighted theme, return to Skin Manager")),
 			"cancel": (self.cancelTheme, _("Cancel theme selection, return to Skin Manager")),
+			"menu": (self.themeMenu, _("Menu of actions applicable to the currently highlighted theme")),
 			"red": (self.cancelTheme, _("Cancel theme selection, return to Skin Manager")),
 			"green": (self.applyTheme, _("Apply the currently highlighted theme, return to Skin Manager")),
-			"yellow": (self.deleteTheme, _("Delete theme")),
-			"yellowlong": (self.exportTheme, _("Export theme")),
-			"blue": (self.saveTheme, _("Save current skin settings as a theme")),
-			"bluelong": (self.importTheme, _("Import theme")),
-			"showVirtualKeyboard": (self.renameTheme, _("Rename theme"))
+			"yellow": (self.saveTheme, _("Save current skin settings as the currently highlighted theme")),
+			"blue": (self.newTheme, _("Create a new theme using the current skin settings"))
 		}, description=_("Theme Functions"))
 
 		self["themes"] = List()
 		self.filename = resolveFilename(SCOPE_CURRENT_PLUGIN, "Extensions/OverlayHD/themes.xml")
+		self.dom_themes = None
 		try:
 			chan = open(self.filename, "r")
 			self.dom_themes = xml.etree.cElementTree.parse(chan)
 			chan.close()
-			self["themes"].updateList(self.buildMenu())
+			self["themes"].updateList(self.listThemes())
 		except (IOError, OSError), (err, errmsg):
 			if err == errno.ENOENT:
-				self.dom_themes = xml.etree.cElementTree.ElementTree(self.createTheme("Default"))
+				self.dom_themes = xml.etree.cElementTree.ElementTree(xml.etree.cElementTree.Element("themes"))
+				self.updateTheme("Default", mode="default")
+				self.updateTheme("Current", mode="value")
 				self.saveThemes()
-				print "[OverlayHD] Theme 'Default' created."
+				print "[OverlayHD] Themes 'Default' and 'Current' created."
 			else:
-				self.dom_themes = None
-				errtext = "Error %d: %s - '%s'" % (err, errmsg, self.filename)
-				print "[OverlayHD] Error opening themes file! (%s)" % errtext
-				# themebox = self.session.open(MessageBox, _("Unable to open/access themes!\n\n%s") % errtext, MessageBox.TYPE_ERROR, 10)
-				# themebox.setTitle(self.setup_title)
+				self.errtext = "Error %d: %s - '%s'" % (err, errmsg, self.filename)
+				print "[OverlayHD] Error opening themes file! (%s)" % self.errtext
+		self.onShown.append(self.screenShown)
+
+	def screenShown(self):
+		if self.dom_themes == None:
+			popup = self.session.open(MessageBox, _("Unable to open/access themes file!\n\n%s") % self.errtext, MessageBox.TYPE_ERROR, 10)
+			popup.setTitle(self.setup_title)
+			self.close()
 
 	def findTheme(self, name):
 		if self.dom_themes:
@@ -598,37 +605,30 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 					return theme
 		return None
 
-	def createTheme(self, name):
-		if name == "Default":
-			root = xml.etree.cElementTree.Element("themes")
-			mode = "default"
+	def updateTheme(self, name=None, mode="value"):
+		if name is None:
+			name = self["themes"].getCurrent()[0]
+		theme = self.findTheme(name)
+		if theme is None:
+			theme = xml.etree.cElementTree.SubElement(self.dom_themes.getroot(), "theme", {"name": name})
 		else:
-			root = self.dom_themes.getroot()
-			mode = "value"
-		root.text = "\n\t"
-		root.tail = "\n"
-		theme = xml.etree.cElementTree.SubElement(root, "theme", {"name": name})
-		theme.text = "\n\t\t"
-		theme.tail = "\n"
+			theme.clear()
+			theme.set("name", name)
 		for (label, colour, transparency) in colour_elements:
 			if colour is None or transparency is None:
 				item = eval("config.plugins.skin.OverlayHD.%s.%s" % (label, mode))
 				element = xml.etree.cElementTree.SubElement(theme, "colour", {"name": label, "value": item})
-				element.tail = "\n\t\t"
 				# print "[OverlayHD] DEBUG: '%s' = '%s'" % (label, item)
 			else:
 				item = eval("config.plugins.skin.OverlayHD.%sColour.%s" % (label, mode))
 				element = xml.etree.cElementTree.SubElement(theme, "colour", {"name": "%sColour" % label, "value": item})
-				element.tail = "\n\t\t"
 				# print "[OverlayHD] DEBUG: '%sColour' = '%s'" % (label, item)
 				item = eval("config.plugins.skin.OverlayHD.%sTransparency.%s" % (label, mode))
 				element = xml.etree.cElementTree.SubElement(theme, "colour", {"name": "%sTransparency" % label, "value": item})
-				element.tail = "\n\t\t"
 				# print "[OverlayHD] DEBUG: '%sTransparency' = '%s'" % (label, item)
 		for (label, font, font_table) in font_elements:
 			item = eval("config.plugins.skin.OverlayHD.%s.%s" % (label, mode))
 			element = xml.etree.cElementTree.SubElement(theme, "font", {"name": label, "value": item})
-			element.tail = "\n\t\t"
 			# print "[OverlayHD] DEBUG: '%s' = '%s'" % (label, item)
 		for (label, default, config_type, option_table) in option_elements:
 			item = str(eval("config.plugins.skin.OverlayHD.%s.%s" % (label, mode)))
@@ -636,33 +636,89 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 				element = xml.etree.cElementTree.SubElement(theme, "option", {"name": label, "type": "boolean", "value": item})
 			else:
 				element = xml.etree.cElementTree.SubElement(theme, "option", {"name": label, "value": item})
-			element.tail = "\n\t\t"
 			# print "[OverlayHD] DEBUG: '%s' = '%s'" % (label, item)
-		element.tail = "\n\t"
-		return root
 
-	def saveThemes(self):
-		self["themes"].updateList(self.buildMenu())
-		self.dom_themes.write(self.filename)
-
-	def buildMenu(self):
-		menu = []
+	def listThemes(self):
+		list = []
 		if self.dom_themes:
 			themes = self.dom_themes.findall("theme")
 			# print "[OverlayHD] Theme count = %d" % len(themes)
 			for theme in themes:
 				name = theme.get("name", None)
-				menu.append((name, name))
+				list.append((name, name))
 				# print "[OverlayHD] Theme = '%s'" % name
-		return menu
+		if config.plugins.skin.OverlayHD.SortThemes.value:
+			list.sort(key=lambda item: item[0])
+		return list
+
+	def saveThemes(self):
+		self["themes"].updateList(self.listThemes())
+		self.xmlIndent(self.dom_themes.getroot())
+		self.dom_themes.write(self.filename)
+
+	def xmlIndent(self, element, level=0):
+		indent = "\n" + level*"\t"
+		if len(element):
+			if not element.text or not element.text.strip():
+				element.text = indent + "\t"
+			if not element.tail or not element.tail.strip():
+				element.tail = indent
+			for element in element:
+				self.xmlIndent(element, level+1)
+			if not element.tail or not element.tail.strip():
+				element.tail = indent
+		else:
+			if level and (not element.tail or not element.tail.strip()):
+				element.tail = indent
+
+	def checkThemeName(self, name):
+		validflag = True
+		if name is None:
+			validflag = False
+		if name == "":
+			validflag = False
+			popup = self.session.open(MessageBox, _("Theme name can not be blank!"), MessageBox.TYPE_ERROR, 5)
+			popup.setTitle(self.setup_title)
+		if self.findTheme(name):
+			validflag = False
+			popup = self.session.open(MessageBox, _("Theme name '%s' already exists!") % name, MessageBox.TYPE_ERROR, 5)
+			popup.setTitle(self.setup_title)
+		return validflag
+
+	def themeMenu(self):
+		theme_actions = [
+			(_("Save theme"), self.saveTheme),
+			(_("Rename theme"), self.renameTheme),
+			(_("Delete theme"), self.deleteTheme),
+			(_("Export theme"), self.exportTheme),
+			(_("Import theme"), self.importTheme),
+			(_("Create new theme"), self.newTheme)
+		]
+		name = self["themes"].getCurrent()[0]
+		menu = []
+		for action in theme_actions:
+			menu.append(action)
+		self.session.openWithCallback(self.themeMenuAction, ChoiceBox, title=_("OverlayHD Theme: '%s'") % name, list=menu, skin_name="OverlayHDThemeMenu")
+
+	def themeMenuAction(self, choice):
+		if choice is None:
+			return
+		# print "[OverlayHD] Theme menu choice =", choice
+		choice[1](self["themes"].getCurrent()[0])
 
 	def cancelTheme(self):
 		self.close()
 
-	def applyTheme(self):
-		name = self["themes"].getCurrent()[0]
+	def applyTheme(self, name=None):
+		if name is None:
+			try:
+				name = self["themes"].getCurrent()[0]
+			except:
+				popup = self.session.open(MessageBox, _("There are no themes to apply!"), MessageBox.TYPE_ERROR, 5)
+				popup.setTitle(self.setup_title)
+				return
 		theme = self.findTheme(name)
-		if theme:
+		if theme is not None:
 			print "[OverlayHD] Loading theme '%s'." % name
 			colours = theme.findall("colour")
 			for colour in colours:
@@ -705,58 +761,73 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 			self.instance.invalidate()  # Remove this when the underlying bug is fixed!
 		self.close()
 
-	def deleteTheme(self):
-		name = self["themes"].getCurrent()[0]
+	def newTheme(self, name=None):
+		popup = self.session.openWithCallback(self.newThemeAction, VirtualKeyBoard, title=_("Enter a name for this new theme:"), text="")
+		popup.setTitle(self.setup_title)
+
+	def newThemeAction(self, name):
+		if self.checkThemeName(name):
+			print "[OverlayHD] Creating theme '%s'." % name
+			self.updateTheme(name)
+			self.saveThemes()
+			# popup = self.session.open(MessageBox, _("Theme '%s' created.") % name, MessageBox.TYPE_INFO, 3)
+			# popup.setTitle(self.setup_title)
+
+	def saveTheme(self, name=None):
+		if name is None:
+			try:
+				name = self["themes"].getCurrent()[0]
+			except:
+				self.newTheme()
+				return
+		print "[OverlayHD] Saving theme '%s'." % name
+		self.updateTheme(name)
+		self.saveThemes()
+		popup = self.session.open(MessageBox, _("Theme '%s' saved.") % name, MessageBox.TYPE_INFO, 3)
+		popup.setTitle(self.setup_title)
+
+	def renameTheme(self, name):
+		popup = self.session.openWithCallback(self.renameThemeAction, VirtualKeyBoard, title=_("Enter new name for the '%s' theme:") % name, text=name)
+		popup.setTitle(self.setup_title)
+
+	def renameThemeAction(self, name):
+		if self.checkThemeName(name):
+			oldname = self["themes"].getCurrent()[0]
+			theme = self.findTheme(oldname)
+			if theme is not None:
+				print "[OverlayHD] Renaming theme '%s' to '%s'." % (oldname, name)
+				theme.set("name", name)
+				self.saveThemes()
+				# popup = self.session.open(MessageBox, _("Theme '%s' renamed to '%s'.") % (oldname, name), MessageBox.TYPE_INFO, 3)
+				# popup.setTitle(self.setup_title)
+
+	def deleteTheme(self, name):
 		popup = self.session.openWithCallback(self.deleteThemeAction, MessageBox, _("Do you really want to delete the '%s' theme?") % name, MessageBox.TYPE_YESNO)
 		popup.setTitle(self.setup_title)
 
 	def deleteThemeAction(self, answer):
-		if answer is True:
+		if answer:
 			name = self["themes"].getCurrent()[0]
 			theme = self.findTheme(name)
-			if theme:
-				print "[OverlayHD] Deleting theme '%s'" % name
+			if theme is not None:
+				print "[OverlayHD] Deleting theme '%s'." % name
 				self.dom_themes.getroot().remove(theme)
-			self.saveThemes()
-
-	def saveTheme(self):
-		popup = self.session.openWithCallback(self.saveThemeAction, VirtualKeyBoard, title=_("Enter a name for this theme:"), text="")
-		popup.setTitle(self.setup_title)
-
-	def saveThemeAction(self, name):
-		if name:
-			if self.findTheme(name):
-				themebox = self.session.open(MessageBox, _("Theme name already exists!"), MessageBox.TYPE_ERROR, 5)
-				themebox.setTitle(self.setup_title)
-			else:
-				print "[OverlayHD] Saving theme as '%s'." % name
-				self.createTheme(name)
 				self.saveThemes()
-		else:
-			themebox = self.session.open(MessageBox, _("Theme name can not be blank!"), MessageBox.TYPE_ERROR, 5)
-			themebox.setTitle(self.setup_title)
+				# popup = self.session.open(MessageBox, _("Theme '%s' deleted.") % name, MessageBox.TYPE_INFO, 3)
+				# popup.setTitle(self.setup_title)
 
-	def renameTheme(self):
-		name = self["themes"].getCurrent()[0]
-		popup = self.session.openWithCallback(self.renameThemeAction, VirtualKeyBoard, title=_("Enter the new name for this theme:"), text=name)
-		popup.setTitle(self.setup_title)
-
-	def renameThemeAction(self, name):
-		oldname = self["themes"].getCurrent()[0]
-		print "[OverlayHD] Renaming theme '%s' to '%s'." % (oldname, name)
-		self.saveThemes()
-
-	def exportTheme(self):
+	def exportTheme(self, name):
 		print "[OverlayHD] Export theme."
-		themebox = self.session.open(MessageBox, _("Theme export not yet available!"), MessageBox.TYPE_ERROR, 5)
-		themebox.setTitle(self.setup_title)
+		popup = self.session.open(MessageBox, _("Theme export not yet available!"), MessageBox.TYPE_ERROR, 5)
+		popup.setTitle(self.setup_title)
 		# self.saveThemes()
 
-	def importTheme(self):
+	def importTheme(self, name):
 		print "[OverlayHD] Import theme."
-		themebox = self.session.open(MessageBox, _("Theme import not yet available!"), MessageBox.TYPE_ERROR, 5)
-		themebox.setTitle(self.setup_title)
+		popup = self.session.open(MessageBox, _("Theme import not yet available!"), MessageBox.TYPE_ERROR, 5)
+		popup.setTitle(self.setup_title)
 		# self.saveThemes()
+
 
 def applySkinSettings():
 	if config.skin.primary_skin.value == "OverlayHD/skin.xml":
@@ -873,7 +944,6 @@ def applySkinSettings():
 	else:
 		print "[OverlayHD] OverlayHD is not the active skin."
 
-
 def start_menu_main(menuid, **kwargs):
 	if menuid == "system":
 		return [(_("OverlayHD Skin Manager"), main, "OverlayHD", None)]
@@ -896,5 +966,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.39", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.40", icon="OverlayHD.png", fnc=main))
 	return list
