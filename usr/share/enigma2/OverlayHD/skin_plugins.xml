@@ -375,8 +375,8 @@
 
 	<screen name="OverlayHDThemeManager" title="OverlayHD Theme Manager" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonColours" />
-		<panel name="ScreenTemplateButtonText" />
 		<panel name="ScreenTemplateButtonHelp" />
 		<ePixmap pixmap="menus/mainmenu_tv_channel.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<widget source="themes" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
@@ -391,6 +391,14 @@
 				}
 			</convert>
 		</widget>
+	</screen>
+
+	<screen name="OverlayHDThemeMenu" title="OverlayHD Theme Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColourBacks" />
+		<ePixmap pixmap="menus/mainmenu_tv_channel.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateList0" />
+		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />
 	</screen>
 
 <!-- Simple Unmount Plugin -->
