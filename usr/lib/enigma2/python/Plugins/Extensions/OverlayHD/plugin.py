@@ -1,7 +1,7 @@
 #====================================================
 # OverlayHD Skin Manager
-# Version Date - 11-Mar-2016
-# Version Number - 1.37
+# Version Date - 12-Mar-2016
+# Version Number - 1.38
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
@@ -291,19 +291,19 @@ font_elements = (
 )
 
 background_image_choices = [
-	("", "Default")
+	("", _("Default"))
 ]
 
 button_choices = [
-	("Bar", "Bar"),
-	("Block", "Block"),
-	("Button", "Button"),
-	("Legacy", "Legacy"),
-	("Wizard", "Wizard")
+	("Bar", _("Bar")),
+	("Block", _("Block")),
+	("Button", _("Button")),
+	("Legacy", _("Legacy")),
+	("Wizard", _("Wizard"))
 ]
 
 spinner_choices = [
-	("", "Default")
+	("", _("Default"))
 ]
 
 option_elements = (
@@ -352,9 +352,9 @@ for (label, font, font_table) in font_elements:
 	# print "[OverlayHD] DEBUG (definition): Font '%s' = '%s' (%s)" % (label, font, font_table)
 
 for fname in sorted(listdir(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/backgrounds"))):
-	background_image_choices.append((fname, fname[0:-4]))
+	background_image_choices.append((fname, _(fname[0:-4])))
 for fname in sorted(listdir(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/spinners"))):
-	spinner_choices.append((fname, fname))
+	spinner_choices.append((fname, _(fname)))
 
 for (label, default, config_type, option_table) in option_elements:
 	if option_table:
@@ -390,29 +390,29 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 
 		self["key_red"] = Label(_("Cancel"))
 		self["key_green"] = Label(_("OK"))
-		self["key_yellow"] = Label(_("Themes"))  # "Save Theme" - Only enable if changed.
+		self["key_yellow"] = Label(_("Themes"))
 		self["key_blue"] = Label(_("Default"))
 
 		self["actions"] = HelpableActionMap(self, ["OkCancelActions", "ColorActions"], {
-			"ok": (self.save, _("Save and apply any changes")),
-			"cancel": (self.cancel, _("Cancel and discard any changes")),
-			"red" : (self.cancel, _("Cancel and discard any changes")),
-			"green": (self.save, _("Save and apply any changes")),
+			"ok": (self.save, _("Save and apply changes")),
+			"cancel": (self.cancel, _("Cancel and discard changes")),
+			"red" : (self.cancel, _("Cancel and discard changes")),
+			"green": (self.save, _("Save and apply changes")),
 			"yellow": (self.theme, _("Manage themes")),
-			"blue": (self.default, _("Apply and save the default skin"))
+			"blue": (self.default, _("Apply the default skin settings"))
 		}, description=_("Basic Functions"))
 
 		self.onExecBegin.append(self.myExecBegin)
 		self.onExecEnd.append(self.myExecEnd)
 
 	def myExecBegin(self):
-		new_choices = [("", "Default")]
+		new_choices = [("", _("Default"))]
 		for fname in sorted(listdir(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/backgrounds"))):
-			new_choices.append((fname, fname[0:-4]))
+			new_choices.append((fname, _(fname[0:-4])))
 		config.plugins.skin.OverlayHD.BackgroundImage.setChoices(default=config.plugins.skin.OverlayHD.BackgroundImage.default, choices=new_choices)
-		new_choices = [("", "Default")]
+		new_choices = [("", _("Default"))]
 		for fname in sorted(listdir(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/spinners"))):
-			new_choices.append((fname, fname))
+			new_choices.append((fname, _(fname)))
 		config.plugins.skin.OverlayHD.Spinner.setChoices(default=config.plugins.skin.OverlayHD.Spinner.default, choices=new_choices)
 		for x in self["config"].list:
 			x[1].addNotifier(self.changeSettings)
@@ -439,7 +439,7 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 	def cancel(self):
 		self.process = False
 		for x in self["config"].list:
-		    x[1].cancel()
+			x[1].cancel()
 		self.applySettings()
 		self.close()
 
@@ -457,7 +457,7 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 			self.close()
 
 	def restartGUI(self, answer):
-		if answer is True:
+		if answer:
 			self.session.open(TryQuitMainloop, retvalue=3)
 		self.close()
 
@@ -492,7 +492,7 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 			self.applySettings()
 			self.process = True
 		else:
-			print "[OverlayHD] OverlayHD is not the active skin!"
+			print "[OverlayHD] OverlayHD is not the active skin."
 
 	def changedSettings(self):
 		changed = 0
@@ -547,10 +547,10 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 		self["key_blue"] = Label(_("Save"))
 
 		self["actions"] = HelpableActionMap(self, ["OkCancelActions", "ColorActions", "VirtualKeyboardActions"], {
-			"ok": (self.applyTheme, _("Apply theme, return to Skin Manager")),
+			"ok": (self.applyTheme, _("Apply the currently highlighted theme, return to Skin Manager")),
 			"cancel": (self.cancelTheme, _("Cancel theme selection, return to Skin Manager")),
 			"red": (self.cancelTheme, _("Cancel theme selection, return to Skin Manager")),
-			"green": (self.applyTheme, _("Apply theme, return to Skin Manager")),
+			"green": (self.applyTheme, _("Apply the currently highlighted theme, return to Skin Manager")),
 			"yellow": (self.deleteTheme, _("Delete theme")),
 			"yellowlong": (self.exportTheme, _("Export theme")),
 			"blue": (self.saveTheme, _("Save current skin settings as a theme")),
@@ -569,7 +569,7 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 			if err == errno.ENOENT:
 				self.dom_themes = xml.etree.cElementTree.ElementTree(self.createTheme("Default"))
 				self.saveThemes()
-				print "[OverlayHD] Created 'Default' theme."
+				print "[OverlayHD] Theme 'Default' created."
 			else:
 				self.dom_themes = None
 				errtext = "Error %d: %s - '%s'" % (err, errmsg, self.filename)
@@ -608,7 +608,7 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 				item = eval("config.plugins.skin.OverlayHD.%sColour.%s" % (label, mode))
 				element = xml.etree.cElementTree.SubElement(theme, "colour", {"name": "%sColour" % label, "value": item})
 				element.tail = "\n\t\t"
-				# print "[OverlayHD] DEBUG: '%sColour' = '%s " % (label, item)
+				# print "[OverlayHD] DEBUG: '%sColour' = '%s'" % (label, item)
 				item = eval("config.plugins.skin.OverlayHD.%sTransparency.%s" % (label, mode))
 				element = xml.etree.cElementTree.SubElement(theme, "colour", {"name": "%sTransparency" % label, "value": item})
 				element.tail = "\n\t\t"
@@ -651,7 +651,7 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 		name = self["themes"].getCurrent()[0]
 		theme = self.findTheme(name)
 		if theme:
-			print "[OverlayHD] Loading theme '%s'" % name
+			print "[OverlayHD] Loading theme '%s'." % name
 			colours = theme.findall("colour")
 			for colour in colours:
 				name = colour.get("name", None)
@@ -731,7 +731,7 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 
 	def renameThemeAction(self, name):
 		oldname = self["themes"].getCurrent()[0]
-		print "[OverlayHD] Rename theme '%s' to '%s'." % (oldname, name)
+		print "[OverlayHD] Renaming theme '%s' to '%s'." % (oldname, name)
 		self.saveThemes()
 
 	def exportTheme(self):
@@ -845,7 +845,7 @@ def applySkinSettings():
 									break
 		reloadWindowstyles()
 	else:
-		print "[OverlayHD] OverlayHD is not the active skin!"
+		print "[OverlayHD] OverlayHD is not the active skin."
 
 
 def start_menu_main(menuid, **kwargs):
@@ -853,7 +853,7 @@ def start_menu_main(menuid, **kwargs):
 		return [(_("OverlayHD Skin Manager"), main, "OverlayHD", None)]
 	else:
 		return []
-		      
+
 def main(session, **kwargs):
 	session.open(OverlayHDSkinManager)
 
@@ -870,5 +870,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.37", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.38", icon="OverlayHD.png", fnc=main))
 	return list
