@@ -781,6 +781,56 @@
 		<panel name="ScreenTemplateHelp0" />
 	</screen>
 
+<!-- Panel To Display The Remote Control (154 x 500 pixels) -->
+
+	<screen name="ScreenTemplateRemote">
+		<widget name="rc" pixmaps="images/rc.png,images/rcold.png" position="0,0" size="154,500" alphatest="on" />
+		<!--
+		 |	For the key indicator pixmaps, "position" is used for
+		 |	the position of the pixmap "hotspot".
+		 |	The screen positions the pixmap relative to the
+		 |	hotspot, not the pixmap's top left corner
+		 +-->
+		<widget name="indicator_u0" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_u1" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_u2" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_u3" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_u4" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_u5" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_u6" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_u7" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_u8" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_u9" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_u10" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_u11" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_u12" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_u13" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_u14" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_u15" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l0" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l1" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l2" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l3" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l4" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l5" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l6" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l7" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l8" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l9" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l10" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l11" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l12" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l13" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l14" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<widget name="indicator_l15" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
+		<!-- Old pointers
+		<widget name="arrowdown" pixmap="images/arrowdown.png" position="-100,-100" size="37,70" alphatest="on" />
+		<widget name="arrowdown2" pixmap="images/arrowdown.png" position="-100,-100" size="37,70" alphatest="on" />
+		<widget name="arrowup" pixmap="images/arrowup.png" position="-100,-100" size="37,70" alphatest="on" />
+		<widget name="arrowup2" pixmap="images/arrowup.png" position="-100,-100" size="37,70" alphatest="on" />
+		-->
+	</screen>
+
 <!-- MENU > Setup - Beyonwiz Top Level Setup Menu -->
 
 	<screen name="ScreenTemplateFrame405x485">
@@ -1360,56 +1410,6 @@
 		<widget source="global.CurrentTime" render="Analogic" position="1210,35" size="30,30" alphatest="on" borderColor="BannerClockTime" foregroundColor="BannerClockTime" linewidth="2" zPosition="+2">
 			<convert type="Analogiccon">AnalogHours</convert>
 		</widget>
-	</screen>
-
-<!-- Panel To Display The Remote Control (154 x 500 pixels) -->
-
-	<screen name="ScreenTemplateRemote">
-		<widget name="rc" pixmaps="images/rc.png,images/rcold.png" position="0,0" size="154,500" alphatest="on" />
-		<!--
-		 |	For the key indicator pixmaps, "position" is used for
-		 |	the position of the pixmap "hotspot".
-		 |	The screen positions the pixmap relative to the
-		 |	hotspot, not the pixmap's top left corner
-		 +-->
-		<widget name="indicator_u0" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<widget name="indicator_u1" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<widget name="indicator_u2" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<widget name="indicator_u3" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<widget name="indicator_u4" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<widget name="indicator_u5" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<widget name="indicator_u6" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<widget name="indicator_u7" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<widget name="indicator_u8" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<widget name="indicator_u9" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<widget name="indicator_u10" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<widget name="indicator_u11" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<widget name="indicator_u12" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<widget name="indicator_u13" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<widget name="indicator_u14" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<widget name="indicator_u15" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<widget name="indicator_l0" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<widget name="indicator_l1" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<widget name="indicator_l2" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<widget name="indicator_l3" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<widget name="indicator_l4" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<widget name="indicator_l5" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<widget name="indicator_l6" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<widget name="indicator_l7" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<widget name="indicator_l8" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<widget name="indicator_l9" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<widget name="indicator_l10" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<widget name="indicator_l11" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<widget name="indicator_l12" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<widget name="indicator_l13" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<widget name="indicator_l14" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<widget name="indicator_l15" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1"/>
-		<!-- Old pointers
-		<widget name="arrowdown" pixmap="images/arrowdown.png" position="-100,-100" size="37,70" alphatest="on" />
-		<widget name="arrowdown2" pixmap="images/arrowdown.png" position="-100,-100" size="37,70" alphatest="on" />
-		<widget name="arrowup" pixmap="images/arrowup.png" position="-100,-100" size="37,70" alphatest="on" />
-		<widget name="arrowup2" pixmap="images/arrowup.png" position="-100,-100" size="37,70" alphatest="on" />
-		-->
 	</screen>
 
 <!-- Panel To Display The Live TV Signal Strength And Quality Levels (160 x 30 pixels) -->
