@@ -385,6 +385,33 @@
 		<eLabel position="50,660" size="1180,2" backgroundColor="Pinstripe" />
 	</screen>
 
+<!-- Panel To Display The Banner Formatted Time (305 x 25 pixels) -->
+
+	<screen name="ClockBannerPanel">
+		<panel name="ClockBannerPanel24Hour" />
+	</screen>
+
+	<screen name="ClockBannerPanel24Hour" title="Current Time 24 Hour" flags="wfNoBorder">
+		<ePixmap pixmap="icons/clock.png" position="0,4" size="14,14" alphatest="blend" />
+		<widget source="global.CurrentTime" render="Label" position="25,0" size="280,25" borderColor="BannerBorder" borderWidth="1" font="ClockFont;20" foregroundColor="BannerClock" transparent="1">
+			<convert type="ClockToText">Format:%a %e-%b-%Y  %H:%M</convert>
+		</widget>
+	</screen>
+
+	<screen name="ClockBannerPanel12Hour" title="Current Time 12 Hour" flags="wfNoBorder">
+		<ePixmap pixmap="icons/clock.png" position="0,4" size="14,14" alphatest="blend" />
+		<widget source="global.CurrentTime" render="Label" position="25,0" size="280,25" borderColor="BannerBorder" borderWidth="1" font="ClockFont;20" foregroundColor="BannerClock" transparent="1">
+			<convert type="ClockToText">Format:%a %e-%b-%Y  %-I:%M %p</convert>
+		</widget>
+	</screen>
+
+	<screen name="ClockBannerPanelAnalogue" title="Current Time Analogue" flags="wfNoBorder">
+		<ePixmap pixmap="icons/clock.png" position="0,4" size="14,14" alphatest="blend" />
+		<widget source="global.CurrentTime" render="Label" position="25,0" size="280,25" borderColor="BannerBorder" borderWidth="1" font="ClockFont;20" foregroundColor="BannerClock" transparent="1">
+			<convert type="ClockToText">Format:%a %e-%b-%Y  %-I:%M %p</convert>
+		</widget>
+	</screen>
+
 <!-- MENU Button -->
 
 	<screen name="ScreenTemplateButtonMenu">
@@ -1357,24 +1384,13 @@
 		<widget name="menulist" position="400,80" size="830,375" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
-<!-- Panel To Display The Banner Formatted Time (305 x 25 pixels) -->
+<!-- Screen Template To Display The Time As Either A Digital Or Analogue Clock -->
 
-	<screen name="ClockBannerPanel" title="Current Time" flags="wfNoBorder">
-		<ePixmap pixmap="icons/clock.png" position="0,4" size="14,14" alphatest="blend" />
-		<widget source="global.CurrentTime" render="Label" position="25,0" size="280,25" borderColor="BannerBorder" borderWidth="1" font="ClockFont;20" foregroundColor="BannerClock" transparent="1">
-			<convert type="ClockToText">Format:%a %e-%b-%Y  %H:%M</convert>
-		</widget>
+	<screen name="ScreenTemplateClock">
+		<panel name="ScreenTemplateClock24Hour" />
 	</screen>
 
-<!--
- |	To set the default style of clock to use on all InfoBars rename one of the two 
- |	following templates from "ClockTypeTemplate" where "Type" is either "Digital" 
- |	or "Analogue" to "ClockTemplate".  The default template is the digital clock.
- +-->
-
-<!-- Screen Template To Display The Time As A Digital Clock -->
-
-	<screen name="ClockTemplate" title="Digital Current Time" flags="wfNoBorder">
+	<screen name="ScreenTemplateClock24Hour" title="Digital Current Time" flags="wfNoBorder">
 		<eLabel position="1080,10" size="190,60" backgroundColor="BannerClockBackground" />
 		<widget source="global.CurrentTime" render="Label" position="1080,15" size="170,20" backgroundColor="TextBackground" font="Regular;18" foregroundColor="BannerClockDate" halign="right" transparent="1" zPosition="+1">
 			<convert type="ClockToText">Format:%a %e-%b-%Y</convert>
@@ -1387,9 +1403,23 @@
 		</widget>
 	</screen>
 
-<!-- Screen Template To Display The Time As An Analogue Clock -->
+	<screen name="ScreenTemplateClock12Hour" title="Digital Current Time" flags="wfNoBorder">
+		<eLabel position="1080,10" size="190,60" backgroundColor="BannerClockBackground" />
+		<widget source="global.CurrentTime" render="Label" position="1080,15" size="170,20" backgroundColor="TextBackground" font="Regular;18" foregroundColor="BannerClockDate" halign="right" transparent="1" zPosition="+1">
+			<convert type="ClockToText">Format:%a %e-%b-%Y</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1050,35" size="120,28" backgroundColor="TextBackground" font="Regular;26" foregroundColor="BannerClockTime" halign="right" transparent="1" valign="top" zPosition="+1">
+			<convert type="ClockToText">Format:%-I:%M</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1170,37" size="30,20" backgroundColor="TextBackground" font="Regular;18" foregroundColor="BannerClockTime" halign="right" transparent="1" valign="top" zPosition="+1">
+			<convert type="ClockToText">Format::%S</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1200,35" size="50,28" backgroundColor="TextBackground" font="Regular;26" foregroundColor="BannerClockTime" halign="right" transparent="1" valign="top" zPosition="+1">
+			<convert type="ClockToText">Format:%p</convert>
+		</widget>
+	</screen>
 
-	<screen name="ClockAnalogueTemplate" title="Analogue Current Time" flags="wfNoBorder">
+	<screen name="ScreenTemplateClockAnalogue" title="Analogue Current Time" flags="wfNoBorder">
 		<!-- Clock background -->
 		<eLabel position="1000,10" size="210,30" backgroundColor="BannerClockBackground" />
 		<!-- Clock date -->

@@ -304,7 +304,7 @@
 	</screen>
 
 	<screen name="DVDPlayerNew" title="DVD Player" position="0,0" size="1280,720" backgroundColor="TransparentBackground" flags="wfNoBorder">
-		<panel name="ClockTemplate" />
+		<panel name="ScreenTemplateClock" />
 		<eLabel position="0,650" size="1280,70" backgroundColor="InfobarMediaBackground" transparent="0" zPosition="-1" />
 		<eLabel position="172,660" size="2,50" backgroundColor="Pinstripe" />
 		<!-- Playback state and speed indicator -->

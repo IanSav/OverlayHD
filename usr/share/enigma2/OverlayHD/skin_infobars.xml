@@ -110,7 +110,7 @@
 
 	<screen name="InfoBarCommon">
 		<!-- Clock Panel Area -->
-		<panel name="ClockTemplate" />
+		<panel name="ScreenTemplateClock" />
 		<!-- InfoBar Area Background -->
 		<eLabel position="0,570" size="1280,720" backgroundColor="InfobarTVBackground" transparent="0" zPosition="-1" />
 		<eLabel position="172,580" size="2,130" backgroundColor="Pinstripe" />
@@ -298,7 +298,7 @@
 <!-- MEDIA > OK - Media Player InfoBar -->
 
 	<screen name="MoviePlayer" title="Media Player" position="0,0" size="1280,720" backgroundColor="TransparentBackground" flags="wfNoBorder">
-		<panel name="ClockTemplate" />
+		<panel name="ScreenTemplateClock" />
 		<eLabel position="0,650" size="1280,70" backgroundColor="InfobarMediaBackground" transparent="0" zPosition="-1" />
 		<eLabel position="172,660" size="2,50" backgroundColor="Pinstripe" />
 		<!-- Playback state and speed indicator -->
