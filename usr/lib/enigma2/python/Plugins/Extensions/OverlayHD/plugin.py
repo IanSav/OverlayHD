@@ -1,7 +1,7 @@
 #====================================================
 # OverlayHD Skin Manager
-# Version Date - 12-Mar-2016
-# Version Number - 1.38
+# Version Date - 14-Mar-2016
+# Version Number - 1.39
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
@@ -20,8 +20,8 @@ from Screens.Standby import TryQuitMainloop
 from Screens.VirtualKeyBoard import VirtualKeyBoard
 from Tools.Directories import resolveFilename, SCOPE_CURRENT_SKIN, SCOPE_CURRENT_PLUGIN
 from enigma import eEnv, gRGB
-from os import listdir, symlink, unlink
-from os.path import islink
+from os import listdir, remove, symlink, unlink
+from os.path import exists, isdir, islink
 from skin import dom_screens, colorNames, reloadWindowstyles, fonts
 import errno, shutil
 import xml.etree.cElementTree
@@ -302,6 +302,12 @@ button_choices = [
 	("Wizard", _("Wizard"))
 ]
 
+clock_choices = [
+	("24Hour", _("Digital (24 Hour)")),
+	("12Hour", _("Digital (12 Hour)")),
+	("Analogue", _("Analogue (12 Hour)"))
+]
+
 spinner_choices = [
 	("", _("Default"))
 ]
@@ -310,6 +316,7 @@ option_elements = (
 	("AlwaysActive", False, ConfigYesNo, None),
 	("BackgroundImage", "", ConfigSelection, background_image_choices),
 	("ButtonStyle", "Block", ConfigSelection, button_choices),
+	("ClockStyle", "24Hour", ConfigSelection, clock_choices),
 	("EnhancedMenu", False, ConfigEnableDisable, None),
 	("RecordBlink", True, ConfigYesNo, None),
 	("Spinner", "", ConfigSelection, spinner_choices),
@@ -322,6 +329,11 @@ button_screens = (
 	"ScreenTemplateButtonYellow",
 	"ScreenTemplateButtonBlue",
 	"ScreenTemplateButtonColourBacks"
+)
+
+clock_screens = (
+	"ClockBannerPanel",
+	"ScreenTemplateClock"
 )
 
 config.plugins.skin = ConfigSubsection()
@@ -804,6 +816,14 @@ def applySkinSettings():
 						name = element.get("name", None)
 						if name:
 							element.set("name", "%s%s" % (screen, config.plugins.skin.OverlayHD.ButtonStyle.value))
+			elif label == "ClockStyle":
+				for screen in clock_screens:
+					elements, path = dom_screens.get(screen, (None, None))
+					if elements:
+						element = elements.find("panel")
+						name = element.get("name", None)
+						if name:
+							element.set("name", "%s%s" % (screen, config.plugins.skin.OverlayHD.ClockStyle.value))
 			elif label == "RecordBlink":
 				elements, path = dom_screens.get("ChannelFormatPanel", (None, None))
 				if elements:
@@ -822,6 +842,12 @@ def applySkinSettings():
 				linkname = resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/spinner")
 				if islink(linkname):
 					unlink(linkname)
+				elif isdir(linkname):
+					shutil.rmtree(linkname)
+					print "[OverlayHD] NOTE: Unexpected spinner directory found and deleted!"
+				elif exists(linkname):
+					remove(linkname)
+					print "[OverlayHD] NOTE: Unexpected spinner file found and deleted!"
 				item = eval("config.plugins.skin.OverlayHD.%s" % label).value
 				if item != "":
 					try:
@@ -870,5 +896,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.38", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.39", icon="OverlayHD.png", fnc=main))
 	return list
