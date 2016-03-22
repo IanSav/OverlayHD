@@ -1,7 +1,7 @@
 #====================================================
 # OverlayHD Skin Manager
 # Version Date - 22-Mar-2016
-# Version Number - 1.41
+# Version Number - 1.42
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
@@ -319,10 +319,18 @@ option_elements = [
 	("ButtonStyle", "Block", ConfigSelection, button_choices),
 	("ClockStyle", "24Hour", ConfigSelection, clock_choices),
 	("EnhancedMenu", False, ConfigEnableDisable, None),
+	("EPGSettings", True, ConfigYesNo, None),
+	("GeneralSettings", True, ConfigYesNo, None),
+	("FontSettings", True, ConfigYesNo, None),
+	("InfoSettings", True, ConfigYesNo, None),
+	("MenuSettings", True, ConfigYesNo, None),
+	("PanelSettings", True, ConfigYesNo, None),
 	("RecordBlink", True, ConfigYesNo, None),
 	("SortThemes", False, ConfigYesNo, None),
 	("Spinner", "", ConfigSelection, spinner_choices),
-	("UpdateBlink", True, ConfigYesNo, None)
+	("TextSettings", True, ConfigYesNo, None),
+	("UpdateBlink", True, ConfigYesNo, None),
+	("UseGroups", False, ConfigYesNo, None)
 ]
 
 button_screens = [
@@ -336,6 +344,63 @@ button_screens = [
 clock_screens = [
 	"ClockBannerPanel",
 	"ScreenTemplateClock"
+]
+
+display_groups = [
+	"EPGSettings",
+	"FontSettings",
+	"GeneralSettings",
+	"InfoSettings",
+	"MenuSettings",
+	"PanelSettings",
+	"TextSettings"
+]
+
+repaint_notifications = [
+	"BannerBorder",
+	"BannerClock",
+	"BannerClockBackgroundColour",
+	"BannerClockBackgroundTransparency",
+	"BannerTitle",
+	"ButtonStyle",
+	"ClockStyle",
+	"FootnoteBackgroundColour",
+	"FootnoteBackgroundTransparency",
+	"FootnoteText",
+	"HelpPress",
+	"MenuBackgroundColour",
+	"MenuBackgroundTransparency",
+	"MenuDisabled",
+	"MenuSelectedColour",
+	"MenuSelectedTransparency",
+	"MenuText",
+	"MenuTextSelected",
+	"Pinstripe",
+	"ScreenBackgroundColour",
+	"ScreenBackgroundTransparency",
+	"Scrollbar",
+	"Text",
+	"TextBackgroundColour",
+	"TextBackgroundTransparency",
+	"UseGroups",
+	"VolumeBackground",
+	"VolumeColour"
+]
+
+restart_safe = [
+	"BackgroundImage",
+	"EPGSettings",
+	"GeneralSettings",
+	"FontSettings",
+	"InfoSettings",
+	"MenuSettings",
+	"PanelSettings",
+	"RecordBlink",
+	"SortThemes",
+	"Spinner",
+	"TextSettings",
+	"UpdateBlink",
+	"UseGroups"
 ]
 
 config.plugins.skin = ConfigSubsection()
@@ -428,31 +493,34 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 		for fname in sorted(listdir(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/spinners"))):
 			new_choices.append((fname, _(fname)))
 		config.plugins.skin.OverlayHD.Spinner.setChoices(default=config.plugins.skin.OverlayHD.Spinner.default, choices=new_choices)
-		for x in self["config"].list:
-			x[1].addNotifier(self.changeSettings)
+		for x in repaint_notifications:
+			eval("config.plugins.skin.OverlayHD.%s" % x).addNotifier(self.changeSettings)
 		self.process = True
 
 	def myExecEnd(self):
 		self.process = False
-		for x in self["config"].list:
-			x[1].removeNotifier(self.changeSettings)
+		for x in repaint_notifications:
+			eval("config.plugins.skin.OverlayHD.%s" % x).removeNotifier(self.changeSettings)
 
 	def changeSettings(self, configElement):
 		if self.process:
-			self.applySettings()
+			if configElement == config.plugins.skin.OverlayHD.UseGroups:
+				self.updateGroups()
+			else:
+				self.applySettings()
 
 	def cancel(self):
 		self.process = False
-		for x in self["config"].list:
-			x[1].cancel()
+		for x in config.plugins.skin.OverlayHD.dict():
+			eval("config.plugins.skin.OverlayHD.%s" % x).cancel()
 		self.applySettings()
 		self.close()
 
 	def save(self):
 		self.process = False
 		if self.changedSettings():
-			for x in self["config"].list:
-				x[1].save()
+			for x in config.plugins.skin.OverlayHD.dict():
+				eval("config.plugins.skin.OverlayHD.%s" % x).save()
 			config.plugins.skin.OverlayHD.save()
 			self.applySettings()
 			popup = self.session.openWithCallback(self.restartGUI, MessageBox, _("The GUI needs to be restarted to apply the changes.\n\n"
@@ -501,12 +569,20 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 
 	def changedSettings(self):
 		changed = 0
-		for x in self["config"].list:
-			if x[1].isChanged():
+		for x in config.plugins.skin.OverlayHD.dict():
+			if eval("config.plugins.skin.OverlayHD.%s" % x).isChanged():
 				# print "[OverlayHD] Entries changed."
 				return True
 		# print "[OverlayHD] Entries NOT changed."
 		return False
+
+	def updateGroups(self):
+		if config.plugins.skin.OverlayHD.UseGroups.value:
+			for x in display_groups:
+				eval("config.plugins.skin.OverlayHD.%s" % x).value = False
+		else:
+			for x in display_groups:
+				eval("config.plugins.skin.OverlayHD.%s" % x).value = True
 
 	def applySettings(self):
 		index = self["config"].getCurrentIndex()
@@ -968,5 +1044,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.41", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.42", icon="OverlayHD.png", fnc=main))
 	return list
