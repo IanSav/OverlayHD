@@ -1,7 +1,7 @@
 #====================================================
 # OverlayHD Skin Manager
 # Version Date - 23-Mar-2016
-# Version Number - 1.43
+# Version Number - 1.44
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
@@ -535,7 +535,10 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 		self.close()
 
 	def theme(self):
-		self.session.open(OverlayHDThemeManager)
+		self.session.openWithCallback(self.themeClosed, OverlayHDThemeManager)
+
+	def themeClosed(self):
+		self.applySettings()
 
 	def default(self):
 		if config.skin.primary_skin.value == "OverlayHD/skin.xml":
@@ -823,9 +826,6 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 						# print "[OverlayHD] Theme option = '%s', value = '%s'" % (name, value)
 					except:
 						print "[OverlayHD] Theme option = '%s', value = '%s' is invalid!" % (name, value)
-			applySkinSettings()
-			self.applySkin()
-			self.instance.invalidate()  # Remove this when the underlying bug is fixed!
 		self.close()
 
 	def newTheme(self, name=None):
@@ -1044,5 +1044,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.43", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.44", icon="OverlayHD.png", fnc=main))
 	return list
