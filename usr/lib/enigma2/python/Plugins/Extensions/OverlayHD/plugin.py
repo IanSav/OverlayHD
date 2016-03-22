@@ -1,7 +1,7 @@
 #====================================================
 # OverlayHD Skin Manager
-# Version Date - 20-Mar-2016
-# Version Number - 1.40
+# Version Date - 22-Mar-2016
+# Version Number - 1.41
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
@@ -27,7 +27,7 @@ from skin import dom_screens, colorNames, reloadWindowstyles, fonts
 import errno, shutil
 import xml.etree.cElementTree
 
-colour_elements = (
+colour_elements = [
 	("BannerBorder", "Black", None),
 	("BannerClock", "White", None),
 	("BannerClockBackground", "Background", "Background"),
@@ -143,9 +143,9 @@ colour_elements = (
 	("WeatherData", "White", None),
 	("WeatherLabel", "Grey", None),
 	("WeatherProvider", "Orange", None)
-)
+]
 
-derived_background_elements = (
+derived_background_elements = [
 	"EPGEntryBackgroundColor",
 	"EPGEntryBackgroundColorSelected",
 	"EPGRecordBackgroundColor",
@@ -154,9 +154,9 @@ derived_background_elements = (
 	"EPGServiceBackgroundColorNow",
 	"EPGZapBackgroundColor",
 	"EPGZapBackgroundColorSelected"
-)
+]
 
-derived_foreground_elements = (
+derived_foreground_elements = [
 	"EPGEntryForegroundColor",
 	"EPGEntryForegroundColorSelected",
 	"EPGRecordForegroundColor",
@@ -165,7 +165,7 @@ derived_foreground_elements = (
 	"EPGServiceForegroundColorNow",
 	"EPGZapForegroundColor",
 	"EPGZapForegroundColorSelected"
-)
+]
 
 colour_choices = [
 	("Arsenic", _("Arsenic")),
@@ -278,7 +278,7 @@ fixed_font_choices = [
 	("VeraSansMono", _("Vera Sans Mono"))
 ]
 
-font_elements = (
+font_elements = [
 	("ClockFont", "RobotoBlack", banner_font_choices),
 	("TitleFont", "RobotoBlack", banner_font_choices),
 	("ButtonFont", "NemesisFlatline", text_font_choices),
@@ -289,7 +289,7 @@ font_elements = (
 	("SMSHelperFont", "MPluss1M", fixed_font_choices),
 	("Regular", "NemesisFlatline", text_font_choices),
 	("TextFont", "NemesisFlatline", text_font_choices)
-)
+]
 
 background_image_choices = [
 	("", _("Default"))
@@ -313,7 +313,7 @@ spinner_choices = [
 	("", _("Default"))
 ]
 
-option_elements = (
+option_elements = [
 	("AlwaysActive", False, ConfigYesNo, None),
 	("BackgroundImage", "", ConfigSelection, background_image_choices),
 	("ButtonStyle", "Block", ConfigSelection, button_choices),
@@ -323,20 +323,20 @@ option_elements = (
 	("SortThemes", False, ConfigYesNo, None),
 	("Spinner", "", ConfigSelection, spinner_choices),
 	("UpdateBlink", True, ConfigYesNo, None)
-)
+]
 
-button_screens = (
+button_screens = [
 	"ScreenTemplateButtonRed",
 	"ScreenTemplateButtonGreen",
 	"ScreenTemplateButtonYellow",
 	"ScreenTemplateButtonBlue",
 	"ScreenTemplateButtonColourBacks"
-)
+]
 
-clock_screens = (
+clock_screens = [
 	"ClockBannerPanel",
 	"ScreenTemplateClock"
-)
+]
 
 config.plugins.skin = ConfigSubsection()
 config.plugins.skin.OverlayHD = ConfigSubsection()
@@ -356,8 +356,8 @@ for (label, colour, transparency) in colour_elements:
 		else:
 			c_choices = background_choice + colour_choices
 			t_choices = background_choice + transparency_choices
-		setattr(config.plugins.skin.OverlayHD, "%s%s" % (label, "Colour"), ConfigSelection(default=colour, choices=c_choices))
-		setattr(config.plugins.skin.OverlayHD, "%s%s" % (label, "Transparency"), ConfigSelection(default=transparency, choices=t_choices))
+		setattr(config.plugins.skin.OverlayHD, "%sColour" % label, ConfigSelection(default=colour, choices=c_choices))
+		setattr(config.plugins.skin.OverlayHD, "%sTransparency" % label, ConfigSelection(default=transparency, choices=t_choices))
 		# print "[OverlayHD] DEBUG (definition): Colour '%sColour' = '%s'" % (label, colour)
 		# print "[OverlayHD] DEBUG (definition): Colour '%sTransparency' = '%s'" % (label, transparency)
 
@@ -439,15 +439,6 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 
 	def changeSettings(self, configElement):
 		if self.process:
-			# for (label, colour, transparency) in colour_elements:
-			# 	if colour is None or transparency is None:
-			# 		if configElement == eval("config.plugins.skin.OverlayHD.%s" % label):
-			# 			print "[OverlayHD] DEBUG (changeSettings): '%s' = '%s'" % (label, configElement.value)
-			# 	else:
-			# 		if colour is not None and configElement == eval("config.plugins.skin.OverlayHD.%sColour" % label):
-			# 			print "[OverlayHD] DEBUG (changeSettings): '%sColour' = '%s'" % (label, configElement.value)
-			# 		if transparency is not None and configElement == eval("config.plugins.skin.OverlayHD.%sTransparency" % label):
-			# 			print "[OverlayHD] DEBUG (changeSettings): '%sTransparency' = '%s'" % (label, configElement.value)
 			self.applySettings()
 
 	def cancel(self):
@@ -944,6 +935,16 @@ def applySkinSettings():
 	else:
 		print "[OverlayHD] OverlayHD is not the active skin."
 
+def updateOverlayHD():
+	# This code is used to ensure that older environments are brought up to current requirements...
+	pass
+	# Rename "config.OverlayHD." settings to "config.plugins.skin.OverlayHD." settings...
+	# sed -i -e 's/^config\.OverlayHD\./config.plugins.skin.OverlayHD./' settings
+	# Remove the old settings conversion program...
+	# rm /usr/lib/enigma2/python/Plugins/Extensions/OverlayHD/OverlayHD_Update
+	# Remove the original themes.xml template...
+	# rm /usr/lib/enigma2/python/Plugins/Extensions/OverlayHD/themes.xml
+
 def start_menu_main(menuid, **kwargs):
 	if menuid == "system":
 		return [(_("OverlayHD Skin Manager"), main, "OverlayHD", None)]
@@ -956,6 +957,7 @@ def main(session, **kwargs):
 def autostart(reason, **kwargs):
 	if reason == 0:
 		# print "[OverlayHD] OverlayHD Skin Manager loaded."
+		updateOverlayHD()
 		applySkinSettings()
 	elif reason == 1:
 		# print "[OverlayHD] OverlayHD Skin Manager unloaded."
@@ -966,5 +968,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.40", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.41", icon="OverlayHD.png", fnc=main))
 	return list
