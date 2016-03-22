@@ -1,7 +1,7 @@
 #====================================================
 # OverlayHD Skin Manager
-# Version Date - 22-Mar-2016
-# Version Number - 1.42
+# Version Date - 23-Mar-2016
+# Version Number - 1.43
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
@@ -494,13 +494,13 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 			new_choices.append((fname, _(fname)))
 		config.plugins.skin.OverlayHD.Spinner.setChoices(default=config.plugins.skin.OverlayHD.Spinner.default, choices=new_choices)
 		for x in repaint_notifications:
-			eval("config.plugins.skin.OverlayHD.%s" % x).addNotifier(self.changeSettings)
+			getattr(config.plugins.skin.OverlayHD, x).addNotifier(self.changeSettings)
 		self.process = True
 
 	def myExecEnd(self):
 		self.process = False
 		for x in repaint_notifications:
-			eval("config.plugins.skin.OverlayHD.%s" % x).removeNotifier(self.changeSettings)
+			getattr(config.plugins.skin.OverlayHD, x).removeNotifier(self.changeSettings)
 
 	def changeSettings(self, configElement):
 		if self.process:
@@ -512,7 +512,7 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 	def cancel(self):
 		self.process = False
 		for x in config.plugins.skin.OverlayHD.dict():
-			eval("config.plugins.skin.OverlayHD.%s" % x).cancel()
+			getattr(config.plugins.skin.OverlayHD, x).cancel()
 		self.applySettings()
 		self.close()
 
@@ -520,7 +520,7 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 		self.process = False
 		if self.changedSettings():
 			for x in config.plugins.skin.OverlayHD.dict():
-				eval("config.plugins.skin.OverlayHD.%s" % x).save()
+				getattr(config.plugins.skin.OverlayHD, x).save()
 			config.plugins.skin.OverlayHD.save()
 			self.applySettings()
 			popup = self.session.openWithCallback(self.restartGUI, MessageBox, _("The GUI needs to be restarted to apply the changes.\n\n"
@@ -544,22 +544,22 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 			config.plugins.skin.OverlayHD.ButtonStyle.value = config.plugins.skin.OverlayHD.ButtonStyle.default
 			for (label, colour, transparency) in colour_elements:
 				if colour is None or transparency is None:
-					item = eval("config.plugins.skin.OverlayHD.%s" % label)
+					item = getattr(config.plugins.skin.OverlayHD, label)
 					item.value = item.default
 					# print "[OverlayHD] DEBUG (default): '%s' = '%s'" % (label, item.default)
 				else:
-					item = eval("config.plugins.skin.OverlayHD.%sColour" % label)
+					item = getattr(config.plugins.skin.OverlayHD, "%sColour" % label)
 					item.value = item.default
 					# print "[OverlayHD] DEBUG (default): '%sColour' = '%s'" % (label, item.default)
-					item = eval("config.plugins.skin.OverlayHD.%sTransparency" % label)
+					item = getattr(config.plugins.skin.OverlayHD, "%sTransparency" % label)
 					item.value = item.default
 					# print "[OverlayHD] DEBUG (default): '%sTransparency' = '%s'" % (label, item.default)
 			for (label, font, font_table) in font_elements:
-				item = eval("config.plugins.skin.OverlayHD.%s" % label)
+				item = getattr(config.plugins.skin.OverlayHD, label)
 				item.value = item.default
 				# print "[OverlayHD] DEBUG (default): '%s' = '%s'" % (label, item.default)
 			for (label, default, config_type, option_table) in option_elements:
-				item = eval("config.plugins.skin.OverlayHD.%s" % label)
+				item = getattr(config.plugins.skin.OverlayHD, label)
 				item.value = item.default
 				# print "[OverlayHD] DEBUG (default): '%s' = '%s'" % (label, item.default)
 			self.applySettings()
@@ -570,7 +570,7 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 	def changedSettings(self):
 		changed = 0
 		for x in config.plugins.skin.OverlayHD.dict():
-			if eval("config.plugins.skin.OverlayHD.%s" % x).isChanged():
+			if getattr(config.plugins.skin.OverlayHD, x).isChanged():
 				# print "[OverlayHD] Entries changed."
 				return True
 		# print "[OverlayHD] Entries NOT changed."
@@ -579,10 +579,10 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 	def updateGroups(self):
 		if config.plugins.skin.OverlayHD.UseGroups.value:
 			for x in display_groups:
-				eval("config.plugins.skin.OverlayHD.%s" % x).value = False
+				getattr(config.plugins.skin.OverlayHD, x).value = False
 		else:
 			for x in display_groups:
-				eval("config.plugins.skin.OverlayHD.%s" % x).value = True
+				getattr(config.plugins.skin.OverlayHD, x).value = True
 
 	def applySettings(self):
 		index = self["config"].getCurrentIndex()
@@ -793,7 +793,7 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 				value = colour.get("value", None)
 				if name and value:
 					try:
-						eval("config.plugins.skin.OverlayHD.%s" % name).value = value
+						getattr(config.plugins.skin.OverlayHD, name).value = value
 						# print "[OverlayHD] Theme colour = '%s', value = '%s'" % (name, value)
 					except:
 						print "[OverlayHD] Theme colour = '%s', value = '%s' is invalid!" % (name, value)
@@ -803,7 +803,7 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 				value = font.get("value", None)
 				if name and value:
 					try:
-						eval("config.plugins.skin.OverlayHD.%s" % name).value = value
+						getattr(config.plugins.skin.OverlayHD, name).value = value
 						# print "[OverlayHD] Theme font = '%s', value = '%s'" % (name, value)
 					except:
 						print "[OverlayHD] Theme font = '%s', value = '%s' is invalid!" % (name, value)
@@ -819,7 +819,7 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 								value = True
 							if value in ("False", "No", "Off", "Disable", "Disabled"):
 								value = False
-						eval("config.plugins.skin.OverlayHD.%s" % name).vale = value
+						getattr(config.plugins.skin.OverlayHD, name).value = value
 						# print "[OverlayHD] Theme option = '%s', value = '%s'" % (name, value)
 					except:
 						print "[OverlayHD] Theme option = '%s', value = '%s' is invalid!" % (name, value)
@@ -901,7 +901,7 @@ def applySkinSettings():
 		print "[OverlayHD] Applying OverlayHD skin settings."
 		for (label, colour, transparency) in colour_elements:
 			if transparency is None:
-				item = eval("config.plugins.skin.OverlayHD.%s" % label).value
+				item = getattr(config.plugins.skin.OverlayHD, label).value
 				piglabel = "%s%s%s" % (label[0:3], "PIG", label[3:])
 				if label in derived_foreground_elements:
 					colorNames[label] = colorNames[item]
@@ -916,10 +916,10 @@ def applySkinSettings():
 				else:
 					colorNames[label] = colorNames[item]
 			elif colour is not None:
-				col = eval("config.plugins.skin.OverlayHD.%sColour" % label).value
+				col = getattr(config.plugins.skin.OverlayHD, "%sColour" % label).value
 				if col == "Background":
 					col = config.plugins.skin.OverlayHD.ScreenBackgroundColour.value
-				tran = eval("config.plugins.skin.OverlayHD.%sTransparency" % label).value
+				tran = getattr(config.plugins.skin.OverlayHD, "%sTransparency" % label).value
 				if tran == "Background":
 					tran = long(config.plugins.skin.OverlayHD.ScreenBackgroundTransparency.value, 0x10)
 				else:
@@ -927,7 +927,7 @@ def applySkinSettings():
 				colorNames[label] = gRGB(colorNames[col].argb() | tran)
 		for (label, font, font_table) in font_elements:
 			data = list(fonts[label])
-			data[0] = eval("config.plugins.skin.OverlayHD.%s" % label).value
+			data[0] = getattr(config.plugins.skin.OverlayHD, label).value
 			fonts[label] = tuple(data)
 		for (label, default, config_type, options_table) in option_elements:
 			if label == "BackgroundImage":
@@ -936,7 +936,7 @@ def applySkinSettings():
 					unlink(dst)
 				except:
 					pass
-				src = eval("config.plugins.skin.OverlayHD.%s" % label).value
+				src = getattr(config.plugins.skin.OverlayHD, label).value
 				try:
 					if src == "":
 						src = eEnv.resolve("${datadir}/bootlogo.mvi")
@@ -986,7 +986,7 @@ def applySkinSettings():
 				elif exists(linkname):
 					remove(linkname)
 					print "[OverlayHD] NOTE: Unexpected spinner file found and deleted!"
-				item = eval("config.plugins.skin.OverlayHD.%s" % label).value
+				item = getattr(config.plugins.skin.OverlayHD, label).value
 				if item != "":
 					try:
 						symlink(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/spinners/%s" % item), linkname)
@@ -1044,5 +1044,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.42", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.43", icon="OverlayHD.png", fnc=main))
 	return list
