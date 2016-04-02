@@ -319,6 +319,10 @@
 		<alias name="FilePropFont" font="ValisEnigma" size="20" height="25" width="18" />
 		<alias name="FixedFont" font="VeraSansMono" size="20" height="25" width="18" />
 		<alias name="HelpFont" font="NemesisFlatline" size="20" height="25" width="18" />
+		<alias name="InfoEventFont" font="NemesisFlatline" size="20" height="25" width="18" />
+		<alias name="InfoDescriptionFont" font="NemesisFlatline" size="20" height="25" width="18" />
+		<alias name="InfoOtherFont" font="NemesisFlatline" size="20" height="25" width="18" />
+		<alias name="InfoTimeFont" font="NemesisFlatline" size="20" height="25" width="18" />
 		<alias name="LCD" font="DSDigital" size="20" height="25" width="18" />
 		<alias name="mediaportal" font="KhammuRabi" size="20" height="25" width="18" />
 		<alias name="MenuFont" font="NemesisFlatline" size="25" height="35" width="20" />
