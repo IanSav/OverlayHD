@@ -129,13 +129,13 @@
 		<!--
 		<eLabel text="Size:" position="830,80" size="45,25" font="Regular;20" foregroundColor="InfoFileSizeNow" transparent="1" />
 		-->
-		<widget source="Service" render="Label" position="830,80" size="400,25" font="Regular;20" foregroundColor="InfoFileSizeNow" transparent="1">
+		<widget source="Service" render="Label" position="830,80" size="300,25" font="Regular;20" foregroundColor="InfoFileSizeNow" transparent="1">
 			<convert type="MovieInfo">FileSize</convert>
 		</widget>
 		<!--
 		<eLabel text="Duration:" position="830,80" size="95,25" font="Regular;20" foregroundColor="InfoDurationNow" halign="right" transparent="1" />
 		-->
-		<widget source="Service" render="Label" position="830,80" size="400,25" font="Regular;20" foregroundColor="InfoDurationNow" halign="right" transparent="1">
+		<widget source="Service" render="Label" position="930,80" size="300,25" font="Regular;20" foregroundColor="InfoDurationNow" halign="right" transparent="1">
 			<convert type="ServiceTime">Duration</convert>
 			<convert type="ClockToText">AsLength</convert>
 		</widget>
