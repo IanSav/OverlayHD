@@ -59,8 +59,8 @@
 
 <!-- Wizard Notification Box -->
 
-	<screen name="NotificationBox" title="Wizard Notification" position="150,40" size="503,66" backgroundColor="#202020" flags="wfNoBorder" zPosition="100">
-		<eLabel position="0,0" size="500,63" backgroundColor="#c0c0c0" zPosition="-1" />
+	<screen name="NotificationBox" title="Wizard Notification" position="150,40" size="503,66" backgroundColor="Jet" flags="wfNoBorder" zPosition="100">
+		<eLabel position="0,0" size="500,63" backgroundColor="Silver" zPosition="-1" />
 		<widget source="text" render="Label" position="5,5" size="490,53" font="Regular;18" halign="center" valign="center" zPosition="100" />
 	</screen>
 
