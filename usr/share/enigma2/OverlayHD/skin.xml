@@ -151,6 +151,15 @@
 		<color name="EPGPIGZapForegroundColor" value="White" />
 		<color name="EPGPIGZapForegroundColorSelected" value="Black" />
 
+		<color name="FAVMarked" value="DullGreen" />
+		<color name="FAVMarkedBackground" value="ScreenBackground" />
+		<color name="FAVService" value="White" />
+		<color name="FAVServiceFallback" value="Blue" />
+		<color name="FAVServiceMarked" value="Green" />
+		<color name="FAVServiceMarkedSelected" value="White" />
+		<color name="FAVServiceNotAvailable" value="Grey" />
+		<color name="FAVServiceSelected" value="White" />
+		<color name="FAVServiceSelectedFallback" value="Cyan" />
 		<color name="FindCharacter" value="Gold" />
 		<color name="FootnoteBackground" value="ScreenBackground" />
 		<color name="FootnoteText" value="DimGrey" />
@@ -303,6 +312,9 @@
 		<alias name="DescriptionFont" font="NemesisFlatline" size="20" height="25" width="18" />
 		<alias name="EPGEventFont" font="NemesisFlatline" size="20" height="25" width="18" />
 		<alias name="EPGServiceFont" font="NemesisFlatline" size="20" height="25" width="18" />
+		<alias name="FAVEventFont" font="NemesisFlatline" size="20" height="25" width="18" />
+		<alias name="FAVLCNFont" font="NemesisFlatline" size="20" height="25" width="18" />
+		<alias name="FAVServiceFont" font="NemesisFlatline" size="20" height="25" width="18" />
 		<alias name="FileMonoFont" font="MPluss1M" size="20" height="25" width="18" />
 		<alias name="FilePropFont" font="ValisEnigma" size="20" height="25" width="18" />
 		<alias name="FixedFont" font="VeraSansMono" size="20" height="25" width="18" />
