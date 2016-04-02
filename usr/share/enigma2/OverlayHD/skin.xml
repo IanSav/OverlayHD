@@ -104,6 +104,7 @@
 		<color name="EPGDetails" value="White" />
 		<color name="EPGDuration" value="Grey" />
 		<color name="EPGGridBackground" value="Orange" />
+		<color name="EPGGridBorder" value="Black" />
 		<color name="EPGLCN" value="White" />
 		<color name="EPGOverlayBorder" value="Black" />
 		<color name="EPGOverlayColour" value="WarmYellow" />
@@ -300,6 +301,8 @@
 		<alias name="ClockFont" font="RobotoBlack" size="20" height="25" width="18" />
 		<alias name="Console" font="VeraSansMono" size="20" height="25" width="18" />
 		<alias name="DescriptionFont" font="NemesisFlatline" size="20" height="25" width="18" />
+		<alias name="EPGEventFont" font="NemesisFlatline" size="20" height="25" width="18" />
+		<alias name="EPGServiceFont" font="NemesisFlatline" size="20" height="25" width="18" />
 		<alias name="FileMonoFont" font="MPluss1M" size="20" height="25" width="18" />
 		<alias name="FilePropFont" font="ValisEnigma" size="20" height="25" width="18" />
 		<alias name="FixedFont" font="VeraSansMono" size="20" height="25" width="18" />
