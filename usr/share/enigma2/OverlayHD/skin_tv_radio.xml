@@ -88,8 +88,14 @@
 		<panel name="ScreenTemplateButtonInfo" />
 		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateButtonHelp" />
-		<widget name="list" position="50,80" size="640,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" colorServiceDescription="InfoProgramNow" colorServiceDescriptionSelected="InfoProgramNow" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" foregroundColorServiceNotAvail="#00777777" picServiceEventProgressbar="sliders/slider_1280x10_hfg.png" scrollbarMode="showOnDemand" serviceInfoFont="Regular;21" serviceItemHeight="50" serviceNameFont="Regular;23" serviceNumberFont="Regular;23" transparent="0" />
-		<widget name="chosenletter" position="50,80" size="640,550" font="Regular;100" foregroundColor="FindCharacter" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="list" position="50,80" size="640,550" backgroundColor="MenuBackground" backgroundColorMarked="FAVMarkedBackground" backgroundColorMarkedSelected="FAVMarked" backgroundColorSelected="MenuSelected"
+			colorEventProgressbar="InfoProgressColour" colorEventProgressbarBorder="InfoProgressBorder" colorEventProgressbarBorderSelected="InfoProgressBorder" colorEventProgressbarSelected="InfoProgressColour"
+			colorFallbackItem="Magenta" colorServiceDescription="FAVService" colorServiceDescriptionFallback="FAVServiceFallback" colorServiceDescriptionSelected="FAVServiceSelected"
+			colorServiceDescriptionSelectedFallback="FAVServiceSelectedFallback" colorServiceRecorded="InfoRecordingColour" colorServiceSelectedFallback="FAVServiceSelectedFallback"
+			enableWrapAround="1" fieldMargins="10" foregroundColor="MenuText" foregroundColorEventborder="Red" foregroundColorEventborderSelected="Yellow" foregroundColorMarked="FAVServiceMarked"
+			foregroundColorMarkedSelected="FAVServiceMarkedSelected" foregroundColorSelected="MenuTextSelected" foregroundColorServiceNotAvail="FAVServiceNotAvailable"
+			progressbarHeight="6" progressbarBorderWidth="1" progressBarWidth="50" scrollbarMode="showOnDemand" serviceInfoFont="FAVEventFont;20" serviceItemHeight="25" serviceNameFont="FAVServiceFont;20" serviceNumberFont="FAVLCNFont;20" transparent="0" />
+		<widget name="chosenletter" position="50,80" size="640,550" font="FAVServiceFont;100" conditional="chosenletter" foregroundColor="FindCharacter" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<panel position="710,80" size="165,25">
 			<panel name="TunerUsagePanel" />
 		</panel>
@@ -111,10 +117,6 @@
 		<widget source="session.CurrentService" render="Label" position="1030,155" size="200,20" backgroundColor="InfoBackground" font="Regular;15" foregroundColor="InfoBroadcaster" halign="right" transparent="1">
 			<convert type="ServiceName2">Provider</convert>
 		</widget>
-		<!--
-		<ePixmap pixmap="frame_hd.png" position="55,105" size="126,82" alphatest="on" transparent="1" zPosition="-1" />
-		<widget source="ServiceEvent" render="Picon" position="68,116" size="100,60" alphatest="blend" transparent="1" />
-		-->
 		<widget source="ServiceEvent" render="Picon" position="710,190" size="100,60" alphatest="blend" borderColor="grey" borderWidth="1" transparent="1">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
@@ -139,10 +141,6 @@
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-
-		<!--
-		<widget source="ServiceEvent" render="Progress" pixmap="sliders/progress.png" position="880,238" size="290,8" borderColor="InfoProgressBorder" borderWidth="1">
-		-->
 		<widget source="ServiceEvent" render="Progress" position="880,238" size="290,6" backgroundColor="InfoProgressBackground" borderColor="InfoProgressBorder" borderWidth="1" foregroundColor="InfoProgressColour" transparent="0">
 			<convert type="EventTime">Progress</convert>
 		</widget>
@@ -150,7 +148,6 @@
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-
 		<ePixmap pixmap="icons/icon_event.png" position="710,267" size="15,10" alphatest="on" />
 		<widget source="ServiceEvent" render="Label" position="730,260" size="500,24" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoProgramNow" transparent="1">
 			<convert type="EventName">NowName</convert>
@@ -178,7 +175,6 @@
 			<convert type="EventTime">NextEndTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-
 		<ePixmap pixmap="icons/icon_event.png" position="710,637" size="15,10" alphatest="on" />
 		<widget source="ServiceEvent" render="Label" position="730,630" size="370,24" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoProgramNext" noWrap="1" transparent="1">
 			<convert type="EventName">ThirdName</convert>
@@ -203,16 +199,28 @@
 
 <!-- Screen names change for "Simple" mode channel selection -> "SlimChannelSelection", "SimpleChannelSelection", "ChannelSelection" -->
 
-	<screen name="SimpleChannelSelection" title="Channel Selection" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="SlimChannelSelection" title="Channel Selection" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonInfo" />
 		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateButtonHelp" />
 		<ePixmap pixmap="menus/mainmenu_tv_live.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<!--
-		<widget name="list" position="50,80" size="640,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" colorServiceDescription="InfoProgramNow" colorServiceDescriptionSelected="InfoProgramNow" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" foregroundColorServiceNotAvail="#00777777" picServiceEventProgressbar="sliders/slider_1280x10_hfg.png" scrollbarMode="showOnDemand" serviceInfoFont="Regular;21" serviceItemHeight="50" serviceNameFont="Regular;23" serviceNumberFont="Regular;23" transparent="0" />
+		<widget name="list" position="50,80" size="640,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" colorServiceDescription="FAVService" colorServiceDescriptionSelected="FAVService" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected"
+			foregroundColorServiceNotAvail="FAVServiceNotAvailable" picServiceEventProgressbar="sliders/slider_1280x10_hfg.png" scrollbarMode="showOnDemand" serviceInfoFont="Regular;21" serviceItemHeight="50" serviceNameFont="Regular;23" serviceNumberFont="Regular;23" transparent="0" />
 		-->
-		<widget name="list" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" colorServiceDescription="InfoProgramNow" colorServiceDescriptionSelected="InfoProgramNow" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" foregroundColorServiceNotAvail="#00777777" picServiceEventProgressbar="sliders/slider_1280x10_hfg.png" scrollbarMode="showOnDemand" serviceInfoFont="Regular;20" serviceItemHeight="50" serviceNameFont="Regular;20" serviceNumberFont="Regular;20" transparent="0" />
+		<widget name="list" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorMarked="FAVMarkedBackground" backgroundColorMarkedSelected="FAVMarked" backgroundColorSelected="MenuSelected"
+			colorEventProgressbar="InfoProgressColour" colorEventProgressbarBorder="InfoProgressBorder" colorEventProgressbarBorderSelected="InfoProgressBorder" colorEventProgressbarSelected="InfoProgressColour"
+			colorFallbackItem="Magenta" colorServiceDescription="FAVService" colorServiceDescriptionFallback="FAVServiceFallback" colorServiceDescriptionSelected="FAVServiceSelected"
+			colorServiceDescriptionSelectedFallback="FAVServiceSelectedFallback" colorServiceRecorded="InfoRecordingColour" colorServiceSelectedFallback="FAVServiceSelectedFallback"
+			enableWrapAround="1" fieldMargins="10" foregroundColor="MenuText" foregroundColorEventborder="Red" foregroundColorEventborderSelected="Yellow" foregroundColorMarked="FAVServiceMarked"
+			foregroundColorMarkedSelected="FAVServiceMarkedSelected" foregroundColorSelected="MenuTextSelected" foregroundColorServiceNotAvail="FAVServiceNotAvailable"
+			progressbarHeight="6" progressbarBorderWidth="1" progressBarWidth="50" scrollbarMode="showOnDemand" serviceInfoFont="FAVEventFont;20" serviceItemHeight="25" serviceNameFont="FAVServiceFont;20" serviceNumberFont="FAVLCNFont;20" transparent="0" />
+	</screen>
+
+	<screen name="SimpleChannelSelection" title="Channel Selection" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="SlimChannelSelection" />
 	</screen>
 
 	<!--
