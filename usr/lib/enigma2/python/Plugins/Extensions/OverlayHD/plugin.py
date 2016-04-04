@@ -1,7 +1,7 @@
 #====================================================
 # OverlayHD Skin Manager
-# Version Date - 23-Mar-2016
-# Version Number - 1.44
+# Version Date - 28-Mar-2016
+# Version Number - 1.45
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
@@ -27,6 +27,9 @@ from skin import dom_screens, colorNames, reloadWindowstyles, fonts
 import errno, shutil
 import xml.etree.cElementTree
 
+# Items with a colour and transparency require two lines in the setup XML file.
+# (One for ItemColour and one for ItemTransparency.)
+#
 colour_elements = [
 	("BannerBorder", "Black", None),
 	("BannerClock", "White", None),
@@ -70,6 +73,15 @@ colour_elements = [
 	("EPGZapBackgroundColorSelected", "Green", None),
 	("EPGZapForegroundColor", "White", None),
 	("EPGZapForegroundColorSelected", "Black", None),
+	("FAVMarked", "DullGreen", "0x26000000"),
+	("FAVMarkedBackground", "Background", "Background"),
+	("FAVService", "White", None),
+	("FAVServiceFallback", "Blue", None),
+	("FAVServiceMarked", "Green", None),
+	("FAVServiceMarkedSelected", "White", None),
+	("FAVServiceNotAvailable", "Grey", None),
+	("FAVServiceSelected", "White", None),
+	("FAVServiceSelectedFallback", "Cyan", None),
 	("FindCharacter", "Gold", None),
 	("FootnoteBackground", "Background", "Background"),
 	("FootnoteText", "DimGrey", None),
@@ -283,6 +295,9 @@ font_elements = [
 	("TitleFont", "RobotoBlack", banner_font_choices),
 	("ButtonFont", "NemesisFlatline", text_font_choices),
 	("DescriptionFont", "NemesisFlatline", text_font_choices),
+	("FAVEventFont", "NemesisFlatline", text_font_choices),
+	("FAVLCNFont", "NemesisFlatline", text_font_choices),
+	("FAVServiceFont", "NemesisFlatline", text_font_choices),
 	("FixedFont", "MPluss1M", fixed_font_choices),
 	("HelpFont", "NemesisFlatline", text_font_choices),
 	("MenuFont", "NemesisFlatline", text_font_choices),
@@ -320,8 +335,9 @@ option_elements = [
 	("ClockStyle", "24Hour", ConfigSelection, clock_choices),
 	("EnhancedMenu", False, ConfigEnableDisable, None),
 	("EPGSettings", True, ConfigYesNo, None),
-	("GeneralSettings", True, ConfigYesNo, None),
+	("FAVSettings", True, ConfigYesNo, None),
 	("FontSettings", True, ConfigYesNo, None),
+	("GeneralSettings", True, ConfigYesNo, None),
 	("InfoSettings", True, ConfigYesNo, None),
 	("MenuSettings", True, ConfigYesNo, None),
 	("PanelSettings", True, ConfigYesNo, None),
@@ -1044,5 +1060,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.44", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.45", icon="OverlayHD.png", fnc=main))
 	return list
