@@ -1,7 +1,7 @@
 #====================================================
 # OverlayHD Skin Manager
 # Version Date - 28-Mar-2016
-# Version Number - 1.45
+# Version Number - 1.46
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
@@ -43,6 +43,7 @@ colour_elements = [
 	("EPGDetails", "White", None),
 	("EPGDuration", "Grey", None),
 	("EPGGridBackground", "Orange", None),
+	("EPGGridBorder", "Black", None),
 	("EPGLCN", "LightBlue", None),
 	("EPGOverlayBorder", "Black", None),
 	("EPGOverlayColour", "WarmYellow", None),
@@ -295,6 +296,8 @@ font_elements = [
 	("TitleFont", "RobotoBlack", banner_font_choices),
 	("ButtonFont", "NemesisFlatline", text_font_choices),
 	("DescriptionFont", "NemesisFlatline", text_font_choices),
+	("EPGEventFont", "NemesisFlatline", text_font_choices),
+	("EPGServiceFont", "NemesisFlatline", text_font_choices),
 	("FAVEventFont", "NemesisFlatline", text_font_choices),
 	("FAVLCNFont", "NemesisFlatline", text_font_choices),
 	("FAVServiceFont", "NemesisFlatline", text_font_choices),
@@ -324,6 +327,11 @@ clock_choices = [
 	("Analogue", _("Analogue (12 Hour)"))
 ]
 
+epg_choices = [
+	("left", _("Left aligned")),
+	("center", _("Centred"))
+]
+
 spinner_choices = [
 	("", _("Default"))
 ]
@@ -334,7 +342,9 @@ option_elements = [
 	("ButtonStyle", "Block", ConfigSelection, button_choices),
 	("ClockStyle", "24Hour", ConfigSelection, clock_choices),
 	("EnhancedMenu", False, ConfigEnableDisable, None),
+	("EPGAlignment", "left", ConfigSelection, epg_choices),
 	("EPGSettings", True, ConfigYesNo, None),
+	("EPGShowTicks", True, ConfigYesNo, None),
 	("FAVSettings", True, ConfigYesNo, None),
 	("FontSettings", True, ConfigYesNo, None),
 	("GeneralSettings", True, ConfigYesNo, None),
@@ -978,6 +988,28 @@ def applySkinSettings():
 						name = element.get("name", None)
 						if name:
 							element.set("name", "%s%s" % (screen, config.plugins.skin.OverlayHD.ClockStyle.value))
+			elif label == "EPGShowTicks":
+				if config.plugins.skin.OverlayHD.EPGShowTicks.value:
+					setting = "yes"
+				else:
+					setting = "no"
+				for screen in ("GraphicalEPG", "GraphicalEPGPIG", "GraphicalInfoBarEPG"):
+					elements, path = dom_screens.get(screen, (None, None))
+					if elements:
+						widgets = elements.findall("widget")
+						for widget in widgets:
+							if widget.get("TimelineTicksOn", "") != "":
+								widget.set("TimelineTicksOn", setting)
+								break
+			elif label == "EPGAlignment":
+				for screen in ("GraphicalEPG", "GraphicalEPGPIG", "GraphicalInfoBarEPG"):
+					elements, path = dom_screens.get(screen, (None, None))
+					if elements:
+						widgets = elements.findall("widget")
+						for widget in widgets:
+							if widget.get("EntryFontAlignment", "") != "":
+								widget.set("EntryFontAlignment", config.plugins.skin.OverlayHD.EPGAlignment.value)
+								break
 			elif label == "RecordBlink":
 				elements, path = dom_screens.get("ChannelFormatPanel", (None, None))
 				if elements:
@@ -1060,5 +1092,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.45", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.46", icon="OverlayHD.png", fnc=main))
 	return list
