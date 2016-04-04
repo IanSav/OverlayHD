@@ -1,7 +1,7 @@
 #====================================================
 # OverlayHD Skin Manager
 # Version Date - 3-Apr-2016
-# Version Number - 1.48
+# Version Number - 1.49
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
@@ -495,7 +495,6 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 		self.skinName = ["OverlayHDSkinManager", "Setup"]
 		HelpableScreen.__init__(self)
 		self.setup_title = _("OverlayHD Skin Manager")
-		self.process = False
 
 		self["key_red"] = Label(_("Cancel"))
 		self["key_green"] = Label(_("Save"))
@@ -512,23 +511,20 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 			"blue": (self.default, _("Apply the default skin settings"))
 		}, description=_("Basic Functions"))
 
-		self.onExecBegin.append(self.myExecBegin)
-		self.onExecEnd.append(self.myExecEnd)
-
-	def myExecBegin(self):
-		new_choices = [("", _("Default"))]
+		self.process = False
+		background_image_choices = [("", _("Default"))]
 		for fname in sorted(listdir(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/backgrounds"))):
-			new_choices.append((fname, _(fname[0:-4])))
-		config.plugins.skin.OverlayHD.BackgroundImage.setChoices(default=config.plugins.skin.OverlayHD.BackgroundImage.default, choices=new_choices)
-		new_choices = [("", _("Default"))]
+			background_image_choices.append((fname, _(fname[0:-4])))
+		config.plugins.skin.OverlayHD.BackgroundImage.setChoices(default=config.plugins.skin.OverlayHD.BackgroundImage.default, choices=background_image_choices)
+		spinner_choices = [("", _("Default"))]
 		for fname in sorted(listdir(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/spinners"))):
-			new_choices.append((fname, _(fname)))
-		config.plugins.skin.OverlayHD.Spinner.setChoices(default=config.plugins.skin.OverlayHD.Spinner.default, choices=new_choices)
+			spinner_choices.append((fname, _(fname)))
+		config.plugins.skin.OverlayHD.Spinner.setChoices(default=config.plugins.skin.OverlayHD.Spinner.default, choices=spinner_choices)
 		for x in repaint_notifications:
 			getattr(config.plugins.skin.OverlayHD, x).addNotifier(self.changeSettings)
 		self.process = True
 
-	def myExecEnd(self):
+	def removeNotifications(self):
 		self.process = False
 		for x in repaint_notifications:
 			getattr(config.plugins.skin.OverlayHD, x).removeNotifier(self.changeSettings)
@@ -541,14 +537,14 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 				self.applySettings()
 
 	def cancel(self):
-		self.process = False
+		self.removeNotifications()
 		for x in config.plugins.skin.OverlayHD.dict():
 			getattr(config.plugins.skin.OverlayHD, x).cancel()
 		self.applySettings()
 		self.close()
 
 	def save(self):
-		self.process = False
+		self.removeNotifications()
 		if self.changedSettings():
 			for x in config.plugins.skin.OverlayHD.dict():
 				getattr(config.plugins.skin.OverlayHD, x).save()
@@ -566,10 +562,12 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 		self.close()
 
 	def theme(self):
+		self.process = False
 		self.session.openWithCallback(self.themeClosed, OverlayHDThemeManager)
 
 	def themeClosed(self):
 		self.applySettings()
+		self.process = True
 
 	def default(self):
 		if config.skin.primary_skin.value == "OverlayHD/skin.xml":
@@ -1097,5 +1095,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.48", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.49", icon="OverlayHD.png", fnc=main))
 	return list
