@@ -52,7 +52,7 @@
 		<widget name="timeline3" position="50,242" size="2,7" pixmap="epg/timeline-tick.png" alphatest="blend" zPosition="+1" />
 		<widget name="timeline4" position="50,242" size="2,7" pixmap="epg/timeline-tick.png" alphatest="blend" zPosition="+1" />
 		<widget name="timeline5" position="50,242" size="2,7" pixmap="epg/timeline-tick.png" alphatest="blend" zPosition="+1" />
-		<widget name="list" position="50,255" size="1180,400" EntryFontAlignment="center" EntryBorderColor="EPGGridBorder" ServiceBorderColor="EPGGridBorder"
+		<widget name="list" position="50,255" size="1180,400" EntryFontAlignment="left" EntryBorderColor="EPGGridBorder" ServiceBorderColor="EPGGridBorder"
 			EntryFontGraphical="EPGEventFont;18" EventFontInfobar="EPGEventFont;18" EventFontSingle="EPGEventFont;18" ServiceFontGraphical="EPGServiceFont;18" ServiceFontInfobar="EPGServiceFont;18"
 			EntryBackgroundColor="EPGEntryBackgroundColor" EntryBackgroundColorSelected="EPGEntryBackgroundColorSelected" EntryForegroundColor="EPGEntryForegroundColor" EntryForegroundColorSelected="EPGEntryForegroundColorSelected"
 			RecordBackgroundColor="EPGRecordBackgroundColor" RecordBackgroundColorSelected="EPGRecordBackgroundColorSelected" RecordForegroundColor="EPGRecordForegroundColor" RecordForegroundColorSelected="EPGRecordForegroundColorSelected"
@@ -114,7 +114,7 @@
 		<widget name="timeline3" position="50,282" size="2,7" pixmap="epg/timeline-tick.png" alphatest="blend" zPosition="+1" />
 		<widget name="timeline4" position="50,282" size="2,7" pixmap="epg/timeline-tick.png" alphatest="blend" zPosition="+1" />
 		<widget name="timeline5" position="50,282" size="2,7" pixmap="epg/timeline-tick.png" alphatest="blend" zPosition="+1" />
-		<widget name="list" position="50,295" size="1180,360" EntryFontAlignment="center" EntryBorderColor="EPGGridBorder" ServiceBorderColor="EPGGridBorder"
+		<widget name="list" position="50,295" size="1180,360" EntryFontAlignment="left" EntryBorderColor="EPGGridBorder" ServiceBorderColor="EPGGridBorder"
 			EntryFontGraphical="EPGEventFont;18" EventFontInfobar="EPGEventFont;18" EventFontSingle="EPGEventFont;18" ServiceFontGraphical="EPGServiceFont;18" ServiceFontInfobar="EPGServiceFont;18"
 			EntryBackgroundColor="EPGPIGEntryBackgroundColor" EntryBackgroundColorSelected="EPGPIGEntryBackgroundColorSelected" EntryForegroundColor="EPGPIGEntryForegroundColor" EntryForegroundColorSelected="EPGPIGEntryForegroundColorSelected"
 			RecordBackgroundColor="EPGPIGRecordBackgroundColor" RecordBackgroundColorSelected="EPGPIGRecordBackgroundColorSelected" RecordForegroundColor="EPGPIGRecordForegroundColor" RecordForegroundColorSelected="EPGPIGRecordForegroundColorSelected"
@@ -171,7 +171,7 @@
 		<widget name="timeline3" position="50,552" size="2,7" pixmap="epg/timeline-tick.png" alphatest="blend" zPosition="+1" />
 		<widget name="timeline4" position="50,552" size="2,7" pixmap="epg/timeline-tick.png" alphatest="blend" zPosition="+1" />
 		<widget name="timeline5" position="50,552" size="2,7" pixmap="epg/timeline-tick.png" alphatest="blend" zPosition="+1" />
-		<widget name="list" position="50,565" size="1180,85" EntryFontAlignment="center" EntryFontWrap="no"
+		<widget name="list" position="50,565" size="1180,85" EntryFontAlignment="left" EntryFontWrap="no"
 			EntryForegroundColor="EPGEntryForegroundColor" EntryForegroundColorSelected="EPGEntryForegroundColorSelected"
 			RecordForegroundColorSelected="EPGRecordForegroundColorSelected"
 			ServiceForegroundColor="EPGServiceForegroundColor" ServiceForegroundColorNow="EPGServiceForegroundColorNow"
