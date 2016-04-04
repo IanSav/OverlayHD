@@ -108,83 +108,83 @@
 		<panel position="877,130" size="353,20">
 			<panel name="ChannelFormatPanel" />
 		</panel>
-		<widget source="session.CurrentService" render="Label" position="710,155" size="260,20" backgroundColor="InfoBackground" font="Regular;15" foregroundColor="InfoChannel" transparent="1">
+		<widget source="session.CurrentService" render="Label" position="710,155" size="260,20" backgroundColor="InfoBackground" font="InfoEventFont;15" foregroundColor="InfoChannel" transparent="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="980,155" size="40,20" backgroundColor="InfoBackground" font="Regular;15" foregroundColor="InfoLCN" halign="right" transparent="1">
+		<widget source="session.CurrentService" render="Label" position="980,155" size="40,20" backgroundColor="InfoBackground" font="InfoEventFont;15" foregroundColor="InfoLCN" halign="right" transparent="1">
 			<convert type="ServiceName">ServiceNumber</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="1030,155" size="200,20" backgroundColor="InfoBackground" font="Regular;15" foregroundColor="InfoBroadcaster" halign="right" transparent="1">
+		<widget source="session.CurrentService" render="Label" position="1030,155" size="200,20" backgroundColor="InfoBackground" font="InfoEventFont;15" foregroundColor="InfoBroadcaster" halign="right" transparent="1">
 			<convert type="ServiceName2">Provider</convert>
 		</widget>
 		<widget source="ServiceEvent" render="Picon" position="710,190" size="100,60" alphatest="blend" borderColor="grey" borderWidth="1" transparent="1">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="820,190" size="320,25" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoChannel" transparent="1">
+		<widget source="ServiceEvent" render="Label" position="820,190" size="320,25" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoChannel" transparent="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="1150,190" size="80,25" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoLCN" halign="right" transparent="1">
+		<widget source="ServiceEvent" render="Label" position="1150,190" size="80,25" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoLCN" halign="right" transparent="1">
 			<convert type="ServiceName">ServiceNumber</convert>
 		</widget>
 		<!--
-		<widget source="ServiceEvent" render="Label" position="900,80" size="80,25" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoLCN" halign="right" transparent="1">
+		<widget source="ServiceEvent" render="Label" position="900,80" size="80,25" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoLCN" halign="right" transparent="1">
 			<convert type="ServiceName2">%n</convert>
 		</widget>
 		-->
-		<widget source="ServiceEvent" render="Label" position="820,212" size="290,17" backgroundColor="InfoBackground" font="Regular;14" foregroundColor="InfoBroadcaster" transparent="1">
+		<widget source="ServiceEvent" render="Label" position="820,212" size="290,17" backgroundColor="InfoBackground" font="InfoOtherFont;14" foregroundColor="InfoBroadcaster" transparent="1">
 			<convert type="ServiceName2">Provider</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="1120,212" size="110,17" backgroundColor="InfoBackground" font="Regular;14" foregroundColor="InfoBroadcaster" halign="right" transparent="1">
+		<widget source="ServiceEvent" render="Label" position="1120,212" size="110,17" backgroundColor="InfoBackground" font="InfoOtherFont;14" foregroundColor="InfoBroadcaster" halign="right" transparent="1">
 			<convert type="ServiceName2">%F</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="820,230" size="60,20" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoTimesNow" transparent="1">
+		<widget source="ServiceEvent" render="Label" position="820,230" size="60,20" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" transparent="1">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
 		<widget source="ServiceEvent" render="Progress" position="880,238" size="290,6" backgroundColor="InfoProgressBackground" borderColor="InfoProgressBorder" borderWidth="1" foregroundColor="InfoProgressColour" transparent="0">
 			<convert type="EventTime">Progress</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="1170,230" size="60,20" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoTimesNow" halign="right" transparent="1">
+		<widget source="ServiceEvent" render="Label" position="1170,230" size="60,20" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" halign="right" transparent="1">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
 		<ePixmap pixmap="icons/icon_event.png" position="710,267" size="15,10" alphatest="on" />
-		<widget source="ServiceEvent" render="Label" position="730,260" size="500,24" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoProgramNow" transparent="1">
+		<widget source="ServiceEvent" render="Label" position="730,260" size="500,24" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoProgramNow" transparent="1">
 			<convert type="EventName">NowName</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="710,294" size="80,24" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoRatingNow" transparent="1">
+		<widget source="ServiceEvent" render="Label" position="710,294" size="80,24" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
 			<convert type="EventName">SmallRating</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="790,294" size="446,24" backgroundColor="InfoBackground" font="Regular;18" foregroundColor="InfoRatingNow" halign="right" transparent="1">
+		<widget source="ServiceEvent" render="Label" position="790,294" size="446,24" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" halign="right" transparent="1">
 			<convert type="EventName">Genre</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="710,330" size="526,256" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoDetailsNow" halign="block" transparent="1"><!-- size="526,270" -->
+		<widget source="ServiceEvent" render="Label" position="710,330" size="526,256" backgroundColor="InfoBackground" font="InfoDescriptionFont;20" foregroundColor="InfoDetailsNow" halign="block" transparent="1"><!-- size="526,270" -->
 			<convert type="EventName">FullDescription,Trimmed,Separated</convert>
 		</widget>
 
 		<ePixmap pixmap="icons/icon_event.png" position="710,613" size="15,10" alphatest="on" />
-		<widget source="ServiceEvent" render="Label" position="730,606" size="370,24" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoProgramNext" noWrap="1" transparent="1">
+		<widget source="ServiceEvent" render="Label" position="730,606" size="370,24" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoProgramNext" noWrap="1" transparent="1">
 			<convert type="EventName">NextName</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="1110,606" size="52,24" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoTimesNext" transparent="1">
+		<widget source="ServiceEvent" render="Label" position="1110,606" size="52,24" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNext" transparent="1">
 			<convert type="EventTime">NextStartTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<eLabel text="-" position="1162,606" size="16,24" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoTimesNext" halign="center" transparent="1" />
-		<widget source="ServiceEvent" render="Label" position="1178,606" size="52,24" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoTimesNext" halign="right" transparent="1">
+		<eLabel text="-" position="1162,606" size="16,24" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNext" halign="center" transparent="1" />
+		<widget source="ServiceEvent" render="Label" position="1178,606" size="52,24" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNext" halign="right" transparent="1">
 			<convert type="EventTime">NextEndTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
 		<ePixmap pixmap="icons/icon_event.png" position="710,637" size="15,10" alphatest="on" />
-		<widget source="ServiceEvent" render="Label" position="730,630" size="370,24" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoProgramNext" noWrap="1" transparent="1">
+		<widget source="ServiceEvent" render="Label" position="730,630" size="370,24" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoProgramNext" noWrap="1" transparent="1">
 			<convert type="EventName">ThirdName</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="1110,630" size="52,24" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoTimesNext" transparent="1">
+		<widget source="ServiceEvent" render="Label" position="1110,630" size="52,24" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNext" transparent="1">
 			<convert type="EventTime">ThirdStartTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<eLabel text="-" position="1162,630" size="16,24" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoTimesNext" halign="center" transparent="1" />
-		<widget source="ServiceEvent" render="Label" position="1178,630" size="52,24" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoTimesNext" halign="right" transparent="1">
+		<eLabel text="-" position="1162,630" size="16,24" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNext" halign="center" transparent="1" />
+		<widget source="ServiceEvent" render="Label" position="1178,630" size="52,24" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNext" halign="right" transparent="1">
 			<convert type="EventTime">ThirdEndTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
