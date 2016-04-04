@@ -1,7 +1,7 @@
 #====================================================
 # OverlayHD Skin Manager
-# Version Date - 30-Mar-2016
-# Version Number - 1.47
+# Version Date - 3-Apr-2016
+# Version Number - 1.48
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
@@ -347,20 +347,20 @@ option_elements = [
 	("ClockStyle", "24Hour", ConfigSelection, clock_choices),
 	("EnhancedMenu", False, ConfigEnableDisable, None),
 	("EPGAlignment", "left", ConfigSelection, epg_choices),
-	("EPGSettings", True, ConfigYesNo, None),
+	("EPGSettings", False, ConfigYesNo, None),
 	("EPGShowTicks", True, ConfigYesNo, None),
-	("FAVSettings", True, ConfigYesNo, None),
-	("FontSettings", True, ConfigYesNo, None),
-	("GeneralSettings", True, ConfigYesNo, None),
-	("InfoSettings", True, ConfigYesNo, None),
-	("MenuSettings", True, ConfigYesNo, None),
-	("PanelSettings", True, ConfigYesNo, None),
+	("FAVSettings", False, ConfigYesNo, None),
+	("FontSettings", False, ConfigYesNo, None),
+	("GeneralSettings", False, ConfigYesNo, None),
+	("InfoSettings", False, ConfigYesNo, None),
+	("MenuSettings", False, ConfigYesNo, None),
+	("PanelSettings", False, ConfigYesNo, None),
 	("RecordBlink", True, ConfigYesNo, None),
 	("SortThemes", False, ConfigYesNo, None),
 	("Spinner", "", ConfigSelection, spinner_choices),
-	("TextSettings", True, ConfigYesNo, None),
+	("TextSettings", False, ConfigYesNo, None),
 	("UpdateBlink", True, ConfigYesNo, None),
-	("UseGroups", False, ConfigYesNo, None)
+	("UseGroups", True, ConfigYesNo, None)
 ]
 
 button_screens = [
@@ -498,12 +498,13 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 		self.process = False
 
 		self["key_red"] = Label(_("Cancel"))
-		self["key_green"] = Label(_("OK"))
+		self["key_green"] = Label(_("Save"))
 		self["key_yellow"] = Label(_("Themes"))
 		self["key_blue"] = Label(_("Default"))
 
 		self["actions"] = HelpableActionMap(self, ["OkCancelActions", "ColorActions"], {
 			"ok": (self.save, _("Save and apply changes")),
+			"OK": (self.save, _("Save and apply changes")),
 			"cancel": (self.cancel, _("Cancel and discard changes")),
 			"red" : (self.cancel, _("Cancel and discard changes")),
 			"green": (self.save, _("Save and apply changes")),
@@ -1096,5 +1097,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.47", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.48", icon="OverlayHD.png", fnc=main))
 	return list
