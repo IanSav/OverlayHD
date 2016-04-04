@@ -171,6 +171,10 @@
 		<item level="0" text="FAV LCN font" description="Choose a font for the FAV LCN text." requires="config.plugins.skin.OverlayHD.FontSettings">config.plugins.skin.OverlayHD.FAVLCNFont</item>
 		<item level="0" text="FAV service font" description="Choose a font for the FAV service text." requires="config.plugins.skin.OverlayHD.FontSettings">config.plugins.skin.OverlayHD.FAVServiceFont</item>
 		<item level="0" text="FAV event font" description="Choose a font for the FAV event text." requires="config.plugins.skin.OverlayHD.FontSettings">config.plugins.skin.OverlayHD.FAVEventFont</item>
+		<item level="0" text="Info event font" description="Choose a font for info event text." requires="config.plugins.skin.OverlayHD.FontSettings">config.plugins.skin.OverlayHD.InfoEventFont</item>
+		<item level="0" text="Info description font" description="Choose a font for info description text." requires="config.plugins.skin.OverlayHD.FontSettings">config.plugins.skin.OverlayHD.InfoDescriptionFont</item>
+		<item level="0" text="Info time font" description="Choose a font for info time text." requires="config.plugins.skin.OverlayHD.FontSettings">config.plugins.skin.OverlayHD.InfoTimeFont</item>
+		<item level="0" text="Info other font" description="Choose a font for other info text not covered by the above options." requires="config.plugins.skin.OverlayHD.FontSettings">config.plugins.skin.OverlayHD.InfoOtherFont</item>
 		<item level="0" text="Text font" description="Choose a font for general text." requires="config.plugins.skin.OverlayHD.FontSettings">config.plugins.skin.OverlayHD.TextFont</item>
 		<item level="0" text="Fixed font" description="Choose a font for fixed pitch / mono spaced text." requires="config.plugins.skin.OverlayHD.FontSettings">config.plugins.skin.OverlayHD.FixedFont</item>
 	</setup>

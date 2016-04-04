@@ -1,7 +1,7 @@
 #====================================================
 # OverlayHD Skin Manager
-# Version Date - 28-Mar-2016
-# Version Number - 1.46
+# Version Date - 30-Mar-2016
+# Version Number - 1.47
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
@@ -303,6 +303,10 @@ font_elements = [
 	("FAVServiceFont", "NemesisFlatline", text_font_choices),
 	("FixedFont", "MPluss1M", fixed_font_choices),
 	("HelpFont", "NemesisFlatline", text_font_choices),
+	("InfoDescriptionFont", "NemesisFlatline", text_font_choices),
+	("InfoEventFont", "NemesisFlatline", text_font_choices),
+	("InfoOtherFont", "NemesisFlatline", text_font_choices),
+	("InfoTimeFont", "NemesisFlatline", text_font_choices),
 	("MenuFont", "NemesisFlatline", text_font_choices),
 	("SMSHelperFont", "MPluss1M", fixed_font_choices),
 	("Regular", "NemesisFlatline", text_font_choices),
@@ -1092,5 +1096,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.46", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.47", icon="OverlayHD.png", fnc=main))
 	return list
