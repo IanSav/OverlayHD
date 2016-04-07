@@ -50,13 +50,15 @@
 				}
 			</convert>
 		</widget>
-		<!-- <ePixmap pixmap="icons/mp_buttons.png" position="146,620" size="109,13" alphatest="on" transparent="1" /> -->
+		<!--
+		<ePixmap pixmap="icons/mp_buttons.png" position="146,620" size="109,13" alphatest="on" transparent="1" />
+		-->
 		<ePixmap pixmap="icons/icon_rewind.png" position="80,620" size="36,36" alphatest="on" transparent="1" />
 		<ePixmap pixmap="icons/icon_play.png" position="130,620" size="36,36" alphatest="on" transparent="1" />
 		<ePixmap pixmap="icons/icon_pause.png" position="180,620" size="36,36" alphatest="on" transparent="1" />
 		<ePixmap pixmap="icons/icon_forward.png" position="230,620" size="36,36" alphatest="on" transparent="1" />
 		<ePixmap pixmap="icons/icon_stop.png" position="280,620" size="36,36" alphatest="on" transparent="1" />
-		<widget name="Video" position="400,80" size="830,467" />
+		<widget name="Video" position="400,80" size="830,467" backgroundColor="TransparentBackground" />
 		<widget source="session.CurrentService" render="Label" position="400,560" size="830,25" backgroundColor="TextBackground" font="Regular;20" halign="center" transparent="1" valign="center">
 			<convert type="ServiceName">Name</convert>
 		</widget>
