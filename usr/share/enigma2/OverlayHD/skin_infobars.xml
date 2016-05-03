@@ -91,6 +91,9 @@
 
 	<screen name="InfoBar" title="TV Information Bar" position="0,0" size="1280,720" backgroundColor="TransparentBackground" flags="wfNoBorder">
 		<panel name="InfoBarCommon" />
+		<widget name="serviceName" position="0,0" size="0,0" transparent="1" />
+		<widget name="serviceName1" position="0,0" size="0,0" transparent="1" />
+		<widget name="serviceNumber" position="0,0" size="0,0" transparent="1" />
 	</screen>
 
 <!-- OK > OK - Second TV InfoBar With Now/Next Extended Information -->
@@ -103,7 +106,10 @@
 		<panel position="650,160" size="580,380">
 			<panel name="SecondInfoBarNext" />
 		</panel>
-		<widget name="serviceNumber1" position="0,0" size="0,0" font="Regular;20" transparent="1" />
+		<widget name="serviceName" position="0,0" size="0,0" transparent="1" />
+		<widget name="serviceName1" position="0,0" size="0,0" transparent="1" />
+		<widget name="serviceNumber" position="0,0" size="0,0" transparent="1" />
+		<widget name="serviceNumber1" position="0,0" size="0,0" transparent="1" />
 	</screen>
 
 <!-- Common parts of TV infobars -->
@@ -220,9 +226,6 @@
 		<panel position="917,690" size="353,20">
 			<panel name="ChannelFormatPanel" />
 		</panel>
-		<widget name="serviceName" position="0,0" size="0,0" font="Regular;20" transparent="1" />
-		<widget name="serviceName1" position="0,0" size="0,0" font="Regular;20" transparent="1" />
-		<widget name="serviceNumber" position="0,0" size="0,0" font="Regular;20" transparent="1" />
 	</screen>
 
 <!-- Second TV InfoBar "Now" Extended Information -->
