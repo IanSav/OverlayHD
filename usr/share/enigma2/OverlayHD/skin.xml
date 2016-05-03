@@ -312,6 +312,7 @@
 		<alias name="DescriptionFont" font="NemesisFlatline" size="20" height="25" width="18" />
 		<alias name="EPGEventFont" font="NemesisFlatline" size="20" height="25" width="18" />
 		<alias name="EPGServiceFont" font="NemesisFlatline" size="20" height="25" width="18" />
+		<alias name="EPGTimeLineFont" font="NemesisFlatline" size="20" height="25" width="18" />
 		<alias name="FAVEventFont" font="NemesisFlatline" size="20" height="25" width="18" />
 		<alias name="FAVLCNFont" font="NemesisFlatline" size="20" height="25" width="18" />
 		<alias name="FAVServiceFont" font="NemesisFlatline" size="20" height="25" width="18" />
