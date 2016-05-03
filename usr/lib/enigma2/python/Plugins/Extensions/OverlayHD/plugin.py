@@ -1,7 +1,7 @@
 #====================================================
 # OverlayHD Skin Manager
-# Version Date - 10-Apr-2016
-# Version Number - 1.50
+# Version Date - 16-Apr-2016
+# Version Number - 1.51
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
@@ -19,10 +19,10 @@ from Screens.Screen import Screen
 from Screens.Setup import Setup
 from Screens.Standby import TryQuitMainloop
 from Screens.VirtualKeyBoard import VirtualKeyBoard
-from Tools.Directories import resolveFilename, SCOPE_CURRENT_SKIN, SCOPE_CURRENT_PLUGIN
+from Tools.Directories import resolveFilename, SCOPE_CONFIG, SCOPE_CURRENT_SKIN, SCOPE_CURRENT_PLUGIN
 from enigma import eEnv, gRGB
 from os import listdir, remove, symlink, unlink
-from os.path import exists, isdir, islink
+from os.path import exists, isdir, isfile, islink
 from skin import dom_screens, colorNames, reloadWindowstyles, fonts
 import errno, shutil
 import xml.etree.cElementTree
@@ -671,7 +671,7 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 		}, description=_("Theme Functions"))
 
 		self["themes"] = List()
-		self.filename = resolveFilename(SCOPE_CURRENT_PLUGIN, "Extensions/OverlayHD/themes.xml")
+		self.filename = resolveFilename(SCOPE_CONFIG, "OverlayHD_themes.xml")
 		self.dom_themes = None
 		try:
 			chan = open(self.filename, "r")
@@ -1065,13 +1065,21 @@ def applySkinSettings():
 
 def updateOverlayHD():
 	# This code is used to ensure that older environments are brought up to current requirements...
-	pass
-	# Rename "config.OverlayHD." settings to "config.plugins.skin.OverlayHD." settings...
-	# sed -i -e 's/^config\.OverlayHD\./config.plugins.skin.OverlayHD./' settings
 	# Remove the old settings conversion program...
-	# rm /usr/lib/enigma2/python/Plugins/Extensions/OverlayHD/OverlayHD_Update
-	# Remove the original themes.xml template...
-	# rm /usr/lib/enigma2/python/Plugins/Extensions/OverlayHD/themes.xml
+	src = resolveFilename(SCOPE_CURRENT_PLUGIN, "Extensions/OverlayHD/OverlayHD_Update")
+	if isfile(src):
+		remove(src)
+		print "[OverlayHD] Defunct settings converter deleted."
+	# Relocate and remove the original themes.xml template...
+	src = resolveFilename(SCOPE_CURRENT_PLUGIN, "Extensions/OverlayHD/themes.xml")
+	dst = resolveFilename(SCOPE_CONFIG, "OverlayHD_themes.xml")
+	if isfile(src):
+		if not isfile(dst):
+			shutil.move(src, dst)
+			print "[OverlayHD] Themes file moved to new location."
+		else:
+			remove(src)
+			print "[OverlayHD] Default themes file deleted."
 
 def start_menu_main(menuid, **kwargs):
 	if menuid == "system":
@@ -1096,5 +1104,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.50", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.51", icon="OverlayHD.png", fnc=main))
 	return list
