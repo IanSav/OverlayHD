@@ -19,6 +19,9 @@
 		<item level="0" text="Banner clock colour" description="Choose a colour for the banner clock display." requires="config.plugins.skin.OverlayHD.GeneralSettings">config.plugins.skin.OverlayHD.BannerClock</item>
 		<item level="0" text="Banner title colour" description="Choose a colour for the banner title display." requires="config.plugins.skin.OverlayHD.GeneralSettings">config.plugins.skin.OverlayHD.BannerTitle</item>
 		<item level="0" text="Pinstripe colour" description="Choose a colour for all pinstripes." requires="config.plugins.skin.OverlayHD.GeneralSettings">config.plugins.skin.OverlayHD.Pinstripe</item>
+		<item level="0" text="Pinstripe on KeyError colour" description="Choose a colour for the KeyError pop up pinstripe." requires="config.plugins.skin.OverlayHD.GeneralSettings">config.plugins.skin.OverlayHD.PinstripeKeyError</item>
+		<item level="0" text="Pinstripe on Mute colour" description="Choose a colour for the Mute pop up pinstripe." requires="config.plugins.skin.OverlayHD.GeneralSettings">config.plugins.skin.OverlayHD.PinstripeMute</item>
+		<item level="0" text="Pinstripe on Volume colour" description="Choose a colour for the Volume control pop up pinstripe." requires="config.plugins.skin.OverlayHD.GeneralSettings">config.plugins.skin.OverlayHD.PinstripeVolume</item>
 		<item level="1" text="Scrollbar colour" description="Choose a colour for all scrollbars." requires="config.plugins.skin.OverlayHD.GeneralSettings">config.plugins.skin.OverlayHD.Scrollbar</item>
 		<item level="0" text="Volume control background colour" description="Choose a colour for the volume control background." requires="config.plugins.skin.OverlayHD.GeneralSettings">config.plugins.skin.OverlayHD.VolumeBackground</item>
 		<item level="0" text="Volume control colour" description="Choose a colour for the volume control slider bar." requires="config.plugins.skin.OverlayHD.GeneralSettings">config.plugins.skin.OverlayHD.VolumeColour</item>
