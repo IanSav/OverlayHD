@@ -139,14 +139,14 @@
 		<widget source="ServiceEvent" render="Label" position="1120,212" size="110,17" backgroundColor="InfoBackground" font="InfoOtherFont;14" foregroundColor="InfoBroadcaster" halign="right" transparent="1">
 			<convert type="ServiceName2">%F</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="820,230" size="60,20" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" transparent="1">
+		<widget source="ServiceEvent" render="Label" position="820,230" size="90,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" noWrap="1" transparent="1">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Progress" position="880,238" size="290,6" backgroundColor="InfoProgressBackground" borderColor="InfoProgressBorder" borderWidth="1" foregroundColor="InfoProgressColour" transparent="0">
+		<widget source="ServiceEvent" render="Progress" position="910,238" size="230,6" backgroundColor="InfoProgressBackground" borderColor="InfoProgressBorder" borderWidth="1" foregroundColor="InfoProgressColour" transparent="0">
 			<convert type="EventTime">Progress</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="1170,230" size="60,20" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" halign="right" transparent="1">
+		<widget source="ServiceEvent" render="Label" position="1140,230" size="90,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" halign="right" noWrap="1" transparent="1">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
@@ -154,13 +154,13 @@
 		<widget source="ServiceEvent" render="Label" position="730,260" size="500,24" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoProgramNow" transparent="1">
 			<convert type="EventName">NowName</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="710,294" size="80,24" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
+		<widget source="ServiceEvent" render="Label" position="730,294" size="80,24" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
 			<convert type="EventName">SmallRating</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="790,294" size="446,24" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" halign="right" transparent="1">
+		<widget source="ServiceEvent" render="Label" position="810,294" size="420,24" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" halign="right" transparent="1">
 			<convert type="EventName">Genre</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="710,330" size="526,256" backgroundColor="InfoBackground" font="InfoDescriptionFont;20" foregroundColor="InfoDetailsNow" halign="block" transparent="1"><!-- size="526,270" -->
+		<widget source="ServiceEvent" render="Label" position="710,330" size="520,210" backgroundColor="InfoBackground" font="InfoDescriptionFont;20" foregroundColor="InfoDetailsNow" halign="block" transparent="1"><!-- size="526,270" -->
 			<convert type="EventName">FullDescription,Trimmed,Separated</convert>
 		</widget>
 
