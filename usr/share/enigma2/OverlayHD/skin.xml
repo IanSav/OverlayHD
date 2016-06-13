@@ -439,7 +439,7 @@
 	<screen name="ClockBannerPanelAnalogue" title="Current Time Analogue" flags="wfNoBorder">
 		<ePixmap pixmap="icons/clock.png" position="0,4" size="14,14" alphatest="blend" />
 		<widget source="global.CurrentTime" render="Label" position="25,0" size="280,25" borderColor="BannerBorder" borderWidth="1" font="ClockFont;20" foregroundColor="BannerClock" transparent="1">
-			<convert type="ClockToText">Format:%a %e-%b-%Y  %-I:%M %p</convert>
+			<convert type="ClockToText">Format:%a %e-%b-%Y  %-I:%M %P</convert>
 		</widget>
 	</screen>
 
@@ -1450,7 +1450,7 @@
 			<convert type="ClockToText">Format::%S</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="1200,35" size="50,28" backgroundColor="TextBackground" font="Regular;26" foregroundColor="BannerClockTime" halign="right" transparent="1" valign="top" zPosition="+1">
-			<convert type="ClockToText">Format:%p</convert>
+			<convert type="ClockToText">Format:%P</convert>
 		</widget>
 	</screen>
 
