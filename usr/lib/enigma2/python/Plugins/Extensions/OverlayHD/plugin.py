@@ -1,7 +1,7 @@
 #====================================================
 # OverlayHD Skin Manager
-# Version Date - 16-Apr-2016
-# Version Number - 1.51
+# Version Date - 11-May-2016
+# Version Number - 1.52
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
@@ -126,6 +126,9 @@ colour_elements = [
 	("PictureLabel", "DullGreen", None),
 	("PictureLabelBorder", "Black", None),
 	("Pinstripe", "DavysGrey", None),
+	("PinstripeKeyError", "DavysGrey", None),
+	("PinstripeMute", "DavysGrey", None),
+	("PinstripeVolume", "DavysGrey", None),
 	("Resolution", "Silver", None),
 	("ResolutionBackground", "Background", "Background"),
 	("ScreenBackground", "Black", "0x3f000000"),
@@ -1104,5 +1107,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.51", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.52", icon="OverlayHD.png", fnc=main))
 	return list
