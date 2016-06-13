@@ -1,7 +1,7 @@
 #====================================================
 # OverlayHD Skin Manager
-# Version Date - 18-May-2016
-# Version Number - 1.54
+# Version Date - 12-Jun-2016
+# Version Number - 1.55
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
@@ -335,9 +335,8 @@ button_choices = [
 ]
 
 clock_choices = [
-	("24Hour", _("Digital (24 Hour)")),
-	("12Hour", _("Digital (12 Hour)")),
-	("Analogue", _("Analogue (12 Hour)"))
+	("Analogue", _("Analogue")),
+	("Digital", _("Digital"))
 ]
 
 epg_choices = [
@@ -381,7 +380,6 @@ button_screens = [
 ]
 
 clock_screens = [
-	"ClockBannerPanel",
 	"ScreenTemplateClock"
 ]
 
@@ -1121,5 +1119,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.54", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.55", icon="OverlayHD.png", fnc=main))
 	return list
