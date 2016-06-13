@@ -207,6 +207,9 @@
 		<color name="PictureLabel" value="DullGreen" />
 		<color name="PictureLabelBorder" value="Black" />
 		<color name="Pinstripe" value="DavysGrey" />
+		<color name="PinstripeKeyError" value="DavysGrey" />
+		<color name="PinstripeMute" value="DavysGrey" />
+		<color name="PinstripeVolume" value="DavysGrey" />
 
 		<color name="Resolution" value="Silver" />
 		<color name="ResolutionBackground" value="ScreenBackground" />
@@ -1723,20 +1726,20 @@
 	-->
 
 	<screen name="Mute" title="Mute" position="20,10" size="50,50" backgroundColor="StatusBackground" flags="wfNoBorder" zPosition="+99">
-		<eLabel position="0,0" size="50,2" backgroundColor="Pinstripe" zPosition="+1" />
-		<eLabel position="0,48" size="50,2" backgroundColor="Pinstripe" zPosition="+1" />
-		<eLabel position="0,0" size="2,50" backgroundColor="Pinstripe" zPosition="+1" />
-		<eLabel position="48,0" size="2,50" backgroundColor="Pinstripe" zPosition="+1" />
+		<eLabel position="0,0" size="50,2" backgroundColor="PinstripeMute" zPosition="+1" />
+		<eLabel position="0,48" size="50,2" backgroundColor="PinstripeMute" zPosition="+1" />
+		<eLabel position="0,0" size="2,50" backgroundColor="PinstripeMute" zPosition="+1" />
+		<eLabel position="48,0" size="2,50" backgroundColor="PinstripeMute" zPosition="+1" />
 		<ePixmap pixmap="images/mute_50x50.png" position="0,0" size="50,50" alphatest="on" transparent="1" />
 	</screen>
 
 <!-- Volume -->
 
 	<screen name="Volume" title="Volume" position="397,50" size="485,78" backgroundColor="StatusBackground" flags="wfNoBorder" zPosition="+99">
-		<eLabel position="0,0" size="485,2" backgroundColor="Pinstripe" zPosition="+2" />
-		<eLabel position="0,76" size="485,2" backgroundColor="Pinstripe" zPosition="+2" />
-		<eLabel position="0,0" size="2,78" backgroundColor="Pinstripe" zPosition="+2" />
-		<eLabel position="484,0" size="2,78" backgroundColor="Pinstripe" zPosition="+2" />
+		<eLabel position="0,0" size="485,2" backgroundColor="PinstripeVolume" zPosition="+2" />
+		<eLabel position="0,76" size="485,2" backgroundColor="PinstripeVolume" zPosition="+2" />
+		<eLabel position="0,0" size="2,78" backgroundColor="PinstripeVolume" zPosition="+2" />
+		<eLabel position="484,0" size="2,78" backgroundColor="PinstripeVolume" zPosition="+2" />
 		<ePixmap pixmap="images/volume.png" position="0,0" size="485,78" alphatest="on" transparent="1" zPosition="+1" />
 		<widget name="Volume" position="63,25" size="335,30" backgroundColor="VolumeBackground" foregroundColor="VolumeColour" transparent="0" />
 	</screen>
@@ -1744,10 +1747,10 @@
 <!-- Key / Button Error -->
 
 	<screen name="UnhandledKey" title="UnhandledKey" position="590,50" size="100,100" backgroundColor="StatusBackground" flags="wfNoBorder" zPosition="+99">
-		<eLabel position="0,0" size="100,2" backgroundColor="Pinstripe" zPosition="+1" />
-		<eLabel position="0,98" size="100,2" backgroundColor="Pinstripe" zPosition="+1" />
-		<eLabel position="0,0" size="2,100" backgroundColor="Pinstripe" zPosition="+1" />
-		<eLabel position="98,0" size="2,100" backgroundColor="Pinstripe" zPosition="+1" />
+		<eLabel position="0,0" size="100,2" backgroundColor="PinstripeKeyError" zPosition="+1" />
+		<eLabel position="0,98" size="100,2" backgroundColor="PinstripeKeyError" zPosition="+1" />
+		<eLabel position="0,0" size="2,100" backgroundColor="PinstripeKeyError" zPosition="+1" />
+		<eLabel position="98,0" size="2,100" backgroundColor="PinstripeKeyError" zPosition="+1" />
 		<widget name="UnhandledKeyPixmap" pixmap="images/unhandled-key.png" position="0,0" size="100,100" alphatest="on" transparent="1" />
 	</screen>
 
