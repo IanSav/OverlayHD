@@ -26,14 +26,15 @@
 <!-- NUMBER - Direct Channel Number Zap -->
 
 	<screen name="NumberZap" title="Channel Zap..." position="center,center" size="260,79" backgroundColor="ScreenBackground"> <!--460,300-->
-		<widget name="channel" position="10,15" size="110,25" backgroundColor="InfoBackground" font="Regular;22" foregroundColor="InfoLCN" transparent="1" valign="center" />
+		<widget name="channel" position="10,15" size="110,25" backgroundColor="InfoBackground" font="Regular;22" foregroundColor="TextLabel" transparent="1" valign="center" />
 		<widget name="number" position="170,15" size="80,25" backgroundColor="InfoBackground" font="Regular;22" foregroundColor="InfoLCN" halign="right" transparent="1" valign="center" />
 		<widget name="servicename" position="10,45" size="240,25" backgroundColor="InfoBackground" font="Regular;22" foregroundColor="InfoChannel" halign="right" transparent="1" valign="center" />
 	</screen>
 
 <!-- BACK | PREV | NEXT - History Zap Menu -->
 
-	<screen name="HistoryZapSelectorOld" title="History Zap..." position="center,center" size="350,240" backgroundColor="ScreenBackground">
+	<!--
+	<screen name="HistoryZapSelector" title="History Zap..." position="center,center" size="350,240" backgroundColor="ScreenBackground">
 		<widget source="menu" render="Listbox" position="0,0" size="350,240" scrollbarMode="showOnDemand" transparent="1" zPosition="2">
 			<convert type="TemplatedMultiContent">
 				{
@@ -48,6 +49,7 @@
 			</convert>
 		</widget>
 	</screen>
+	-->
 
 	<screen name="HistoryZapSelector" title="History Zap..." position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
@@ -59,10 +61,10 @@
 				"template":
 					[
 					MultiContentEntryPixmapAlphaBlend(pos=(20, 10), size=(100, 60), png=6, flags = BT_SCALE),
-					MultiContentEntryText(pos = (140, 10), size = (670, 22), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 2, color = "EPGChannel", color_sel = "EPGChannelSelected"),
+					MultiContentEntryText(pos = (140, 10), size = (670, 22), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 2, color = "InfoChannel", color_sel = "InfoChannelSelected"),
 					MultiContentEntryText(pos = (125, 32), size = (10, 20), font = 2, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1),
-					MultiContentEntryText(pos = (140, 32), size = (670, 20), font = 2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3, color = "EPGProgram", color_sel = "EPGProgramSelected"),
-					MultiContentEntryText(pos = (140, 52), size = (670, 20), font = 3, flags = RT_HALIGN_LEFT, text = 5, color = "EPGTimes", color_sel = "EPGTimesSelected"),
+					MultiContentEntryText(pos = (140, 32), size = (670, 20), font = 2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3, color = "InfoProgramNow", color_sel = "InfoProgramSelected"),
+					MultiContentEntryText(pos = (140, 52), size = (670, 20), font = 3, flags = RT_HALIGN_LEFT, text = 5, color = "InfoTimesNow", color_sel = "InfoTimesSelected"),
 					],
 				"fonts": [gFont("Regular", 22), gFont("Regular", 20), gFont("Regular", 17), gFont("Regular", 16)],
 				"itemHeight": 80
@@ -155,7 +157,7 @@
 		<widget source="ServiceEvent" render="Label" position="710,294" size="80,24" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
 			<convert type="EventName">SmallRating</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="790,294" size="446,24" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" halign="right" transparent="1">
+		<widget source="ServiceEvent" render="Label" position="790,294" size="446,24" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" halign="right" transparent="1">
 			<convert type="EventName">Genre</convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="710,330" size="526,256" backgroundColor="InfoBackground" font="InfoDescriptionFont;20" foregroundColor="InfoDetailsNow" halign="block" transparent="1"><!-- size="526,270" -->
@@ -228,8 +230,7 @@
 		<widget name="list" position="0,0" size="560,420" backgroundColor="black" foregroundColorEvent="event-frgrnd" foregroundColorEventSelected="#00202020" foregroundColorServiceNotAvail="verydarkgrey" serviceItemHeight="30" serviceNumberFont="Regular;24" serviceNameFont="Regular;24" serviceInfoFont="Bold;21" transparent="1" zPosition="3" scrollbarMode="showOnDemand"/>
 		<widget source="ServiceEvent" render="Label" position="10,420" zPosition="2" size="60,25" font="Bold;22" backgroundColor="black" halign="right" noWrap="1" valign="top" foregroundColor="orange" transparent="1">
 			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">
-			</convert>
+			<convert type="ClockToText">Default</convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="75,420" zPosition="2" size="73,25" font="Bold;22" backgroundColor="black" noWrap="1" valign="top" foregroundColor="orange" transparent="1">
 			<convert type="EventTime">EndTime</convert>

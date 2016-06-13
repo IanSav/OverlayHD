@@ -11,32 +11,32 @@
 <!-- Panel To Display Wide EPG Event Information (1180 x 125 pixels) -->
 
 	<screen name="EPGEventInfoPanel" title="EPG Event Info" flags="wfNoBorder">
-		<widget source="Event" render="Label" position="0,0" size="1180,30" backgroundColor="EPGBackground" font="InfoEventFont;25" foregroundColor="EPGProgram" noWrap="1" transparent="1">
+		<widget source="Event" render="Label" position="0,0" size="1180,30" backgroundColor="InfoBackground" font="InfoEventFont;25" foregroundColor="InfoProgramNow" noWrap="1" transparent="1">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="Event" render="Label" position="0,30" size="80,25" backgroundColor="EPGBackground" font="InfoTimeFont;20" foregroundColor="EPGTimes" transparent="1">
+		<widget source="Event" render="Label" position="0,30" size="80,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" transparent="1">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<eLabel text="-" position="80,30" size="20,25" backgroundColor="EPGBackground" font="InfoTimeFont;20" foregroundColor="EPGTimes" halign="center" transparent="1" />
-		<widget source="Event" render="Label" position="105,30" size="80,25" backgroundColor="EPGBackground" font="InfoTimeFont;20" foregroundColor="EPGTimes" halign="right" transparent="1">
+		<eLabel text="-" position="80,30" size="20,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" halign="center" transparent="1" />
+		<widget source="Event" render="Label" position="105,30" size="80,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" halign="right" transparent="1">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="Event" render="Label" position="200,30" size="180,25" backgroundColor="EPGBackground" font="InfoTimeFont;20" foregroundColor="EPGDuration" halign="right" noWrap="1" transparent="1">
+		<widget source="Event" render="Label" position="200,30" size="180,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" halign="right" noWrap="1" transparent="1">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
-		<widget source="Event" render="Label" position="400,30" size="40,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="EPGRating" transparent="1">
+		<widget source="Event" render="Label" position="400,30" size="40,25" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
 			<convert type="EventName">SmallRating</convert>
 		</widget>
-		<widget source="Event" render="Label" position="460,30" size="340,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="EPGRating" transparent="1">
+		<widget source="Event" render="Label" position="460,30" size="340,25" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
 			<convert type="EventName">Rating</convert>
 		</widget>
-		<widget source="Event" render="Label" position="800,30" size="380,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="EPGRating" halign="right" transparent="1">
+		<widget source="Event" render="Label" position="800,30" size="380,25" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" halign="right" transparent="1">
 			<convert type="EventName">Genre</convert>
 		</widget>
-		<widget source="Event" render="Label" position="0,55" size="1180,70" backgroundColor="EPGBackground" font="InfoDescriptionFont;20" foregroundColor="EPGDetails" halign="block" transparent="1">
+		<widget source="Event" render="Label" position="0,55" size="1180,70" backgroundColor="InfoBackground" font="InfoDescriptionFont;20" foregroundColor="InfoDetailsNow" halign="block" transparent="1">
 			<convert type="EventName">FullDescription,Trimmed,NotSeparated</convert>
 		</widget>
 		<widget name="bouquetlist" position="0,0" size="1180,125" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="bouquetlist" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" zPosition="+1" />
@@ -45,29 +45,29 @@
 <!-- Panel To Display Narrow EPG Event Information (860 x 175 pixels) -->
 
 	<screen name="EPGEventInfoPIGPanel" title="PIG EPG Event Info" flags="wfNoBorder">
-		<widget source="Event" render="Label" position="0,0" size="860,30" backgroundColor="EPGBackground" font="InfoEventFont;25" foregroundColor="EPGProgram" noWrap="1" transparent="1">
+		<widget source="Event" render="Label" position="0,0" size="860,30" backgroundColor="EPGBackground" font="InfoEventFont;25" foregroundColor="InfoProgramNow" noWrap="1" transparent="1">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="Event" render="Label" position="0,30" size="80,25" backgroundColor="EPGBackground" font="InfoTimeFont;20" foregroundColor="EPGTimes" transparent="1">
+		<widget source="Event" render="Label" position="0,30" size="80,25" backgroundColor="EPGBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" transparent="1">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<eLabel text="-" position="80,30" size="20,25" backgroundColor="EPGBackground" font="InfoTimeFont;20" foregroundColor="EPGTimes" halign="center" transparent="1" />
-		<widget source="Event" render="Label" position="105,30" size="80,25" backgroundColor="EPGBackground" font="InfoTimeFont;20" foregroundColor="EPGTimes" halign="right" transparent="1">
+		<eLabel text="-" position="80,30" size="20,25" backgroundColor="EPGBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" halign="center" transparent="1" />
+		<widget source="Event" render="Label" position="105,30" size="80,25" backgroundColor="EPGBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" halign="right" transparent="1">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="Event" render="Label" position="200,30" size="180,25" backgroundColor="EPGBackground" font="InfoTimeFont;20" foregroundColor="EPGDuration" halign="right" noWrap="1" transparent="1">
+		<widget source="Event" render="Label" position="200,30" size="180,25" backgroundColor="EPGBackground" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" halign="right" noWrap="1" transparent="1">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
-		<widget source="Event" render="Label" position="400,30" size="40,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="EPGRating" transparent="1">
+		<widget source="Event" render="Label" position="400,30" size="40,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
 			<convert type="EventName">SmallRating</convert>
 		</widget>
-		<widget source="Event" render="Label" position="460,30" size="400,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="EPGRating" halign="right" transparent="1">
+		<widget source="Event" render="Label" position="460,30" size="400,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" halign="right" transparent="1">
 			<convert type="EventName">Genre</convert>
 		</widget>
-		<widget source="Event" render="Label" position="0,55" size="860,118" backgroundColor="EPGBackground" font="InfoDescriptionFont;20" foregroundColor="EPGDetails" halign="block" transparent="1">
+		<widget source="Event" render="Label" position="0,55" size="860,118" backgroundColor="EPGBackground" font="InfoDescriptionFont;20" foregroundColor="InfoDetailsNow" halign="block" transparent="1">
 			<convert type="EventName">FullDescription,Trimmed,NotSeparated</convert>
 		</widget>
 		<widget name="bouquetlist" position="0,0" size="860,175" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="bouquetlist" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" zPosition="+1" />
@@ -76,7 +76,7 @@
 <!-- Panel To Display EPG Time Line Bar (1180 x 30 pixels) -->
 
 	<screen name="EPGTimeLinePanel" title="Time Line" flags="wfNoBorder">
-		<widget name="timeline_text" position="0,0" size="1180,30" TimelineTicksOn="yes" TimelineTickAlignment="center" TimelineTextPadding="2" backgroundColor="TextBackground" borderWidth="0" font="EPGTimeLineFont;20" foregroundColor="EPGTimeLine" transparent="1" />
+		<widget name="timeline_text" position="0,0" size="1180,30" TimelineTicksOn="yes" TimelineTickAlignment="center" TimelineTextPadding="2" backgroundColor="EPGBackground" borderWidth="0" font="EPGTimeLineFont;20" foregroundColor="EPGTimeLine" transparent="1" />
 		<widget name="timeline0" position="0,22" size="2,7" pixmap="epg/timeline-tick.png" alphatest="blend" zPosition="+1" />
 		<widget name="timeline1" position="0,22" size="2,7" pixmap="epg/timeline-tick.png" alphatest="blend" zPosition="+1" />
 		<widget name="timeline2" position="0,22" size="2,7" pixmap="epg/timeline-tick.png" alphatest="blend" zPosition="+1" />
@@ -232,23 +232,23 @@
 			<convert type="EventName">Name</convert>
 		</widget>
 		<widget name="bouquetlist" position="730,365" size="500,290" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" zPosition="+1" />
-		<widget source="Event" render="Label" position="730,365" size="500,30" backgroundColor="EPGBackground" font="InfoEventFont;25" foregroundColor="EPGProgram" noWrap="1" transparent="1">
+		<widget source="Event" render="Label" position="730,365" size="500,30" backgroundColor="EPGBackground" font="InfoEventFont;25" foregroundColor="InfoProgramNow" noWrap="1" transparent="1">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="Event" render="Label" position="730,395" size="500,185" backgroundColor="EPGBackground" font="InfoDescriptionFont;20" foregroundColor="EPGDetails" transparent="1">
+		<widget source="Event" render="Label" position="730,395" size="500,185" backgroundColor="EPGBackground" font="InfoDescriptionFont;20" foregroundColor="InfoDetailsNow" transparent="1">
 			<convert type="EventName">FullDescription,Trimmed,NotSeparated</convert>
 		</widget>
 		<widget source="Service" render="PiconBg" position="730,590" size="104,64" alphatest="blend" transparent="1" />
 		<widget source="Service" render="Picon" position="732,592" size="100,60" alphatest="blend" transparent="1">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-		<widget source="Event" render="Label" position="850,595" size="320,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="EPGRating" transparent="1">
+		<widget source="Event" render="Label" position="850,595" size="320,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
 			<convert type="EventName">Rating</convert>
 		</widget>
-		<widget source="Event" render="Label" position="1190,595" size="40,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="EPGRating" halign="right" transparent="1">
+		<widget source="Event" render="Label" position="1190,595" size="40,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" halign="right" transparent="1">
 			<convert type="EventName">SmallRating</convert>
 		</widget>
-		<widget source="Event" render="Label" position="850,625" size="380,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="EPGRating" transparent="1">
+		<widget source="Event" render="Label" position="850,625" size="380,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" transparent="1">
 			<convert type="EventName">Genre</convert>
 		</widget>
 	</screen>

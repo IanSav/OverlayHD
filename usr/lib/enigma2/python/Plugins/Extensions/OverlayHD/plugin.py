@@ -1,7 +1,7 @@
 #====================================================
 # OverlayHD Skin Manager
-# Version Date - 12-May-2016
-# Version Number - 1.53
+# Version Date - 18-May-2016
+# Version Number - 1.54
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
@@ -38,25 +38,25 @@ colour_elements = [
 	("BannerClockTime", "White", None),
 	("BannerTitle", "White", None),
 	("EPGBackground", "Black", None),
-	("EPGChannel", "LightBlue", None),
-	("EPGChannelSelected", "Blue", None),
-	("EPGDetails", "White", None),
-	("EPGDuration", "Grey", None),
+	("EPGChannel", "White", None),					# To be deleted!
+	("EPGChannelSelected", "White", None),				# To be deleted!
+	("EPGDetails", "White", None),					# To be deleted!
+	("EPGDuration", "White", None),					# To be deleted!
 	("EPGGridBackground", "Orange", None),
 	("EPGGridBorder", "Black", None),
-	("EPGLCN", "LightBlue", None),
+	("EPGLCN", "White", None),					# To be deleted!
 	("EPGOverlayBorder", "Black", None),
 	("EPGOverlayColour", "WarmYellow", None),
-	("EPGProgram", "White", None),
-	("EPGProgramSelected", "White", None),
+	("EPGProgram", "White", None),					# To be deleted!
+	("EPGProgramSelected", "White", None),				# To be deleted!
 	("EPGProgressBackground", "DeepGrey", None),
 	("EPGProgressBorder", "WarmYellow", None),
 	("EPGProgressColour", "WarmYellow", None),
-	("EPGProvider", "LightBlue", None),
-	("EPGRating", "Grey", None),
+	("EPGProvider", "White", None),					# To be deleted!
+	("EPGRating", "White", None),					# To be deleted!
 	("EPGTimeLine", "Yellow", None),
-	("EPGTimes", "Grey", None),
-	("EPGTimesSelected", "Silver", None),
+	("EPGTimes", "White", None),					# To be deleted!
+	("EPGTimesSelected", "White", None),				# To be deleted!
 	("EPGTransparency", None, "Background"),
 	("EPGEntryBackgroundColor", "MidBlack", None),
 	("EPGEntryBackgroundColorSelected", "Grey", None),
@@ -93,20 +93,24 @@ colour_elements = [
 	("InfoBouquet", "LightBlue", None),
 	("InfoBroadcaster", "LightBlue", None),
 	("InfoChannel", "LightBlue", None),
+	("InfoChannelSelected", "Blue", None),
 	("InfoDetailsNext", "White", None),
 	("InfoDetailsNow", "White", None),
 	("InfoDiskStats", "DullYellow", None),
 	("InfoDurationNext", "LightBlue", None),
 	("InfoDurationNow", "LightBlue", None),
-	("InfoFileSizeNext", "LightBlue", None),
-	("InfoFileSizeNow", "LightBlue", None),
+	("InfoFileSize", "LightBlue", None),				# To be deleted!
+	("InfoGenreNext", "Grey", None),
+	("InfoGenreNow", "Grey", None),
 	("InfoLCN", "LightBlue", None),
+	("InfoMediaFileSize", "LightBlue", None),
 	("InfoMediaLength", "LightBlue", None),
 	("InfoMediaName", "LightBlue", None),
 	("InfoMediaPosition", "White", None),
 	("InfoMediaRemaining", "White", None),
 	("InfoProgramNext", "White", None),
 	("InfoProgramNow", "White", None),
+	("InfoProgramSelected", "White", None),
 	("InfoProgressBackground", "DeepGrey", None),
 	("InfoProgressBorder", "Grey", None),
 	("InfoProgressColour", "Green", None),
@@ -117,6 +121,7 @@ colour_elements = [
 	("InfoRecordingColour", "OrangeRed", None),
 	("InfoTimesNext", "Grey", None),
 	("InfoTimesNow", "Grey", None),
+	("InfoTimesSelected", "Silver", None),
 	("MenuBackground", "Background", "Background"),
 	("MenuDisabled", "Grey", None),
 	("MenuSelected", "DodgerBlue", "0x26000000"),
@@ -398,17 +403,23 @@ repaint_notifications = [
 	"BannerTitle",
 	"ButtonStyle",
 	"ClockStyle",
+	"EPGSettings",
+	"FontSettings",
 	"FootnoteBackgroundColour",
 	"FootnoteBackgroundTransparency",
 	"FootnoteText",
+	"GeneralSettings",
 	"HelpPress",
+	"InfoSettings",
 	"MenuBackgroundColour",
 	"MenuBackgroundTransparency",
 	"MenuDisabled",
 	"MenuSelectedColour",
 	"MenuSelectedTransparency",
+	"MenuSettings",
 	"MenuText",
 	"MenuTextSelected",
+	"PanelSettings",
 	"Pinstripe",
 	"ScreenBackgroundColour",
 	"ScreenBackgroundTransparency",
@@ -416,6 +427,7 @@ repaint_notifications = [
 	"Text",
 	"TextBackgroundColour",
 	"TextBackgroundTransparency",
+	"TextSettings",
 	"UseGroups",
 	"VolumeBackground",
 	"VolumeColour"
@@ -1082,6 +1094,9 @@ def updateOverlayHD():
 		else:
 			remove(src)
 			print "[OverlayHD] Default themes file deleted."
+	# Set defunct attributes to the default so they will be removed from the settings file...
+	for attr in ("EPGChannel", "EPGChannelSelected", "EPGDetails", "EPGDuration", "EPGLCN", "EPGProgram", "EPGProgramSelected", "EPGProvider", "EPGRating", "EPGTimes", "EPGTimesSelected", "InfoFileSize"):
+		getattr(config.plugins.skin.OverlayHD, attr).value = getattr(config.plugins.skin.OverlayHD, attr).default
 
 def start_menu_main(menuid, **kwargs):
 	if menuid == "system":
@@ -1106,5 +1121,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.53", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.54", icon="OverlayHD.png", fnc=main))
 	return list

@@ -98,26 +98,30 @@
  |		- EntryForegroundColorNow = "White"
  |		- EntryForegroundColorNowSelected = "Black"
  +-->
+<!--
+ |		These entries are flagged for deletion in the next release!
+ +--> 
+		<color name="EPGChannel" value="White" /><!-- To be deleted! -->
+		<color name="EPGChannelSelected" value="White" /><!-- To be deleted! -->
+		<color name="EPGDetails" value="White" /><!-- To be deleted! -->
+		<color name="EPGDuration" value="White" /><!-- To be deleted! -->
+		<color name="EPGLCN" value="White" /><!-- To be deleted! -->
+		<color name="EPGProgram" value="White" /><!-- To be deleted! -->
+		<color name="EPGProgramSelected" value="White" /><!-- To be deleted! -->
+		<color name="EPGProvider" value="White" /><!-- To be deleted! -->
+		<color name="EPGRating" value="White" /><!-- To be deleted! -->
+		<color name="EPGTimes" value="White" /><!-- To be deleted! -->
+		<color name="EPGTimesSelected" value="White" /><!-- To be deleted! -->
+
 		<color name="EPGBackground" value="Black" />
-		<color name="EPGChannel" value="LightBlue" />
-		<color name="EPGChannelSelected" value="Blue" />
-		<color name="EPGDetails" value="White" />
-		<color name="EPGDuration" value="Grey" />
 		<color name="EPGGridBackground" value="Orange" />
 		<color name="EPGGridBorder" value="Black" />
-		<color name="EPGLCN" value="White" />
 		<color name="EPGOverlayBorder" value="Black" />
 		<color name="EPGOverlayColour" value="WarmYellow" />
-		<color name="EPGProgram" value="White" />
-		<color name="EPGProgramSelected" value="White" />
 		<color name="EPGProgressBackground" value="DeepGrey" />
 		<color name="EPGProgressBorder" value="WarmYellow" />
 		<color name="EPGProgressColour" value="WarmYellow" />
-		<color name="EPGProvider" value="LightBlue" />
-		<color name="EPGRating" value="Grey" />
 		<color name="EPGTimeLine" value="Yellow" />
-		<color name="EPGTimes" value="Grey" />
-		<color name="EPGTimesSelected" value="Silver" />
 		<color name="EPGEntryBackgroundColor" value="MidBlack" />
 		<color name="EPGEntryBackgroundColorSelected" value="Grey" />
 		<color name="EPGEntryForegroundColor" value="White" />
@@ -172,20 +176,23 @@
 		<color name="InfoBouquet" value="LightBlue" />
 		<color name="InfoBroadcaster" value="LightBlue" />
 		<color name="InfoChannel" value="LightBlue" />
+		<color name="InfoChannelSelected" value="Blue" />
 		<color name="InfoDetailsNext" value="White" />
 		<color name="InfoDetailsNow" value="White" />
 		<color name="InfoDiskStats" value="DullYellow" />
 		<color name="InfoDurationNext" value="LightBlue" />
 		<color name="InfoDurationNow" value="LightBlue" />
-		<color name="InfoFileSizeNext" value="LightBlue" />
-		<color name="InfoFileSizeNow" value="LightBlue" />
+		<color name="InfoGenreNext" value="Grey" />
+		<color name="InfoGenreNow" value="Grey" />
 		<color name="InfoLCN" value="LightBlue" />
+		<color name="InfoMediaFileSize" value="LightBlue" />
 		<color name="InfoMediaLength" value="LightBlue" />
 		<color name="InfoMediaName" value="LightBlue" />
 		<color name="InfoMediaPosition" value="White" />
 		<color name="InfoMediaRemaining" value="White" />
 		<color name="InfoProgramNext" value="White" />
 		<color name="InfoProgramNow" value="White" />
+		<color name="InfoProgramSelected" value="White" />
 		<color name="InfoProgressBackground" value="DeepGrey" />
 		<color name="InfoProgressBorder" value="Grey" />
 		<color name="InfoProgressColour" value="Green" />
@@ -196,6 +203,7 @@
 		<color name="InfoRecordingColour" value="OrangeRed" />
 		<color name="InfoTimesNext" value="Grey" />
 		<color name="InfoTimesNow" value="Grey" />
+		<color name="InfoTimesSelected" value="Silver" />
 
 		<color name="MenuBackground" value="ScreenBackground" />
 		<color name="MenuDisabled" value="Grey" />
@@ -1082,9 +1090,9 @@
 				"template":
 					[
 					MultiContentEntryText(pos = (20, 0), size = (400, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2, color = "Text", color_sel = "TextSelected"),  # Timer name
-					MultiContentEntryText(pos = (440, 0), size = (360, 25), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 3, color = "EPGChannel", color_sel = "EPGChannelSelected"),  # Service name
-					MultiContentEntryText(pos = (20, 25), size = (400, 25), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0, color = "EPGProgram", color_sel = "EPGProgramSelected"),  # Event name
-					MultiContentEntryText(pos = (440, 25), size = (360, 25), font = 1, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4, color = "EPGTimes", color_sel = "EPGTimesSelected")  # Event time
+					MultiContentEntryText(pos = (440, 0), size = (360, 25), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 3, color = "InfoChannel", color_sel = "InfoChannelSelected"),  # Service name
+					MultiContentEntryText(pos = (20, 25), size = (400, 25), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0, color = "InfoProgramNow", color_sel = "InfoProgramSelected"),  # Event name
+					MultiContentEntryText(pos = (440, 25), size = (360, 25), font = 1, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4, color = "InfoTimesNow", color_sel = "InfoTimesSelected")  # Event time
 					],
 				 "fonts": [gFont("Regular", 20), gFont("Regular", 18)],
 				 "itemHeight": 50

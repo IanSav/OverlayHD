@@ -127,9 +127,9 @@
 		<widget name="movie_sort" position="775,607" size="35,20" pixmaps="icons/msels_az_31-1.png,icons/msels_31-1_az.png,icons/msels_shuffle.png,icons/msels_za_1-31.png,icons/msels_1-31_za.png,icons/msels_faz.png,icons/msels_fza.png,icons/msels_rec.png,icons/msels_az_1-31.png,icons/msels_za_31-1.png" alphatest="on" transparent="1" />
 		<widget name="movie_off" position="775,630" size="35,20" pixmaps="icons/msele_ask.png,icons/msele_movielist.png,icons/msele_quit.png,icons/msele_pause.png,icons/msele_playlist.png,icons/msele_playlistquit.png,icons/msele_loop.png,icons/msele_rep.png" alphatest="on" transparent="1" />
 		<!--
-		<eLabel text="Size:" position="830,80" size="45,25" font="Regular;20" foregroundColor="InfoFileSizeNow" transparent="1" />
+		<eLabel text="Size:" position="830,80" size="45,25" font="Regular;20" foregroundColor="InfoMediaFileSize" transparent="1" />
 		-->
-		<widget source="Service" render="Label" position="830,80" size="300,25" font="Regular;20" foregroundColor="InfoFileSizeNow" transparent="1">
+		<widget source="Service" render="Label" position="830,80" size="300,25" font="Regular;20" foregroundColor="InfoMediaFileSize" transparent="1">
 			<convert type="MovieInfo">FileSize</convert>
 		</widget>
 		<!--
@@ -148,7 +148,7 @@
 		<widget source="Service" render="Label" position="830,205" size="400,390" font="Regular;20" foregroundColor="InfoDetailsNow" halign="block" transparent="1">
 			<convert type="EventName">FullDescription,Separated,Trimmed</convert>
 		</widget>
-		<widget source="Service" render="Label" position="830,605" size="400,25" font="Regular;20" foregroundColor="InfoRatingNow" transparent="1">
+		<widget source="Service" render="Label" position="830,605" size="400,25" font="Regular;20" foregroundColor="InfoGenreNow" transparent="1">
 			<convert type="EventName">Genre</convert>
 		</widget>
 		<widget source="Service" render="Label" position="830,630" size="50,25" font="Regular;20" foregroundColor="InfoRatingNow" transparent="1">
@@ -173,7 +173,7 @@
 		<widget source="Service" render="Label" position="50,530" size="385,25" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoChannel" noWrap="1" transparent="1">
 			<convert type="MovieInfo">RecordServiceName</convert>
 		</widget>
-		<widget source="Service" render="Label" position="445,530" size="150,25" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoFileSizeNow" halign="right" transparent="1">
+		<widget source="Service" render="Label" position="445,530" size="150,25" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoMediaFileSize" halign="right" transparent="1">
 			<convert type="MovieInfo">FileSize</convert>
 		</widget>
 		<widget source="Service" render="Label" position="605,530" size="150,25" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoDurationNow" halign="right" transparent="1">
@@ -188,7 +188,7 @@
 		<widget name="TrashcanSize" position="1010,530" size="220,25" font="Regular;20" foregroundColor="InfoDiskStats" halign="right" transparent="1" />
 		<widget name="diskSize" position="1010,555" size="220,25" font="Regular;20" foregroundColor="InfoDiskStats" halign="right" transparent="1" />
 		<widget name="freeDiskSpace" position="775,580" size="455,25" font="Regular;20" foregroundColor="InfoDiskStats" halign="right" transparent="1" />
-		<widget source="Service" render="Label" position="775,605" size="400,25" font="Regular;20" foregroundColor="InfoRatingNow" transparent="1">
+		<widget source="Service" render="Label" position="775,605" size="400,25" font="Regular;20" foregroundColor="InfoGenreNow" transparent="1">
 			<convert type="EventName">Genre</convert>
 		</widget>
 		<widget source="Service" render="Label" position="775,630" size="50,25" font="Regular;20" foregroundColor="InfoRatingNow" transparent="1">
