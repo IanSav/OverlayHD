@@ -140,7 +140,7 @@
 			<convert type="ServiceName2">%F</convert>
 		</widget>
 		<!-- Service Name Area -->
-		<widget source="session.CurrentService" render="Label" position="182,575" size="577,30" backgroundColor="InfoBackground" font="InfoEventFont;24" foregroundColor="InfoChannel" transparent="1">
+		<widget source="session.CurrentService" render="Label" position="182,575" size="577,25" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoChannel" transparent="1" valign="top">
 			<convert type="ServiceName">Name</convert>
 		</widget>
 		<!-- Now Event Start & End Times, Event Name and Time Remaining Area -->
@@ -153,10 +153,10 @@
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="345,608" size="565,36" backgroundColor="InfoBackground" font="InfoEventFont;30" foregroundColor="InfoProgramNow" noWrap="1" transparent="1">
+		<widget source="session.Event_Now" render="Label" position="370,605" size="545,35" backgroundColor="InfoBackground" font="InfoEventFont;28" foregroundColor="InfoProgramNow" noWrap="1" transparent="1" valign="bottom" >
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="930,615" size="155,28" backgroundColor="InfoBackground" font="InfoTimeFont;21" foregroundColor="InfoDurationNow" halign="right" transparent="1">
+		<widget source="session.Event_Now" render="Label" position="925,615" size="160,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" halign="right" noWrap="1" transparent="1" valign="bottom" >
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
@@ -167,7 +167,7 @@
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		-->
-		<widget source="session.Event_Now" render="Progress" position="345,643" size="740,6" backgroundColor="InfoProgressBackground" borderColor="InfoProgressBorder" borderWidth="1" foregroundColor="InfoProgressColour" transparent="0">
+		<widget source="session.Event_Now" render="Progress" position="370,643" size="715,6" backgroundColor="InfoProgressBackground" borderColor="InfoProgressBorder" borderWidth="1" foregroundColor="InfoProgressColour" transparent="0">
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<!-- Next Event Start & End Times, Event Name and Duration Area -->
@@ -180,10 +180,10 @@
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="session.Event_Next" render="Label" position="345,653" size="565,28" backgroundColor="InfoBackground" font="InfoEventFont;21" foregroundColor="InfoProgramNext" noWrap="1" transparent="1" valign="top">
+		<widget source="session.Event_Next" render="Label" position="370,653" size="545,25" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoProgramNext" noWrap="1" transparent="1" valign="top">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.Event_Next" render="Label" position="930,653" size="155,28" backgroundColor="InfoBackground" font="InfoTimeFont;21" foregroundColor="InfoDurationNext" halign="right" transparent="1" valign="top">
+		<widget source="session.Event_Next" render="Label" position="925,653" size="160,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoDurationNext" halign="right" noWrap="1" transparent="1" valign="top">
 			<convert type="EventTime">Duration</convert>
 			<convert type="ClockToText">InMinutes</convert>
 		</widget>
