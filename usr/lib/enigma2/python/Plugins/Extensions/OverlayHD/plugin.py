@@ -1,7 +1,7 @@
 #====================================================
 # OverlayHD Skin Manager
-# Version Date - 11-May-2016
-# Version Number - 1.52
+# Version Date - 12-May-2016
+# Version Number - 1.53
 # Coding by IanSav
 #====================================================
 # Remember to change the version number below!!!
@@ -1000,14 +1000,13 @@ def applySkinSettings():
 					setting = "yes"
 				else:
 					setting = "no"
-				for screen in ("GraphicalEPG", "GraphicalEPGPIG", "GraphicalInfoBarEPG"):
-					elements, path = dom_screens.get(screen, (None, None))
-					if elements:
-						widgets = elements.findall("widget")
-						for widget in widgets:
-							if widget.get("TimelineTicksOn", "") != "":
-								widget.set("TimelineTicksOn", setting)
-								break
+				elements, path = dom_screens.get("EPGTimeLinePanel", (None, None))
+				if elements:
+					widgets = elements.findall("widget")
+					for widget in widgets:
+						if widget.get("TimelineTicksOn", "") != "":
+							widget.set("TimelineTicksOn", setting)
+							break
 			elif label == "EPGAlignment":
 				for screen in ("GraphicalEPG", "GraphicalEPGPIG", "GraphicalInfoBarEPG"):
 					elements, path = dom_screens.get(screen, (None, None))
@@ -1107,5 +1106,5 @@ def Plugins(**kwargs):
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
 		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.52", icon="OverlayHD.png", fnc=main))
+			description="OverlayHD Skin Manager version 1.53", icon="OverlayHD.png", fnc=main))
 	return list
