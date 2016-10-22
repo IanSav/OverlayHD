@@ -306,7 +306,7 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColourBacks" />
 		<ePixmap pixmap="menus/mainmenu_plugins.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<panel name="ScreenTemplateList0" />
+		<panel name="ScreenTemplateChoiceList0" />
 		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />
 	</screen>
 
@@ -417,7 +417,7 @@
 
 <!-- Original Sleep Timer List Menu ??? - Unused -->
 
-	<screen name="SleepTimerEdit" title="Sleep Timer" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="SleepTimerEdit" title="Power / Sleep Timer" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<!--
@@ -489,7 +489,7 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<panel name="ScreenTemplateList0" />
+		<panel name="ScreenTemplateChoiceList0" />
 	</screen>
 
 	<screen name="AutoTimerEditor" title="Auto Timer Editor" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
