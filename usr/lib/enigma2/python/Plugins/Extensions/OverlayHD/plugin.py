@@ -85,7 +85,7 @@ colour_elements = [
 	("FAVServiceSelectedFallback", "Cyan", None),
 	("FindCharacter", "Gold", None),
 	("FootnoteBackground", "Background", "Background"),
-	("FootnoteText", "DimGrey", None),
+	("FootnoteText", "LightBlue", None),
 	("HelpPress", "Yellow", None),
 	("InfoBackground", "Background", "Background"),
 	("InfobarMediaBackground", "Background", "Background"),
