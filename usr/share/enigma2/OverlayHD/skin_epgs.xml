@@ -32,6 +32,12 @@
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
+		<!-- This widget will replace the three above when the new time code is available.
+		<widget source="Event" render="Label" position="0,30" size="180,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" noWrap="1" transparent="1">
+			<convert type="EventTime">Times</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		-->
 		<widget source="Event" render="Label" position="200,30" size="180,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" halign="right" noWrap="1" transparent="1">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
@@ -74,6 +80,12 @@
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
+		<!-- This widget will replace the three above when the new time code is available.
+		<widget source="Event" render="Label" position="0,30" size="180,25" backgroundColor="EPGBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" noWrap="1" transparent="1">
+			<convert type="EventTime">Times</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		-->
 		<widget source="Event" render="Label" position="200,30" size="180,25" backgroundColor="EPGBackground" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" halign="right" noWrap="1" transparent="1">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
