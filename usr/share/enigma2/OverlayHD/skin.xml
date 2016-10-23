@@ -694,7 +694,12 @@
 	</screen>
 
 	<screen name="ScreenTemplateButtonTextVKey">
-		<widget name="VKeyIcon" pixmap="buttons/button_block_text.png" position="1120,670" size="50,35" alphatest="blend" transparent="1" />
+		<widget name="VKeyIcon" pixmap="buttons/button_block_text.png" position="1120,670" size="50,35" alphatest="blend" conditional="VKeyIcon" transparent="1" />
+		<!-- This code is for the 16.1 builds and replaces the widget above.
+		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/button_block_text.png" position="1120,670" size="50,35" alphatest="blend" conditional="VKeyIcon" transparent="1">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		-->
 		<panel name="ScreenTemplateSMSHelper" />
 	</screen>
 
@@ -707,7 +712,7 @@
 <!-- SMS Text Entry Helper Window -->
 
 	<screen name="ScreenTemplateSMSHelper">
-		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="50,350" size="340,270" alphatest="on" transparent="1" zPosition="+1" />
+		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="50,350" size="340,270" alphatest="on" conditional="HelpWindow" transparent="1" zPosition="+1" />
 	</screen>
 
 	<screen name="NumericalTextInputHelpDialog" position="50,350" size="340,270" backgroundColor="ScreenBackground" flags="wfNoBorder" zPosition="+1">
@@ -955,7 +960,10 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateButtonTextVKey" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_system.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<!-- This code is for the pending update to "Setup.py" in the 16.1 builds and replaces the ePixmap above.
 		<widget name="menuimage" position="50,100" size="300,500" alphatest="on" conditional="menuimage" transparent="1" />
+		-->
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateFootnote4" />
 		<panel name="ScreenTemplateDescription4" />
