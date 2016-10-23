@@ -986,6 +986,14 @@
 		<widget name="checkList" position="400,80" size="830,545" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
+	<screen name="ScreenTemplateChoiceList0">
+		<!--
+		<widget name="text" position="360,30" size="870,35" borderColor="BannerBorder" borderWidth="1" conditional="text" font="TitleFont;25" foregroundColor="BannerTitle" halign="right" transparent="1" />
+		-->
+		<!-- Font and ItemHeight are taken from the font alias ChoiceList. -->
+		<widget name="list" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+	</screen>
+
 	<screen name="ScreenTemplateConfig0">
 		<widget name="config" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
@@ -1012,11 +1020,6 @@
 
 	<screen name="ScreenTemplateHelp0">
 		<widget name="detailtext" position="400,80" size="830,560" backgroundColor="TextBackground" font="Regular;25" foregroundColor="Text" transparent="1" />
-	</screen>
-
-	<screen name="ScreenTemplateList0">
-		<!-- Font and ItemHeight are taken from the font alias ChoiceList. -->
-		<widget name="list" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateListLeftData0">
@@ -1170,6 +1173,7 @@
 	</screen>
 
 	<screen name="ScreenTemplateChoiceList4">
+		<widget name="text" position="360,30" size="870,35" borderColor="BannerBorder" borderWidth="1" conditional="text" font="TitleFont;25" foregroundColor="BannerTitle" halign="right" transparent="1" />
 		<!-- Font and ItemHeight are taken from the font alias ChoiceList. -->
 		<widget name="list" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
@@ -1289,7 +1293,7 @@
 
 	<screen name="ScreenTemplateDescription4">
 		<panel name="ScreenTemplateFrame830x120" />
-		<widget name="description" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="description" position="410,550" size="810,100" backgroundColor="TextBackground" conditional="description" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateDetail4">
@@ -1386,6 +1390,7 @@
 <!-- Configuration items with a four line text window and extra configuration data -->
 
 	<screen name="ScreenTemplateChoiceShort">
+		<widget name="text" position="360,30" size="870,35" borderColor="BannerBorder" borderWidth="1" conditional="text" font="TitleFont;25" foregroundColor="BannerTitle" halign="right" transparent="1" />
 		<!-- Font and ItemHeight are taken from the font alias ChoiceList. -->
 		<widget name="list" position="400,80" size="830,210" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>

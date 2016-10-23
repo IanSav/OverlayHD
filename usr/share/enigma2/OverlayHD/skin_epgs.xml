@@ -5,7 +5,8 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColourBacks" />
 		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<panel name="ScreenTemplateChoiceList4" />
+		<widget name="text" position="360,30" size="870,35" borderColor="BannerBorder" borderWidth="1" conditional="text" font="TitleFont;25" foregroundColor="BannerTitle" halign="right" transparent="1" />
+		<panel name="ScreenTemplateChoiceList0" />
 	</screen>
 
 <!-- Panel To Display Wide EPG Event Information (1180 x 125 pixels) -->
