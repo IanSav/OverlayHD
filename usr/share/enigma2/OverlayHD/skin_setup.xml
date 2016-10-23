@@ -3,7 +3,7 @@
 
 	<!--
 	<screen name="?" title="A/V Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplateSetup" />
+		<panel name="Setup" />
 	</screen>
 	-->
 
@@ -11,18 +11,18 @@
 
 	<!--
 	<screen name="?" title="Audio Sync Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplateSetup" />
+		<panel name="Setup" />
 	</screen>
 	-->
 
 <!-- MENU > Setup > AV Setup > Video Enhancement -->
 
 	<screen name="VideoEnhancementSetup" title="Video Enhancement Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplateSetup" />
+		<panel name="Setup" />
 	</screen>
 
 	<screen name="VideoEnhancementPreview" title="VideoEnhancementPreview" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplateSetup" />
+		<panel name="Setup" />
 		<panel name="ScreenTemplateSIntroduction4" />
 		<!--
 		<widget source="key_red" render="Label" position="85,125" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonRed" halign="center" transparent="1" valign="center" zPosition="3" />
@@ -36,14 +36,14 @@
 <!-- MENU > Setup > AV Setup > OSD Position -->
 
 	<screen name="UserInterfacePositioner" title="OSD Position Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplateSetup" />
+		<panel name="Setup" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_tv.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 	</screen>
 
 <!-- MENU > Setup > AV Setup > OSD 3D Setup -->
 
 	<screen name="OSD3DSetupScreen" title="OSD Positioner" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplateSetup" />
+		<panel name="Setup" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_tv.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<panel name="ScreenTemplateStatus4" />
 	</screen>
@@ -78,7 +78,7 @@
 
 	<!--
 	<screen name="setup_userinterface" title="GUI Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplateSetup" />
+		<panel name="Setup" />
 	</screen>
 	-->
 
@@ -86,7 +86,7 @@
 
 	<!--
 	<screen name="?" title="OSD Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplateSetup" />
+		<panel name="Setup" />
 	</screen>
 	-->
 
@@ -94,7 +94,7 @@
 
 	<!--
 	<screen name="setup_buttonsetup" title="Button Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplateSetup" />
+		<panel name="Setup" />
 	</screen>
 	-->
 
@@ -123,7 +123,7 @@
 
 	<!--
 	<screen name="setup_time" title="Time Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplateSetup" />
+		<panel name="Setup" />
 	</screen>
 	-->
 
@@ -131,7 +131,7 @@
 
 	<!--
 	<screen name="?" title="Front Panel Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplateSetup" />
+		<panel name="Setup" />
 	</screen>
 	-->
 
@@ -139,7 +139,7 @@
 
 	<!--
 	<screen name="?" title="Fan Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplateSetup" />
+		<panel name="Setup" />
 	</screen>
 	-->
 
@@ -389,7 +389,7 @@
 
 	<!--
 	<screen name="?" title="Channel Selection Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplateSetup" />
+		<panel name="Setup" />
 	</screen>
 	-->
 
@@ -397,7 +397,7 @@
 
 	<!--
 	<screen name="setup_recording" title="Recording Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplateSetup" />
+		<panel name="Setup" />
 	</screen>
 	-->
 
@@ -405,7 +405,7 @@
 
 	<!--
 	<screen name="setup_timeshift" title="Timeshift Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplateSetup" />
+		<panel name="Setup" />
 	</screen>
 	-->
 
@@ -413,7 +413,7 @@
 
 	<!--
 	<screen name="?" title="Auto Language Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplateSetup" />
+		<panel name="Setup" />
 	</screen>
 	-->
 
@@ -421,7 +421,7 @@
 
 	<!--
 	<screen name="?" title="Subtitle Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplateSetup" />
+		<panel name="Setup" />
 	</screen>
 	-->
 
@@ -429,7 +429,7 @@
 
 	<!--
 	<screen name="?" title="EPG Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplateSetup" />
+		<panel name="Setup" />
 	</screen>
 	-->
 
@@ -495,7 +495,7 @@
 <!-- MENU > Setup > TV > Zap History - NO LONGER ENABLED IN MENUS! -->
 
 	<screen name="ZapHistoryConfigurator" title="Zap History Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplateSetup" />
+		<panel name="Setup" />
 		<ePixmap pixmap="menus/mainmenu_tv_zaphistory.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 	</screen>
 
@@ -504,21 +504,21 @@
 	<!-- Settings screen "MediaPlayerSettings" -->
 
 	<screen name="PicturePlayerSetup" title="Picture Player" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplateSetup" />
+		<panel name="Setup" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_photo.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 	</screen>
 
 <!-- MENU > Setup > Media > Media Player -->
 
 	<screen name="MediaPlayerSettings" title="Media Player" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplateSetup" />
+		<panel name="Setup" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_movie.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 	</screen>
 
 <!-- MENU > Setup > Media > Movie Browser - NO LONGER ENABLED IN MENUS! -->
 
 	<screen name="movieBrowserConfig" title="Movie Browser Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplateSetup" />
+		<panel name="Setup" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_movie.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<widget name="plugin" position="50,185" size="512,288" alphatest="blend" zPosition="1" />
 	</screen>
@@ -526,7 +526,7 @@
 <!-- MENU > Setup > Media > Music Browser - NO LONGER ENABLED IN MENUS! -->
 
 	<screen name="mp3BrowserConfig" title="Movie Browser Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplateSetup" />
+		<panel name="Setup" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_music.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<widget name="plugin" position="50,185" size="512,288" alphatest="blend" zPosition="1" />
 	</screen>
@@ -1022,7 +1022,7 @@
 
 	<!--
 	<screen name="setup_harddisk" title="Hard Disk Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplateSetup" />
+		<panel name="Setup" />
 	</screen>
 	-->
 
@@ -1070,7 +1070,7 @@
 
 	<!--
 	<screen name="setup_pluginbrowsersetup" title="Package Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplateSetup" />
+		<panel name="Setup" />
 	</screen>
 	-->
 
@@ -1137,7 +1137,7 @@
 
 	<!--
 	<screen name="setup_softwareupdate" title="Online Update Check Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplateSetup" />
+		<panel name="Setup" />
 	</screen>
 	-->
 
