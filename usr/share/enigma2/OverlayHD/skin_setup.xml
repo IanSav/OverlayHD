@@ -148,8 +148,7 @@
 	<screen name="RCSetupScreen" title="Remote Control Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<!-- <ePixmap pixmap="menus/mainmenu_tasks_setup_system.png" position="50,100" size="300,500" alphatest="on" transparent="1" /> -->
-		<widget name="Preview" position="100,100" size="200,500" alphatest="blend" backgroundColor="TextBackground" font="Regular;18" halign="center" transparent="1" valign="center" />
+		<widget name="Preview" position="100,100" size="200,500" alphatest="blend" backgroundColor="TextBackground" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateFrame830x120" />
 	</screen>
@@ -194,7 +193,7 @@
 		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_tv.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
-		<panel name="ScreenTemplateFrame830x120" />
+		<panel name="ScreenTemplateText4" />
 	</screen>
 
 <!-- MENU > Setup > Tuners > Automatic Scan - NO LONGER ENABLED IN MENUS! -->
@@ -202,9 +201,9 @@
 	<screen name="ScanSimple" title="Automatic service scan" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateButtonTextVKey" />
-		<widget name="footnote" position="0,0" size="1,1" alphatest="on" transparent="1" zPosition="1" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateFootnote4" />
 		<widget name="footer" position="60,130" size="380,170" font="Regular;20" halign="center" transparent="1" valign="center" />
 	</screen>
 
@@ -215,8 +214,10 @@
 		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_tv.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateFootnote4" />
 		<panel name="ScreenTemplateIntroduction4" />
-		<widget name="footnote" position="0,0" size="1,1" alphatest="on" transparent="1" zPosition="1" />
+		<widget name="header" position="0,0" size="0,0" font="Regular;20" transparent="1" /><!-- Same as Title -->
+		<widget name="description" position="0,0" size="0,0" font="Regular;20" transparent="1" /><!-- Defined in code but never used! -->
 	</screen>
 
 <!-- MENU > Setup > Tuners > Service Scan - NO LONGER ENABLED IN MENUS! -->
