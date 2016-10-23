@@ -955,35 +955,14 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateButtonTextVKey" />
-		<!-- The hardcoded default image is a kludge to get around the fact that many
-			screens copy the base Setup code and will not have all the latest features! -->
-		<ePixmap pixmap="menus/setup_default.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<!-- <widget source="id_mainmenu_ext" render="Micon" path="menus/" position="50,100" size="300,500" alphatest="on" transparent="1" zPosition="+1" /> -->
-		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" /> -->
+		<widget name="menuimage" position="50,100" size="300,500" alphatest="on" conditional="menuimage" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
-		<!-- <panel name="ScreenTemplateEmpty4" /> -->
 		<panel name="ScreenTemplateFootnote4" />
 		<panel name="ScreenTemplateDescription4" />
 	</screen>
 
 	<screen name="ScreenTemplateFootnote4">
 		<widget name="footnote" position="415,510" size="815,25" backgroundColor="FootnoteBackground" conditional="footnote" font="Regular;20" foregroundColor="FootnoteText" transparent="1" valign="center" />
-	</screen>
-
-<!-- MENU > Setup > *Item* - Generic Setup Templates -->
-
-	<screen name="ScreenTemplateSetup">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
-		<panel name="ScreenTemplateButtonTextVKey" />
-		<!-- The hardcoded default image is a kludge to get around the fact that many
-			screens copy the base Setup code and will not have all the latest features! -->
-		<ePixmap pixmap="menus/setup_default.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" zPosition="+1" /> -->
-		<panel name="ScreenTemplateConfig4" />
-		<!-- <panel name="ScreenTemplateEmpty4" /> -->
-		<panel name="ScreenTemplateFootnote4" />
-		<panel name="ScreenTemplateDescription4" />
 	</screen>
 
 <!--
