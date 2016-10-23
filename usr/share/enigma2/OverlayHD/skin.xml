@@ -1731,8 +1731,8 @@
 
 <!-- Picture In Picture Setup -->
 
-	<screen name="PiPSetup" position="center,center" size="620,180" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<widget name="text" position="10,10" size="600,160" font="Regular;23" />
+	<screen name="PiPSetup" position="center,center" size="620,228" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<widget name="text" position="10,10" size="600,208" font="Regular;23" />
 	</screen>
 
 <!-- Screen Saver -->
