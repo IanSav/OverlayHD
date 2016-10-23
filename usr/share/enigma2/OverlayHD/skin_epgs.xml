@@ -12,8 +12,16 @@
 <!-- Panel To Display Wide EPG Event Information (1180 x 125 pixels) -->
 
 	<screen name="EPGEventInfoPanel" title="EPG Event Info" flags="wfNoBorder">
-		<widget source="Event" render="Label" position="0,0" size="1180,30" backgroundColor="InfoBackground" font="InfoEventFont;25" foregroundColor="InfoProgramNow" noWrap="1" transparent="1">
+		<widget source="Event" render="Label" position="0,0" size="1115,30" backgroundColor="InfoBackground" font="InfoEventFont;25" foregroundColor="InfoProgramNow" noWrap="1" transparent="1">
 			<convert type="EventName">Name</convert>
+		</widget>
+		<widget position="1125,0" size="55,25" source="Event" render="Pixmap" pixmap="epg/fta.png" alphatest="blend">
+			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True,Invert</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget position="1125,0" size="55,25" source="Event" render="Pixmap" pixmap="epg/icetv.png" alphatest="blend">
+			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True</convert>
+			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="Event" render="Label" position="0,30" size="80,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" transparent="1">
 			<convert type="EventTime">StartTime</convert>
@@ -46,8 +54,16 @@
 <!-- Panel To Display Narrow EPG Event Information (860 x 175 pixels) -->
 
 	<screen name="EPGEventInfoPIGPanel" title="PIG EPG Event Info" flags="wfNoBorder">
-		<widget source="Event" render="Label" position="0,0" size="860,30" backgroundColor="EPGBackground" font="InfoEventFont;25" foregroundColor="InfoProgramNow" noWrap="1" transparent="1">
+		<widget source="Event" render="Label" position="0,0" size="795,30" backgroundColor="EPGBackground" font="InfoEventFont;25" foregroundColor="InfoProgramNow" noWrap="1" transparent="1">
 			<convert type="EventName">Name</convert>
+		</widget>
+		<widget position="805,0" size="55,25" source="Event" render="Pixmap" pixmap="epg/fta.png" alphatest="blend">
+			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True,Invert</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget position="805,0" size="55,25" source="Event" render="Pixmap" pixmap="epg/icetv.png" alphatest="blend">
+			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True</convert>
+			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="Event" render="Label" position="0,30" size="80,25" backgroundColor="EPGBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" transparent="1">
 			<convert type="EventTime">StartTime</convert>
@@ -163,13 +179,20 @@
 		<panel position="50,530" size="1180,30">
 			<panel name="EPGTimeLinePanel" />
 		</panel>
-		<widget name="list" position="50,565" size="1180,85" EntryFontAlignment="left" EntryFontWrap="no"
-			EntryForegroundColor="EPGEntryForegroundColor" EntryForegroundColorSelected="EPGEntryForegroundColorSelected"
-			RecordForegroundColorSelected="EPGRecordForegroundColorSelected"
-			ServiceForegroundColor="EPGServiceForegroundColor" ServiceForegroundColorNow="EPGServiceForegroundColorNow"
-			ZapForegroundColorSelected="EPGZapForegroundColorSelected"
+		<widget name="list" position="50,565" size="1180,85" EntryFontAlignment="left" EntryBorderColor="EPGGridBorder" ServiceBorderColor="EPGGridBorder"
+			EntryFontGraphical="EPGEventFont;18" EventFontInfobar="EPGEventFont;18" EventFontSingle="EPGEventFont;18" ServiceFontGraphical="EPGServiceFont;18" ServiceFontInfobar="EPGServiceFont;18"
+			EntryBackgroundColor="EPGEntryBackgroundColor" EntryBackgroundColorSelected="EPGEntryBackgroundColorSelected" EntryForegroundColor="EPGEntryForegroundColor" EntryForegroundColorSelected="EPGEntryForegroundColorSelected"
+			RecordBackgroundColor="EPGRecordBackgroundColor" RecordBackgroundColorSelected="EPGRecordBackgroundColorSelected" RecordForegroundColor="EPGRecordForegroundColor" RecordForegroundColorSelected="EPGRecordForegroundColorSelected"
+			ServiceBackgroundColor="EPGServiceBackgroundColor" ServiceBackgroundColorNow="EPGServiceBackgroundColorNow" ServiceForegroundColor="EPGServiceForegroundColor" ServiceForegroundColorNow="EPGServiceForegroundColorNow"
+			ZapBackgroundColor="EPGZapBackgroundColor" ZapBackgroundColorSelected="EPGZapBackgroundColorSelected" ZapForegroundColor="EPGZapForegroundColor" ZapForegroundColorSelected="EPGZapForegroundColorSelected"
 			backgroundColor="EPGGridBackground" scrollbarMode="showNever" transparent="1" />
 		<widget name="timeline_now" pixmap="epg/timeline-now-infobar.png" position="0,560" size="20,95" alphatest="blend" zPosition="+2" />
+	</screen>
+
+<!-- EPG - InfoBarEPG > INFO - Event Info View -->
+
+	<screen name="InfoBarEventView" title="InfoBar Event View" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder" zPosition="+1">
+		<panel name="EventView" />
 	</screen>
 
 <!-- EPG - Infobar EPG (Single Channel Mode) -->
@@ -249,8 +272,16 @@
 		<widget source="Event" render="Label" position="1190,595" size="40,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" halign="right" transparent="1">
 			<convert type="EventName">SmallRating</convert>
 		</widget>
-		<widget source="Event" render="Label" position="850,625" size="380,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" transparent="1">
+		<widget source="Event" render="Label" position="850,625" size="315,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" transparent="1">
 			<convert type="EventName">Genre</convert>
+		</widget>
+		<widget position="1175,625" size="55,25" source="Event" render="Pixmap" pixmap="epg/fta.png" alphatest="blend">
+			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True,Invert</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget position="1175,625" size="55,25" source="Event" render="Pixmap" pixmap="epg/icetv.png" alphatest="blend">
+			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True</convert>
+			<convert type="ConditionalShowHide" />
 		</widget>
 	</screen>
 
