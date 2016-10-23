@@ -291,55 +291,27 @@
 		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateButtonHelp" />
 		<ePixmap pixmap="menus/mainmenu_tasks_browser.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="filelist" position="400,80" size="830,250" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="textbook" position="400,340" size="830,25" backgroundColor="DarkGrey" font="Regular;20" foregroundColor="Black" valign="center" />
+		<widget name="booklist" position="400,365" size="830,200" font="FilePropFont;20" itemHeight="25" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" />
 		<panel name="ScreenTemplateFrame830x70" />
-		<widget name="filelist" position="400,80" size="830,230" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
-		<widget name="textbook" position="400,330" size="830,30" backgroundColor="darkgrey" font="Regular;24" foregroundColor="Black" valign="center" />
-		<widget name="booklist" position="400,360" size="830,200" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" zPosition="2" />
-		<widget name="text" position="410,595" size="810,25" font="Regular;20" transparent="1" valign="center" zPosition="2" />
-		<widget name="target" position="410,620" size="810,25" font="Regular;20" transparent="1" valign="center" zPosition="2" />
+		<widget name="text" position="410,600" size="810,25" font="Regular;20" transparent="1" valign="center" zPosition="+1" />
+		<widget name="target" position="410,625" size="810,25" font="Regular;20" transparent="1" valign="center" zPosition="+1" />
 		<widget name="red" position="0,0" size="0,0" />
 		<widget name="green" position="0,0" size="0,0" />
 		<widget name="yellow" position="0,0" size="0,0" />
 		<widget name="blue" position="0,0" size="0,0" />
 	</screen>
 
-<!-- Movie Location Box - Does not appear to be used! -->
+<!-- Movie Location Box -->
 
 	<screen name="MovieLocationBox" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonMenu" />
-		<panel name="ScreenTemplateButtonColours" />
-		<panel name="ScreenTemplateButtonHelp" />
-		<ePixmap pixmap="menus/mainmenu_tasks_browser.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<panel name="ScreenTemplateFrame830x70" />
-		<widget name="filelist" position="400,80" size="830,230" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
-		<widget name="textbook" position="400,330" size="830,30" backgroundColor="darkgrey" font="Regular;24" foregroundColor="Black" valign="center" />
-		<widget name="booklist" position="400,360" size="830,200" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" zPosition="2" />
-		<widget name="text" position="410,595" size="810,25" font="Regular;20" transparent="1" valign="center" zPosition="2" />
-		<widget name="target" position="410,620" size="810,25" font="Regular;20" transparent="1" valign="center" zPosition="2" />
-		<widget name="red" position="0,0" size="0,0" />
-		<widget name="green" position="0,0" size="0,0" />
-		<widget name="yellow" position="0,0" size="0,0" />
-		<widget name="blue" position="0,0" size="0,0" />
+		<panel name="LocationBox" />
 	</screen>
 
-<!-- Timeshift Location Box - Does not appear to be used! -->
+<!-- Timeshift Location Box -->
 
 	<screen name="TimeshiftLocationBox" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<!-- <panel name="ScreenTemplateButtonMenu" /> -->
-		<panel name="ScreenTemplateButtonColours" />
-		<!-- <panel name="ScreenTemplateButtonHelp" /> -->
-		<ePixmap pixmap="menus/mainmenu_tasks_browser.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<panel name="ScreenTemplateFrame830x70" />
-		<widget name="filelist" position="400,80" size="830,230" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
-		<widget name="textbook" position="400,330" size="830,30" backgroundColor="darkgrey" font="Regular;24" foregroundColor="Black" valign="center" />
-		<widget name="booklist" position="400,360" size="830,200" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" zPosition="2" />
-		<widget name="text" position="410,595" size="810,25" font="Regular;20" transparent="1" valign="center" zPosition="2" />
-		<widget name="target" position="410,620" size="810,25" font="Regular;20" transparent="1" valign="center" zPosition="2" />
-		<widget name="red" position="0,0" size="0,0" />
-		<widget name="green" position="0,0" size="0,0" />
-		<widget name="yellow" position="0,0" size="0,0" />
-		<widget name="blue" position="0,0" size="0,0" />
+		<panel name="LocationBox" />
 	</screen>
 </skin>
