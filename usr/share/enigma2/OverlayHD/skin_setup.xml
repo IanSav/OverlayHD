@@ -77,7 +77,7 @@
 <!-- MENU > Setup > System > GUI Settings - Uses Generic Setup Screen -->
 
 	<!--
-	<screen name="setup_userinterface" title="GUI Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="Setup_userinterface" title="GUI Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="Setup" />
 	</screen>
 	-->
@@ -93,7 +93,7 @@
 <!-- MENU > Setup > System > Button Settings - Uses Generic Setup Screen -->
 
 	<!--
-	<screen name="setup_buttonsetup" title="Button Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="Setup_buttonsetup" title="Button Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="Setup" />
 	</screen>
 	-->
@@ -122,7 +122,7 @@
 <!-- MENU > Setup > System > Time Settings - Uses Generic Setup Screen -->
 
 	<!--
-	<screen name="setup_time" title="Time Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="Setup_time" title="Time Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="Setup" />
 	</screen>
 	-->
@@ -396,7 +396,7 @@
 <!-- MENU > Setup > TV > Recording Settings - Uses Generic Setup Screen -->
 
 	<!--
-	<screen name="setup_recording" title="Recording Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="Setup_recording" title="Recording Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="Setup" />
 	</screen>
 	-->
@@ -404,7 +404,7 @@
 <!-- MENU > Setup > TV > TimeShift Settings - Uses Generic Setup Screen -->
 
 	<!--
-	<screen name="setup_timeshift" title="Timeshift Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="Setup_timeshift" title="Timeshift Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="Setup" />
 	</screen>
 	-->
@@ -1021,7 +1021,7 @@
 <!-- MENU > Setup > Storage > Hard Disk Setup - Uses Generic Setup Screen -->
 
 	<!--
-	<screen name="setup_harddisk" title="Hard Disk Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="Setup_harddisk" title="Hard Disk Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="Setup" />
 	</screen>
 	-->
@@ -1069,7 +1069,7 @@
 	</screen>
 
 	<!--
-	<screen name="setup_pluginbrowsersetup" title="Package Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="Setup_pluginbrowsersetup" title="Package Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="Setup" />
 	</screen>
 	-->
@@ -1136,7 +1136,7 @@
 <!-- MENU > Setup > Software Manager > Update Settings - Uses Internal Screen -->
 
 	<!--
-	<screen name="setup_softwareupdate" title="Online Update Check Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="Setup_softwareupdate" title="Online Update Check Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="Setup" />
 	</screen>
 	-->
