@@ -23,21 +23,10 @@
 			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="Event" render="Label" position="0,30" size="80,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" transparent="1">
-			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<eLabel text="-" position="80,30" size="20,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" halign="center" transparent="1" />
-		<widget source="Event" render="Label" position="105,30" size="80,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" halign="right" transparent="1">
-			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<!-- This widget will replace the three above when the new time code is available.
 		<widget source="Event" render="Label" position="0,30" size="180,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" noWrap="1" transparent="1">
 			<convert type="EventTime">Times</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		-->
 		<widget source="Event" render="Label" position="200,30" size="180,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" halign="right" noWrap="1" transparent="1">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
@@ -71,21 +60,10 @@
 			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="Event" render="Label" position="0,30" size="80,25" backgroundColor="EPGBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" transparent="1">
-			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<eLabel text="-" position="80,30" size="20,25" backgroundColor="EPGBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" halign="center" transparent="1" />
-		<widget source="Event" render="Label" position="105,30" size="80,25" backgroundColor="EPGBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" halign="right" transparent="1">
-			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<!-- This widget will replace the three above when the new time code is available.
 		<widget source="Event" render="Label" position="0,30" size="180,25" backgroundColor="EPGBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" noWrap="1" transparent="1">
 			<convert type="EventTime">Times</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		-->
 		<widget source="Event" render="Label" position="200,30" size="180,25" backgroundColor="EPGBackground" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" halign="right" noWrap="1" transparent="1">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
