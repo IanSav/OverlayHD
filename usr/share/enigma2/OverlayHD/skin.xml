@@ -17,7 +17,6 @@
 		<color name="DarkerBlue" value="#0000022b" />
 		<color name="DarkGrey" value="#00a9a9a9" />
 		<color name="DavysGrey" value="#00555555" />
-		<color name="DarkerGrey" value="#00555555" /><!-- Previous name for this colour code! -->
 		<color name="DeepBlue" value="#00000636" />
 		<color name="DeepGrey" value="#00363636" />
 		<color name="DeepPink" value="#00ff1493" />
@@ -98,21 +97,6 @@
  |		- EntryForegroundColorNow = "White"
  |		- EntryForegroundColorNowSelected = "Black"
  +-->
-<!--
- |		These entries are flagged for deletion in the next release!
- +--> 
-		<color name="EPGChannel" value="White" /><!-- To be deleted! -->
-		<color name="EPGChannelSelected" value="White" /><!-- To be deleted! -->
-		<color name="EPGDetails" value="White" /><!-- To be deleted! -->
-		<color name="EPGDuration" value="White" /><!-- To be deleted! -->
-		<color name="EPGLCN" value="White" /><!-- To be deleted! -->
-		<color name="EPGProgram" value="White" /><!-- To be deleted! -->
-		<color name="EPGProgramSelected" value="White" /><!-- To be deleted! -->
-		<color name="EPGProvider" value="White" /><!-- To be deleted! -->
-		<color name="EPGRating" value="White" /><!-- To be deleted! -->
-		<color name="EPGTimes" value="White" /><!-- To be deleted! -->
-		<color name="EPGTimesSelected" value="White" /><!-- To be deleted! -->
-
 		<color name="EPGBackground" value="Black" />
 		<color name="EPGGridBackground" value="Orange" />
 		<color name="EPGGridBorder" value="Black" />
