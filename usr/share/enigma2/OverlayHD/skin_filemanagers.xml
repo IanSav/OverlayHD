@@ -129,10 +129,7 @@
 		<eLabel text="Date:" position="830,80" size="100,25" font="InfoOtherFont;20" foregroundColor="InfoMediaFileSize" transparent="1" />
 		<widget source="Service" render="Label" position="930,80" size="300,25" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" halign="right" transparent="1">
 			<convert type="EventTime">StartTime</convert>
-			<!--  This format will replace the one below when the new time code is available.
 			<convert type="ClockToText">LongFullDate</convert>
-			-->
-			<convert type="ClockToText">Format:%a %-e-%b-%Y  %R</convert>
 		</widget>
 		<eLabel text="Duration:" position="830,105" size="100,25" font="InfoOtherFont;20" foregroundColor="InfoDurationNow" transparent="1" />
 		<widget source="Service" render="Label" position="930,105" size="300,25" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" halign="right" transparent="1">
