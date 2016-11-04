@@ -476,10 +476,7 @@
 	<screen name="ScreenTemplateClockDigital" title="Digital Current Time" flags="wfNoBorder">
 		<eLabel position="1080,10" size="190,60" backgroundColor="BannerClockBackground" />
 		<widget source="global.CurrentTime" render="Label" position="1080,15" size="180,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="BannerClockDate" halign="right" transparent="1" zPosition="+1">
-			<!--  This format will replace the one below when the new time code is available.
 			<convert type="ClockToText">ShortFullDate</convert>
-			-->
-			<convert type="ClockToText">Format:%a %-e-%b-%Y</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="1080,40" size="180,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="BannerClockTime" halign="right" transparent="1" zPosition="+1">
 			<convert type="ClockToText">WithSeconds</convert>
@@ -491,10 +488,7 @@
 		<eLabel position="980,10" size="235,35" backgroundColor="BannerClockBackground" />
 		<!-- Clock date -->
 		<widget source="global.CurrentTime" render="Label" position="990,15" size="180,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="BannerClockDate" halign="right" transparent="1" zPosition="+1">
-			<!--  This format will replace the one below when the new time code is available.
 			<convert type="ClockToText">ShortFullDate</convert>
-			-->
-			<convert type="ClockToText">Format:%a %-e-%b-%Y</convert>
 		</widget>
 		<!-- Clock face -->
 		<ePixmap pixmap="images/clock_face.png" position="1180,5" size="90,90" alphatest="blend" zPosition="+1" />
@@ -1476,10 +1470,7 @@
 	<screen name="ClockBannerPanel">
 		<ePixmap pixmap="icons/clock.png" position="0,4" size="14,14" alphatest="blend" />
 		<widget source="global.CurrentTime" render="Label" position="25,0" size="280,25" borderColor="BannerBorder" borderWidth="1" font="ClockFont;20" foregroundColor="BannerClock" transparent="1">
-			<!--  This format will replace the one below when the new time code is available.
 			<convert type="ClockToText">LongFullDate</convert>
-			-->
-			<convert type="ClockToText">Format:%a %-e-%b-%Y  %R</convert>
 		</widget>
 	</screen>
 
