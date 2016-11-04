@@ -220,36 +220,36 @@
 		<widget name="description" position="0,0" size="0,0" font="Regular;20" transparent="1" /><!-- Defined in code but never used! -->
 	</screen>
 
-<!-- MENU > Setup > Tuners > Service Scan - NO LONGER ENABLED IN MENUS! -->
+<!-- MENU > Setup > Tuners > Service Scan -->
 
 	<screen name="ServiceScan" title="Service Scan" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<eLabel text="Scanned services:" position="675,140" size="485,35" font="Regular;28" transparent="1" />
-		<eLabel position="665,180" size="450,2" backgroundColor="White" />
-		<widget name="servicelist" position="650,195" size="485,400" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="0" zPosition="1" />
-<!--####-->		<!-- <ePixmap pixmap="frame/frame_400x300.png" position="150,195" size="400,300" alphatest="on" zPosition="-1" /> -->
-		<widget source="FrontendInfo" render="Pixmap" pixmap="icons/scan-s.png" position="170,210" size="64,64" alphatest="on" transparent="1" zPosition="1">
+		<widget source="FrontendInfo" render="Pixmap" pixmap="icons/scan-s.png" position="170,200" size="64,64" alphatest="on" transparent="1">
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">0,0</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="FrontendInfo" render="Pixmap" pixmap="icons/scan-c.png" position="170,210" size="64,64" alphatest="on" transparent="1" zPosition="1">
+		<widget source="FrontendInfo" render="Pixmap" pixmap="icons/scan-c.png" position="170,200" size="64,64" alphatest="on" transparent="1">
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">1,1</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="FrontendInfo" render="Pixmap" pixmap="icons/scan-t.png" position="170,210" size="64,64" alphatest="on" transparent="1" zPosition="1">
+		<widget source="FrontendInfo" render="Pixmap" pixmap="icons/scan-t.png" position="170,200" size="64,64" alphatest="on" transparent="1">
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">2,2</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget name="scan_progress" position="245,225" size="280,14" borderWidth="1" transparent="1" zPosition="1" />
-		<widget name="network" position="245,250" size="280,25" font="Regular;20" halign="left" transparent="1" zPosition="1" />
-		<widget name="transponder" position="170,300" size="360,25" font="Regular;20" halign="center" transparent="1" zPosition="1" />
-		<widget name="scan_state" position="170,340" size="360,45" font="Regular;20" halign="center" transparent="1" valign="top" zPosition="2" />
-		<widget name="pass" position="170,385" size="360,25" font="Regular;20" halign="center" transparent="1" valign="top" zPosition="1" />
-		<widget name="done_text" position="170,410" size="360,100" font="Regular;20" halign="center" transparent="1" valign="top" zPosition="12" />
+		<widget name="network" position="50,290" size="300,25" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" halign="center" transparent="1" />
+		<widget name="scan_progress" position="50,325" size="300,15" borderWidth="1" transparent="1" />
+		<widget name="transponder" position="50,350" size="300,25" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" halign="center" transparent="1" />
+		<widget name="scan_state" position="50,400" size="300,45" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" />
+		<widget name="pass" position="50,450" size="300,25" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" />
+		<eLabel text="Services found:" position="400,80" size="830,35" backgroundColor="TextBackground" font="DescriptionFont;25" foregroundColor="Text" transparent="1" />
+		<eLabel position="400,113" size="830,2" backgroundColor="Pinstripe" />
+		<widget name="servicelist" position="400,115" size="830,400" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="0" />
+		<panel name="ScreenTemplateFrame830x120" />
+		<widget name="done_text" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 <!-- MENU > Setup > Tuners > Positioner Setup - NO LONGER ENABLED IN MENUS! -->
