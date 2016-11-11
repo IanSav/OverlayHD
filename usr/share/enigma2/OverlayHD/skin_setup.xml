@@ -60,7 +60,7 @@
 		<eLabel position="960,524" size="270,2" backgroundColor="Pinstripe" />
 		<eLabel position="960,80" size="2,445" backgroundColor="Pinstripe" />
 		<eLabel position="1228,80" size="2,445" backgroundColor="Pinstripe" />
-		<widget name="Preview" position="970,230" size="250,141" alphatest="on" transparent="1" />
+		<widget name="Preview" position="970,90" size="250,425" alphatest="on" transparent="1" />
 		<panel name="ScreenTemplateSIntroduction4" />
 	</screen>
 
