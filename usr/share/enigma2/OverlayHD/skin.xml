@@ -90,13 +90,6 @@
 		<color name="BannerClockTime" value="White" />
 		<color name="BannerTitle" value="White" />
 
-<!--
- |		These entries were defined for the EPG grid but are now reported as invalid!
- |		- EntryBackgroundColorNow = "#0000056f"
- |		- EntryBackgroundColorNowSelected = "#00d8c664"
- |		- EntryForegroundColorNow = "White"
- |		- EntryForegroundColorNowSelected = "Black"
- +-->
 		<color name="EPGBackground" value="Black" />
 		<color name="EPGGridBackground" value="Orange" />
 		<color name="EPGGridBorder" value="Black" />
@@ -107,8 +100,12 @@
 		<color name="EPGProgressColour" value="WarmYellow" />
 		<color name="EPGTimeLine" value="Yellow" />
 		<color name="EPGEntryBackgroundColor" value="MidBlack" />
+		<color name="EPGEntryBackgroundColorNow" value="Jet" />
+		<color name="EPGEntryBackgroundColorNowSelected" value="Silver" />
 		<color name="EPGEntryBackgroundColorSelected" value="Grey" />
 		<color name="EPGEntryForegroundColor" value="White" />
+		<color name="EPGEntryForegroundColorNow" value="White" />
+		<color name="EPGEntryForegroundColorNowSelected" value="Black" />
 		<color name="EPGEntryForegroundColorSelected" value="Black" />
 		<color name="EPGRecordBackgroundColor" value="DullRed" />
 		<color name="EPGRecordBackgroundColorSelected" value="Red" />
@@ -123,8 +120,12 @@
 		<color name="EPGZapForegroundColor" value="White" />
 		<color name="EPGZapForegroundColorSelected" value="Black" />
 		<color name="EPGPIGEntryBackgroundColor" value="MidBlack" />
+		<color name="EPGPIGEntryBackgroundColorNow" value="Jet" />
+		<color name="EPGPIGEntryBackgroundColorNowSelected" value="Silver" />
 		<color name="EPGPIGEntryBackgroundColorSelected" value="Grey" />
 		<color name="EPGPIGEntryForegroundColor" value="White" />
+		<color name="EPGPIGEntryForegroundColorNow" value="White" />
+		<color name="EPGPIGEntryForegroundColorNowSelected" value="Black" />
 		<color name="EPGPIGEntryForegroundColorSelected" value="Black" />
 		<color name="EPGPIGRecordBackgroundColor" value="DullRed" />
 		<color name="EPGPIGRecordBackgroundColorSelected" value="Red" />
