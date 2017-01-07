@@ -109,7 +109,8 @@
 		</panel>
 		<widget name="list" position="50,255" size="1180,400" EntryFontAlignment="left" EntryBorderColor="EPGGridBorder" ServiceBorderColor="EPGGridBorder"
 			EntryFontGraphical="EPGEventFont;18" EventFontInfobar="EPGEventFont;18" EventFontSingle="EPGEventFont;18" ServiceFontGraphical="EPGServiceFont;18" ServiceFontInfobar="EPGServiceFont;18"
-			EntryBackgroundColor="EPGEntryBackgroundColor" EntryBackgroundColorSelected="EPGEntryBackgroundColorSelected" EntryForegroundColor="EPGEntryForegroundColor" EntryForegroundColorSelected="EPGEntryForegroundColorSelected"
+			EntryBackgroundColor="EPGEntryBackgroundColor" EntryBackgroundColorNow="EPGEntryBackgroundColorNow" EntryBackgroundColorNowSelected="EPGEntryBackgroundColorNowSelected" EntryBackgroundColorSelected="EPGEntryBackgroundColorSelected"
+			EntryForegroundColor="EPGEntryForegroundColor" EntryForegroundColorNow="EPGEntryForegroundColorNow" EntryForegroundColorNowSelected="EPGEntryForegroundColorNowSelected" EntryForegroundColorSelected="EPGEntryForegroundColorSelected"
 			RecordBackgroundColor="EPGRecordBackgroundColor" RecordBackgroundColorSelected="EPGRecordBackgroundColorSelected" RecordForegroundColor="EPGRecordForegroundColor" RecordForegroundColorSelected="EPGRecordForegroundColorSelected"
 			ServiceBackgroundColor="EPGServiceBackgroundColor" ServiceBackgroundColorNow="EPGServiceBackgroundColorNow" ServiceForegroundColor="EPGServiceForegroundColor" ServiceForegroundColorNow="EPGServiceForegroundColorNow"
 			ZapBackgroundColor="EPGZapBackgroundColor" ZapBackgroundColorSelected="EPGZapBackgroundColorSelected" ZapForegroundColor="EPGZapForegroundColor" ZapForegroundColorSelected="EPGZapForegroundColorSelected"
@@ -144,7 +145,8 @@
 		</panel>
 		<widget name="list" position="50,295" size="1180,360" EntryFontAlignment="left" EntryBorderColor="EPGGridBorder" ServiceBorderColor="EPGGridBorder"
 			EntryFontGraphical="EPGEventFont;18" EventFontInfobar="EPGEventFont;18" EventFontSingle="EPGEventFont;18" ServiceFontGraphical="EPGServiceFont;18" ServiceFontInfobar="EPGServiceFont;18"
-			EntryBackgroundColor="EPGPIGEntryBackgroundColor" EntryBackgroundColorSelected="EPGPIGEntryBackgroundColorSelected" EntryForegroundColor="EPGPIGEntryForegroundColor" EntryForegroundColorSelected="EPGPIGEntryForegroundColorSelected"
+			EntryBackgroundColor="EPGPIGEntryBackgroundColor" EntryBackgroundColorNow="EPGPIGEntryBackgroundColorNow" EntryBackgroundColorNowSelected="EPGPIGEntryBackgroundColorNowSelected" EntryBackgroundColorSelected="EPGPIGEntryBackgroundColorSelected"
+			EntryForegroundColor="EPGPIGEntryForegroundColor" EntryForegroundColorNow="EPGPIGEntryForegroundColorNow" EntryForegroundColorNowSelected="EPGPIGEntryForegroundColorNowSelected" EntryForegroundColorSelected="EPGPIGEntryForegroundColorSelected"
 			RecordBackgroundColor="EPGPIGRecordBackgroundColor" RecordBackgroundColorSelected="EPGPIGRecordBackgroundColorSelected" RecordForegroundColor="EPGPIGRecordForegroundColor" RecordForegroundColorSelected="EPGPIGRecordForegroundColorSelected"
 			ServiceBackgroundColor="EPGPIGServiceBackgroundColor" ServiceBackgroundColorNow="EPGPIGServiceBackgroundColorNow" ServiceForegroundColor="EPGPIGServiceForegroundColor" ServiceForegroundColorNow="EPGPIGServiceForegroundColorNow"
 			ZapBackgroundColor="EPGPIGZapBackgroundColor" ZapBackgroundColorSelected="EPGPIGZapBackgroundColorSelected" ZapForegroundColor="EPGPIGZapForegroundColor" ZapForegroundColorSelected="EPGPIGZapForegroundColorSelected"
@@ -171,7 +173,8 @@
 		</panel>
 		<widget name="list" position="50,565" size="1180,85" EntryFontAlignment="left" EntryBorderColor="EPGGridBorder" ServiceBorderColor="EPGGridBorder"
 			EntryFontGraphical="EPGEventFont;18" EventFontInfobar="EPGEventFont;18" EventFontSingle="EPGEventFont;18" ServiceFontGraphical="EPGServiceFont;18" ServiceFontInfobar="EPGServiceFont;18"
-			EntryBackgroundColor="EPGEntryBackgroundColor" EntryBackgroundColorSelected="EPGEntryBackgroundColorSelected" EntryForegroundColor="EPGEntryForegroundColor" EntryForegroundColorSelected="EPGEntryForegroundColorSelected"
+			EntryBackgroundColor="EPGEntryBackgroundColor" EntryBackgroundColorNow="EPGEntryBackgroundColorNow" EntryBackgroundColorNowSelected="EPGEntryBackgroundColorNowSelected" EntryBackgroundColorSelected="EPGEntryBackgroundColorSelected"
+			EntryForegroundColor="EPGEntryForegroundColor" EntryForegroundColorNow="EPGEntryForegroundColorNow" EntryForegroundColorNowSelected="EPGEntryForegroundColorNowSelected" EntryForegroundColorSelected="EPGEntryForegroundColorSelected"
 			RecordBackgroundColor="EPGRecordBackgroundColor" RecordBackgroundColorSelected="EPGRecordBackgroundColorSelected" RecordForegroundColor="EPGRecordForegroundColor" RecordForegroundColorSelected="EPGRecordForegroundColorSelected"
 			ServiceBackgroundColor="EPGServiceBackgroundColor" ServiceBackgroundColorNow="EPGServiceBackgroundColorNow" ServiceForegroundColor="EPGServiceForegroundColor" ServiceForegroundColorNow="EPGServiceForegroundColorNow"
 			ZapBackgroundColor="EPGZapBackgroundColor" ZapBackgroundColorSelected="EPGZapBackgroundColorSelected" ZapForegroundColor="EPGZapForegroundColor" ZapForegroundColorSelected="EPGZapForegroundColorSelected"
