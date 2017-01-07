@@ -139,10 +139,10 @@
 			<convert type="EventName">FullDescription,Trimmed,NotSeparated</convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="730,425" size="80,25" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
-			<convert type="EventName">SmallRating</convert>
+			<convert type="EventName">SmallRating,Trimmed</convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="810,425" size="420,25" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" halign="right" transparent="1">
-			<convert type="EventName">Genre</convert>
+			<convert type="EventName">Genre,Trimmed</convert>
 		</widget>
 		<!-- <ePixmap pixmap="icons/icon_event.png" position="710,457" size="15,10" alphatest="on" /> -->
 		<widget source="ServiceEvent" render="Label" position="710,450" size="520,25" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoProgramNext" noWrap="1" transparent="1">

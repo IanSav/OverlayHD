@@ -32,13 +32,13 @@
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
 		<widget source="Event" render="Label" position="400,30" size="40,25" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
-			<convert type="EventName">SmallRating</convert>
+			<convert type="EventName">SmallRating,Trimmed</convert>
 		</widget>
 		<widget source="Event" render="Label" position="460,30" size="340,25" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
-			<convert type="EventName">Rating</convert>
+			<convert type="EventName">Rating,Trimmed</convert>
 		</widget>
 		<widget source="Event" render="Label" position="800,30" size="380,25" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" halign="right" transparent="1">
-			<convert type="EventName">Genre</convert>
+			<convert type="EventName">Genre,Trimmed</convert>
 		</widget>
 		<widget source="Event" render="Label" position="0,55" size="1180,70" backgroundColor="InfoBackground" font="InfoDescriptionFont;20" foregroundColor="InfoDetailsNow" halign="block" transparent="1">
 			<convert type="EventName">FullDescription,Trimmed,NotSeparated</convert>
@@ -69,10 +69,10 @@
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
 		<widget source="Event" render="Label" position="400,30" size="40,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
-			<convert type="EventName">SmallRating</convert>
+			<convert type="EventName">SmallRating,Trimmed</convert>
 		</widget>
 		<widget source="Event" render="Label" position="460,30" size="400,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" halign="right" transparent="1">
-			<convert type="EventName">Genre</convert>
+			<convert type="EventName">Genre,Trimmed</convert>
 		</widget>
 		<widget source="Event" render="Label" position="0,55" size="860,118" backgroundColor="EPGBackground" font="InfoDescriptionFont;20" foregroundColor="InfoDetailsNow" halign="block" transparent="1">
 			<convert type="EventName">FullDescription,Trimmed,NotSeparated</convert>
@@ -260,13 +260,13 @@
 			<convert type="ServiceName">Reference</convert>
 		</widget>
 		<widget source="Event" render="Label" position="850,595" size="320,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
-			<convert type="EventName">Rating</convert>
+			<convert type="EventName">Rating,Trimmed</convert>
 		</widget>
 		<widget source="Event" render="Label" position="1190,595" size="40,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" halign="right" transparent="1">
-			<convert type="EventName">SmallRating</convert>
+			<convert type="EventName">SmallRating,Trimmed</convert>
 		</widget>
 		<widget source="Event" render="Label" position="850,625" size="315,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" transparent="1">
-			<convert type="EventName">Genre</convert>
+			<convert type="EventName">Genre,Trimmed</convert>
 		</widget>
 		<widget position="1175,625" size="55,25" source="Event" render="Pixmap" pixmap="epg/fta.png" alphatest="blend">
 			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True,Invert</convert>
