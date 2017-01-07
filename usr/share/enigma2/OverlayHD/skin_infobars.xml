@@ -308,6 +308,11 @@
 		<panel position="917,690" size="353,20">
 			<panel name="ChannelFormatPanel" />
 		</panel>
+		<widget name="state" position="0,0" size="0,0" font="Regular;25" transparent="1" />
+		<widget name="eventname" position="0,0" size="0,0" font="Regular;25" transparent="1" />
+		<widget name="key_green" position="0,0" size="0,0" font="Regular;25" transparent="1" />
+		<widget name="key_yellow" position="0,0" size="0,0" font="Regular;25" transparent="1" />
+		<widget name="key_blue" position="0,0" size="0,0" font="Regular;25" transparent="1" />
 	</screen>
 
 <!-- INFO - Event Info View -->
