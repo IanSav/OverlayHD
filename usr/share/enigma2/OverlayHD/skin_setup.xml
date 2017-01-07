@@ -155,26 +155,28 @@
 
 <!-- MENU > Setup > System > Factory Reset - Uses Internal Screen -->
 
-<!-- MENU > Setup > Tuners > Tuner Configuration - NO LONGER ENABLED IN MENUS! -->
+<!-- MENU > Setup > Tuners > Tuner Configuration -->
 
 	<screen name="NimSelection" title="Choose Tuner" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonInfo" />
 		<panel name="ScreenTemplateButtonColours" />
-		<widget source="nimlist" render="Listbox" position="650,195" size="525,400" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_tv.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="nimlist" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (10, 5), size = (390, 30), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the nim name,
-					MultiContentEntryText(pos = (50, 30), size = (435, 90), font = 1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is a description of the nim settings,
+					MultiContentEntryText(pos = (15, 0), size = (790, 35), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1), # index 1 is the nim name,
+					MultiContentEntryText(pos = (50, 35), size = (760, 70), font = 1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is a description of the nim settings,
 					],
-				"fonts": [gFont("Regular", 20), gFont("Regular", 15)],
-				"itemHeight": 120
+				"fonts": [gFont("Regular", 25), gFont("Regular", 20)],
+				"itemHeight": 105
 				}
 			</convert>
 		</widget>
-		<eLabel text="Choose Tuner" position="200,210" size="300,170" font="Regular;20" halign="center" transparent="1" valign="center" />
-<!--####-->		<!-- <ePixmap pixmap="frame/frame_400x200.png" position="150,195" size="400,200" alphatest="on" /> -->
+		<panel name="ScreenTemplateFrame830x120" />
+		<eLabel text="Choose tuner" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 <!-- MENU > Setup > Tuners > Tuner Setup -->
@@ -182,8 +184,9 @@
 	<screen name="NimSetup" title="Reception Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_system.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<widget name="config" position="590,170" size="610,418" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="0" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_tv.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateDescription4" />
 	</screen>
 
 <!-- MENU > Setup > Tuners > Location Scan -->
