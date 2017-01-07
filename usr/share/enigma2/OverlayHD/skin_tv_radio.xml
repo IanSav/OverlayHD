@@ -127,21 +127,10 @@
 		<widget source="ServiceEvent" render="Label" position="710,150" size="520,25" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoProgramNow" transparent="1">
 			<convert type="EventName">NowName</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="730,175" size="110,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" noWrap="1" transparent="1">
-			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<eLabel text="-" position="730,175" size="110,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" halign="center" transparent="1" />
-		<widget source="ServiceEvent" render="Label" position="730,175" size="110,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" halign="right" noWrap="1" transparent="1">
-			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<!-- This widget will replace the three above when the new time code is available.
 		<widget source="ServiceEvent" render="Label" position="730,175" size="250,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" noWrap="1" transparent="1">
 			<convert type="EventTime">Times</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		-->
 		<widget source="ServiceEvent" render="Label" position="980,175" size="250,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" halign="right" noWrap="1" transparent="1">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
@@ -159,21 +148,10 @@
 		<widget source="ServiceEvent" render="Label" position="710,450" size="520,25" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoProgramNext" noWrap="1" transparent="1">
 			<convert type="EventName">NextName</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="730,475" size="110,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNext" noWrap="1" transparent="1">
-			<convert type="EventTime">NextStartTime</convert>
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<eLabel text="-" position="730,475" size="110,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNext" halign="center" transparent="1" />
-		<widget source="ServiceEvent" render="Label" position="730,475" size="110,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNext" halign="right" noWrap="1" transparent="1">
-			<convert type="EventTime">NextEndTime</convert>
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<!-- This widget will replace the three above when the new time code is available.
 		<widget source="ServiceEvent" render="Label" position="730,475" size="250,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNext" noWrap="1" transparent="1">
 			<convert type="EventTime">NextTimes</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		-->
 		<widget source="ServiceEvent" render="Label" position="980,475" size="250,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoDurationNext" halign="right" noWrap="1" transparent="1">
 			<convert type="EventTime">NextDuration</convert>
 			<convert type="ClockToText">InMinutes</convert>
@@ -182,21 +160,10 @@
 		<widget source="ServiceEvent" render="Label" position="710,500" size="520,25" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoProgramNext" noWrap="1" transparent="1">
 			<convert type="EventName">ThirdName</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="730,525" size="110,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNext" noWrap="1" transparent="1">
-			<convert type="EventTime">ThirdStartTime</convert>
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<eLabel text="-" position="730,525" size="110,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNext" halign="center" transparent="1" />
-		<widget source="ServiceEvent" render="Label" position="730,525" size="110,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNext" halign="right" noWrap="1" transparent="1">
-			<convert type="EventTime">ThirdEndTime</convert>
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<!-- This widget will replace the three above when the new time code is available.
 		<widget source="ServiceEvent" render="Label" position="730,525" size="250,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNext" noWrap="1" transparent="1">
 			<convert type="EventTime">ThirdTimes</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		-->
 		<widget source="ServiceEvent" render="Label" position="980,525" size="250,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoDurationNext" halign="right" noWrap="1" transparent="1">
 			<convert type="EventTime">ThirdDuration</convert>
 			<convert type="ClockToText">InMinutes</convert>
