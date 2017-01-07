@@ -336,6 +336,7 @@
 	</fonts>
 
 	<parameters>
+		<parameter name="AllowUserDatesAndTimes" value="1,1" />
 		<!--
 		<parameter name="AutotimerEnabledIcon" value="2,1,38,36" />
 		<parameter name="AutotimerRecordIcon" value="42,5,30,30" />
