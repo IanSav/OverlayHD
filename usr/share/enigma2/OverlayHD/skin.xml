@@ -17,7 +17,6 @@
 		<color name="DarkerBlue" value="#0000022b" />
 		<color name="DarkGrey" value="#00a9a9a9" />
 		<color name="DavysGrey" value="#00555555" />
-		<color name="DarkerGrey" value="#00555555" /><!-- Previous name for this colour code! -->
 		<color name="DeepBlue" value="#00000636" />
 		<color name="DeepGrey" value="#00363636" />
 		<color name="DeepPink" value="#00ff1493" />
@@ -91,28 +90,6 @@
 		<color name="BannerClockTime" value="White" />
 		<color name="BannerTitle" value="White" />
 
-<!--
- |		These entries were defined for the EPG grid but are now reported as invalid!
- |		- EntryBackgroundColorNow = "#0000056f"
- |		- EntryBackgroundColorNowSelected = "#00d8c664"
- |		- EntryForegroundColorNow = "White"
- |		- EntryForegroundColorNowSelected = "Black"
- +-->
-<!--
- |		These entries are flagged for deletion in the next release!
- +--> 
-		<color name="EPGChannel" value="White" /><!-- To be deleted! -->
-		<color name="EPGChannelSelected" value="White" /><!-- To be deleted! -->
-		<color name="EPGDetails" value="White" /><!-- To be deleted! -->
-		<color name="EPGDuration" value="White" /><!-- To be deleted! -->
-		<color name="EPGLCN" value="White" /><!-- To be deleted! -->
-		<color name="EPGProgram" value="White" /><!-- To be deleted! -->
-		<color name="EPGProgramSelected" value="White" /><!-- To be deleted! -->
-		<color name="EPGProvider" value="White" /><!-- To be deleted! -->
-		<color name="EPGRating" value="White" /><!-- To be deleted! -->
-		<color name="EPGTimes" value="White" /><!-- To be deleted! -->
-		<color name="EPGTimesSelected" value="White" /><!-- To be deleted! -->
-
 		<color name="EPGBackground" value="Black" />
 		<color name="EPGGridBackground" value="Orange" />
 		<color name="EPGGridBorder" value="Black" />
@@ -123,8 +100,12 @@
 		<color name="EPGProgressColour" value="WarmYellow" />
 		<color name="EPGTimeLine" value="Yellow" />
 		<color name="EPGEntryBackgroundColor" value="MidBlack" />
+		<color name="EPGEntryBackgroundColorNow" value="Jet" />
+		<color name="EPGEntryBackgroundColorNowSelected" value="Silver" />
 		<color name="EPGEntryBackgroundColorSelected" value="Grey" />
 		<color name="EPGEntryForegroundColor" value="White" />
+		<color name="EPGEntryForegroundColorNow" value="White" />
+		<color name="EPGEntryForegroundColorNowSelected" value="Black" />
 		<color name="EPGEntryForegroundColorSelected" value="Black" />
 		<color name="EPGRecordBackgroundColor" value="DullRed" />
 		<color name="EPGRecordBackgroundColorSelected" value="Red" />
@@ -139,8 +120,12 @@
 		<color name="EPGZapForegroundColor" value="White" />
 		<color name="EPGZapForegroundColorSelected" value="Black" />
 		<color name="EPGPIGEntryBackgroundColor" value="MidBlack" />
+		<color name="EPGPIGEntryBackgroundColorNow" value="Jet" />
+		<color name="EPGPIGEntryBackgroundColorNowSelected" value="Silver" />
 		<color name="EPGPIGEntryBackgroundColorSelected" value="Grey" />
 		<color name="EPGPIGEntryForegroundColor" value="White" />
+		<color name="EPGPIGEntryForegroundColorNow" value="White" />
+		<color name="EPGPIGEntryForegroundColorNowSelected" value="Black" />
 		<color name="EPGPIGEntryForegroundColorSelected" value="Black" />
 		<color name="EPGPIGRecordBackgroundColor" value="DullRed" />
 		<color name="EPGPIGRecordBackgroundColorSelected" value="Red" />
@@ -337,13 +322,83 @@
 		<alias name="LCD" font="DSDigital" size="20" height="25" width="18" />
 		<alias name="mediaportal" font="KhammuRabi" size="20" height="25" width="18" />
 		<alias name="MenuFont" font="NemesisFlatline" size="25" height="35" width="20" />
+		<alias name="MovieSelectionFont" font="ValisEnigma" size="20" height="25" width="20" />
 		<alias name="Named" font="RobotoBold" size="20" height="25" width="18" />
+		<alias name="PluginBrowser0" font="NemesisFlatline" size="20" height="50" width="18" />
+		<alias name="PluginBrowser1" font="NemesisFlatline" size="16" height="50" width="18" />
+		<alias name="PluginBrowser2" font="NemesisFlatline" size="25" height="50" width="18" />
 		<alias name="Regular" font="NemesisFlatline" size="20" height="25" width="18" />
 		<alias name="SMSHelperFont" font="MPluss1M" size="20" height="24" width="18" />
 		<alias name="TextFont" font="ValisEnigma" size="20" height="25" width="18" />
 		<alias name="TextNormal" font="NemesisFlatline" size="20" height="24" width="18" />
 		<alias name="TitleFont" font="RobotoBlack" size="25" height="35" width="20" />
+		<alias name="VirtualKeyboard" font="NemesisFlatline" size="25" height="45" width="20" />
 	</fonts>
+
+	<parameters>
+		<parameter name="AllowUserDatesAndTimes" value="1,1" />
+		<!--
+		<parameter name="AutotimerEnabledIcon" value="2,1,38,36" />
+		<parameter name="AutotimerRecordIcon" value="42,5,30,30" />
+		-->
+		<parameter name="ChoicelistDash" value="0,2,1280,35" />
+		<parameter name="ChoicelistName" value="50,2,1280,35" />
+		<parameter name="ChoicelistIcon" value="5,5,35,25" />
+		<!--
+		<parameter name="ConfigListSeperator" value="300" />
+		<parameter name="DreamexplorerName" value="62,0,1200,38" />
+		<parameter name="DreamexplorerIcon" value="15,4,30,30" />
+		<parameter name="FileListName" value="68,4,1000,34" />
+		<parameter name="FileListIcon" value="7,4,52,37" />
+		<parameter name="FileListMultiName" value="90,3,1000,32" />
+		<parameter name="FileListMultiIcon" value="45, 4, 30, 30" />
+		<parameter name="FileListMultiLock" value="2,0,36,36" />
+		<parameter name="HelpMenuListHlp" value="0,0,900,42" />
+		<parameter name="HelpMenuListExtHlp0" value="0,0,900,39" />
+		<parameter name="HelpMenuListExtHlp1" value="0,42,900,30" />
+		<parameter name="PartnerBoxEntryListName" value="8,2,225,38" />
+		<parameter name="PartnerBoxEntryListIP" value="180,2,225,38" />
+		<parameter name="PartnerBoxEntryListPort" value="405,2,150,38" />
+		<parameter name="PartnerBoxEntryListType" value="615,2,150,38" />
+		<parameter name="PartnerBoxTimerServicename" value="0,0,45" />
+		<parameter name="PartnerBoxTimerName" value="0,42,30" />
+		<parameter name="PartnerBoxE1TimerTime" value="0,78,255,30" />
+		<parameter name="PartnerBoxE1TimerState" value="255,78,255,30" />
+		<parameter name="PartnerBoxE2TimerTime" value="0,78,225,30" />
+		<parameter name="PartnerBoxE2TimerState" value="225,78,225,30" />
+		<parameter name="PartnerBoxE2TimerIcon" value="1050,8,20,20" />
+		<parameter name="PartnerBoxE2TimerIconRepeat" value="1050,38,20,20" />
+		<parameter name="PartnerBoxBouquetListName" value="0,0,45" />
+		<parameter name="PartnerBoxChannelListName" value="0,0,45" />
+		<parameter name="PartnerBoxChannelListTitle" value="0,42,30" />
+		<parameter name="PartnerBoxChannelListTime" value="0,78,225,30" />
+		<parameter name="PicturePlayerThumb" value="30,285,45,300,30,25" />
+		<parameter name="PlayListName" value="38,2,1000,34" />
+		<parameter name="PlayListIcon" value="7,7,24,24" />
+		-->
+		<parameter name="PluginBrowserName" value="120,5,25" />
+		<parameter name="PluginBrowserDescr" value="140,28,25" />
+		<parameter name="PluginBrowserIcon" value="10,5,100,40" />
+		<parameter name="PluginBrowserCategoryName" value="70,9,50" />
+		<parameter name="PluginBrowserDownloadName" value="70,2,25" />
+		<parameter name="PluginBrowserDownloadDescr" value="90,28,25" />
+		<parameter name="PluginBrowserDownloadIcon" value="5,0,60,50" />
+		<!--
+		<parameter name="ServiceInfo" value="0,0,450,50" />
+		<parameter name="ServiceInfoLeft" value="0,0,450,45" />
+		<parameter name="ServiceInfoRight" value="450,0,1000,45" />
+		<parameter name="SelectionListDescr" value="45,3,1000,32" />
+		<parameter name="SelectionListLock" value="0,2,36,36" />
+		<parameter name="SelectionListLockOff" value="0,2,36,36" />
+		-->
+		<parameter name="VirtualKeyboard" value="45,45" />
+		<!--
+		<parameter name="SHOUTcastListItem" value="30,27,35,96,35,33,60,32" />
+		<parameter name="EPGImportFilterListDescr" value="30,3,500,30" />
+		<parameter name="EPGImportFilterListLockOff" value="0,0,30,30" />
+		<parameter name="EPGImportFilterListLockOn" value="0,0,30,30" />
+		-->
+	</parameters>
 
 	<windowstyle id="0" type="skinned">
 		<title font="Named;23" offset="20,8" />
@@ -424,10 +479,7 @@
 	<screen name="ScreenTemplateClockDigital" title="Digital Current Time" flags="wfNoBorder">
 		<eLabel position="1080,10" size="190,60" backgroundColor="BannerClockBackground" />
 		<widget source="global.CurrentTime" render="Label" position="1080,15" size="180,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="BannerClockDate" halign="right" transparent="1" zPosition="+1">
-			<!--  This format will replace the one below when the new time code is available.
 			<convert type="ClockToText">ShortFullDate</convert>
-			-->
-			<convert type="ClockToText">Format:%a %-e-%b-%Y</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="1080,40" size="180,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="BannerClockTime" halign="right" transparent="1" zPosition="+1">
 			<convert type="ClockToText">WithSeconds</convert>
@@ -439,10 +491,7 @@
 		<eLabel position="980,10" size="235,35" backgroundColor="BannerClockBackground" />
 		<!-- Clock date -->
 		<widget source="global.CurrentTime" render="Label" position="990,15" size="180,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="BannerClockDate" halign="right" transparent="1" zPosition="+1">
-			<!--  This format will replace the one below when the new time code is available.
 			<convert type="ClockToText">ShortFullDate</convert>
-			-->
-			<convert type="ClockToText">Format:%a %-e-%b-%Y</convert>
 		</widget>
 		<!-- Clock face -->
 		<ePixmap pixmap="images/clock_face.png" position="1180,5" size="90,90" alphatest="blend" zPosition="+1" />
@@ -516,6 +565,13 @@
 		<widget source="key_red" render="Label" position="187,670" size="210,35" backgroundColor="ButtonBack" conditional="key_red" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
+	<screen name="ScreenTemplateButtonRedCircle">
+		<ePixmap pixmap="buttons/button_block_background.png" position="172,670" size="225,35" alphatest="on" transparent="1" />
+		<ePixmap pixmap="buttons/button_circle_red.png" position="177,676" size="25,25" alphatest="on" transparent="1" zPosition="+1" />
+		<widget name="key_red" position="207,670" size="190,35" backgroundColor="ButtonBack" conditional="key_red" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
+		<widget source="key_red" render="Label" position="207,670" size="190,35" backgroundColor="ButtonBack" conditional="key_red" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
+	</screen>
+
 <!-- GREEN Button -->
 
 	<screen name="ScreenTemplateButtonGreen">
@@ -553,6 +609,13 @@
 		<ePixmap pixmap="buttons/button_bar_green.png" position="414,676" size="5,25" alphatest="on" transparent="1" zPosition="+1" />
 		<widget name="key_green" position="424,670" size="210,35" backgroundColor="ButtonBack" conditional="key_green" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
 		<widget source="key_green" render="Label" position="424,670" size="210,35" backgroundColor="ButtonBack" conditional="key_green" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
+	</screen>
+
+	<screen name="ScreenTemplateButtonGreenCircle">
+		<ePixmap pixmap="buttons/button_block_background.png" position="409,670" size="225,35" alphatest="on" transparent="1" />
+		<ePixmap pixmap="buttons/button_circle_green.png" position="414,676" size="25,25" alphatest="on" transparent="1" zPosition="+1" />
+		<widget name="key_green" position="444,670" size="190,35" backgroundColor="ButtonBack" conditional="key_green" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
+		<widget source="key_green" render="Label" position="444,670" size="190,35" backgroundColor="ButtonBack" conditional="key_green" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 <!-- YELLOW Button -->
@@ -594,6 +657,13 @@
 		<widget source="key_yellow" render="Label" position="661,670" size="210,35" backgroundColor="ButtonBack" conditional="key_yellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
+	<screen name="ScreenTemplateButtonYellowCircle">
+		<ePixmap pixmap="buttons/button_block_background.png" position="646,670" size="225,35" alphatest="on" transparent="1" />
+		<ePixmap pixmap="buttons/button_circle_yellow.png" position="651,676" size="25,25" alphatest="on" transparent="1" zPosition="+1" />
+		<widget name="key_yellow" position="681,670" size="190,35" backgroundColor="ButtonBack" conditional="key_yellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
+		<widget source="key_yellow" render="Label" position="681,670" size="190,35" backgroundColor="ButtonBack" conditional="key_yellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
+	</screen>
+
 <!-- BLUE Button -->
 
 	<screen name="ScreenTemplateButtonBlue">
@@ -631,6 +701,13 @@
 		<ePixmap pixmap="buttons/button_bar_blue.png" position="888,676" size="5,25" alphatest="on" transparent="1" zPosition="+1" />
 		<widget name="key_blue" position="898,670" size="210,35" backgroundColor="ButtonBack" conditional="key_blue" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
 		<widget source="key_blue" render="Label" position="898,670" size="210,35" backgroundColor="ButtonBack" conditional="key_blue" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
+	</screen>
+
+	<screen name="ScreenTemplateButtonBlueCircle">
+		<ePixmap pixmap="buttons/button_block_background.png" position="883,670" size="225,35" alphatest="on" transparent="1" />
+		<ePixmap pixmap="buttons/button_circle_blue.png" position="888,676" size="25,25" alphatest="on" transparent="1" zPosition="+1" />
+		<widget name="key_blue" position="918,670" size="190,35" backgroundColor="ButtonBack" conditional="key_blue" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
+		<widget source="key_blue" render="Label" position="918,670" size="190,35" backgroundColor="ButtonBack" conditional="key_blue" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 <!-- All Four Colour Buttons -->
@@ -693,6 +770,17 @@
 		<ePixmap pixmap="buttons/button_bar_blue.png" position="888,676" size="5,25" alphatest="on" transparent="1" zPosition="+1" />
 	</screen>
 
+	<screen name="ScreenTemplateButtonColourBacksCircle">
+		<ePixmap pixmap="buttons/button_block_background.png" position="172,670" size="225,35" alphatest="on" transparent="1" />
+		<ePixmap pixmap="buttons/button_circle_red.png" position="177,676" size="25,25" alphatest="on" transparent="1" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="409,670" size="225,35" alphatest="on" transparent="1" />
+		<ePixmap pixmap="buttons/button_circle_green.png" position="414,676" size="25,25" alphatest="on" transparent="1" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="646,670" size="225,35" alphatest="on" transparent="1" />
+		<ePixmap pixmap="buttons/button_circle_yellow.png" position="651,676" size="25,25" alphatest="on" transparent="1" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="883,670" size="225,35" alphatest="on" transparent="1" />
+		<ePixmap pixmap="buttons/button_circle_blue.png" position="888,676" size="25,25" alphatest="on" transparent="1" zPosition="+1" />
+	</screen>
+
 <!-- TEXT Button -->
 
 	<screen name="ScreenTemplateButtonText">
@@ -700,12 +788,9 @@
 	</screen>
 
 	<screen name="ScreenTemplateButtonTextVKey">
-		<widget name="VKeyIcon" pixmap="buttons/button_block_text.png" position="1120,670" size="50,35" alphatest="blend" conditional="VKeyIcon" transparent="1" />
-		<!-- This code is for the 16.1 builds and replaces the widget above.
 		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/button_block_text.png" position="1120,670" size="50,35" alphatest="blend" conditional="VKeyIcon" transparent="1">
 			<convert type="ConditionalShowHide" />
 		</widget>
-		-->
 		<panel name="ScreenTemplateSMSHelper" />
 	</screen>
 
@@ -749,7 +834,7 @@
 	<screen name="MenuGeneric" title="Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColourBacks" />
-		<ePixmap pixmap="menus/menu_default.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" zPosition="+1" /> -->
 		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
@@ -769,7 +854,7 @@
 	<screen name="MenuEnhanced" title="Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColourBacks" />
-		<ePixmap pixmap="menus/menu_default.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" zPosition="+1" /> -->
 		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
@@ -779,6 +864,23 @@
 					MultiContentEntryText(pos = (65, 0), size = (655, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),
 					MultiContentEntryText(pos = (740, 0), size = (50, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4),
 					MultiContentEntryPixmapAlphaTest(pos = (20, 5), size = (35, 25), png = 5)
+					],
+				"fonts": [parseFont("MenuFont;25")],
+				"itemHeight": 35
+				}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="MenuEnigma2" title="Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColourBacks" />
+		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (20, 0), size = (810, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0)
 					],
 				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
@@ -1332,7 +1434,7 @@
 
 	<screen name="ScreenTemplateIntroduction4">
 		<panel name="ScreenTemplateFrame830x120" />
-		<widget name="introduction" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="introduction" position="410,550" size="810,100" backgroundColor="TextBackground" conditional="introduction" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateLab4">
@@ -1427,10 +1529,7 @@
 	<screen name="ClockBannerPanel">
 		<ePixmap pixmap="icons/clock.png" position="0,4" size="14,14" alphatest="blend" />
 		<widget source="global.CurrentTime" render="Label" position="25,0" size="280,25" borderColor="BannerBorder" borderWidth="1" font="ClockFont;20" foregroundColor="BannerClock" transparent="1">
-			<!--  This format will replace the one below when the new time code is available.
 			<convert type="ClockToText">LongFullDate</convert>
-			-->
-			<convert type="ClockToText">Format:%a %-e-%b-%Y  %R</convert>
 		</widget>
 	</screen>
 
@@ -1731,8 +1830,8 @@
 
 <!-- Picture In Picture Setup -->
 
-	<screen name="PiPSetup" position="center,center" size="620,180" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<widget name="text" position="10,10" size="600,160" font="Regular;23" />
+	<screen name="PiPSetup" position="center,center" size="620,228" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<widget name="text" position="10,10" size="600,208" font="Regular;23" />
 	</screen>
 
 <!-- Screen Saver -->

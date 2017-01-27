@@ -23,33 +23,22 @@
 			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="Event" render="Label" position="0,30" size="80,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" transparent="1">
-			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<eLabel text="-" position="80,30" size="20,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" halign="center" transparent="1" />
-		<widget source="Event" render="Label" position="105,30" size="80,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" halign="right" transparent="1">
-			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<!-- This widget will replace the three above when the new time code is available.
 		<widget source="Event" render="Label" position="0,30" size="180,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" noWrap="1" transparent="1">
 			<convert type="EventTime">Times</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		-->
 		<widget source="Event" render="Label" position="200,30" size="180,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" halign="right" noWrap="1" transparent="1">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
 		<widget source="Event" render="Label" position="400,30" size="40,25" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
-			<convert type="EventName">SmallRating</convert>
+			<convert type="EventName">SmallRating,Trimmed</convert>
 		</widget>
 		<widget source="Event" render="Label" position="460,30" size="340,25" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
-			<convert type="EventName">Rating</convert>
+			<convert type="EventName">Rating,Trimmed</convert>
 		</widget>
 		<widget source="Event" render="Label" position="800,30" size="380,25" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" halign="right" transparent="1">
-			<convert type="EventName">Genre</convert>
+			<convert type="EventName">Genre,Trimmed</convert>
 		</widget>
 		<widget source="Event" render="Label" position="0,55" size="1180,70" backgroundColor="InfoBackground" font="InfoDescriptionFont;20" foregroundColor="InfoDetailsNow" halign="block" transparent="1">
 			<convert type="EventName">FullDescription,Trimmed,NotSeparated</convert>
@@ -71,30 +60,19 @@
 			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="Event" render="Label" position="0,30" size="80,25" backgroundColor="EPGBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" transparent="1">
-			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<eLabel text="-" position="80,30" size="20,25" backgroundColor="EPGBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" halign="center" transparent="1" />
-		<widget source="Event" render="Label" position="105,30" size="80,25" backgroundColor="EPGBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" halign="right" transparent="1">
-			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<!-- This widget will replace the three above when the new time code is available.
 		<widget source="Event" render="Label" position="0,30" size="180,25" backgroundColor="EPGBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" noWrap="1" transparent="1">
 			<convert type="EventTime">Times</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		-->
 		<widget source="Event" render="Label" position="200,30" size="180,25" backgroundColor="EPGBackground" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" halign="right" noWrap="1" transparent="1">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
 		<widget source="Event" render="Label" position="400,30" size="40,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
-			<convert type="EventName">SmallRating</convert>
+			<convert type="EventName">SmallRating,Trimmed</convert>
 		</widget>
 		<widget source="Event" render="Label" position="460,30" size="400,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" halign="right" transparent="1">
-			<convert type="EventName">Genre</convert>
+			<convert type="EventName">Genre,Trimmed</convert>
 		</widget>
 		<widget source="Event" render="Label" position="0,55" size="860,118" backgroundColor="EPGBackground" font="InfoDescriptionFont;20" foregroundColor="InfoDetailsNow" halign="block" transparent="1">
 			<convert type="EventName">FullDescription,Trimmed,NotSeparated</convert>
@@ -131,7 +109,8 @@
 		</panel>
 		<widget name="list" position="50,255" size="1180,400" EntryFontAlignment="left" EntryBorderColor="EPGGridBorder" ServiceBorderColor="EPGGridBorder"
 			EntryFontGraphical="EPGEventFont;18" EventFontInfobar="EPGEventFont;18" EventFontSingle="EPGEventFont;18" ServiceFontGraphical="EPGServiceFont;18" ServiceFontInfobar="EPGServiceFont;18"
-			EntryBackgroundColor="EPGEntryBackgroundColor" EntryBackgroundColorSelected="EPGEntryBackgroundColorSelected" EntryForegroundColor="EPGEntryForegroundColor" EntryForegroundColorSelected="EPGEntryForegroundColorSelected"
+			EntryBackgroundColor="EPGEntryBackgroundColor" EntryBackgroundColorNow="EPGEntryBackgroundColorNow" EntryBackgroundColorNowSelected="EPGEntryBackgroundColorNowSelected" EntryBackgroundColorSelected="EPGEntryBackgroundColorSelected"
+			EntryForegroundColor="EPGEntryForegroundColor" EntryForegroundColorNow="EPGEntryForegroundColorNow" EntryForegroundColorNowSelected="EPGEntryForegroundColorNowSelected" EntryForegroundColorSelected="EPGEntryForegroundColorSelected"
 			RecordBackgroundColor="EPGRecordBackgroundColor" RecordBackgroundColorSelected="EPGRecordBackgroundColorSelected" RecordForegroundColor="EPGRecordForegroundColor" RecordForegroundColorSelected="EPGRecordForegroundColorSelected"
 			ServiceBackgroundColor="EPGServiceBackgroundColor" ServiceBackgroundColorNow="EPGServiceBackgroundColorNow" ServiceForegroundColor="EPGServiceForegroundColor" ServiceForegroundColorNow="EPGServiceForegroundColorNow"
 			ZapBackgroundColor="EPGZapBackgroundColor" ZapBackgroundColorSelected="EPGZapBackgroundColorSelected" ZapForegroundColor="EPGZapForegroundColor" ZapForegroundColorSelected="EPGZapForegroundColorSelected"
@@ -166,7 +145,8 @@
 		</panel>
 		<widget name="list" position="50,295" size="1180,360" EntryFontAlignment="left" EntryBorderColor="EPGGridBorder" ServiceBorderColor="EPGGridBorder"
 			EntryFontGraphical="EPGEventFont;18" EventFontInfobar="EPGEventFont;18" EventFontSingle="EPGEventFont;18" ServiceFontGraphical="EPGServiceFont;18" ServiceFontInfobar="EPGServiceFont;18"
-			EntryBackgroundColor="EPGPIGEntryBackgroundColor" EntryBackgroundColorSelected="EPGPIGEntryBackgroundColorSelected" EntryForegroundColor="EPGPIGEntryForegroundColor" EntryForegroundColorSelected="EPGPIGEntryForegroundColorSelected"
+			EntryBackgroundColor="EPGPIGEntryBackgroundColor" EntryBackgroundColorNow="EPGPIGEntryBackgroundColorNow" EntryBackgroundColorNowSelected="EPGPIGEntryBackgroundColorNowSelected" EntryBackgroundColorSelected="EPGPIGEntryBackgroundColorSelected"
+			EntryForegroundColor="EPGPIGEntryForegroundColor" EntryForegroundColorNow="EPGPIGEntryForegroundColorNow" EntryForegroundColorNowSelected="EPGPIGEntryForegroundColorNowSelected" EntryForegroundColorSelected="EPGPIGEntryForegroundColorSelected"
 			RecordBackgroundColor="EPGPIGRecordBackgroundColor" RecordBackgroundColorSelected="EPGPIGRecordBackgroundColorSelected" RecordForegroundColor="EPGPIGRecordForegroundColor" RecordForegroundColorSelected="EPGPIGRecordForegroundColorSelected"
 			ServiceBackgroundColor="EPGPIGServiceBackgroundColor" ServiceBackgroundColorNow="EPGPIGServiceBackgroundColorNow" ServiceForegroundColor="EPGPIGServiceForegroundColor" ServiceForegroundColorNow="EPGPIGServiceForegroundColorNow"
 			ZapBackgroundColor="EPGPIGZapBackgroundColor" ZapBackgroundColorSelected="EPGPIGZapBackgroundColorSelected" ZapForegroundColor="EPGPIGZapForegroundColor" ZapForegroundColorSelected="EPGPIGZapForegroundColorSelected"
@@ -193,7 +173,8 @@
 		</panel>
 		<widget name="list" position="50,565" size="1180,85" EntryFontAlignment="left" EntryBorderColor="EPGGridBorder" ServiceBorderColor="EPGGridBorder"
 			EntryFontGraphical="EPGEventFont;18" EventFontInfobar="EPGEventFont;18" EventFontSingle="EPGEventFont;18" ServiceFontGraphical="EPGServiceFont;18" ServiceFontInfobar="EPGServiceFont;18"
-			EntryBackgroundColor="EPGEntryBackgroundColor" EntryBackgroundColorSelected="EPGEntryBackgroundColorSelected" EntryForegroundColor="EPGEntryForegroundColor" EntryForegroundColorSelected="EPGEntryForegroundColorSelected"
+			EntryBackgroundColor="EPGEntryBackgroundColor" EntryBackgroundColorNow="EPGEntryBackgroundColorNow" EntryBackgroundColorNowSelected="EPGEntryBackgroundColorNowSelected" EntryBackgroundColorSelected="EPGEntryBackgroundColorSelected"
+			EntryForegroundColor="EPGEntryForegroundColor" EntryForegroundColorNow="EPGEntryForegroundColorNow" EntryForegroundColorNowSelected="EPGEntryForegroundColorNowSelected" EntryForegroundColorSelected="EPGEntryForegroundColorSelected"
 			RecordBackgroundColor="EPGRecordBackgroundColor" RecordBackgroundColorSelected="EPGRecordBackgroundColorSelected" RecordForegroundColor="EPGRecordForegroundColor" RecordForegroundColorSelected="EPGRecordForegroundColorSelected"
 			ServiceBackgroundColor="EPGServiceBackgroundColor" ServiceBackgroundColorNow="EPGServiceBackgroundColorNow" ServiceForegroundColor="EPGServiceForegroundColor" ServiceForegroundColorNow="EPGServiceForegroundColorNow"
 			ZapBackgroundColor="EPGZapBackgroundColor" ZapBackgroundColorSelected="EPGZapBackgroundColorSelected" ZapForegroundColor="EPGZapForegroundColor" ZapForegroundColorSelected="EPGZapForegroundColorSelected"
@@ -279,13 +260,13 @@
 			<convert type="ServiceName">Reference</convert>
 		</widget>
 		<widget source="Event" render="Label" position="850,595" size="320,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
-			<convert type="EventName">Rating</convert>
+			<convert type="EventName">Rating,Trimmed</convert>
 		</widget>
 		<widget source="Event" render="Label" position="1190,595" size="40,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" halign="right" transparent="1">
-			<convert type="EventName">SmallRating</convert>
+			<convert type="EventName">SmallRating,Trimmed</convert>
 		</widget>
 		<widget source="Event" render="Label" position="850,625" size="315,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" transparent="1">
-			<convert type="EventName">Genre</convert>
+			<convert type="EventName">Genre,Trimmed</convert>
 		</widget>
 		<widget position="1175,625" size="55,25" source="Event" render="Pixmap" pixmap="epg/fta.png" alphatest="blend">
 			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True,Invert</convert>

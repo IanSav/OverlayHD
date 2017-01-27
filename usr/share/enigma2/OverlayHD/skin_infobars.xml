@@ -142,21 +142,10 @@
 			<convert type="ServiceName">Name</convert>
 		</widget>
 		<!-- Now Event Start & End Times, Event Name and Time Remaining Area -->
-		<widget source="session.Event_Now" render="Label" position="175,615" size="73,28" backgroundColor="InfoBackground" font="InfoTimeFont;21" foregroundColor="InfoTimesNow" halign="right" transparent="1" valign="center">
-			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<eLabel text="-" position="248,615" size="20,28" backgroundColor="InfoBackground" font="InfoTimeFont;21" foregroundColor="InfoTimesNow" halign="center" transparent="1" valign="center" />
-		<widget source="session.Event_Now" render="Label" position="268,615" size="73,28" backgroundColor="InfoBackground" font="InfoTimeFont;21" foregroundColor="InfoTimesNow" transparent="1" valign="center">
-			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<!-- This widget will replace the three above when the new time code is available.
 		<widget source="session.Event_Now" render="Label" position="180,615" size="180,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" halign="center" noWrap="1" transparent="1" valign="bottom" >
 			<convert type="EventTime">Times</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		-->
 		<widget source="session.Event_Now" render="Label" position="370,605" size="545,35" backgroundColor="InfoBackground" font="InfoEventFont;28" foregroundColor="InfoProgramNow" noWrap="1" transparent="1" valign="bottom" >
 			<convert type="EventName">Name</convert>
 		</widget>
@@ -169,21 +158,10 @@
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<!-- Next Event Start & End Times, Event Name and Duration Area -->
-		<widget source="session.Event_Next" render="Label" position="175,653" size="73,28" backgroundColor="InfoBackground" font="InfoTimeFont;21" foregroundColor="InfoTimesNext" halign="right" transparent="1" valign="top">
-			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<eLabel text="-" position="248,653" size="20,28" backgroundColor="InfoBackground" font="InfoTimeFont;21" foregroundColor="InfoTimesNext" halign="center" transparent="1" />
-		<widget source="session.Event_Next" render="Label" position="268,653" size="73,28" backgroundColor="InfoBackground" font="InfoTimeFont;21" foregroundColor="InfoTimesNext" transparent="1" valign="top">
-			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<!-- This widget will replace the three above when the new time code is available.
 		<widget source="session.Event_Next" render="Label" position="180,653" size="180,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNext" halign="center" noWrap="1" transparent="1" valign="top">
 			<convert type="EventTime">Times</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		-->
 		<widget source="session.Event_Next" render="Label" position="370,653" size="545,25" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoProgramNext" noWrap="1" transparent="1" valign="top">
 			<convert type="EventName">Name</convert>
 		</widget>
@@ -243,21 +221,10 @@
 			<convert type="EventName">Name</convert>
 		</widget>
 		<!-- Event Start & End Times and Time Remaining Area -->
-		<widget source="session.Event_Now" render="Label" position="10,35" size="50,25" backgroundColor="InfoBackground" font="InfoTimeFont;18" foregroundColor="InfoTimesNow" transparent="1">
-			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<eLabel text="-" position="60,35" size="15,25" backgroundColor="InfoBackground" font="InfoTimeFont;18" foregroundColor="InfoTimesNow" halign="center" transparent="1" />
-		<widget source="session.Event_Now" render="Label" position="75,35" size="50,25" backgroundColor="InfoBackground" font="InfoTimeFont;18" foregroundColor="InfoTimesNow" halign="right" transparent="1">
-			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<!-- This widget will replace the three above when the new time code is available.
 		<widget source="session.Event_Now" render="Label" position="10,35" size="180,25" backgroundColor="InfoBackground" font="InfoTimeFont;18" foregroundColor="InfoTimesNow" noWrap="1" transparent="1">
 			<convert type="EventTime">Times</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		-->
 		<widget source="session.Event_Now" render="Label" position="370,35" size="200,25" backgroundColor="InfoBackground" font="InfoTimeFont;18" foregroundColor="InfoDurationNow" halign="right" noWrap="1" transparent="1">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
@@ -268,10 +235,10 @@
 		</widget>
 		<!-- Event Rating and Genre Area -->
 		<widget source="session.Event_Now" render="Label" position="10,330" size="80,20" backgroundColor="InfoBackground" font="InfoOtherFont;18" foregroundColor="InfoRatingNow" transparent="1">
-			<convert type="EventName">SmallRating</convert>
+			<convert type="EventName">SmallRating,Trimmed</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="90,330" size="480,20" backgroundColor="InfoBackground" font="InfoOtherFont;18" foregroundColor="InfoGenreNow" halign="right" transparent="1">
-			<convert type="EventName">Genre</convert>
+			<convert type="EventName">Genre,Trimmed</convert>
 		</widget>
 	</screen>
 
@@ -284,21 +251,10 @@
 			<convert type="EventName">Name</convert>
 		</widget>
 		<!-- Event Start & End Times and Duration Area -->
-		<widget source="session.Event_Next" render="Label" position="10,35" size="50,25" backgroundColor="InfoBackground" font="InfoTimeFont;18" foregroundColor="InfoTimesNext" transparent="1">
-			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<eLabel text="-" position="60,35" size="15,25" backgroundColor="InfoBackground" font="InfoTimeFont;18" foregroundColor="InfoTimesNext" halign="center" transparent="1" />
-		<widget source="session.Event_Next" render="Label" position="75,35" size="50,25" backgroundColor="InfoBackground" font="InfoTimeFont;18" foregroundColor="InfoTimesNext" halign="right" transparent="1">
-			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<!-- This widget will replace the three above when the new time code is available.
 		<widget source="session.Event_Next" render="Label" position="10,35" size="180,25" backgroundColor="InfoBackground" font="InfoTimeFont;18" foregroundColor="InfoTimesNext" noWrap="1" transparent="1">
 			<convert type="EventTime">Times</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		-->
 		<widget source="session.Event_Next" render="Label" position="370,35" size="200,25" backgroundColor="InfoBackground" font="InfoTimeFont;18" foregroundColor="InfoDurationNext" halign="right" noWrap="1" transparent="1">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
@@ -309,10 +265,10 @@
 		</widget>
 		<!-- Event Rating and Genre Area -->
 		<widget source="session.Event_Next" render="Label" position="10,330" size="80,20" backgroundColor="InfoBackground" font="InfoOtherFont;18" foregroundColor="InfoRatingNext" transparent="1">
-			<convert type="EventName">SmallRating</convert>
+			<convert type="EventName">SmallRating,Trimmed</convert>
 		</widget>
 		<widget source="session.Event_Next" render="Label" position="90,330" size="480,20" backgroundColor="InfoBackground" font="InfoOtherFont;18" foregroundColor="InfoGenreNext" halign="right" transparent="1">
-			<convert type="EventName">Genre</convert>
+			<convert type="EventName">Genre,Trimmed</convert>
 		</widget>
 	</screen>
 
@@ -352,6 +308,11 @@
 		<panel position="917,690" size="353,20">
 			<panel name="ChannelFormatPanel" />
 		</panel>
+		<widget name="state" position="0,0" size="0,0" font="Regular;25" transparent="1" />
+		<widget name="eventname" position="0,0" size="0,0" font="Regular;25" transparent="1" />
+		<widget name="key_green" position="0,0" size="0,0" font="Regular;25" transparent="1" />
+		<widget name="key_yellow" position="0,0" size="0,0" font="Regular;25" transparent="1" />
+		<widget name="key_blue" position="0,0" size="0,0" font="Regular;25" transparent="1" />
 	</screen>
 
 <!-- INFO - Event Info View -->
@@ -362,20 +323,10 @@
 		<panel name="ScreenTemplateButtonInfo" />
 		<panel name="ScreenTemplateButtonColours" />
 		<widget name="channel" position="50,80" size="280,25" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoChannel" transparent="1" />
-		<widget source="Event" render="Label" position="350,80" size="400,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" halign="right" transparent="1">
-			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">Format:%a %e-%b-%Y  %H:%M -</convert>
-		</widget>
-		<widget source="Event" render="Label" position="760,80" size="100,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" transparent="1">
-			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText">Format:%H:%M</convert>
-		</widget>
-		<!-- This widget will replace the two above when the new time code is available.
 		<widget source="Event" render="Label" position="365,80" size="500,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" halign="center" transparent="1">
 			<convert type="EventTime">Times</convert>
 			<convert type="ClockToText">LongFullDate,Default</convert>
 		</widget>
-		-->
 		<widget source="Event" render="Label" position="950,80" size="280,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" halign="right" transparent="1">
 			<convert type="EventTime">Duration</convert>
 			<convert type="ClockToText">InMinutes</convert>
@@ -404,13 +355,13 @@
 		</widget>
 		-->
 		<widget source="Event" render="Label" position="50,630" size="40,25" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
-			<convert type="EventName">SmallRating</convert>
+			<convert type="EventName">SmallRating,Trimmed</convert>
 		</widget>
 		<widget source="Event" render="Label" position="110,630" size="540,25" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
-			<convert type="EventName">Rating</convert>
+			<convert type="EventName">Rating,Trimmed</convert>
 		</widget>
 		<widget source="Event" render="Label" position="640,630" size="590,25" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" halign="right" transparent="1">
-			<convert type="EventName">Genre</convert>
+			<convert type="EventName">Genre,Trimmed</convert>
 		</widget>
 		<widget name="FullDescription" position="0,0" size="0,0" font="Regular;20" transparent="1" />
 		<widget name="datetime" position="0,0" size="0,0" font="Regular;20" transparent="1" />
@@ -437,20 +388,10 @@
 		<widget source="session.Event_Now" render="Progress" position="190,81" size="300,14" transparent="1" zPosition="1">
 			<convert type="EventTime">Progress</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="20,75" size="70,30" font="Regular;26" transparent="1">
-			<convert type="EventTime">StartTime</convert>
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<widget source="session.Event_Now" render="Label" position="90,75" size="90,30" font="Regular;26" transparent="1">
-			<convert type="EventTime">EndTime</convert>
-			<convert type="ClockToText">Format:- %H:%M</convert>
-		</widget>
-		<!-- This widget will replace the two above when the new time code is available.
 		<widget source="session.Event_Now" render="Label" position="20,75" size="180,30" font="Regular;26" transparent="1">
 			<convert type="EventTime">Times</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		-->
 		<widget source="RdsDecoder" render="Label" position="20,110" size="460,190" font="Regular;20" transparent="1">
 			<convert type="RdsInfo">RadioText</convert>
 		</widget>

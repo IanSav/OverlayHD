@@ -117,7 +117,10 @@
 		<panel name="ScreenTemplateButtonHelp" />
 		<eLabel position="820,66" size="2,595" backgroundColor="Pinstripe" />
 		<widget name="waitingtext" position="50,80" size="760,448" backgroundColor="TextBackground" font="Regular;25" foregroundColor="TextWaiting" halign="center" transparent="1" valign="center" zPosition="+2" />
-		<widget name="list" position="50,80" size="760,535" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="list" position="50,80" size="760,535" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0"
+			font="MovieSelectionFont;20" pbarShift="None" pbarHeight="10" pbarLargeWidth="45" pbarColour="206333" pbarColourSeen="ffc71d" pbarColourRec="ff001d"
+			pbarColourSel="20e333" pbarColourSeenSel="ffc71d" pbarColourRecSel="ff001d" partIconeShift="None" spaceIconeText="5" iconsWidth="25" trashShift="None"
+			dirShift="None" spaceRight="5" dateWidth="140" dateWidthScale="10.0" lenWidth="60" lenWidthScale="4.0" sizeWidth="70" sizeWidthScale="5.0" />
 		<widget name="chosenletter" position="50,80" size="760,535" font="Regular;100" foregroundColor="FindCharacter" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget name="numFolders" position="50,605" size="220,25" font="InfoOtherFont;20" foregroundColor="InfoDiskStats" transparent="1" />
 		<widget name="numFiles" position="50,630" size="220,25" font="InfoOtherFont;20" foregroundColor="InfoDiskStats" transparent="1" />
@@ -129,10 +132,7 @@
 		<eLabel text="Date:" position="830,80" size="100,25" font="InfoOtherFont;20" foregroundColor="InfoMediaFileSize" transparent="1" />
 		<widget source="Service" render="Label" position="930,80" size="300,25" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" halign="right" transparent="1">
 			<convert type="EventTime">StartTime</convert>
-			<!--  This format will replace the one below when the new time code is available.
 			<convert type="ClockToText">LongFullDate</convert>
-			-->
-			<convert type="ClockToText">Format:%a %-e-%b-%Y  %R</convert>
 		</widget>
 		<eLabel text="Duration:" position="830,105" size="100,25" font="InfoOtherFont;20" foregroundColor="InfoDurationNow" transparent="1" />
 		<widget source="Service" render="Label" position="930,105" size="300,25" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" halign="right" transparent="1">
