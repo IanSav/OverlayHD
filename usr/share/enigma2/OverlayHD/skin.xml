@@ -719,68 +719,6 @@
 		<panel name="ScreenTemplateButtonBlue" />
 	</screen>
 
-	<screen name="ScreenTemplateButtonColourBacks">
-		<panel name="ScreenTemplateButtonColourBacksBlock" />
-	</screen>
-
-	<screen name="ScreenTemplateButtonColourBacksLegacy">
-		<ePixmap pixmap="buttons/button_legacy_red.png" position="172,670" size="225,60" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_legacy_green.png" position="409,670" size="225,60" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_legacy_yellow.png" position="646,670" size="225,60" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_legacy_blue.png" position="883,670" size="225,60" alphatest="on" transparent="1" />
-	</screen>
-
-	<screen name="ScreenTemplateButtonColourBacksWizard">
-		<ePixmap pixmap="buttons/button_wizard_red.png" position="172,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_wizard_green.png" position="409,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_wizard_yellow.png" position="646,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_wizard_blue.png" position="883,670" size="225,35" alphatest="on" transparent="1" />
-	</screen>
-
-	<screen name="ScreenTemplateButtonColourBacksBlock">
-		<ePixmap pixmap="buttons/button_block_background.png" position="172,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_block_red.png" position="176,675" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_block_background.png" position="409,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_block_green.png" position="413,675" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_block_background.png" position="646,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_block_yellow.png" position="650,675" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_block_background.png" position="883,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_block_blue.png" position="887,675" size="225,35" alphatest="on" transparent="1" />
-	</screen>
-
-	<screen name="ScreenTemplateButtonColourBacksButton">
-		<ePixmap pixmap="buttons/button_block_background.png" position="172,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_small_red.png" position="177,678" size="15,16" alphatest="on" transparent="1" zPosition="+1" />
-		<ePixmap pixmap="buttons/button_block_background.png" position="409,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_small_green.png" position="414,678" size="15,16" alphatest="on" transparent="1" zPosition="+1" />
-		<ePixmap pixmap="buttons/button_block_background.png" position="646,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_small_yellow.png" position="651,678" size="15,16" alphatest="on" transparent="1" zPosition="+1" />
-		<ePixmap pixmap="buttons/button_block_background.png" position="883,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_small_blue.png" position="888,678" size="15,16" alphatest="on" transparent="1" zPosition="+1" />
-	</screen>
-
-	<screen name="ScreenTemplateButtonColourBacksBar">
-		<ePixmap pixmap="buttons/button_block_background.png" position="172,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_bar_red.png" position="177,676" size="5,25" alphatest="on" transparent="1" zPosition="+1" />
-		<ePixmap pixmap="buttons/button_block_background.png" position="409,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_bar_green.png" position="414,676" size="5,25" alphatest="on" transparent="1" zPosition="+1" />
-		<ePixmap pixmap="buttons/button_block_background.png" position="646,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_bar_yellow.png" position="651,676" size="5,25" alphatest="on" transparent="1" zPosition="+1" />
-		<ePixmap pixmap="buttons/button_block_background.png" position="883,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_bar_blue.png" position="888,676" size="5,25" alphatest="on" transparent="1" zPosition="+1" />
-	</screen>
-
-	<screen name="ScreenTemplateButtonColourBacksCircle">
-		<ePixmap pixmap="buttons/button_block_background.png" position="172,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_circle_red.png" position="177,676" size="25,25" alphatest="on" transparent="1" zPosition="+1" />
-		<ePixmap pixmap="buttons/button_block_background.png" position="409,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_circle_green.png" position="414,676" size="25,25" alphatest="on" transparent="1" zPosition="+1" />
-		<ePixmap pixmap="buttons/button_block_background.png" position="646,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_circle_yellow.png" position="651,676" size="25,25" alphatest="on" transparent="1" zPosition="+1" />
-		<ePixmap pixmap="buttons/button_block_background.png" position="883,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_circle_blue.png" position="888,676" size="25,25" alphatest="on" transparent="1" zPosition="+1" />
-	</screen>
-
 <!-- TEXT Button -->
 
 	<screen name="ScreenTemplateButtonText">
@@ -833,7 +771,7 @@
 
 	<screen name="MenuGeneric" title="Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColourBacks" />
+		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" zPosition="+1" /> -->
 		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
@@ -853,7 +791,7 @@
 
 	<screen name="MenuEnhanced" title="Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColourBacks" />
+		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" zPosition="+1" /> -->
 		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
@@ -874,7 +812,7 @@
 
 	<screen name="MenuEnigma2" title="Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColourBacks" />
+		<panel name="ScreenTemplateButtonColours" />
 		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -924,7 +862,7 @@
 
 	<screen name="HelpMenu" title="Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColourBacks" />
+		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateButtonHelp" />
 		<panel position="150,110" size="154,500">
 			<panel name="ScreenTemplateRemote" />

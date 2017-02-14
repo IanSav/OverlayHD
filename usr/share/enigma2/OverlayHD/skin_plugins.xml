@@ -463,7 +463,7 @@
 
 	<screen name="OverlayHDThemeMenu" title="OverlayHD Theme Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColourBacks" />
+		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tv_channel.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<panel name="ScreenTemplateChoiceList0" />
 		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />
@@ -473,7 +473,7 @@
 
 	<screen name="SimpleUmount" title="Simple Umount" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColourBacks" />
+		<panel name="ScreenTemplateButtonColours" />
 		<widget name="wdg_config" position="400,80" size="830,35" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" valign="center" />
 		<widget name="wdg_label_legend_1" position="400,150" size="130,35" backgroundColor="TextBackground" font="Regular;25" foregroundColor="Grey" transparent="1" valign="center" />
 		<widget name="wdg_label_legend_2" position="565,150" size="180,35" backgroundColor="TextBackground" font="Regular;25" foregroundColor="Grey" transparent="1" valign="center" />
@@ -691,7 +691,7 @@
 
 	<screen name="MeteoMain" title="Weather" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColourBacks" />
+		<panel name="ScreenTemplateButtonColours" />
 		<!-- Column 1 -->
 		<widget name="lab1" position="60,95" size="220,20" font="Regular;16" foregroundColor="WeatherLabel" halign="right" transparent="1" valign="top" />
 		<widget name="lab1b" position="285,95" size="210,20" font="Regular;16" foregroundColor="WeatherProvider" halign="left" transparent="1" valign="top" />

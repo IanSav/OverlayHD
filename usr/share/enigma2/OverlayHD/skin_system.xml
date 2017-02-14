@@ -15,7 +15,7 @@
 
 	<screen name="Menu_shutdown_legacy">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColourBacks" />
+		<panel name="ScreenTemplateButtonColours" />
 		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" /> -->
 		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
@@ -56,7 +56,7 @@
 
 	<screen name="Menu_shutdown_Enigma2">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColourBacks" />
+		<panel name="ScreenTemplateButtonColours" />
 		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" /> -->
 		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
@@ -96,7 +96,7 @@
 
 	<screen name="QuitMainloopScreen" title="Power / Restart" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColourBacks" />
+		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="OverlayHD/menus/mainmenu_shuffle.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<panel name="ScreenTemplateOverlayText0" />
 	</screen>
@@ -117,7 +117,7 @@
 
 	<screen name="Menu_information_legacy" title="Information(Skin)" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColourBacks" />
+		<panel name="ScreenTemplateButtonColours" />
 		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" /> -->
 		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
@@ -158,7 +158,7 @@
 
 	<screen name="Menu_information_Enigma2" title="Information(Skin)" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColourBacks" />
+		<panel name="ScreenTemplateButtonColours" />
 		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" /> -->
 		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
@@ -200,7 +200,7 @@
 
 	<screen name="About" title="About" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColourBacks" />
+		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_info.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<widget source="list" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
@@ -229,7 +229,7 @@
 
 	<screen name="Devices" title="Device Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColourBacks" />
+		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_backup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<widget source="list" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
@@ -271,7 +271,7 @@
 
 	<screen name="SystemMemoryInfo" title="Memory Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColourBacks" />
+		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_browser.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<widget source="list" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
@@ -304,7 +304,7 @@
 
 	<screen name="SystemNetworkInfo" title="Network Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColourBacks" />
+		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<eLabel text="Hostname:" position="420,80" size="225,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
 		<widget name="hostname" position="660,80" size="450,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
@@ -432,7 +432,7 @@
 
 	<screen name="ExtensionsList" title="Choose Extension" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColourBacks" />
+		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_plugins.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<panel name="ScreenTemplateChoiceList0" />
 		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />

@@ -3,7 +3,7 @@
 
 	<screen name="EPGExtensionsList" title="EPG Extensions" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColourBacks" />
+		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<widget name="text" position="360,30" size="870,35" borderColor="BannerBorder" borderWidth="1" conditional="text" font="TitleFont;25" foregroundColor="BannerTitle" halign="right" transparent="1" />
 		<panel name="ScreenTemplateChoiceList0" />
