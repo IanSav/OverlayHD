@@ -287,11 +287,13 @@
 	<fonts>
 		<font name="AndaleMono" filename="andale.ttf" scale="100" />
 		<font name="ArialNarrow" filename="eg.ttf" scale="100" />
+		<font name="DroidSansBold" filename="DroidSans-Bold.ttf" scale="100" />
 		<font name="DSDigital" filename="ds_digital.ttf" scale="100" />
 		<font name="GoodTimes" filename="goodtime.ttf" scale="100" />
 		<font name="KhammuRabi" filename="md_khmurabi_10.ttf" scale="100" />
 		<font name="MPluss1M" filename="mplus-1m-bold.ttf" scale="100" />
 		<font name="NemesisFlatline" filename="nmsbd.ttf" scale="100" />
+		<font name="OpenSansRegular" filename="OpenSans-Regular.ttf" scale="100" />
 		<font name="RobotoBlack" filename="Roboto-Black.ttf" scale="100" />
 		<font name="RobotoBold" filename="Roboto-Bold.ttf" scale="100" />
 		<font name="ValisEnigma" filename="valis_enigma.ttf" scale="98" />
