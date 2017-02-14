@@ -470,42 +470,15 @@
 		<eLabel position="50,660" size="1180,2" backgroundColor="Pinstripe" />
 	</screen>
 
-<!-- Screen Template To Display The InfoBar Time As Either A Digital Or Analogue Clock -->
+<!-- Screen Template To Display The InfoBar Time As A Digital Clock -->
 
-	<screen name="ScreenTemplateClock">
-		<panel name="ScreenTemplateClockDigital" />
-	</screen>
-
-	<screen name="ScreenTemplateClockDigital" title="Digital Current Time" flags="wfNoBorder">
+	<screen name="ScreenTemplateClock" title="Digital Clock" flags="wfNoBorder">
 		<eLabel position="1080,10" size="190,60" backgroundColor="BannerClockBackground" />
 		<widget source="global.CurrentTime" render="Label" position="1080,15" size="180,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="BannerClockDate" halign="right" transparent="1" zPosition="+1">
 			<convert type="ClockToText">ShortFullDate</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="1080,40" size="180,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="BannerClockTime" halign="right" transparent="1" zPosition="+1">
 			<convert type="ClockToText">WithSeconds</convert>
-		</widget>
-	</screen>
-
-	<screen name="ScreenTemplateClockAnalogue" title="Analogue Current Time" flags="wfNoBorder">
-		<!-- Clock background -->
-		<eLabel position="980,10" size="235,35" backgroundColor="BannerClockBackground" />
-		<!-- Clock date -->
-		<widget source="global.CurrentTime" render="Label" position="990,15" size="180,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="BannerClockDate" halign="right" transparent="1" zPosition="+1">
-			<convert type="ClockToText">ShortFullDate</convert>
-		</widget>
-		<!-- Clock face -->
-		<ePixmap pixmap="images/clock_face.png" position="1180,5" size="90,90" alphatest="blend" zPosition="+1" />
-		<!-- Clock seconds hand -->
-		<widget source="global.CurrentTime" render="Analogic" position="1192,17" size="65,65" alphatest="on" borderColor="BannerClockTime" foregroundColor="BannerClockTime" linewidth="1" zPosition="+2">
-			<convert type="Analogiccon">AnalogSeconds</convert>
-		</widget>
-		<!-- Clock minutes hand -->
-		<widget source="global.CurrentTime" render="Analogic" position="1202,26" size="47,47" alphatest="on" borderColor="BannerClockTime" foregroundColor="BannerClockTime" linewidth="2" zPosition="+2">
-			<convert type="Analogiccon">AnalogMinutes</convert>
-		</widget>
-		<!-- Clock hour hand -->
-		<widget source="global.CurrentTime" render="Analogic" position="1210,35" size="30,30" alphatest="on" borderColor="BannerClockTime" foregroundColor="BannerClockTime" linewidth="2" zPosition="+2">
-			<convert type="Analogiccon">AnalogHours</convert>
 		</widget>
 	</screen>
 
