@@ -347,11 +347,11 @@
 		<widget source="Event" render="Label" position="50,160" size="1115,30" backgroundColor="InfoBackground" font="InfoEventFont;25" foregroundColor="InfoProgramNow" transparent="1">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget position="1175,160" size="55,25" source="Event" render="Pixmap" pixmap="epg/fta.png" alphatest="blend">
+		<widget source="Event" render="Pixmap" pixmap="epg/fta.png" position="1175,160" size="55,25" alphatest="blend">
 			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True,Invert</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget position="1175,160" size="55,25" source="Event" render="Pixmap" pixmap="epg/icetv.png" alphatest="blend">
+		<widget source="Event" render="Pixmap" pixmap="epg/icetv.png" position="1175,160" size="55,25" alphatest="blend">
 			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>

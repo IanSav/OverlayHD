@@ -38,7 +38,7 @@
 		<widget name="list_right" position="650,140" size="580,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
-	<screen name="FileCommanderConfigScreen" title="File Commander - Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="FileCommanderConfigScreen" title="File Commander Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateConfig0" />
