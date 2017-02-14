@@ -93,6 +93,12 @@
 		<panel name="InfoBarCommon" />
 		<widget name="serviceName" position="0,0" size="0,0" conditional="serviceName" transparent="1" />
 		<widget name="serviceName1" position="0,0" size="0,0" conditional="serviceName1" transparent="1" />
+		<widget name="serviceNumber" position="0,0" size="0,0" conditional="serviceNumber" transparent="1" />
+		<widget name="serviceNumber1" position="0,0" size="0,0" conditional="serviceNumber1" transparent="1" />
+		<widget name="key_red" position="0,0" size="0,0" conditional="key_red" transparent="1" />
+		<widget name="key_green" position="0,0" size="0,0" conditional="key_green" transparent="1" />
+		<widget name="key_yellow" position="0,0" size="0,0" conditional="key_yellow" transparent="1" />
+		<widget name="key_blue" position="0,0" size="0,0" conditional="key_blue" transparent="1" />
 	</screen>
 
 <!-- OK > OK - Second TV InfoBar With Now/Next Extended Information -->
@@ -107,7 +113,14 @@
 		</panel>
 		<widget name="serviceName" position="0,0" size="0,0" conditional="serviceName" transparent="1" />
 		<widget name="serviceName1" position="0,0" size="0,0" conditional="serviceName1" transparent="1" />
+		<widget name="serviceNumber" position="0,0" size="0,0" conditional="serviceNumber" transparent="1" />
 		<widget name="serviceNumber1" position="0,0" size="0,0" conditional="serviceNumber1" transparent="1" />
+		<widget name="channel" position="0,0" size="0,0" conditional="channel" transparent="1" />
+		<widget name="epg_description" position="0,0" size="0,0" conditional="epg_description" transparent="1" />
+		<widget name="key_red" position="0,0" size="0,0" conditional="key_red" transparent="1" />
+		<widget name="key_green" position="0,0" size="0,0" conditional="key_green" transparent="1" />
+		<widget name="key_yellow" position="0,0" size="0,0" conditional="key_yellow" transparent="1" />
+		<widget name="key_blue" position="0,0" size="0,0" conditional="key_blue" transparent="1" />
 	</screen>
 
 <!-- Common parts of TV infobars -->
@@ -122,7 +135,9 @@
 		<widget source="session.CurrentService" render="Picon" position="30,580" size="100,60" alphatest="blend" transparent="1">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-		<widget name="serviceNumber" position="10,640" size="140,30" backgroundColor="InfoBackground" font="Regular;30" foregroundColor="InfoLCN" halign="center" transparent="1" noWrap="1" />
+		<widget source="session.CurrentService" render="Label" position="10,640" size="140,30" backgroundColor="InfoBackground" font="InfoEventFont;30" foregroundColor="InfoLCN" halign="center" transparent="1" noWrap="1">
+			<convert type="ServiceName2">Number</convert>
+		</widget>
 		<!--
 		<widget source="session.CurrentService" render="Label" position="30,687" size="641,20" backgroundColor="InfoBackground" font="Regular;15" foregroundColor="border1" halign="left" transparent="1">
 			<convert type="EGExtraInfo">CamName</convert>
@@ -139,7 +154,7 @@
 		</widget>
 		<!-- Service Name Area -->
 		<widget source="session.CurrentService" render="Label" position="182,575" size="577,25" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoChannel" transparent="1" valign="top">
-			<convert type="ServiceName">Name</convert>
+			<convert type="ServiceName">NameOnly</convert>
 		</widget>
 		<!-- Now Event Start & End Times, Event Name and Time Remaining Area -->
 		<widget source="session.Event_Now" render="Label" position="180,615" size="180,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" halign="center" noWrap="1" transparent="1" valign="bottom" >
@@ -180,23 +195,9 @@
 			<convert type="ServiceName2">%P - %t %s</convert>
 		</widget>
 		<!-- Recording Service Name and Recording Progress Bar Area - If Recording -->
-		<widget source="session.RecordState" render="Label" position="640,685" size="270,20" backgroundColor="InfoBackground" font="Regular;15" foregroundColor="InfoRecordingColour" noWrap="1" transparent="1" valign="center">
-			<convert type="infoRecBm">NombreyCanal</convert>
-		</widget>
-		<!--
-		<widget source="session.RecordState" render="FixedLabel" text=" " position="640,706" size="270,4" backgroundColor="InfoRecordingBackground">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.RecordState" render="Progress" pixmap="images/progress_rec.png" position="640,706" size="270,4" borderWidth="0" transparent="1" zPosition="+1">
-			<convert type="infoRecBm">Progress</convert>
-		</widget>
-		-->
-		<widget source="session.RecordState" render="FixedLabel" text=" " position="640,705" size="270,5" backgroundColor="InfoRecordingBackground" borderColor="InfoRecordingBorder" borderWidth="1" transparent="0">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.RecordState" render="Progress" position="641,706" size="268,3" foregroundColor="InfoRecordingColour" transparent="1" zPosition="+1">
-			<convert type="infoRecBm">Progress</convert>
-		</widget>
+		<panel position="640,685" size="270,20">
+			<panel name="RecordingInfoPanel" />
+		</panel>
 		<!-- Tuner Usage, Signal Strength & Quality, Resolution and Status Panel Area -->
 		<panel position="1105,575" size="165,25">
 			<panel name="TunerUsagePanel" />
@@ -211,6 +212,32 @@
 			<panel name="ChannelFormatPanel" />
 		</panel>
 	</screen>
+
+	<screen name="RecordingInfoPanel" title="Recording Information" flags="wfNoBorder">
+		<panel name="RecordingInfoPanelEnigma2" base="RecordingInfoPanel" />
+	</screen>
+
+	<screen name="RecordingInfoPanelBeyonwiz" title="Recording Information" flags="wfNoBorder">
+		<widget source="session.RecordState" render="Label" position="0,0" size="270,20" backgroundColor="InfoBackground" font="Regular;15" foregroundColor="InfoRecordingColour" noWrap="1" transparent="1" valign="center">
+			<convert type="infoRecBm">NombreyCanal</convert>
+		</widget>
+		<!--
+		<widget source="session.RecordState" render="FixedLabel" text=" " position="0,21" size="270,4" backgroundColor="InfoRecordingBackground">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.RecordState" render="Progress" pixmap="images/progress_rec.png" position="0,21" size="270,4" borderWidth="0" transparent="1" zPosition="+1">
+			<convert type="infoRecBm">Progress</convert>
+		</widget>
+		-->
+		<widget source="session.RecordState" render="FixedLabel" text=" " position="0,20" size="270,5" backgroundColor="InfoRecordingBackground" borderColor="InfoRecordingBorder" borderWidth="1" transparent="0">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.RecordState" render="Progress" position="1,21" size="268,3" foregroundColor="InfoRecordingColour" transparent="1" zPosition="+1">
+			<convert type="infoRecBm">Progress</convert>
+		</widget>
+	</screen>
+
+	<screen name="RecordingInfoPanelEnigma2" title="Recording Information" flags="wfNoBorder" />
 
 <!-- Second TV InfoBar "Now" Extended Information -->
 

@@ -449,12 +449,6 @@
  |	??? Unknown
  +-->
 
-	<screen name="TranslationInfo" title="Translation" position="center,center" size="420,350">
-		<eLabel text="Translation:" position="10,20" size="380,23" backgroundColor="TextBackground" font="Regular;23" transparent="1" />
-		<widget source="TranslatorName" render="Label" position="10,55" size="380,20" backgroundColor="TextBackground" font="Regular;20" transparent="1" />
-		<widget source="TranslationInfo" render="Label" position="10,100" size="380,250" backgroundColor="TextBackground" font="Regular;20" transparent="1" />
-	</screen>
-
 	<screen name="browser_favo" title="Favourites" position="90,90" size="1100,576" backgroundColor="ScreenBackground">
 		<widget source="menu" render="Listbox" position="150,50" size="780,450" scrollbarMode="showOnDemand" transparent="1" zPosition="3">
 			<convert type="TemplatedMultiContent">

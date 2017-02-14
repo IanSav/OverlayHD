@@ -6,17 +6,24 @@
 <!-- MENU > Power - Power / Restart Menu -->
 
 	<screen name="menu_shutdown" title="Power / Restart" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="Menu_shutdown_legacy" />
-	</screen>
-
-	<screen name="Menu_shutdown" title="Power / Restart" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="Menu_shutdown_legacy" />
-	</screen>
-
-	<screen name="Menu_shutdown_legacy">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" /> -->
+		<panel name="ShutdownEnigma2" base="Shutdown" />
+		<widget name="charlist" position="0,0" size="0,0" conditional="charlist" transparent="1" />
+		<widget name="charframe" position="0,0" size="0,0" conditional="charframe" transparent="1" />
+	</screen>
+
+	<screen name="Menu_shutdown" title="Power / Restart" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" /> -->
+		<panel name="ShutdownEnigma2" base="Shutdown" />
+		<widget name="charlist" position="0,0" size="0,0" conditional="charlist" transparent="1" />
+		<widget name="charframe" position="0,0" size="0,0" conditional="charframe" transparent="1" />
+	</screen>
+
+	<screen name="ShutdownBeyonwiz">
 		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -30,8 +37,6 @@
 				}
 			</convert>
 		</widget>
-		<widget name="charlist" position="0,0" size="0,0" transparent="1" />
-		<widget name="charframe" position="0,0" size="0,0" transparent="1" />
 		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_power_sleeptimer.png" position="50,100" size="300,500" alphatest="on" transparent="1">
 			<convert type="MenuEntryCompare">mainmenu_tasks_power_sleeptimer</convert>
 			<convert type="ConditionalShowHide" />
@@ -54,10 +59,7 @@
 		</widget>
 	</screen>
 
-	<screen name="Menu_shutdown_Enigma2">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
-		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" /> -->
+	<screen name="ShutdownEnigma2">
 		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -70,26 +72,20 @@
 				}
 			</convert>
 		</widget>
-		<widget name="charlist" position="0,0" size="0,0" transparent="1" />
-		<widget name="charframe" position="0,0" size="0,0" transparent="1" />
-		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_power_sleeptimer.png" position="50,100" size="300,500" alphatest="on" transparent="1">
-			<convert type="MenuEntryCompare">mainmenu_tasks_power_sleeptimer</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
 		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_power_standby.png" position="50,100" size="300,500" alphatest="on" transparent="1">
-			<convert type="MenuEntryCompare">mainmenu_tasks_power_standby</convert>
+			<convert type="MenuEntryCompare">standby</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_power_reboot.png" position="50,100" size="300,500" alphatest="on" transparent="1">
-			<convert type="MenuEntryCompare">mainmenu_tasks_power_reboot</convert>
+			<convert type="MenuEntryCompare">restart</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_power_shutdown.png" position="50,100" size="300,500" alphatest="on" transparent="1">
-			<convert type="MenuEntryCompare">mainmenu_tasks_power_shutdown</convert>
+			<convert type="MenuEntryCompare">deep_standby</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_power_restartshell.png" position="50,100" size="300,500" alphatest="on" transparent="1">
-			<convert type="MenuEntryCompare">mainmenu_tasks_power_restartshell</convert>
+			<convert type="MenuEntryCompare">restart_enigma</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 	</screen>
@@ -108,17 +104,24 @@
 <!-- Information (MENU > Information) Menu -->
 
 	<screen name="menu_information" title="Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="Menu_information_legacy" />
-	</screen>
-
-	<screen name="Menu_information" title="Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="Menu_information_legacy" />
-	</screen>
-
-	<screen name="Menu_information_legacy" title="Information(Skin)" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" /> -->
+		<panel name="InformationEnigma2" base="Information" />
+		<widget name="charlist" position="0,0" size="0,0" conditional="charlist" transparent="1" />
+		<widget name="charframe" position="0,0" size="0,0" conditional="charframe" transparent="1" />
+	</screen>
+
+	<screen name="Menu_information" title="Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" /> -->
+		<panel name="InformationEnigma2" base="Information" />
+		<widget name="charlist" position="0,0" size="0,0" conditional="charlist" transparent="1" />
+		<widget name="charframe" position="0,0" size="0,0" conditional="charframe" transparent="1" />
+	</screen>
+
+	<screen name="InformationBeyonwiz" title="Information(Skin)" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -132,8 +135,6 @@
 				}
 			</convert>
 		</widget>
-		<widget name="charlist" position="0,0" size="0,0" transparent="1" />
-		<widget name="charframe" position="0,0" size="0,0" transparent="1" />
 		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_info.png" position="50,100" size="300,500" alphatest="on" transparent="1">
 			<convert type="MenuEntryCompare">mainmenu_tasks_info_about</convert>
 			<convert type="ConditionalShowHide" />
@@ -156,10 +157,7 @@
 		</widget>
 	</screen>
 
-	<screen name="Menu_information_Enigma2" title="Information(Skin)" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
-		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" /> -->
+	<screen name="InformationEnigma2" title="Information(Skin)" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -172,26 +170,24 @@
 				}
 			</convert>
 		</widget>
-		<widget name="charlist" position="0,0" size="0,0" transparent="1" />
-		<widget name="charframe" position="0,0" size="0,0" transparent="1" />
 		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_info.png" position="50,100" size="300,500" alphatest="on" transparent="1">
-			<convert type="MenuEntryCompare">mainmenu_tasks_info_about</convert>
+			<convert type="MenuEntryCompare">about_screen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_backup.png" position="50,100" size="300,500" alphatest="on" transparent="1">
-			<convert type="MenuEntryCompare">mainmenu_tasks_info_devices</convert>
+			<convert type="MenuEntryCompare">device_screen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_browser.png" position="50,100" size="300,500" alphatest="on" transparent="1">
-			<convert type="MenuEntryCompare">mainmenu_tasks_info_memory</convert>
+			<convert type="MenuEntryCompare">device_screen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="on" transparent="1">
-			<convert type="MenuEntryCompare">mainmenu_tasks_info_network</convert>
+			<convert type="MenuEntryCompare">device_screen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tv_live.png" position="50,100" size="300,500" alphatest="on" transparent="1">
-			<convert type="MenuEntryCompare">mainmenu_tasks_info_service</convert>
+			<convert type="MenuEntryCompare">service_info_screen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 	</screen>
@@ -225,12 +221,26 @@
 		<!-- <widget name="AboutScrollLabel" position="400,80" size="830,550" font="Regular;22" transparent="1" /> -->
 	</screen>
 
+	<screen name="AboutOE" title="About" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_info.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="lab1" render="Label" position="50,575" size="458,25" font="Boldit;24" transparent="1" />
+		<widget source="lab2" render="Label" position="50,600" size="458,25" font="Italic;19" transparent="1" />
+		<widget source="lab3" render="Label" position="50,625" size="458,25" font="Italic;19" transparent="1" />
+		<widget name="AboutScrollLabel" position="400,80" size="830,550" font="Regular;20" transparent="1" />
+	</screen>
+
 <!-- Devices Information (MENU > Information > Devices) Screen -->
 
 	<screen name="Devices" title="Device Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_backup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="DevicesEnigma2" base="Devices" />
+	</screen>
+
+	<screen name="DevicesBeyonwiz" title="Device Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<widget source="list" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
@@ -264,7 +274,15 @@
 				}
 			</convert>
 		</widget>
-		<!-- <widget name="AboutScrollLabel" position="400,80" size="830,550" font="Regular;22" transparent="1" /> -->
+	</screen>
+
+	<screen name="DevicesEnigma2" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
+		<widget source="TunerHeader" render="Label" position="400,80" size="458,36" font="Bold;20" transparent="0" />
+		<widget source="nims" render="Label" position="400,105" size="458,100" font="Regular;18" transparent="0" />
+		<widget source="HDDHeader" render="Label" position="400,247" size="458,36" font="Bold;20" transparent="0" />
+		<widget source="hdd" render="Label" position="400,272" size="458,100" font="Regular;18" transparent="0" />
+		<widget source="MountsHeader" render="Label" position="400,447" size="458,36" font="Bold;20" transparent="0" />
+		<widget source="mounts" render="Label" position="400,472" size="458,143" font="Regular;18" transparent="0" />
 	</screen>
 
 <!-- Memory Information (MENU > Information > Memory) Screen -->
@@ -273,6 +291,10 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_browser.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="SystemMemoryInfoEnigma2" base="SystemMemoryInfo" />
+	</screen>
+
+	<screen name="SystemMemoryInfoBeyonwiz" title="Memory Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<widget source="list" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
@@ -293,6 +315,13 @@
 		<!-- <widget name="AboutScrollLabel" position="400,80" size="830,550" font="Regular;22" transparent="1" /> -->
 	</screen>
 
+	<screen name="SystemMemoryInfoEnigma2" title="Memory Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<widget source="lab1" render="Label" position="50,575" size="458,25" font="Boldit;24" transparent="1" />
+		<widget source="lab2" render="Label" position="50,600" size="458,25" font="Italic;19" transparent="1" />
+		<widget source="lab3" render="Label" position="50,625" size="458,25" font="Italic;19" transparent="1" />
+		<widget name="AboutScrollLabel" position="400,80" size="830,400" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
 <!-- Network Information (MENU > Information > Network) Screen -->
 
 <!--
@@ -306,6 +335,10 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="SystemNetworkInfoEnigma2" base="SystemNetworkInfo" />
+	</screen>
+
+	<screen name="SystemNetworkInfoBeyonwiz" title="Network Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<eLabel text="Hostname:" position="420,80" size="225,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
 		<widget name="hostname" position="660,80" size="450,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
 		<eLabel text="Internet:" position="950,80" size="150,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
@@ -344,8 +377,16 @@
 		<widget source="IF" render="Label" position="577,80" size="600,21" backgroundColor="TextBackground" font="Regular;20" halign="left" transparent="1" />
 		<widget source="Statustext" render="Label" position="400,103" size="115,21" backgroundColor="TextBackground" font="Regular;20" halign="left" transparent="1" />
 		<widget name="statuspic" pixmaps="buttons/button_small_green.png,buttons/button_small_green_off.png" position="577,103" size="15,16" alphatest="on" transparent="1" />
-		<widget name="AboutScrollLabel" position="400,165" size="830,415" backgroundColor="TextBackground" font="Regular;22" transparent="1" />
+		<widget name="AboutScrollLabel" position="400,165" size="830,415" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
 		-->
+	</screen>
+
+	<screen name="SystemNetworkInfoEnigma2" title="Network Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<widget source="IFtext" render="Label" position="400,80" size="225,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
+		<widget source="IF" render="Label" position="640,80" size="450,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
+		<widget source="Statustext" render="Label" position="950,80" size="150,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
+		<widget name="statuspic" position="1150,86" size="15,16" pixmaps="buttons/button_small_green.png,buttons/button_small_green_off.png" alphatest="on" transparent="1" />
+		<widget name="AboutScrollLabel" position="400,110" size="830,425" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
 
 <!-- Sevice Information (MENU > Information > Service) Screens -->
@@ -354,6 +395,14 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tv_live.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ServiceInfoEnigma2" base="ServiceInfo" />
+	</screen>
+
+	<screen name="ServiceInfoSimple" title="Service Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ServiceInfo" />
+	</screen>
+
+	<screen name="ServiceInfoBeyonwiz" title="Service Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<widget source="list" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
@@ -371,60 +420,38 @@
 		</widget>
 	</screen>
 
-	<screen name="ServiceInfoSimple" title="Service Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ServiceInfo" />
+	<screen name="ServiceInfoEnigma2" title="Service Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<widget name="infolist" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" />
 	</screen>
 
-<!-- These are the OpenViX versions of the Information screens 
-	<screen name="AboutOE" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
-		<panel name="MenuRed2Panel"/>
-		<panel name="MenuGreen2Panel"/>
-		<panel name="MenuYellow2Panel"/>
-		<panel name="MenuBlue2Panel"/>
-		<widget source="lab1" render="Label" position="30,133" size="458,25" font="Boldit;24" transparent="0" zPosition="2"/>
-		<widget source="lab2" render="Label" position="30,158" size="458,25" font="Italic;19" transparent="0" zPosition="2"/>
-		<widget source="lab3" render="Label" position="30,183" size="458,25" font="Italic;19" transparent="0" zPosition="1"/>
-		<widget name="AboutScrollLabel" position="30,225" size="458,400" font="Regular;20" transparent="0" zPosition="1"/>
+<!-- Extra OpenViX Information Screens -->
+
+	<screen name="StreamingClientsInfo" title="Streaming Client Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="ScrollLabel" position="400,80" size="830,550" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" />
 	</screen>
-	<screen name="SystemMemoryInfo" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
-		<panel name="MenuRed2Panel"/>
-		<widget source="lab1" render="Label" position="30,133" size="458,25" font="Boldit;24" transparent="0" zPosition="2"/>
-		<widget source="lab2" render="Label" position="30,158" size="458,25" font="Italic;19" transparent="0" zPosition="2"/>
-		<widget source="lab3" render="Label" position="30,183" size="458,25" font="Italic;19" transparent="0" zPosition="1"/>
-		<widget name="AboutScrollLabel" position="30,225" size="458,400" font="Regular;20" transparent="0" zPosition="1"/>
+
+	<screen name="TranslationInfo" title="Translation Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<eLabel text="Translation:" position="400,80" size="830,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="TranslatorName" render="Label" position="400,105" size="830,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="TranslationInfo" render="Label" position="400,130" size="830,450" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1"/>
 	</screen>
-	<screen name="SystemNetworkInfo" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
-		<panel name="MenuRed2Panel"/>
-		<widget name="AboutScrollLabel" position="30,133" size="458,425" font="Regular;20" transparent="0" zPosition="1"/>
-		<ePixmap pixmap="div-h.png" position="10,590" zPosition="1" size="507,2"/>
-		<widget source="IFtext" render="Label" position="30,595" size="120,21" zPosition="10" font="Regular;20" halign="left" transparent="0"/>
-		<widget source="IF" render="Label" position="130,595" size="380,21" zPosition="10" font="Regular;20" halign="left" transparent="0"/>
-		<widget source="Statustext" render="Label" position="30,617" size="115,21" zPosition="10" font="Regular;20" halign="left" transparent="0"/>
-		<widget name="statuspic" pixmaps="buttons/button_green.png,buttons/button_green_off.png" position="130,620" zPosition="10" size="15,16" transparent="0" alphatest="on"/>
+
+	<screen name="AboutReleaseNotes" title="Release Notes" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="list" position="400,80" size="830,560" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" />
 	</screen>
-	<screen name="StreamingClientsInfo" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
-		<panel name="MenuRed2Panel"/>
-		<widget name="ScrollLabel" position="20,130" size="460,450" font="Regular;20" transparent="0" zPosition="1"/>
+
+	<screen name="SoftwareUpdateChanges" title="Software Update Changes" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<!-- <widget source="Title" render="Label" position="20,25" size="800,43" font="Boldit;32" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1"/> -->
+		<widget name="text" position="50,80" size="1180,550" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" />
 	</screen>
-	<screen name="Devices" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
-		<panel name="MenuRed2Panel"/>
-		<widget source="TunerHeader" render="Label" position="30,107" size="458,36" font="Bold;20" transparent="0" zPosition="1"/>
-		<widget source="nims" render="Label" position="30,132" size="458,100" font="Regular;18" transparent="0" zPosition="1"/>
-		<widget source="HDDHeader" render="Label" position="30,274" size="458,36" font="Bold;20" transparent="0" zPosition="1"/>
-		<widget source="hdd" render="Label" position="30,299" size="458,100" font="Regular;18" transparent="0" zPosition="1"/>
-		<widget source="MountsHeader" render="Label" position="30,474" size="458,36" font="Bold;20" transparent="0" zPosition="1"/>
-		<widget source="mounts" render="Label" position="30,499" size="458,143" font="Regular;18" transparent="0" zPosition="1"/>
-	</screen>
-	<screen name="AboutReleaseNotes" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<panel name="MenuPanel"/>
-		<widget name="list" position="10,107" size="503,526" font="Regular;15" foregroundColor="window-fg" backgroundColor="window-bg" transparent="0"/>
-	</screen>
--->
 
 <!--
  |	Extension List

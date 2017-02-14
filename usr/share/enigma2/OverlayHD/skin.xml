@@ -468,6 +468,7 @@
 <!-- Screen Templates To Provide The Date, Time, Headings And Buttons -->
 
 	<screen name="ScreenTemplate">
+		<widget source="menu_path_compressed" render="Label" position="360,5" size="870,20" borderColor="BannerBorder" borderWidth="1" font="TitleFont;15" foregroundColor="BannerTitle" halign="right" transparent="1" />
 		<panel position="50,35" size="305,25">
 			<panel name="ClockBannerPanel" />
 		</panel>
@@ -745,14 +746,16 @@
 <!-- MENU - Generic And Enhanced Main Menus -->
 
 	<screen name="Menu" title="Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="MenuGeneric" />
-	</screen>
-
-	<screen name="MenuGeneric" title="Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" zPosition="+1" /> -->
+		<panel name="MenuEnigma2" base="Menu" />
+		<widget name="charlist" position="0,0" size="0,0" conditional="charlist" transparent="1" />
+		<widget name="charframe" position="0,0" size="0,0" conditional="charframe" transparent="1" />
+	</screen>
+
+	<screen name="MenuBeyonwiz" title="Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -769,10 +772,6 @@
 	</screen>
 
 	<screen name="MenuEnhanced" title="Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" zPosition="+1" /> -->
 		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -790,9 +789,7 @@
 	</screen>
 
 	<screen name="MenuEnigma2" title="Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
-		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -842,6 +839,10 @@
 	<screen name="HelpMenu" title="Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
+		<panel name="HelpMenuEnigma2" base="HelpMenu" />
+	</screen>
+
+	<screen name="HelpMenuBeyonwiz" title="Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplateButtonHelp" />
 		<panel position="150,110" size="154,500">
 			<panel name="ScreenTemplateRemote" />
@@ -871,6 +872,16 @@
 		</widget>
 		<widget name="longshift_key0" position="400,620" size="830,30" backgroundColor="TextBackground" font="HelpFont;25" foregroundColor="HelpPress" halign="right" transparent="1" />
 		<widget name="longshift_key1" position="400,620" size="830,30" backgroundColor="TextBackground" font="HelpFont;25" foregroundColor="HelpPress" halign="right" transparent="1" />
+	</screen>
+
+	<screen name="HelpMenuEnigma2" title="Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<widget name="rc" pixmaps="images/rc.png,images/rcold.png" position="150,110" size="154,500" alphatest="blend" transparent="0" />
+		<widget name="arrowdown" pixmap="images/arrowdown.png" position="-100,-100" size="37,70" alphatest="blend" />
+		<widget name="arrowdown2" pixmap="images/arrowdown.png" position="-100,-100" size="37,70" alphatest="blend" />
+		<widget name="arrowup" pixmap="images/arrowup.png" position="-100,-100" size="37,70" alphatest="blend" />
+		<widget name="arrowup2" pixmap="images/arrowup.png" position="-100,-100" size="37,70" alphatest="blend" />
+		<widget name="list" position="400,80" size="830,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="HelpFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="long_key" position="400,620" size="830,30" backgroundColor="TextBackground" font="HelpFont;25" foregroundColor="HelpPress" halign="right" transparent="1" />
 	</screen>
 
 	<screen name="MPHelp" title="XML Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
@@ -1625,7 +1636,7 @@
 		<widget source="global.OnlineStableUpdateState" render="Pixmap" pixmap="icons/info_update_stable.png" position="39,0" size="20,20" alphatest="blend" zPosition="+1">
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
-		<widget source="global.OnlineUnstableUpdateState" render="Pixmap" pixmap="icons/info_update_stable.png" position="39,0" size="20,20" alphatest="blend" zPosition="+2"><!--icons/info_update_unstable.png-->
+		<widget source="global.OnlineUnstableUpdateState" render="Pixmap" pixmap="icons/info_update_unstable.png" position="39,0" size="20,20" alphatest="blend" zPosition="+2">
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 		<!-- Display the sub services available icon -->
@@ -1753,8 +1764,16 @@
 
 <!-- Screen Saver -->
 
-	<screen name="Screensaver" position="0,0" size="1280,720" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
+	<screen name="Screensaver" title="Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreensaverEnigma2" base="Screensaver" />
+	</screen>
+
+	<screen name="ScreensaverBeyonwiz" position="0,0" size="1280,720" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
 		<widget name="picture" pixmap="images/beyonwiz.png" position="0,0" size="220,80" alphatest="on" transparent="0" />
+	</screen>
+
+	<screen name="ScreensaverEnigma2" position="0,0" size="1280,720" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
+		<widget name="picture" pixmap="images/openvix.png" position="0,0" size="220,84" alphatest="on" transparent="0" />
 	</screen>
 
 <!-- Virtual Keyboard -->

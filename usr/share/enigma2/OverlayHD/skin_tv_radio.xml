@@ -77,18 +77,13 @@
 			progressbarHeight="6" progressbarBorderWidth="1" progressBarWidth="50" scrollbarMode="showOnDemand" serviceInfoFont="FAVEventFont;20" serviceItemHeight="25" serviceNameFont="FAVServiceFont;20" serviceNumberFont="FAVLCNFont;20" transparent="0" />
 		<widget name="chosenletter" position="50,80" size="640,550" font="FAVServiceFont;100" conditional="chosenletter" foregroundColor="FindCharacter" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget source="ServiceEvent" render="Picon" position="710,80" size="100,60" alphatest="blend" borderColor="grey" borderWidth="1" transparent="1">
-			<convert type="ServiceName">Reference</convert>
+			<convert type="ServiceName2">Reference</convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="820,80" size="320,25" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoChannel" transparent="1" valign="top">
-			<convert type="ServiceName">Name</convert>
+			<convert type="ServiceName2">Name</convert>
 		</widget>
-		<!-- This widget cant display any LCNs for the ALL list of channels!
 		<widget source="ServiceEvent" render="Label" position="1150,80" size="80,25" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoLCN" halign="right" transparent="1" valign="top">
-			<convert type="ServiceName">ServiceNumber</convert>
-		</widget>
-		-->
-		<widget source="ServiceEvent" render="Label" position="1150,80" size="80,25" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoLCN" halign="right" transparent="1" valign="top">
-			<convert type="ServiceName2">%n</convert>
+			<convert type="ServiceName2">Number</convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="820,105" size="290,20" backgroundColor="InfoBackground" font="InfoOtherFont;16" foregroundColor="InfoBroadcaster" transparent="1">
 			<convert type="ServiceName2">Provider</convert>
@@ -157,13 +152,13 @@
 			<convert type="ClockToText">InMinutes</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="710,570" size="260,20" backgroundColor="InfoBackground" font="InfoEventFont;15" foregroundColor="InfoChannel" transparent="1">
-			<convert type="ServiceName">Name</convert>
+			<convert type="ServiceName">NameOnly</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="980,570" size="40,20" backgroundColor="InfoBackground" font="InfoEventFont;15" foregroundColor="InfoLCN" halign="right" transparent="1">
-			<convert type="ServiceName">ServiceNumber</convert>
+			<convert type="ServiceName2">Number</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Label" position="1030,570" size="200,20" backgroundColor="InfoBackground" font="InfoEventFont;15" foregroundColor="InfoBroadcaster" halign="right" transparent="1">
-			<convert type="ServiceName2">Provider</convert>
+			<convert type="ServiceName">Provider</convert>
 		</widget>
 		<panel position="710,595" size="160,20">
 			<panel name="ResolutionPanel" />
