@@ -153,13 +153,19 @@
 			<convert type="EventName">FullDescription,Separated,Trimmed</convert>
 		</widget>
 		<widget source="Service" render="Label" position="830,605" size="400,25" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" transparent="1">
-			<convert type="EventName">Genre</convert>
+			<convert type="EventName">Genre,Trimmed</convert>
 		</widget>
+		<widget source="Service" render="Pixmap" position="830,630" size="40,20" alphatest="blend">
+			<convert type="EventName">RatingIcon</convert>
+			<convert type="ValueToPixmap">Path</convert>
+		</widget>
+		<!--
 		<widget source="Service" render="Label" position="830,630" size="50,25" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
-			<convert type="EventName">SmallRating</convert>
+			<convert type="EventName">SmallRating,Trimmed</convert>
 		</widget>
+		-->
 		<widget source="Service" render="Label" position="880,630" size="350,25" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" halign="right" transparent="1">
-			<convert type="EventName">Rating</convert>
+			<convert type="EventName">Rating,Trimmed</convert>
 		</widget>
 		<widget name="DescriptionBorder" position="0,0" size="0,0" backgroundColor="ScreenBackground" />
 	</screen>
@@ -193,13 +199,19 @@
 		<widget name="diskSize" position="1010,555" size="220,25" font="InfoOtherFont;20" foregroundColor="InfoDiskStats" halign="right" transparent="1" />
 		<widget name="freeDiskSpace" position="775,580" size="455,25" font="InfoOtherFont;20" foregroundColor="InfoDiskStats" halign="right" transparent="1" />
 		<widget source="Service" render="Label" position="775,605" size="400,25" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" transparent="1">
-			<convert type="EventName">Genre</convert>
+			<convert type="EventName">Genre,Trimmed</convert>
 		</widget>
+		<widget source="Service" render="Pixmap" position="775,630" size="40,20" alphatest="blend">
+			<convert type="EventName">RatingIcon</convert>
+			<convert type="ValueToPixmap">Path</convert>
+		</widget>
+		<!--
 		<widget source="Service" render="Label" position="775,630" size="50,25" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
-			<convert type="EventName">SmallRating</convert>
+			<convert type="EventName">SmallRating,Trimmed</convert>
 		</widget>
+		-->
 		<widget source="Service" render="Label" position="825,630" size="350,25" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" halign="right" transparent="1">
-			<convert type="EventName">Rating</convert>
+			<convert type="EventName">Rating,Trimmed</convert>
 		</widget>
 		<widget name="movie_sort" position="1195,607" size="35,20" pixmaps="icons/ms_az_no.png,icons/ms_no_az.png,icons/ms_shuffle.png,icons/ms_za_on.png,icons/ms_on_za.png,icons/ms_faz.png,icons/ms_fza.png,icons/ms_rec.png,icons/ms_az_on.png,icons/ms_za_no.png,icons/ms_sl.png,icons/ms_ls.png,icons/ms_sb.png,icons/ms_bs.png" alphatest="on" transparent="1" />
 		<widget name="movie_off" position="1195,630" size="35,20" pixmaps="icons/me_ask.png,icons/me_movielist.png,icons/me_quit.png,icons/me_pause.png,icons/me_playlist.png,icons/me_playlistquit.png,icons/me_loop.png,icons/me_rep.png" alphatest="on" transparent="1" />

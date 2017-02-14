@@ -31,9 +31,15 @@
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
+		<widget source="Event" render="Pixmap" position="400,30" size="40,20" alphatest="blend">
+			<convert type="EventName">RatingIcon</convert>
+			<convert type="ValueToPixmap">Path</convert>
+		</widget>
+		<!--
 		<widget source="Event" render="Label" position="400,30" size="40,25" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
 			<convert type="EventName">SmallRating,Trimmed</convert>
 		</widget>
+		-->
 		<widget source="Event" render="Label" position="460,30" size="340,25" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
 			<convert type="EventName">Rating,Trimmed</convert>
 		</widget>
@@ -68,9 +74,15 @@
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
+		<widget source="Event" render="Pixmap" position="400,30" size="40,20" alphatest="blend">
+			<convert type="EventName">RatingIcon</convert>
+			<convert type="ValueToPixmap">Path</convert>
+		</widget>
+		<!--
 		<widget source="Event" render="Label" position="400,30" size="40,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
 			<convert type="EventName">SmallRating,Trimmed</convert>
 		</widget>
+		-->
 		<widget source="Event" render="Label" position="460,30" size="400,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" halign="right" transparent="1">
 			<convert type="EventName">Genre,Trimmed</convert>
 		</widget>
@@ -262,9 +274,15 @@
 		<widget source="Event" render="Label" position="850,595" size="320,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
 			<convert type="EventName">Rating,Trimmed</convert>
 		</widget>
+		<widget source="Event" render="Pixmap" position="1190,595" size="40,20" alphatest="blend">
+			<convert type="EventName">RatingIcon</convert>
+			<convert type="ValueToPixmap">Path</convert>
+		</widget>
+		<!--
 		<widget source="Event" render="Label" position="1190,595" size="40,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" halign="right" transparent="1">
 			<convert type="EventName">SmallRating,Trimmed</convert>
 		</widget>
+		-->
 		<widget source="Event" render="Label" position="850,625" size="315,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" transparent="1">
 			<convert type="EventName">Genre,Trimmed</convert>
 		</widget>
