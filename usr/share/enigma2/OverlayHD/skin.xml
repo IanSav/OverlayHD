@@ -468,7 +468,7 @@
 <!-- Screen Templates To Provide The Date, Time, Headings And Buttons -->
 
 	<screen name="ScreenTemplate">
-		<widget source="menu_path_compressed" render="Label" position="360,5" size="870,20" borderColor="BannerBorder" borderWidth="1" font="TitleFont;15" foregroundColor="BannerTitle" halign="right" transparent="1" />
+		<widget source="menu_path_compressed" render="Label" position="360,5" size="870,20" borderColor="BannerBorder" borderWidth="1" conditional="menu_path_compressed" font="TitleFont;15" foregroundColor="BannerTitle" halign="right" transparent="1" />
 		<panel position="50,35" size="305,25">
 			<panel name="ClockBannerPanel" />
 		</panel>
