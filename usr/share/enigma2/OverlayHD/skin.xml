@@ -77,7 +77,7 @@
 		<color name="ButtonYellow" value="#00a08500" />
 
 		<color name="ScreenBackground" value="#3f000000" />
-		<color name="ScreenSaverBackground" value="#26000000" />
+		<color name="ScreenSaverBackground" value="#19000000" />
 		<color name="ScreenTransparent" value="#ffffffff" />
 		<color name="MediaBackground" value="Black" />
 		<color name="StatusBackground" value="#ff000000" />
@@ -1764,7 +1764,7 @@
 
 <!-- Screen Saver -->
 
-	<screen name="Screensaver" title="Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="Screensaver" title="Help" position="0,0" size="1280,720" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
 		<panel name="ScreensaverEnigma2" base="Screensaver" />
 	</screen>
 
