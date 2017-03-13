@@ -24,12 +24,21 @@ from Screens.Setup import Setup
 from Screens.Standby import TryQuitMainloop
 from Screens.VirtualKeyBoard import VirtualKeyBoard
 from Tools.Directories import resolveFilename, SCOPE_CONFIG, SCOPE_CURRENT_SKIN, SCOPE_CURRENT_PLUGIN
+
+from boxbranding import getImageDistro
 from enigma import eEnv, gRGB
 from os import listdir, remove, symlink, unlink
 from os.path import exists, isdir, isfile, islink
-from skin import dom_screens, colorNames, reloadWindowstyles, fonts
-import errno, shutil
+from skin import dom_screens, colorNames, fonts  # , reloadWindowstyles
+
+import errno
+import shutil
 import xml.etree.cElementTree
+
+distro_configs = {
+	"beyonwiz": ("Beyonwiz", "Beyonwiz"),
+	"openvix": ("OpenViX", "Enigma2")
+}
 
 # Items with a colour and transparency require two lines in the setup XML file.
 # (One for ItemColour and one for ItemTransparency.)
@@ -498,15 +507,17 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 		self["key_yellow"] = Label(_("Themes"))
 		self["key_blue"] = Label(_("Default"))
 
-		self["actions"] = HelpableActionMap(self, ["OkCancelActions", "ColorActions"], {
-			"ok": (self.save, _("Save and apply changes")),
-			"OK": (self.save, _("Save and apply changes")),
-			"cancel": (self.cancel, _("Cancel and discard changes")),
-			"red" : (self.cancel, _("Cancel and discard changes")),
-			"green": (self.save, _("Save and apply changes")),
+		(distro, code) = distro_configs.get(getImageDistro(), ("Unknown", "Enigma2"))
+		if code == "Beyonwiz":
+			self["OverlayHDActions"] = HelpableActionMap(self, "ColorActions", {
 			"yellow": (self.theme, _("Manage themes")),
 			"blue": (self.default, _("Apply the default skin settings"))
-		}, description=_("Basic Functions"))
+			}, 0, description=_("OverlayHD Functions"))
+		else:
+			self["OverlayHDActions"] = HelpableActionMap(self, "ColorActions", {
+				"yellow": (self.theme, _("Manage themes")),
+				"blue": (self.default, _("Apply the default skin settings"))
+			}, 0)
 
 		background_image_choices = [("", _("Default"))]
 		for fname in sorted(listdir(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/backgrounds"))):
@@ -674,6 +685,8 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 		self["key_yellow"] = Label(_("Save"))
 		self["key_blue"] = Label(_("Create"))
 
+		(distro, code) = distro_configs.get(getImageDistro(), ("Unknown", "Enigma2"))
+		if code == "Beyonwiz":
 		self["actions"] = HelpableActionMap(self, ["OkCancelActions", "ColorActions", "MenuActions"], {
 			"ok": (self.applyTheme, _("Apply the currently highlighted theme, return to Skin Manager")),
 			"cancel": (self.cancelTheme, _("Cancel theme selection, return to Skin Manager")),
@@ -683,6 +696,20 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 			"yellow": (self.saveTheme, _("Save current skin settings as the currently highlighted theme")),
 			"blue": (self.newTheme, _("Create a new theme using the current skin settings"))
 		}, description=_("Theme Functions"))
+		else:
+			self["OkCancelActions"] = HelpableActionMap(self, "OkCancelActions", {
+				"ok": (self.applyTheme, _("Apply the currently highlighted theme, return to Skin Manager")),
+				"cancel": (self.cancelTheme, _("Cancel theme selection, return to Skin Manager"))
+			})
+			self["ColorActions"] = HelpableActionMap(self, "ColorActions", {
+				"red": (self.cancelTheme, _("Cancel theme selection, return to Skin Manager")),
+				"green": (self.applyTheme, _("Apply the currently highlighted theme, return to Skin Manager")),
+				"yellow": (self.saveTheme, _("Save current skin settings as the currently highlighted theme")),
+				"blue": (self.newTheme, _("Create a new theme using the current skin settings"))
+			})
+			self["MenuActions"] = HelpableActionMap(self, "MenuActions", {
+				"menu": (self.themeMenu, _("Menu of actions applicable to the currently highlighted theme"))
+			})
 
 		self["themes"] = List()
 		self.filename = resolveFilename(SCOPE_CONFIG, "OverlayHD_themes.xml")
@@ -942,6 +969,22 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 
 def applySkinSettings(fullinit):
 	if config.skin.primary_skin.value == "OverlayHD/skin.xml":
+		(distro, code) = distro_configs.get(getImageDistro(), ("Unknown", "Enigma2"))
+		if fullinit:
+			print "[OverlayHD] Configuring to run with '%s' distribution." % distro
+			for screen in dom_screens:
+				elements, path = dom_screens.get(screen, (None, None))
+				if elements:
+					panels = elements.findall("panel")
+					for panel in panels:
+						name = panel.get("name", "")
+						base = panel.get("base", "")
+						if name and base:
+							panel.set("name", base + code)
+							# print "[OverlayHD] DEBUG: Screen '%s', Base '%s', OldName '%s' -> NewName '%s'" % (screen, base, name, base + code)
+							print "[OverlayHD] Adjusting screen '%s'." % screen
+							break
+		#
 		print "[OverlayHD] Applying OverlayHD skin settings."
 		for (label, colour, transparency) in colour_elements:
 			if transparency is None:
@@ -974,7 +1017,20 @@ def applySkinSettings(fullinit):
 			data[0] = getattr(config.plugins.skin.OverlayHD, label).value
 			fonts[label] = tuple(data)
 		for (label, default, config_type, options_table) in option_elements:
-			if label == "BackgroundImage":
+			if label == "AlwaysShowButtons":
+				for colour in button_colours:
+					for (style, label) in button_choices:
+						elements, path = dom_screens.get(button_base + colour + style, (None, None))
+						if elements:
+							elements = elements.findall("ePixmap")
+							for element in elements:
+								if config.plugins.skin.OverlayHD.AlwaysShowButtons.value:
+									if "conditional" in element.attrib:
+										del element.attrib["conditional"]
+								else:
+									if "conditional" not in element.attrib:
+										element.set("conditional", "key_%s" % colour)
+			elif label == "BackgroundImage":
 				dst = eEnv.resolve("${datadir}") + "/backdrop.mvi"
 				try:
 					unlink(dst)
@@ -1056,6 +1112,8 @@ def applySkinSettings(fullinit):
 									else:
 										convert.text = ""
 									break
+		if code == "Beyonwiz":
+			from skin import reloadWindowstyles
 		reloadWindowstyles()
 	else:
 		print "[OverlayHD] OverlayHD is not the active skin."
@@ -1094,12 +1152,13 @@ def main(session, **kwargs):
 	session.open(OverlayHDSkinManager)
 
 def autostart(reason, **kwargs):
+	# distro = getImageDistro()
 	if reason == 0:
-		# print "[OverlayHD] OverlayHD Skin Manager loaded."
+		# print "[OverlayHD] OverlayHD Skin Manager for '%s' loaded." % distro
 		updateOverlayHD()
-		applySkinSettings()
+		applySkinSettings(1)
 	elif reason == 1:
-		# print "[OverlayHD] OverlayHD Skin Manager unloaded."
+		# print "[OverlayHD] OverlayHD Skin Manager for '%s' unloaded." % distro
 		pass
 
 def Plugins(**kwargs):
