@@ -406,6 +406,28 @@
 		-->
 	</parameters>
 
+	<setups>
+		<setup key="default" image="menus/mainmenu_tasks_setup_system.png" />
+		<setup key="userinterface" image="menus/mainmenu_tasks_setup_photo.png" />
+		<setup key="channelselection" image="menus/mainmenu_tasks_setup_default.png" />
+		<setup key="epgsettings" image="menus/mainmenu_tv_epg.png" />
+		<setup key="UserInterfacePositioner" image="menus/mainmenu_tasks_setup_tv.png" />
+		<setup key="OSD3DSetupScreen" image="menus/mainmenu_tasks_setup_tv.png" />
+		<setup key="SkinSelector" image="menus/mainmenu_tasks_setup_tv.png" />
+		<setup key="HdmiCECSetupScreen" image="menus/mainmenu_tasks_setup_tv.png" />
+		<setup key="LanguageSelection" image="menus/mainmenu_tasks_setup_softwaremanager.png" />
+		<setup key="NimSelection" image="menus/mainmenu_tasks_setup_tv.png" />
+		<setup key="NimSetup" image="menus/mainmenu_tasks_setup_tv.png" />
+		<setup key="IniTerrestrialLocation" image="menus/mainmenu_tasks_setup_tv.png" />
+		<setup key="ScanSetup" image="menus/mainmenu_tasks_setup_tv.png" />
+		<setup key="ParentalControlSetup" image="menus/mainmenu_tasks_setup_parental.png" />
+		<setup key="ParentalControlEditor" image="menus/mainmenu_tasks_setup_parental.png" />
+		<setup key="ParentalControlChangePin" image="menus/mainmenu_tasks_setup_parental.png" />
+		<setup key="ZapHistoryConfigurator" image="menus/mainmenu_tv_zaphistory.png" />
+		<setup key="PicturePlayerSetup" image="menus/mainmenu_tasks_setup_photo.png" />
+		<setup key="MediaPlayerSettings" image="menus/mainmenu_tasks_setup_movie.png" />
+	</setups>
+
 	<windowstyle id="0" type="skinned">
 		<title font="Named;23" offset="20,8" />
 		<!--
@@ -749,7 +771,7 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" zPosition="+1" /> -->
+		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" conditional="menuimage" transparent="1" zPosition="+1" /> -->
 		<panel name="MenuEnigma2" base="Menu" />
 		<widget name="charlist" position="0,0" size="0,0" conditional="charlist" transparent="1" />
 		<widget name="charframe" position="0,0" size="0,0" conditional="charframe" transparent="1" />
@@ -996,10 +1018,8 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateButtonTextVKey" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_system.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<!-- This code is for the pending update to "Setup.py" in the 16.1 builds and replaces the ePixmap above.
+		<panel name="ScreenTemplateButtonHelp" />
 		<widget name="menuimage" position="50,100" size="300,500" alphatest="on" conditional="menuimage" transparent="1" />
-		-->
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateFootnote4" />
 		<panel name="ScreenTemplateDescription4" />
