@@ -285,21 +285,21 @@
 	</colors>
 
 	<fonts>
-		<font name="AndaleMono" filename="andale.ttf" scale="100" />
-		<font name="ArialNarrow" filename="eg.ttf" scale="100" />
-		<font name="DroidSansBold" filename="DroidSans-Bold.ttf" scale="100" />
-		<font name="DSDigital" filename="ds_digital.ttf" scale="100" />
-		<font name="GoodTimes" filename="goodtime.ttf" scale="100" />
-		<font name="KhammuRabi" filename="md_khmurabi_10.ttf" scale="100" />
-		<font name="MPluss1M" filename="mplus-1m-bold.ttf" scale="100" />
-		<font name="NemesisFlatline" filename="nmsbd.ttf" scale="100" />
-		<font name="OpenSansRegular" filename="OpenSans-Regular.ttf" scale="100" />
-		<font name="RobotoBlack" filename="Roboto-Black.ttf" scale="100" />
-		<font name="RobotoBold" filename="Roboto-Bold.ttf" scale="100" />
-		<font name="ValisEnigma" filename="valis_enigma.ttf" scale="98" />
-		<font name="VeraSansMono" filename="tuxtxt.ttf" scale="100" />
+		<font name="AndaleMono" filename="fonts/andale.ttf" scale="100" />
+		<font name="ArialNarrow" filename="fonts/eg.ttf" scale="100" />
+		<font name="DroidSansBold" filename="fonts/DroidSans-Bold.ttf" scale="100" />
+		<font name="DSDigital" filename="fonts/ds_digital.ttf" scale="100" />
+		<font name="GoodTimes" filename="fonts/goodtime.ttf" scale="100" />
+		<font name="KhammuRabi" filename="fonts/md_khmurabi_10.ttf" scale="100" />
+		<font name="MPluss1M" filename="fonts/mplus-1m-bold.ttf" scale="100" />
+		<font name="NemesisFlatline" filename="fonts/nmsbd.ttf" scale="100" />
+		<font name="OpenSansRegular" filename="fonts/OpenSans-Regular.ttf" scale="100" />
+		<font name="RobotoBlack" filename="fonts/Roboto-Black.ttf" scale="100" />
+		<font name="RobotoBold" filename="fonts/Roboto-Bold.ttf" scale="100" />
+		<font name="ValisEnigma" filename="fonts/valis_enigma.ttf" scale="98" />
+		<font name="VeraSansMono" filename="fonts/tuxtxt.ttf" scale="100" />
 
-		<font name="Replacement" filename="ae_AlMateen.ttf" replacement="1" scale="100" />
+		<font name="Replacement" filename="fonts/ae_AlMateen.ttf" replacement="1" scale="100" />
 
 		<alias name="Body" font="NemesisFlatline" size="20" height="25" width="18" />
 		<alias name="ButtonFont" font="ValisEnigma" size="20" height="25" width="18" />
