@@ -1,11 +1,15 @@
 #====================================================
 # OverlayHD Skin Manager
-# Version Date - 12-Jun-2016
-# Version Number - 1.55
-# Coding by IanSav
+# Version Date - 12-Feb-2017
+# Version Number - 1.60
+# Coding by IanSav (c) 2015-2017
 #====================================================
 # Remember to change the version number below!!!
 #====================================================
+# This plugin is NOT free software. It is open source,
+# you are allowed to modify it (if you keep the license
+# and original author details), but it may not be
+# commercially distributed.
 
 from Components.ActionMap import HelpableActionMap
 from Components.Label import Label
@@ -38,25 +42,14 @@ colour_elements = [
 	("BannerClockTime", "White", None),
 	("BannerTitle", "White", None),
 	("EPGBackground", "Black", None),
-	("EPGChannel", "White", None),					# To be deleted!
-	("EPGChannelSelected", "White", None),				# To be deleted!
-	("EPGDetails", "White", None),					# To be deleted!
-	("EPGDuration", "White", None),					# To be deleted!
 	("EPGGridBackground", "Orange", None),
 	("EPGGridBorder", "Black", None),
-	("EPGLCN", "White", None),					# To be deleted!
 	("EPGOverlayBorder", "Black", None),
 	("EPGOverlayColour", "WarmYellow", None),
-	("EPGProgram", "White", None),					# To be deleted!
-	("EPGProgramSelected", "White", None),				# To be deleted!
 	("EPGProgressBackground", "DeepGrey", None),
 	("EPGProgressBorder", "WarmYellow", None),
 	("EPGProgressColour", "WarmYellow", None),
-	("EPGProvider", "White", None),					# To be deleted!
-	("EPGRating", "White", None),					# To be deleted!
 	("EPGTimeLine", "Yellow", None),
-	("EPGTimes", "White", None),					# To be deleted!
-	("EPGTimesSelected", "White", None),				# To be deleted!
 	("EPGTransparency", None, "Background"),
 	("EPGEntryBackgroundColor", "MidBlack", None),
 	("EPGEntryBackgroundColorSelected", "Grey", None),
@@ -99,7 +92,6 @@ colour_elements = [
 	("InfoDiskStats", "DullYellow", None),
 	("InfoDurationNext", "LightBlue", None),
 	("InfoDurationNow", "LightBlue", None),
-	("InfoFileSize", "LightBlue", None),				# To be deleted!
 	("InfoGenreNext", "Grey", None),
 	("InfoGenreNow", "Grey", None),
 	("InfoLCN", "LightBlue", None),
@@ -334,16 +326,6 @@ button_choices = [
 	("Wizard", _("Wizard"))
 ]
 
-clock_choices = [
-	("Analogue", _("Analogue")),
-	("Digital", _("Digital"))
-]
-
-epg_choices = [
-	("left", _("Left aligned")),
-	("center", _("Centred"))
-]
-
 spinner_choices = [
 	("", _("Default"))
 ]
@@ -352,9 +334,7 @@ option_elements = [
 	("AlwaysActive", False, ConfigYesNo, None),
 	("BackgroundImage", "", ConfigSelection, background_image_choices),
 	("ButtonStyle", "Block", ConfigSelection, button_choices),
-	("ClockStyle", "24Hour", ConfigSelection, clock_choices),
 	("EnhancedMenu", False, ConfigEnableDisable, None),
-	("EPGAlignment", "left", ConfigSelection, epg_choices),
 	("EPGSettings", False, ConfigYesNo, None),
 	("EPGShowTicks", True, ConfigYesNo, None),
 	("FAVSettings", False, ConfigYesNo, None),
@@ -369,18 +349,6 @@ option_elements = [
 	("TextSettings", False, ConfigYesNo, None),
 	("UpdateBlink", True, ConfigYesNo, None),
 	("UseGroups", True, ConfigYesNo, None)
-]
-
-button_screens = [
-	"ScreenTemplateButtonRed",
-	"ScreenTemplateButtonGreen",
-	"ScreenTemplateButtonYellow",
-	"ScreenTemplateButtonBlue",
-	"ScreenTemplateButtonColourBacks"
-]
-
-clock_screens = [
-	"ScreenTemplateClock"
 ]
 
 display_groups = [
@@ -400,24 +368,16 @@ repaint_notifications = [
 	"BannerClockBackgroundTransparency",
 	"BannerTitle",
 	"ButtonStyle",
-	"ClockStyle",
-	"EPGSettings",
-	"FontSettings",
 	"FootnoteBackgroundColour",
 	"FootnoteBackgroundTransparency",
 	"FootnoteText",
-	"GeneralSettings",
-	"HelpPress",
-	"InfoSettings",
 	"MenuBackgroundColour",
 	"MenuBackgroundTransparency",
 	"MenuDisabled",
 	"MenuSelectedColour",
 	"MenuSelectedTransparency",
-	"MenuSettings",
 	"MenuText",
 	"MenuTextSelected",
-	"PanelSettings",
 	"Pinstripe",
 	"ScreenBackgroundColour",
 	"ScreenBackgroundTransparency",
@@ -425,8 +385,6 @@ repaint_notifications = [
 	"Text",
 	"TextBackgroundColour",
 	"TextBackgroundTransparency",
-	"TextSettings",
-	"UseGroups",
 	"VolumeBackground",
 	"VolumeColour"
 ]
@@ -496,7 +454,7 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateButtonTextVKey" />
 		<panel name="ScreenTemplateButtonHelp" />
-		<ePixmap pixmap="menus/setup_default.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_system.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" zPosition="+1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateFootnote4" />
@@ -704,7 +662,7 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 		self.onShown.append(self.screenShown)
 
 	def screenShown(self):
-		if self.dom_themes == None:
+		if self.dom_themes is None:
 			popup = self.session.open(MessageBox, _("Unable to open/access themes file!\n\n%s") % self.errtext, MessageBox.TYPE_ERROR, 10)
 			popup.setTitle(self.setup_title)
 			self.close()
@@ -997,14 +955,6 @@ def applySkinSettings():
 						name = element.get("name", None)
 						if name:
 							element.set("name", "%s%s" % (screen, config.plugins.skin.OverlayHD.ButtonStyle.value))
-			elif label == "ClockStyle":
-				for screen in clock_screens:
-					elements, path = dom_screens.get(screen, (None, None))
-					if elements:
-						element = elements.find("panel")
-						name = element.get("name", None)
-						if name:
-							element.set("name", "%s%s" % (screen, config.plugins.skin.OverlayHD.ClockStyle.value))
 			elif label == "EPGShowTicks":
 				if config.plugins.skin.OverlayHD.EPGShowTicks.value:
 					setting = "yes"
@@ -1017,15 +967,6 @@ def applySkinSettings():
 						if widget.get("TimelineTicksOn", "") != "":
 							widget.set("TimelineTicksOn", setting)
 							break
-			elif label == "EPGAlignment":
-				for screen in ("GraphicalEPG", "GraphicalEPGPIG", "GraphicalInfoBarEPG"):
-					elements, path = dom_screens.get(screen, (None, None))
-					if elements:
-						widgets = elements.findall("widget")
-						for widget in widgets:
-							if widget.get("EntryFontAlignment", "") != "":
-								widget.set("EntryFontAlignment", config.plugins.skin.OverlayHD.EPGAlignment.value)
-								break
 			elif label == "RecordBlink":
 				elements, path = dom_screens.get("ChannelFormatPanel", (None, None))
 				if elements:
@@ -1093,8 +1034,11 @@ def updateOverlayHD():
 			remove(src)
 			print "[OverlayHD] Default themes file deleted."
 	# Set defunct attributes to the default so they will be removed from the settings file...
-	for attr in ("EPGChannel", "EPGChannelSelected", "EPGDetails", "EPGDuration", "EPGLCN", "EPGProgram", "EPGProgramSelected", "EPGProvider", "EPGRating", "EPGTimes", "EPGTimesSelected", "InfoFileSize"):
+	for attr in ("BootImage", "ClockStyle", "EPGChannel", "EPGChannelSelected", "EPGDetails", "EPGDuration", "EPGLCN", "EPGProgram", "EPGProgramSelected", "EPGProvider", "EPGRating", "EPGTimes", "EPGTimesSelected", "InfoFileSize"):
+		setattr(config.plugins.skin.OverlayHD, attr, ConfigSelection(default="Default", choices=[("Default"), ("None")]))
 		getattr(config.plugins.skin.OverlayHD, attr).value = getattr(config.plugins.skin.OverlayHD, attr).default
+		getattr(config.plugins.skin.OverlayHD, attr).save()
+	config.plugins.skin.OverlayHD.save()
 
 def start_menu_main(menuid, **kwargs):
 	if menuid == "system":
@@ -1118,6 +1062,5 @@ def Plugins(**kwargs):
 	list = []
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
-		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.55", icon="OverlayHD.png", fnc=main))
+		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU], description="OverlayHD Skin Manager version 1.60", icon="OverlayHD.png", fnc=main))
 	return list
