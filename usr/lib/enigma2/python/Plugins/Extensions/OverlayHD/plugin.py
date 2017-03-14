@@ -1,11 +1,17 @@
-#====================================================
+# ====================================================
 # OverlayHD Skin Manager
-# Version Date - 12-Feb-2017
+# Version Date - 14-Feb-2017
 # Version Number - 1.60
+# Repository - https://bitbucket.org/IanSav/overlayhd
 # Coding by IanSav (c) 2015-2017
-#====================================================
+# ====================================================
 # Remember to change the version number below!!!
-#====================================================
+# ====================================================
+# This plugin was originally developed for the
+# Beyonwiz Australia distribution of Enigma2.  It
+# may be distributed and executed on Beyonwiz and
+# OpenViX firmware.
+#
 # This plugin is NOT free software. It is open source,
 # you are allowed to modify it (if you keep the license
 # and original author details), but it may not be
@@ -489,7 +495,7 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 		<panel name="ScreenTemplateButtonTextVKey" />
 		<panel name="ScreenTemplateButtonHelp" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_system.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" zPosition="+1" />
+		<widget name="menuimage" position="50,100" size="300,500" alphatest="on" conditional="menuimage" transparent="1" zPosition="+1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateFootnote4" />
 		<panel name="ScreenTemplateDescription4" />
@@ -497,7 +503,7 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 
 	def __init__(self, session):
 		Setup.__init__(self, session=session, setup="OverlayHDSkinManager", plugin="Extensions/OverlayHD")
- 		self.skin = OverlayHDSkinManager.skin
+		self.skin = OverlayHDSkinManager.skin
 		self.skinName = ["OverlayHDSkinManager", "Setup"]
 		HelpableScreen.__init__(self)
 		self.setup_title = _("OverlayHD Skin Manager")
@@ -510,14 +516,14 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 		(distro, code) = distro_configs.get(getImageDistro(), ("Unknown", "Enigma2"))
 		if code == "Beyonwiz":
 			self["OverlayHDActions"] = HelpableActionMap(self, "ColorActions", {
-			"yellow": (self.theme, _("Manage themes")),
-			"blue": (self.default, _("Apply the default skin settings"))
-			}, 0, description=_("OverlayHD Functions"))
+				"yellow": (self.theme, _("Manage themes")),
+				"blue": (self.default, _("Apply the default skin settings"))
+			}, prio=0, description=_("OverlayHD Functions"))
 		else:
 			self["OverlayHDActions"] = HelpableActionMap(self, "ColorActions", {
 				"yellow": (self.theme, _("Manage themes")),
 				"blue": (self.default, _("Apply the default skin settings"))
-			}, 0)
+			}, prio=0)
 
 		background_image_choices = [("", _("Default"))]
 		for fname in sorted(listdir(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/backgrounds"))):
@@ -564,7 +570,7 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 	def keyOK(self):
 		if isinstance(self["config"].getCurrent()[1], (ConfigYesNo, ConfigEnableDisable)):
 			Setup.keyRight(self)
-			else:
+		else:
 			Setup.keyOK(self)
 
 	def keyCancel(self):
@@ -577,10 +583,10 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 	def keySave(self):
 		self.removeNotify()
 		changed = self.changedSettings()
-			for x in config.plugins.skin.OverlayHD.dict():
-				getattr(config.plugins.skin.OverlayHD, x).save()
-			config.plugins.skin.OverlayHD.save()
-			self.applySettings()
+		for x in config.plugins.skin.OverlayHD.dict():
+			getattr(config.plugins.skin.OverlayHD, x).save()
+		config.plugins.skin.OverlayHD.save()
+		self.applySettings()
 		if changed:
 			popup = self.session.openWithCallback(self.restartGUI, MessageBox, _("The GUI needs to be restarted to apply the changes.\n\nDo you want to restart the GUI now?"), MessageBox.TYPE_YESNO)
 			popup.setTitle(self.setup_title)
@@ -613,26 +619,26 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 	def default(self):
 		self.redraw = False
 		print "[OverlayHD] Setting OverlayHD skin to default settings."
-			for (label, colour, transparency) in colour_elements:
-				if colour is None or transparency is None:
-					item = getattr(config.plugins.skin.OverlayHD, label)
-					item.value = item.default
-					# print "[OverlayHD] DEBUG (default): '%s' = '%s'" % (label, item.default)
-				else:
-					item = getattr(config.plugins.skin.OverlayHD, "%sColour" % label)
-					item.value = item.default
-					# print "[OverlayHD] DEBUG (default): '%sColour' = '%s'" % (label, item.default)
-					item = getattr(config.plugins.skin.OverlayHD, "%sTransparency" % label)
-					item.value = item.default
-					# print "[OverlayHD] DEBUG (default): '%sTransparency' = '%s'" % (label, item.default)
-			for (label, font, font_table) in font_elements:
+		for (label, colour, transparency) in colour_elements:
+			if colour is None or transparency is None:
 				item = getattr(config.plugins.skin.OverlayHD, label)
 				item.value = item.default
 				# print "[OverlayHD] DEBUG (default): '%s' = '%s'" % (label, item.default)
-			for (label, default, config_type, option_table) in option_elements:
-				item = getattr(config.plugins.skin.OverlayHD, label)
+			else:
+				item = getattr(config.plugins.skin.OverlayHD, "%sColour" % label)
 				item.value = item.default
-				# print "[OverlayHD] DEBUG (default): '%s' = '%s'" % (label, item.default)
+				# print "[OverlayHD] DEBUG (default): '%sColour' = '%s'" % (label, item.default)
+				item = getattr(config.plugins.skin.OverlayHD, "%sTransparency" % label)
+				item.value = item.default
+				# print "[OverlayHD] DEBUG (default): '%sTransparency' = '%s'" % (label, item.default)
+		for (label, font, font_table) in font_elements:
+			item = getattr(config.plugins.skin.OverlayHD, label)
+			item.value = item.default
+			# print "[OverlayHD] DEBUG (default): '%s' = '%s'" % (label, item.default)
+		for (label, default, config_type, option_table) in option_elements:
+			item = getattr(config.plugins.skin.OverlayHD, label)
+			item.value = item.default
+			# print "[OverlayHD] DEBUG (default): '%s' = '%s'" % (label, item.default)
 		self.redraw = True
 		if config.skin.primary_skin.value == "OverlayHD/skin.xml":
 			self.applySettings()
@@ -674,7 +680,7 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 
 	def __init__(self, session):
 		Screen.__init__(self, session)
- 		self.skin = OverlayHDThemeManager.skin
+		self.skin = OverlayHDThemeManager.skin
 		# self.skinName = ["OverlayHDThemeManager"]
 		HelpableScreen.__init__(self)
 		self.setup_title = _("OverlayHD Theme Manager")
@@ -687,20 +693,20 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 
 		(distro, code) = distro_configs.get(getImageDistro(), ("Unknown", "Enigma2"))
 		if code == "Beyonwiz":
-		self["actions"] = HelpableActionMap(self, ["OkCancelActions", "ColorActions", "MenuActions"], {
-			"ok": (self.applyTheme, _("Apply the currently highlighted theme, return to Skin Manager")),
-			"cancel": (self.cancelTheme, _("Cancel theme selection, return to Skin Manager")),
-			"menu": (self.themeMenu, _("Menu of actions applicable to the currently highlighted theme")),
-			"red": (self.cancelTheme, _("Cancel theme selection, return to Skin Manager")),
-			"green": (self.applyTheme, _("Apply the currently highlighted theme, return to Skin Manager")),
-			"yellow": (self.saveTheme, _("Save current skin settings as the currently highlighted theme")),
-			"blue": (self.newTheme, _("Create a new theme using the current skin settings"))
-		}, description=_("Theme Functions"))
+			self["actions"] = HelpableActionMap(self, ["OkCancelActions", "ColorActions", "MenuActions"], {
+				"ok": (self.applyTheme, _("Apply the currently highlighted theme, return to Skin Manager")),
+				"cancel": (self.cancelTheme, _("Cancel theme selection, return to Skin Manager")),
+				"menu": (self.themeMenu, _("Menu of actions applicable to the currently highlighted theme")),
+				"red": (self.cancelTheme, _("Cancel theme selection, return to Skin Manager")),
+				"green": (self.applyTheme, _("Apply the currently highlighted theme, return to Skin Manager")),
+				"yellow": (self.saveTheme, _("Save current skin settings as the currently highlighted theme")),
+				"blue": (self.newTheme, _("Create a new theme using the current skin settings"))
+			}, prio=0, description=_("Theme Functions"))
 		else:
 			self["OkCancelActions"] = HelpableActionMap(self, "OkCancelActions", {
 				"ok": (self.applyTheme, _("Apply the currently highlighted theme, return to Skin Manager")),
 				"cancel": (self.cancelTheme, _("Cancel theme selection, return to Skin Manager"))
-			})
+			}, prio=0)
 			self["ColorActions"] = HelpableActionMap(self, "ColorActions", {
 				"red": (self.cancelTheme, _("Cancel theme selection, return to Skin Manager")),
 				"green": (self.applyTheme, _("Apply the currently highlighted theme, return to Skin Manager")),
@@ -709,7 +715,7 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 			})
 			self["MenuActions"] = HelpableActionMap(self, "MenuActions", {
 				"menu": (self.themeMenu, _("Menu of actions applicable to the currently highlighted theme"))
-			})
+			}, prio=0)
 
 		self["themes"] = List()
 		self.filename = resolveFilename(SCOPE_CONFIG, "OverlayHD_themes.xml")
@@ -798,14 +804,14 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 		self.dom_themes.write(self.filename)
 
 	def xmlIndent(self, element, level=0):
-		indent = "\n" + level*"\t"
+		indent = "\n" + level * "\t"
 		if len(element):
 			if not element.text or not element.text.strip():
 				element.text = indent + "\t"
 			if not element.tail or not element.tail.strip():
 				element.tail = indent
 			for element in element:
-				self.xmlIndent(element, level+1)
+				self.xmlIndent(element, level + 1)
 			if not element.tail or not element.tail.strip():
 				element.tail = indent
 		else:
@@ -1061,12 +1067,12 @@ def applySkinSettings(fullinit):
 					setting = "no"
 				for screen in ("EPGTimeLinePanel", "GraphicalEPG", "GraphicalEPGPIG", "GraphicalInfoBarEPG"):
 					elements, path = dom_screens.get(screen, (None, None))
-				if elements:
-					widgets = elements.findall("widget")
-					for widget in widgets:
-						if widget.get("TimelineTicksOn", "") != "":
-							widget.set("TimelineTicksOn", setting)
-							break
+					if elements:
+						widgets = elements.findall("widget")
+						for widget in widgets:
+							if widget.get("TimelineTicksOn", "") != "":
+								widget.set("TimelineTicksOn", setting)
+								break
 			elif label == "RecordBlink":
 				elements, path = dom_screens.get("ChannelFormatPanel", (None, None))
 				if elements:
@@ -1114,7 +1120,7 @@ def applySkinSettings(fullinit):
 									break
 		if code == "Beyonwiz":
 			from skin import reloadWindowstyles
-		reloadWindowstyles()
+			reloadWindowstyles()
 	else:
 		print "[OverlayHD] OverlayHD is not the active skin."
 
