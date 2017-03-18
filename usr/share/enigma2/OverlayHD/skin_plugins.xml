@@ -143,6 +143,7 @@
 	<screen name="CutListEditor" title="CutList Editor" position="0,0" size="1280,720" backgroundColor="Black" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
+		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateButtonHelp" />
 		<eLabel position="50,80" size="300,520" backgroundColor="Grey" />
 		<eLabel position="51,81" size="298,518" backgroundColor="Black" zPosition="+1" />
@@ -416,7 +417,7 @@
 		<widget source="session.VideoPicture" render="Pig" position="913,136" size="328,186" backgroundColor="transparent" zPosition="3" />
 		<eLabel name="Videoback" position="912,135" size="330,188" backgroundColor="White" foregroundColor="White" zPosition="0" />
 		<widget name="title" position="55,108" size="850,55" backgroundColor="#26181d20" font="mediaportal;26" foregroundColor="#00bbbbbb" halign="left" transparent="1" valign="center" zPosition="1" />
-		<widget name="config" position="55,173" size="830,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1"  foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="0" zPosition="1" />
+		<widget name="config" position="55,173" size="830,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="0" zPosition="1" />
 		<widget name="name" position="914,368" size="330,30" backgroundColor="#26181d20" font="mediaportal;28" foregroundColor="White" halign="center" transparent="1" valign="top" />
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/liquidblue/images/setup.png" position="989,424" size="176,200" alphatest="on" zPosition="1" />
 	</screen>
@@ -495,7 +496,7 @@
 	<screen name="OperaBrowser" title="Opera Web Browser" position="0,0" size="1280,720" backgroundColor="ScreenTransparent" flags="wfNoBorder">
 		<widget name="topArea" position="50,30" size="1180,30" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
 		<widget name="bottomArea" position="810,30" size="410,30" backgroundColor="Black" font="Regular;20" halign="right" transparent="1" valign="center" zPosition="+1" />
-		<widget name="menuitemFile" position="60,30" size="150,30" backgroundColor="Black" font="Regular;20" foregroundColors="#9f1313,#a08500"  transparent="1" valign="center" zPosition="+1" />
+		<widget name="menuitemFile" position="60,30" size="150,30" backgroundColor="Black" font="Regular;20" foregroundColors="#9f1313,#a08500" transparent="1" valign="center" zPosition="+1" />
 		<widget name="menuitemTool" position="210,30" size="150,30" backgroundColor="Black" font="Regular;20" foregroundColors="#9f1313,#a08500" transparent="1" valign="center" zPosition="+1" />
 		<widget name="menuitemHelp" position="360,30" size="150,30" backgroundColor="Black" font="Regular;20" foregroundColors="#9f1313,#a08500" transparent="1" valign="center" zPosition="+1" />
 		<widget name="menulist" position="100,540" size="200,150" backgroundColor="Black" scrollbarMode="showOnDemand" zPosition="+2" />
@@ -614,7 +615,7 @@
 			</convert>
 		</widget>
 		<panel name="ScreenTemplateFrame830x120" />
-		<widget source="menu" render="Listbox" position="410,520" size="810,125" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1"  foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showNever" selectionDisabled="1" transparent="0">
+		<widget source="menu" render="Listbox" position="410,520" size="810,125" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showNever" selectionDisabled="1" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":

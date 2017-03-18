@@ -282,7 +282,7 @@
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget name="network" position="50,290" size="300,25" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" halign="center" transparent="1" />
-		<widget name="scan_progress" position="50,325" size="300,15" borderWidth="1" transparent="1" />
+		<widget name="scan_progress" position="50,325" size="300,15" backgroundColor="ProgressBackground" borderColor="ProgressBorder" borderWidth="2" foregroundColor="ProgressColour" transparent="1" />
 		<widget name="transponder" position="50,350" size="300,25" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" halign="center" transparent="1" />
 		<widget name="scan_state" position="50,400" size="300,45" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" />
 		<widget name="pass" position="50,450" size="300,25" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" />
@@ -380,14 +380,14 @@
 			<convert type="FrontendInfo">SNRdB</convert>
 		</widget>
 		<eLabel name="snr" text="SNR:" position="180,405" size="60,22" font="Regular;21" halign="right" transparent="1" zPosition="1" />
-		<widget source="Frontend" render="Progress" position="242,406" size="200,14" transparent="1" zPosition="1">
+		<widget source="Frontend" render="Progress" position="242,406" size="200,14" backgroundColor="ProgressBackground" borderColor="ProgressBorder" borderWidth="2" foregroundColor="ProgressColour" transparent="1" zPosition="1">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
 		<widget source="Frontend" render="Label" position="463,405" size="60,22" font="Regular;21" zPosition="1">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
 		<eLabel name="ber" text="BER:" position="180,445" size="60,22" font="Regular;21" halign="right" transparent="1" zPosition="1" />
-		<widget source="Frontend" render="Progress" position="242,446" size="200,14" transparent="1" zPosition="1">
+		<widget source="Frontend" render="Progress" position="242,446" size="200,14" backgroundColor="ProgressBackground" borderColor="ProgressBorder" borderWidth="2" foregroundColor="ProgressColour" transparent="1" zPosition="1">
 			<convert type="FrontendInfo">BER</convert>
 		</widget>
 		<widget source="Frontend" render="Label" position="463,445" size="60,22" font="Regular;21" zPosition="1">
@@ -1206,10 +1206,10 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<widget name="activityslider" position="400,250" size="830,10" backgroundColor="Black" borderColor="DarkGrey" borderWidth="2" transparent="1" />
+		<widget name="activityslider" position="400,250" size="830,10" backgroundColor="ProgressBackground" borderColor="ProgressBorder" borderWidth="2" foregroundColor="ProgressColour" transparent="1" />
 		<widget source="package" render="Label" position="400,280" size="830,75" backgroundColor="TextBackground" font="Regular;20" transparent="1" valign="center" />
 		<widget source="status" render="Label" position="400,375" size="830,75" backgroundColor="TextBackground" font="Regular;20" transparent="1" valign="center" />
-		<widget name="slider" position="400,470" size="830,10" backgroundColor="Black" borderColor="DarkGrey" borderWidth="2" transparent="1" />
+		<widget name="slider" position="400,470" size="830,10" backgroundColor="ProgressBackground" borderColor="ProgressBorder" borderWidth="2" foregroundColor="ProgressColour" transparent="1" />
 	</screen>
 
 	<screen name="SoftwareUpdateChoices" title="Software Update" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
@@ -1223,7 +1223,7 @@
 	<screen name="SoftwareUpdateChangeView" title="Software Changes" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<widget name="text" position="50,80" size="1180,560" font="Console;18" transparent="1" />
+		<widget name="text" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
 
 	<screen name="Ipkg" position="center,center" size="550,120">
