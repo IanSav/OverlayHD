@@ -64,37 +64,6 @@
 		</widget>
 	</screen>
 
-	<screen name="InputDeviceSelection" title="Input device" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
-		<eLabel text="Select input device" position="675,140" size="430,35" font="Regular;28" transparent="1" zPosition="2" />
-		<eLabel position="665,180" size="450,2" backgroundColor="White" zPosition="2" />
-		<widget source="list" render="Listbox" position="650,195" size="510,400" zPosition="2">
-			<convert type="TemplatedMultiContent">
-			<!--  device, description, devicepng, divpng  -->
-					{
-					"template": [
-						MultiContentEntryText(pos = (15, 10), size = (455, 30), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # index 1 is the interfacename
-						],
-					"fonts": [gFont("Regular", 20),gFont("Regular", 20)],
-					"itemHeight": 50
-					}
-			</convert>
-		</widget>
-<!--####-->		<panel name="ScreenTemplateSIntroduction2" />
-		<widget source="introduction" render="Label" position="170,205" size="360,180" font="Regular;21" halign="center" transparent="1" valign="center" zPosition="10" />
-	</screen>
-
-	<screen name="InputDeviceSetup" title="Input device setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
-		<eLabel text="Input device setup" position="675,140" size="430,35" font="Regular;28" transparent="1" zPosition="2" />
-		<eLabel position="665,180" size="450,2" backgroundColor="White" zPosition="2" />
-		<widget name="config" position="650,195" size="510,400" zPosition="2" />
-<!--####-->		<panel name="ScreenTemplateSIntroduction2" />
-		<widget source="introduction" render="Label" position="170,205" size="360,180" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
-	</screen>
-
 	<screen name="MinuteInput" position="center,center" size="280,60">
 		<widget name="minutes" position="80,15" size="160,25" font="Regular;23" halign="right" transparent="1" />
 	</screen>

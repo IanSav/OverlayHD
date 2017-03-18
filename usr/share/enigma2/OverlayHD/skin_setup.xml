@@ -148,27 +148,48 @@
 	</screen>
 	-->
 
+<!-- MENU > Setup > System > Input Device Settings -->
+
+	<screen name="InputDeviceSelection" title="Select Input Device" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_tv.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="list" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+			<convert type="TemplatedMultiContent">
+				{
+				"template": [
+					MultiContentEntryText(pos = (20, 0), size = (810, 35), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1)  # Index 1 is the interfacename
+					# MultiContentEntryPixmapAlphaBlend(pos = (20, 0), size = (54, 54), png = 2)  # Index 3 is the interface pixmap
+				],
+				"fonts": [parseFont("MenuFont;25"), parseFont("MenuFont;20")],
+				"itemHeight": 35
+				}
+			</convert>
+		</widget>
+		<panel name="ScreenTemplateSIntroduction4" />
+	</screen>
+
+	<screen name="InputDeviceSetup" title="Input Device Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonTextVKey" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_tv.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateFootnote4" />
+		<panel name="ScreenTemplateSIntroduction4" />
+	</screen>
+
 <!-- MENU > Setup > System > Remote Control Code Settings -->
 
 	<screen name="RCSetupScreen" title="Remote Control Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<widget name="Preview" position="100,100" size="200,500" alphatest="blend" backgroundColor="TextBackground" transparent="1" />
-		<panel name="ScreenTemplateConfig4" />
-		<panel name="ScreenTemplateFrame830x120" />
-	</screen>
-
-	<!--
-	<screen name="RCSetupScreen" title="Remote Control Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateButtonTextVKey" />
-		<widget name="menuimage" position="50,100" size="300,500" alphatest="on" conditional="menuimage" transparent="1" />
+		<widget name="Preview" position="100,100" size="200,500" alphatest="blend" conditional="Preview" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateFootnote4" />
 		<panel name="ScreenTemplateDescription4" />
 	</screen>
-	-->
 
 <!-- MENU > Setup > System > Factory Reset - Uses Internal Screen -->
 
