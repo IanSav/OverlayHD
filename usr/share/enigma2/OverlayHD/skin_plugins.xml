@@ -8,6 +8,115 @@
 		<widget name="config" position="400,80" size="830,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
+
+<!-- AutoBouquetsMaker (ABM) Plugin -->
+
+	<screen name="AutoBouquetsMaker_Menu" title="AutoBouquetsMaker Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget source="list" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+			<convert type="TemplatedMultiContent">
+				{
+				"template": [
+					# MultiContentEntryPixmapAlphaTest(pos = (20, 4), size = (32, 32), png = 0),
+					# MultiContentEntryText(pos = (70, 0), size = (760, 40), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1)
+					MultiContentEntryText(pos = (20, 0), size = (810, 35), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1)
+				],
+				"fonts": [parseFont("MenuFont;25")],
+				"itemHeight": 35
+				}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="AutoBouquetsMaker_Setup" title="AutoBouquetsMaker Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="Setup" />
+		<widget name="pleasewait" position="400,80" size="830,420" backgroundColor="TextBackground" font="TextFont;50" foregroundColor="TextWaiting" halign="center" transparent="0" valign="center" zPosition="+1" />
+	</screen>
+
+	<!-- Note to skinners: No need to skin this screen if you have skinned the screen 'AutoBouquetsMaker_Setup'. -->
+	<screen name="AutoBouquetsMaker_ProvidersSetup" title="AutoBouquetsMaker Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="AutoBouquetsMaker_Setup" />
+	</screen>
+
+	<screen name="AutoBouquetsMaker_Ordering" title="AutoBouquetsMaker Ordering" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget source="list" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+			<convert type="TemplatedMultiContent">
+				{
+				"template": [
+					MultiContentEntryText(pos = (20, 0), size = (810, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1)
+				],
+				"fonts": [parseFont("MenuFont;25")],
+				"itemHeight": 35
+				}
+			</convert>
+		</widget>
+		<widget name="pleasewait" position="400,80" size="830,560" backgroundColor="TextBackground" font="TextFont;50" foregroundColor="TextWaiting" halign="center" transparent="0" valign="center" zPosition="+1" />
+	</screen>
+
+	<screen name="AutoBouquetsMaker_HideSections" title="AutoBouquetsMaker Hide Sections" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget source="list" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+			<convert type="TemplatedMultiContent">
+				{
+				"template": [
+					MultiContentEntryPixmapAlphaTest(pos = (20, 2), size = (32, 32), png = 0),
+					MultiContentEntryText(pos = (70, 0), size = (370, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
+					MultiContentEntryText(pos = (460, 0), size = (370, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2)
+				],
+				"fonts": [parseFont("MenuFont;25")],
+				"itemHeight": 35
+				}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="AutoBouquetsMaker" title="AutoBouquetsMaker" position="c-300,e-80" size="600,70" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<widget name="background" position="0,0" size="600,70" zPosition="-1" />
+		<widget name="action" position="75,10" size="510,20" backgroundColor="TextBackground" font="TextFont;18" foregroundColor="Text" halign="center" transparent="1" valign="center" />
+		<widget name="status" position="75,30" size="510,20" backgroundColor="TextBackground" font="TextFont;18" foregroundColor="Text" halign="center" transparent="1" valign="center" />
+		<widget name="progress" position="75,55" size="510,5" backgroundColor="ProgressBackground" borderColor="ProgressBorder" borderWidth="1" foregroundColor="ProgressColour" transparent="1" />
+	</screen>
+
+	<!-- Note to skinners: No need to skin this screen if you have skinned the screen 'AutoBouquetsMaker'. -->
+	<screen name="AutoBouquetsMaker_UpdateProviders" title="AutoBouquetsMaker Update Providers" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="AutoBouquetsMaker" />
+	</screen>
+
+	<screen name="AutoBouquetsMaker_Log" title="AutoBouquetsmaker Log" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="list" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<screen name="AutoBouquetsMaker_About" title="AutoBouquetsMaker About" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="oealogo" position="100,150" size="200,135" alphatest="blend" transparent="1" />
+		<widget name="about" position="400,80" size="830,550" backgroundColor="TextBackground" font="TextFont;25" foregroundColor="Text" transparent="1" />
+	</screen>
+
+	<screen name="AutoBouquetsMaker_KeepBouquets" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget source="list" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+			<convert type="TemplatedMultiContent">
+				{
+				"template": [
+					MultiContentEntryPixmapAlphaTest(pos = (20, 2), size = (32, 32), png = 0),
+					MultiContentEntryText(pos = (70, 0), size = (400, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
+					MultiContentEntryText(pos = (490, 0), size = (340, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2),
+				],
+				"fonts": [parseFont("MenuFont;25")],
+				"itemHeight": 35
+				}
+			</convert>
+		</widget>
+	</screen>
+
 <!-- Bluetooth Devices Manager Plugin -->
 
 	<screen name="BluetoothDevicesManager" title="Bluetooth Device Manager" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
@@ -685,6 +794,156 @@
 		<widget name="description" position="100,210" size="300,170" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="2" />
 		<widget name="text" position="590,510" size="610,30" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="2" />
 		-->
+	</screen>
+
+<!-- ViX Plugin -->
+
+	<screen name="VIXMenu" title="ViX Management Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget source="menu" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+			<convert type="TemplatedMultiContent">
+				{
+				"template": [
+					MultiContentEntryText(pos = (20, 0), size = (790, 35), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1)  # index 0 is the MenuText,
+				],
+				"fonts": [parseFont("MenuFont;25")],
+				"itemHeight": 35
+				}
+			</convert>
+		</widget>
+		<panel name="ScreenTemplateFrame830x120" />
+		<widget source="menu" render="Listbox" position="410,550" size="810,100" scrollbarMode="showNever" selectionDisabled="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template": [
+					MultiContentEntryText(pos = (0, 0), size = (810, 100), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 2)  # index 2 is the Description,
+				],
+				"fonts": [parseFont("DescriptionFont;20")],
+				"itemHeight": 100
+				}
+			</convert>
+		</widget>
+		<widget source="status" render="Label" position="50,600" size="340,50" conditional="status" font="Regular;20" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="VIXBackupManager" title="ViX Backup Manager" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonMenu" />
+		<panel name="ScreenTemplateButtonInfo" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="lab1" position="400,80" size="830,50" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" transparent="1" />
+		<widget name="list" position="400,140" size="830,475" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="backupstatus" position="400,625" size="830,25" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" transparent="1" />
+	</screen>
+
+	<screen name="BackupSelection" title="ViX Backup Selection" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder"><!-- XtraPluginsSelection -->
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateCheckList0" />
+	</screen>
+
+	<screen name="VIXBackupManagerMenu" title="ViX Backup Manager Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="Setup" />
+	</screen>
+
+	<screen name="VIXBackupManagerLogView" title="ViX Backup Log" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="list" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<screen name="VIXImageManager" title="ViX Image Manager" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonMenu" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="lab1" position="400,80" size="830,50" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" transparent="1" />
+		<widget name="list" position="400,140" size="830,475" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="backupstatus" position="400,625" size="830,25" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" transparent="1" />
+	</screen>
+
+	<screen name="VIXIPKInstaller" title="ViX IPK Installer" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="lab1" position="400,80" size="830,50" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" transparent="1" />
+		<widget name="list" position="400,140" size="830,475" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
+	</screen>
+
+	<screen name="IpkgInstaller" title="ViX Install Extensions" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="list" position="400,80" size="830,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
+		<panel name="ScreenTemplateSIntroduction4" />
+	</screen>
+
+	<screen name="VIXDevicesPanel" title="ViX Mount Manager" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="lab1" position="400,80" size="830,560" backgroundColor="TextBackground" font="TextFont;40" foregroundColor="TextWaiting" halign="center" transparent="0" valign="center" zPosition="+1" />
+		<widget source="list" render="Listbox" position="400,80" size="830,560" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{
+				"template": [
+					MultiContentEntryText(pos = (120, 0), size = (710, 30), font=0, flags = RT_VALIGN_CENTER, text = 0),
+					MultiContentEntryText(pos = (150, 30), size = (680, 50), font=1, flags = RT_VALIGN_CENTER, text = 1),
+					MultiContentEntryPixmapAlphaBlend(pos = (20, 0), size = (80, 80), png = 2),
+				],
+				"fonts": [parseFont("TextFont;24"), parseFont("TextFont;20")],
+				"itemHeight": 80
+				}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="VIXDevicePanelConf" title="Choose where to mount your devices:" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateFrame830x120" />
+		<!-- <widget name="Linconn" position="410,550" size="810,100" font="Regular;18" halign="center" valign="center" backgroundColor="#9f1313" /> -->
+		<widget name="Linconn" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="VIXSoftcamManager" title="ViX Softcam Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="lab1" position="400,80" size="830,25" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" halign="right" transparent="1" valign="center" />
+		<widget name="list" position="400,110" size="830,400" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="lab2" position="400,515" size="830,25" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" halign="right" transparent="1" valign="center" />
+		<widget name="activecam" position="400,540" size="830,100" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" noWrap="1" transparent="0" />
+	</screen>
+
+	<screen name="VIXStartCam" title="Starting Softcam" position="center,center" size="484,150">
+		<widget name="connect" position="217,0" size="64,64" pixmaps="ViX_HD_Common/busy/busy1.png,ViX_HD_Common/busy/busy2.png,ViX_HD_Common/busy/busy3.png,ViX_HD_Common/busy/busy4.png,ViX_HD_Common/busy/busy5.png,ViX_HD_Common/busy/busy6.png,ViX_HD_Common/busy/busy7.png,ViX_HD_Common/busy/busy8.png,ViX_HD_Common/busy/busy9.png,ViX_HD_Common/busy/busy9.png,ViX_HD_Common/busy/busy10.png,ViX_HD_Common/busy/busy11.png,ViX_HD_Common/busy/busy12.png,ViX_HD_Common/busy/busy13.png,ViX_HD_Common/busy/busy14.png,ViX_HD_Common/busy/busy15.png,ViX_HD_Common/busy/busy17.png,ViX_HD_Common/busy/busy18.png,ViX_HD_Common/busy/busy19.png,ViX_HD_Common/busy/busy20.png,ViX_HD_Common/busy/busy21.png,ViX_HD_Common/busy/busy22.png,ViX_HD_Common/busy/busy23.png,ViX_HD_Common/busy/busy24.png" alphatest="blend" transparent="1" />
+		<widget name="lab1" position="10,80" size="460,60" font="Regular;20" transparent="1" valign="top" />
+	</screen>
+
+	<screen name="VIXStopCam" title="Stopping Softcam" position="center,center" size="484,150">
+		<widget name="connect" position="217,0" size="64,64" pixmaps="ViX_HD_Common/busy/busy1.png,ViX_HD_Common/busy/busy2.png,ViX_HD_Common/busy/busy3.png,ViX_HD_Common/busy/busy4.png,ViX_HD_Common/busy/busy5.png,ViX_HD_Common/busy/busy6.png,ViX_HD_Common/busy/busy7.png,ViX_HD_Common/busy/busy8.png,ViX_HD_Common/busy/busy9.png,ViX_HD_Common/busy/busy9.png,ViX_HD_Common/busy/busy10.png,ViX_HD_Common/busy/busy11.png,ViX_HD_Common/busy/busy12.png,ViX_HD_Common/busy/busy13.png,ViX_HD_Common/busy/busy14.png,ViX_HD_Common/busy/busy15.png,ViX_HD_Common/busy/busy17.png,ViX_HD_Common/busy/busy18.png,ViX_HD_Common/busy/busy19.png,ViX_HD_Common/busy/busy20.png,ViX_HD_Common/busy/busy21.png,ViX_HD_Common/busy/busy22.png,ViX_HD_Common/busy/busy23.png,ViX_HD_Common/busy/busy24.png" alphatest="blend" transparent="1" />
+		<widget name="lab1" position="10,80" size="460,60" font="Regular;20" transparent="1" valign="top" />
+	</screen>
+
+	<screen name="VIXSoftcamLog" title="ViX Softcam Log" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="list" position="400,80" size="830,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<screen name="VIXSwap" title="ViX Swap File Manager" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<eLabel position="400,80" size="830,420" backgroundColor="MenuBackground" zPosition="-1" />
+		<widget name="lab1" position="420,80" size="600,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="1" valign="center" />
+		<widget name="autostart_off" position="1180,84" size="30,27" pixmap="icons/lock_off.png" alphatest="on" />
+		<widget name="autostart_on" position="1180,84" size="30,27" pixmap="icons/lock_on.png" alphatest="on" zPosition="+1" />
+		<widget name="lab2" position="420,115" size="510,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="1" valign="center" />
+		<widget name="labplace" position="950,115" size="260,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="MenuText" halign="right" transparent="1" valign="center" />
+		<widget name="lab3" position="420,150" size="510,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="1" valign="center" />
+		<widget name="labsize" position="950,150" size="260,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="MenuText" halign="right" transparent="1" valign="center" />
+		<widget name="lab4" position="420,185" size="510,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="1" valign="center" />
+		<widget name="inactive" position="950,185" size="260,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="Red" halign="right" transparent="1" valign="center" />
+		<widget name="active" position="950,185" size="260,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="Green" halign="right" transparent="1" valign="center" />
+		<panel name="ScreenTemplateFrame830x120" />
 	</screen>
 
 <!-- Weather Plugin -->
