@@ -1825,19 +1825,19 @@ self.autoResize()
 		</applet>
 	</screen>
 
-	<screen name="MessageBox" title="Message Selection..." position="center,center" size="60%,10" backgroundColor="ScreenBackground" zPosition="+90">
+	<screen name="MessageBox" title="Message Selection..." position="center,center" size="800,10" backgroundColor="ScreenBackground" zPosition="+90">
 		<panel name="MessageBoxTemplate" />
 	</screen>
 
-	<screen name="MessageBoxSimple" title="Message..." position="center,center" size="60%,10" backgroundColor="ScreenBackground" zPosition="+90">
+	<screen name="MessageBoxSimple" title="Message..." position="center,center" size="800,10" backgroundColor="ScreenBackground" zPosition="+90">
 		<panel name="MessageBoxTemplate" />
 	</screen>
 
 <!-- Choice Box Pop Up -->
 
-	<screen name="ChoiceBox" position="center,center" size="700,130" backgroundColor="ScreenBackground" zPosition="+90">
-		<widget name="text" position="0,0" size="700,0" backgroundColor="TextBackground" conditional="text" font="Regular;22" foregroundColor="BannerTitle" transparent="1" />
-		<widget name="list" position="100,100" size="700,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+	<screen name="ChoiceBox" position="center,center" size="800,130" backgroundColor="ScreenBackground" zPosition="+90">
+		<widget name="text" position="0,0" size="800,0" backgroundColor="TextBackground" conditional="text" font="Regular;22" foregroundColor="BannerTitle" transparent="1" />
+		<widget name="list" position="100,100" size="800,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 		<applet type="onLayoutFinish">
 self.autoResize()
 		</applet>
@@ -1854,15 +1854,15 @@ self.autoResize()
 
 <!-- Text Box Pop Up -->
 
-	<screen name="TextBox" title="Message..." position="0,0" size="550,400" backgroundColor="ScreenBackground">
-		<widget name="text" position="0,0" size="540,390" backgroundColor="TextBackground" font="Regular;18" foregroundColor="Text" transparent="1" />
+	<screen name="TextBox" title="Message..." position="0,0" size="600,400" backgroundColor="ScreenBackground">
+		<widget name="text" position="0,0" size="600,390" backgroundColor="TextBackground" font="Regular;18" foregroundColor="Text" transparent="1" />
 	</screen>
 
 <!-- Command Prompt Output -->
 
 	<screen name="Console" title="Command execution..." position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget name="text" position="50,80" size="1180,570" backgroundColor="TextBackground" font="Console;20" foregroundColor="Text" transparent="1" />
+		<widget name="text" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
 
 <!-- Include files that define the rest of the UI -->
