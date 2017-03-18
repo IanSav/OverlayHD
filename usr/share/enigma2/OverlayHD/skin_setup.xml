@@ -608,6 +608,15 @@
 
 <!-- MENU > Setup > Network > Mount Manager -->
 
+	<screen name="NetworkMountsMenu" title="Network Mount Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonHelp" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateMenuMenuList4" />
+		<panel name="ScreenTemplateSIntroduction4" />
+	</screen>
+
 	<screen name="AutoMountManager" title="Mount Manager" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
@@ -615,15 +624,6 @@
 		<panel name="ScreenTemplateMountConfig4" />
 		<panel name="ScreenTemplateSIntroduction4" />
 	</screen>
-
-	<screen name="NetworkMountsMenu" title="Network Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
-		<widget name="menulist" position="55,160" size="710,350" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="0" />
-		<panel name="ScreenTemplateSIntroduction4" />
-	</screen>
-
-	<!-- Mount Edit -->
 
 	<screen name="AutoMountEdit" title="Mount Editor" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
@@ -662,8 +662,6 @@
 		</widget>
 		<panel name="ScreenTemplateSIntroduction4" />
 	</screen>
-
-	<!-- User Management -->
 
 	<screen name="UserManager" title="Username Manager" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
@@ -738,59 +736,50 @@
 		<panel name="ScreenTemplateSDescription4" />
 	</screen>
 
-<!-- MENU > Setup > Network > Network Adapter Selection > * > Nameserver Settings -->
+<!-- MENU > Setup > Network > Network Interface -->
+<!-- MENU > Setup > Network > Network Adapter Selection > * > Network Settings / Information -->
 
-	<screen name="NameserverSetup" title="Name Servers" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="AdapterSetup" title="Adapter Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonTextVKey" />
 		<panel name="ScreenTemplateButtonHelp" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<panel name="ScreenTemplateConfig4" />
-		<panel name="ScreenTemplateSIntroduction4" />
+		<panel name="ScreenTemplateConfigShort" />
+		<!--
+		<widget source="introduction" render="Label" position="970,90" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
+		<widget source="Adaptertext" render="Label" position="970,130" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="Adapter" render="Label" position="970,160" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
+		<widget source="IPtext" render="Label" position="970,200" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="IP" render="Label" position="970,230" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
+		<widget source="Netmasktext" render="Label" position="970,270" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="Mask" render="Label" position="970,300" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
+		<widget source="Gatewaytext" render="Label" position="970,340" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="Gateway" render="Label" position="970,370" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
+		<widget source="DNS1text" render="Label" position="970,410" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="DNS1" render="Label" position="970,440" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
+		<widget source="DNS2text" render="Label" position="970,480" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="DNS2" render="Label" position="970,510" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
+		-->
+		<eLabel position="400,420" size="830,2" backgroundColor="Pinstripe" />
+		<eLabel position="400,540" size="830,2" backgroundColor="Pinstripe" />
+		<eLabel position="400,420" size="2,120" backgroundColor="Pinstripe" />
+		<eLabel position="1228,420" size="2,120" backgroundColor="Pinstripe" />
+		<widget source="introduction" render="Label" position="0,0" size="1,1" font="Regular;20" transparent="1" />
+		<widget source="Adaptertext" render="Label" position="410,430" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="Adapter" render="Label" position="410,455" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
+		<widget source="IPtext" render="Label" position="410,480" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="IP" render="Label" position="410,505" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
+		<widget source="Netmasktext" render="Label" position="690,430" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="Mask" render="Label" position="690,455" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
+		<widget source="Gatewaytext" render="Label" position="690,480" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="Gateway" render="Label" position="690,505" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
+		<widget source="DNS1text" render="Label" position="970,430" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="DNS1" render="Label" position="970,455" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
+		<widget source="DNS2text" render="Label" position="970,480" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="DNS2" render="Label" position="970,505" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
+		<panel name="ScreenTemplateSIntroduction24" />
 	</screen>
-
-<!-- MENU > Setup > Network > Network Adapter Selection > * > Network Test -->
-
-	<screen name="NetworkAdapterTest" title="Network Test: %s" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
-		<widget name="Adaptertext" position="55,120" size="650,25" font="Regular;22" foregroundColor="Grey" zPosition="1" />
-		<widget name="Adapter" position="55,150" size="650,25" font="Regular;22" foregroundColors="#008c8c93,#00f23d21,#001cff1c" zPosition="1" />
-		<widget name="AdapterInfo_OK" pixmap="icons/lock_on.png" position="755,135" size="38,31" alphatest="on" zPosition="2" />
-		<widget name="AdapterInfo" pixmaps="images/select300_45black.png,images/select600_50.png" position="832,127" size="318,50" zPosition="1" />
-		<widget name="AdapterInfo_Text" position="832,127" size="318,50" font="Regular;22" foregroundColors="White,White,White" halign="center" transparent="1" valign="center" zPosition="2" />
-		<eLabel position="55,190" size="740,1" backgroundColor="Pinstripe" />
-		<widget name="Networktext" position="55,200" size="650,25" font="Regular;22" foregroundColor="Grey" zPosition="1" />
-		<widget name="Network" position="55,230" size="650,25" font="Regular;22" foregroundColors="#008c8c93,#00f23d21,#001cff1c" zPosition="1" />
-		<widget name="NetworkInfo_Check" pixmaps="icons/lock_on.png,icons/lock_off.png" position="755,215" size="38,31" alphatest="on" zPosition="2" />
-		<widget name="NetworkInfo" pixmaps="images/select300_45black.png,images/select600_50.png" position="832,207" size="318,50" zPosition="1" />
-		<widget name="NetworkInfo_Text" position="832,207" size="318,50" font="Regular;22" foregroundColors="White,White,White" halign="center" transparent="1" valign="center" zPosition="2" />
-		<eLabel position="55,270" size="740,1" backgroundColor="Pinstripe" />
-		<widget name="Dhcptext" position="55,280" size="650,25" font="Regular;22" foregroundColor="Grey" zPosition="1" />
-		<widget name="Dhcp" position="55,310" size="650,25" font="Regular;22" foregroundColors="#008c8c93,#00f23d21,#001cff1c" zPosition="1" />
-		<widget name="DhcpInfo_Check" pixmaps="icons/lock_on.png,icons/lock_off.png" position="755,295" size="38,31" alphatest="on" zPosition="2" />
-		<widget name="DhcpInfo" pixmaps="images/select300_45black.png,images/select600_50.png" position="832,287" size="318,50" zPosition="1" />
-		<widget name="DhcpInfo_Text" position="832,287" size="318,50" font="Regular;22" foregroundColors="White,White,White" halign="center" transparent="1" valign="center" zPosition="2" />
-		<eLabel position="55,350" size="740,1" backgroundColor="Pinstripe" />
-		<widget name="IPtext" position="55,360" size="650,25" font="Regular;22" foregroundColor="Grey" zPosition="1" />
-		<widget name="IP" position="55,390" size="650,25" font="Regular;22" foregroundColors="#008c8c93,#00f23d21,#001cff1c" zPosition="1" />
-		<widget name="IPInfo_Check" pixmaps="icons/lock_on.png,icons/lock_off.png" position="755,375" size="38,31" alphatest="on" zPosition="2" />
-		<widget name="IPInfo" pixmaps="images/select300_45black.png,images/select600_50.png" position="832,367" size="318,50" zPosition="1" />
-		<widget name="IPInfo_Text" position="832,367" size="318,50" font="Regular;22" foregroundColors="White,White,White" halign="center" transparent="1" valign="center" zPosition="2" />
-		<eLabel position="55,430" size="740,1" backgroundColor="Pinstripe" />
-		<widget name="DNStext" position="55,440" size="650,25" font="Regular;22" foregroundColor="Grey" zPosition="1" />
-		<widget name="DNS" position="55,470" size="650,25" font="Regular;22" foregroundColors="#008c8c93,#00f23d21,#001cff1c" zPosition="1" />
-		<widget name="DNSInfo_Check" pixmaps="icons/lock_on.png,icons/lock_off.png" position="755,455" size="38,31" alphatest="on" zPosition="2" />
-		<widget name="DNSInfo" pixmaps="images/select300_45black.png,images/select600_50.png" position="832,447" size="318,50" zPosition="1" />
-		<widget name="DNSInfo_Text" position="832,447" size="318,50" font="Regular;22" foregroundColors="White,White,White" halign="center" transparent="1" valign="center" zPosition="2" />
-		<eLabel position="55,510" size="740,1" backgroundColor="Pinstripe" />
-		<widget name="EditSettingsButton" pixmaps="images/select300_45black.png,images/select600_50.png" position="832,527" size="318,50" zPosition="1" />
-		<widget name="EditSettings_Text" position="832,527" size="318,50" font="Regular;22" foregroundColors="White,White,White" halign="center" transparent="1" valign="center" zPosition="2" />
-		<widget name="InfoTextBorder" position="55,122" size="470,476" backgroundColor="Black" borderColor="Green" borderWidth="2" zPosition="+1" />
-		<widget name="InfoText" position="55,122" size="740,476" font="Regular;24" valign="center" zPosition="+2" />
-	</screen>
-
-<!-- MENU > Setup > Network > Network Adapter Selection > * > Restart Network - Defined Elsewhere -->
 
 <!-- MENU > Setup > Network > Network Adapter Selection > * > Scan Wireless Networks -->
 
@@ -841,70 +830,222 @@
 		<widget source="enc" render="Label" position="730,325" size="500,35" backgroundColor="TextBackground" font="Regular;25" halign="right" transparent="1" valign="center" />
 	</screen>
 
-<!-- MENU > Setup > Network > Network Adapter Selection > * > Network Wizard - Defined In Wizards -->
+<!-- MENU > Setup > Network > Network Adapter Selection > * > NameServer Settings -->
 
-<!-- MENU > Setup > Network > Network Interface -->
-
-	<screen name="AdapterSetup" title="Adapter Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="NameserverSetup" title="Network Name Servers" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<panel name="ScreenTemplateButtonTextVKey" />
 		<panel name="ScreenTemplateButtonHelp" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<panel name="ScreenTemplateConfigShort" />
-		<!--
-		<widget source="introduction" render="Label" position="970,90" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
-		<widget source="Adaptertext" render="Label" position="970,130" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
-		<widget source="Adapter" render="Label" position="970,160" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
-		<widget source="IPtext" render="Label" position="970,200" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
-		<widget source="IP" render="Label" position="970,230" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
-		<widget source="Netmasktext" render="Label" position="970,270" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
-		<widget source="Mask" render="Label" position="970,300" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
-		<widget source="Gatewaytext" render="Label" position="970,340" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
-		<widget source="Gateway" render="Label" position="970,370" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
-		<widget source="DNS1text" render="Label" position="970,410" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
-		<widget source="DNS1" render="Label" position="970,440" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
-		<widget source="DNS2text" render="Label" position="970,480" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
-		<widget source="DNS2" render="Label" position="970,510" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
-		-->
-		<eLabel position="400,420" size="830,2" backgroundColor="Pinstripe" />
-		<eLabel position="400,540" size="830,2" backgroundColor="Pinstripe" />
-		<eLabel position="400,420" size="2,120" backgroundColor="Pinstripe" />
-		<eLabel position="1228,420" size="2,120" backgroundColor="Pinstripe" />
-		<widget source="introduction" render="Label" position="0,0" size="1,1" font="Regular;20" transparent="1" />
-		<widget source="Adaptertext" render="Label" position="410,430" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
-		<widget source="Adapter" render="Label" position="410,455" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
-		<widget source="IPtext" render="Label" position="410,480" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
-		<widget source="IP" render="Label" position="410,505" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
-		<widget source="Netmasktext" render="Label" position="690,430" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
-		<widget source="Mask" render="Label" position="690,455" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
-		<widget source="Gatewaytext" render="Label" position="690,480" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
-		<widget source="Gateway" render="Label" position="690,505" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
-		<widget source="DNS1text" render="Label" position="970,430" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
-		<widget source="DNS1" render="Label" position="970,455" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
-		<widget source="DNS2text" render="Label" position="970,480" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
-		<widget source="DNS2" render="Label" position="970,505" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
-		<panel name="ScreenTemplateSIntroduction24" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateSIntroduction4" />
+	</screen>
+
+<!-- MENU > Setup > Network > Network Adapter Selection > * > MAC Settings -->
+
+	<screen name="NetworkMacSetup" title="Network MAC Address" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonHelp" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateSIntroduction4" />
+	</screen>
+
+<!-- MENU > Setup > Network > Network Adapter Selection > * > Network Test -->
+
+	<screen name="NetworkAdapterTest" title="Network Test: %s" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="Adaptertext" position="400,80" size="560,35" backgroundColor="TextBackground" font="TextFont;25" foregroundColor="TextLabel" transparent="1" valign="center" />
+		<widget name="Adapter" position="400,115" size="560,35" backgroundColor="TextBackground" font="TextFont;25" foregroundColors="#008c8c93,#00f23d21,#001cff1c" transparent="1" valign="center" />
+		<widget name="AdapterInfo_OK" position="980,98" size="30,27" pixmap="icons/lock_on.png" alphatest="on" transparent="1" />
+		<widget name="AdapterInfo" position="1030,90" size="0,0" pixmaps="images/select300_45black.png,images/select600_50.png" transparent="1" />
+		<widget name="AdapterInfo_Text" position="1030,80" size="200,70" backgroundColor="TextBackground" font="Regular;25" foregroundColors="TextBackground,TextDisabled,Text" halign="right" transparent="1" valign="center" zPosition="+1" />
+		<eLabel position="400,160" size="830,2" backgroundColor="Pinstripe" />
+		<widget name="Networktext" position="400,170" size="560,35" backgroundColor="TextBackground" font="TextFont;25" foregroundColor="TextLabel" transparent="1" valign="center" />
+		<widget name="Network" position="400,205" size="560,35" backgroundColor="TextBackground" font="TextFont;25" foregroundColors="#008c8c93,#00f23d21,#001cff1c" transparent="1" valign="center" />
+		<widget name="NetworkInfo_Check" position="980,188" size="30,27" pixmap="icons/lock_on.png" alphatest="on" transparent="1" />
+		<widget name="NetworkInfo" position="1030,180" size="0,0" pixmaps="images/select300_45black.png,images/select600_50.png" transparent="1" />
+		<widget name="NetworkInfo_Text" position="1030,170" size="200,70" backgroundColor="TextBackground" font="Regular;25" foregroundColors="TextBackground,TextDisabled,Text" halign="right" transparent="1" valign="center" zPosition="+1" />
+		<eLabel position="400,250" size="830,2" backgroundColor="Pinstripe" />
+		<widget name="Dhcptext" position="400,260" size="560,35" backgroundColor="TextBackground" font="TextFont;25" foregroundColor="TextLabel" transparent="1" valign="center" />
+		<widget name="Dhcp" position="400,295" size="560,35" backgroundColor="TextBackground" font="TextFont;25" foregroundColors="#008c8c93,#00f23d21,#001cff1c" transparent="1" valign="center" />
+		<widget name="DhcpInfo_Check" position="980,278" size="30,27" pixmap="icons/lock_on.png" alphatest="on" transparent="1" />
+		<widget name="DhcpInfo" position="1030,270" size="0,0" pixmaps="images/select300_45black.png,images/select600_50.png" transparent="1" />
+		<widget name="DhcpInfo_Text" position="1030,260" size="200,70" backgroundColor="TextBackground" font="Regular;25" foregroundColors="TextBackground,TextDisabled,Text" halign="right" transparent="1" valign="center" zPosition="+1" />
+		<eLabel position="400,340" size="830,2" backgroundColor="Pinstripe" />
+		<widget name="IPtext" position="400,350" size="560,35" backgroundColor="TextBackground" font="TextFont;25" foregroundColor="TextLabel" transparent="1" valign="center" />
+		<widget name="IP" position="400,385" size="560,35" backgroundColor="TextBackground" font="TextFont;25" foregroundColors="#008c8c93,#00f23d21,#001cff1c" transparent="1" valign="center" />
+		<widget name="IPInfo_Check" position="980,368" size="30,27" pixmap="icons/lock_on.png" alphatest="on" transparent="1" />
+		<widget name="IPInfo" position="1030,360" size="0,0" pixmaps="images/select300_45black.png,images/select600_50.png" transparent="1" />
+		<widget name="IPInfo_Text" position="1030,350" size="200,70" backgroundColor="TextBackground" font="Regular;25" foregroundColors="TextBackground,TextDisabled,Text" halign="right" transparent="1" valign="center" zPosition="+1" />
+		<eLabel position="400,430" size="830,2" backgroundColor="Pinstripe" />
+		<widget name="DNStext" position="400,440" size="560,35" backgroundColor="TextBackground" font="TextFont;25" foregroundColor="TextLabel" transparent="1" valign="center" />
+		<widget name="DNS" position="400,475" size="560,35" backgroundColor="TextBackground" font="TextFont;25" foregroundColors="#008c8c93,#00f23d21,#001cff1c" transparent="1" valign="center" />
+		<widget name="DNSInfo_Check" position="980,458" size="30,27" pixmap="icons/lock_on.png" alphatest="on" transparent="1" />
+		<widget name="DNSInfo" position="1030,450" size="0,0" pixmaps="images/select300_45black.png,images/select600_50.png" transparent="1" />
+		<widget name="DNSInfo_Text" position="1030,440" size="200,70" backgroundColor="TextBackground" font="Regular;25" foregroundColors="TextBackground,TextDisabled,Text" halign="right" transparent="1" valign="center" zPosition="+1" />
+		<eLabel position="400,520" size="830,2" backgroundColor="Pinstripe" />
+		<widget name="EditSettingsButton" position="1030,540" size="0,0" pixmaps="images/select300_45black.png,images/select600_50.png" transparent="1" />
+		<widget name="EditSettings_Text" position="1030,530" size="200,70" backgroundColor="TextBackground" font="Regular;25" foregroundColors="TextDisabled,TextDisabled,Text" halign="right" transparent="1" valign="center" zPosition="+1" />
+		<widget name="InfoTextBorder" position="50,80" size="910,570" backgroundColor="TextBackground" borderColor="Green" borderWidth="2" transparent="0" zPosition="+1" />
+		<widget name="InfoText" position="50,80" size="910,570" backgroundColor="TextBackground" font="TextFont;25" foregroundColor="Text" valign="center" transparent="0" zPosition="+2" />
 	</screen>
 
 <!-- MENU > Setup > Network > Network Restart - Defined Elsewhere -->
+<!-- MENU > Setup > Network > Network Adapter Selection > * > Restart Network - Defined Elsewhere -->
 
-<!-- MENU > Setup > Network > Samba -->
+<!-- MENU > Setup > Network > Network Adapter Selection > * > Network Wizard - Defined In Wizards -->
 
-	<screen name="NetworkSamba" title="Samba Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+<!-- MENU > Setup > Network > Generic Network Service Screens -->
+
+	<!-- Generic Service Status Screen -->
+
+	<screen name="NetworkServiceSetup" title="Network Service Status" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_system.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<eLabel position="400,80" size="830,420" backgroundColor="MenuBackground" zPosition="-1" />
+		<widget name="lab1" position="420,80" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
+		<widget name="labactive" position="790,80" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="MenuText" halign="right" transparent="0" valign="center" />
+		<widget name="lab2" position="420,115" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
+		<widget name="labstop" position="790,115" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="Red" halign="right" transparent="0" valign="center" />
+		<widget name="labrun" position="790,115" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="Green" halign="right" transparent="0" valign="center" />
+		<panel name="ScreenTemplateFrame830x120" />
+	</screen>
+
+	<!-- Generic Show Log Screen -->
+
+	<screen name="NetworkInadynLog" title="Network Service Log" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<widget name="infotext" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<!-- Generic Service Summary Screen -->
+
+	<screen name="NetworkServicesSummary" title="Network Service Summary" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	</screen>
+
+<!-- MENU > Setup > Network > AFP - Uses Generic Network Service Screen -->
+
+<!-- MENU > Setup > Network > DLNA Server -->
+
+	<screen name="NetworkMiniDLNA" title="DLNA Server Status" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<widget name="lab1" position="420,80" size="300,35" font="Regular;25" transparent="1" valign="center" />
-		<widget name="labactive" position="730,80" size="500,35" font="Regular;22" halign="right" transparent="1" valign="center" />
-		<widget name="lab2" position="420,115" size="300,35" font="Regular;25" transparent="1" valign="center" />
-		<widget name="labstop" position="730,115" size="500,35" font="Regular;22" foregroundColor="Red" halign="right" transparent="1" valign="center" />
-		<widget name="labrun" position="730,115" size="500,35" font="Regular;22" foregroundColor="Green" halign="right" transparent="1" valign="center" />
+		<eLabel position="400,80" size="830,420" backgroundColor="MenuBackground" zPosition="-1" />
+		<widget name="autostart" position="420,80" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
+		<widget name="labdisabled" position="790,80" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="Red" halign="right" transparent="0" valign="center" />
+		<widget name="labactive" position="790,80" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="Green" halign="right" transparent="0" valign="center" zPosition="+1" />
+		<widget name="status" position="420,115" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
+		<widget name="labstop" position="790,115" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="Red" halign="right" transparent="0" valign="center" />
+		<widget name="labrun" position="790,115" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="Green" halign="right" transparent="0" valign="center" zPosition="+1" />
+		<widget name="username" position="420,150" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
+		<widget name="labuser" position="790,150" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="MenuText" halign="right" transparent="0" valign="center" />
+		<widget name="iface" position="420,185" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
+		<widget name="labiface" position="790,185" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="MenuText" halign="right" transparent="0" valign="center" />
+		<widget name="port" position="420,220" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
+		<widget name="labport" position="790,220" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="MenuText" halign="right" transparent="0" valign="center" />
+		<widget name="serialno" position="420,255" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
+		<widget name="labserialno" position="790,255" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="MenuText" halign="right" transparent="0" valign="center" />
+		<widget name="inotify" position="420,290" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
+		<widget name="inotifyinactive" pixmap="icons/lock_off.png" position="1178,292" size="32,32" alphatest="on" transparent="0" />
+		<widget name="inotifyactive" pixmap="icons/lock_on.png" position="1178,292" size="32,32" alphatest="on" transparent="0" zPosition="+1" />
+		<widget name="tivo" position="420,325" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
+		<widget name="tivoinactive" pixmap="icons/lock_off.png" position="1178,327" size="32,32" alphatest="on" transparent="0" />
+		<widget name="tivoactive" pixmap="icons/lock_on.png" position="1178,327" size="32,32" alphatest="on" transparent="0" zPosition="+1" />
+		<widget name="dlna" position="420,360" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
+		<widget name="dlnainactive" pixmap="icons/lock_off.png" position="1178,362" size="32,32" alphatest="on" transparent="0" />
+		<widget name="dlnaactive" pixmap="icons/lock_on.png" position="1178,362" size="32,32" alphatest="on" transparent="0" zPosition="+1" />
+		<widget name="sharedir" position="420,395" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="1" valign="center" />
+		<widget name="labsharedir" position="790,395" size="420,105" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="MenuText" halign="right" transparent="1" valign="top" />
 		<panel name="ScreenTemplateFrame830x120" />
 	</screen>
 
-	<screen name="NetworkSambaSetup" title="Samba Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<!-- Uses NetworkuShareSetup
+	<screen name="NetworkMiniDLNASetup" title="DLNA Server Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	</screen>
+	-->
+
+	<!-- Uses uShareSelection
+	<screen name="MiniDLNASelection" title="DLNA Folder Selection" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	</screen>
+	-->
+
+	<!-- Uses NetworkInadynLog
+	<screen name="NetworkMiniDLNALog" title="DLNA Server Log" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	</screen>
+	-->
+
+<!-- MENU > Setup > Network > DYN-DNS -->
+
+	<screen name="NetworkInadyn" title="DynDNS Server Status" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonMenu" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<eLabel position="400,80" size="830,420" backgroundColor="MenuBackground" zPosition="-1" />
+		<widget name="autostart" position="420,80" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
+		<widget name="labdisabled" position="790,80" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="Red" halign="right" transparent="0" valign="center" />
+		<widget name="labactive" position="790,80" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="Green" halign="right" transparent="0" valign="center" zPosition="+1" />
+		<widget name="status" position="420,115" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
+		<widget name="labstop" position="790,115" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="Red" halign="right" transparent="0" valign="center" />
+		<widget name="labrun" position="790,115" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="Green" halign="right" transparent="0" valign="center" zPosition="+1" />
+		<widget name="time" position="420,150" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
+		<widget name="labtime" position="790,150" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="MenuText" halign="right" transparent="0" valign="center" />
+		<widget name="username" position="420,185" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
+		<widget name="labuser" position="790,185" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="MenuText" halign="right" transparent="0" valign="center" />
+		<widget name="password" position="420,220" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
+		<widget name="labpass" position="790,220" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="MenuText" halign="right" transparent="0" valign="center" />
+		<widget name="alias" position="420,255" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
+		<widget name="labalias" position="790,255" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="MenuText" halign="right" transparent="0" valign="center" />
+		<widget name="system" position="420,290" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
+		<widget name="labsys" position="790,290" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="MenuText" halign="right" transparent="0" valign="center" />
+		<widget name="sinactive" pixmap="icons/lock_off.png" position="1178,327" size="32,32" alphatest="on" transparent="0" />
+		<widget name="sactive" pixmap="icons/lock_on.png" position="1178,327" size="32,32" alphatest="on" transparent="0" zPosition="+1" />
+		<panel name="ScreenTemplateFrame830x120" />
+	</screen>
+
+	<screen name="NetworkInadynSetup" title="DynDNS Server Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonTextVKey" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateFrame830x120" />
+	</screen>
+
+	<!-- This is used as the generic log so it is located above
+	<screen name="NetworkInadynLog" title="DynDNS Server Log" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	</screen>
+	-->
+
+<!-- MENU > Setup > Network > FTP - Uses Generic Network Service Screen -->
+
+<!-- MENU > Setup > Network > NFS - Uses Generic Network Service Screen -->
+
+<!-- MENU > Setup > Network > OpenVPN - Uses Generic Network Service Screen -->
+
+<!-- MENU > Setup > Network > Password -->
+
+	<screen name="NetworkSetPassword" title="Network Password" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="passwd" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<panel name="ScreenTemplateFrame830x120" />
+	</screen>
+
+<!-- MENU > Setup > Network > Samba -->
+
+	<screen name="NetworkSamba" title="Samba Server Status" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="NetworkServiceSetup" />
+	</screen>
+
+	<screen name="NetworkSambaSetup" title="Samba Server Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateButtonTextVKey" />
@@ -913,70 +1054,53 @@
 		<panel name="ScreenTemplateFrame830x120" />
 	</screen>
 
-<!-- MENU > Setup > Network > NFS -->
-
-	<screen name="NetworkServiceSetup" title="NFS Server Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_system.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<widget name="lab1" position="420,80" size="300,35" font="Regular;25" transparent="1" valign="center" />
-		<widget name="labactive" position="730,80" size="500,35" font="Regular;22" halign="right" transparent="1" valign="center" />
-		<widget name="lab2" position="420,115" size="300,35" font="Regular;25" transparent="1" valign="center" />
-		<widget name="labstop" position="730,115" size="500,35" font="Regular;22" foregroundColor="Red" halign="right" transparent="1" valign="center" />
-		<widget name="labrun" position="730,115" size="500,35" font="Regular;22" foregroundColor="Green" halign="right" transparent="1" valign="center" />
-		<panel name="ScreenTemplateFrame830x120" />
+	<!-- Uses NetworkInadynLog
+	<screen name="NetworkSambaLog" title="Samba Server Log" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 	</screen>
+	-->
 
-<!-- MENU > Setup > Network > FTP -->
+<!-- MENU > Setup > Network > Telnet - Uses Generic Network Service Screen -->
 
-	<screen name="NetworkFtp" title="FTP Server Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<eLabel text="Ftpd service type:" position="420,80" size="300,35" font="Regular;25" transparent="1" valign="center" />
-		<widget name="lab1" position="730,80" size="500,35" font="Regular;22" halign="right" transparent="1" valign="center" />
-		<widget name="lab2" position="420,115" size="300,35" font="Regular;25" transparent="1" valign="center" />
-		<widget name="labstop" position="730,115" size="500,35" font="Regular;22" foregroundColor="Red" halign="right" transparent="1" valign="center" />
-		<widget name="labrun" position="730,115" size="500,35" font="Regular;22" foregroundColor="Green" halign="right" transparent="1" valign="center" />
-		<panel name="ScreenTemplateFrame830x120" />
-	</screen>
+<!-- MENU > Setup > Network > uShare -->
 
-<!-- MENU > Setup > Network > DLNA Server -->
-
-	<screen name="NetworkMiniDLNA" title="DLNA Server Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="NetworkuShare" title="uShare Server Status" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<widget name="autostart" position="420,80" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
-		<widget name="labdisabled" position="730,80" size="500,35" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Red" halign="right" transparent="1" valign="center" />
-		<widget name="labactive" position="730,80" size="500,35" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Green" halign="right" transparent="1" valign="center" zPosition="+1" />
-		<widget name="status" position="420,115" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
-		<widget name="labstop" position="730,115" size="500,35" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Red" halign="right" transparent="1" valign="center" />
-		<widget name="labrun" position="730,115" size="500,35" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Green" halign="right" transparent="1" valign="center" zPosition="+1" />
-		<widget name="username" position="420,150" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
-		<widget name="labuser" position="730,150" size="500,35" backgroundColor="TextBackground" font="Regular;22" halign="right" transparent="1" valign="center" />
-		<widget name="iface" position="420,185" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
-		<widget name="labiface" position="730,185" size="500,35" backgroundColor="TextBackground" font="Regular;22" halign="right" transparent="1" valign="center" />
-		<widget name="port" position="420,220" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
-		<widget name="labport" position="730,220" size="500,35" backgroundColor="TextBackground" font="Regular;22" halign="right" transparent="1" valign="center" />
-		<widget name="serialno" position="420,255" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
-		<widget name="labserialno" position="730,255" size="500,35" backgroundColor="TextBackground" font="Regular;22" halign="right" transparent="1" valign="center" />
-		<widget name="inotify" position="420,290" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
-		<widget name="inotifyinactive" pixmap="icons/lock_off.png" position="1198,292" size="32,32" alphatest="on" transparent="1" />
-		<widget name="inotifyactive" pixmap="icons/lock_on.png" position="1198,292" size="32,32" alphatest="on" transparent="1" zPosition="+1" />
-		<widget name="tivo" position="420,325" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
-		<widget name="tivoinactive" pixmap="icons/lock_off.png" position="1198,327" size="32,32" alphatest="on" transparent="1" />
-		<widget name="tivoactive" pixmap="icons/lock_on.png" position="1198,327" size="32,32" alphatest="on" transparent="1" zPosition="+1" />
-		<widget name="dlna" position="420,360" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
-		<widget name="dlnainactive" pixmap="icons/lock_off.png" position="1198,362" size="32,32" alphatest="on" transparent="1" zPosition="2" />
-		<widget name="dlnaactive" pixmap="icons/lock_on.png" position="1198,362" size="32,32" alphatest="on" transparent="1" zPosition="3" />
-		<widget name="sharedir" position="420,395" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
-		<widget name="labsharedir" position="730,395" size="500,90" backgroundColor="TextBackground" font="Regular;22" halign="right" transparent="1" valign="top" />
+		<eLabel position="400,80" size="830,455" backgroundColor="MenuBackground" zPosition="-1" />
+		<widget name="autostart" position="420,80" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
+		<widget name="labdisabled" position="790,80" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="Red" halign="right" transparent="0" valign="center" />
+		<widget name="labactive" position="790,80" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="Green" halign="right" transparent="0" valign="center" zPosition="+1" />
+		<widget name="status" position="420,115" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
+		<widget name="labstop" position="790,115" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="Red" halign="right" transparent="0" valign="center" />
+		<widget name="labrun" position="790,115" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="Green" halign="right" transparent="0" valign="center" zPosition="+1" />
+		<widget name="username" position="420,150" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
+		<widget name="labuser" position="790,150" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="MenuText" halign="right" transparent="0" valign="center" />
+		<widget name="iface" position="420,185" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
+		<widget name="labiface" position="790,185" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="MenuText" halign="right" transparent="0" valign="center" />
+		<widget name="port" position="420,220" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
+		<widget name="labport" position="790,220" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="MenuText" halign="right" transparent="0" valign="center" />
+		<widget name="telnetport" position="420,255" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
+		<widget name="labtelnetport" position="790,255" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="MenuText" halign="right" transparent="0" valign="center" />
+		<widget name="web" position="420,290" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
+		<widget name="webinactive" pixmap="icons/lock_off.png" position="1178,292" size="32,32" alphatest="on" transparent="0" />
+		<widget name="webactive" pixmap="icons/lock_on.png" position="1178,292" size="32,32" alphatest="on" transparent="0" zPosition="+1" />
+		<widget name="telnet" position="420,325" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
+		<widget name="telnetinactive" pixmap="icons/lock_off.png" position="1178,327" size="32,32" alphatest="on" transparent="0" />
+		<widget name="telnetactive" pixmap="icons/lock_on.png" position="1178,327" size="32,32" alphatest="on" transparent="0" zPosition="+1" />
+		<widget name="xbox" position="420,360" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
+		<widget name="xboxinactive" pixmap="icons/lock_off.png" position="1178,362" size="32,32" alphatest="on" transparent="0" />
+		<widget name="xboxactive" pixmap="icons/lock_on.png" position="1178,362" size="32,32" alphatest="on" transparent="0" zPosition="+1" />
+		<widget name="dlna" position="420,395" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
+		<widget name="dlnainactive" pixmap="icons/lock_off.png" position="1178,397" size="32,32" alphatest="on" transparent="0" />
+		<widget name="dlnaactive" pixmap="icons/lock_on.png" position="1178,397" size="32,32" alphatest="on" transparent="0" zPosition="+1" />
+		<widget name="sharedir" position="420,430" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="1" valign="center" />
+		<widget name="labsharedir" position="790,430" size="420,105" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="MenuText" halign="right" transparent="1" valign="top" />
 		<panel name="ScreenTemplateFrame830x120" />
 	</screen>
 
-	<screen name="NetworkuShareSetup" title="DLNA Server Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="NetworkuShareSetup" title="uServer Server Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateButtonTextVKey" />
@@ -985,7 +1109,7 @@
 		<panel name="ScreenTemplateFrame830x120" />
 	</screen>
 
-	<screen name="uShareSelection" title="DLNA Server Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="uShareSelection" title="uServer Folder Selection" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
@@ -993,72 +1117,10 @@
 		<panel name="ScreenTemplateFrame830x120" />
 	</screen>
 
-<!-- MENU > Setup > Network > DYN-DNS -->
-
-	<screen name="NetworkInadyn" title="DynDNS Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonMenu" />
-		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<widget name="autostart" position="710,170" size="100,24" font="Regular;20" transparent="0" valign="center" />
-		<widget name="labdisabled" position="810,170" size="100,24" backgroundColor="LightRed" font="Regular;20" halign="center" valign="center" zPosition="+1" />
-		<widget name="labactive" position="810,170" size="100,24" backgroundColor="DullGreen" font="Regular;20" halign="center" valign="center" zPosition="+2" />
-		<widget name="status" position="940,170" size="150,24" font="Regular;20" transparent="0" valign="center" />
-		<widget name="labstop" position="1090,170" size="100,24" backgroundColor="LightRed" font="Regular;20" halign="center" valign="center" zPosition="+1" />
-		<widget name="labrun" position="1090,170" size="100,24" backgroundColor="DullGreen" font="Regular;20" halign="center" valign="center" zPosition="+2" />
-		<widget name="time" position="710,220" size="260,30" font="Regular;20" transparent="1" valign="center" />
-		<widget name="labtime" position="970,220" size="100,30" backgroundColor="GreyBlue" font="Regular;20" valign="center" />
-		<widget name="username" position="710,270" size="150,30" font="Regular;20" transparent="1" valign="center" />
-		<widget name="labuser" position="860,270" size="310,30" backgroundColor="GreyBlue" font="Regular;20" valign="center" />
-		<widget name="password" position="710,320" size="150,30" font="Regular;20" transparent="1" valign="center" />
-		<widget name="labpass" position="860,320" size="310,30" backgroundColor="GreyBlue" font="Regular;20" valign="center" />
-		<widget name="alias" position="710,370" size="150,30" font="Regular;20" transparent="1" valign="center" />
-		<widget name="labalias" position="860,370" size="310,30" backgroundColor="GreyBlue" font="Regular;20" valign="center" />
-		<widget name="sinactive" pixmap="icons/lock_off.png" position="710,420" size="32,32" alphatest="on" zPosition="+1" />
-		<widget name="sactive" pixmap="icons/lock_on.png" position="710,420" size="32,32" alphatest="on" zPosition="+2" />
-		<widget name="system" position="750,420" size="100,30" font="Regular;20" transparent="1" valign="center" />
-		<widget name="labsys" position="860,420" size="310,30" backgroundColor="GreyBlue" font="Regular;20" valign="center" />
-		<panel name="ScreenTemplateFrame830x120" />
+	<!-- Uses NetworkInadynLog
+	<screen name="NetworkuShareLog" title="uServer Server Log" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 	</screen>
-
-	<screen name="NetworkInadynSetup" title="DynDNS Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
-		<panel name="ScreenTemplateButtonTextVKey" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<panel name="ScreenTemplateConfig4" />
-		<panel name="ScreenTemplateFrame830x120" />
-	</screen>
-
-<!-- MENU > Setup > Network > Telnet -->
-
-	<screen name="NetworkTelnet" title="Telnet Server Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<widget name="lab2" position="420,80" size="300,35" font="Regular;25" transparent="1" valign="center" />
-		<widget name="labstop" position="1030,80" size="200,35" font="Regular;22" foregroundColor="LightRed" halign="right" transparent="1" valign="center" />
-		<widget name="labrun" position="1030,80" size="200,35" font="Regular;22" foregroundColor="DullGreen" halign="right" transparent="1" valign="center" />
-		<panel name="ScreenTemplateLab4" />
-	</screen>
-
-<!-- MENU > Setup > Network > * > Show Log -->
-
-	<screen name="NetworkInadynLog" title="Show Log" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<widget name="infotext" position="50,80" size="1180,565" font="Console;16" transparent="1" />
-	</screen>
-
-<!-- Unknown -->
-
-	<screen name="NetworkSetup" title="Network Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
-		<widget name="menu" position="55,160" size="710,415" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="0" />
-		<eLabel position="815,100" size="2,518" backgroundColor="Pinstripe" />
-		<eLabel position="55,618" size="1100,2" backgroundColor="Pinstripe" />
-		<eLabel position="55,100" size="1100,2" backgroundColor="Pinstripe" />
-	</screen>
+	-->
 
 <!-- MENU > Setup > Storage > Hard Disk Setup - Uses Generic Setup Screen -->
 
