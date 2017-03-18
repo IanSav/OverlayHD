@@ -203,6 +203,9 @@
 		<color name="PinstripeKeyError" value="DavysGrey" />
 		<color name="PinstripeMute" value="DavysGrey" />
 		<color name="PinstripeVolume" value="DavysGrey" />
+		<color name="ProgressBackground" value="DeepGrey" />
+		<color name="ProgressBorder" value="Grey" />
+		<color name="ProgressColour" value="White" />
 
 		<color name="Resolution" value="Silver" />
 		<color name="ResolutionBackground" value="ScreenBackground" />
@@ -213,6 +216,7 @@
 
 		<color name="Text" value="White" />
 		<color name="TextBackground" value="ScreenBackground" />
+		<color name="TextDisabled" value="DimGrey" />
 		<color name="TextSelected" value="White" />
 		<color name="TextIndented" value="Grey" />
 		<color name="TextIndentedSelected" value="Silver" />
