@@ -3,7 +3,7 @@
 
 	<screen name="EPGExtensionsList" title="EPG Extensions" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColourBacks" />
+		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<widget name="text" position="360,30" size="870,35" borderColor="BannerBorder" borderWidth="1" conditional="text" font="TitleFont;25" foregroundColor="BannerTitle" halign="right" transparent="1" />
 		<panel name="ScreenTemplateChoiceList0" />
@@ -15,11 +15,11 @@
 		<widget source="Event" render="Label" position="0,0" size="1115,30" backgroundColor="InfoBackground" font="InfoEventFont;25" foregroundColor="InfoProgramNow" noWrap="1" transparent="1">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget position="1125,0" size="55,25" source="Event" render="Pixmap" pixmap="epg/fta.png" alphatest="blend">
+		<widget source="Event" render="Pixmap" pixmap="epg/fta.png" position="1125,0" size="55,25" alphatest="blend">
 			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True,Invert</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget position="1125,0" size="55,25" source="Event" render="Pixmap" pixmap="epg/icetv.png" alphatest="blend">
+		<widget source="Event" render="Pixmap" pixmap="epg/icetv.png" position="1125,0" size="55,25" alphatest="blend">
 			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
@@ -31,9 +31,15 @@
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
+		<widget source="Event" render="Pixmap" position="400,30" size="40,20" alphatest="blend">
+			<convert type="EventName">RatingIcon</convert>
+			<convert type="ValueToPixmap">Path</convert>
+		</widget>
+		<!--
 		<widget source="Event" render="Label" position="400,30" size="40,25" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
 			<convert type="EventName">SmallRating,Trimmed</convert>
 		</widget>
+		-->
 		<widget source="Event" render="Label" position="460,30" size="340,25" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
 			<convert type="EventName">Rating,Trimmed</convert>
 		</widget>
@@ -52,11 +58,11 @@
 		<widget source="Event" render="Label" position="0,0" size="795,30" backgroundColor="EPGBackground" font="InfoEventFont;25" foregroundColor="InfoProgramNow" noWrap="1" transparent="1">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget position="805,0" size="55,25" source="Event" render="Pixmap" pixmap="epg/fta.png" alphatest="blend">
+		<widget source="Event" render="Pixmap" pixmap="epg/fta.png" position="805,0" size="55,25" alphatest="blend">
 			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True,Invert</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget position="805,0" size="55,25" source="Event" render="Pixmap" pixmap="epg/icetv.png" alphatest="blend">
+		<widget source="Event" render="Pixmap" pixmap="epg/icetv.png" position="805,0" size="55,25" alphatest="blend">
 			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
@@ -68,9 +74,15 @@
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
+		<widget source="Event" render="Pixmap" position="400,30" size="40,20" alphatest="blend">
+			<convert type="EventName">RatingIcon</convert>
+			<convert type="ValueToPixmap">Path</convert>
+		</widget>
+		<!--
 		<widget source="Event" render="Label" position="400,30" size="40,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
 			<convert type="EventName">SmallRating,Trimmed</convert>
 		</widget>
+		-->
 		<widget source="Event" render="Label" position="460,30" size="400,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" halign="right" transparent="1">
 			<convert type="EventName">Genre,Trimmed</convert>
 		</widget>
@@ -238,9 +250,9 @@
 		<widget name="more_button_sel" pixmap="epg/now_next_more_on.png" position="370,80" size="152,34" alphatest="on" />
 		<widget name="now_text" text="NOW" position="50,80" size="154,34" backgroundColor="Grey" font="EPGTimeLineFont;20" foregroundColor="EPGTimeLine" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget name="next_text" text="NEXT" position="210,80" size="154,34" backgroundColor="Grey" font="EPGTimeLineFont;20" foregroundColor="EPGTimeLine" halign="center" transparent="1" valign="center" zPosition="+1" />
-		<widget name="more_text" text="MORE" position="370,80" size="154,34" backgroundColor="Grey" font="EPGTimeLineFont;20" foregroundColor="EPGTimeLine" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="more_text" text="LATER" position="370,80" size="154,34" backgroundColor="Grey" font="EPGTimeLineFont;20" foregroundColor="EPGTimeLine" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget name="date" position="530,80" size="200,34" backgroundColor="EPGBackground" font="EPGTimeLineFont;20" foregroundColor="EPGTimeLine" transparent="1" valign="center" />
-		<widget name="list" position="50,115" size="660,540" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="list" position="50,115" size="660,540" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" font="EPGServiceFont;20" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 		<widget source="session.VideoPicture" render="Pig" position="730,80" size="500,282" backgroundColor="TransparentBackground" />
 		<widget source="session.CurrentService" render="Label" position="730,80" size="500,20" borderColor="EPGOverlayBorder" borderWidth="1" font="InfoEventFont;17" foregroundColor="EPGOverlayColour" halign="center" noWrap="1" transparent="1" valign="top">
 			<convert type="ServiceName">Name</convert>
@@ -262,17 +274,23 @@
 		<widget source="Event" render="Label" position="850,595" size="320,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
 			<convert type="EventName">Rating,Trimmed</convert>
 		</widget>
+		<widget source="Event" render="Pixmap" position="1190,595" size="40,20" alphatest="blend">
+			<convert type="EventName">RatingIcon</convert>
+			<convert type="ValueToPixmap">Path</convert>
+		</widget>
+		<!--
 		<widget source="Event" render="Label" position="1190,595" size="40,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" halign="right" transparent="1">
 			<convert type="EventName">SmallRating,Trimmed</convert>
 		</widget>
+		-->
 		<widget source="Event" render="Label" position="850,625" size="315,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" transparent="1">
 			<convert type="EventName">Genre,Trimmed</convert>
 		</widget>
-		<widget position="1175,625" size="55,25" source="Event" render="Pixmap" pixmap="epg/fta.png" alphatest="blend">
+		<widget source="Event" render="Pixmap" pixmap="epg/fta.png" position="1175,625" size="55,25" alphatest="blend">
 			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True,Invert</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget position="1175,625" size="55,25" source="Event" render="Pixmap" pixmap="epg/icetv.png" alphatest="blend">
+		<widget source="Event" render="Pixmap" pixmap="epg/icetv.png" position="1175,625" size="55,25" alphatest="blend">
 			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
@@ -304,7 +322,7 @@
 		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateButtonHelp" />
 		<widget name="list" position="50,80" size="1180,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
-		<widget name="number" position="50,80" size="1180,425" backgroundColor="TextBackground" font="Regular;50" foregroundColor="FindCharacter" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="number" position="50,80" size="1180,425" backgroundColor="TextBackground" conditional="number" font="Regular;100" foregroundColor="FindCharacter" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<eLabel position="50,515" size="1180,2" backgroundColor="Pinstripe" />
 		<panel position="50,525" size="1180,125">
 			<panel name="EPGEventInfoPanel" />

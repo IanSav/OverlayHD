@@ -1,15 +1,25 @@
 <skin>
 
-<!-- Media Player plug in uses "MediaPlayerDirectoryBrowser" first and then "FileBrowser" if the first is not found. -->
+<!-- MENU - File Browser -->
 
-	<screen name="FileManager" title="File Manager" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="FilebrowserScreen" title="File Browser" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonColours" />
-		<widget name="list_left_text" position="90,70" size="150,35" backgroundColor="TextBackground" font="Regular;28" foregroundColor="White" transparent="1" zPosition="1" />
-		<widget name="list_right_text" position="655,70" size="150,35" backgroundColor="TextBackground" font="Regular;28" foregroundColor="White" transparent="1" zPosition="1" />
-		<widget name="list_left" position="40,120" size="590,490" backgroundColor="TextBackground" foregroundColor="White" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
-		<widget name="list_right" position="645,120" size="580,490" backgroundColor="TextBackground" foregroundColor="White" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
+		<widget name="red" position="172,670" size="225,35" backgroundColor="ButtonRed" font="ButtonFont;20" conditional="red" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="green" position="409,670" size="225,36" backgroundColor="ButtonGreen" conditional="green" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="yellow" position="646,670" size="225,36" backgroundColor="ButtonYellow" conditional="yellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="blue" position="883,670" size="225,36" backgroundColor="ButtonBlue" conditional="blue" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="list_left" position="50,80" size="580,555" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="list_right" position="650,80" size="580,555" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+	</screen>
+
+	<screen name="FilebrowserConfigScreen" title="File Browser Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="Setup" />
+		<widget name="buttonred" position="172,670" size="225,35" backgroundColor="ButtonRed" font="ButtonFont;20" conditional="buttonred" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="buttongreen" position="409,670" size="225,36" backgroundColor="ButtonGreen" conditional="buttongreen" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="buttonyellow" position="646,670" size="225,36" backgroundColor="ButtonYellow" conditional="buttonyellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="buttonblue" position="883,670" size="225,36" backgroundColor="ButtonBlue" conditional="buttonblue" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 <!-- MENU - File Commander -->
@@ -38,7 +48,7 @@
 		<widget name="list_right" position="650,140" size="580,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
-	<screen name="FileCommanderConfigScreen" title="File Commander - Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="FileCommanderConfigScreen" title="File Commander Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateConfig0" />
@@ -118,9 +128,11 @@
 		<eLabel position="820,66" size="2,595" backgroundColor="Pinstripe" />
 		<widget name="waitingtext" position="50,80" size="760,448" backgroundColor="TextBackground" font="Regular;25" foregroundColor="TextWaiting" halign="center" transparent="1" valign="center" zPosition="+2" />
 		<widget name="list" position="50,80" size="760,535" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0"
-			font="MovieSelectionFont;20" pbarShift="None" pbarHeight="10" pbarLargeWidth="45" pbarColour="206333" pbarColourSeen="ffc71d" pbarColourRec="ff001d"
-			pbarColourSel="20e333" pbarColourSeenSel="ffc71d" pbarColourRecSel="ff001d" partIconeShift="None" spaceIconeText="5" iconsWidth="25" trashShift="None"
-			dirShift="None" spaceRight="5" dateWidth="140" dateWidthScale="10.0" lenWidth="60" lenWidthScale="4.0" sizeWidth="70" sizeWidthScale="5.0" />
+			font="MovieSelectionFont;20" pbarHeight="10" pbarLargeWidth="45" spaceIconeText="5" iconsWidth="25" spaceRight="5" dateWidth="140" dateWidthScale="10.0" lenWidth="60" lenWidthScale="4.0" sizeWidth="70" sizeWidthScale="5.0" />
+			<!-- Other available attributes...
+			dirShift="None"partIconeShift="None" pbarColour="206333" pbarColourRec="ff001d" pbarColourSeen="ffc71d" pbarColourSeenSel="ffc71d"
+			pbarColourSel="20e333" pbarShift="None" pbarColourRecSel="ff001d" spaceRight="5" trashShift="None"
+			-->
 		<widget name="chosenletter" position="50,80" size="760,535" font="Regular;100" foregroundColor="FindCharacter" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget name="numFolders" position="50,605" size="220,25" font="InfoOtherFont;20" foregroundColor="InfoDiskStats" transparent="1" />
 		<widget name="numFiles" position="50,630" size="220,25" font="InfoOtherFont;20" foregroundColor="InfoDiskStats" transparent="1" />
@@ -153,13 +165,19 @@
 			<convert type="EventName">FullDescription,Separated,Trimmed</convert>
 		</widget>
 		<widget source="Service" render="Label" position="830,605" size="400,25" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" transparent="1">
-			<convert type="EventName">Genre</convert>
+			<convert type="EventName">Genre,Trimmed</convert>
 		</widget>
+		<widget source="Service" render="Pixmap" position="830,630" size="40,20" alphatest="blend">
+			<convert type="EventName">RatingIcon</convert>
+			<convert type="ValueToPixmap">Path</convert>
+		</widget>
+		<!--
 		<widget source="Service" render="Label" position="830,630" size="50,25" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
-			<convert type="EventName">SmallRating</convert>
+			<convert type="EventName">SmallRating,Trimmed</convert>
 		</widget>
+		-->
 		<widget source="Service" render="Label" position="880,630" size="350,25" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" halign="right" transparent="1">
-			<convert type="EventName">Rating</convert>
+			<convert type="EventName">Rating,Trimmed</convert>
 		</widget>
 		<widget name="DescriptionBorder" position="0,0" size="0,0" backgroundColor="ScreenBackground" />
 	</screen>
@@ -193,13 +211,19 @@
 		<widget name="diskSize" position="1010,555" size="220,25" font="InfoOtherFont;20" foregroundColor="InfoDiskStats" halign="right" transparent="1" />
 		<widget name="freeDiskSpace" position="775,580" size="455,25" font="InfoOtherFont;20" foregroundColor="InfoDiskStats" halign="right" transparent="1" />
 		<widget source="Service" render="Label" position="775,605" size="400,25" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" transparent="1">
-			<convert type="EventName">Genre</convert>
+			<convert type="EventName">Genre,Trimmed</convert>
 		</widget>
+		<widget source="Service" render="Pixmap" position="775,630" size="40,20" alphatest="blend">
+			<convert type="EventName">RatingIcon</convert>
+			<convert type="ValueToPixmap">Path</convert>
+		</widget>
+		<!--
 		<widget source="Service" render="Label" position="775,630" size="50,25" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
-			<convert type="EventName">SmallRating</convert>
+			<convert type="EventName">SmallRating,Trimmed</convert>
 		</widget>
+		-->
 		<widget source="Service" render="Label" position="825,630" size="350,25" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" halign="right" transparent="1">
-			<convert type="EventName">Rating</convert>
+			<convert type="EventName">Rating,Trimmed</convert>
 		</widget>
 		<widget name="movie_sort" position="1195,607" size="35,20" pixmaps="icons/ms_az_no.png,icons/ms_no_az.png,icons/ms_shuffle.png,icons/ms_za_on.png,icons/ms_on_za.png,icons/ms_faz.png,icons/ms_fza.png,icons/ms_rec.png,icons/ms_az_on.png,icons/ms_za_no.png,icons/ms_sl.png,icons/ms_ls.png,icons/ms_sb.png,icons/ms_bs.png" alphatest="on" transparent="1" />
 		<widget name="movie_off" position="1195,630" size="35,20" pixmaps="icons/me_ask.png,icons/me_movielist.png,icons/me_quit.png,icons/me_pause.png,icons/me_playlist.png,icons/me_playlistquit.png,icons/me_loop.png,icons/me_rep.png" alphatest="on" transparent="1" />
@@ -208,7 +232,7 @@
 
 	<screen name="MovieSelectionLocations" title="Media Selection Locations" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColourBacks" />
+		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_video.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<panel name="ScreenTemplateChoiceList0" />
 		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />
@@ -216,7 +240,7 @@
 
 	<screen name="MovieSelectionOnEnd" title="Media Selection On End Of Media" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColourBacks" />
+		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_video.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<panel name="ScreenTemplateChoiceList0" />
 		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />
@@ -224,7 +248,7 @@
 
 	<screen name="MovieSelectionRecordings" title="Media Selection Recordings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColourBacks" />
+		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_video.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<panel name="ScreenTemplateChoiceList0" />
 		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />
@@ -232,7 +256,7 @@
 
 	<screen name="MovieSelectionSort" title="Media Selection Sort" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColourBacks" />
+		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_video.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<panel name="ScreenTemplateChoiceList0" />
 		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />
@@ -244,13 +268,12 @@
 
 	<screen name="MovieSelectionTags" title="Media Selection Tags" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColourBacks" />
+		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_video.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<panel name="ScreenTemplateChoiceList0" />
 		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />
 	</screen>
 
-	<!-- MovieSelectionMenu -->
 	<screen name="MovieContextMenu" title="Media Selection Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
@@ -260,7 +283,6 @@
 		<widget name="footnote" position="0,0" size="0,0" alphatest="on" transparent="1" />
 	</screen>
 
-	<!-- MovieSelectionSetup -->
 	<screen name="MovieBrowserConfiguration" title="Media Selection Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
@@ -289,6 +311,18 @@
 		<widget name="green" position="0,0" size="0,0" />
 		<widget name="yellow" position="0,0" size="0,0" />
 		<widget name="blue" position="0,0" size="0,0" />
+	</screen>
+
+<!-- Media Player plug in uses "MediaPlayerDirectoryBrowser" first and then "FileBrowser" if the first is not found. -->
+
+	<screen name="FileManager" title="File Manager" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonMenu" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="list_left_text" position="90,70" size="150,35" backgroundColor="TextBackground" font="Regular;28" foregroundColor="White" transparent="1" zPosition="1" />
+		<widget name="list_right_text" position="655,70" size="150,35" backgroundColor="TextBackground" font="Regular;28" foregroundColor="White" transparent="1" zPosition="1" />
+		<widget name="list_left" position="40,120" size="590,490" backgroundColor="TextBackground" foregroundColor="White" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
+		<widget name="list_right" position="645,120" size="580,490" backgroundColor="TextBackground" foregroundColor="White" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
 	</screen>
 
 <!-- Movie Location Box -->

@@ -77,7 +77,7 @@
 		<color name="ButtonYellow" value="#00a08500" />
 
 		<color name="ScreenBackground" value="#3f000000" />
-		<color name="ScreenSaverBackground" value="#26000000" />
+		<color name="ScreenSaverBackground" value="#19000000" />
 		<color name="ScreenTransparent" value="#ffffffff" />
 		<color name="MediaBackground" value="Black" />
 		<color name="StatusBackground" value="#ff000000" />
@@ -203,6 +203,9 @@
 		<color name="PinstripeKeyError" value="DavysGrey" />
 		<color name="PinstripeMute" value="DavysGrey" />
 		<color name="PinstripeVolume" value="DavysGrey" />
+		<color name="ProgressBackground" value="DeepGrey" />
+		<color name="ProgressBorder" value="Grey" />
+		<color name="ProgressColour" value="White" />
 
 		<color name="Resolution" value="Silver" />
 		<color name="ResolutionBackground" value="ScreenBackground" />
@@ -213,6 +216,7 @@
 
 		<color name="Text" value="White" />
 		<color name="TextBackground" value="ScreenBackground" />
+		<color name="TextDisabled" value="DimGrey" />
 		<color name="TextSelected" value="White" />
 		<color name="TextIndented" value="Grey" />
 		<color name="TextIndentedSelected" value="Silver" />
@@ -285,19 +289,21 @@
 	</colors>
 
 	<fonts>
-		<font name="AndaleMono" filename="andale.ttf" scale="100" />
-		<font name="ArialNarrow" filename="eg.ttf" scale="100" />
-		<font name="DSDigital" filename="ds_digital.ttf" scale="100" />
-		<font name="GoodTimes" filename="goodtime.ttf" scale="100" />
-		<font name="KhammuRabi" filename="md_khmurabi_10.ttf" scale="100" />
-		<font name="MPluss1M" filename="mplus-1m-bold.ttf" scale="100" />
-		<font name="NemesisFlatline" filename="nmsbd.ttf" scale="100" />
-		<font name="RobotoBlack" filename="Roboto-Black.ttf" scale="100" />
-		<font name="RobotoBold" filename="Roboto-Bold.ttf" scale="100" />
-		<font name="ValisEnigma" filename="valis_enigma.ttf" scale="98" />
-		<font name="VeraSansMono" filename="tuxtxt.ttf" scale="100" />
+		<font name="AndaleMono" filename="fonts/andale.ttf" scale="100" />
+		<font name="ArialNarrow" filename="fonts/eg.ttf" scale="100" />
+		<font name="DroidSansBold" filename="fonts/DroidSans-Bold.ttf" scale="100" />
+		<font name="DSDigital" filename="fonts/ds_digital.ttf" scale="100" />
+		<font name="GoodTimes" filename="fonts/goodtime.ttf" scale="100" />
+		<font name="KhammuRabi" filename="fonts/md_khmurabi_10.ttf" scale="100" />
+		<font name="MPluss1M" filename="fonts/mplus-1m-bold.ttf" scale="100" />
+		<font name="NemesisFlatline" filename="fonts/nmsbd.ttf" scale="100" />
+		<font name="OpenSansRegular" filename="fonts/OpenSans-Regular.ttf" scale="100" />
+		<font name="RobotoBlack" filename="fonts/Roboto-Black.ttf" scale="100" />
+		<font name="RobotoBold" filename="fonts/Roboto-Bold.ttf" scale="100" />
+		<font name="ValisEnigma" filename="fonts/valis_enigma.ttf" scale="98" />
+		<font name="VeraSansMono" filename="fonts/tuxtxt.ttf" scale="100" />
 
-		<font name="Replacement" filename="ae_AlMateen.ttf" replacement="1" scale="100" />
+		<font name="Replacement" filename="fonts/ae_AlMateen.ttf" replacement="1" scale="100" />
 
 		<alias name="Body" font="NemesisFlatline" size="20" height="25" width="18" />
 		<alias name="ButtonFont" font="ValisEnigma" size="20" height="25" width="18" />
@@ -348,6 +354,10 @@
 		<parameter name="ConfigListSeperator" value="300" />
 		<parameter name="DreamexplorerName" value="62,0,1200,38" />
 		<parameter name="DreamexplorerIcon" value="15,4,30,30" />
+		<parameter name="EPGMultiColumnScales" value="5.9,6.8,1.0" />
+		<parameter name="EPGMultiColumnSpecs" value="0,153,10,149,18,10" />
+		<parameter name="EPGSingleColumnScales" value="5.7,6.0,1.5" />
+		<parameter name="EPGSingleColumnSpecs" value="0,125,5,135,20" />
 		<parameter name="FileListName" value="68,4,1000,34" />
 		<parameter name="FileListIcon" value="7,4,52,37" />
 		<parameter name="FileListMultiName" value="90,3,1000,32" />
@@ -399,6 +409,28 @@
 		<parameter name="EPGImportFilterListLockOn" value="0,0,30,30" />
 		-->
 	</parameters>
+
+	<setups>
+		<setup key="default" image="menus/mainmenu_tasks_setup_system.png" />
+		<setup key="userinterface" image="menus/mainmenu_tasks_setup_photo.png" />
+		<setup key="channelselection" image="menus/mainmenu_tasks_setup_default.png" />
+		<setup key="epgsettings" image="menus/mainmenu_tv_epg.png" />
+		<setup key="UserInterfacePositioner" image="menus/mainmenu_tasks_setup_tv.png" />
+		<setup key="OSD3DSetupScreen" image="menus/mainmenu_tasks_setup_tv.png" />
+		<setup key="SkinSelector" image="menus/mainmenu_tasks_setup_tv.png" />
+		<setup key="HdmiCECSetupScreen" image="menus/mainmenu_tasks_setup_tv.png" />
+		<setup key="LanguageSelection" image="menus/mainmenu_tasks_setup_softwaremanager.png" />
+		<setup key="NimSelection" image="menus/mainmenu_tasks_setup_tv.png" />
+		<setup key="NimSetup" image="menus/mainmenu_tasks_setup_tv.png" />
+		<setup key="IniTerrestrialLocation" image="menus/mainmenu_tasks_setup_tv.png" />
+		<setup key="ScanSetup" image="menus/mainmenu_tasks_setup_tv.png" />
+		<setup key="ParentalControlSetup" image="menus/mainmenu_tasks_setup_parental.png" />
+		<setup key="ParentalControlEditor" image="menus/mainmenu_tasks_setup_parental.png" />
+		<setup key="ParentalControlChangePin" image="menus/mainmenu_tasks_setup_parental.png" />
+		<setup key="ZapHistoryConfigurator" image="menus/mainmenu_tv_zaphistory.png" />
+		<setup key="PicturePlayerSetup" image="menus/mainmenu_tasks_setup_photo.png" />
+		<setup key="MediaPlayerSettings" image="menus/mainmenu_tasks_setup_movie.png" />
+	</setups>
 
 	<windowstyle id="0" type="skinned">
 		<title font="Named;23" offset="20,8" />
@@ -462,6 +494,7 @@
 <!-- Screen Templates To Provide The Date, Time, Headings And Buttons -->
 
 	<screen name="ScreenTemplate">
+		<widget source="menu_path_compressed" render="Label" position="360,5" size="870,20" borderColor="BannerBorder" borderWidth="1" conditional="menu_path_compressed" font="TitleFont;15" foregroundColor="BannerTitle" halign="right" transparent="1" />
 		<panel position="50,35" size="305,25">
 			<panel name="ClockBannerPanel" />
 		</panel>
@@ -470,42 +503,15 @@
 		<eLabel position="50,660" size="1180,2" backgroundColor="Pinstripe" />
 	</screen>
 
-<!-- Screen Template To Display The InfoBar Time As Either A Digital Or Analogue Clock -->
+<!-- Screen Template To Display The InfoBar Time As A Digital Clock -->
 
-	<screen name="ScreenTemplateClock">
-		<panel name="ScreenTemplateClockDigital" />
-	</screen>
-
-	<screen name="ScreenTemplateClockDigital" title="Digital Current Time" flags="wfNoBorder">
+	<screen name="ScreenTemplateClock" title="Digital Clock" flags="wfNoBorder">
 		<eLabel position="1080,10" size="190,60" backgroundColor="BannerClockBackground" />
 		<widget source="global.CurrentTime" render="Label" position="1080,15" size="180,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="BannerClockDate" halign="right" transparent="1" zPosition="+1">
 			<convert type="ClockToText">ShortFullDate</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="1080,40" size="180,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="BannerClockTime" halign="right" transparent="1" zPosition="+1">
 			<convert type="ClockToText">WithSeconds</convert>
-		</widget>
-	</screen>
-
-	<screen name="ScreenTemplateClockAnalogue" title="Analogue Current Time" flags="wfNoBorder">
-		<!-- Clock background -->
-		<eLabel position="980,10" size="235,35" backgroundColor="BannerClockBackground" />
-		<!-- Clock date -->
-		<widget source="global.CurrentTime" render="Label" position="990,15" size="180,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="BannerClockDate" halign="right" transparent="1" zPosition="+1">
-			<convert type="ClockToText">ShortFullDate</convert>
-		</widget>
-		<!-- Clock face -->
-		<ePixmap pixmap="images/clock_face.png" position="1180,5" size="90,90" alphatest="blend" zPosition="+1" />
-		<!-- Clock seconds hand -->
-		<widget source="global.CurrentTime" render="Analogic" position="1192,17" size="65,65" alphatest="on" borderColor="BannerClockTime" foregroundColor="BannerClockTime" linewidth="1" zPosition="+2">
-			<convert type="Analogiccon">AnalogSeconds</convert>
-		</widget>
-		<!-- Clock minutes hand -->
-		<widget source="global.CurrentTime" render="Analogic" position="1202,26" size="47,47" alphatest="on" borderColor="BannerClockTime" foregroundColor="BannerClockTime" linewidth="2" zPosition="+2">
-			<convert type="Analogiccon">AnalogMinutes</convert>
-		</widget>
-		<!-- Clock hour hand -->
-		<widget source="global.CurrentTime" render="Analogic" position="1210,35" size="30,30" alphatest="on" borderColor="BannerClockTime" foregroundColor="BannerClockTime" linewidth="2" zPosition="+2">
-			<convert type="Analogiccon">AnalogHours</convert>
 		</widget>
 	</screen>
 
@@ -533,41 +539,41 @@
 	</screen>
 
 	<screen name="ScreenTemplateButtonRedLegacy">
-		<ePixmap pixmap="buttons/button_legacy_red.png" position="172,670" size="225,60" alphatest="on" transparent="1" />
+		<ePixmap pixmap="buttons/button_legacy_red.png" position="172,670" size="225,60" alphatest="on" conditional="key_red" transparent="1" />
 		<widget name="key_red" position="172,670" size="225,35" backgroundColor="ButtonRed" font="ButtonFont;20" conditional="key_red" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget source="key_red" render="Label" position="172,670" size="225,35" backgroundColor="ButtonRed" conditional="key_red" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonRedWizard">
-		<ePixmap pixmap="buttons/button_wizard_red.png" position="172,670" size="225,35" alphatest="on" transparent="1" />
+		<ePixmap pixmap="buttons/button_wizard_red.png" position="172,670" size="225,35" alphatest="on" conditional="key_red" transparent="1" />
 		<widget name="key_red" position="172,670" size="225,35" backgroundColor="ButtonRed" borderColor="Black" borderWidth="1" conditional="key_red" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget source="key_red" render="Label" position="172,670" size="225,35" backgroundColor="ButtonRed" borderColor="Black" borderWidth="1" conditional="key_red" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonRedBlock">
-		<ePixmap pixmap="buttons/button_block_background.png" position="172,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_block_red.png" position="176,675" size="217,25" alphatest="on" transparent="1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="172,670" size="225,35" alphatest="on" conditional="key_red" transparent="1" />
+		<ePixmap pixmap="buttons/button_block_red.png" position="176,675" size="217,25" alphatest="on" conditional="key_red" transparent="1" />
 		<widget name="key_red" position="172,670" size="225,35" backgroundColor="ButtonRed" conditional="key_red" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget source="key_red" render="Label" position="172,670" size="225,35" backgroundColor="ButtonRed" conditional="key_red" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonRedButton">
-		<ePixmap pixmap="buttons/button_block_background.png" position="172,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_small_red.png" position="177,678" size="15,16" alphatest="on" transparent="1" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="172,670" size="225,35" alphatest="on" conditional="key_red" transparent="1" />
+		<ePixmap pixmap="buttons/button_small_red.png" position="177,678" size="15,16" alphatest="on" conditional="key_red" transparent="1" zPosition="+1" />
 		<widget name="key_red" position="197,670" size="200,35" backgroundColor="ButtonBack" conditional="key_red" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
 		<widget source="key_red" render="Label" position="197,670" size="200,35" backgroundColor="ButtonBack" conditional="key_red" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonRedBar">
-		<ePixmap pixmap="buttons/button_block_background.png" position="172,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_bar_red.png" position="177,676" size="5,25" alphatest="on" transparent="1" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="172,670" size="225,35" alphatest="on" conditional="key_red" transparent="1" />
+		<ePixmap pixmap="buttons/button_bar_red.png" position="177,676" size="5,25" alphatest="on" conditional="key_red" transparent="1" zPosition="+1" />
 		<widget name="key_red" position="187,670" size="210,35" backgroundColor="ButtonBack" conditional="key_red" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
 		<widget source="key_red" render="Label" position="187,670" size="210,35" backgroundColor="ButtonBack" conditional="key_red" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonRedCircle">
-		<ePixmap pixmap="buttons/button_block_background.png" position="172,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_circle_red.png" position="177,676" size="25,25" alphatest="on" transparent="1" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="172,670" size="225,35" alphatest="on" conditional="key_red" transparent="1" />
+		<ePixmap pixmap="buttons/button_circle_red.png" position="177,676" size="25,25" alphatest="on" conditional="key_red" transparent="1" zPosition="+1" />
 		<widget name="key_red" position="207,670" size="190,35" backgroundColor="ButtonBack" conditional="key_red" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
 		<widget source="key_red" render="Label" position="207,670" size="190,35" backgroundColor="ButtonBack" conditional="key_red" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
 	</screen>
@@ -579,41 +585,41 @@
 	</screen>
 
 	<screen name="ScreenTemplateButtonGreenLegacy">
-		<ePixmap pixmap="buttons/button_legacy_green.png" position="409,670" size="225,60" alphatest="on" transparent="1" />
+		<ePixmap pixmap="buttons/button_legacy_green.png" position="409,670" size="225,60" alphatest="on" conditional="key_green" transparent="1" />
 		<widget name="key_green" position="409,670" size="225,36" backgroundColor="ButtonGreen" conditional="key_green" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget source="key_green" render="Label" position="409,670" size="225,36" backgroundColor="ButtonGreen" conditional="key_green" font="ButtonFont;20" halign="center" foregroundColor="ButtonText" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonGreenWizard">
-		<ePixmap pixmap="buttons/button_wizard_green.png" position="409,670" size="225,35" alphatest="on" transparent="1" />
+		<ePixmap pixmap="buttons/button_wizard_green.png" position="409,670" size="225,35" alphatest="on" conditional="key_green" transparent="1" />
 		<widget name="key_green" position="409,670" size="225,36" backgroundColor="ButtonGreen" borderColor="Black" borderWidth="1" conditional="key_green" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget source="key_green" render="Label" position="409,670" size="225,36" backgroundColor="ButtonGreen" borderColor="Black" borderWidth="1" conditional="key_green" font="ButtonFont;20" halign="center" foregroundColor="ButtonText" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonGreenBlock">
-		<ePixmap pixmap="buttons/button_block_background.png" position="409,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_block_green.png" position="413,675" size="217,25" alphatest="on" transparent="1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="409,670" size="225,35" alphatest="on" conditional="key_green" transparent="1" />
+		<ePixmap pixmap="buttons/button_block_green.png" position="413,675" size="217,25" alphatest="on" conditional="key_green" transparent="1" />
 		<widget name="key_green" position="409,670" size="225,36" backgroundColor="ButtonGreen" conditional="key_green" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget source="key_green" render="Label" position="409,670" size="225,36" backgroundColor="ButtonGreen" conditional="key_green" font="ButtonFont;20" halign="center" foregroundColor="ButtonText" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonGreenButton">
-		<ePixmap pixmap="buttons/button_block_background.png" position="409,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_small_green.png" position="414,678" size="15,16" alphatest="on" transparent="1" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="409,670" size="225,35" alphatest="on" conditional="key_green" transparent="1" />
+		<ePixmap pixmap="buttons/button_small_green.png" position="414,678" size="15,16" alphatest="on" conditional="key_green" transparent="1" zPosition="+1" />
 		<widget name="key_green" position="434,670" size="200,35" backgroundColor="ButtonBack" conditional="key_green" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
 		<widget source="key_green" render="Label" position="434,670" size="200,35" backgroundColor="ButtonBack" conditional="key_green" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonGreenBar">
-		<ePixmap pixmap="buttons/button_block_background.png" position="409,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_bar_green.png" position="414,676" size="5,25" alphatest="on" transparent="1" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="409,670" size="225,35" alphatest="on" conditional="key_green" transparent="1" />
+		<ePixmap pixmap="buttons/button_bar_green.png" position="414,676" size="5,25" alphatest="on" conditional="key_green" transparent="1" zPosition="+1" />
 		<widget name="key_green" position="424,670" size="210,35" backgroundColor="ButtonBack" conditional="key_green" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
 		<widget source="key_green" render="Label" position="424,670" size="210,35" backgroundColor="ButtonBack" conditional="key_green" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonGreenCircle">
-		<ePixmap pixmap="buttons/button_block_background.png" position="409,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_circle_green.png" position="414,676" size="25,25" alphatest="on" transparent="1" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="409,670" size="225,35" alphatest="on" conditional="key_green" transparent="1" />
+		<ePixmap pixmap="buttons/button_circle_green.png" position="414,676" size="25,25" alphatest="on" conditional="key_green" transparent="1" zPosition="+1" />
 		<widget name="key_green" position="444,670" size="190,35" backgroundColor="ButtonBack" conditional="key_green" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
 		<widget source="key_green" render="Label" position="444,670" size="190,35" backgroundColor="ButtonBack" conditional="key_green" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
 	</screen>
@@ -625,41 +631,41 @@
 	</screen>
 
 	<screen name="ScreenTemplateButtonYellowLegacy">
-		<ePixmap pixmap="buttons/button_legacy_yellow.png" position="646,670" size="225,60" alphatest="on" transparent="1" />
+		<ePixmap pixmap="buttons/button_legacy_yellow.png" position="646,670" size="225,60" alphatest="on" conditional="key_yellow" transparent="1" />
 		<widget name="key_yellow" position="646,670" size="225,36" backgroundColor="ButtonYellow" conditional="key_yellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget source="key_yellow" render="Label" position="646,670" size="225,36" backgroundColor="ButtonYellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonYellowWizard">
-		<ePixmap pixmap="buttons/button_wizard_yellow.png" position="646,670" size="225,35" alphatest="on" transparent="1" />
+		<ePixmap pixmap="buttons/button_wizard_yellow.png" position="646,670" size="225,35" alphatest="on" conditional="key_yellow" transparent="1" />
 		<widget name="key_yellow" position="646,670" size="225,36" backgroundColor="ButtonYellow" borderColor="Black" conditional="key_yellow" borderWidth="1" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget source="key_yellow" render="Label" position="646,670" size="225,36" backgroundColor="ButtonYellow" borderColor="Black" borderWidth="1" conditional="key_yellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonYellowBlock">
-		<ePixmap pixmap="buttons/button_block_background.png" position="646,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_block_yellow.png" position="650,675" size="217,25" alphatest="on" transparent="1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="646,670" size="225,35" alphatest="on" conditional="key_yellow" transparent="1" />
+		<ePixmap pixmap="buttons/button_block_yellow.png" position="650,675" size="217,25" alphatest="on" conditional="key_yellow" transparent="1" />
 		<widget name="key_yellow" position="646,670" size="225,36" backgroundColor="ButtonYellow" conditional="key_yellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget source="key_yellow" render="Label" position="646,670" size="225,36" backgroundColor="ButtonYellow" conditional="key_yellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonYellowButton">
-		<ePixmap pixmap="buttons/button_block_background.png" position="646,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_small_yellow.png" position="651,678" size="15,16" alphatest="on" transparent="1" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="646,670" size="225,35" alphatest="on" conditional="key_yellow" transparent="1" />
+		<ePixmap pixmap="buttons/button_small_yellow.png" position="651,678" size="15,16" alphatest="on" conditional="key_yellow" transparent="1" zPosition="+1" />
 		<widget name="key_yellow" position="671,670" size="200,35" backgroundColor="ButtonBack" conditional="key_yellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
 		<widget source="key_yellow" render="Label" position="671,670" size="200,35" backgroundColor="ButtonBack" conditional="key_yellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonYellowBar">
-		<ePixmap pixmap="buttons/button_block_background.png" position="646,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_bar_yellow.png" position="651,676" size="5,25" alphatest="on" transparent="1" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="646,670" size="225,35" alphatest="on" conditional="key_yellow" transparent="1" />
+		<ePixmap pixmap="buttons/button_bar_yellow.png" position="651,676" size="5,25" alphatest="on" conditional="key_yellow" transparent="1" zPosition="+1" />
 		<widget name="key_yellow" position="661,670" size="210,35" backgroundColor="ButtonBack" conditional="key_yellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
 		<widget source="key_yellow" render="Label" position="661,670" size="210,35" backgroundColor="ButtonBack" conditional="key_yellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonYellowCircle">
-		<ePixmap pixmap="buttons/button_block_background.png" position="646,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_circle_yellow.png" position="651,676" size="25,25" alphatest="on" transparent="1" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="646,670" size="225,35" alphatest="on" conditional="key_yellow" transparent="1" />
+		<ePixmap pixmap="buttons/button_circle_yellow.png" position="651,676" size="25,25" alphatest="on" conditional="key_yellow" transparent="1" zPosition="+1" />
 		<widget name="key_yellow" position="681,670" size="190,35" backgroundColor="ButtonBack" conditional="key_yellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
 		<widget source="key_yellow" render="Label" position="681,670" size="190,35" backgroundColor="ButtonBack" conditional="key_yellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
 	</screen>
@@ -671,41 +677,41 @@
 	</screen>
 
 	<screen name="ScreenTemplateButtonBlueLegacy">
-		<ePixmap pixmap="buttons/button_legacy_blue.png" position="883,670" size="225,60" alphatest="on" transparent="1" />
+		<ePixmap pixmap="buttons/button_legacy_blue.png" position="883,670" size="225,60" alphatest="on" conditional="key_blue" transparent="1" />
 		<widget name="key_blue" position="883,670" size="225,36" backgroundColor="ButtonBlue" conditional="key_blue" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget source="key_blue" render="Label" position="883,670" size="225,36" backgroundColor="ButtonBlue" conditional="key_blue" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonBlueWizard">
-		<ePixmap pixmap="buttons/button_wizard_blue.png" position="883,670" size="225,35" alphatest="on" transparent="1" />
+		<ePixmap pixmap="buttons/button_wizard_blue.png" position="883,670" size="225,35" alphatest="on" conditional="key_blue" transparent="1" />
 		<widget name="key_blue" position="883,670" size="225,36" backgroundColor="ButtonBlue" borderColor="Black" borderWidth="1" conditional="key_blue" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget source="key_blue" render="Label" position="883,670" size="225,36" backgroundColor="ButtonBlue" borderColor="Black" borderWidth="1" conditional="key_blue" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonBlueBlock">
-		<ePixmap pixmap="buttons/button_block_background.png" position="883,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_block_blue.png" position="887,675" size="217,25" alphatest="on" transparent="1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="883,670" size="225,35" alphatest="on" conditional="key_blue" transparent="1" />
+		<ePixmap pixmap="buttons/button_block_blue.png" position="887,675" size="217,25" alphatest="on" conditional="key_blue" transparent="1" />
 		<widget name="key_blue" position="883,670" size="225,36" backgroundColor="ButtonBlue" conditional="key_blue" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget source="key_blue" render="Label" position="883,670" size="225,36" backgroundColor="ButtonBlue" conditional="key_blue" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonBlueButton">
-		<ePixmap pixmap="buttons/button_block_background.png" position="883,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_small_blue.png" position="888,678" size="15,16" alphatest="on" transparent="1" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="883,670" size="225,35" alphatest="on" conditional="key_blue" transparent="1" />
+		<ePixmap pixmap="buttons/button_small_blue.png" position="888,678" size="15,16" alphatest="on" conditional="key_blue" transparent="1" zPosition="+1" />
 		<widget name="key_blue" position="908,670" size="200,35" backgroundColor="ButtonBack" conditional="key_blue" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
 		<widget source="key_blue" render="Label" position="908,670" size="200,35" backgroundColor="ButtonBack" conditional="key_blue" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonBlueBar">
-		<ePixmap pixmap="buttons/button_block_background.png" position="883,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_bar_blue.png" position="888,676" size="5,25" alphatest="on" transparent="1" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="883,670" size="225,35" alphatest="on" conditional="key_blue" transparent="1" />
+		<ePixmap pixmap="buttons/button_bar_blue.png" position="888,676" size="5,25" alphatest="on" conditional="key_blue" transparent="1" zPosition="+1" />
 		<widget name="key_blue" position="898,670" size="210,35" backgroundColor="ButtonBack" conditional="key_blue" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
 		<widget source="key_blue" render="Label" position="898,670" size="210,35" backgroundColor="ButtonBack" conditional="key_blue" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonBlueCircle">
-		<ePixmap pixmap="buttons/button_block_background.png" position="883,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_circle_blue.png" position="888,676" size="25,25" alphatest="on" transparent="1" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="883,670" size="225,35" alphatest="on" conditional="key_blue" transparent="1" />
+		<ePixmap pixmap="buttons/button_circle_blue.png" position="888,676" size="25,25" alphatest="on" conditional="key_blue" transparent="1" zPosition="+1" />
 		<widget name="key_blue" position="918,670" size="190,35" backgroundColor="ButtonBack" conditional="key_blue" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
 		<widget source="key_blue" render="Label" position="918,670" size="190,35" backgroundColor="ButtonBack" conditional="key_blue" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" transparent="1" valign="center" zPosition="+1" />
 	</screen>
@@ -717,68 +723,6 @@
 		<panel name="ScreenTemplateButtonGreen" />
 		<panel name="ScreenTemplateButtonYellow" />
 		<panel name="ScreenTemplateButtonBlue" />
-	</screen>
-
-	<screen name="ScreenTemplateButtonColourBacks">
-		<panel name="ScreenTemplateButtonColourBacksBlock" />
-	</screen>
-
-	<screen name="ScreenTemplateButtonColourBacksLegacy">
-		<ePixmap pixmap="buttons/button_legacy_red.png" position="172,670" size="225,60" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_legacy_green.png" position="409,670" size="225,60" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_legacy_yellow.png" position="646,670" size="225,60" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_legacy_blue.png" position="883,670" size="225,60" alphatest="on" transparent="1" />
-	</screen>
-
-	<screen name="ScreenTemplateButtonColourBacksWizard">
-		<ePixmap pixmap="buttons/button_wizard_red.png" position="172,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_wizard_green.png" position="409,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_wizard_yellow.png" position="646,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_wizard_blue.png" position="883,670" size="225,35" alphatest="on" transparent="1" />
-	</screen>
-
-	<screen name="ScreenTemplateButtonColourBacksBlock">
-		<ePixmap pixmap="buttons/button_block_background.png" position="172,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_block_red.png" position="176,675" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_block_background.png" position="409,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_block_green.png" position="413,675" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_block_background.png" position="646,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_block_yellow.png" position="650,675" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_block_background.png" position="883,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_block_blue.png" position="887,675" size="225,35" alphatest="on" transparent="1" />
-	</screen>
-
-	<screen name="ScreenTemplateButtonColourBacksButton">
-		<ePixmap pixmap="buttons/button_block_background.png" position="172,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_small_red.png" position="177,678" size="15,16" alphatest="on" transparent="1" zPosition="+1" />
-		<ePixmap pixmap="buttons/button_block_background.png" position="409,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_small_green.png" position="414,678" size="15,16" alphatest="on" transparent="1" zPosition="+1" />
-		<ePixmap pixmap="buttons/button_block_background.png" position="646,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_small_yellow.png" position="651,678" size="15,16" alphatest="on" transparent="1" zPosition="+1" />
-		<ePixmap pixmap="buttons/button_block_background.png" position="883,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_small_blue.png" position="888,678" size="15,16" alphatest="on" transparent="1" zPosition="+1" />
-	</screen>
-
-	<screen name="ScreenTemplateButtonColourBacksBar">
-		<ePixmap pixmap="buttons/button_block_background.png" position="172,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_bar_red.png" position="177,676" size="5,25" alphatest="on" transparent="1" zPosition="+1" />
-		<ePixmap pixmap="buttons/button_block_background.png" position="409,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_bar_green.png" position="414,676" size="5,25" alphatest="on" transparent="1" zPosition="+1" />
-		<ePixmap pixmap="buttons/button_block_background.png" position="646,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_bar_yellow.png" position="651,676" size="5,25" alphatest="on" transparent="1" zPosition="+1" />
-		<ePixmap pixmap="buttons/button_block_background.png" position="883,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_bar_blue.png" position="888,676" size="5,25" alphatest="on" transparent="1" zPosition="+1" />
-	</screen>
-
-	<screen name="ScreenTemplateButtonColourBacksCircle">
-		<ePixmap pixmap="buttons/button_block_background.png" position="172,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_circle_red.png" position="177,676" size="25,25" alphatest="on" transparent="1" zPosition="+1" />
-		<ePixmap pixmap="buttons/button_block_background.png" position="409,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_circle_green.png" position="414,676" size="25,25" alphatest="on" transparent="1" zPosition="+1" />
-		<ePixmap pixmap="buttons/button_block_background.png" position="646,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_circle_yellow.png" position="651,676" size="25,25" alphatest="on" transparent="1" zPosition="+1" />
-		<ePixmap pixmap="buttons/button_block_background.png" position="883,670" size="225,35" alphatest="on" transparent="1" />
-		<ePixmap pixmap="buttons/button_circle_blue.png" position="888,676" size="25,25" alphatest="on" transparent="1" zPosition="+1" />
 	</screen>
 
 <!-- TEXT Button -->
@@ -828,14 +772,16 @@
 <!-- MENU - Generic And Enhanced Main Menus -->
 
 	<screen name="Menu" title="Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="MenuGeneric" />
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" conditional="menuimage" transparent="1" zPosition="+1" /> -->
+		<panel name="MenuEnigma2" base="Menu" />
+		<widget name="charlist" position="0,0" size="0,0" conditional="charlist" transparent="1" />
+		<widget name="charframe" position="0,0" size="0,0" conditional="charframe" transparent="1" />
 	</screen>
 
-	<screen name="MenuGeneric" title="Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColourBacks" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" zPosition="+1" /> -->
+	<screen name="MenuBeyonwiz" title="Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -852,10 +798,6 @@
 	</screen>
 
 	<screen name="MenuEnhanced" title="Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColourBacks" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" zPosition="+1" /> -->
 		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -873,9 +815,7 @@
 	</screen>
 
 	<screen name="MenuEnigma2" title="Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColourBacks" />
-		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -924,7 +864,11 @@
 
 	<screen name="HelpMenu" title="Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColourBacks" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="HelpMenuEnigma2" base="HelpMenu" />
+	</screen>
+
+	<screen name="HelpMenuBeyonwiz" title="Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplateButtonHelp" />
 		<panel position="150,110" size="154,500">
 			<panel name="ScreenTemplateRemote" />
@@ -954,6 +898,16 @@
 		</widget>
 		<widget name="longshift_key0" position="400,620" size="830,30" backgroundColor="TextBackground" font="HelpFont;25" foregroundColor="HelpPress" halign="right" transparent="1" />
 		<widget name="longshift_key1" position="400,620" size="830,30" backgroundColor="TextBackground" font="HelpFont;25" foregroundColor="HelpPress" halign="right" transparent="1" />
+	</screen>
+
+	<screen name="HelpMenuEnigma2" title="Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<widget name="rc" pixmaps="images/rc.png,images/rcold.png" position="150,110" size="154,500" alphatest="blend" transparent="0" />
+		<widget name="arrowdown" pixmap="images/arrowdown.png" position="-100,-100" size="37,70" alphatest="blend" />
+		<widget name="arrowdown2" pixmap="images/arrowdown.png" position="-100,-100" size="37,70" alphatest="blend" />
+		<widget name="arrowup" pixmap="images/arrowup.png" position="-100,-100" size="37,70" alphatest="blend" />
+		<widget name="arrowup2" pixmap="images/arrowup.png" position="-100,-100" size="37,70" alphatest="blend" />
+		<widget name="list" position="400,80" size="830,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="HelpFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="long_key" position="400,620" size="830,30" backgroundColor="TextBackground" font="HelpFont;25" foregroundColor="HelpPress" halign="right" transparent="1" />
 	</screen>
 
 	<screen name="MPHelp" title="XML Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
@@ -1068,10 +1022,8 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateButtonTextVKey" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_system.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<!-- This code is for the pending update to "Setup.py" in the 16.1 builds and replaces the ePixmap above.
+		<panel name="ScreenTemplateButtonHelp" />
 		<widget name="menuimage" position="50,100" size="300,500" alphatest="on" conditional="menuimage" transparent="1" />
-		-->
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateFootnote4" />
 		<panel name="ScreenTemplateDescription4" />
@@ -1352,6 +1304,10 @@
 				}
 			</convert>
 		</widget>
+	</screen>
+
+	<screen name="ScreenTemplateMenuMenuList4">
+		<widget name="menulist" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateMountConfig4">
@@ -1708,7 +1664,7 @@
 		<widget source="global.OnlineStableUpdateState" render="Pixmap" pixmap="icons/info_update_stable.png" position="39,0" size="20,20" alphatest="blend" zPosition="+1">
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
-		<widget source="global.OnlineUnstableUpdateState" render="Pixmap" pixmap="icons/info_update_stable.png" position="39,0" size="20,20" alphatest="blend" zPosition="+2"><!--icons/info_update_unstable.png-->
+		<widget source="global.OnlineUnstableUpdateState" render="Pixmap" pixmap="icons/info_update_unstable.png" position="39,0" size="20,20" alphatest="blend" zPosition="+2">
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 		<!-- Display the sub services available icon -->
@@ -1836,8 +1792,16 @@
 
 <!-- Screen Saver -->
 
-	<screen name="Screensaver" position="0,0" size="1280,720" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
+	<screen name="Screensaver" title="Help" position="0,0" size="1280,720" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
+		<panel name="ScreensaverEnigma2" base="Screensaver" />
+	</screen>
+
+	<screen name="ScreensaverBeyonwiz" position="0,0" size="1280,720" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
 		<widget name="picture" pixmap="images/beyonwiz.png" position="0,0" size="220,80" alphatest="on" transparent="0" />
+	</screen>
+
+	<screen name="ScreensaverEnigma2" position="0,0" size="1280,720" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
+		<widget name="picture" pixmap="images/openvix.png" position="0,0" size="220,84" alphatest="on" transparent="0" />
 	</screen>
 
 <!-- Virtual Keyboard -->
@@ -1865,19 +1829,19 @@ self.autoResize()
 		</applet>
 	</screen>
 
-	<screen name="MessageBox" title="Message Selection..." position="center,center" size="60%,10" backgroundColor="ScreenBackground" zPosition="+90">
+	<screen name="MessageBox" title="Message Selection..." position="center,center" size="800,10" backgroundColor="ScreenBackground" zPosition="+90">
 		<panel name="MessageBoxTemplate" />
 	</screen>
 
-	<screen name="MessageBoxSimple" title="Message..." position="center,center" size="60%,10" backgroundColor="ScreenBackground" zPosition="+90">
+	<screen name="MessageBoxSimple" title="Message..." position="center,center" size="800,10" backgroundColor="ScreenBackground" zPosition="+90">
 		<panel name="MessageBoxTemplate" />
 	</screen>
 
 <!-- Choice Box Pop Up -->
 
-	<screen name="ChoiceBox" position="center,center" size="700,130" backgroundColor="ScreenBackground" zPosition="+90">
-		<widget name="text" position="0,0" size="700,0" backgroundColor="TextBackground" conditional="text" font="Regular;22" foregroundColor="BannerTitle" transparent="1" />
-		<widget name="list" position="100,100" size="700,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+	<screen name="ChoiceBox" position="center,center" size="800,130" backgroundColor="ScreenBackground" zPosition="+90">
+		<widget name="text" position="0,0" size="800,0" backgroundColor="TextBackground" conditional="text" font="Regular;22" foregroundColor="BannerTitle" transparent="1" />
+		<widget name="list" position="100,100" size="800,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 		<applet type="onLayoutFinish">
 self.autoResize()
 		</applet>
@@ -1894,15 +1858,15 @@ self.autoResize()
 
 <!-- Text Box Pop Up -->
 
-	<screen name="TextBox" title="Message..." position="0,0" size="550,400" backgroundColor="ScreenBackground">
-		<widget name="text" position="0,0" size="540,390" backgroundColor="TextBackground" font="Regular;18" foregroundColor="Text" transparent="1" />
+	<screen name="TextBox" title="Message..." position="0,0" size="600,400" backgroundColor="ScreenBackground">
+		<widget name="text" position="0,0" size="600,390" backgroundColor="TextBackground" font="Regular;18" foregroundColor="Text" transparent="1" />
 	</screen>
 
 <!-- Command Prompt Output -->
 
 	<screen name="Console" title="Command execution..." position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget name="text" position="50,80" size="1180,570" backgroundColor="TextBackground" font="Console;20" foregroundColor="Text" transparent="1" />
+		<widget name="text" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
 
 <!-- Include files that define the rest of the UI -->

@@ -1,11 +1,21 @@
-#====================================================
+# ====================================================
 # OverlayHD Skin Manager
-# Version Date - 12-Jun-2016
-# Version Number - 1.55
-# Coding by IanSav
-#====================================================
+# Version Date - 14-Feb-2017
+# Version Number - 1.60
+# Repository - https://bitbucket.org/IanSav/overlayhd
+# Coding by IanSav (c) 2015-2017
+# ====================================================
 # Remember to change the version number below!!!
-#====================================================
+# ====================================================
+# This plugin was originally developed for the
+# Beyonwiz Australia distribution of Enigma2.  It
+# may be distributed and executed on Beyonwiz and
+# OpenViX firmware.
+#
+# This plugin is NOT free software. It is open source,
+# you are allowed to modify it (if you keep the license
+# and original author details), but it may not be
+# commercially distributed.
 
 from Components.ActionMap import HelpableActionMap
 from Components.Label import Label
@@ -20,12 +30,21 @@ from Screens.Setup import Setup
 from Screens.Standby import TryQuitMainloop
 from Screens.VirtualKeyBoard import VirtualKeyBoard
 from Tools.Directories import resolveFilename, SCOPE_CONFIG, SCOPE_CURRENT_SKIN, SCOPE_CURRENT_PLUGIN
+
+from boxbranding import getImageDistro
 from enigma import eEnv, gRGB
 from os import listdir, remove, symlink, unlink
 from os.path import exists, isdir, isfile, islink
-from skin import dom_screens, colorNames, reloadWindowstyles, fonts
-import errno, shutil
+from skin import dom_screens, colorNames, fonts  # , reloadWindowstyles
+
+import errno
+import shutil
 import xml.etree.cElementTree
+
+distro_configs = {
+	"beyonwiz": ("Beyonwiz", "Beyonwiz"),
+	"openvix": ("OpenViX", "Enigma2")
+}
 
 # Items with a colour and transparency require two lines in the setup XML file.
 # (One for ItemColour and one for ItemTransparency.)
@@ -38,29 +57,22 @@ colour_elements = [
 	("BannerClockTime", "White", None),
 	("BannerTitle", "White", None),
 	("EPGBackground", "Black", None),
-	("EPGChannel", "White", None),					# To be deleted!
-	("EPGChannelSelected", "White", None),				# To be deleted!
-	("EPGDetails", "White", None),					# To be deleted!
-	("EPGDuration", "White", None),					# To be deleted!
 	("EPGGridBackground", "Orange", None),
 	("EPGGridBorder", "Black", None),
-	("EPGLCN", "White", None),					# To be deleted!
 	("EPGOverlayBorder", "Black", None),
 	("EPGOverlayColour", "WarmYellow", None),
-	("EPGProgram", "White", None),					# To be deleted!
-	("EPGProgramSelected", "White", None),				# To be deleted!
 	("EPGProgressBackground", "DeepGrey", None),
 	("EPGProgressBorder", "WarmYellow", None),
 	("EPGProgressColour", "WarmYellow", None),
-	("EPGProvider", "White", None),					# To be deleted!
-	("EPGRating", "White", None),					# To be deleted!
 	("EPGTimeLine", "Yellow", None),
-	("EPGTimes", "White", None),					# To be deleted!
-	("EPGTimesSelected", "White", None),				# To be deleted!
 	("EPGTransparency", None, "Background"),
 	("EPGEntryBackgroundColor", "MidBlack", None),
+	("EPGEntryBackgroundColorNow", "Jet", None),
+	("EPGEntryBackgroundColorNowSelected", "Silver", None),
 	("EPGEntryBackgroundColorSelected", "Grey", None),
 	("EPGEntryForegroundColor", "White", None),
+	("EPGEntryForegroundColorNow", "White", None),
+	("EPGEntryForegroundColorNowSelected", "Black", None),
 	("EPGEntryForegroundColorSelected", "Black", None),
 	("EPGRecordBackgroundColor", "DullRed", None),
 	("EPGRecordBackgroundColorSelected", "Red", None),
@@ -99,7 +111,6 @@ colour_elements = [
 	("InfoDiskStats", "DullYellow", None),
 	("InfoDurationNext", "LightBlue", None),
 	("InfoDurationNow", "LightBlue", None),
-	("InfoFileSize", "LightBlue", None),				# To be deleted!
 	("InfoGenreNext", "Grey", None),
 	("InfoGenreNow", "Grey", None),
 	("InfoLCN", "LightBlue", None),
@@ -134,14 +145,19 @@ colour_elements = [
 	("PinstripeKeyError", "DavysGrey", None),
 	("PinstripeMute", "DavysGrey", None),
 	("PinstripeVolume", "DavysGrey", None),
+	("ProgressBackground", "DeepGrey", None),
+	("ProgressBorder", "Grey", None),
+	("ProgressColour", "White", None),
 	("Resolution", "Silver", None),
 	("ResolutionBackground", "Background", "Background"),
 	("ScreenBackground", "Black", "0x3f000000"),
+	("ScreenSaver", "Black", "0x19000000"),
 	("Scrollbar", "Gainsboro", None),
 	("SMSHelperBackground", "Background", "Background"),
 	("SMSHelperText", "White", None),
 	("Text", "White", None),
 	("TextBackground", "Background", "Background"),
+	("TextDisabled", "DimGrey", None),
 	("TextIndented", "Grey", None),
 	("TextIndentedSelected", "Silver", None),
 	("TextLabel", "Grey", None),
@@ -168,6 +184,8 @@ colour_elements = [
 
 derived_background_elements = [
 	"EPGEntryBackgroundColor",
+	"EPGEntryBackgroundColorNow",
+	"EPGEntryBackgroundColorNowSelected",
 	"EPGEntryBackgroundColorSelected",
 	"EPGRecordBackgroundColor",
 	"EPGRecordBackgroundColorSelected",
@@ -179,6 +197,8 @@ derived_background_elements = [
 
 derived_foreground_elements = [
 	"EPGEntryForegroundColor",
+	"EPGEntryForegroundColorNow",
+	"EPGEntryForegroundColorNowSelected",
 	"EPGEntryForegroundColorSelected",
 	"EPGRecordForegroundColor",
 	"EPGRecordForegroundColorSelected",
@@ -279,10 +299,13 @@ transparency_choices = [
 
 banner_font_choices = [
 	("ArialNarrow", _("Arial Narrow")),
+	("DroidSansBold", _("DroidSans Bold")),
 	("GoodTimes", _("Good Times")),
 	("KhammuRabi", _("Khammu Rabi")),
 	("NemesisFlatline", _("Nemesis Flatline")),
+	("OpenSansRegular", _("OpenSans Regular")),
 	("RobotoBlack", _("Roboto Black")),
+	("RobotoBold", _("Roboto Bold")),
 	("ValisEnigma", _("Valis Enigma"))
 ]
 
@@ -290,6 +313,7 @@ text_font_choices = [
 	("ArialNarrow", _("Arial Narrow")),
 	("KhammuRabi", _("Khammu Rabi")),
 	("NemesisFlatline", _("Nemesis Flatline")),
+	("OpenSansRegular", _("OpenSans Regular")),
 	("ValisEnigma", _("Valis Enigma"))
 ]
 
@@ -326,22 +350,22 @@ background_image_choices = [
 	("", _("Default"))
 ]
 
+button_base = "ScreenTemplateButton"
+
+button_colours = [
+	"Red",
+	"Green",
+	"Yellow",
+	"Blue",
+]
+
 button_choices = [
 	("Bar", _("Bar")),
 	("Block", _("Block")),
 	("Button", _("Button")),
+	("Circle", _("Circle")),
 	("Legacy", _("Legacy")),
 	("Wizard", _("Wizard"))
-]
-
-clock_choices = [
-	("Analogue", _("Analogue")),
-	("Digital", _("Digital"))
-]
-
-epg_choices = [
-	("left", _("Left aligned")),
-	("center", _("Centred"))
 ]
 
 spinner_choices = [
@@ -350,11 +374,10 @@ spinner_choices = [
 
 option_elements = [
 	("AlwaysActive", False, ConfigYesNo, None),
+	("AlwaysShowButtons", True, ConfigYesNo, None),
 	("BackgroundImage", "", ConfigSelection, background_image_choices),
 	("ButtonStyle", "Block", ConfigSelection, button_choices),
-	("ClockStyle", "24Hour", ConfigSelection, clock_choices),
 	("EnhancedMenu", False, ConfigEnableDisable, None),
-	("EPGAlignment", "left", ConfigSelection, epg_choices),
 	("EPGSettings", False, ConfigYesNo, None),
 	("EPGShowTicks", True, ConfigYesNo, None),
 	("FAVSettings", False, ConfigYesNo, None),
@@ -371,20 +394,9 @@ option_elements = [
 	("UseGroups", True, ConfigYesNo, None)
 ]
 
-button_screens = [
-	"ScreenTemplateButtonRed",
-	"ScreenTemplateButtonGreen",
-	"ScreenTemplateButtonYellow",
-	"ScreenTemplateButtonBlue",
-	"ScreenTemplateButtonColourBacks"
-]
-
-clock_screens = [
-	"ScreenTemplateClock"
-]
-
 display_groups = [
 	"EPGSettings",
+	"FAVSettings",
 	"FontSettings",
 	"GeneralSettings",
 	"InfoSettings",
@@ -393,31 +405,23 @@ display_groups = [
 	"TextSettings"
 ]
 
-repaint_notifications = [
+repaint_list = [
 	"BannerBorder",
 	"BannerClock",
 	"BannerClockBackgroundColour",
 	"BannerClockBackgroundTransparency",
 	"BannerTitle",
 	"ButtonStyle",
-	"ClockStyle",
-	"EPGSettings",
-	"FontSettings",
 	"FootnoteBackgroundColour",
 	"FootnoteBackgroundTransparency",
 	"FootnoteText",
-	"GeneralSettings",
-	"HelpPress",
-	"InfoSettings",
 	"MenuBackgroundColour",
 	"MenuBackgroundTransparency",
 	"MenuDisabled",
 	"MenuSelectedColour",
 	"MenuSelectedTransparency",
-	"MenuSettings",
 	"MenuText",
 	"MenuTextSelected",
-	"PanelSettings",
 	"Pinstripe",
 	"ScreenBackgroundColour",
 	"ScreenBackgroundTransparency",
@@ -425,13 +429,11 @@ repaint_notifications = [
 	"Text",
 	"TextBackgroundColour",
 	"TextBackgroundTransparency",
-	"TextSettings",
-	"UseGroups",
 	"VolumeBackground",
 	"VolumeColour"
 ]
 
-restart_safe = [
+dont_restart = [
 	"BackgroundImage",
 	"EPGSettings",
 	"GeneralSettings",
@@ -496,8 +498,8 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateButtonTextVKey" />
 		<panel name="ScreenTemplateButtonHelp" />
-		<ePixmap pixmap="menus/setup_default.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<widget name="menuimage" position="50,100" size="300,500" alphatest="on" transparent="1" zPosition="+1" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_system.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="menuimage" position="50,100" size="300,500" alphatest="on" conditional="menuimage" transparent="1" zPosition="+1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateFootnote4" />
 		<panel name="ScreenTemplateDescription4" />
@@ -505,7 +507,7 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 
 	def __init__(self, session):
 		Setup.__init__(self, session=session, setup="OverlayHDSkinManager", plugin="Extensions/OverlayHD")
- 		self.skin = OverlayHDSkinManager.skin
+		self.skin = OverlayHDSkinManager.skin
 		self.skinName = ["OverlayHDSkinManager", "Setup"]
 		HelpableScreen.__init__(self)
 		self.setup_title = _("OverlayHD Skin Manager")
@@ -515,57 +517,82 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 		self["key_yellow"] = Label(_("Themes"))
 		self["key_blue"] = Label(_("Default"))
 
-		self["actions"] = HelpableActionMap(self, ["OkCancelActions", "ColorActions"], {
-			"ok": (self.save, _("Save and apply changes")),
-			"OK": (self.save, _("Save and apply changes")),
-			"cancel": (self.cancel, _("Cancel and discard changes")),
-			"red" : (self.cancel, _("Cancel and discard changes")),
-			"green": (self.save, _("Save and apply changes")),
-			"yellow": (self.theme, _("Manage themes")),
-			"blue": (self.default, _("Apply the default skin settings"))
-		}, description=_("Basic Functions"))
+		(distro, code) = distro_configs.get(getImageDistro(), ("Unknown", "Enigma2"))
+		if code == "Beyonwiz":
+			self["OverlayHDActions"] = HelpableActionMap(self, "ColorActions", {
+				"yellow": (self.theme, _("Manage themes")),
+				"blue": (self.default, _("Apply the default skin settings"))
+			}, prio=0, description=_("OverlayHD Functions"))
+		else:
+			self["OverlayHDActions"] = HelpableActionMap(self, "ColorActions", {
+				"yellow": (self.theme, _("Manage themes")),
+				"blue": (self.default, _("Apply the default skin settings"))
+			}, prio=0)
 
-		self.process = False
 		background_image_choices = [("", _("Default"))]
 		for fname in sorted(listdir(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/backgrounds"))):
 			background_image_choices.append((fname, _(fname[0:-4])))
-		config.plugins.skin.OverlayHD.BackgroundImage.setChoices(default=config.plugins.skin.OverlayHD.BackgroundImage.default, choices=background_image_choices)
+		config.plugins.skin.OverlayHD.BackgroundImage.setChoices(default=config.plugins.skin.OverlayHD.BackgroundImage.value, choices=background_image_choices)
 		spinner_choices = [("", _("Default"))]
 		for fname in sorted(listdir(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/spinners"))):
 			spinner_choices.append((fname, _(fname)))
-		config.plugins.skin.OverlayHD.Spinner.setChoices(default=config.plugins.skin.OverlayHD.Spinner.default, choices=spinner_choices)
-		for x in repaint_notifications:
-			getattr(config.plugins.skin.OverlayHD, x).addNotifier(self.changeSettings)
-		self.process = True
+		config.plugins.skin.OverlayHD.Spinner.setChoices(default=config.plugins.skin.OverlayHD.Spinner.value, choices=spinner_choices)
 
-	def removeNotifications(self):
-		self.process = False
-		for x in repaint_notifications:
+		self.redraw = False
+		config.plugins.skin.OverlayHD.UseGroups.addNotifier(self.changeGrouping)
+		for x in repaint_list:
+			getattr(config.plugins.skin.OverlayHD, x).addNotifier(self.changeSettings)
+		self.redraw = True
+
+# 	def selectionChanged(self):
+# 		entry = self["config"].getCurrent()[1]
+# 		for x in config.plugins.skin.OverlayHD.dict():
+# 			if entry is getattr(config.plugins.skin.OverlayHD, x):
+# 				print "[OverlayHD] DEBUG: 'config.plugins.skin.OverlayHD.%s'" % x
+# 				break
+
+	def removeNotify(self):
+		self.redraw = False
+		config.plugins.skin.OverlayHD.UseGroups.removeNotifier(self.changeGrouping)
+		for x in repaint_list:
 			getattr(config.plugins.skin.OverlayHD, x).removeNotifier(self.changeSettings)
+		self.redraw = True
+
+	def changeGrouping(self, configElement):
+		if self.redraw:
+			if config.plugins.skin.OverlayHD.UseGroups.value:
+				for x in display_groups:
+					getattr(config.plugins.skin.OverlayHD, x).value = False
+			else:
+				for x in display_groups:
+					getattr(config.plugins.skin.OverlayHD, x).value = True
 
 	def changeSettings(self, configElement):
-		if self.process:
-			if configElement == config.plugins.skin.OverlayHD.UseGroups:
-				self.updateGroups()
-			else:
-				self.applySettings()
+		if self.redraw:
+			self.applySettings()
 
-	def cancel(self):
-		self.removeNotifications()
+	def keyOK(self):
+		if isinstance(self["config"].getCurrent()[1], (ConfigYesNo, ConfigEnableDisable)):
+			Setup.keyRight(self)
+		else:
+			Setup.keyOK(self)
+
+	def keyCancel(self):
+		self.removeNotify()
 		for x in config.plugins.skin.OverlayHD.dict():
 			getattr(config.plugins.skin.OverlayHD, x).cancel()
 		self.applySettings()
 		self.close()
 
-	def save(self):
-		self.removeNotifications()
-		if self.changedSettings():
-			for x in config.plugins.skin.OverlayHD.dict():
-				getattr(config.plugins.skin.OverlayHD, x).save()
-			config.plugins.skin.OverlayHD.save()
-			self.applySettings()
-			popup = self.session.openWithCallback(self.restartGUI, MessageBox, _("The GUI needs to be restarted to apply the changes.\n\n"
-				"Do you want to restart the GUI now?"), MessageBox.TYPE_YESNO)
+	def keySave(self):
+		self.removeNotify()
+		changed = self.changedSettings()
+		for x in config.plugins.skin.OverlayHD.dict():
+			getattr(config.plugins.skin.OverlayHD, x).save()
+		config.plugins.skin.OverlayHD.save()
+		self.applySettings()
+		if changed:
+			popup = self.session.openWithCallback(self.restartGUI, MessageBox, _("The GUI needs to be restarted to apply the changes.\n\nDo you want to restart the GUI now?"), MessageBox.TYPE_YESNO)
 			popup.setTitle(self.setup_title)
 		else:
 			self.close()
@@ -575,64 +602,59 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 			self.session.open(TryQuitMainloop, retvalue=3)
 		self.close()
 
+	def changedSettings(self):
+		for x in config.plugins.skin.OverlayHD.dict():
+			if x in dont_restart:
+				continue
+			if getattr(config.plugins.skin.OverlayHD, x).isChanged():
+				# print "[OverlayHD] DEBUG: Entries changed."
+				return True
+		# print "[OverlayHD] DEBUG: Entries NOT changed."
+		return False
+
 	def theme(self):
-		self.process = False
+		self.redraw = False
 		self.session.openWithCallback(self.themeClosed, OverlayHDThemeManager)
 
 	def themeClosed(self):
+		self.redraw = True
 		self.applySettings()
-		self.process = True
 
 	def default(self):
+		self.redraw = False
+		print "[OverlayHD] Setting OverlayHD skin to default settings."
+		for (label, colour, transparency) in colour_elements:
+			if colour is None or transparency is None:
+				item = getattr(config.plugins.skin.OverlayHD, label)
+				item.value = item.default
+				# print "[OverlayHD] DEBUG (default): '%s' = '%s'" % (label, item.default)
+			else:
+				item = getattr(config.plugins.skin.OverlayHD, "%sColour" % label)
+				item.value = item.default
+				# print "[OverlayHD] DEBUG (default): '%sColour' = '%s'" % (label, item.default)
+				item = getattr(config.plugins.skin.OverlayHD, "%sTransparency" % label)
+				item.value = item.default
+				# print "[OverlayHD] DEBUG (default): '%sTransparency' = '%s'" % (label, item.default)
+		for (label, font, font_table) in font_elements:
+			item = getattr(config.plugins.skin.OverlayHD, label)
+			item.value = item.default
+			# print "[OverlayHD] DEBUG (default): '%s' = '%s'" % (label, item.default)
+		for (label, default, config_type, option_table) in option_elements:
+			item = getattr(config.plugins.skin.OverlayHD, label)
+			item.value = item.default
+			# print "[OverlayHD] DEBUG (default): '%s' = '%s'" % (label, item.default)
+		self.redraw = True
 		if config.skin.primary_skin.value == "OverlayHD/skin.xml":
-			print "[OverlayHD] Setting skin to default settings."
-			self.process = False
-			config.plugins.skin.OverlayHD.ButtonStyle.value = config.plugins.skin.OverlayHD.ButtonStyle.default
-			for (label, colour, transparency) in colour_elements:
-				if colour is None or transparency is None:
-					item = getattr(config.plugins.skin.OverlayHD, label)
-					item.value = item.default
-					# print "[OverlayHD] DEBUG (default): '%s' = '%s'" % (label, item.default)
-				else:
-					item = getattr(config.plugins.skin.OverlayHD, "%sColour" % label)
-					item.value = item.default
-					# print "[OverlayHD] DEBUG (default): '%sColour' = '%s'" % (label, item.default)
-					item = getattr(config.plugins.skin.OverlayHD, "%sTransparency" % label)
-					item.value = item.default
-					# print "[OverlayHD] DEBUG (default): '%sTransparency' = '%s'" % (label, item.default)
-			for (label, font, font_table) in font_elements:
-				item = getattr(config.plugins.skin.OverlayHD, label)
-				item.value = item.default
-				# print "[OverlayHD] DEBUG (default): '%s' = '%s'" % (label, item.default)
-			for (label, default, config_type, option_table) in option_elements:
-				item = getattr(config.plugins.skin.OverlayHD, label)
-				item.value = item.default
-				# print "[OverlayHD] DEBUG (default): '%s' = '%s'" % (label, item.default)
 			self.applySettings()
-			self.process = True
+			msg = ""
 		else:
-			print "[OverlayHD] OverlayHD is not the active skin."
-
-	def changedSettings(self):
-		changed = 0
-		for x in config.plugins.skin.OverlayHD.dict():
-			if getattr(config.plugins.skin.OverlayHD, x).isChanged():
-				# print "[OverlayHD] Entries changed."
-				return True
-		# print "[OverlayHD] Entries NOT changed."
-		return False
-
-	def updateGroups(self):
-		if config.plugins.skin.OverlayHD.UseGroups.value:
-			for x in display_groups:
-				getattr(config.plugins.skin.OverlayHD, x).value = False
-		else:
-			for x in display_groups:
-				getattr(config.plugins.skin.OverlayHD, x).value = True
+			msg = "\n\nNOTE: OverlayHD is not the active skin."
+		popup = self.session.open(MessageBox, _("Default OverlayHD skin settings applied.%s") % msg, MessageBox.TYPE_INFO, 5)
+		popup.setTitle(self.setup_title)
 
 	def applySettings(self):
 		index = self["config"].getCurrentIndex()
-		applySkinSettings()
+		applySkinSettings(0)
 		self.applySkin()
 		self.instance.invalidate()  # Remove this when the underlying bug is fixed!
 		self["config"].setCurrentIndex(index)
@@ -662,7 +684,7 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 
 	def __init__(self, session):
 		Screen.__init__(self, session)
- 		self.skin = OverlayHDThemeManager.skin
+		self.skin = OverlayHDThemeManager.skin
 		# self.skinName = ["OverlayHDThemeManager"]
 		HelpableScreen.__init__(self)
 		self.setup_title = _("OverlayHD Theme Manager")
@@ -673,15 +695,31 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 		self["key_yellow"] = Label(_("Save"))
 		self["key_blue"] = Label(_("Create"))
 
-		self["actions"] = HelpableActionMap(self, ["OkCancelActions", "ColorActions", "MenuActions"], {
-			"ok": (self.applyTheme, _("Apply the currently highlighted theme, return to Skin Manager")),
-			"cancel": (self.cancelTheme, _("Cancel theme selection, return to Skin Manager")),
-			"menu": (self.themeMenu, _("Menu of actions applicable to the currently highlighted theme")),
-			"red": (self.cancelTheme, _("Cancel theme selection, return to Skin Manager")),
-			"green": (self.applyTheme, _("Apply the currently highlighted theme, return to Skin Manager")),
-			"yellow": (self.saveTheme, _("Save current skin settings as the currently highlighted theme")),
-			"blue": (self.newTheme, _("Create a new theme using the current skin settings"))
-		}, description=_("Theme Functions"))
+		(distro, code) = distro_configs.get(getImageDistro(), ("Unknown", "Enigma2"))
+		if code == "Beyonwiz":
+			self["actions"] = HelpableActionMap(self, ["OkCancelActions", "ColorActions", "MenuActions"], {
+				"ok": (self.applyTheme, _("Apply the currently highlighted theme, return to Skin Manager")),
+				"cancel": (self.cancelTheme, _("Cancel theme selection, return to Skin Manager")),
+				"menu": (self.themeMenu, _("Menu of actions applicable to the currently highlighted theme")),
+				"red": (self.cancelTheme, _("Cancel theme selection, return to Skin Manager")),
+				"green": (self.applyTheme, _("Apply the currently highlighted theme, return to Skin Manager")),
+				"yellow": (self.saveTheme, _("Save current skin settings as the currently highlighted theme")),
+				"blue": (self.newTheme, _("Create a new theme using the current skin settings"))
+			}, prio=0, description=_("Theme Functions"))
+		else:
+			self["OkCancelActions"] = HelpableActionMap(self, "OkCancelActions", {
+				"ok": (self.applyTheme, _("Apply the currently highlighted theme, return to Skin Manager")),
+				"cancel": (self.cancelTheme, _("Cancel theme selection, return to Skin Manager"))
+			}, prio=0)
+			self["ColorActions"] = HelpableActionMap(self, "ColorActions", {
+				"red": (self.cancelTheme, _("Cancel theme selection, return to Skin Manager")),
+				"green": (self.applyTheme, _("Apply the currently highlighted theme, return to Skin Manager")),
+				"yellow": (self.saveTheme, _("Save current skin settings as the currently highlighted theme")),
+				"blue": (self.newTheme, _("Create a new theme using the current skin settings"))
+			})
+			self["MenuActions"] = HelpableActionMap(self, "MenuActions", {
+				"menu": (self.themeMenu, _("Menu of actions applicable to the currently highlighted theme"))
+			}, prio=0)
 
 		self["themes"] = List()
 		self.filename = resolveFilename(SCOPE_CONFIG, "OverlayHD_themes.xml")
@@ -704,7 +742,7 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 		self.onShown.append(self.screenShown)
 
 	def screenShown(self):
-		if self.dom_themes == None:
+		if self.dom_themes is None:
 			popup = self.session.open(MessageBox, _("Unable to open/access themes file!\n\n%s") % self.errtext, MessageBox.TYPE_ERROR, 10)
 			popup.setTitle(self.setup_title)
 			self.close()
@@ -770,14 +808,14 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 		self.dom_themes.write(self.filename)
 
 	def xmlIndent(self, element, level=0):
-		indent = "\n" + level*"\t"
+		indent = "\n" + level * "\t"
 		if len(element):
 			if not element.text or not element.text.strip():
 				element.text = indent + "\t"
 			if not element.tail or not element.tail.strip():
 				element.tail = indent
 			for element in element:
-				self.xmlIndent(element, level+1)
+				self.xmlIndent(element, level + 1)
 			if not element.tail or not element.tail.strip():
 				element.tail = indent
 		else:
@@ -939,8 +977,24 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 		# self.saveThemes()
 
 
-def applySkinSettings():
+def applySkinSettings(fullinit):
 	if config.skin.primary_skin.value == "OverlayHD/skin.xml":
+		(distro, code) = distro_configs.get(getImageDistro(), ("Unknown", "Enigma2"))
+		if fullinit:
+			print "[OverlayHD] Configuring to run with '%s' distribution." % distro
+			for screen in dom_screens:
+				elements, path = dom_screens.get(screen, (None, None))
+				if elements:
+					panels = elements.findall("panel")
+					for panel in panels:
+						name = panel.get("name", "")
+						base = panel.get("base", "")
+						if name and base:
+							panel.set("name", base + code)
+							# print "[OverlayHD] DEBUG: Screen '%s', Base '%s', OldName '%s' -> NewName '%s'" % (screen, base, name, base + code)
+							print "[OverlayHD] Adjusting screen '%s'." % screen
+							break
+		#
 		print "[OverlayHD] Applying OverlayHD skin settings."
 		for (label, colour, transparency) in colour_elements:
 			if transparency is None:
@@ -973,7 +1027,20 @@ def applySkinSettings():
 			data[0] = getattr(config.plugins.skin.OverlayHD, label).value
 			fonts[label] = tuple(data)
 		for (label, default, config_type, options_table) in option_elements:
-			if label == "BackgroundImage":
+			if label == "AlwaysShowButtons":
+				for colour in button_colours:
+					for (style, label) in button_choices:
+						elements, path = dom_screens.get(button_base + colour + style, (None, None))
+						if elements:
+							elements = elements.findall("ePixmap")
+							for element in elements:
+								if config.plugins.skin.OverlayHD.AlwaysShowButtons.value:
+									if "conditional" in element.attrib:
+										del element.attrib["conditional"]
+								else:
+									if "conditional" not in element.attrib:
+										element.set("conditional", "key_%s" % colour)
+			elif label == "BackgroundImage":
 				dst = eEnv.resolve("${datadir}") + "/backdrop.mvi"
 				try:
 					unlink(dst)
@@ -990,41 +1057,25 @@ def applySkinSettings():
 					errtext = "Error %d: %s - '%s'" % (err, errmsg, dst)
 					print "[OverlayHD] Error copying boot logo image! (%s)" % errtext
 			elif label == "ButtonStyle":
-				for screen in button_screens:
-					elements, path = dom_screens.get(screen, (None, None))
+				for colour in button_colours:
+					elements, path = dom_screens.get(button_base + colour, (None, None))
 					if elements:
 						element = elements.find("panel")
 						name = element.get("name", None)
 						if name:
-							element.set("name", "%s%s" % (screen, config.plugins.skin.OverlayHD.ButtonStyle.value))
-			elif label == "ClockStyle":
-				for screen in clock_screens:
-					elements, path = dom_screens.get(screen, (None, None))
-					if elements:
-						element = elements.find("panel")
-						name = element.get("name", None)
-						if name:
-							element.set("name", "%s%s" % (screen, config.plugins.skin.OverlayHD.ClockStyle.value))
+							element.set("name", button_base + colour + config.plugins.skin.OverlayHD.ButtonStyle.value)
 			elif label == "EPGShowTicks":
 				if config.plugins.skin.OverlayHD.EPGShowTicks.value:
 					setting = "yes"
 				else:
 					setting = "no"
-				elements, path = dom_screens.get("EPGTimeLinePanel", (None, None))
-				if elements:
-					widgets = elements.findall("widget")
-					for widget in widgets:
-						if widget.get("TimelineTicksOn", "") != "":
-							widget.set("TimelineTicksOn", setting)
-							break
-			elif label == "EPGAlignment":
-				for screen in ("GraphicalEPG", "GraphicalEPGPIG", "GraphicalInfoBarEPG"):
+				for screen in ("EPGTimeLinePanel", "GraphicalEPG", "GraphicalEPGPIG", "GraphicalInfoBarEPG"):
 					elements, path = dom_screens.get(screen, (None, None))
 					if elements:
 						widgets = elements.findall("widget")
 						for widget in widgets:
-							if widget.get("EntryFontAlignment", "") != "":
-								widget.set("EntryFontAlignment", config.plugins.skin.OverlayHD.EPGAlignment.value)
+							if widget.get("TimelineTicksOn", "") != "":
+								widget.set("TimelineTicksOn", setting)
 								break
 			elif label == "RecordBlink":
 				elements, path = dom_screens.get("ChannelFormatPanel", (None, None))
@@ -1071,7 +1122,9 @@ def applySkinSettings():
 									else:
 										convert.text = ""
 									break
-		reloadWindowstyles()
+		if code == "Beyonwiz":
+			from skin import reloadWindowstyles
+			reloadWindowstyles()
 	else:
 		print "[OverlayHD] OverlayHD is not the active skin."
 
@@ -1093,8 +1146,11 @@ def updateOverlayHD():
 			remove(src)
 			print "[OverlayHD] Default themes file deleted."
 	# Set defunct attributes to the default so they will be removed from the settings file...
-	for attr in ("EPGChannel", "EPGChannelSelected", "EPGDetails", "EPGDuration", "EPGLCN", "EPGProgram", "EPGProgramSelected", "EPGProvider", "EPGRating", "EPGTimes", "EPGTimesSelected", "InfoFileSize"):
+	for attr in ("BootImage", "ClockStyle", "EPGChannel", "EPGChannelSelected", "EPGDetails", "EPGDuration", "EPGLCN", "EPGProgram", "EPGProgramSelected", "EPGProvider", "EPGRating", "EPGTimes", "EPGTimesSelected", "InfoFileSize"):
+		setattr(config.plugins.skin.OverlayHD, attr, ConfigSelection(default="Default", choices=[("Default"), ("None")]))
 		getattr(config.plugins.skin.OverlayHD, attr).value = getattr(config.plugins.skin.OverlayHD, attr).default
+		getattr(config.plugins.skin.OverlayHD, attr).save()
+	config.plugins.skin.OverlayHD.save()
 
 def start_menu_main(menuid, **kwargs):
 	if menuid == "system":
@@ -1106,18 +1162,18 @@ def main(session, **kwargs):
 	session.open(OverlayHDSkinManager)
 
 def autostart(reason, **kwargs):
+	# distro = getImageDistro()
 	if reason == 0:
-		# print "[OverlayHD] OverlayHD Skin Manager loaded."
+		# print "[OverlayHD] OverlayHD Skin Manager for '%s' loaded." % distro
 		updateOverlayHD()
-		applySkinSettings()
+		applySkinSettings(1)
 	elif reason == 1:
-		# print "[OverlayHD] OverlayHD Skin Manager unloaded."
+		# print "[OverlayHD] OverlayHD Skin Manager for '%s' unloaded." % distro
 		pass
 
 def Plugins(**kwargs):
 	list = []
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
-		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU],
-			description="OverlayHD Skin Manager version 1.55", icon="OverlayHD.png", fnc=main))
+		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU], description="OverlayHD Skin Manager version 1.60", icon="OverlayHD.png", fnc=main))
 	return list
