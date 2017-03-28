@@ -199,34 +199,6 @@
 
 <!-- CI Interface -->
 
-	<screen name="CAidSelect" title="select CAId's" position="340,134" size="600,502">
-		<widget name="list" position="5,10" size="590,405" scrollbarMode="showOnDemand" zPosition="3" />
-		<eLabel position="0,460" size="600,2" backgroundColor="Pinstripe" />
-		<widget source="introduction" render="Label" position="5,425" size="590,24" backgroundColor="TextBackground" font="Regular;21" halign="center" transparent="1" valign="center" zPosition="10" />
-		<widget source="key_red" render="Label" position="40,467" size="250,30" backgroundColor="TextBackground" font="Regular;24" foregroundColor="ButtonRed" halign="center" transparent="1" valign="center" zPosition="2" />
-		<widget source="key_green" render="Label" position="310,467" size="250,30" backgroundColor="TextBackground" font="Regular;24" foregroundColor="ButtonGreen" halign="center" transparent="1" valign="center" zPosition="2" />
-	</screen>
-
-	<screen name="CIselectMainMenu" title="CI Assignment" position="340,134" size="600,502">
-		<widget name="CiList" position="5,10" size="590,440" scrollbarMode="showOnDemand" zPosition="3" />
-		<eLabel position="0,460" size="600,2" backgroundColor="Pinstripe" />
-		<widget source="key_red" render="Label" position="40,467" size="250,30" backgroundColor="TextBackground" font="Regular;24" foregroundColor="ButtonRed" halign="center" transparent="1" valign="center" zPosition="2" />
-		<widget source="key_green" render="Label" position="310,467" size="250,30" backgroundColor="TextBackground" font="Regular;24" foregroundColor="ButtonGreen" halign="center" transparent="1" valign="center" zPosition="2" />
-	</screen>
-
-	<screen name="easyCIconfigMenu" title="CI Assignment" position="90,100" size="1100,560">
-		<eLabel position="0,0" size="1100,2" backgroundColor="Pinstripe" />
-		<widget source="ServiceList_desc" render="Label" position="10,10" size="1080,30" font="Regular;24" />
-		<eLabel position="0,50" size="1100,2" backgroundColor="Pinstripe" />
-		<widget name="ServiceList" position="10,60" size="698,450" font="Regular;22" zPosition="3" />
-		<eLabel position="0,518" size="1100,2" backgroundColor="Pinstripe" />
-		<widget source="key_red" render="Label" position="145,525" size="250,30" backgroundColor="TextBackground" font="Regular;24" foregroundColor="ButtonRed" halign="center" transparent="1" valign="center" zPosition="2" />
-		<widget source="key_green" render="Label" position="415,525" size="250,30" backgroundColor="TextBackground" font="Regular;24" foregroundColor="ButtonGreen" halign="center" transparent="1" valign="center" zPosition="2" />
-		<widget source="key_yellow" render="Label" position="685,525" size="250,30" backgroundColor="TextBackground" font="Regular;24" foregroundColor="ButtonYellow" halign="center" transparent="1" valign="center" zPosition="2" />
-		<widget source="ServiceList_info" render="Label" position="715,60" size="385,450" backgroundColor="TextBackground" font="Regular;20" transparent="1" zPosition="2" />
-		<eLabel position="711,50" size="2,470" backgroundColor="Pinstripe" />
-	</screen>
-
 	<screen name="ProjectSettings" title="Collection settings" position="90,100" size="1100,560">
 		<widget name="config" position="10,10" size="1080,350" scrollbarMode="showOnDemand" transparent="1" />
 		<widget source="info" render="Label" position="10,380" size="1080,130" font="Regular;20" />
@@ -235,39 +207,6 @@
 		<widget source="key_green" render="Label" position="290,525" size="250,30" font="Regular;24" foregroundColor="ButtonGreen" halign="center" valign="center" />
 		<widget source="key_yellow" render="Label" position="560,525" size="250,30" font="Regular;24" foregroundColor="ButtonYellow" halign="center" valign="center" />
 		<widget source="key_blue" render="Label" position="830,525" size="250,30" font="Regular;24" foregroundColor="ButtonBlue" halign="center" valign="center" />
-	</screen>
-
-	<screen name="myProviderSelection" title="Select provider to add..." position="90,100" size="1100,560">
-		<widget name="list" position="10,20" size="1080,460" scrollbarMode="showOnDemand" />
-		<eLabel position="0,518" size="1100,2" backgroundColor="Pinstripe" />
-		<widget source="introduction" render="Label" position="10,488" size="1080,24" backgroundColor="TextBackground" font="Regular;21" halign="center" transparent="1" valign="center" zPosition="10" />
-		<widget source="key_red" render="Label" position="30,525" size="250,30" backgroundColor="TextBackground" font="Regular;24" foregroundColor="ButtonRed" halign="center" transparent="1" valign="center" zPosition="2" />
-		<widget source="key_green" render="Label" position="300,525" size="250,30" backgroundColor="TextBackground" font="Regular;24" foregroundColor="ButtonGreen" halign="center" transparent="1" valign="center" zPosition="2" />
-		<widget source="key_yellow" render="Label" position="570,525" size="250,30" backgroundColor="TextBackground" font="Regular;24" foregroundColor="ButtonYellow" halign="center" transparent="1" valign="center" zPosition="2" />
-		<widget source="key_blue" render="Label" position="840,525" size="250,30" backgroundColor="TextBackground" font="Regular;24" foregroundColor="ButtonBlue" halign="center" transparent="1" valign="center" zPosition="2" />
-	</screen>
-
-	<screen name="myChannelSelection" title="Select service to add..." position="90,100" size="1100,560">
-		<widget name="list" position="10,20" size="1080,460" scrollbarMode="showOnDemand" />
-		<eLabel position="0,518" size="1100,2" backgroundColor="Pinstripe" />
-		<widget source="introduction" render="Label" position="10,487" size="1080,24" backgroundColor="TextBackground" font="Regular;21" halign="center" transparent="1" valign="center" zPosition="10" />
-		<widget source="key_red" render="Label" position="30,525" size="250,30" backgroundColor="TextBackground" font="Regular;24" foregroundColor="ButtonRed" halign="center" transparent="1" valign="center" zPosition="2" />
-		<widget source="key_green" render="Label" position="300,525" size="250,30" backgroundColor="TextBackground" font="Regular;24" foregroundColor="ButtonGreen" halign="center" transparent="1" valign="center" zPosition="2" />
-		<widget source="key_yellow" render="Label" position="570,525" size="250,30" backgroundColor="TextBackground" font="Regular;24" foregroundColor="ButtonYellow" halign="center" transparent="1" valign="center" zPosition="2" />
-		<widget source="key_blue" render="Label" position="840,525" size="250,30" backgroundColor="TextBackground" font="Regular;24" foregroundColor="ButtonBlue" halign="center" transparent="1" valign="center" zPosition="2" />
-	</screen>
-
-	<screen name="CIconfigMenu" title="CI assignment" position="160,90" size="900,576">
-		<widget source="key_red" render="Label" position="90,535" size="180,36" backgroundColor="TextBackground" font="Regular;22" foregroundColor="ButtonRed" halign="center" transparent="1" valign="center" zPosition="1" />
-		<widget source="key_green" render="Label" position="290,535" size="180,36" backgroundColor="TextBackground" font="Regular;22" foregroundColor="ButtonGreen" halign="center" transparent="1" valign="center" zPosition="1" />
-		<widget source="key_yellow" render="Label" position="480,535" size="180,36" backgroundColor="TextBackground" font="Regular;22" foregroundColor="ButtonYellow" halign="center" transparent="1" valign="center" zPosition="1" />
-		<widget source="key_blue" render="Label" position="670,535" size="180,36" backgroundColor="TextBackground" font="Regular;22" foregroundColor="ButtonBlue" halign="center" transparent="1" valign="center" zPosition="1" />
-		<widget source="CAidList_desc" render="Label" position="10,5" size="880,22" backgroundColor="TextBackground" font="Regular;20" transparent="1" />
-		<widget source="CAidList" render="Label" position="10,35" size="880,45" backgroundColor="TextBackground" font="Regular;20" transparent="1" />
-		<widget source="ServiceList_desc" render="Label" position="10,90" size="880,22" backgroundColor="TextBackground" font="Regular;20" transparent="1" />
-		<widget name="ServiceList" position="10,373" size="880,150" scrollbarMode="showOnDemand" zPosition="1" />
-		<widget source="ServiceList_info" render="Label" position="10,120" size="880,250" backgroundColor="TextBackground" font="Regular;20" transparent="1" zPosition="2" />
-		<eLabel position="0,525" size="900,2" backgroundColor="Pinstripe" />
 	</screen>
 
 <!-- Device Mount -->

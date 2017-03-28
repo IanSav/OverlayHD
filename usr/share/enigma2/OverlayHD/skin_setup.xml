@@ -7,6 +7,22 @@
 	</screen>
 	-->
 
+<!-- MENU > Setup > AV Setup > Animation -->
+
+	<screen name="AnimationSetupScreen" title="Animation Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="list" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<panel name="ScreenTemplateSIntroduction4" />
+	</screen>
+
+	<screen name="AnimationSetupConfig" title="Animation Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateFrame830x120" />
+	</screen>
+
 <!-- MENU > Setup > AV Setup > Audio Sync - Uses Generic Setup Screen -->
 
 	<!--
@@ -402,6 +418,56 @@
 			<convert type="FrontendInfo">LOCK</convert>
 			<convert type="ConditionalShowHide">Invert</convert>
 		</widget>
+	</screen>
+
+<!-- MENU > Setup > Tuners > (CI) Common Interface Assignment -->
+
+	<screen name="CIselectMainMenu" title="CI Assignment" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateCIList4" />
+		<panel name="ScreenTemplateFrame830x120" />
+	</screen>
+
+	<screen name="CIconfigMenu" title="CI Assignment" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+
+		<widget source="CAidList_desc" render="Label" position="400,80" size="830,35" font="Regular;25" backgroundColor="#25062748" transparent="0" />
+		<widget source="CAidList" render="Label" position="400,115" size="830,45" font="Regular;20"  backgroundColor="#25062748" transparent="0" />
+		<widget source="ServiceList_desc" render="Label" position="400,150" size="830,35" font="Regular;25" backgroundColor="#25062748" transparent="0" />
+		<widget name="ServiceList" position="400,185" size="830,250" scrollbarMode="showOnDemand" transparent="0" />
+		<widget source="ServiceList_info" render="Label" position="400,450" size="830,250" backgroundColor="#25062748" font="Regular;20" transparent="0" />
+	</screen>
+
+	<screen name="easyCIconfigMenu" title="CI Assignment Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+
+		<widget source="ServiceList_desc" render="Label" position="50,80" size="550,22" font="Regular;20" backgroundColor="#25062748" transparent="1"  />
+		<widget name="ServiceList" position="50,110" size="550,300" zPosition="1" scrollbarMode="showOnDemand" />
+		<widget source="ServiceList_info" render="Label" position="50,110" size="550,300" zPosition="2" font="Regular;20" backgroundColor="#25062748" transparent="1"  />
+	</screen>
+
+	<screen name="myChannelSelection" title="Select Service to add..." position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateList4" />
+		<panel name="ScreenTemplateSIntroduction4" />
+	</screen>
+
+	<screen name="myProviderSelection" title="Select Provider to add..." position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateList4" />
+		<panel name="ScreenTemplateSIntroduction4" />
+	</screen>
+
+	<screen name="CAidSelect" title="Select CA IDs" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateList4" />
+		<panel name="ScreenTemplateSIntroduction4" />
 	</screen>
 
 <!-- MENU > Setup > Tuners > Remote IP Channels -->
