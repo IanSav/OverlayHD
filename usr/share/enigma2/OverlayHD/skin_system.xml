@@ -179,11 +179,11 @@
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_browser.png" position="50,100" size="300,500" alphatest="on" transparent="1">
-			<convert type="MenuEntryCompare">device_screen</convert>
+			<convert type="MenuEntryCompare">memory_screen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="on" transparent="1">
-			<convert type="MenuEntryCompare">device_screen</convert>
+			<convert type="MenuEntryCompare">network_screen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tv_live.png" position="50,100" size="300,500" alphatest="on" transparent="1">
@@ -382,11 +382,11 @@
 	</screen>
 
 	<screen name="SystemNetworkInfoEnigma2" title="Network Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<widget source="IFtext" render="Label" position="400,80" size="225,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
-		<widget source="IF" render="Label" position="640,80" size="450,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
-		<widget source="Statustext" render="Label" position="950,80" size="150,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
-		<widget name="statuspic" position="1150,86" size="15,16" pixmaps="buttons/button_small_green.png,buttons/button_small_green_off.png" alphatest="on" transparent="1" />
-		<widget name="AboutScrollLabel" position="400,110" size="830,425" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
+		<widget source="IFtext" render="Label" position="400,80" size="150,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
+		<widget source="IF" render="Label" position="560,80" size="450,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
+		<widget source="Statustext" render="Label" position="400,105" size="150,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
+		<widget name="statuspic" position="562,111" size="15,16" pixmaps="buttons/button_small_green.png,buttons/button_small_green_off.png" alphatest="on" transparent="1" />
+		<widget name="AboutScrollLabel" position="400,155" size="830,440" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
 
 <!-- Sevice Information (MENU > Information > Service) Screens -->
