@@ -156,6 +156,9 @@
 		<widget source="session.CurrentService" render="Label" position="182,575" size="577,25" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoChannel" transparent="1" valign="top">
 			<convert type="ServiceName">NameOnly</convert>
 		</widget>
+		<panel position="840,575" size="245,15">
+			<panel name="ServiceInformationPanel" />
+		</panel>
 		<!-- Now Event Start & End Times, Event Name and Time Remaining Area -->
 		<widget source="session.Event_Now" render="Label" position="180,615" size="180,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" halign="center" noWrap="1" transparent="1" valign="bottom" >
 			<convert type="EventTime">Times</convert>
@@ -192,7 +195,8 @@
 		-->
 		<widget source="session.CurrentService" render="Label" position="182,695" size="800,20" backgroundColor="InfoBackground" font="InfoOtherFont;15" foregroundColor="InfoBroadcaster" transparent="1">
 			<!-- <convert type="ServiceName2">F=%F f=%f i=%i O=%O M=%M p=%p Y=%Y r=%r o=%o c=%c l=%l h=%h m=%m g=%g b=%b e=%e</convert> -->
-			<convert type="ServiceName2">%P - %t %s</convert>
+			<!-- <convert type="ServiceName2">%P - %t %O - %b %c %l %h %m %g</convert> -->
+			<convert type="ServiceName2">%P - %t %O</convert>
 		</widget>
 		<!-- Recording Service Name and Recording Progress Bar Area - If Recording -->
 		<panel position="640,685" size="270,20">

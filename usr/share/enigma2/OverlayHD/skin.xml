@@ -186,6 +186,7 @@
 		<color name="InfoRecordingBackground" value="DeepGrey" />
 		<color name="InfoRecordingBorder" value="Grey" />
 		<color name="InfoRecordingColour" value="OrangeRed" />
+		<color name="InfoServiceData" value="LightBlue" />
 		<color name="InfoTimesNext" value="Grey" />
 		<color name="InfoTimesNow" value="Grey" />
 		<color name="InfoTimesSelected" value="Silver" />
@@ -1246,6 +1247,10 @@
 		<widget name="list" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
+	<screen name="ScreenTemplateCIList4">
+		<widget name="CiList" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+	</screen>
+
 	<screen name="ScreenTemplateConfig4">
 		<widget name="config" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
@@ -1713,6 +1718,41 @@
 		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/info_crypt_on.png" position="332,0" size="21,20" alphatest="blend" zPosition="+2">
 			<convert type="ServiceInfo">IsCrypted</convert>
 			<convert type="ConditionalShowHide" />
+		</widget>
+	</screen>
+
+<!-- Panel To Display The Service Information (245 x 15 pixels) -->
+
+	<screen name="ServiceInformationPanel" title="Service Information" flags="wfNoBorder">
+		<widget source="session.CurrentService" render="Label" position="0,0" size="35,15" backgroundColor="InfoBackground" font="InfoOtherFont;15" foregroundColor="InfoServiceData" transparent="1">
+			<convert type="PliExtraInfo">CryptoNDS</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="40,0" size="15,15" backgroundColor="InfoBackground" font="InfoOtherFont;15" foregroundColor="InfoServiceData" halign="center" transparent="1">
+			<convert type="PliExtraInfo">CryptoBeta</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="60,0" size="10,15" backgroundColor="InfoBackground" font="InfoOtherFont;15" foregroundColor="InfoServiceData" halign="center" transparent="1">
+			<convert type="PliExtraInfo">CryptoIrdeto</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="75,0" size="15,15" backgroundColor="InfoBackground" font="InfoOtherFont;15" foregroundColor="InfoServiceData" halign="center" transparent="1">
+			<convert type="PliExtraInfo">CryptoSeca</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="95,0" size="15,15" backgroundColor="InfoBackground" font="InfoOtherFont;15" foregroundColor="InfoServiceData" halign="center" transparent="1">
+			<convert type="PliExtraInfo">CryptoVia</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="115,0" size="15,15" backgroundColor="InfoBackground" font="InfoOtherFont;15" foregroundColor="InfoServiceData" halign="center" transparent="1">
+			<convert type="PliExtraInfo">CryptoNagra</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="135,0" size="25,15" backgroundColor="InfoBackground" font="InfoOtherFont;15" foregroundColor="InfoServiceData" halign="center" transparent="1">
+			<convert type="PliExtraInfo">CryptoCryptoW</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="165,0" size="25,15" backgroundColor="InfoBackground" font="InfoOtherFont;15" foregroundColor="InfoServiceData" halign="center" transparent="1">
+			<convert type="PliExtraInfo">CryptoConax</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="195,0" size="20,15" backgroundColor="InfoBackground" font="InfoOtherFont;15" foregroundColor="InfoServiceData" halign="center" transparent="1">
+			<convert type="PliExtraInfo">CryptoBiss</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="220,0" size="25,15" backgroundColor="InfoBackground" font="InfoOtherFont;15" foregroundColor="InfoServiceData" halign="right" transparent="1">
+			<convert type="PliExtraInfo">CryptoDre</convert>
 		</widget>
 	</screen>
 
