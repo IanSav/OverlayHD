@@ -425,6 +425,7 @@
 		<setup key="NimSetup" image="menus/mainmenu_tasks_setup_tv.png" />
 		<setup key="IniTerrestrialLocation" image="menus/mainmenu_tasks_setup_tv.png" />
 		<setup key="ScanSetup" image="menus/mainmenu_tasks_setup_tv.png" />
+		<setup key="parentalcontrol" image="menus/mainmenu_tasks_setup_parental.png" />
 		<setup key="ParentalControlSetup" image="menus/mainmenu_tasks_setup_parental.png" />
 		<setup key="ParentalControlEditor" image="menus/mainmenu_tasks_setup_parental.png" />
 		<setup key="ParentalControlChangePin" image="menus/mainmenu_tasks_setup_parental.png" />
@@ -1190,11 +1191,6 @@
 		<widget source="help" render="Label" position="410,600" size="810,50" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
-	<screen name="ScreenTemplateInformation2">
-		<panel name="ScreenTemplateFrame830x70" />
-		<widget name="information" position="410,600" size="810,50" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
-	</screen>
-
 	<screen name="ScreenTemplateIntroduction2">
 		<panel name="ScreenTemplateFrame830x70" />
 		<widget name="introduction" position="410,600" size="810,50" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
@@ -1395,6 +1391,11 @@
 	<screen name="ScreenTemplateInfo4">
 		<panel name="ScreenTemplateFrame830x120" />
 		<widget name="info" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="ScreenTemplateInformation4">
+		<panel name="ScreenTemplateFrame830x120" />
+		<widget name="information" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateIntroduction4">
@@ -1863,29 +1864,29 @@
 <!-- Message Box Pop Up -->
 
 	<screen name="MessageBoxTemplate">
-		<widget name="text" position="65,10" size="100%,0" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
+		<widget name="text" position="65,10" size="700,0" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
 		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="0,0" size="53,53" alphatest="on" transparent="1" />
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="0,0" size="53,53" alphatest="on" transparent="1" />
 		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="0,0" size="53,53" alphatest="on" transparent="1" />
-		<widget name="list" position="100,100" size="100%,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="list" position="100,100" size="700,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 		<applet type="onLayoutFinish">
 self.autoResize()
 		</applet>
 	</screen>
 
-	<screen name="MessageBox" title="Message Selection..." position="center,center" size="800,10" backgroundColor="ScreenBackground" zPosition="+90">
+	<screen name="MessageBox" title="Message Selection..." position="center,center" size="700,10" backgroundColor="ScreenBackground" zPosition="+90">
 		<panel name="MessageBoxTemplate" />
 	</screen>
 
-	<screen name="MessageBoxSimple" title="Message..." position="center,center" size="800,10" backgroundColor="ScreenBackground" zPosition="+90">
+	<screen name="MessageBoxSimple" title="Message..." position="center,center" size="700,10" backgroundColor="ScreenBackground" zPosition="+90">
 		<panel name="MessageBoxTemplate" />
 	</screen>
 
 <!-- Choice Box Pop Up -->
 
-	<screen name="ChoiceBox" position="center,center" size="800,130" backgroundColor="ScreenBackground" zPosition="+90">
-		<widget name="text" position="0,0" size="800,0" backgroundColor="TextBackground" conditional="text" font="Regular;22" foregroundColor="BannerTitle" transparent="1" />
-		<widget name="list" position="100,100" size="800,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+	<screen name="ChoiceBox" position="center,center" size="700,130" backgroundColor="ScreenBackground" zPosition="+90">
+		<widget name="text" position="0,0" size="700,0" backgroundColor="TextBackground" conditional="text" font="TitleFont;20" foregroundColor="BannerTitle" transparent="1" />
+		<widget name="list" position="100,100" size="700,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 		<applet type="onLayoutFinish">
 self.autoResize()
 		</applet>
@@ -1893,17 +1894,17 @@ self.autoResize()
 
 <!-- Input Box Pop Up -->
 
-	<screen name="InputBox" title="Search" position="center,center" size="800,135" backgroundColor="ScreenBackground" zPosition="+90">
-		<widget name="text" position="10,10" size="780,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
-		<eLabel position="0,80" size="800,2" backgroundColor="Pinstripe" />
-		<widget name="input" position="10,90" size="780,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" noWrap="1" transparent="1" />
-		<eLabel position="0,125" size="800,2" backgroundColor="Pinstripe" />
+	<screen name="InputBox" title="Search" position="center,center" size="700,135" backgroundColor="ScreenBackground" zPosition="+90">
+		<widget name="text" position="10,10" size="680,50" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" transparent="1" valign="center" />
+		<eLabel position="0,80" size="700,2" backgroundColor="Pinstripe" />
+		<widget name="input" position="10,90" size="680,25" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" noWrap="1" transparent="1" />
+		<eLabel position="0,125" size="700,2" backgroundColor="Pinstripe" />
 	</screen>
 
 <!-- Text Box Pop Up -->
 
-	<screen name="TextBox" title="Message..." position="0,0" size="600,400" backgroundColor="ScreenBackground">
-		<widget name="text" position="0,0" size="600,390" backgroundColor="TextBackground" font="Regular;18" foregroundColor="Text" transparent="1" />
+	<screen name="TextBox" title="Message..." position="0,0" size="700,400" backgroundColor="ScreenBackground">
+		<widget name="text" position="0,0" size="700,390" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" transparent="1" />
 	</screen>
 
 <!-- Command Prompt Output -->
