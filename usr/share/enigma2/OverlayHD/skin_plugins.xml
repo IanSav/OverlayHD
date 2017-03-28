@@ -223,6 +223,75 @@
 		<eLabel text="OK = Menu" position="1060,630" size="140,22" backgroundColor="Black" font="Regular;20" transparent="1" zPosition="1" />
 	</screen>
 
+<!-- Fan Control 2 Plugin -->
+
+	<screen name="FanControl2" title="FanControl2" position="100,100" size="300,300" />
+
+	<screen name="FanControl2Plugin" title="Fan Control 2" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonMenu" />
+		<panel name="ScreenTemplateButtonInfo" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget source="Version" render="Label" position="5,430" size="60,20" zPosition="1" font="Regular;11" halign="left" valign="center" backgroundColor="#25062748" transparent="1" />
+		<widget name="config" position="10,50" size="580,200" scrollbarMode="showOnDemand" />
+		<ePixmap position="20,260" size="560,3" pixmap="skin_default/div-h.png" transparent="1" alphatest="on" />
+		<widget source="introduction" render="Label" position="5,262" size="580,30" zPosition="10" font="Regular;21" halign="center" valign="center" backgroundColor="#25062748" transparent="1" />
+		<ePixmap position="20,290" size="560,3" pixmap="skin_default/div-h.png" transparent="1" alphatest="on" />
+		<widget source="TxtTemp" render="Label" position="5,310" size="200,25" zPosition="1" font="Regular;17" halign="right" valign="center" backgroundColor="#25062748" transparent="1" />
+		<widget source="TxtZielRPM" render="Label" position="5,330" size="200,25" zPosition="1" font="Regular;17" halign="right" valign="center" backgroundColor="#25062748" transparent="1" />
+		<widget source="TxtRPM" render="Label" position="5,350" size="200,25" zPosition="1" font="Regular;17" halign="right" valign="center" backgroundColor="#25062748" transparent="1" />
+		<widget source="TxtVLT" render="Label" position="5,370" size="200,25" zPosition="1" font="Regular;17" halign="right" valign="center" backgroundColor="#25062748" transparent="1" />
+		<widget source="TxtPWM" render="Label" position="5,390" size="200,25" zPosition="1" font="Regular;17" halign="right" valign="center" backgroundColor="#25062748" transparent="1" />
+		<widget source="PixTemp" render="Progress" position="210,320" size="375,5" borderWidth="1" />
+		<widget source="PixZielRPM" render="Progress" position="210,340" size="375,5" borderWidth="1" />
+		<widget source="PixRPM" render="Progress" position="210,360" size="375,5" borderWidth="1" />
+		<widget source="PixVLT" render="Progress" position="210,380" size="375,5" borderWidth="1" />
+		<widget source="PixPWM" render="Progress" position="210,400" size="375,5" borderWidth="1" />
+		<widget source="TxtERR" render="Label" position="5,410" size="200,25" zPosition="1" font="Regular;17" halign="right" valign="center" backgroundColor="#25062748" transparent="1" />
+		<widget source="PixERR" render="Progress" position="210,420" size="375,5" borderWidth="1" />
+		<widget source="T10ERR" render="Label" position="570,422" size="40,20" zPosition="1" font="Regular;11" halign="left" valign="center" backgroundColor="#25062748" transparent="1" />
+	</screen>
+
+	<screen name="FanControl2SpezialSetup" title="Fan Control 2 - Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="Setup" />
+	</screen>
+
+	<screen name="FanControl2Monitor" title="Fan Control 2 - Monitor" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<widget source="TxtTemp0" render="Label" position="5,30" size="250,25" zPosition="1" font="Regular;17" halign="right" valign="center" backgroundColor="#25062748" transparent="1" />
+		<widget source="TxtTemp1" render="Label" position="5,50" size="250,25" zPosition="1" font="Regular;17" halign="right" valign="center" backgroundColor="#25062748" transparent="1" />
+		<widget source="TxtTemp2" render="Label" position="5,70" size="250,25" zPosition="1" font="Regular;17" halign="right" valign="center" backgroundColor="#25062748" transparent="1" />
+		<widget source="TxtTemp3" render="Label" position="5,90" size="250,25" zPosition="1" font="Regular;17" halign="right" valign="center" backgroundColor="#25062748" transparent="1" />
+		<widget source="TxtTemp4" render="Label" position="5,110" size="250,25" zPosition="1" font="Regular;17" halign="right" valign="center" backgroundColor="#25062748" transparent="1" />
+		<widget source="TxtTemp5" render="Label" position="5,130" size="250,25" zPosition="1" font="Regular;17" halign="right" valign="center" backgroundColor="#25062748" transparent="1" />
+		<widget source="TxtTemp6" render="Label" position="5,150" size="250,25" zPosition="1" font="Regular;17" halign="right" valign="center" backgroundColor="#25062748" transparent="1" />
+		<widget source="TxtTemp7" render="Label" position="5,170" size="250,25" zPosition="1" font="Regular;17" halign="right" valign="center" backgroundColor="#25062748" transparent="1" />
+		<widget source="TxtHDD" render="Label" position="5,190" size="250,25" zPosition="1" font="Regular;17" halign="right" valign="center" backgroundColor="#25062748" transparent="1" />
+		<widget source="TxtFan" render="Label" position="5,210" size="250,25" zPosition="1" font="Regular;17" halign="right" valign="center" backgroundColor="#25062748" transparent="1" />
+		<widget name="TxtMinTemp" position="260,20" size="50,12" zPosition="1" font="Regular;12" halign="left" valign="center" backgroundColor="#25062748" transparent="1" />
+		<widget source="TxtFC2Temp" render="Label" position="398,20" size="50,12" zPosition="1" font="Regular;17" halign="center" valign="center" backgroundColor="#25062748" transparent="1" />
+		<widget name="TxtMaxTemp" position="535,20" size="50,12" zPosition="1" font="Regular;12" halign="right" valign="center" backgroundColor="#25062748" transparent="1" />
+		<widget source="ProTemp0" render="Progress" position="260,40" size="325,5" borderWidth="1" />
+		<widget source="ProTemp1" render="Progress" position="260,60" size="325,5" borderWidth="1" />
+		<widget source="ProTemp2" render="Progress" position="260,80" size="325,5" borderWidth="1" />
+		<widget source="ProTemp3" render="Progress" position="260,100" size="325,5" borderWidth="1" />
+		<widget source="ProTemp4" render="Progress" position="260,120" size="325,5" borderWidth="1" />
+		<widget source="ProTemp5" render="Progress" position="260,140" size="325,5" borderWidth="1" />
+		<widget source="ProTemp6" render="Progress" position="260,160" size="325,5" borderWidth="1" />
+		<widget source="ProTemp7" render="Progress" position="260,180" size="325,5" borderWidth="1" />
+		<widget source="ProHDD" render="Progress" position="260,200" size="325,5" borderWidth="1" />
+		<widget source="ProFan" render="Progress" position="260,220" size="325,5" borderWidth="1" />
+	</screen>
+
+	<screen name="FanControl2Test" title="Fan Control 2 - Test" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<widget source="TextTest1" render="Label" position="5,20" size="620,30" zPosition="10" font="Regular;20" halign="left" valign="center" backgroundColor="#25062748" transparent="1" />
+		<widget source="TextTest2" render="Label" position="5,50" size="620,30" zPosition="10" font="Regular;20" halign="left" valign="center" backgroundColor="#25062748" transparent="1" />
+		<widget source="TextTest3" render="Label" position="5,80" size="620,30" zPosition="10" font="Regular;20" halign="left" valign="center" backgroundColor="#25062748" transparent="1" />
+		<widget source="TextTest4" render="Label" position="5,130" size="620,30" zPosition="10" font="Regular;20" halign="left" valign="center" backgroundColor="#25062748" transparent="1" />
+		<widget source="TextTest5" render="Label" position="5,160" size="620,30" zPosition="10" font="Regular;20" halign="left" valign="center" backgroundColor="#25062748" transparent="1" />
+		<widget source="TextTest6" render="Label" position="5,190" size="620,30" zPosition="10" font="Regular;20" halign="left" valign="center" backgroundColor="#25062748" transparent="1" />
+		<widget source="TextTest7" render="Label" position="5,220" size="620,30" zPosition="10" font="Regular;20" halign="left" valign="center" backgroundColor="#25062748" transparent="1" />
+	</screen>
+
 <!-- Front Panel Update Plugin -->
 
 	<screen name="FirmwareUpgrade" title="Firmware Upgrade" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
@@ -609,7 +678,7 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_factoryreset.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<panel name="ScreenTemplateList4" />
+		<panel name="ScreenTemplateSoftwareList4" />
 		<panel name="ScreenTemplateSIntroduction4" />
 	</screen>
 
@@ -744,6 +813,84 @@
 		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_factoryreset.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<widget name="text" position="50,620" size="1180,35" font="Regular;25" transparent="1" valign="center" />
+	</screen>
+
+<!-- Temperature and Fan Control Plugin -->
+
+	<screen name="TempFanControl" title="Temperature / Fan Control" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="config" position="400,80" size="830,245" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<eLabel position="400,360" size="830,2" backgroundColor="Pinstripe" />
+		<eLabel position="400,540" size="830,2" backgroundColor="Pinstripe" />
+		<eLabel position="400,360" size="2,180" backgroundColor="Pinstripe" />
+		<eLabel position="814,360" size="2,180" backgroundColor="Pinstripe" />
+		<eLabel position="1228,360" size="2,180" backgroundColor="Pinstripe" />
+		<widget source="SensorTempText0" render="Label" position="410,370" size="200,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="SensorTemp0" render="Label" position="620,370" size="185,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorTempText1" render="Label" position="410,390" size="200,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="SensorTemp1" render="Label" position="620,390" size="185,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorTempText2" render="Label" position="410,410" size="200,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="SensorTemp2" render="Label" position="620,410" size="185,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorTempText3" render="Label" position="410,430" size="200,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="SensorTemp3" render="Label" position="620,430" size="185,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorTempText4" render="Label" position="410,450" size="200,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="SensorTemp4" render="Label" position="620,450" size="185,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorTempText5" render="Label" position="410,470" size="200,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="SensorTemp5" render="Label" position="620,470" size="185,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorTempText6" render="Label" position="410,490" size="200,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="SensorTemp6" render="Label" position="620,490" size="185,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorTempText7" render="Label" position="410,510" size="200,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="SensorTemp7" render="Label" position="620,510" size="185,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorFanText0" render="Label" position="825,370" size="185,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="SensorFan0" render="Label" position="1020,370" size="200,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorFanText1" render="Label" position="825,390" size="185,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="SensorFan1" render="Label" position="1020,390" size="200,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorFanText2" render="Label" position="825,410" size="185,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="SensorFan2" render="Label" position="1020,410" size="200,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorFanText3" render="Label" position="825,430" size="185,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="SensorFan3" render="Label" position="1020,430" size="200,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorFanText4" render="Label" position="825,450" size="185,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="SensorFan4" render="Label" position="1020,450" size="200,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorFanText5" render="Label" position="825,470" size="185,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="SensorFan5" render="Label" position="1020,470" size="200,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorFanText6" render="Label" position="825,490" size="185,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="SensorFan6" render="Label" position="1020,490" size="200,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<widget source="SensorFanText7" render="Label" position="825,510" size="185,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="SensorFan7" render="Label" position="1020,510" size="200,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
+			<convert type="SensorToText"></convert>
+		</widget>
+		<panel name="ScreenTemplateFrame830x120" />
 	</screen>
 
 <!-- Transcoding Plugin -->
@@ -912,6 +1059,18 @@
 		<widget name="inactive" position="950,185" size="260,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="Red" halign="right" transparent="1" valign="center" />
 		<widget name="active" position="950,185" size="260,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="Green" halign="right" transparent="1" valign="center" />
 		<panel name="ScreenTemplateFrame830x120" />
+	</screen>
+
+<!-- VU+ DUO Fan Control Plugin -->
+
+	<screen name="FanSetupConfiguration" title="Standby Mode FanSetup Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="Setup" />
+	</screen>
+
+<!-- VU+ Remote Control Plugin -->
+
+	<screen name="RemoteControlCode" title="Remote Control Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="Setup" />
 	</screen>
 
 <!-- Weather Plugin -->

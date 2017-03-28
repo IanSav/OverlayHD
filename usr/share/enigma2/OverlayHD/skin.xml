@@ -1266,24 +1266,13 @@
 		<widget name="hddlist" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
-	<screen name="ScreenTemplateList4">
-		<widget source="list" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" selectionDisabled="0" transparent="0"> <!--  itemHeight="35" -->
-			<convert type="TemplatedMultiContent">
-				{
-				"template":
-					[
-					MultiContentEntryText(pos = (20, 0), size = (790, 35), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0), # index 0 is the name
-					],
-				"fonts": [gFont("Regular", 25)],
-				"itemHeight": 35
-				}
-			</convert>
-		</widget>
-	</screen>
-
 	<screen name="ScreenTemplateListLeftMenu4">
 		<!-- Font and ItemHeight are taken from the font alias ChoiceList. -->
 		<widget name="list_left" position="400,115" size="830,385" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+	</screen>
+
+	<screen name="ScreenTemplateList4">
+		<widget name="list" position="400,80" size="830,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateLogList4">
@@ -1343,6 +1332,21 @@
 			</convert>
 		</widget>
 		-->
+	</screen>
+
+	<screen name="ScreenTemplateSoftwareList4">
+		<widget source="list" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" selectionDisabled="0" transparent="0"> <!--  itemHeight="35" -->
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (20, 0), size = (790, 35), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0), # index 0 is the name
+					],
+				"fonts": [gFont("Regular", 25)],
+				"itemHeight": 35
+				}
+			</convert>
+		</widget>
 	</screen>
 
 	<screen name="ScreenTemplateTimerList4">
