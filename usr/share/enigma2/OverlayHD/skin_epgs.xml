@@ -352,7 +352,7 @@
 		<panel name="ScreenTemplateConfig0" />
 	</screen>
 
-	<!-- Time & Time With Linked Duration Input -->
+<!-- EPG > TEXT - Time & Time With Linked Duration Input -->
 
 	<screen name="TimeDateDurationInput" title="Time/Date/Duration Input" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
@@ -366,32 +366,31 @@
 		-->
 	</screen>
 
-<!--  CrossEPG - ToDo! -->
+<!-- EPG Related Plugins -->
+
+<!--  CrossEPG Plugin -->
 
 	<screen name="CrossEPG_Setup" title="CrossEPG Configuration" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<!-- <panel name="FullScreenWindow" />
-		<panel name="FullScreenColourPanel" /> -->
-		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<widget name="config" position="590,170" size="610,410" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="0" />
-		<panel name="ScreenTemplateInformation2" />
+		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateInformation4" />
 	</screen>
 
 	<screen name="CrossEPG_Menu" title="CrossEPG Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<eLabel text="Exit" position="123,635" size="200,36" backgroundColor="ButtonRed" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<widget source="list" render="Listbox" position="590,170" size="610,410" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" zPosition="2">
+		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="list" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template": [
-					MultiContentEntryPixmapAlphaTest(pos = (0, 5), size = (0, 0), png = 0),
-					MultiContentEntryText(pos = (35, 15), size = (510, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
-					],
-				"fonts": [gFont("Regular", 22)],
-				"itemHeight": 50
+					# MultiContentEntryPixmapAlphaTest(pos = (20, 2), size = (32, 32), png = 0),
+					MultiContentEntryText(pos = (20, 0), size = (810, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1)
+				],
+				"fonts": [parseFont("MenuFont;25")],
+				"itemHeight": 35
 				}
 			</convert>
 		</widget>
@@ -400,16 +399,16 @@
 	<screen name="CrossEPG_Providers" title="CrossEPG Provider XMLTV-OpenTV-XEPGDB-MHW2-M7-RAI" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<widget source="list" render="Listbox" position="590,170" size="610,410" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" zPosition="2">
+		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="list" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template": [
-					MultiContentEntryText(pos = (35, 10), size = (400, 32), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 0),
-					MultiContentEntryPixmapAlphaBlend(pos = (490, 8), size = (30, 30), png = 1),
-					],
-				"fonts": [gFont("Regular", 20)],
-				"itemHeight": 50
+					MultiContentEntryText(pos = (20, 0), size = (720, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),
+					MultiContentEntryPixmapAlphaBlend(pos = (760, 2), size = (32, 32), png = 1)
+				],
+				"fonts": [parseFont("MenuFont;25")],
+				"itemHeight": 35
 				}
 			</convert>
 		</widget>
@@ -418,16 +417,16 @@
 	<screen name="CrossEPG_Ordering" title="CrossEPG Order Download List" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<widget source="list" render="Listbox" position="590,170" size="610,410" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" zPosition="2">
+		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="list" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template": [
-					MultiContentEntryText(pos = (35, 0), size = (520, 32), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 0),
-					MultiContentEntryPixmapAlphaTest(pos = (490, 0), size = (25, 30), png = 1),
-					],
-				"fonts": [gFont("Regular", 22)],
-				"itemHeight": 50
+					MultiContentEntryText(pos = (20, 0), size = (720, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),
+					MultiContentEntryPixmapAlphaTest(pos = (760, 2), size = (32, 32), png = 1)
+				],
+				"fonts": [parseFont("MenuFont;25")],
+				"itemHeight": 35
 				}
 			</convert>
 		</widget>
@@ -436,27 +435,124 @@
 	<screen name="CrossEPG_Info" title="CrossEPG - DB Info" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<widget name="version" position="60,120" size="720,25" backgroundColor="TextBackground" font="Regular;26" foregroundColor="bluette" transparent="1" />
-		<ePixmap pixmap="images/line.png" position="60,150" size="480,4" zPosition="2" />
-		<widget name="create" position="60,180" size="720,25" backgroundColor="TextBackground" font="Regular;20" transparent="1" />
-		<widget name="last_update" position="60,210" size="720,25" backgroundColor="TextBackground" font="Regular;20" transparent="1" />
-		<ePixmap pixmap="images/line.png" position="60,240" size="480,4" zPosition="2" />
-		<widget name="headersdb_size" position="60,270" size="720,25" backgroundColor="TextBackground" font="Regular;20" transparent="1" />
-		<widget name="descriptorsdb_size" position="60,300" size="720,25" backgroundColor="TextBackground" font="Regular;20" transparent="1" />
-		<ePixmap pixmap="images/line.png" position="60,330" size="480,4" zPosition="2" />
-		<widget name="indexesdb_size" position="60,360" size="720,25" backgroundColor="TextBackground" font="Regular;20" transparent="1" />
-		<widget name="aliasesdb_size" position="60,390" size="720,25" backgroundColor="TextBackground" font="Regular;20" transparent="1" />
-		<widget name="total_size" position="60,420" size="720,25" backgroundColor="TextBackground" font="Regular;20" transparent="1" />
-		<ePixmap pixmap="images/line.png" position="60,450" size="480,4" zPosition="2" />
-		<widget name="channels_count" position="60,480" size="720,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="bluette" transparent="1" />
-		<widget name="events_count" position="60,510" size="720,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="bluette" transparent="1" />
-		<widget name="hashes_count" position="60,540" size="720,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="bluette" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="version" position="400,80" size="830,35" backgroundColor="TextBackground" font="TextFont;25" foregroundColor="Text" transparent="1" valign="center" />
+		<eLabel position="400,115" size="830,2" backgroundColor="Pinstripe" />
+		<widget name="create" position="420,115" size="810,35" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="last_update" position="420,150" size="810,35" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1" valign="center" />
+		<eLabel position="400,185" size="830,2" backgroundColor="Pinstripe" />
+		<widget name="headersdb_size" position="420,185" size="810,35" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="descriptorsdb_size" position="420,220" size="810,35" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1" valign="center" />
+		<eLabel position="400,255" size="830,2" backgroundColor="Pinstripe" />
+		<widget name="indexesdb_size" position="420,255" size="810,35" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="aliasesdb_size" position="420,290" size="810,35" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="total_size" position="420,325" size="810,35" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1" valign="center" />
+		<eLabel position="400,360" size="830,2" backgroundColor="Pinstripe" />
+		<widget name="channels_count" position="420,360" size="810,35" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="events_count" position="420,395" size="810,35" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="hashes_count" position="420,430" size="810,35" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1" valign="center" />
+		<eLabel position="400,465" size="830,2" backgroundColor="Pinstripe" />
 	</screen>
 
 	<screen name="CrossEPG_About" title="CrossEPG About" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<widget name="about" position="490,170" size="710,410" backgroundColor="TextBackground" font="Regular;20" transparent="1" zPosition="4" />
+		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="about" position="400,80" size="830,560" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" transparent="1" />
+	</screen>
+
+<!-- EPG-Import Plugin -->
+
+	<screen name="EPGImportConfig" title="EPG Import Configuration" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonMenu" />
+		<panel name="ScreenTemplateButtonInfo" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonHelp" />
+		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateFrame830x120" />
+		<widget name="statusbar" position="410,560" size="810,25" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="status" position="410,585" size="810,75" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="EPGImportSources" title="EPG Import Sources" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="list" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+	</screen>
+
+	<screen name="EPGImportProfile" title="EPG Import Profile" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="config" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+	</screen>
+
+	<screen name="EPGImportLog" title="EPG Import Log" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="list" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<screen name="filtersServicesSelection" title="Channel Selection" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="list" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+	</screen>
+
+	<screen name="filtersServicesSetup" title="Ignore Services List" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="list" render="Listbox" position="400,80" size="830,560" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{
+				"template": [
+					MultiContentEntryText(pos = (10, 5), size = (420, 23), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),
+					MultiContentEntryText(pos = (50, 25), size = (380, 20), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
+					MultiContentEntryText(pos = (100, 47), size = (400, 17), font = 2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2)
+				],
+				"fonts": [gFont("Regular", 21), gFont("Regular", 19), gFont("Regular", 16)],
+				"itemHeight": 70
+				}
+			</convert>
+		</widget>
+	</screen>
+
+<!-- EPGRefresh Plugin -->
+
+	<screen name="EPGRefreshConfiguration" title="EPGRefresh Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonInfo" />
+		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonHelp" />
+		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateHelp4" />
+	</screen>
+
+	<screen name="EPGRefreshServiceEditor" title="Edit Services To Refresh" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfig0" />
+	</screen>
+
+	<screen name="EPGRefreshConfigurationFunctionContextMenu" title="EPGRefresh Context Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateSMenu0" />
+	</screen>
+
+	<screen name="EPGRefreshConfigurationHelpContextMenu" title="EPGRefresh Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateSMenu0" />
 	</screen>
 </skin>
