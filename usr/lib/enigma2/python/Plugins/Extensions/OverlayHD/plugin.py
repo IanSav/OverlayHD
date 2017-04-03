@@ -1,6 +1,6 @@
 # ====================================================
 # OverlayHD Skin Manager
-# Version Date - 14-Feb-2017
+# Version Date - 28-Mar-2017
 # Version Number - 1.60
 # Repository - https://bitbucket.org/IanSav/overlayhd
 # Coding by IanSav (c) 2015-2017
@@ -130,6 +130,7 @@ colour_elements = [
 	("InfoRecordingBackground", "DeepGrey", None),
 	("InfoRecordingBorder", "Grey", None),
 	("InfoRecordingColour", "OrangeRed", None),
+	("InfoServiceData", "LightBlue", None),
 	("InfoTimesNext", "Grey", None),
 	("InfoTimesNow", "Grey", None),
 	("InfoTimesSelected", "Silver", None),
@@ -981,7 +982,7 @@ def applySkinSettings(fullinit):
 	if config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		(distro, code) = distro_configs.get(getImageDistro(), ("Unknown", "Enigma2"))
 		if fullinit:
-			print "[OverlayHD] Configuring to run with '%s' distribution." % distro
+			print "[OverlayHD] Configuring to run with '%s'." % distro
 			for screen in dom_screens:
 				elements, path = dom_screens.get(screen, (None, None))
 				if elements:

@@ -186,6 +186,7 @@
 		<color name="InfoRecordingBackground" value="DeepGrey" />
 		<color name="InfoRecordingBorder" value="Grey" />
 		<color name="InfoRecordingColour" value="OrangeRed" />
+		<color name="InfoServiceData" value="LightBlue" />
 		<color name="InfoTimesNext" value="Grey" />
 		<color name="InfoTimesNow" value="Grey" />
 		<color name="InfoTimesSelected" value="Silver" />
@@ -424,6 +425,7 @@
 		<setup key="NimSetup" image="menus/mainmenu_tasks_setup_tv.png" />
 		<setup key="IniTerrestrialLocation" image="menus/mainmenu_tasks_setup_tv.png" />
 		<setup key="ScanSetup" image="menus/mainmenu_tasks_setup_tv.png" />
+		<setup key="parentalcontrol" image="menus/mainmenu_tasks_setup_parental.png" />
 		<setup key="ParentalControlSetup" image="menus/mainmenu_tasks_setup_parental.png" />
 		<setup key="ParentalControlEditor" image="menus/mainmenu_tasks_setup_parental.png" />
 		<setup key="ParentalControlChangePin" image="menus/mainmenu_tasks_setup_parental.png" />
@@ -1189,11 +1191,6 @@
 		<widget source="help" render="Label" position="410,600" size="810,50" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
-	<screen name="ScreenTemplateInformation2">
-		<panel name="ScreenTemplateFrame830x70" />
-		<widget name="information" position="410,600" size="810,50" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
-	</screen>
-
 	<screen name="ScreenTemplateIntroduction2">
 		<panel name="ScreenTemplateFrame830x70" />
 		<widget name="introduction" position="410,600" size="810,50" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
@@ -1246,6 +1243,10 @@
 		<widget name="list" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
+	<screen name="ScreenTemplateCIList4">
+		<widget name="CiList" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+	</screen>
+
 	<screen name="ScreenTemplateConfig4">
 		<widget name="config" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
@@ -1266,24 +1267,13 @@
 		<widget name="hddlist" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
-	<screen name="ScreenTemplateList4">
-		<widget source="list" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" selectionDisabled="0" transparent="0"> <!--  itemHeight="35" -->
-			<convert type="TemplatedMultiContent">
-				{
-				"template":
-					[
-					MultiContentEntryText(pos = (20, 0), size = (790, 35), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0), # index 0 is the name
-					],
-				"fonts": [gFont("Regular", 25)],
-				"itemHeight": 35
-				}
-			</convert>
-		</widget>
-	</screen>
-
 	<screen name="ScreenTemplateListLeftMenu4">
 		<!-- Font and ItemHeight are taken from the font alias ChoiceList. -->
 		<widget name="list_left" position="400,115" size="830,385" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+	</screen>
+
+	<screen name="ScreenTemplateList4">
+		<widget name="list" position="400,80" size="830,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateLogList4">
@@ -1345,6 +1335,21 @@
 		-->
 	</screen>
 
+	<screen name="ScreenTemplateSoftwareList4">
+		<widget source="list" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" selectionDisabled="0" transparent="0"> <!--  itemHeight="35" -->
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (20, 0), size = (790, 35), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0), # index 0 is the name
+					],
+				"fonts": [gFont("Regular", 25)],
+				"itemHeight": 35
+				}
+			</convert>
+		</widget>
+	</screen>
+
 	<screen name="ScreenTemplateTimerList4">
 		<widget name="timerlist" position="400,80" size="830,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
@@ -1386,6 +1391,11 @@
 	<screen name="ScreenTemplateInfo4">
 		<panel name="ScreenTemplateFrame830x120" />
 		<widget name="info" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="ScreenTemplateInformation4">
+		<panel name="ScreenTemplateFrame830x120" />
+		<widget name="information" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateIntroduction4">
@@ -1712,6 +1722,41 @@
 		</widget>
 	</screen>
 
+<!-- Panel To Display The Service Information (245 x 15 pixels) -->
+
+	<screen name="ServiceInformationPanel" title="Service Information" flags="wfNoBorder">
+		<widget source="session.CurrentService" render="Label" position="0,0" size="35,15" backgroundColor="InfoBackground" font="InfoOtherFont;15" foregroundColor="InfoServiceData" transparent="1">
+			<convert type="PliExtraInfo">CryptoNDS</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="40,0" size="15,15" backgroundColor="InfoBackground" font="InfoOtherFont;15" foregroundColor="InfoServiceData" halign="center" transparent="1">
+			<convert type="PliExtraInfo">CryptoBeta</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="60,0" size="10,15" backgroundColor="InfoBackground" font="InfoOtherFont;15" foregroundColor="InfoServiceData" halign="center" transparent="1">
+			<convert type="PliExtraInfo">CryptoIrdeto</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="75,0" size="15,15" backgroundColor="InfoBackground" font="InfoOtherFont;15" foregroundColor="InfoServiceData" halign="center" transparent="1">
+			<convert type="PliExtraInfo">CryptoSeca</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="95,0" size="15,15" backgroundColor="InfoBackground" font="InfoOtherFont;15" foregroundColor="InfoServiceData" halign="center" transparent="1">
+			<convert type="PliExtraInfo">CryptoVia</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="115,0" size="15,15" backgroundColor="InfoBackground" font="InfoOtherFont;15" foregroundColor="InfoServiceData" halign="center" transparent="1">
+			<convert type="PliExtraInfo">CryptoNagra</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="135,0" size="25,15" backgroundColor="InfoBackground" font="InfoOtherFont;15" foregroundColor="InfoServiceData" halign="center" transparent="1">
+			<convert type="PliExtraInfo">CryptoCryptoW</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="165,0" size="25,15" backgroundColor="InfoBackground" font="InfoOtherFont;15" foregroundColor="InfoServiceData" halign="center" transparent="1">
+			<convert type="PliExtraInfo">CryptoConax</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="195,0" size="20,15" backgroundColor="InfoBackground" font="InfoOtherFont;15" foregroundColor="InfoServiceData" halign="center" transparent="1">
+			<convert type="PliExtraInfo">CryptoBiss</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="220,0" size="25,15" backgroundColor="InfoBackground" font="InfoOtherFont;15" foregroundColor="InfoServiceData" halign="right" transparent="1">
+			<convert type="PliExtraInfo">CryptoDre</convert>
+		</widget>
+	</screen>
+
 <!-- Panel To Display The Video Resolution (160 x 20 pixels) -->
 
 	<screen name="ResolutionPanel" title="Video Resolution" flags="wfNoBorder">
@@ -1819,29 +1864,29 @@
 <!-- Message Box Pop Up -->
 
 	<screen name="MessageBoxTemplate">
-		<widget name="text" position="65,10" size="100%,0" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
+		<widget name="text" position="65,10" size="700,0" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
 		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="0,0" size="53,53" alphatest="on" transparent="1" />
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="0,0" size="53,53" alphatest="on" transparent="1" />
 		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="0,0" size="53,53" alphatest="on" transparent="1" />
-		<widget name="list" position="100,100" size="100%,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="list" position="100,100" size="700,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 		<applet type="onLayoutFinish">
 self.autoResize()
 		</applet>
 	</screen>
 
-	<screen name="MessageBox" title="Message Selection..." position="center,center" size="800,10" backgroundColor="ScreenBackground" zPosition="+90">
+	<screen name="MessageBox" title="Message Selection..." position="center,center" size="700,10" backgroundColor="ScreenBackground" zPosition="+90">
 		<panel name="MessageBoxTemplate" />
 	</screen>
 
-	<screen name="MessageBoxSimple" title="Message..." position="center,center" size="800,10" backgroundColor="ScreenBackground" zPosition="+90">
+	<screen name="MessageBoxSimple" title="Message..." position="center,center" size="700,10" backgroundColor="ScreenBackground" zPosition="+90">
 		<panel name="MessageBoxTemplate" />
 	</screen>
 
 <!-- Choice Box Pop Up -->
 
-	<screen name="ChoiceBox" position="center,center" size="800,130" backgroundColor="ScreenBackground" zPosition="+90">
-		<widget name="text" position="0,0" size="800,0" backgroundColor="TextBackground" conditional="text" font="Regular;22" foregroundColor="BannerTitle" transparent="1" />
-		<widget name="list" position="100,100" size="800,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+	<screen name="ChoiceBox" position="center,center" size="700,130" backgroundColor="ScreenBackground" zPosition="+90">
+		<widget name="text" position="0,0" size="700,0" backgroundColor="TextBackground" conditional="text" font="TitleFont;20" foregroundColor="BannerTitle" transparent="1" />
+		<widget name="list" position="100,100" size="700,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 		<applet type="onLayoutFinish">
 self.autoResize()
 		</applet>
@@ -1849,17 +1894,17 @@ self.autoResize()
 
 <!-- Input Box Pop Up -->
 
-	<screen name="InputBox" title="Search" position="center,center" size="800,135" backgroundColor="ScreenBackground" zPosition="+90">
-		<widget name="text" position="10,10" size="780,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
-		<eLabel position="0,80" size="800,2" backgroundColor="Pinstripe" />
-		<widget name="input" position="10,90" size="780,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" noWrap="1" transparent="1" />
-		<eLabel position="0,125" size="800,2" backgroundColor="Pinstripe" />
+	<screen name="InputBox" title="Search" position="center,center" size="700,135" backgroundColor="ScreenBackground" zPosition="+90">
+		<widget name="text" position="10,10" size="680,50" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" transparent="1" valign="center" />
+		<eLabel position="0,80" size="700,2" backgroundColor="Pinstripe" />
+		<widget name="input" position="10,90" size="680,25" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" noWrap="1" transparent="1" />
+		<eLabel position="0,125" size="700,2" backgroundColor="Pinstripe" />
 	</screen>
 
 <!-- Text Box Pop Up -->
 
-	<screen name="TextBox" title="Message..." position="0,0" size="600,400" backgroundColor="ScreenBackground">
-		<widget name="text" position="0,0" size="600,390" backgroundColor="TextBackground" font="Regular;18" foregroundColor="Text" transparent="1" />
+	<screen name="TextBox" title="Message..." position="0,0" size="700,400" backgroundColor="ScreenBackground">
+		<widget name="text" position="0,0" size="700,390" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" transparent="1" />
 	</screen>
 
 <!-- Command Prompt Output -->

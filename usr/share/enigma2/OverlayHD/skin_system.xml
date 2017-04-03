@@ -179,11 +179,11 @@
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_browser.png" position="50,100" size="300,500" alphatest="on" transparent="1">
-			<convert type="MenuEntryCompare">device_screen</convert>
+			<convert type="MenuEntryCompare">memory_screen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="on" transparent="1">
-			<convert type="MenuEntryCompare">device_screen</convert>
+			<convert type="MenuEntryCompare">network_screen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tv_live.png" position="50,100" size="300,500" alphatest="on" transparent="1">
@@ -382,11 +382,11 @@
 	</screen>
 
 	<screen name="SystemNetworkInfoEnigma2" title="Network Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<widget source="IFtext" render="Label" position="400,80" size="225,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
-		<widget source="IF" render="Label" position="640,80" size="450,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
-		<widget source="Statustext" render="Label" position="950,80" size="150,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
-		<widget name="statuspic" position="1150,86" size="15,16" pixmaps="buttons/button_small_green.png,buttons/button_small_green_off.png" alphatest="on" transparent="1" />
-		<widget name="AboutScrollLabel" position="400,110" size="830,425" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
+		<widget source="IFtext" render="Label" position="400,80" size="150,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
+		<widget source="IF" render="Label" position="560,80" size="450,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
+		<widget source="Statustext" render="Label" position="400,105" size="150,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
+		<widget name="statuspic" position="562,111" size="15,16" pixmaps="buttons/button_small_green.png,buttons/button_small_green_off.png" alphatest="on" transparent="1" />
+		<widget name="AboutScrollLabel" position="400,155" size="830,440" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
 
 <!-- Sevice Information (MENU > Information > Service) Screens -->
@@ -712,18 +712,21 @@
 
 <!-- Cron Timer Screens -->
 
-	<screen name="CronTimers" title="Cron Manager" position="center,center" size="590,400">
+	<screen name="CronTimers" title="Cron Manager" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<widget name="lab1" position="10,0" size="100,24" font="Regular;20" transparent="0" valign="center" />
-		<widget name="labdisabled" position="110,0" size="100,24" backgroundColor="LightRed" font="Regular;20" halign="center" valign="center" zPosition="1" />
-		<widget name="labactive" position="110,0" size="100,24" backgroundColor="DullGreen" font="Regular;20" halign="center" valign="center" zPosition="2" />
-		<widget name="lab2" position="240,0" size="150,24" font="Regular;20" transparent="0" valign="center" />
-		<widget name="labstop" position="390,0" size="100,24" backgroundColor="LightRed" font="Regular;20" halign="center" valign="center" zPosition="1" />
-		<widget name="labrun" position="390,0" size="100,24" backgroundColor="DullGreen" font="Regular;20" halign="center" valign="center" zPosition="2" />
-		<widget source="list" render="Listbox" position="10,35" size="540,325" scrollbarMode="showOnDemand">
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_system.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<eLabel position="400,80" size="830,420" backgroundColor="MenuBackground" zPosition="-1" />
+		<widget name="lab1" position="420,80" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
+		<widget name="labdisabled" position="790,80" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="Red" halign="right" transparent="0" valign="center" />
+		<widget name="labactive" position="790,80" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="Green" halign="right" transparent="0" valign="center" />
+		<widget name="lab2" position="420,115" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
+		<widget name="labstop" position="790,115" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="Red" halign="right" transparent="0" valign="center" />
+		<widget name="labrun" position="790,115" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="Green" halign="right" transparent="0" valign="center" />
+		<widget source="list" render="Listbox" position="400,150" size="830,350" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="StringList" />
 		</widget>
+		<panel name="ScreenTemplateFrame830x120" />
 	</screen>
 
 <!-- VLC Transcoding Server -->
