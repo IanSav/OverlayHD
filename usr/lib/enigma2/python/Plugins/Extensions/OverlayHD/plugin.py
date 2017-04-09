@@ -1,7 +1,7 @@
 # ====================================================
 # OverlayHD Skin Manager
-# Version Date - 28-Mar-2017
-# Version Number - 1.60
+# Version Date - 8-Apr-2017
+# Version Number - 1.61
 # Repository - https://bitbucket.org/IanSav/overlayhd
 # Coding by IanSav (c) 2015-2017
 # ====================================================
@@ -304,7 +304,6 @@ banner_font_choices = [
 	("GoodTimes", _("Good Times")),
 	("KhammuRabi", _("Khammu Rabi")),
 	("NemesisFlatline", _("Nemesis Flatline")),
-	("OpenSansRegular", _("OpenSans Regular")),
 	("RobotoBlack", _("Roboto Black")),
 	("RobotoBold", _("Roboto Bold")),
 	("ValisEnigma", _("Valis Enigma"))
@@ -314,7 +313,6 @@ text_font_choices = [
 	("ArialNarrow", _("Arial Narrow")),
 	("KhammuRabi", _("Khammu Rabi")),
 	("NemesisFlatline", _("Nemesis Flatline")),
-	("OpenSansRegular", _("OpenSans Regular")),
 	("ValisEnigma", _("Valis Enigma"))
 ]
 
