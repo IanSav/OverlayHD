@@ -1,6 +1,7 @@
 <setupxml>
 	<setup key="OverlayHDSkinManager" title="OverlayHD Skin Manager">
 		<item level="2" text="OverlayHD plugin always active" description="Setting this to Yes causes the OverlayHD Skin Manager plugin to always be active / available even if the skin is not currently selected. This allows skin settings to be changed any time even though they are only used when the skin is active. Setting this to No makes the plugin active only when the skin is active.">config.plugins.skin.OverlayHD.AlwaysActive</item>
+		<item level="2" text="Show OverlayHD in Extensions menu" description="Setting this to Yes causes the OverlayHD Skin Manager plugin, if active, to also be listed in the Extensions menu.">config.plugins.skin.OverlayHD.ShowInExtensions</item>
 		<item level="0" text="OverlayHD uses grouped settings" description="Setting this to Yes causes the OverlayHD Skin Manager plugin to group selected settings into blocks that can be hidden or displayed as required. Setting this to No makes the plugin display all options as one long list.">config.plugins.skin.OverlayHD.UseGroups</item>
 		<item level="1" text="Sort OverlayHD themes by name" description="Setting this to Yes causes the themes in the OverlayHD Theme Manager list to be sorted by the theme name.">config.plugins.skin.OverlayHD.SortThemes</item>
 		<item level="1" text="Show general settings" description="Setting this to Yes causes the configuration options for general settings to be displayed." requires="config.plugins.skin.OverlayHD.UseGroups">config.plugins.skin.OverlayHD.GeneralSettings</item>

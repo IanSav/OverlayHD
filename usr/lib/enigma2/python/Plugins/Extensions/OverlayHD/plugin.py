@@ -389,6 +389,7 @@ option_elements = [
 	("MenuSettings", False, ConfigYesNo, None),
 	("PanelSettings", False, ConfigYesNo, None),
 	("RecordBlink", True, ConfigYesNo, None),
+	("ShowInExtensions", False, ConfigYesNo, None),
 	("SortThemes", False, ConfigYesNo, None),
 	("Spinner", "", ConfigSelection, spinner_choices),
 	("TextSettings", False, ConfigYesNo, None),
@@ -1177,5 +1178,7 @@ def Plugins(**kwargs):
 	list = []
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
-		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU], description="OverlayHD Skin Manager version 1.60", icon="OverlayHD.png", fnc=main))
+		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU], description="OverlayHD Skin Manager version 1.61", icon="OverlayHD.png", fnc=main))
+		if config.plugins.skin.OverlayHD.ShowInExtensions.value:
+			list.append(PluginDescriptor(name=_("OverlayHD Skin Manager"), where=[PluginDescriptor.WHERE_EXTENSIONSMENU], description="OverlayHD Skin Manager version 1.61", icon="OverlayHD.png", fnc=main))
 	return list
