@@ -1806,6 +1806,7 @@
 		<eLabel position="484,0" size="2,78" backgroundColor="PinstripeVolume" zPosition="+2" />
 		<ePixmap pixmap="images/volume.png" position="0,0" size="485,78" alphatest="on" transparent="1" zPosition="+1" />
 		<widget name="Volume" position="63,25" size="335,30" backgroundColor="VolumeBackground" foregroundColor="VolumeColour" transparent="0" />
+		<widget render="VolumeText" source="global.CurrentTime" position="63,44" size="335,30" backgroundColor="VolumeBackground" font="LCD;30" foregroundColor="VolumeColour" halign="center" transparent="1" valign="center" zPosition="+2" />
 	</screen>
 
 <!-- Key / Button Error -->
