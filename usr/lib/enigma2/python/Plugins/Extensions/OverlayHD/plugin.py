@@ -323,9 +323,10 @@ fixed_font_choices = [
 ]
 
 font_elements = [
-	("ClockFont", "RobotoBlack", banner_font_choices),
-	("TitleFont", "RobotoBlack", banner_font_choices),
+	("Body", "NemesisFlatline", text_font_choices),
 	("ButtonFont", "NemesisFlatline", text_font_choices),
+	("ChoiceList", "NemesisFlatline", text_font_choices),
+	("ClockFont", "RobotoBlack", banner_font_choices),
 	("DescriptionFont", "NemesisFlatline", text_font_choices),
 	("EPGEventFont", "NemesisFlatline", text_font_choices),
 	("EPGServiceFont", "NemesisFlatline", text_font_choices),
@@ -340,9 +341,11 @@ font_elements = [
 	("InfoOtherFont", "NemesisFlatline", text_font_choices),
 	("InfoTimeFont", "NemesisFlatline", text_font_choices),
 	("MenuFont", "NemesisFlatline", text_font_choices),
+	("MovieSelectionFont", "NemesisFlatline", text_font_choices),
 	("SMSHelperFont", "MPluss1M", fixed_font_choices),
 	("Regular", "NemesisFlatline", text_font_choices),
-	("TextFont", "NemesisFlatline", text_font_choices)
+	("TextFont", "NemesisFlatline", text_font_choices),
+	("TitleFont", "RobotoBlack", banner_font_choices)
 ]
 
 background_image_choices = [

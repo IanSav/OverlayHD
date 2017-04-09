@@ -328,7 +328,7 @@
 		<alias name="LCD" font="DSDigital" size="20" height="25" width="18" />
 		<alias name="mediaportal" font="KhammuRabi" size="20" height="25" width="18" />
 		<alias name="MenuFont" font="NemesisFlatline" size="25" height="35" width="20" />
-		<alias name="MovieSelectionFont" font="ValisEnigma" size="20" height="25" width="20" />
+		<alias name="MovieSelectionFont" font="NemesisFlatline" size="20" height="25" width="20" />
 		<alias name="Named" font="RobotoBold" size="20" height="25" width="18" />
 		<alias name="PluginBrowser0" font="NemesisFlatline" size="20" height="50" width="18" />
 		<alias name="PluginBrowser1" font="NemesisFlatline" size="16" height="50" width="18" />
