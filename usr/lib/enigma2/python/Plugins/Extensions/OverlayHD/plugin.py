@@ -723,15 +723,11 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 			self["MenuActions"] = HelpableActionMap(self, "MenuActions", {
 				"menu": (self.themeMenu, _("Menu of actions applicable to the currently highlighted theme"))
 			}, prio=0)
-
 		self["themes"] = List()
 		self.filename = resolveFilename(SCOPE_CONFIG, "OverlayHD_themes.xml")
 		self.dom_themes = None
 		try:
-			chan = open(self.filename, "r")
-			self.dom_themes = xml.etree.cElementTree.parse(chan)
-			chan.close()
-			self["themes"].updateList(self.listThemes())
+			self.dom_themes = xml.etree.cElementTree.parse(self.filename)
 		except (IOError, OSError), (err, errmsg):
 			if err == errno.ENOENT:
 				self.dom_themes = xml.etree.cElementTree.ElementTree(xml.etree.cElementTree.Element("themes"))
@@ -742,6 +738,7 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 			else:
 				self.errtext = "Error %d: %s - '%s'" % (err, errmsg, self.filename)
 				print "[OverlayHD] Error opening themes file! (%s)" % self.errtext
+		self["themes"].updateList(self.listThemes())
 		self.onShown.append(self.screenShown)
 
 	def screenShown(self):
@@ -801,8 +798,8 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 				name = theme.get("name", None)
 				list.append((name, name))
 				# print "[OverlayHD] Theme = '%s'" % name
-		if config.plugins.skin.OverlayHD.SortThemes.value:
-			list.sort(key=lambda item: item[0])
+			if config.plugins.skin.OverlayHD.SortThemes.value:
+				list.sort(key=lambda item: item[0])
 		return list
 
 	def saveThemes(self):
