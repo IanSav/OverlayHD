@@ -298,7 +298,6 @@
 		<font name="KhammuRabi" filename="fonts/md_khmurabi_10.ttf" scale="100" />
 		<font name="MPluss1M" filename="fonts/mplus-1m-bold.ttf" scale="100" />
 		<font name="NemesisFlatline" filename="fonts/nmsbd.ttf" scale="100" />
-		<font name="OpenSansRegular" filename="fonts/OpenSans-Regular.ttf" scale="100" />
 		<font name="RobotoBlack" filename="fonts/Roboto-Black.ttf" scale="100" />
 		<font name="RobotoBold" filename="fonts/Roboto-Bold.ttf" scale="100" />
 		<font name="ValisEnigma" filename="fonts/valis_enigma.ttf" scale="98" />
@@ -329,7 +328,7 @@
 		<alias name="LCD" font="DSDigital" size="20" height="25" width="18" />
 		<alias name="mediaportal" font="KhammuRabi" size="20" height="25" width="18" />
 		<alias name="MenuFont" font="NemesisFlatline" size="25" height="35" width="20" />
-		<alias name="MovieSelectionFont" font="ValisEnigma" size="20" height="25" width="20" />
+		<alias name="MovieSelectionFont" font="NemesisFlatline" size="20" height="25" width="20" />
 		<alias name="Named" font="RobotoBold" size="20" height="25" width="18" />
 		<alias name="PluginBrowser0" font="NemesisFlatline" size="20" height="50" width="18" />
 		<alias name="PluginBrowser1" font="NemesisFlatline" size="16" height="50" width="18" />
@@ -355,8 +354,8 @@
 		<parameter name="ConfigListSeperator" value="300" />
 		<parameter name="DreamexplorerName" value="62,0,1200,38" />
 		<parameter name="DreamexplorerIcon" value="15,4,30,30" />
-		<parameter name="EPGMultiColumnScales" value="5.9,6.8,1.0" />
-		<parameter name="EPGMultiColumnSpecs" value="0,153,10,149,18,10" />
+		<parameter name="EPGMultiColumnScales" value="6.5,6.0,4.5,1.5" />
+		<parameter name="EPGMultiColumnSpecs" value="0,153,10,149,18,10,120,10" />
 		<parameter name="EPGSingleColumnScales" value="5.7,6.0,1.5" />
 		<parameter name="EPGSingleColumnSpecs" value="0,125,5,135,20" />
 		<parameter name="FileListName" value="68,4,1000,34" />
@@ -1807,6 +1806,7 @@
 		<eLabel position="484,0" size="2,78" backgroundColor="PinstripeVolume" zPosition="+2" />
 		<ePixmap pixmap="images/volume.png" position="0,0" size="485,78" alphatest="on" transparent="1" zPosition="+1" />
 		<widget name="Volume" position="63,25" size="335,30" backgroundColor="VolumeBackground" foregroundColor="VolumeColour" transparent="0" />
+		<widget render="VolumeText" source="global.CurrentTime" position="63,44" size="335,30" backgroundColor="VolumeBackground" font="LCD;30" foregroundColor="VolumeColour" halign="center" transparent="1" valign="center" zPosition="+2" />
 	</screen>
 
 <!-- Key / Button Error -->
@@ -1864,10 +1864,11 @@
 <!-- Message Box Pop Up -->
 
 	<screen name="MessageBoxTemplate">
-		<widget name="text" position="65,10" size="700,0" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
 		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="0,0" size="53,53" alphatest="on" transparent="1" />
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="0,0" size="53,53" alphatest="on" transparent="1" />
 		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="0,0" size="53,53" alphatest="on" transparent="1" />
+		<widget name="text" position="65,10" size="700,0" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1" />
+		<!-- <widget name="list" position="100,100" size="700,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" /> -->
 		<widget name="list" position="100,100" size="700,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 		<applet type="onLayoutFinish">
 self.autoResize()
@@ -1885,7 +1886,7 @@ self.autoResize()
 <!-- Choice Box Pop Up -->
 
 	<screen name="ChoiceBox" position="center,center" size="700,130" backgroundColor="ScreenBackground" zPosition="+90">
-		<widget name="text" position="0,0" size="700,0" backgroundColor="TextBackground" conditional="text" font="TitleFont;20" foregroundColor="BannerTitle" transparent="1" />
+		<widget name="text" position="0,0" size="700,0" backgroundColor="TextBackground" conditional="text" font="TitleFont;25" foregroundColor="BannerTitle" transparent="1" />
 		<widget name="list" position="100,100" size="700,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 		<applet type="onLayoutFinish">
 self.autoResize()
@@ -1895,7 +1896,7 @@ self.autoResize()
 <!-- Input Box Pop Up -->
 
 	<screen name="InputBox" title="Search" position="center,center" size="700,135" backgroundColor="ScreenBackground" zPosition="+90">
-		<widget name="text" position="10,10" size="680,50" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="text" position="10,10" size="680,50" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1" valign="center" />
 		<eLabel position="0,80" size="700,2" backgroundColor="Pinstripe" />
 		<widget name="input" position="10,90" size="680,25" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" noWrap="1" transparent="1" />
 		<eLabel position="0,125" size="700,2" backgroundColor="Pinstripe" />

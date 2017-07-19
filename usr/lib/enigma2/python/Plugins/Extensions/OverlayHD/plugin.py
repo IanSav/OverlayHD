@@ -1,7 +1,7 @@
 # ====================================================
 # OverlayHD Skin Manager
-# Version Date - 28-Mar-2017
-# Version Number - 1.60
+# Version Date - 8-Apr-2017
+# Version Number - 1.61
 # Repository - https://bitbucket.org/IanSav/overlayhd
 # Coding by IanSav (c) 2015-2017
 # ====================================================
@@ -304,7 +304,6 @@ banner_font_choices = [
 	("GoodTimes", _("Good Times")),
 	("KhammuRabi", _("Khammu Rabi")),
 	("NemesisFlatline", _("Nemesis Flatline")),
-	("OpenSansRegular", _("OpenSans Regular")),
 	("RobotoBlack", _("Roboto Black")),
 	("RobotoBold", _("Roboto Bold")),
 	("ValisEnigma", _("Valis Enigma"))
@@ -314,7 +313,6 @@ text_font_choices = [
 	("ArialNarrow", _("Arial Narrow")),
 	("KhammuRabi", _("Khammu Rabi")),
 	("NemesisFlatline", _("Nemesis Flatline")),
-	("OpenSansRegular", _("OpenSans Regular")),
 	("ValisEnigma", _("Valis Enigma"))
 ]
 
@@ -325,9 +323,10 @@ fixed_font_choices = [
 ]
 
 font_elements = [
-	("ClockFont", "RobotoBlack", banner_font_choices),
-	("TitleFont", "RobotoBlack", banner_font_choices),
+	("Body", "NemesisFlatline", text_font_choices),
 	("ButtonFont", "NemesisFlatline", text_font_choices),
+	("ChoiceList", "NemesisFlatline", text_font_choices),
+	("ClockFont", "RobotoBlack", banner_font_choices),
 	("DescriptionFont", "NemesisFlatline", text_font_choices),
 	("EPGEventFont", "NemesisFlatline", text_font_choices),
 	("EPGServiceFont", "NemesisFlatline", text_font_choices),
@@ -342,9 +341,11 @@ font_elements = [
 	("InfoOtherFont", "NemesisFlatline", text_font_choices),
 	("InfoTimeFont", "NemesisFlatline", text_font_choices),
 	("MenuFont", "NemesisFlatline", text_font_choices),
+	("MovieSelectionFont", "NemesisFlatline", text_font_choices),
 	("SMSHelperFont", "MPluss1M", fixed_font_choices),
 	("Regular", "NemesisFlatline", text_font_choices),
-	("TextFont", "NemesisFlatline", text_font_choices)
+	("TextFont", "NemesisFlatline", text_font_choices),
+	("TitleFont", "RobotoBlack", banner_font_choices)
 ]
 
 background_image_choices = [
@@ -388,6 +389,7 @@ option_elements = [
 	("MenuSettings", False, ConfigYesNo, None),
 	("PanelSettings", False, ConfigYesNo, None),
 	("RecordBlink", True, ConfigYesNo, None),
+	("ShowInExtensions", False, ConfigYesNo, None),
 	("SortThemes", False, ConfigYesNo, None),
 	("Spinner", "", ConfigSelection, spinner_choices),
 	("TextSettings", False, ConfigYesNo, None),
@@ -721,15 +723,11 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 			self["MenuActions"] = HelpableActionMap(self, "MenuActions", {
 				"menu": (self.themeMenu, _("Menu of actions applicable to the currently highlighted theme"))
 			}, prio=0)
-
 		self["themes"] = List()
 		self.filename = resolveFilename(SCOPE_CONFIG, "OverlayHD_themes.xml")
 		self.dom_themes = None
 		try:
-			chan = open(self.filename, "r")
-			self.dom_themes = xml.etree.cElementTree.parse(chan)
-			chan.close()
-			self["themes"].updateList(self.listThemes())
+			self.dom_themes = xml.etree.cElementTree.parse(self.filename)
 		except (IOError, OSError), (err, errmsg):
 			if err == errno.ENOENT:
 				self.dom_themes = xml.etree.cElementTree.ElementTree(xml.etree.cElementTree.Element("themes"))
@@ -740,6 +738,7 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 			else:
 				self.errtext = "Error %d: %s - '%s'" % (err, errmsg, self.filename)
 				print "[OverlayHD] Error opening themes file! (%s)" % self.errtext
+		self["themes"].updateList(self.listThemes())
 		self.onShown.append(self.screenShown)
 
 	def screenShown(self):
@@ -799,8 +798,8 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 				name = theme.get("name", None)
 				list.append((name, name))
 				# print "[OverlayHD] Theme = '%s'" % name
-		if config.plugins.skin.OverlayHD.SortThemes.value:
-			list.sort(key=lambda item: item[0])
+			if config.plugins.skin.OverlayHD.SortThemes.value:
+				list.sort(key=lambda item: item[0])
 		return list
 
 	def saveThemes(self):
@@ -1176,5 +1175,7 @@ def Plugins(**kwargs):
 	list = []
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
-		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU], description="OverlayHD Skin Manager version 1.60", icon="OverlayHD.png", fnc=main))
+		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU], description="OverlayHD Skin Manager version 1.61", icon="OverlayHD.png", fnc=main))
+		if config.plugins.skin.OverlayHD.ShowInExtensions.value:
+			list.append(PluginDescriptor(name=_("OverlayHD Skin Manager"), where=[PluginDescriptor.WHERE_EXTENSIONSMENU], description="OverlayHD Skin Manager version 1.61", icon="OverlayHD.png", fnc=main))
 	return list
