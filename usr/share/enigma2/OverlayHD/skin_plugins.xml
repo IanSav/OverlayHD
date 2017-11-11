@@ -615,6 +615,29 @@
 		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />
 	</screen>
 
+<!-- PlexDVR Plugin -->
+
+	<screen name="PlexDVRAPI_Setup" title="PlexDRV Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/plex.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfigShort" />
+		<eLabel position="400,390" size="830,2" backgroundColor="Pinstripe" />
+		<eLabel position="400,540" size="830,2" backgroundColor="Pinstripe" />
+		<eLabel position="400,390" size="2,150" backgroundColor="Pinstripe" />
+		<eLabel position="1228,390" size="2,150" backgroundColor="Pinstripe" />
+		<widget name="TunerInfoLabel" position="410,400" size="810,125" backgroundColor="TextBackground" conditional="TunerInfoLabel" font="TextFont;22" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="information" position="410,400" size="810,125" backgroundColor="TextBackground" conditional="information" font="TextFont;22" foregroundColor="Text" transparent="1" valign="center" />
+		<panel name="ScreenTemplateDescription4" />
+	</screen>
+
+	<screen name="PlexDVRAPI_About" title="PlexDVR About" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/plex.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="about" position="400,80" size="830,560" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1" />
+	</screen>
+
 <!-- Simple Unmount Plugin -->
 
 	<screen name="SimpleUmount" title="Simple Umount" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">

@@ -1096,7 +1096,7 @@
 
 <!-- MENU > Setup > Network > OpenVPN - Uses Generic Network Service Screen -->
 
-<!-- MENU > Setup > Network > Password -->
+<!-- MENU > Setup > Network > Password - NOW HANDLED BY THE SETUP SCREEN! -->
 
 	<screen name="NetworkSetPassword" title="Network Password" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
@@ -1108,6 +1108,7 @@
 <!-- MENU > Setup > Network > Samba -->
 
 	<screen name="NetworkSamba" title="Samba Server Status" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="NetworkServiceSetup" />
 	</screen>
 

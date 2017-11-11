@@ -1482,7 +1482,7 @@
 	</screen>
 
 	<screen name="ScreenTemplateConfigShort">
-		<widget name="config" position="400,80" size="830,325" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="config" position="400,80" size="830,290" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateMenuListShort">
