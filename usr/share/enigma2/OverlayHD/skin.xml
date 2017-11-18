@@ -1809,6 +1809,12 @@
 		<widget render="VolumeText" source="global.CurrentTime" position="63,44" size="335,30" backgroundColor="VolumeBackground" font="LCD;30" foregroundColor="VolumeColour" halign="center" transparent="1" valign="center" zPosition="+2" />
 	</screen>
 
+<!-- Video Resolution -->
+
+	<screen name="VideoResolution" position="center,center" size="300,60" backgroundColor="ScreenBackground" title="Video Resolution" zPosition="+99">
+		<widget name="resolution" position="10,10" size="280,40" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1"/>
+	</screen>
+
 <!-- Key / Button Error -->
 
 	<screen name="UnhandledKey" title="UnhandledKey" position="590,50" size="100,100" backgroundColor="StatusBackground" flags="wfNoBorder" zPosition="+99">
