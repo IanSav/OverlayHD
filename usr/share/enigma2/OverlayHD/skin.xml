@@ -245,18 +245,24 @@
 
 		<!-- Legacy Colours Yet To Be Updated / Integrated -->
 		<color name="background" value="#3f000000" />
+		<color name="black" value="Black" />
+		<color name="blue" value="Blue" />
 		<color name="bluette" value="#006565ff" />
 		<color name="crypt_emm" value="#0c1a58a5" />
 		<color name="darkgrey" value="#00666666" />
 		<color name="foreground" value="#00dddddd" />
+		<color name="green" value="Green" />
 		<color name="grey" value="#00999999" />
+		<color name="red" value="Red" />
 		<color name="transparent" value="#ffffffff" />
 		<color name="transparent2" value="#ff000000" />
 		<color name="un252b4247" value="#252b4247" />
 		<color name="un808888" value="#00808888" />
 		<color name="unc3c3c9" value="#00c3c3c9" />
+		<color name="white" value="White" />
 		<color name="window-bg" value="#00333333" />
 		<color name="window-fg" value="#00999999" />
+		<color name="yellow" value="Yellow" />
 
 		<!-- Unused colours - Kept here in case they are needed...
 		<color name="abackground" value="#1300070d" />

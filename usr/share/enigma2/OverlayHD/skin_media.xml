@@ -136,13 +136,13 @@
 	</screen> -->
 
 	<!-- Only enable this screen if you wish to override the Picture Player settings which are dynamic! -->
-	<screen name="Pic_Full_View" title="Picture Viewer" position="0,0" size="1280,720" backgroundColor="PictureBackground" flags="wfNoBorder">
+	<!-- <screen name="Pic_Full_View" title="Picture Viewer" position="0,0" size="1280,720" backgroundColor="PictureBackground" flags="wfNoBorder">
 		<eLabel position="0,0" size="1280,720" backgroundColor="PictureBackground" />
 		<widget name="pic" position="30,30" size="1220,660" alphatest="on" zPosition="+1" />
 		<widget name="point" position="20,22" size="20,20" pixmap="icons/record.png" alphatest="on" transparent="1" zPosition="+2" />
 		<widget name="play_icon" position="40,22" size="20,20" pixmap="icons/ico_mp_play.png" alphatest="on" transparent="1" zPosition="+2" />
 		<widget source="file" render="Label" position="60,20" size="1170,25" borderColor="PictureLabelBorder" borderWidth="1" font="Regular;20" foregroundColor="PictureLabel" noWrap="1" transparent="1" zPosition="+2" />
-	</screen>
+	</screen> -->
 
 	<screen name="Pic_Exif" title="Picture Information" position="0,0" size="1280,720" backgroundColor="PictureBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
