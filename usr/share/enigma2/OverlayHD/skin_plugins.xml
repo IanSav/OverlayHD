@@ -1,4 +1,18 @@
 <skin>
+<!-- Add Stream URL Plugin -->
+
+	<screen name="LiveStreamingLinks" title="Add Stream URL" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="menu" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<panel name="ScreenTemplateFrame830x120" />
+		<widget source="statusbar" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" conditional="description" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="LiveStreamingLinksHeader" title="Select URL Type" position="c-150,c-100" size="300,200" backgroundColor="ScreenBackground">
+		<widget name="menu" position="10,10" size="e-20,e-10" scrollbarMode="showOnDemand" />
+	</screen>
+
 <!-- Air Player Plugin -->
 
 	<screen name="AP_ConfigScreen" title="Air Player" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
@@ -836,6 +850,24 @@
 		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_factoryreset.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<widget name="text" position="50,620" size="1180,35" font="Regular;25" transparent="1" valign="center" />
+	</screen>
+
+<!-- StreamTVPlayer Plugin -->
+
+	<screen name="StreamTVList" title="StreamTV List" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="streamlist" position="400,80" size="830,415" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
+	</screen>
+
+	<screen name="StreamTVPlayer" title="StreamTV Player" position="0,570" size="1280,190" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<ePixmap position="80,25" size="117,72" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/StreamTV/channel_background.png" alphatest="blend" transparent="1" zPosition="-1" />
+		<widget name="channel_icon" position="121,43" size="35,35" backgroundColor="ScreenBackground" />
+		<widget name="channel_name" position="250,20" size="650,40" font="Regular;36" backgroundColor="ScreenBackground" foregroundColor="White" halign="left" valign="center" />
+		<widget name="channel_uri" position="250,70" size="950,60" font="Regular;22" halign="left" valign="top" foregroundColor="White" backgroundColor="ScreenBackground" />
+		<widget source="session.CurrentService" render="Label" position="805,20" size="300,40" font="Regular;30" backgroundColor="#41000000" foregroundColor="#f4df8d" halign="right" transparent="1" valign="center">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
 	</screen>
 
 <!-- Temperature and Fan Control Plugin -->

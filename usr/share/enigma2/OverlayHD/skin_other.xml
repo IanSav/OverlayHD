@@ -170,33 +170,6 @@
 		<widget name="eventname" position="60,49" size="320,20" backgroundColor="background" font="Regular;18" halign="center" zPosition="4" />
 	</screen>
 
-	<screen name="StreamTVList" title="StreamTV List" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
-		<!--
-		<ePixmap pixmap="icons/clock.png" position="50,30" size="14,14" alphatest="on" zPosition="3" />
-		<widget source="global.CurrentTime" render="Label" position="75,30" size="80,20" backgroundColor="TextBackground" font="Named;16" foregroundColor="White" halign="left" transparent="1">
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="155,30" size="500,20" backgroundColor="TextBackground" font="Named;16" foregroundColor="White" halign="left" transparent="1">
-			<convert type="ClockToText">Date</convert>
-		</widget>
-		<eLabel position="50,102" size="1160,1" backgroundColor="Pinstripe" zPosition="2" />
-		<ePixmap pixmap="buttons/button_200x60_red.png" position="123,635" size="200,60" alphatest="on" zPosition="1" />
-		<ePixmap pixmap="buttons/button_200x60_green.png" position="398,635" size="200,60" alphatest="on" zPosition="1" />
-		<ePixmap pixmap="buttons/button_200x60_yellow.png" position="673,635" size="200,60" alphatest="on" zPosition="1" />
-		<ePixmap pixmap="buttons/button_200x60_blue.png" position="948,635" size="200,60" alphatest="on" zPosition="1" />
-		<widget source="key_red" render="Label" position="123,635" size="200,36" backgroundColor="ButtonRed" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
-		<widget source="key_green" render="Label" position="398,635" size="200,36" backgroundColor="ButtonGreen" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
-		<widget source="key_yellow" render="Label" position="673,635" size="200,36" backgroundColor="ButtonYellow" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
-		<widget source="key_blue" render="Label" position="948,635" size="200,36" backgroundColor="ButtonBlue" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
-		<eLabel position="50,625" size="1160,1" backgroundColor="Pinstripe" zPosition="1" />
-		-->
-		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<widget name="streamlist" position="400,170" size="810,415" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
-		<eLabel text="StreamTV List" position="910,80" size="300,22" backgroundColor="Black" font="Named;20" foregroundColor="Pinstripe" halign="right" transparent="1" />
-	</screen>
-
 <!-- CI Interface -->
 
 	<screen name="ProjectSettings" title="Collection settings" position="90,100" size="1100,560">
