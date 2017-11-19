@@ -1817,8 +1817,8 @@
 
 <!-- Video Resolution -->
 
-	<screen name="VideoResolution" position="center,center" size="300,60" backgroundColor="ScreenBackground" title="Video Resolution" zPosition="+99">
-		<widget name="resolution" position="10,10" size="280,40" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1"/>
+	<screen name="VideoResolution" title="Video Resolution" position="center,center" size="300,60" backgroundColor="ScreenBackground" zPosition="+99">
+		<widget name="resolution" position="10,10" size="280,40" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1" />
 	</screen>
 
 <!-- Key / Button Error -->
