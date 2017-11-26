@@ -1,7 +1,7 @@
 # ====================================================
 # OverlayHD Skin Manager
-# Version Date - 8-Apr-2017
-# Version Number - 1.61
+# Version Date - 26-Nov-2017
+# Version Number - 1.64
 # Repository - https://bitbucket.org/IanSav/overlayhd
 # Coding by IanSav (c) 2015-2017
 # ====================================================
@@ -18,7 +18,7 @@
 # commercially distributed.
 
 from Components.ActionMap import HelpableActionMap
-from Components.Label import Label
+from Components.Button import Button
 from Components.Sources.List import List
 from Components.config import config, ConfigSubsection, ConfigYesNo, ConfigEnableDisable, ConfigSelection
 from Plugins.Plugin import PluginDescriptor
@@ -515,10 +515,10 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 		HelpableScreen.__init__(self)
 		self.setup_title = _("OverlayHD Skin Manager")
 
-		self["key_red"] = Label(_("Cancel"))
-		self["key_green"] = Label(_("Save"))
-		self["key_yellow"] = Label(_("Themes"))
-		self["key_blue"] = Label(_("Default"))
+		self["key_red"] = Button(_("Cancel"))
+		self["key_green"] = Button(_("Save"))
+		self["key_yellow"] = Button(_("Themes"))
+		self["key_blue"] = Button(_("Default"))
 
 		(distro, code) = distro_configs.get(getImageDistro(), ("Unknown", "Enigma2"))
 		if code == "Beyonwiz":
@@ -693,10 +693,10 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 		self.setup_title = _("OverlayHD Theme Manager")
 		Screen.setTitle(self, self.setup_title)
 
-		self["key_red"] = Label(_("Cancel"))
-		self["key_green"] = Label(_("Apply"))
-		self["key_yellow"] = Label(_("Save"))
-		self["key_blue"] = Label(_("Create"))
+		self["key_red"] = Button(_("Cancel"))
+		self["key_green"] = Button(_("Apply"))
+		self["key_yellow"] = Button(_("Save"))
+		self["key_blue"] = Button(_("Create"))
 
 		(distro, code) = distro_configs.get(getImageDistro(), ("Unknown", "Enigma2"))
 		if code == "Beyonwiz":
@@ -1175,7 +1175,7 @@ def Plugins(**kwargs):
 	list = []
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
-		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU], description="OverlayHD Skin Manager version 1.61", icon="OverlayHD.png", fnc=main))
+		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU], description="OverlayHD Skin Manager version 1.64", icon="OverlayHD.png", fnc=main))
 		if config.plugins.skin.OverlayHD.ShowInExtensions.value:
-			list.append(PluginDescriptor(name=_("OverlayHD Skin Manager"), where=[PluginDescriptor.WHERE_EXTENSIONSMENU], description="OverlayHD Skin Manager version 1.61", icon="OverlayHD.png", fnc=main))
+			list.append(PluginDescriptor(name=_("OverlayHD Skin Manager"), where=[PluginDescriptor.WHERE_EXTENSIONSMENU], description="OverlayHD Skin Manager version 1.64", icon="OverlayHD.png", fnc=main))
 	return list
