@@ -1032,6 +1032,14 @@
 		<widget name="backupstatus" position="400,625" size="830,25" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" transparent="1" />
 	</screen>
 
+	<screen name="ImageManagerDownload" title="ViX Image Manager" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="VIXImageManager" />
+		<!-- <widget name="list" position="10,105" size="540,260" scrollbarMode="showOnDemand" />
+		<applet type="onLayoutFinish">
+			self["list"].instance.setItemHeight(25)
+		</applet> -->
+	</screen>
+
 	<screen name="VIXIPKInstaller" title="ViX IPK Installer" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
