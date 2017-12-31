@@ -245,18 +245,24 @@
 
 		<!-- Legacy Colours Yet To Be Updated / Integrated -->
 		<color name="background" value="#3f000000" />
+		<color name="black" value="Black" />
+		<color name="blue" value="Blue" />
 		<color name="bluette" value="#006565ff" />
 		<color name="crypt_emm" value="#0c1a58a5" />
 		<color name="darkgrey" value="#00666666" />
 		<color name="foreground" value="#00dddddd" />
+		<color name="green" value="Green" />
 		<color name="grey" value="#00999999" />
+		<color name="red" value="Red" />
 		<color name="transparent" value="#ffffffff" />
 		<color name="transparent2" value="#ff000000" />
 		<color name="un252b4247" value="#252b4247" />
 		<color name="un808888" value="#00808888" />
 		<color name="unc3c3c9" value="#00c3c3c9" />
+		<color name="white" value="White" />
 		<color name="window-bg" value="#00333333" />
 		<color name="window-fg" value="#00999999" />
+		<color name="yellow" value="Yellow" />
 
 		<!-- Unused colours - Kept here in case they are needed...
 		<color name="abackground" value="#1300070d" />
@@ -499,7 +505,7 @@
 		<panel position="50,35" size="305,25">
 			<panel name="ClockBannerPanel" />
 		</panel>
-		<widget source="Title" render="Label" position="360,30" size="870,35" borderColor="BannerBorder" borderWidth="1" font="TitleFont;25" foregroundColor="BannerTitle" halign="right" transparent="1" />
+		<widget source="Title" render="Label" position="360,30" size="870,35" borderColor="BannerBorder" borderWidth="1" font="TitleFont;25" foregroundColor="BannerTitle" halign="right" noWrap="1" transparent="1" />
 		<eLabel position="50,65" size="1180,2" backgroundColor="Pinstripe" />
 		<eLabel position="50,660" size="1180,2" backgroundColor="Pinstripe" />
 	</screen>
@@ -1807,6 +1813,12 @@
 		<ePixmap pixmap="images/volume.png" position="0,0" size="485,78" alphatest="on" transparent="1" zPosition="+1" />
 		<widget name="Volume" position="63,25" size="335,30" backgroundColor="VolumeBackground" foregroundColor="VolumeColour" transparent="0" />
 		<widget render="VolumeText" source="global.CurrentTime" position="63,44" size="335,30" backgroundColor="VolumeBackground" font="LCD;30" foregroundColor="VolumeColour" halign="center" transparent="1" valign="center" zPosition="+2" />
+	</screen>
+
+<!-- Video Resolution -->
+
+	<screen name="VideoResolution" title="Video Resolution" position="center,center" size="300,60" backgroundColor="ScreenBackground" zPosition="+99">
+		<widget name="resolution" position="10,10" size="280,40" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1" />
 	</screen>
 
 <!-- Key / Button Error -->
