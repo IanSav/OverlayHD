@@ -148,38 +148,35 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonHelp" />
-		<eLabel position="50,80" size="300,520" backgroundColor="Grey" />
-		<eLabel position="51,81" size="298,518" backgroundColor="Black" zPosition="+1" />
-		<widget source="cutlist" render="Listbox" position="60,90" size="280,500" scrollbarMode="showOnDemand" transparent="1" zPosition="+2">
+		<eLabel position="50,91" size="380,545" backgroundColor="Grey" />
+		<eLabel position="51,92" size="378,543" backgroundColor="Black" zPosition="+1" />
+		<widget source="cutlist" render="Listbox" position="60,101" size="360,475" scrollbarMode="showOnDemand" transparent="1" zPosition="+2">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (10, 2), size = (170, 20), text = 1, backcolor = MultiContentTemplateColor(3)),
-					MultiContentEntryText(pos = (190, 2), size = (80, 20), text = 2, flags = RT_HALIGN_CENTER, backcolor = MultiContentTemplateColor(3))
+					MultiContentEntryText(pos = (10, 2), size = (160, 20), text = 1, backcolor = MultiContentTemplateColor(4)),
+					MultiContentEntryText(pos = (180, 2), size = (80, 20), text = 2, flags = RT_HALIGN_CENTER, backcolor = MultiContentTemplateColor(4)),
+					MultiContentEntryText(pos = (270, 2), size = (70, 20), text = 3, flags = RT_HALIGN_RIGHT, backcolor = MultiContentTemplateColor(4))
 					],
 				"fonts": [gFont("Regular", 20)],
 				"itemHeight": 25
 				}
 			</convert>
 		</widget>
-		<!--
-		<ePixmap pixmap="icons/mp_buttons.png" position="146,620" size="109,13" alphatest="blend" transparent="1" />
-		-->
-		<ePixmap pixmap="icons/icon_rewind.png" position="80,620" size="36,36" alphatest="blend" transparent="1" />
-		<ePixmap pixmap="icons/icon_play.png" position="130,620" size="36,36" alphatest="blend" transparent="1" />
-		<ePixmap pixmap="icons/icon_pause.png" position="180,620" size="36,36" alphatest="blend" transparent="1" />
-		<ePixmap pixmap="icons/icon_forward.png" position="230,620" size="36,36" alphatest="blend" transparent="1" />
-		<ePixmap pixmap="icons/icon_stop.png" position="280,620" size="36,36" alphatest="blend" transparent="1" />
-		<widget name="Video" position="400,80" size="830,467" backgroundColor="TransparentBackground" />
-		<widget source="session.CurrentService" render="Label" position="400,560" size="830,25" backgroundColor="TextBackground" font="Regular;20" halign="center" transparent="1" valign="center">
+		<eLabel text="IN" position="240,578" size="80,20" backgroundColor="#004000" font="Regular;20" halign="center" zPosition="3" />
+		<widget name="InLen" position="330,578" size="70,20" backgroundColor="#004000" font="Regular;20" halign="right" zPosition="3" />
+		<eLabel text="OUT" position="240,603" size="80,20" backgroundColor="#400000" font="Regular;20" halign="center" zPosition="3" />
+		<widget name="OutLen" position="330,603" size="70,20" backgroundColor="#400000" font="Regular;20" halign="right" zPosition="3" />
+		<widget name="Video" position="462,91" size="768,432" backgroundColor="TransparentBackground" />
+		<widget source="session.CurrentService" render="Label" position="462,558" size="768,30" backgroundColor="TextBackground" font="Regular;20" halign="center" transparent="1" valign="center">
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget name="SeekState" position="400,585" size="100,25" backgroundColor="TextBackground" font="Regular;20" valign="center" transparent="1" />
-		<widget source="session.CurrentService" render="Label" position="520,585" size="710,25" backgroundColor="TextBackground" font="Regular;20" halign="right" transparent="1" valign="center">
+		<widget source="session.CurrentService" render="Label" position="462,589" size="768,25" backgroundColor="TextBackground" font="Regular;20" halign="center" transparent="1" valign="center">
 			<convert type="ServicePosition">Position,Detailed</convert>
 		</widget>
-		<widget name="Timeline" position="400,620" size="830,20" backgroundColor="Grey" foregroundColor="Black" pointer="sliders/position_arrow.png:3,5" />
+		<widget name="SeekState" position="430,614" size="65,25" backgroundColor="TextBackground" font="Regular;20" halign="right" valign="center" transparent="1" />
+		<widget name="Timeline" position="510,616" size="720,20" backgroundColor="Grey" foregroundColor="Black" pointer="sliders/position_arrow.png:3,5" />
 	</screen>
 
 	<screen name="CutListMenu" title="CutList Editor - Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
