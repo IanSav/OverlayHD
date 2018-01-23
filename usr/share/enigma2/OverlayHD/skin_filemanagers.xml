@@ -151,7 +151,7 @@
 			<convert type="EventName">Name</convert>
 		</widget>
 		<widget source="Service" render="Label" position="830,245" size="400,340" font="InfoDescriptionFont;20" foregroundColor="InfoDetailsNow" halign="block" transparent="1">
-			<convert type="EventName">FullDescription,Separated,Trimmed</convert>
+			<convert type="MovieInfo">FullDescription,Separated,Trimmed</convert>
 		</widget>
 		<widget source="Service" render="Label" position="830,605" size="400,25" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" transparent="1">
 			<convert type="EventName">Genre,Trimmed</convert>
@@ -216,7 +216,7 @@
 			<convert type="ClockToText">AsLength</convert>
 		</widget>
 		<widget source="Service" render="Label" position="50,560" size="705,95" backgroundColor="InfoBackground" font="InfoDescriptionFont;20" foregroundColor="InfoDetailsNow" halign="block" transparent="1">
-			<convert type="MovieInfo">MetaDescription</convert>
+			<convert type="MovieInfo">FullDescription,NotSeparated,Trimmed</convert>
 		</widget>
 		<widget name="numFolders" position="775,530" size="220,25" conditional="numFolders" font="InfoOtherFont;20" foregroundColor="InfoDiskStats" transparent="1" />
 		<widget name="numFiles" position="775,555" size="220,25" conditional="numFiles" font="InfoOtherFont;20" foregroundColor="InfoDiskStats" transparent="1" />
