@@ -379,7 +379,7 @@
 			<convert type="EventName">Name</convert>
 		</widget>
 		<widget source="Event" render="Pixmap" pixmap="epg/fta.png" position="1175,160" size="55,25" alphatest="blend">
-			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True,Invert</convert>
+			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,False</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="Event" render="Pixmap" pixmap="epg/icetv.png" position="1175,160" size="55,25" alphatest="blend">

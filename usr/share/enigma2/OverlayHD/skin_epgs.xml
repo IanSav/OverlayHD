@@ -16,7 +16,7 @@
 			<convert type="EventName">Name</convert>
 		</widget>
 		<widget source="Event" render="Pixmap" pixmap="epg/fta.png" position="1125,0" size="55,25" alphatest="blend">
-			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True,Invert</convert>
+			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,False</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="Event" render="Pixmap" pixmap="epg/icetv.png" position="1125,0" size="55,25" alphatest="blend">
@@ -59,7 +59,7 @@
 			<convert type="EventName">Name</convert>
 		</widget>
 		<widget source="Event" render="Pixmap" pixmap="epg/fta.png" position="805,0" size="55,25" alphatest="blend">
-			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True,Invert</convert>
+			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,False</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="Event" render="Pixmap" pixmap="epg/icetv.png" position="805,0" size="55,25" alphatest="blend">
@@ -287,7 +287,7 @@
 			<convert type="EventName">Genre,Trimmed</convert>
 		</widget>
 		<widget source="Event" render="Pixmap" pixmap="epg/fta.png" position="1175,625" size="55,25" alphatest="blend">
-			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True,Invert</convert>
+			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,False</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="Event" render="Pixmap" pixmap="epg/icetv.png" position="1175,625" size="55,25" alphatest="blend">
