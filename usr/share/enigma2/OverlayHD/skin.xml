@@ -546,43 +546,73 @@
 	</screen>
 
 	<screen name="ScreenTemplateButtonRedLegacy">
-		<ePixmap pixmap="buttons/button_legacy_red.png" position="172,670" size="225,60" alphatest="on" conditional="key_red" transparent="1" />
-		<widget name="key_red" position="172,670" size="225,35" backgroundColor="ButtonRed" font="ButtonFont;20" conditional="key_red" foregroundColor="ButtonText" halign="center" objectTypes="Button,Label" transparent="1" valign="center" zPosition="+1" />
-		<widget source="key_red" render="Label" position="172,670" size="225,35" backgroundColor="ButtonRed" conditional="key_red" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="StaticText" transparent="1" valign="center" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_legacy_red.png" position="172,670" size="225,60" alphatest="blend" objectTypes="key_red,Button,Label" transparent="1" />
+		<widget source="key_red" render="Pixmap" pixmap="buttons/button_legacy_red.png" position="172,670" size="225,60" alphatest="blend" objectTypes="key_red,StaticText" transparent="1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget name="key_red" position="172,670" size="225,35" backgroundColor="ButtonRed" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="key_red,Button,Label" transparent="1" valign="center" zPosition="+1" />
+		<widget source="key_red" render="Label" position="172,670" size="225,35" backgroundColor="ButtonRed" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="key_red,StaticText" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonRedWizard">
-		<ePixmap pixmap="buttons/button_wizard_red.png" position="172,670" size="225,35" alphatest="on" conditional="key_red" transparent="1" />
-		<widget name="key_red" position="172,670" size="225,35" backgroundColor="ButtonRed" borderColor="Black" borderWidth="1" conditional="key_red" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="Button,Label" transparent="1" valign="center" zPosition="+1" />
-		<widget source="key_red" render="Label" position="172,670" size="225,35" backgroundColor="ButtonRed" borderColor="Black" borderWidth="1" conditional="key_red" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="StaticText" transparent="1" valign="center" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_wizard_red.png" position="172,670" size="225,35" alphatest="blend" objectTypes="key_red,Button,Label" transparent="1" />
+		<widget source="key_red" render="Pixmap" pixmap="buttons/button_wizard_red.png" position="172,670" size="225,35" alphatest="blend" objectTypes="key_red,StaticText" transparent="1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget name="key_red" position="172,670" size="225,35" backgroundColor="ButtonRed" borderColor="Black" borderWidth="1" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="key_red,Button,Label" transparent="1" valign="center" zPosition="+1" />
+		<widget source="key_red" render="Label" position="172,670" size="225,35" backgroundColor="ButtonRed" borderColor="Black" borderWidth="1" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="key_red,StaticText" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonRedBlock">
-		<ePixmap pixmap="buttons/button_block_background.png" position="172,670" size="225,35" alphatest="on" conditional="key_red" transparent="1" />
-		<ePixmap pixmap="buttons/button_block_red.png" position="176,675" size="217,25" alphatest="on" conditional="key_red" transparent="1" />
-		<widget name="key_red" position="172,670" size="225,35" backgroundColor="ButtonRed" conditional="key_red" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="Button,Label" transparent="1" valign="center" zPosition="+1" />
-		<widget source="key_red" render="Label" position="172,670" size="225,35" backgroundColor="ButtonRed" conditional="key_red" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="StaticText" transparent="1" valign="center" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="172,670" size="225,35" alphatest="blend" objectTypes="key_red,Button,Label" transparent="1" />
+		<ePixmap pixmap="buttons/button_block_red.png" position="176,675" size="217,25" alphatest="blend" objectTypes="key_red,Button,Label" transparent="1" zPosition="+1" />
+		<widget source="key_red" render="Pixmap" pixmap="buttons/button_block_background.png" position="172,670" size="225,35" alphatest="blend" objectTypes="key_red,StaticText" transparent="1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget source="key_red" render="Pixmap" pixmap="buttons/button_block_red.png" position="176,675" size="217,25" alphatest="blend" objectTypes="key_red,StaticText" transparent="1" zPosition="+1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget name="key_red" position="172,670" size="225,35" backgroundColor="ButtonRed" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="key_red,Button,Label" transparent="1" valign="center" zPosition="+2" />
+		<widget source="key_red" render="Label" position="172,670" size="225,35" backgroundColor="ButtonRed" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="key_red,StaticText" transparent="1" valign="center" zPosition="+2" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonRedButton">
-		<ePixmap pixmap="buttons/button_block_background.png" position="172,670" size="225,35" alphatest="on" conditional="key_red" transparent="1" />
-		<ePixmap pixmap="buttons/button_small_red.png" position="177,678" size="15,16" alphatest="on" conditional="key_red" transparent="1" zPosition="+1" />
-		<widget name="key_red" position="197,670" size="200,35" backgroundColor="ButtonBack" conditional="key_red" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="Button,Label" transparent="1" valign="center" zPosition="+1" />
-		<widget source="key_red" render="Label" position="197,670" size="200,35" backgroundColor="ButtonBack" conditional="key_red" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="StaticText" transparent="1" valign="center" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="172,670" size="225,35" alphatest="blend" objectTypes="key_red,Button,Label" transparent="1" />
+		<ePixmap pixmap="buttons/button_small_red.png" position="177,678" size="15,16" alphatest="blend" objectTypes="key_red,Button,Label" transparent="1" zPosition="+1" />
+		<widget source="key_red" render="Pixmap" pixmap="buttons/button_block_background.png" position="172,670" size="225,35" alphatest="blend" objectTypes="key_red,StaticText" transparent="1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget source="key_red" render="Pixmap" pixmap="buttons/button_small_red.png" position="177,678" size="15,16" alphatest="blend" objectTypes="key_red,StaticText" transparent="1" zPosition="+1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget name="key_red" position="197,670" size="200,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_red,Button,Label" transparent="1" valign="center" zPosition="+2" />
+		<widget source="key_red" render="Label" position="197,670" size="200,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_red,StaticText" transparent="1" valign="center" zPosition="+2" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonRedBar">
-		<ePixmap pixmap="buttons/button_block_background.png" position="172,670" size="225,35" alphatest="on" conditional="key_red" transparent="1" />
-		<ePixmap pixmap="buttons/button_bar_red.png" position="177,676" size="5,25" alphatest="on" conditional="key_red" transparent="1" zPosition="+1" />
-		<widget name="key_red" position="187,670" size="210,35" backgroundColor="ButtonBack" conditional="key_red" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="Button,Label" transparent="1" valign="center" zPosition="+1" />
-		<widget source="key_red" render="Label" position="187,670" size="210,35" backgroundColor="ButtonBack" conditional="key_red" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="StaticText" transparent="1" valign="center" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="172,670" size="225,35" alphatest="blend" objectTypes="key_red,Button,Label" transparent="1" />
+		<ePixmap pixmap="buttons/button_bar_red.png" position="177,676" size="5,25" alphatest="blend" objectTypes="key_red,Button,Label" transparent="1" zPosition="+1" />
+		<widget source="key_red" render="Pixmap" pixmap="buttons/button_block_background.png" position="172,670" size="225,35" alphatest="blend" objectTypes="key_red,StaticText" transparent="1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget source="key_red" render="Pixmap" pixmap="buttons/button_bar_red.png" position="177,676" size="5,25" alphatest="blend" objectTypes="key_red,StaticText" transparent="1" zPosition="+1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget name="key_red" position="187,670" size="210,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_red,Button,Label" transparent="1" valign="center" zPosition="+2" />
+		<widget source="key_red" render="Label" position="187,670" size="210,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_red,StaticText" transparent="1" valign="center" zPosition="+2" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonRedCircle">
-		<ePixmap pixmap="buttons/button_block_background.png" position="172,670" size="225,35" alphatest="on" conditional="key_red" transparent="1" />
-		<ePixmap pixmap="buttons/button_circle_red.png" position="177,676" size="25,25" alphatest="on" conditional="key_red" transparent="1" zPosition="+1" />
-		<widget name="key_red" position="207,670" size="190,35" backgroundColor="ButtonBack" conditional="key_red" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="Button,Label" transparent="1" valign="center" zPosition="+1" />
-		<widget source="key_red" render="Label" position="207,670" size="190,35" backgroundColor="ButtonBack" conditional="key_red" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="StaticText" transparent="1" valign="center" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="172,670" size="225,35" alphatest="blend" objectTypes="key_red,Button,Label" transparent="1" />
+		<ePixmap pixmap="buttons/button_circle_red.png" position="177,676" size="25,25" alphatest="blend" objectTypes="key_red,Button,Label" transparent="1" zPosition="+1" />
+		<widget source="key_red" render="Pixmap" pixmap="buttons/button_block_background.png" position="172,670" size="225,35" alphatest="blend" objectTypes="key_red,StaticText" transparent="1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget source="key_red" render="Pixmap" pixmap="buttons/button_circle_red.png" position="177,676" size="25,25" alphatest="blend" objectTypes="key_red,StaticText" transparent="1" zPosition="+1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget name="key_red" position="207,670" size="190,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_red,Button,Label" transparent="1" valign="center" zPosition="+2" />
+		<widget source="key_red" render="Label" position="207,670" size="190,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_red,StaticText" transparent="1" valign="center" zPosition="+2" />
 	</screen>
 
 <!-- GREEN Button -->
@@ -592,43 +622,73 @@
 	</screen>
 
 	<screen name="ScreenTemplateButtonGreenLegacy">
-		<ePixmap pixmap="buttons/button_legacy_green.png" position="409,670" size="225,60" alphatest="on" conditional="key_green" transparent="1" />
-		<widget name="key_green" position="409,670" size="225,36" backgroundColor="ButtonGreen" conditional="key_green" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="Button,Label" transparent="1" valign="center" zPosition="+1" />
-		<widget source="key_green" render="Label" position="409,670" size="225,36" backgroundColor="ButtonGreen" conditional="key_green" font="ButtonFont;20" halign="center" foregroundColor="ButtonText" objectTypes="StaticText" transparent="1" valign="center" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_legacy_green.png" position="409,670" size="225,60" alphatest="blend" objectTypes="key_green,Button,Label" transparent="1" />
+		<widget source="key_green" render="Pixmap" pixmap="buttons/button_legacy_green.png" position="409,670" size="225,60" alphatest="blend" objectTypes="key_green,StaticText" transparent="1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget name="key_green" position="409,670" size="225,36" backgroundColor="ButtonGreen" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="key_green,Button,Label" transparent="1" valign="center" zPosition="+1" />
+		<widget source="key_green" render="Label" position="409,670" size="225,36" backgroundColor="ButtonGreen" font="ButtonFont;20" halign="center" foregroundColor="ButtonText" objectTypes="key_green,StaticText" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonGreenWizard">
-		<ePixmap pixmap="buttons/button_wizard_green.png" position="409,670" size="225,35" alphatest="on" conditional="key_green" transparent="1" />
-		<widget name="key_green" position="409,670" size="225,36" backgroundColor="ButtonGreen" borderColor="Black" borderWidth="1" conditional="key_green" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="Button,Label" transparent="1" valign="center" zPosition="+1" />
-		<widget source="key_green" render="Label" position="409,670" size="225,36" backgroundColor="ButtonGreen" borderColor="Black" borderWidth="1" conditional="key_green" font="ButtonFont;20" halign="center" foregroundColor="ButtonText" objectTypes="StaticText" transparent="1" valign="center" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_wizard_green.png" position="409,670" size="225,35" alphatest="blend" objectTypes="key_green,Button,Label" transparent="1" />
+		<widget source="key_green" render="Pixmap" pixmap="buttons/button_wizard_green.png" position="409,670" size="225,35" alphatest="blend" objectTypes="key_green,StaticText" transparent="1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget name="key_green" position="409,670" size="225,36" backgroundColor="ButtonGreen" borderColor="Black" borderWidth="1" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="key_green,Button,Label" transparent="1" valign="center" zPosition="+1" />
+		<widget source="key_green" render="Label" position="409,670" size="225,36" backgroundColor="ButtonGreen" borderColor="Black" borderWidth="1" font="ButtonFont;20" halign="center" foregroundColor="ButtonText" objectTypes="key_green,StaticText" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonGreenBlock">
-		<ePixmap pixmap="buttons/button_block_background.png" position="409,670" size="225,35" alphatest="on" conditional="key_green" transparent="1" />
-		<ePixmap pixmap="buttons/button_block_green.png" position="413,675" size="217,25" alphatest="on" conditional="key_green" transparent="1" />
-		<widget name="key_green" position="409,670" size="225,36" backgroundColor="ButtonGreen" conditional="key_green" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="Button,Label" transparent="1" valign="center" zPosition="+1" />
-		<widget source="key_green" render="Label" position="409,670" size="225,36" backgroundColor="ButtonGreen" conditional="key_green" font="ButtonFont;20" halign="center" foregroundColor="ButtonText" objectTypes="StaticText" transparent="1" valign="center" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="409,670" size="225,35" alphatest="blend" objectTypes="key_green,Button,Label" transparent="1" />
+		<ePixmap pixmap="buttons/button_block_green.png" position="413,675" size="217,25" alphatest="blend" objectTypes="key_green,Button,Label" transparent="1" zPosition="+1" />
+		<widget source="key_green" render="Pixmap" pixmap="buttons/button_block_background.png" position="409,670" size="225,35" alphatest="blend" objectTypes="key_green,StaticText" transparent="1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget source="key_green" render="Pixmap" pixmap="buttons/button_block_green.png" position="413,675" size="217,25" alphatest="blend" objectTypes="key_green,StaticText" transparent="1" zPosition="+1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget name="key_green" position="409,670" size="225,36" backgroundColor="ButtonGreen" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="key_green,Button,Label" transparent="1" valign="center" zPosition="+2" />
+		<widget source="key_green" render="Label" position="409,670" size="225,36" backgroundColor="ButtonGreen" font="ButtonFont;20" halign="center" foregroundColor="ButtonText" objectTypes="key_green,StaticText" transparent="1" valign="center" zPosition="+2" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonGreenButton">
-		<ePixmap pixmap="buttons/button_block_background.png" position="409,670" size="225,35" alphatest="on" conditional="key_green" transparent="1" />
-		<ePixmap pixmap="buttons/button_small_green.png" position="414,678" size="15,16" alphatest="on" conditional="key_green" transparent="1" zPosition="+1" />
-		<widget name="key_green" position="434,670" size="200,35" backgroundColor="ButtonBack" conditional="key_green" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="Button,Label" transparent="1" valign="center" zPosition="+1" />
-		<widget source="key_green" render="Label" position="434,670" size="200,35" backgroundColor="ButtonBack" conditional="key_green" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="StaticText" transparent="1" valign="center" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="409,670" size="225,35" alphatest="blend" objectTypes="key_green,Button,Label" transparent="1" />
+		<ePixmap pixmap="buttons/button_small_green.png" position="414,678" size="15,16" alphatest="blend" objectTypes="key_green,Button,Label" transparent="1" zPosition="+1" />
+		<widget source="key_green" render="Pixmap" pixmap="buttons/button_block_background.png" position="409,670" size="225,35" alphatest="blend" objectTypes="key_green,StaticText" transparent="1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget source="key_green" render="Pixmap" pixmap="buttons/button_small_green.png" position="414,678" size="15,16" alphatest="blend" objectTypes="key_green,StaticText" transparent="1" zPosition="+1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget name="key_green" position="434,670" size="200,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_green,Button,Label" transparent="1" valign="center" zPosition="+2" />
+		<widget source="key_green" render="Label" position="434,670" size="200,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_green,StaticText" transparent="1" valign="center" zPosition="+2" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonGreenBar">
-		<ePixmap pixmap="buttons/button_block_background.png" position="409,670" size="225,35" alphatest="on" conditional="key_green" transparent="1" />
-		<ePixmap pixmap="buttons/button_bar_green.png" position="414,676" size="5,25" alphatest="on" conditional="key_green" transparent="1" zPosition="+1" />
-		<widget name="key_green" position="424,670" size="210,35" backgroundColor="ButtonBack" conditional="key_green" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="Button,Label" transparent="1" valign="center" zPosition="+1" />
-		<widget source="key_green" render="Label" position="424,670" size="210,35" backgroundColor="ButtonBack" conditional="key_green" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="StaticText" transparent="1" valign="center" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="409,670" size="225,35" alphatest="blend" objectTypes="key_green,Button,Label" transparent="1" />
+		<ePixmap pixmap="buttons/button_bar_green.png" position="414,676" size="5,25" alphatest="blend" objectTypes="key_green,Button,Label" transparent="1" zPosition="+1" />
+		<widget source="key_green" render="Pixmap" pixmap="buttons/button_block_background.png" position="409,670" size="225,35" alphatest="blend" objectTypes="key_green,StaticText" transparent="1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget source="key_green" render="Pixmap" pixmap="buttons/button_bar_green.png" position="414,676" size="5,25" alphatest="blend" objectTypes="key_green,StaticText" transparent="1" zPosition="+1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget name="key_green" position="424,670" size="210,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_green,Button,Label" transparent="1" valign="center" zPosition="+2" />
+		<widget source="key_green" render="Label" position="424,670" size="210,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_green,StaticText" transparent="1" valign="center" zPosition="+2" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonGreenCircle">
-		<ePixmap pixmap="buttons/button_block_background.png" position="409,670" size="225,35" alphatest="on" conditional="key_green" transparent="1" />
-		<ePixmap pixmap="buttons/button_circle_green.png" position="414,676" size="25,25" alphatest="on" conditional="key_green" transparent="1" zPosition="+1" />
-		<widget name="key_green" position="444,670" size="190,35" backgroundColor="ButtonBack" conditional="key_green" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="Button,Label" transparent="1" valign="center" zPosition="+1" />
-		<widget source="key_green" render="Label" position="444,670" size="190,35" backgroundColor="ButtonBack" conditional="key_green" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="StaticText" transparent="1" valign="center" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="409,670" size="225,35" alphatest="blend" objectTypes="key_green,Button,Label" transparent="1" />
+		<ePixmap pixmap="buttons/button_circle_green.png" position="414,676" size="25,25" alphatest="blend" objectTypes="key_green,Button,Label" transparent="1" zPosition="+1" />
+		<widget source="key_green" render="Pixmap" pixmap="buttons/button_block_background.png" position="409,670" size="225,35" alphatest="blend" objectTypes="key_green,StaticText" transparent="1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget source="key_green" render="Pixmap" pixmap="buttons/button_circle_green.png" position="414,676" size="25,25" alphatest="blend" objectTypes="key_green,StaticText" transparent="1" zPosition="+1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget name="key_green" position="444,670" size="190,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_green,Button,Label" transparent="1" valign="center" zPosition="+2" />
+		<widget source="key_green" render="Label" position="444,670" size="190,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_green,StaticText" transparent="1" valign="center" zPosition="+2" />
 	</screen>
 
 <!-- YELLOW Button -->
@@ -638,43 +698,73 @@
 	</screen>
 
 	<screen name="ScreenTemplateButtonYellowLegacy">
-		<ePixmap pixmap="buttons/button_legacy_yellow.png" position="646,670" size="225,60" alphatest="on" conditional="key_yellow" transparent="1" />
-		<widget name="key_yellow" position="646,670" size="225,36" backgroundColor="ButtonYellow" conditional="key_yellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="Button,Label" transparent="1" valign="center" zPosition="+1" />
-		<widget source="key_yellow" render="Label" position="646,670" size="225,36" backgroundColor="ButtonYellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="StaticText" transparent="1" valign="center" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_legacy_yellow.png" position="646,670" size="225,60" alphatest="blend" objectTypes="key_yellow,Button,Label" transparent="1" />
+		<widget source="key_yellow" render="Pixmap" pixmap="buttons/button_legacy_yellow.png" position="646,670" size="225,60" alphatest="blend" objectTypes="key_yellow,StaticText" transparent="1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget name="key_yellow" position="646,670" size="225,36" backgroundColor="ButtonYellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="key_yellow,Button,Label" transparent="1" valign="center" zPosition="+1" />
+		<widget source="key_yellow" render="Label" position="646,670" size="225,36" backgroundColor="ButtonYellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="key_yellow,StaticText" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonYellowWizard">
-		<ePixmap pixmap="buttons/button_wizard_yellow.png" position="646,670" size="225,35" alphatest="on" conditional="key_yellow" transparent="1" />
-		<widget name="key_yellow" position="646,670" size="225,36" backgroundColor="ButtonYellow" borderColor="Black" conditional="key_yellow" borderWidth="1" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="Button,Label" transparent="1" valign="center" zPosition="+1" />
-		<widget source="key_yellow" render="Label" position="646,670" size="225,36" backgroundColor="ButtonYellow" borderColor="Black" borderWidth="1" conditional="key_yellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="StaticText" transparent="1" valign="center" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_wizard_yellow.png" position="646,670" size="225,35" alphatest="blend" objectTypes="key_yellow,Button,Label" transparent="1" />
+		<widget source="key_yellow" render="Pixmap" pixmap="buttons/button_wizard_yellow.png" position="646,670" size="225,35" alphatest="blend" objectTypes="key_yellow,StaticText" transparent="1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget name="key_yellow" position="646,670" size="225,36" backgroundColor="ButtonYellow" borderColor="Black" borderWidth="1" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="key_yellow,Button,Label" transparent="1" valign="center" zPosition="+1" />
+		<widget source="key_yellow" render="Label" position="646,670" size="225,36" backgroundColor="ButtonYellow" borderColor="Black" borderWidth="1" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="key_yellow,StaticText" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonYellowBlock">
-		<ePixmap pixmap="buttons/button_block_background.png" position="646,670" size="225,35" alphatest="on" conditional="key_yellow" transparent="1" />
-		<ePixmap pixmap="buttons/button_block_yellow.png" position="650,675" size="217,25" alphatest="on" conditional="key_yellow" transparent="1" />
-		<widget name="key_yellow" position="646,670" size="225,36" backgroundColor="ButtonYellow" conditional="key_yellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="Button,Label" transparent="1" valign="center" zPosition="+1" />
-		<widget source="key_yellow" render="Label" position="646,670" size="225,36" backgroundColor="ButtonYellow" conditional="key_yellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="StaticText" transparent="1" valign="center" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="646,670" size="225,35" alphatest="blend" objectTypes="key_yellow,Button,Label" transparent="1" />
+		<ePixmap pixmap="buttons/button_block_yellow.png" position="650,675" size="217,25" alphatest="blend" objectTypes="key_yellow,Button,Label" transparent="1" zPosition="+1" />
+		<widget source="key_yellow" render="Pixmap" pixmap="buttons/button_block_background.png" position="646,670" size="225,35" alphatest="blend" objectTypes="key_yellow,StaticText" transparent="1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget source="key_yellow" render="Pixmap" pixmap="buttons/button_block_yellow.png" position="650,675" size="217,25" alphatest="blend" objectTypes="key_yellow,StaticText" transparent="1" zPosition="+1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget name="key_yellow" position="646,670" size="225,36" backgroundColor="ButtonYellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="key_yellow,Button,Label" transparent="1" valign="center" zPosition="+2" />
+		<widget source="key_yellow" render="Label" position="646,670" size="225,36" backgroundColor="ButtonYellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="key_yellow,StaticText" transparent="1" valign="center" zPosition="+2" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonYellowButton">
-		<ePixmap pixmap="buttons/button_block_background.png" position="646,670" size="225,35" alphatest="on" conditional="key_yellow" transparent="1" />
-		<ePixmap pixmap="buttons/button_small_yellow.png" position="651,678" size="15,16" alphatest="on" conditional="key_yellow" transparent="1" zPosition="+1" />
-		<widget name="key_yellow" position="671,670" size="200,35" backgroundColor="ButtonBack" conditional="key_yellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="Button,Label" transparent="1" valign="center" zPosition="+1" />
-		<widget source="key_yellow" render="Label" position="671,670" size="200,35" backgroundColor="ButtonBack" conditional="key_yellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="StaticText" transparent="1" valign="center" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="646,670" size="225,35" alphatest="blend" objectTypes="key_yellow,Button,Label" transparent="1" />
+		<ePixmap pixmap="buttons/button_small_yellow.png" position="651,678" size="15,16" alphatest="blend" objectTypes="key_yellow,Button,Label" transparent="1" zPosition="+1" />
+		<widget source="key_yellow" render="Pixmap" pixmap="buttons/button_block_background.png" position="646,670" size="225,35" alphatest="blend" objectTypes="key_yellow,StaticText" transparent="1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget source="key_yellow" render="Pixmap" pixmap="buttons/button_small_yellow.png" position="651,678" size="15,16" alphatest="blend" objectTypes="key_yellow,StaticText" transparent="1" zPosition="+1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget name="key_yellow" position="671,670" size="200,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_yellow,Button,Label" transparent="1" valign="center" zPosition="+2" />
+		<widget source="key_yellow" render="Label" position="671,670" size="200,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_yellow,StaticText" transparent="1" valign="center" zPosition="+2" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonYellowBar">
-		<ePixmap pixmap="buttons/button_block_background.png" position="646,670" size="225,35" alphatest="on" conditional="key_yellow" transparent="1" />
-		<ePixmap pixmap="buttons/button_bar_yellow.png" position="651,676" size="5,25" alphatest="on" conditional="key_yellow" transparent="1" zPosition="+1" />
-		<widget name="key_yellow" position="661,670" size="210,35" backgroundColor="ButtonBack" conditional="key_yellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="Button,Label" transparent="1" valign="center" zPosition="+1" />
-		<widget source="key_yellow" render="Label" position="661,670" size="210,35" backgroundColor="ButtonBack" conditional="key_yellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="StaticText" transparent="1" valign="center" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="646,670" size="225,35" alphatest="blend" objectTypes="key_yellow,Button,Label" transparent="1" />
+		<ePixmap pixmap="buttons/button_bar_yellow.png" position="651,676" size="5,25" alphatest="blend" objectTypes="key_yellow,Button,Label" transparent="1" zPosition="+1" />
+		<widget source="key_yellow" render="Pixmap" pixmap="buttons/button_block_background.png" position="646,670" size="225,35" alphatest="blend" objectTypes="key_yellow,StaticText" transparent="1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget source="key_yellow" render="Pixmap" pixmap="buttons/button_bar_yellow.png" position="651,676" size="5,25" alphatest="blend" objectTypes="key_yellow,StaticText" transparent="1" zPosition="+1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget name="key_yellow" position="661,670" size="210,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_yellow,Button,Label" transparent="1" valign="center" zPosition="+2" />
+		<widget source="key_yellow" render="Label" position="661,670" size="210,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_yellow,StaticText" transparent="1" valign="center" zPosition="+2" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonYellowCircle">
-		<ePixmap pixmap="buttons/button_block_background.png" position="646,670" size="225,35" alphatest="on" conditional="key_yellow" transparent="1" />
-		<ePixmap pixmap="buttons/button_circle_yellow.png" position="651,676" size="25,25" alphatest="on" conditional="key_yellow" transparent="1" zPosition="+1" />
-		<widget name="key_yellow" position="681,670" size="190,35" backgroundColor="ButtonBack" conditional="key_yellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="Button,Label" transparent="1" valign="center" zPosition="+1" />
-		<widget source="key_yellow" render="Label" position="681,670" size="190,35" backgroundColor="ButtonBack" conditional="key_yellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="StaticText" transparent="1" valign="center" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="646,670" size="225,35" alphatest="blend" objectTypes="key_yellow,Button,Label" transparent="1" />
+		<ePixmap pixmap="buttons/button_circle_yellow.png" position="651,676" size="25,25" alphatest="blend" objectTypes="key_yellow,Button,Label" transparent="1" zPosition="+1" />
+		<widget source="key_yellow" render="Pixmap" pixmap="buttons/button_block_background.png" position="646,670" size="225,35" alphatest="blend" objectTypes="key_yellow,StaticText" transparent="1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget source="key_yellow" render="Pixmap" pixmap="buttons/button_circle_yellow.png" position="651,676" size="25,25" alphatest="blend" objectTypes="key_yellow,StaticText" transparent="1" zPosition="+1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget name="key_yellow" position="681,670" size="190,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_yellow,Button,Label" transparent="1" valign="center" zPosition="+2" />
+		<widget source="key_yellow" render="Label" position="681,670" size="190,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_yellow,StaticText" transparent="1" valign="center" zPosition="+2" />
 	</screen>
 
 <!-- BLUE Button -->
@@ -684,43 +774,73 @@
 	</screen>
 
 	<screen name="ScreenTemplateButtonBlueLegacy">
-		<ePixmap pixmap="buttons/button_legacy_blue.png" position="883,670" size="225,60" alphatest="on" conditional="key_blue" transparent="1" />
-		<widget name="key_blue" position="883,670" size="225,36" backgroundColor="ButtonBlue" conditional="key_blue" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="Button,Label" transparent="1" valign="center" zPosition="+1" />
-		<widget source="key_blue" render="Label" position="883,670" size="225,36" backgroundColor="ButtonBlue" conditional="key_blue" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="StaticText" transparent="1" valign="center" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_legacy_blue.png" position="883,670" size="225,60" alphatest="blend" objectTypes="key_blue,Button,Label" transparent="1" />
+		<widget source="key_blue" render="Pixmap" pixmap="buttons/button_legacy_blue.png" position="883,670" size="225,60" alphatest="blend" objectTypes="key_blue,StaticText" transparent="1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget name="key_blue" position="883,670" size="225,36" backgroundColor="ButtonBlue" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="key_blue,Button,Label" transparent="1" valign="center" zPosition="+1" />
+		<widget source="key_blue" render="Label" position="883,670" size="225,36" backgroundColor="ButtonBlue" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="key_blue,StaticText" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonBlueWizard">
-		<ePixmap pixmap="buttons/button_wizard_blue.png" position="883,670" size="225,35" alphatest="on" conditional="key_blue" transparent="1" />
-		<widget name="key_blue" position="883,670" size="225,36" backgroundColor="ButtonBlue" borderColor="Black" borderWidth="1" conditional="key_blue" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="Button,Label" transparent="1" valign="center" zPosition="+1" />
-		<widget source="key_blue" render="Label" position="883,670" size="225,36" backgroundColor="ButtonBlue" borderColor="Black" borderWidth="1" conditional="key_blue" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="StaticText" transparent="1" valign="center" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_wizard_blue.png" position="883,670" size="225,35" alphatest="blend" objectTypes="key_blue,Button,Label" transparent="1" />
+		<widget source="key_blue" render="Pixmap" pixmap="buttons/button_wizard_blue.png" position="883,670" size="225,35" alphatest="blend" objectTypes="key_blue,StaticText" transparent="1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget name="key_blue" position="883,670" size="225,36" backgroundColor="ButtonBlue" borderColor="Black" borderWidth="1" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="key_blue,Button,Label" transparent="1" valign="center" zPosition="+1" />
+		<widget source="key_blue" render="Label" position="883,670" size="225,36" backgroundColor="ButtonBlue" borderColor="Black" borderWidth="1" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="key_blue,StaticText" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonBlueBlock">
-		<ePixmap pixmap="buttons/button_block_background.png" position="883,670" size="225,35" alphatest="on" conditional="key_blue" transparent="1" />
-		<ePixmap pixmap="buttons/button_block_blue.png" position="887,675" size="217,25" alphatest="on" conditional="key_blue" transparent="1" />
-		<widget name="key_blue" position="883,670" size="225,36" backgroundColor="ButtonBlue" conditional="key_blue" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="Button,Label" transparent="1" valign="center" zPosition="+1" />
-		<widget source="key_blue" render="Label" position="883,670" size="225,36" backgroundColor="ButtonBlue" conditional="key_blue" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="StaticText" transparent="1" valign="center" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="883,670" size="225,35" alphatest="blend" objectTypes="key_blue,Button,Label" transparent="1" />
+		<ePixmap pixmap="buttons/button_block_blue.png" position="887,675" size="217,25" alphatest="blend" objectTypes="key_blue,Button,Label" transparent="1" zPosition="+1" />
+		<widget source="key_blue" render="Pixmap" pixmap="buttons/button_block_background.png" position="883,670" size="225,35" alphatest="blend" objectTypes="key_blue,StaticText" transparent="1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget source="key_blue" render="Pixmap" pixmap="buttons/button_block_blue.png" position="887,675" size="217,25" alphatest="blend" objectTypes="key_blue,StaticText" transparent="1" zPosition="+1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget name="key_blue" position="883,670" size="225,36" backgroundColor="ButtonBlue" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="key_blue,Button,Label" transparent="1" valign="center" zPosition="+2" />
+		<widget source="key_blue" render="Label" position="883,670" size="225,36" backgroundColor="ButtonBlue" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="key_blue,StaticText" transparent="1" valign="center" zPosition="+2" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonBlueButton">
-		<ePixmap pixmap="buttons/button_block_background.png" position="883,670" size="225,35" alphatest="on" conditional="key_blue" transparent="1" />
-		<ePixmap pixmap="buttons/button_small_blue.png" position="888,678" size="15,16" alphatest="on" conditional="key_blue" transparent="1" zPosition="+1" />
-		<widget name="key_blue" position="908,670" size="200,35" backgroundColor="ButtonBack" conditional="key_blue" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="Button,Label" transparent="1" valign="center" zPosition="+1" />
-		<widget source="key_blue" render="Label" position="908,670" size="200,35" backgroundColor="ButtonBack" conditional="key_blue" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="StaticText" transparent="1" valign="center" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="883,670" size="225,35" alphatest="blend" objectTypes="key_blue,Button,Label" transparent="1" />
+		<ePixmap pixmap="buttons/button_small_blue.png" position="888,678" size="15,16" alphatest="blend" objectTypes="key_blue,Button,Label" transparent="1" zPosition="+1" />
+		<widget source="key_blue" render="Pixmap" pixmap="buttons/button_block_background.png" position="883,670" size="225,35" alphatest="blend" objectTypes="key_blue,StaticText" transparent="1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget source="key_blue" render="Pixmap" pixmap="buttons/button_small_blue.png" position="888,678" size="15,16" alphatest="blend" objectTypes="key_blue,StaticText" transparent="1" zPosition="+1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget name="key_blue" position="908,670" size="200,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_blue,Button,Label" transparent="1" valign="center" zPosition="+2" />
+		<widget source="key_blue" render="Label" position="908,670" size="200,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_blue,StaticText" transparent="1" valign="center" zPosition="+2" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonBlueBar">
-		<ePixmap pixmap="buttons/button_block_background.png" position="883,670" size="225,35" alphatest="on" conditional="key_blue" transparent="1" />
-		<ePixmap pixmap="buttons/button_bar_blue.png" position="888,676" size="5,25" alphatest="on" conditional="key_blue" transparent="1" zPosition="+1" />
-		<widget name="key_blue" position="898,670" size="210,35" backgroundColor="ButtonBack" conditional="key_blue" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="Button,Label" transparent="1" valign="center" zPosition="+1" />
-		<widget source="key_blue" render="Label" position="898,670" size="210,35" backgroundColor="ButtonBack" conditional="key_blue" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="StaticText" transparent="1" valign="center" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="883,670" size="225,35" alphatest="blend" objectTypes="key_blue,Button,Label" transparent="1" />
+		<ePixmap pixmap="buttons/button_bar_blue.png" position="888,676" size="5,25" alphatest="blend" objectTypes="key_blue,Button,Label" transparent="1" zPosition="+1" />
+		<widget source="key_blue" render="Pixmap" pixmap="buttons/button_block_background.png" position="883,670" size="225,35" alphatest="blend" objectTypes="key_blue,StaticText" transparent="1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget source="key_blue" render="Pixmap" pixmap="buttons/button_bar_blue.png" position="888,676" size="5,25" alphatest="blend" objectTypes="key_blue,StaticText" transparent="1" zPosition="+1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget name="key_blue" position="898,670" size="210,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_blue,Button,Label" transparent="1" valign="center" zPosition="+2" />
+		<widget source="key_blue" render="Label" position="898,670" size="210,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_blue,StaticText" transparent="1" valign="center" zPosition="+2" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonBlueCircle">
-		<ePixmap pixmap="buttons/button_block_background.png" position="883,670" size="225,35" alphatest="on" conditional="key_blue" transparent="1" />
-		<ePixmap pixmap="buttons/button_circle_blue.png" position="888,676" size="25,25" alphatest="on" conditional="key_blue" transparent="1" zPosition="+1" />
-		<widget name="key_blue" position="918,670" size="190,35" backgroundColor="ButtonBack" conditional="key_blue" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="Button,Label" transparent="1" valign="center" zPosition="+1" />
-		<widget source="key_blue" render="Label" position="918,670" size="190,35" backgroundColor="ButtonBack" conditional="key_blue" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="StaticText" transparent="1" valign="center" zPosition="+1" />
+		<ePixmap pixmap="buttons/button_block_background.png" position="883,670" size="225,35" alphatest="blend" objectTypes="key_blue,Button,Label" transparent="1" />
+		<ePixmap pixmap="buttons/button_circle_blue.png" position="888,676" size="25,25" alphatest="blend" objectTypes="key_blue,Button,Label" transparent="1" zPosition="+1" />
+		<widget source="key_blue" render="Pixmap" pixmap="buttons/button_block_background.png" position="883,670" size="225,35" alphatest="blend" objectTypes="key_blue,StaticText" transparent="1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget source="key_blue" render="Pixmap" pixmap="buttons/button_circle_blue.png" position="888,676" size="25,25" alphatest="blend" objectTypes="key_blue,StaticText" transparent="1" zPosition="+1">
+ 			<convert type="ConditionalShowHide" />
+ 		</widget>
+		<widget name="key_blue" position="918,670" size="190,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_blue,Button,Label" transparent="1" valign="center" zPosition="+2" />
+		<widget source="key_blue" render="Label" position="918,670" size="190,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_blue,StaticText" transparent="1" valign="center" zPosition="+2" />
 	</screen>
 
 <!-- All Four Colour Buttons -->
