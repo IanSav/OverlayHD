@@ -1007,11 +1007,13 @@
 		<widget name="backupstatus" position="400,625" size="830,25" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" transparent="1" />
 	</screen>
 
-	<screen name="BackupSelection" title="ViX Backup Selection" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder"><!-- XtraPluginsSelection -->
+	<!-- Already defined in skin_setup.xml  XtraPluginsSelection
+	<screen name="BackupSelection" title="ViX Backup Selection" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateCheckList0" />
 	</screen>
+	-->
 
 	<screen name="VIXBackupManagerMenu" title="ViX Backup Manager Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="Setup" />
@@ -1047,12 +1049,15 @@
 		<widget name="list" position="400,140" size="830,475" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
+	<!-- Already defined in skin_setup.xml
 	<screen name="IpkgInstaller" title="ViX Install Extensions" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_plugin.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<widget name="list" position="400,80" size="830,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
 		<panel name="ScreenTemplateSIntroduction4" />
 	</screen>
+	-->
 
 	<screen name="VIXDevicesPanel" title="ViX Mount Manager" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
