@@ -7,9 +7,9 @@
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonColours" />
 		<widget name="red" position="172,670" size="225,35" backgroundColor="ButtonRed" font="ButtonFont;20" conditional="red" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
-		<widget name="green" position="409,670" size="225,36" backgroundColor="ButtonGreen" conditional="green" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
-		<widget name="yellow" position="646,670" size="225,36" backgroundColor="ButtonYellow" conditional="yellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
-		<widget name="blue" position="883,670" size="225,36" backgroundColor="ButtonBlue" conditional="blue" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="green" position="409,670" size="225,35" backgroundColor="ButtonGreen" conditional="green" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="yellow" position="646,670" size="225,35" backgroundColor="ButtonYellow" conditional="yellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="blue" position="883,670" size="225,35" backgroundColor="ButtonBlue" conditional="blue" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget name="list_left" position="50,80" size="580,555" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 		<widget name="list_right" position="650,80" size="580,555" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
@@ -17,9 +17,9 @@
 	<screen name="FilebrowserConfigScreen" title="File Browser Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="Setup" />
 		<widget name="buttonred" position="172,670" size="225,35" backgroundColor="ButtonRed" font="ButtonFont;20" conditional="buttonred" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
-		<widget name="buttongreen" position="409,670" size="225,36" backgroundColor="ButtonGreen" conditional="buttongreen" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
-		<widget name="buttonyellow" position="646,670" size="225,36" backgroundColor="ButtonYellow" conditional="buttonyellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
-		<widget name="buttonblue" position="883,670" size="225,36" backgroundColor="ButtonBlue" conditional="buttonblue" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="buttongreen" position="409,670" size="225,35" backgroundColor="ButtonGreen" conditional="buttongreen" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="buttonyellow" position="646,670" size="225,35" backgroundColor="ButtonYellow" conditional="buttonyellow" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="buttonblue" position="883,670" size="225,35" backgroundColor="ButtonBlue" conditional="buttonblue" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 <!-- MENU - File Commander -->
