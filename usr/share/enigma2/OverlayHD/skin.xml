@@ -541,10 +541,28 @@
 		<ePixmap pixmap="buttons/button_block_menu.png" position="50,670" size="50,35" alphatest="blend" transparent="1" />
 	</screen>
 
+	<screen name="ScreenTemplateButtonMenuAuto">
+		<widget source="key_menu" render="Pixmap" pixmap="buttons/button_block_menu.png" position="50,670" size="50,35" alphatest="blend" objectTypes="key_menu,StaticText" transparent="1">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<!--
+		<widget source="key_menu" render="Label" position="50,670" size="50,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="key_help,StaticText" transparent="1" valign="center" />
+		-->
+	</screen>
+
 <!-- INFO Button -->
 
 	<screen name="ScreenTemplateButtonInfo">
 		<ePixmap pixmap="buttons/button_block_info.png" position="110,670" size="50,35" alphatest="blend" transparent="1" />
+	</screen>
+
+	<screen name="ScreenTemplateButtonInfoAuto">
+		<widget source="key_info" render="Pixmap" pixmap="buttons/button_block_info.png" position="110,670" size="50,35" alphatest="blend" objectTypes="key_info,StaticText" transparent="1">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<!--
+		<widget source="key_info" render="Label" position="110,670" size="50,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="key_help,StaticText" transparent="1" valign="center" />
+		-->
 	</screen>
 
 <!--
@@ -871,6 +889,15 @@
 		<ePixmap pixmap="buttons/button_block_text.png" position="1120,670" size="50,35" alphatest="blend" transparent="1" />
 	</screen>
 
+	<screen name="ScreenTemplateButtonTextAuto">
+		<widget source="key_text" render="Pixmap" pixmap="buttons/button_block_text.png" position="1120,670" size="50,35" alphatest="blend" objectTypes="key_text,StaticText" transparent="1">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<!--
+		<widget source="key_text" render="Label" position="1120,670" size="50,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="key_help,StaticText" transparent="1" valign="center" />
+		-->
+	</screen>
+
 	<screen name="ScreenTemplateButtonTextVKey">
 		<widget source="VKeyIcon" render="Pixmap" pixmap="buttons/button_block_text.png" position="1120,670" size="50,35" alphatest="blend" conditional="VKeyIcon" transparent="1">
 			<convert type="ConditionalShowHide" />
@@ -882,6 +909,28 @@
 
 	<screen name="ScreenTemplateButtonHelp">
 		<ePixmap pixmap="buttons/button_block_help.png" position="1180,670" size="50,35" alphatest="blend" transparent="1" />
+	</screen>
+
+	<screen name="ScreenTemplateButtonHelpAuto">
+		<widget source="key_help" render="Pixmap" pixmap="buttons/button_block_help.png" position="1180,670" size="50,35" alphatest="blend" objectTypes="key_help,StaticText" transparent="1">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<!--
+		<widget source="key_help" render="Label" position="1180,670" size="50,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" objectTypes="key_help,StaticText" transparent="1" valign="center" />
+		-->
+	</screen>
+
+<!-- All Auto and Colour Buttons -->
+
+	<screen name="ScreenTemplateButtons">
+		<panel name="ScreenTemplateButtonMenuAuto" conditional="key_menu,menu" />
+		<panel name="ScreenTemplateButtonInfoAuto" conditional="key_info,info" />
+		<panel name="ScreenTemplateButtonRed" conditional="key_red" />
+		<panel name="ScreenTemplateButtonGreen" conditional="key_green" />
+		<panel name="ScreenTemplateButtonYellow" conditional="key_yellow" />
+		<panel name="ScreenTemplateButtonBlue" conditional="key_blue" />
+		<panel name="ScreenTemplateButtonTextAuto" conditional="key_text,text" />
+		<panel name="ScreenTemplateButtonHelpAuto" conditional="key_help,help" />
 	</screen>
 
 <!-- SMS Text Entry Helper Window -->
