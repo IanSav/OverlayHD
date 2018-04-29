@@ -504,6 +504,13 @@
 		<color name="WindowTitleForeground" color="White" />
 	</windowstyle>
 
+<!-- Switch Menu ON/OFF Images -->
+
+	<switchpixmap>
+		<pixmap name="menu_on" filename="images/menu_on.png" alphatest="blend" />
+		<pixmap name="menu_off" filename="images/menu_off.png" alphatest="blend" />
+	</switchpixmap>
+
 <!-- Screen Templates To Provide The Date, Time, Headings And Buttons -->
 
 	<screen name="ScreenTemplate">
@@ -1901,13 +1908,6 @@
 			<convert type="ServiceInfo">VideoInfo</convert>
 		</widget>
 	</screen>
-
-<!-- Switch Menu ON/OFF Images -->
-
-	<switchpixmap>
-		<pixmap name="menu_on" filename="images/menu_on.png" />
-		<pixmap name="menu_off" filename="images/menu_off.png" />
-	</switchpixmap>
 
 <!-- Standby -->
 
