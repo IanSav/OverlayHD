@@ -651,6 +651,16 @@
 		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />
 	</screen>
 
+<!-- Shoot Your Screen Plugin -->
+
+	<!-- This screen is not compliant with current Enigma2 button or Setup standards! -->
+	<screen name="ShootYourScreen" title="Shoot Your Screen" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="Setup" />
+		<widget name="buttonred" position="207,670" size="190,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_red,StaticText" transparent="1" valign="center" zPosition="+2" />
+		<widget name="buttongreen" position="444,670" size="190,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_green,StaticText" transparent="1" valign="center" zPosition="+2" />
+		<widget name="buttonyellow" position="681,670" size="190,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_yellow,StaticText" transparent="1" valign="center" zPosition="+2" />
+	</screen>
+
 <!-- Simple Unmount Plugin -->
 
 	<screen name="SimpleUmount" title="Simple Umount" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
