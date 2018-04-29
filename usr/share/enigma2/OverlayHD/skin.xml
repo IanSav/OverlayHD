@@ -1526,6 +1526,11 @@
 		<widget source="help" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
+	<screen name="ScreenTemplateHintText4">
+		<panel name="ScreenTemplateFrame830x120" />
+		<widget name="hinttext" position="410,550" size="810,100" backgroundColor="TextBackground" conditional="hinttext" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
 	<screen name="ScreenTemplateInfo4">
 		<panel name="ScreenTemplateFrame830x120" />
 		<widget name="info" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
