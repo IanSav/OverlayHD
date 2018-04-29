@@ -633,6 +633,101 @@
 		<widget name="thumbnail" position="0,0" size="100,75" alphatest="on" transparent="1" /><!-- Fake entry for dynamic thumbnail resizing, currently there is no other way doing this. -->
 	</screen>
 
+<!-- YouTube -->
+
+	<!--
+	YouTubeDirBrowser, FileBrowser
+	YouTubeVirtualKeyBoard, VirtualKeyBoard
+	MoviePlayer
+	YouTubeSetup, Setup
+	-->
+
+	<screen name="YouTubeMain" title="YouTube" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<widget name="menu" pixmap="buttons/button_block_menu.png" position="50,670" size="50,35" alphatest="blend" objectTypes="menu,Pixmap" transparent="1" />
+		<widget name="info" pixmap="buttons/button_block_info.png" position="110,670" size="50,35" alphatest="blend" objectTypes="info,Pixmap" transparent="1" />
+		<panel name="ScreenTemplateButtons" />
+		<widget source="list" render="Listbox" position="400,80" size="830,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryPixmapAlphaTest(pos = (0, 1), size = (100, 72), png = 2), # Thumbnail
+					MultiContentEntryText(pos = (110, 5), size = (730, 45), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 3), # Title
+					MultiContentEntryText(pos = (610, 50), size = (200, 20), font = 1, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4), # Views
+					MultiContentEntryText(pos = (400, 50), size = (200, 20), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 5), # Duration
+					],
+				"fonts": [gFont("Regular", 20), gFont("Regular", 18)],
+				"itemHeight": 75
+				}
+			</convert>
+		</widget>
+		<widget name="thumbnail" position="0,0" size="100,72" /> # Thumbnail size in list
+		<panel name="ScreenTemplateText4" />
+		<widget name="red" position="0,0" size="0,0" conditional="red" transparent="1" />
+		<widget name="green" position="0,0" size="0,0" conditional="green" transparent="1" />
+	</screen>
+
+	<screen name="YouTubeInfo" title="YouTube Media Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtons" />
+		<widget name="pic" position="50,100" size="320,180" alphatest="on" transparent="1" />
+		<widget name="title" position="400,80" size="830,60" font="Regular;25" />
+		<widget name="description" position="400,155" size="830,405" font="Regular;20" />
+		<widget name="views" position="400,575" size="400,25" font="Regular;20" />
+		<widget name="duration" position="830,575" size="400,25" font="Regular;20" />
+		<widget name="likes" position="400,600" size="400,25" font="Regular;20" />
+		<widget name="dislikes" position="830,600" size="400,25" font="Regular;20" />
+		<widget name="published" position="400,625" size="830,25" font="Regular;20" />
+	</screen>
+
+	<screen name="YouTubeSearch" title="YouTube Search" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<widget name="menu" pixmap="buttons/button_block_menu.png" position="50,670" size="50,35" alphatest="blend" objectTypes="menu,Pixmap" transparent="1" />
+		<panel name="ScreenTemplateButtons" />
+		<panel name="ScreenTemplateButtonTextVKey" />
+		<widget name="config" position="400,80" size="830,30" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnNever" transparent="0" />
+		<widget source="list" render="Listbox" position="400,120" size="830,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (20, 0), size = (810, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0)
+					],
+				"fonts": [gFont("Regular", 20)],
+				"itemHeight": 25
+				}
+			</convert>
+		</widget>
+	</screen>
+
+	<!--
+	<screen name="YouTubeDownloadList" title="YouTube Active Video Downloads" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="TaskListScreen" />
+	</screen>
+	-->
+
+	<screen name="YouTubeDownloadList" title="YouTube Active Video Downloads" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtons" />
+		<ePixmap pixmap="menus/mainmenu_tasks_scan.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="list" render="Listbox" position="400,80" size="830,575" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (20, 0), size = (360, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1), # Title
+					MultiContentEntryText(pos = (390, 0), size = (120, 25), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 2), # State
+					MultiContentEntryProgress( pos = (520, 3), size = (200, 19), percent = -3), # Progress
+					MultiContentEntryText(pos = (730, 0), size = (80, 25), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4), # Percentage
+					],
+				"fonts": [gFont("Regular", 20)],
+				"itemHeight": 25
+				}
+			</convert>
+		</widget>
+	</screen>
+
 <!--
  |	??? Unknown
  +-->
