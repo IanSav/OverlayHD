@@ -361,8 +361,9 @@
 		<parameter name="ChoicelistDash" value="0,2,1280,35" />
 		<parameter name="ChoicelistName" value="50,2,1280,35" />
 		<parameter name="ChoicelistIcon" value="5,5,35,25" />
+		<parameter name="ConfigListSeperator" value="430" />
+		<parameter name="ConfigListSlider" value="17,0" />
 		<!--
-		<parameter name="ConfigListSeperator" value="300" />
 		<parameter name="DreamexplorerName" value="62,0,1200,38" />
 		<parameter name="DreamexplorerIcon" value="15,4,30,30" />
 		<parameter name="EPGMultiColumnScales" value="6.5,6.0,4.5,1.5" />
