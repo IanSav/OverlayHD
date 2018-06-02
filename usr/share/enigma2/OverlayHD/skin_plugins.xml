@@ -388,6 +388,28 @@
 
 	<!-- HbbTVHelper -->
 
+<!-- HRTunerProxy Plugin -->
+
+	<screen name="HRTunerProxy_Setup" title="HR-Tuner Proxy Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/plex.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<panel name="ScreenTemplateConfigShort" />
+		<eLabel position="400,390" size="830,2" backgroundColor="Pinstripe" />
+		<eLabel position="400,540" size="830,2" backgroundColor="Pinstripe" />
+		<eLabel position="400,390" size="2,150" backgroundColor="Pinstripe" />
+		<eLabel position="1228,390" size="2,150" backgroundColor="Pinstripe" />
+		<widget name="information" position="410,400" size="810,125" backgroundColor="TextBackground" conditional="information" font="TextFont;20" foregroundColor="Text" transparent="1" valign="center" />
+		<panel name="ScreenTemplateHintText4" />
+	</screen>
+
+	<screen name="HRTunerProxy_About" title="About HR-Tuner Proxy" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/plex.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget name="about" position="400,80" size="830,560" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" transparent="1" />
+	</screen>
+
 <!-- IMDb Plugin -->
 
 	<screen name="IMDB" title="IMDb Details Plugin" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
@@ -395,10 +417,10 @@
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonInfo" />
 		<panel name="ScreenTemplateButtonColours" />
-		<widget name="titellabel" position="200,80" size="950,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="titellabel" position="190,80" size="820,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
 		<widget name="menu" position="50,180" size="1180,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" zPosition="3" />
-		<widget name="poster" position="50,80" size="110,180" alphatest="on" />
-		<widget name="detailslabel" position="200,120" size="950,180" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" />
+		<widget name="poster" position="50,80" size="122,180" alphatest="on" />
+		<widget name="detailslabel" position="190,110" size="820,180" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" />
 		<widget name="castlabel" position="50,280" size="1180,350" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" />
 		<widget name="extralabel" position="50,80" size="1180,550" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" />
 		<widget name="starsbg" pixmap="images/starsbar_empty.png" position="1020,80" size="210,21" alphatest="on" transparent="1" />
@@ -629,27 +651,14 @@
 		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />
 	</screen>
 
-<!-- PlexDVR Plugin -->
+<!-- Shoot Your Screen Plugin -->
 
-	<screen name="PlexDVRAPI_Setup" title="PlexDRV Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/plex.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<panel name="ScreenTemplateConfigShort" />
-		<eLabel position="400,390" size="830,2" backgroundColor="Pinstripe" />
-		<eLabel position="400,540" size="830,2" backgroundColor="Pinstripe" />
-		<eLabel position="400,390" size="2,150" backgroundColor="Pinstripe" />
-		<eLabel position="1228,390" size="2,150" backgroundColor="Pinstripe" />
-		<widget name="TunerInfoLabel" position="410,400" size="810,125" backgroundColor="TextBackground" conditional="TunerInfoLabel" font="TextFont;22" foregroundColor="Text" transparent="1" valign="center" />
-		<widget name="information" position="410,400" size="810,125" backgroundColor="TextBackground" conditional="information" font="TextFont;22" foregroundColor="Text" transparent="1" valign="center" />
-		<panel name="ScreenTemplateDescription4" />
-	</screen>
-
-	<screen name="PlexDVRAPI_About" title="PlexDVR About" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/plex.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<widget name="about" position="400,80" size="830,560" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1" />
+	<!-- This screen is not compliant with current Enigma2 button or Setup standards! -->
+	<screen name="ShootYourScreen" title="Shoot Your Screen" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="Setup" />
+		<widget name="buttonred" position="207,670" size="190,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_red,StaticText" transparent="1" valign="center" zPosition="+2" />
+		<widget name="buttongreen" position="444,670" size="190,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_green,StaticText" transparent="1" valign="center" zPosition="+2" />
+		<widget name="buttonyellow" position="681,670" size="190,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_yellow,StaticText" transparent="1" valign="center" zPosition="+2" />
 	</screen>
 
 <!-- Simple Unmount Plugin -->
@@ -1007,11 +1016,13 @@
 		<widget name="backupstatus" position="400,625" size="830,25" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" transparent="1" />
 	</screen>
 
-	<screen name="BackupSelection" title="ViX Backup Selection" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder"><!-- XtraPluginsSelection -->
+	<!-- Already defined in skin_setup.xml  XtraPluginsSelection
+	<screen name="BackupSelection" title="ViX Backup Selection" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateCheckList0" />
 	</screen>
+	-->
 
 	<screen name="VIXBackupManagerMenu" title="ViX Backup Manager Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="Setup" />
@@ -1047,12 +1058,15 @@
 		<widget name="list" position="400,140" size="830,475" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
+	<!-- Already defined in skin_setup.xml
 	<screen name="IpkgInstaller" title="ViX Install Extensions" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup_plugin.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<widget name="list" position="400,80" size="830,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
 		<panel name="ScreenTemplateSIntroduction4" />
 	</screen>
+	-->
 
 	<screen name="VIXDevicesPanel" title="ViX Mount Manager" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />

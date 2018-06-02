@@ -1,6 +1,6 @@
 <skin>
 <!--
- |	Music
+ |	Common / Shared Media Player
  +-->
 
 <!-- MediaPlayer -->
@@ -41,6 +41,10 @@
 		<ePixmap pixmap="menus/mainmenu_tasks_backup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<panel name="ScreenTemplateFileList0" />
 	</screen>
+
+<!--
+ |	Music
+ +-->
 
 <!-- Last.FM -->
 
@@ -190,61 +194,6 @@
 		<widget name="image14" position="950,450" size="190,160" />
 		<!-- TODO: find some better picture -->
 		<widget name="highlight" position="110,272" size="190,5" />
-	</screen>
-
-<!-- Web Cams -->
-
-	<screen name="WebcamViewer" title="Webcam Viewer" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
-			<convert type="TemplatedMultiContent">
-				{
-				"template":
-					[
-					MultiContentEntryText(pos = (20, 0), size = (790, 35), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, font = 0, text = 0)
-					],
-				"fonts": [gFont("Regular", 25)],
-				"itemHeight": 35
-				}
-			</convert>
-		</widget>
-	</screen>
-
-	<screen name="TravelWebcamviewer" title="Travel Webcam Viewer" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<widget source="list" render="Listbox" position="400,80" size="830,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
-			<convert type="TemplatedMultiContent">
-				{
-				"templates":
-					{
-					"default": (75,
-						[
-						MultiContentEntryPixmapAlphaTest(pos = (0, 0), size = (100, 75), png = 4), # index 4 is the thumbnail
-						MultiContentEntryText(pos = (120, 0), size = (670, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 1), # index 1 is the Title
-						MultiContentEntryText(pos = (120, 25), size = (320, 25), font = 1, color = "TextIndented", color_sel = "TextIndentedSelected", flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 5), # index 5 is the Published Date
-						MultiContentEntryText(pos = (120, 50), size = (320, 25), font = 1, color = "TextIndented", color_sel = "TextIndentedSelected", flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 6), # index 6 is the Views Count
-						MultiContentEntryText(pos = (460, 25), size = (330, 25), font = 1, color = "TextIndented", color_sel = "TextIndentedSelected", flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 7), # index 7 is the duration
-						MultiContentEntryText(pos = (460, 50), size = (330, 25), font = 1, color = "TextIndented", color_sel = "TextIndentedSelected", flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 8), # index 8 is the ratingcount
-						]),
-					"status": (75,
-						[
-						MultiContentEntryText(pos = (20, 0), size = (790, 50), font=2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 0), # index 0 is the name
-						MultiContentEntryText(pos = (20, 50), size = (790, 25), font=3, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 1), # index 2 is the description
-						])
-					},
-				"fonts": [gFont("Regular", 22),gFont("Regular", 18),gFont("Regular", 25),gFont("Regular", 20)],
-				"itemHeight": 75
-				}
-			</convert>
-		</widget>
-		<widget name="count" position="400,625" size="140,25" backgroundColor="TextBackground" font="Regular;20" transparent="1" valign="center" />
-		<widget name="page" position="560,625" size="140,25" backgroundColor="TextBackground" font="Regular;20" transparent="1" valign="center" />
-		<widget name="currentnumbers" position="990,625" size="240,25" backgroundColor="TextBackground" font="Regular;20" halign="right" transparent="1" valign="center" />
-		<widget name="thumbnail" position="0,0" size="100,75" alphatest="on" transparent="1" /><!-- Fake entry for dynamic thumbnail resizing, currently there is no other way doing this. -->
 	</screen>
 
 <!--
@@ -623,6 +572,156 @@
 					MultiContentEntryText(pos = (10, 1), size = (340, 24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
 					],
 				"fonts": [gFont("Regular", 22),gFont("Regular", 18)],
+				"itemHeight": 25
+				}
+			</convert>
+		</widget>
+	</screen>
+
+<!-- Web Cams -->
+
+	<screen name="WebcamViewer" title="Webcam Viewer" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (20, 0), size = (790, 35), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, font = 0, text = 0)
+					],
+				"fonts": [gFont("Regular", 25)],
+				"itemHeight": 35
+				}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="TravelWebcamviewer" title="Travel Webcam Viewer" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="list" render="Listbox" position="400,80" size="830,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+			<convert type="TemplatedMultiContent">
+				{
+				"templates":
+					{
+					"default": (75,
+						[
+						MultiContentEntryPixmapAlphaTest(pos = (0, 0), size = (100, 75), png = 4), # index 4 is the thumbnail
+						MultiContentEntryText(pos = (120, 0), size = (670, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 1), # index 1 is the Title
+						MultiContentEntryText(pos = (120, 25), size = (320, 25), font = 1, color = "TextIndented", color_sel = "TextIndentedSelected", flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 5), # index 5 is the Published Date
+						MultiContentEntryText(pos = (120, 50), size = (320, 25), font = 1, color = "TextIndented", color_sel = "TextIndentedSelected", flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 6), # index 6 is the Views Count
+						MultiContentEntryText(pos = (460, 25), size = (330, 25), font = 1, color = "TextIndented", color_sel = "TextIndentedSelected", flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 7), # index 7 is the duration
+						MultiContentEntryText(pos = (460, 50), size = (330, 25), font = 1, color = "TextIndented", color_sel = "TextIndentedSelected", flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 8), # index 8 is the ratingcount
+						]),
+					"status": (75,
+						[
+						MultiContentEntryText(pos = (20, 0), size = (790, 50), font=2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 0), # index 0 is the name
+						MultiContentEntryText(pos = (20, 50), size = (790, 25), font=3, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 1), # index 2 is the description
+						])
+					},
+				"fonts": [gFont("Regular", 22),gFont("Regular", 18),gFont("Regular", 25),gFont("Regular", 20)],
+				"itemHeight": 75
+				}
+			</convert>
+		</widget>
+		<widget name="count" position="400,625" size="140,25" backgroundColor="TextBackground" font="Regular;20" transparent="1" valign="center" />
+		<widget name="page" position="560,625" size="140,25" backgroundColor="TextBackground" font="Regular;20" transparent="1" valign="center" />
+		<widget name="currentnumbers" position="990,625" size="240,25" backgroundColor="TextBackground" font="Regular;20" halign="right" transparent="1" valign="center" />
+		<widget name="thumbnail" position="0,0" size="100,75" alphatest="on" transparent="1" /><!-- Fake entry for dynamic thumbnail resizing, currently there is no other way doing this. -->
+	</screen>
+
+<!-- YouTube -->
+
+	<!--
+	YouTubeDirBrowser, FileBrowser
+	YouTubeVirtualKeyBoard, VirtualKeyBoard
+	MoviePlayer
+	YouTubeSetup, Setup
+	-->
+
+	<screen name="YouTubeMain" title="YouTube" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<widget name="menu" pixmap="buttons/button_block_menu.png" position="50,670" size="50,35" alphatest="blend" objectTypes="menu,Pixmap" transparent="1" />
+		<widget name="info" pixmap="buttons/button_block_info.png" position="110,670" size="50,35" alphatest="blend" objectTypes="info,Pixmap" transparent="1" />
+		<panel name="ScreenTemplateButtons" />
+		<widget source="list" render="Listbox" position="400,80" size="830,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryPixmapAlphaTest(pos = (0, 1), size = (100, 72), png = 2), # Thumbnail
+					MultiContentEntryText(pos = (110, 5), size = (730, 45), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 3), # Title
+					MultiContentEntryText(pos = (610, 50), size = (200, 20), font = 1, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4), # Views
+					MultiContentEntryText(pos = (400, 50), size = (200, 20), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 5), # Duration
+					],
+				"fonts": [gFont("Regular", 20), gFont("Regular", 18)],
+				"itemHeight": 75
+				}
+			</convert>
+		</widget>
+		<widget name="thumbnail" position="0,0" size="100,72" /> # Thumbnail size in list
+		<panel name="ScreenTemplateText4" />
+		<widget name="red" position="0,0" size="0,0" conditional="red" transparent="1" />
+		<widget name="green" position="0,0" size="0,0" conditional="green" transparent="1" />
+	</screen>
+
+	<screen name="YouTubeInfo" title="YouTube Media Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtons" />
+		<widget name="pic" position="50,100" size="320,180" alphatest="on" transparent="1" />
+		<widget name="title" position="400,80" size="830,60" font="Regular;25" />
+		<widget name="description" position="400,155" size="830,405" font="Regular;20" />
+		<widget name="views" position="400,575" size="400,25" font="Regular;20" />
+		<widget name="duration" position="830,575" size="400,25" font="Regular;20" />
+		<widget name="likes" position="400,600" size="400,25" font="Regular;20" />
+		<widget name="dislikes" position="830,600" size="400,25" font="Regular;20" />
+		<widget name="published" position="400,625" size="830,25" font="Regular;20" />
+	</screen>
+
+	<screen name="YouTubeSearch" title="YouTube Search" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<widget name="menu" pixmap="buttons/button_block_menu.png" position="50,670" size="50,35" alphatest="blend" objectTypes="menu,Pixmap" transparent="1" />
+		<panel name="ScreenTemplateButtons" />
+		<panel name="ScreenTemplateButtonTextVKey" />
+		<widget name="config" position="400,80" size="830,30" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnNever" transparent="0" />
+		<widget source="list" render="Listbox" position="400,120" size="830,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (20, 0), size = (810, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0)
+					],
+				"fonts": [gFont("Regular", 20)],
+				"itemHeight": 25
+				}
+			</convert>
+		</widget>
+	</screen>
+
+	<!--
+	<screen name="YouTubeDownloadList" title="YouTube Active Video Downloads" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="TaskListScreen" />
+	</screen>
+	-->
+
+	<screen name="YouTubeDownloadList" title="YouTube Active Video Downloads" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtons" />
+		<ePixmap pixmap="menus/mainmenu_tasks_scan.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<widget source="list" render="Listbox" position="400,80" size="830,575" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (20, 0), size = (360, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1), # Title
+					MultiContentEntryText(pos = (390, 0), size = (120, 25), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 2), # State
+					MultiContentEntryProgress( pos = (520, 3), size = (200, 19), percent = -3), # Progress
+					MultiContentEntryText(pos = (730, 0), size = (80, 25), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4), # Percentage
+					],
+				"fonts": [gFont("Regular", 20)],
 				"itemHeight": 25
 				}
 			</convert>

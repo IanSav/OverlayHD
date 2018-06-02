@@ -1,9 +1,9 @@
 # ====================================================
 # OverlayHD Skin Manager
-# Version Date - 26-Nov-2017
-# Version Number - 1.64
+# Version Date - 11-Feb-2018
+# Version Number - 1.65
 # Repository - https://bitbucket.org/IanSav/overlayhd
-# Coding by IanSav (c) 2015-2017
+# Coding by IanSav (c) 2015-2018
 # ====================================================
 # Remember to change the version number below!!!
 # ====================================================
@@ -1029,17 +1029,27 @@ def applySkinSettings(fullinit):
 		for (label, default, config_type, options_table) in option_elements:
 			if label == "AlwaysShowButtons":
 				for colour in button_colours:
+					elements, path = dom_screens.get(button_base + "Colours", (None, None))
+					if elements:
+						elements = elements.findall("panel")
+						for element in elements:
+							if config.plugins.skin.OverlayHD.AlwaysShowButtons.value:
+								if "conditional" in element.attrib:
+									del element.attrib["conditional"]
+							else:
+								if "conditional" not in element.attrib:
+									element.set("conditional", "key_%s" % colour)
 					for (style, label) in button_choices:
 						elements, path = dom_screens.get(button_base + colour + style, (None, None))
 						if elements:
 							elements = elements.findall("ePixmap")
 							for element in elements:
 								if config.plugins.skin.OverlayHD.AlwaysShowButtons.value:
-									if "conditional" in element.attrib:
-										del element.attrib["conditional"]
+									if "objectTypes" in element.attrib:
+										del element.attrib["objectTypes"]
 								else:
-									if "conditional" not in element.attrib:
-										element.set("conditional", "key_%s" % colour)
+									if "objectTypes" not in element.attrib:
+										element.set("objectTypes", "key_%s,Button,Label" % colour)
 			elif label == "BackgroundImage":
 				dst = eEnv.resolve("${datadir}") + "/backdrop.mvi"
 				try:
@@ -1175,7 +1185,7 @@ def Plugins(**kwargs):
 	list = []
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
-		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU], description="OverlayHD Skin Manager version 1.64", icon="OverlayHD.png", fnc=main))
+		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU], description="OverlayHD Skin Manager version 1.65", icon="OverlayHD.png", fnc=main))
 		if config.plugins.skin.OverlayHD.ShowInExtensions.value:
-			list.append(PluginDescriptor(name=_("OverlayHD Skin Manager"), where=[PluginDescriptor.WHERE_EXTENSIONSMENU], description="OverlayHD Skin Manager version 1.64", icon="OverlayHD.png", fnc=main))
+			list.append(PluginDescriptor(name=_("OverlayHD Skin Manager"), where=[PluginDescriptor.WHERE_EXTENSIONSMENU], description="OverlayHD Skin Manager version 1.65", icon="OverlayHD.png", fnc=main))
 	return list
