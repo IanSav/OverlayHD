@@ -936,7 +936,7 @@
 <!-- SMS Text Entry Helper Window -->
 
 	<screen name="ScreenTemplateSMSHelper">
-		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="50,350" size="340,270" alphatest="on" conditional="HelpWindow" transparent="1" zPosition="+1" />
+		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="50,350" size="340,270" alphatest="blend" conditional="HelpWindow" transparent="1" zPosition="+1" />
 	</screen>
 
 	<screen name="NumericalTextInputHelpDialog" position="50,350" size="340,270" backgroundColor="ScreenBackground" flags="wfNoBorder" zPosition="+1">
@@ -963,8 +963,8 @@
 	<screen name="Menu" title="Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="on" conditional="menuimage" transparent="1" zPosition="+1" /> -->
+		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="blend" conditional="menuimage" transparent="1" zPosition="+1" /> -->
 		<panel name="MenuEnigma2" base="Menu" />
 		<widget name="charlist" position="0,0" size="0,0" conditional="charlist" transparent="1" />
 		<widget name="charframe" position="0,0" size="0,0" conditional="charframe" transparent="1" />
@@ -1031,22 +1031,22 @@
 		</panel>
 		<widget source="Title" render="Label" position="360,30" size="870,35" borderColor="BannerBorder" borderWidth="1" font="TitleFont;25" foregroundColor="BannerTitle" halign="right" transparent="1" />
 		<eLabel position="50,65" size="1180,2" backgroundColor="Pinstripe" />
-		<widget source="id_mainmenu_ext" render="Micon" path="gmenu/" position="0,290" size="1280,180" alphatest="on" transparent="1" />
-		<widget name="up_sub_0" pixmap="gmenu/gmenu_up.png" position="122,470" size="35,10" alphatest="on" transparent="1" />
-		<widget name="up_sub_1" pixmap="gmenu/gmenu_up.png" position="372,470" size="35,10" alphatest="on" transparent="1" />
-		<widget name="up_sub_2" pixmap="gmenu/gmenu_up.png" position="622,470" size="35,10" alphatest="on" transparent="1" />
-		<widget name="up_sub_3" pixmap="gmenu/gmenu_up.png" position="872,470" size="35,10" alphatest="on" transparent="1" />
-		<widget name="up_sub_4" pixmap="gmenu/gmenu_up.png" position="1122,470" size="35,10" alphatest="on" transparent="1" />
+		<widget source="id_mainmenu_ext" render="Micon" path="gmenu/" position="0,290" size="1280,180" alphatest="blend" transparent="1" />
+		<widget name="up_sub_0" pixmap="gmenu/gmenu_up.png" position="122,470" size="35,10" alphatest="blend" transparent="1" />
+		<widget name="up_sub_1" pixmap="gmenu/gmenu_up.png" position="372,470" size="35,10" alphatest="blend" transparent="1" />
+		<widget name="up_sub_2" pixmap="gmenu/gmenu_up.png" position="622,470" size="35,10" alphatest="blend" transparent="1" />
+		<widget name="up_sub_3" pixmap="gmenu/gmenu_up.png" position="872,470" size="35,10" alphatest="blend" transparent="1" />
+		<widget name="up_sub_4" pixmap="gmenu/gmenu_up.png" position="1122,470" size="35,10" alphatest="blend" transparent="1" />
 		<widget name="list_sub_0" position="15,480" size="250,210" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="0" />
 		<widget name="list_sub_1" position="265,480" size="250,210" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="0" />
 		<widget name="list_sub_2" position="515,480" size="250,210" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="0" />
 		<widget name="list_sub_3" position="765,480" size="250,210" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="0" />
 		<widget name="list_sub_4" position="1015,480" size="250,210" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="0" />
-		<widget name="down_sub_0" pixmap="gmenu/gmenu_down.png" position="122,690" size="35,10" alphatest="on" transparent="1" />
-		<widget name="down_sub_1" pixmap="gmenu/gmenu_down.png" position="372,690" size="35,10" alphatest="on" transparent="1" />
-		<widget name="down_sub_2" pixmap="gmenu/gmenu_down.png" position="622,690" size="35,10" alphatest="on" transparent="1" />
-		<widget name="down_sub_3" pixmap="gmenu/gmenu_down.png" position="872,690" size="35,10" alphatest="on" transparent="1" />
-		<widget name="down_sub_4" pixmap="gmenu/gmenu_down.png" position="1122,690" size="35,10" alphatest="on" transparent="1" />
+		<widget name="down_sub_0" pixmap="gmenu/gmenu_down.png" position="122,690" size="35,10" alphatest="blend" transparent="1" />
+		<widget name="down_sub_1" pixmap="gmenu/gmenu_down.png" position="372,690" size="35,10" alphatest="blend" transparent="1" />
+		<widget name="down_sub_2" pixmap="gmenu/gmenu_down.png" position="622,690" size="35,10" alphatest="blend" transparent="1" />
+		<widget name="down_sub_3" pixmap="gmenu/gmenu_down.png" position="872,690" size="35,10" alphatest="blend" transparent="1" />
+		<widget name="down_sub_4" pixmap="gmenu/gmenu_down.png" position="1122,690" size="35,10" alphatest="blend" transparent="1" />
 	</screen>
 
 <!-- HELP - Generic Help Menu -->
@@ -1102,14 +1102,14 @@
 	<screen name="MPHelp" title="XML Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/help.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/help.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateHelp0" />
 	</screen>
 
 <!-- Panel To Display The Remote Control (154 x 500 pixels) -->
 
 	<screen name="ScreenTemplateRemote">
-		<widget name="rc" pixmaps="images/rc.png,images/rcold.png" position="0,0" size="154,500" alphatest="on" />
+		<widget name="rc" pixmaps="images/rc.png,images/rcold.png" position="0,0" size="154,500" alphatest="blend" />
 		<!--
 		 |	For the key indicator pixmaps, "position" is used for
 		 |	the position of the pixmap "hotspot".
@@ -1149,10 +1149,10 @@
 		<widget name="indicator_l14" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
 		<widget name="indicator_l15" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
 		<!-- Old pointers
-		<widget name="arrowdown" pixmap="images/arrowdown.png" position="-100,-100" size="37,70" alphatest="on" />
-		<widget name="arrowdown2" pixmap="images/arrowdown.png" position="-100,-100" size="37,70" alphatest="on" />
-		<widget name="arrowup" pixmap="images/arrowup.png" position="-100,-100" size="37,70" alphatest="on" />
-		<widget name="arrowup2" pixmap="images/arrowup.png" position="-100,-100" size="37,70" alphatest="on" />
+		<widget name="arrowdown" pixmap="images/arrowdown.png" position="-100,-100" size="37,70" alphatest="blend" />
+		<widget name="arrowdown2" pixmap="images/arrowdown.png" position="-100,-100" size="37,70" alphatest="blend" />
+		<widget name="arrowup" pixmap="images/arrowup.png" position="-100,-100" size="37,70" alphatest="blend" />
+		<widget name="arrowup2" pixmap="images/arrowup.png" position="-100,-100" size="37,70" alphatest="blend" />
 		-->
 	</screen>
 
@@ -1168,7 +1168,7 @@
 	<screen name="GeneralSetup" title="Setup Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel position="400,80" size="405,485">
 			<panel name="ScreenTemplateFrame405x485" />
 		</panel>
@@ -1212,7 +1212,7 @@
 		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateButtonTextVKey" />
 		<panel name="ScreenTemplateButtonHelp" />
-		<widget name="menuimage" position="50,100" size="300,500" alphatest="on" conditional="menuimage" transparent="1" />
+		<widget name="menuimage" position="50,100" size="300,500" alphatest="blend" conditional="menuimage" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateFootnote4" />
 		<panel name="ScreenTemplateDescription4" />
@@ -1971,7 +1971,7 @@
 
 	<!--
 	<screen name="MuteNotify" title="Mute" position="20,20" size="100,100" backgroundColor="StatusBackground" flags="wfNoBorder" zPosition="+99">
-		<ePixmap pixmap="images/mute.png" position="0,0" size="100,100" alphatest="on" transparent="1" />
+		<ePixmap pixmap="images/mute.png" position="0,0" size="100,100" alphatest="blend" transparent="1" />
 	</screen>
 	-->
 
@@ -1980,7 +1980,7 @@
 		<eLabel position="0,48" size="50,2" backgroundColor="PinstripeMute" zPosition="+1" />
 		<eLabel position="0,0" size="2,50" backgroundColor="PinstripeMute" zPosition="+1" />
 		<eLabel position="48,0" size="2,50" backgroundColor="PinstripeMute" zPosition="+1" />
-		<ePixmap pixmap="images/mute_50x50.png" position="0,0" size="50,50" alphatest="on" transparent="1" />
+		<ePixmap pixmap="images/mute_50x50.png" position="0,0" size="50,50" alphatest="blend" transparent="1" />
 	</screen>
 
 <!-- Volume -->
@@ -1990,7 +1990,7 @@
 		<eLabel position="0,76" size="485,2" backgroundColor="PinstripeVolume" zPosition="+2" />
 		<eLabel position="0,0" size="2,78" backgroundColor="PinstripeVolume" zPosition="+2" />
 		<eLabel position="484,0" size="2,78" backgroundColor="PinstripeVolume" zPosition="+2" />
-		<ePixmap pixmap="images/volume.png" position="0,0" size="485,78" alphatest="on" transparent="1" zPosition="+1" />
+		<ePixmap pixmap="images/volume.png" position="0,0" size="485,78" alphatest="blend" transparent="1" zPosition="+1" />
 		<widget name="Volume" position="63,25" size="335,30" backgroundColor="VolumeBackground" foregroundColor="VolumeColour" transparent="0" />
 		<widget render="VolumeText" source="global.CurrentTime" position="63,44" size="335,30" backgroundColor="VolumeBackground" font="LCD;30" foregroundColor="VolumeColour" halign="center" transparent="1" valign="center" zPosition="+2" />
 	</screen>
@@ -2008,7 +2008,7 @@
 		<eLabel position="0,98" size="100,2" backgroundColor="PinstripeKeyError" zPosition="+1" />
 		<eLabel position="0,0" size="2,100" backgroundColor="PinstripeKeyError" zPosition="+1" />
 		<eLabel position="98,0" size="2,100" backgroundColor="PinstripeKeyError" zPosition="+1" />
-		<widget name="UnhandledKeyPixmap" pixmap="images/unhandled-key.png" position="0,0" size="100,100" alphatest="on" transparent="1" />
+		<widget name="UnhandledKeyPixmap" pixmap="images/unhandled-key.png" position="0,0" size="100,100" alphatest="blend" transparent="1" />
 	</screen>
 
 <!-- Subtitle Display -->
@@ -2034,11 +2034,11 @@
 	</screen>
 
 	<screen name="ScreensaverBeyonwiz" position="0,0" size="1280,720" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
-		<widget name="picture" pixmap="images/beyonwiz.png" position="0,0" size="220,80" alphatest="on" transparent="0" />
+		<widget name="picture" pixmap="images/beyonwiz.png" position="0,0" size="220,80" alphatest="blend" transparent="0" />
 	</screen>
 
 	<screen name="ScreensaverEnigma2" position="0,0" size="1280,720" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
-		<widget name="picture" pixmap="images/openvix.png" position="0,0" size="220,84" alphatest="on" transparent="0" />
+		<widget name="picture" pixmap="images/openvix.png" position="0,0" size="220,84" alphatest="blend" transparent="0" />
 	</screen>
 
 <!-- Virtual Keyboard -->
@@ -2056,9 +2056,9 @@
 <!-- Message Box Pop Up -->
 
 	<screen name="MessageBoxTemplate">
-		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="0,0" size="53,53" alphatest="on" transparent="1" />
-		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="0,0" size="53,53" alphatest="on" transparent="1" />
-		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="0,0" size="53,53" alphatest="on" transparent="1" />
+		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="0,0" size="53,53" alphatest="blend" transparent="1" />
+		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="0,0" size="53,53" alphatest="blend" transparent="1" />
+		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="0,0" size="53,53" alphatest="blend" transparent="1" />
 		<widget name="text" position="65,10" size="700,0" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1" />
 		<!-- <widget name="list" position="100,100" size="700,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" /> -->
 		<widget name="list" position="100,100" size="700,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />

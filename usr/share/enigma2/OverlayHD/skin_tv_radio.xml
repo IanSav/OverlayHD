@@ -30,7 +30,7 @@
 	<screen name="HistoryZapSelector" title="History Zap..." position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tv_zaphistory.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tv_zaphistory.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -54,7 +54,7 @@
 	<screen name="ZapHistoryBrowser" title="Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tv_zaphistory.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tv_zaphistory.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="list" position="590,170" size="610,415" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
@@ -95,7 +95,7 @@
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<!-- 
-		<ePixmap pixmap="icons/icon_event.png" position="710,157" size="15,10" alphatest="on" />
+		<ePixmap pixmap="icons/icon_event.png" position="710,157" size="15,10" alphatest="blend" />
 		-->
 		<widget source="ServiceEvent" render="Label" position="710,150" size="520,25" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoProgramNow" transparent="1">
 			<convert type="EventName">NowName</convert>
@@ -124,7 +124,7 @@
 			<convert type="EventName">Genre,Trimmed</convert>
 		</widget>
 		<!--
-		<ePixmap pixmap="icons/icon_event.png" position="710,457" size="15,10" alphatest="on" />
+		<ePixmap pixmap="icons/icon_event.png" position="710,457" size="15,10" alphatest="blend" />
 		-->
 		<widget source="ServiceEvent" render="Label" position="710,450" size="520,25" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoProgramNext" noWrap="1" transparent="1">
 			<convert type="EventName">NextName</convert>
@@ -138,7 +138,7 @@
 			<convert type="ClockToText">InMinutes</convert>
 		</widget>
 		<!--
-		<ePixmap pixmap="icons/icon_event.png" position="710,507" size="15,10" alphatest="on" />
+		<ePixmap pixmap="icons/icon_event.png" position="710,507" size="15,10" alphatest="blend" />
 		-->
 		<widget source="ServiceEvent" render="Label" position="710,500" size="520,25" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoProgramNext" noWrap="1" transparent="1">
 			<convert type="EventName">ThirdName</convert>
@@ -178,7 +178,7 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tv_live.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tv_live.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateMenu0" />
 	</screen>
 
@@ -190,7 +190,7 @@
 		<panel name="ScreenTemplateButtonInfo" />
 		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateButtonHelp" />
-		<ePixmap pixmap="menus/mainmenu_tv_live.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tv_live.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="list" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorMarked="FAVMarkedBackground" backgroundColorMarkedSelected="FAVMarked" backgroundColorSelected="MenuSelected"
 			colorEventProgressbar="InfoProgressColour" colorEventProgressbarBorder="InfoProgressBorder" colorEventProgressbarBorderSelected="InfoProgressBorder" colorEventProgressbarSelected="InfoProgressColour"
 			colorFallbackItem="Magenta" colorServiceDescription="FAVService" colorServiceDescriptionFallback="FAVServiceFallback" colorServiceDescriptionSelected="FAVServiceSelected"
@@ -209,10 +209,10 @@
 	<screen name="ChannelSelectionRadio" title="Channel Selection" position="150,100" size="980,560" zPosition="-2">
 		<panel name="ScreenTemplateButtonColours" />
 		<!--
-		<ePixmap pixmap="buttons/button_200x60_red.png" position="90,500" size="200,60" alphatest="on" zPosition="2" />
-		<ePixmap pixmap="buttons/button_200x60_green.png" position="290,500" size="200,60" alphatest="on" zPosition="2" />
-		<ePixmap pixmap="buttons/button_200x60_yellow.png" position="490,500" size="200,60" alphatest="on" zPosition="2" />
-		<ePixmap pixmap="buttons/button_200x60_blue.png" position="690,500" size="200,60" alphatest="on" zPosition="2" />
+		<ePixmap pixmap="buttons/button_200x60_red.png" position="90,500" size="200,60" alphatest="blend" zPosition="2" />
+		<ePixmap pixmap="buttons/button_200x60_green.png" position="290,500" size="200,60" alphatest="blend" zPosition="2" />
+		<ePixmap pixmap="buttons/button_200x60_yellow.png" position="490,500" size="200,60" alphatest="blend" zPosition="2" />
+		<ePixmap pixmap="buttons/button_200x60_blue.png" position="690,500" size="200,60" alphatest="blend" zPosition="2" />
 		<widget name="key_red" position="90,500" size="200,36" backgroundColor="ButtonRed" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
 		<widget name="key_green" position="290,500" size="200,36" backgroundColor="ButtonGreen" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
 		<widget name="key_yellow" position="490,500" size="200,36" backgroundColor="ButtonYellow" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
@@ -231,16 +231,16 @@
 
 	<screen name="AudioSelection" title="Select Audio Track" position="center,center" size="680,280" backgroundColor="ScreenBackground">
 		<widget name="config" position="50,0" size="630,140" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showNever" transparent="0" />
-		<widget source="key_red" render="Pixmap" pixmap="buttons/key_red.png" position="5,5" size="35,25" alphatest="on" transparent="1">
+		<widget source="key_red" render="Pixmap" pixmap="buttons/key_red.png" position="5,5" size="35,25" alphatest="blend" transparent="1">
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="key_green" render="Pixmap" pixmap="buttons/key_green.png" position="5,40" size="35,25" alphatest="on" transparent="1">
+		<widget source="key_green" render="Pixmap" pixmap="buttons/key_green.png" position="5,40" size="35,25" alphatest="blend" transparent="1">
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="key_yellow" render="Pixmap" pixmap="buttons/key_yellow.png" position="5,75" size="35,25" alphatest="on" transparent="1">
+		<widget source="key_yellow" render="Pixmap" pixmap="buttons/key_yellow.png" position="5,75" size="35,25" alphatest="blend" transparent="1">
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="key_blue" render="Pixmap" pixmap="buttons/key_blue.png" position="5,110" size="35,25" alphatest="on" transparent="1">
+		<widget source="key_blue" render="Pixmap" pixmap="buttons/key_blue.png" position="5,110" size="35,25" alphatest="blend" transparent="1">
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<eLabel position="0,142" size="680,2" backgroundColor="Pinstripe" />
@@ -286,7 +286,7 @@
 <!-- Satellite Dish Movement Display -->
 
 	<screen name="Dish" title="Dish" position="20,20" size="210,230" backgroundColor="ScreenTransparent" flags="wfNoBorder" zPosition="-1">
-		<widget name="Dishpixmap" pixmap="icons/dish.png" position="20,20" size="130,160" alphatest="on" transparent="1" zPosition="-1" />
+		<widget name="Dishpixmap" pixmap="icons/dish.png" position="20,20" size="130,160" alphatest="blend" transparent="1" zPosition="-1" />
 		<widget name="turnTime" position="20,130" size="120,25" borderColor="Black" borderWidth="1" font="Regular;20" foregroundColor="Text" transparent="1" />
 		<widget name="turnSpeed" position="140,130" size="70,25" borderColor="Black" borderWidth="1" font="Regular;20" foregroundColor="Text" halign="right" transparent="1" />
 		<widget name="From" position="20,155" size="50,25" borderColor="Black" borderWidth="1" font="Regular;20" foregroundColor="Text" transparent="1" />

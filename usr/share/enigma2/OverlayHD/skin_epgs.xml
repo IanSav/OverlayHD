@@ -4,7 +4,7 @@
 	<screen name="EPGExtensionsList" title="EPG Extensions" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="text" position="360,30" size="870,35" borderColor="BannerBorder" borderWidth="1" conditional="text" font="TitleFont;25" foregroundColor="BannerTitle" halign="right" transparent="1" />
 		<panel name="ScreenTemplateChoiceList0" />
 	</screen>
@@ -242,12 +242,12 @@
 		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateButtonText" />
 		<panel name="ScreenTemplateButtonHelp" />
-		<widget name="now_button" pixmap="epg/now_next_more.png" position="50,80" size="152,34" alphatest="on" />
-		<widget name="next_button" pixmap="epg/now_next_more.png" position="210,80" size="152,34" alphatest="on" />
-		<widget name="more_button" pixmap="epg/now_next_more.png" position="370,80" size="152,34" alphatest="on" />
-		<widget name="now_button_sel" pixmap="epg/now_next_more_on.png" position="50,80" size="152,34" alphatest="on" />
-		<widget name="next_button_sel" pixmap="epg/now_next_more_on.png" position="210,80" size="152,34" alphatest="on" />
-		<widget name="more_button_sel" pixmap="epg/now_next_more_on.png" position="370,80" size="152,34" alphatest="on" />
+		<widget name="now_button" pixmap="epg/now_next_more.png" position="50,80" size="152,34" alphatest="blend" />
+		<widget name="next_button" pixmap="epg/now_next_more.png" position="210,80" size="152,34" alphatest="blend" />
+		<widget name="more_button" pixmap="epg/now_next_more.png" position="370,80" size="152,34" alphatest="blend" />
+		<widget name="now_button_sel" pixmap="epg/now_next_more_on.png" position="50,80" size="152,34" alphatest="blend" />
+		<widget name="next_button_sel" pixmap="epg/now_next_more_on.png" position="210,80" size="152,34" alphatest="blend" />
+		<widget name="more_button_sel" pixmap="epg/now_next_more_on.png" position="370,80" size="152,34" alphatest="blend" />
 		<widget name="now_text" text="NOW" position="50,80" size="154,34" backgroundColor="Grey" font="EPGTimeLineFont;20" foregroundColor="EPGTimeLine" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget name="next_text" text="NEXT" position="210,80" size="154,34" backgroundColor="Grey" font="EPGTimeLineFont;20" foregroundColor="EPGTimeLine" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget name="more_text" text="LATER" position="370,80" size="154,34" backgroundColor="Grey" font="EPGTimeLineFont;20" foregroundColor="EPGTimeLine" halign="center" transparent="1" valign="center" zPosition="+1" />
@@ -348,7 +348,7 @@
 	<screen name="TimeDateInput" title="Date/Time Input" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateDescription4" />
 	</screen>
@@ -358,7 +358,7 @@
 	<screen name="TimeDateDurationInput" title="Time/Date/Duration Input" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateDescription4" />
 	</screen>
@@ -370,7 +370,7 @@
 	<screen name="CrossEPG_Setup" title="CrossEPG Configuration" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateInformation4" />
 	</screen>
@@ -378,7 +378,7 @@
 	<screen name="CrossEPG_Menu" title="CrossEPG Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="list" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -396,7 +396,7 @@
 	<screen name="CrossEPG_Providers" title="CrossEPG Provider XMLTV-OpenTV-XEPGDB-MHW2-M7-RAI" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="list" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -414,7 +414,7 @@
 	<screen name="CrossEPG_Ordering" title="CrossEPG Order Download List" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="list" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -432,7 +432,7 @@
 	<screen name="CrossEPG_Info" title="CrossEPG - DB Info" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="version" position="400,80" size="830,35" backgroundColor="TextBackground" font="TextFont;25" foregroundColor="Text" transparent="1" valign="center" />
 		<eLabel position="400,115" size="830,2" backgroundColor="Pinstripe" />
 		<widget name="create" position="420,115" size="810,35" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1" valign="center" />
@@ -454,7 +454,7 @@
 	<screen name="CrossEPG_About" title="CrossEPG About" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="about" position="400,80" size="830,560" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" transparent="1" />
 	</screen>
 
@@ -466,7 +466,7 @@
 		<panel name="ScreenTemplateButtonInfo" />
 		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateButtonHelp" />
-		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateFrame830x120" />
 		<widget name="statusbar" position="410,560" size="810,25" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
@@ -476,35 +476,35 @@
 	<screen name="EPGImportSources" title="EPG Import Sources" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="list" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
 	<screen name="EPGImportProfile" title="EPG Import Profile" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="config" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
 	<screen name="EPGImportLog" title="EPG Import Log" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="list" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
 
 	<screen name="filtersServicesSelection" title="Channel Selection" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="list" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
 	<screen name="filtersServicesSetup" title="Ignore Services List" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="list" render="Listbox" position="400,80" size="830,560" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{
@@ -527,7 +527,7 @@
 		<panel name="ScreenTemplateButtonInfo" />
 		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateButtonHelp" />
-		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateHelp4" />
 	</screen>
@@ -535,21 +535,21 @@
 	<screen name="EPGRefreshServiceEditor" title="Edit Services To Refresh" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig0" />
 	</screen>
 
 	<screen name="EPGRefreshConfigurationFunctionContextMenu" title="EPGRefresh Context Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateSMenu0" />
 	</screen>
 
 	<screen name="EPGRefreshConfigurationHelpContextMenu" title="EPGRefresh Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateSMenu0" />
 	</screen>
 </skin>
