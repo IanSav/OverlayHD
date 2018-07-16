@@ -48,13 +48,42 @@
 		<widget name="list_right" position="650,140" size="580,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
+	<screen name="FileCommanderFileStatInfo" title="File Commander - File/Directory Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonColours" />
+		<widget name="filename" position="400,80" size="830,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" />
+		<widget source="list" render="Listbox" position="400,140" size="830,500" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (0, 0), size = (200, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),  # index 0 is a label
+					MultiContentEntryText(pos = (220, 0), size = (590, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),  # index 1 is the information
+					],
+				"fonts": [gFont("Regular", 20)],
+				"itemHeight": 25,
+				"selectionEnabled": False
+				}
+			</convert>
+		</widget>
+	</screen>
+
+	<!--
+	<screen name="FileCommanderConfigScreen" title="File Commander Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="Setup" />
+	</screen>
+
 	<screen name="FileCommanderConfigScreen" title="File Commander Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<panel name="ScreenTemplateConfig0" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_tv.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
-		<widget name="help" position="50,390" size="1180,300" font="Regular;18" transparent="1" valign="center" zPosition="+1" />
+		<panel name="ScreenTemplateButtonTextVKey" />
+		<panel name="ScreenTemplateButtonHelpAuto" />
+		<widget name="menuimage" position="50,100" size="300,500" alphatest="blend" conditional="menuimage" transparent="1" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateFootnote4" />
+		<panel name="ScreenTemplateDescription4" />
 	</screen>
+	-->
 
 	<!-- No longer used!
 		s, w, h = 30, getDesktop(0).size().width(), getDesktop(0).size().height()
