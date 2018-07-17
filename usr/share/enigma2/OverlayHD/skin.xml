@@ -443,6 +443,7 @@
 		<setup key="ZapHistoryConfigurator" image="menus/mainmenu_tv_zaphistory.png" />
 		<setup key="PicturePlayerSetup" image="menus/mainmenu_tasks_setup_photo.png" />
 		<setup key="MediaPlayerSettings" image="menus/mainmenu_tasks_setup_movie.png" />
+		<setup key="FileCommander" image="menus/mainmenu_tasks_setup_tv.png" />
 	</setups>
 
 	<windowstyle id="0" type="skinned">
