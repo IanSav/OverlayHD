@@ -16,7 +16,7 @@
 		<widget name="playlist" position="650,80" size="580,325" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 		<widget name="currenttext" position="50,410" size="1180,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" halign="center" transparent="1" valign="center" />
 		<eLabel position="50,440" size="1180,2" backgroundColor="Pinstripe" />
-		<widget name="coverArt" pixmap="images/no_coverArt.png" position="50,450" size="200,200" alphatest="on" transparent="1" />
+		<widget name="coverArt" pixmap="images/no_coverArt.png" position="50,450" size="200,200" alphatest="blend" transparent="1" />
 		<widget name="titletext" position="300,450" size="100,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TextLabel" halign="right" transparent="1" valign="center" />
 		<widget name="title" position="420,450" size="810,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
 		<widget name="artisttext" position="300,480" size="100,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TextLabel" halign="right" transparent="1" valign="center" />
@@ -28,9 +28,9 @@
 		<widget name="genretext" position="300,570" size="100,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TextLabel" halign="right" transparent="1" valign="center" />
 		<widget name="genre" position="420,570" size="810,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
 		<eLabel text="Repeat:" position="300,600" size="100,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TextLabel" halign="right" transparent="1" valign="center" />
-		<widget name="repeat" pixmaps="icons/repeat_off.png,icons/repeat_on.png" position="420,606" size="22,15" alphatest="on" transparent="1" />
-		<ePixmap pixmap="sliders/slider_10x400_hbg.png" position="420,635" size="400,14" alphatest="on" transparent="1" />
-		<ePixmap pixmap="sliders/slider_10_fg_ab.png" position="420,635" size="7,14" alphatest="on" transparent="1" zPosition="+2" />
+		<widget name="repeat" pixmaps="icons/repeat_off.png,icons/repeat_on.png" position="420,606" size="22,15" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="sliders/slider_10x400_hbg.png" position="420,635" size="400,14" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="sliders/slider_10_fg_ab.png" position="420,635" size="7,14" alphatest="blend" transparent="1" zPosition="+2" />
 		<!-- <widget name="PositionGauge" position="142,555" size="558,14" pointer="sliders/slider_10x497_hfg.png:490,0" transparent="1" zPosition="4" /> -->
 		<widget name="PositionGauge" position="420,635" size="400,14" pointer="sliders/slider_10x497_hfg.png:490,0" transparent="1" zPosition="+1" />
 	</screen>
@@ -38,7 +38,7 @@
 	<screen name="MediaPlayerDirectoryBrowser" title="File Browser" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tasks_backup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tasks_backup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateFileList0" />
 	</screen>
 
@@ -60,7 +60,7 @@
 		<widget name="track" position="120,370" size="470,26" font="Regular;22" foregroundColor="#00777777" transparent="1" valign="top" zPosition="2" />
 		<widget name="info_track" position="220,370" size="370,30" font="Regular;22" halign="left" transparent="1" valign="center" zPosition="2" />
 		<widget name="duration" position="420,370" size="60,30" font="Regular;18" halign="right" transparent="1" valign="center" zPosition="2" />
-		<widget name="info_cover" pixmap="images/no_coverArt.png" position="250,150" size="200,200" alphatest="on" transparent="1" />
+		<widget name="info_cover" pixmap="images/no_coverArt.png" position="250,150" size="200,200" alphatest="blend" transparent="1" />
 		<eLabel position="665,340" size="450,2" backgroundColor="White" zPosition="2" />
 		<widget name="tablist" position="650,120" size="570,207" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
 		<widget name="streamlist" position="650,347" size="570,254" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
@@ -73,7 +73,7 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="images/shoutcast-logo.png" position="50,80" size="120,35" alphatest="on" transparent="1" />
+		<ePixmap pixmap="images/shoutcast-logo.png" position="50,80" size="120,35" alphatest="blend" transparent="1" />
 		<widget name="headertext" position="190,80" size="620,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
 		<eLabel position="50,130" size="1180,2" backgroundColor="Pinstripe" />
 		<widget name="list" position="50,132" size="1180,355" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
@@ -89,14 +89,14 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateSMSHelper" />
-		<ePixmap pixmap="menus/mainmenu_music_bouquets.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_music_bouquets.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig0" />
 	</screen>
 
 	<screen name="SHOUTcastStreamripperRecordingPath" title="Select record path for streamripper" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="target" position="400,150" size="705,22" backgroundColor="TextBackground" font="Regular;22" transparent="1" valign="center" />
 		<widget name="filelist" position="400,200" size="705,380" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
 	</screen>
@@ -111,7 +111,7 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
 		<widget name="filelist" position="50,80" size="700,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
-		<widget name="thn" position="814,80" size="372,280" alphatest="on" transparent="1" />
+		<widget name="thn" position="814,80" size="372,280" alphatest="blend" transparent="1" />
 		<eLabel position="770,375" size="460,2" backgroundColor="Pinstripe" />
 		<widget source="label" render="Label" position="770,390" size="460,160" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="top" />
 	</screen>
@@ -119,7 +119,7 @@
 	<!-- Only enable this screen if you wish to override the Picture Player settings which are dynamic! -->
 	<!-- <screen name="Pic_Thumb" title="Picture Thumbnails" position="0,0" size="1280,720" backgroundColor="PictureBackground" flags="wfNoBorder">
 		<eLabel position="0,0" size="1280,720" backgroundColor="PictureBackground" />
-		<widget name="frame" pixmap="pic_frame.png" position="35,30" size="190,200" alphatest="on" transparent="1" zPosition="+1" />
+		<widget name="frame" pixmap="pic_frame.png" position="35,30" size="190,200" alphatest="blend" transparent="1" zPosition="+1" />
 
 		posX = -1
 		for x in range(self.thumbsC):
@@ -135,23 +135,23 @@
 			skincontent += "<widget name=\"thumb" + str(x) + "\" position=\"" + str(absX + 5) + "," + str(absY + 5) + "\" size=\"" + str(self.picX - 10) + "," + str(self.picY - (textsize * 2)) + "\" zPosition=\"2\" transparent=\"1\" alphatest=\"on\" />"
 
 		<widget source="label1" render="Label" position="absX + 5,absY + self.picY - textsize" size="self.picX - 10,textsize" font="Regular;14" foregroundColor="PictureLabel" noWrap="1" transparent="1" zPosition="+1" />
-		<widget name="thumb1" position="absX + 5,absY + 5" size="self.picX - 10,self.picY - (textsize * 2)" alphatest="on" transparent="1" zPosition="+1" />
+		<widget name="thumb1" position="absX + 5,absY + 5" size="self.picX - 10,self.picY - (textsize * 2)" alphatest="blend" transparent="1" zPosition="+1" />
 		15 pictures on screen!
 	</screen> -->
 
 	<!-- Only enable this screen if you wish to override the Picture Player settings which are dynamic! -->
 	<!-- <screen name="Pic_Full_View" title="Picture Viewer" position="0,0" size="1280,720" backgroundColor="PictureBackground" flags="wfNoBorder">
 		<eLabel position="0,0" size="1280,720" backgroundColor="PictureBackground" />
-		<widget name="pic" position="30,30" size="1220,660" alphatest="on" zPosition="+1" />
-		<widget name="point" position="20,22" size="20,20" pixmap="icons/record.png" alphatest="on" transparent="1" zPosition="+2" />
-		<widget name="play_icon" position="40,22" size="20,20" pixmap="icons/ico_mp_play.png" alphatest="on" transparent="1" zPosition="+2" />
+		<widget name="pic" position="30,30" size="1220,660" alphatest="blend" zPosition="+1" />
+		<widget name="point" position="20,22" size="20,20" pixmap="icons/record.png" alphatest="blend" transparent="1" zPosition="+2" />
+		<widget name="play_icon" position="40,22" size="20,20" pixmap="icons/ico_mp_play.png" alphatest="blend" transparent="1" zPosition="+2" />
 		<widget source="file" render="Label" position="60,20" size="1170,25" borderColor="PictureLabelBorder" borderWidth="1" font="Regular;20" foregroundColor="PictureLabel" noWrap="1" transparent="1" zPosition="+2" />
 	</screen> -->
 
 	<screen name="Pic_Exif" title="Picture Information" position="0,0" size="1280,720" backgroundColor="PictureBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_photos_albums_user.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_photos_albums_user.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="menu" render="Listbox" position="400,80" size="830,540" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
@@ -222,7 +222,7 @@
 			<convert type="ServiceName">Name</convert>
 		</widget>
 		<!-- Progressbar (movie position)-->
-		<ePixmap pixmap="sliders/mpslider.png" position="184,595" size="600,16" alphatest="on" zPosition="3" />
+		<ePixmap pixmap="sliders/mpslider.png" position="184,595" size="600,16" alphatest="blend" zPosition="3" />
 		<widget source="session.CurrentService" render="PositionGauge" position="204,596" size="560,14" pointer="sliders/pointer.png:13,3" zPosition="2">
 			<convert type="ServicePosition">Gauge</convert>
 		</widget>
@@ -237,15 +237,15 @@
 		<!-- Chapter info -->
 		<widget name="chapterLabel" position="184,645" size="380,22" backgroundColor="TextBackground" font="Regular;20" foregroundColor="unc3c3c9" transparent="1" />
 		<!-- Icons for help -->
-		<ePixmap pixmap="icons/icon_rewind.png" position="1056,594" size="36,36" alphatest="on" />
-		<ePixmap pixmap="icons/icon_play.png" position="1094,594" size="36,36" alphatest="on" />
-		<ePixmap pixmap="icons/icon_pause.png" position="1132,594" size="36,36" alphatest="on" />
-		<ePixmap pixmap="icons/icon_forward.png" position="1170,594" size="36,36" alphatest="on" />
+		<ePixmap pixmap="icons/icon_rewind.png" position="1056,594" size="36,36" alphatest="blend" />
+		<ePixmap pixmap="icons/icon_play.png" position="1094,594" size="36,36" alphatest="blend" />
+		<ePixmap pixmap="icons/icon_pause.png" position="1132,594" size="36,36" alphatest="blend" />
+		<ePixmap pixmap="icons/icon_forward.png" position="1170,594" size="36,36" alphatest="blend" />
 		<!-- Audio icon (is there multichannel audio?) -->
-		<ePixmap pixmap="icons/i_dolby.png" position="1018,594" size="36,36" alphatest="on" zPosition="1" />
+		<ePixmap pixmap="icons/i_dolby.png" position="1018,594" size="36,36" alphatest="blend" zPosition="1" />
 		<widget name="audioLabel" position="968,645" size="130,22" backgroundColor="TextBackground" font="Regular;18" shadowColor="#001d354c" shadowOffset="-1,-1" transparent="1" valign="bottom" />
 		<!-- Subtitle track info -->
-		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/i_txt.png" position="980,594" size="36,36" alphatest="on" zPosition="1">
+		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/i_txt.png" position="980,594" size="36,36" alphatest="blend" zPosition="1">
 			<convert type="ServiceInfo">HasTelext</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
@@ -257,7 +257,7 @@
 		<eLabel position="0,650" size="1280,70" backgroundColor="InfobarMediaBackground" transparent="0" zPosition="-1" />
 		<eLabel position="172,660" size="2,50" backgroundColor="Pinstripe" />
 		<!-- Playback state and speed indicator -->
-		<widget name="statusicon" pixmaps="icons/media_play.png,icons/media_pause.png,icons/media_stop.png,icons/media_ff.png,icons/media_rew.png,icons/media_slow.png,icons/blank.png" position="20,661" size="48,48" alphatest="on" transparent="1" />
+		<widget name="statusicon" pixmaps="icons/media_play.png,icons/media_pause.png,icons/media_stop.png,icons/media_ff.png,icons/media_rew.png,icons/media_slow.png,icons/blank.png" position="20,661" size="48,48" alphatest="blend" transparent="1" />
 		<widget name="speed" position="80,668" size="100,35" backgroundColor="TextBackground" font="Regular;35" transparent="1" valign="center" />
 		<!-- Recording length -->
 		<widget source="session.CurrentService" render="Label" position="182,660" size="100,20" backgroundColor="TextBackground" font="Regular;20" foregroundColor="InfoMediaLength" transparent="1" valign="center">
@@ -272,7 +272,7 @@
 			<convert type="ServicePosition">Position</convert>
 		</widget>
 		<!-- Playback progress bar -->
-		<ePixmap pixmap="sliders/mpslider.png" position="393,661" size="600,16" alphatest="on" transparent="1" />
+		<ePixmap pixmap="sliders/mpslider.png" position="393,661" size="600,16" alphatest="blend" transparent="1" />
 		<widget source="session.CurrentService" render="PositionGauge" position="413,662" size="560,14" pointer="sliders/pointer.png:13,3">
 			<convert type="ServicePosition">Gauge</convert>
 		</widget>
@@ -289,7 +289,7 @@
 	</screen>
 
 	<screen name="TitleProperties" title="Properties of current title" position="90,100" size="1100,560">
-		<widget name="thumbnail" position="20,20" size="260,160" alphatest="on" />
+		<widget name="thumbnail" position="20,20" size="260,160" alphatest="blend" />
 		<widget source="serviceinfo" render="Label" position="320,20" size="740,160" backgroundColor="un252b4247" font="Regular;21" transparent="1" />
 		<eLabel position="0,195" size="1100,2" backgroundColor="Pinstripe" />
 		<widget name="config" position="20,210" size="1060,300" scrollbarMode="showOnDemand" transparent="1" />
@@ -391,10 +391,10 @@
 
 	<screen name="MyTubePlayer" title="InfoBar" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" zPosition="-1">
 		<ePixmap pixmap="images/infobar.png" position="0,70" size="1280,720" zPosition="-1" />
-		<ePixmap pixmap="icons/icon_rewind.png" position="82,601" size="36,36" alphatest="on" transparent="1" zPosition="0" />
-		<ePixmap pixmap="icons/icon_play.png" position="120,601" size="36,36" alphatest="on" transparent="1" zPosition="0" />
-		<ePixmap pixmap="icons/icon_pause.png" position="158,601" size="36,36" alphatest="on" transparent="1" zPosition="0" />
-		<ePixmap pixmap="icons/icon_forward.png" position="196,601" size="36,36" alphatest="on" transparent="1" zPosition="0" />
+		<ePixmap pixmap="icons/icon_rewind.png" position="82,601" size="36,36" alphatest="blend" transparent="1" zPosition="0" />
+		<ePixmap pixmap="icons/icon_play.png" position="120,601" size="36,36" alphatest="blend" transparent="1" zPosition="0" />
+		<ePixmap pixmap="icons/icon_pause.png" position="158,601" size="36,36" alphatest="blend" transparent="1" zPosition="0" />
+		<ePixmap pixmap="icons/icon_forward.png" position="196,601" size="36,36" alphatest="blend" transparent="1" zPosition="0" />
 		<eLabel position="55,659" size="205,1" backgroundColor="crypt_emm" zPosition="2" />
 		<widget source="session.CurrentService" render="Label" position="93,665" size="57,20" backgroundColor="TextBackground" font="Regular;18" foregroundColor="White" halign="right" transparent="1">
 			<convert type="ServiceInfo">VideoWidth</convert>
@@ -403,7 +403,7 @@
 		<widget source="session.CurrentService" render="Label" position="172,665" size="57,20" backgroundColor="TextBackground" font="Regular;18" foregroundColor="White" halign="left" transparent="1">
 			<convert type="ServiceInfo">VideoHeight</convert>
 		</widget>
-		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MyTube/plugin.png" position="1100,593" size="100,40" alphatest="on" transparent="1" zPosition="1" />
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MyTube/plugin.png" position="1100,593" size="100,40" alphatest="blend" transparent="1" zPosition="1" />
 		<widget source="global.CurrentTime" render="Label" position="1088,641" size="120,26" backgroundColor="TextBackground" font="Named;21" foregroundColor="White" halign="right" transparent="1" valign="top">
 			<convert type="ClockToText">Default</convert>
 		</widget>
@@ -416,7 +416,7 @@
 		<widget source="session.CurrentService" render="Label" position="325,640" size="100,24" backgroundColor="TextBackground" font="Regular;21" halign="center" transparent="1" valign="center">
 			<convert type="ServicePosition">Position</convert>
 		</widget>
-		<ePixmap pixmap="sliders/mpslider.png" position="393,620" size="600,16" alphatest="on" zPosition="3" />
+		<ePixmap pixmap="sliders/mpslider.png" position="393,620" size="600,16" alphatest="blend" zPosition="3" />
 		<widget source="session.CurrentService" render="PositionGauge" position="413,621" size="560,14" pointer="sliders/pointer.png:13,3" zPosition="2">
 			<convert type="ServicePosition">Gauge</convert>
 		</widget>
@@ -435,7 +435,7 @@
 		<widget name="detailtext" position="10,10" size="660,500" font="Regular;22" halign="left" transparent="1" valign="top" zPosition="3" />
 		<eLabel position="0,518" size="680,2" backgroundColor="crypt_emm" />
 		<widget name="key_red" position="50,525" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="LightRed" halign="center" transparent="1" valign="center" zPosition="3" />
-		<ePixmap pixmap="icons/plugin.png" position="570,525" size="100,40" alphatest="on" transparent="1" zPosition="4" />
+		<ePixmap pixmap="icons/plugin.png" position="570,525" size="100,40" alphatest="blend" transparent="1" zPosition="4" />
 		<widget name="title" position="0,0" size="0,0" />
 	</screen>
 
@@ -446,7 +446,7 @@
 		<widget name="published" position="20,140" size="300,25" font="Regular;22" halign="left" transparent="1" valign="top" zPosition="10" />
 		<widget name="views" position="20,170" size="300,25" font="Regular;22" halign="left" transparent="1" valign="top" zPosition="10" />
 		<widget name="tags" position="20,200" size="300,195" font="Regular;22" halign="left" transparent="1" valign="top" zPosition="10" />
-		<widget name="starsbg" pixmap="images/starsbar_empty.png" position="125,425" size="100,20" alphatest="on" transparent="1" zPosition="5" />
+		<widget name="starsbg" pixmap="images/starsbar_empty.png" position="125,425" size="100,20" alphatest="blend" transparent="1" zPosition="5" />
 		<widget name="stars" pixmap="images/starsbar_filled.png" position="125,425" size="100,20" transparent="1" zPosition="6" />
 		<widget source="infolist" render="Listbox" position="350,60" size="740,135" scrollbarMode="showNever" selectionDisabled="1" transparent="1" zPosition="6">
 			<convert type="TemplatedMultiContent">
@@ -472,16 +472,16 @@
 		</widget>
 		<widget name="detailtext" position="350,225" size="730,280" backgroundColor="TextBackground" font="Regular;22" foregroundColor="White" transparent="1" zPosition="10" />
 		<eLabel position="0,518" size="1100,2" backgroundColor="crypt_emm" />
-		<ePixmap pixmap="buttons/button_block_red.png" position="80,525" size="225,60" alphatest="on" zPosition="1" />
+		<ePixmap pixmap="buttons/button_block_red.png" position="80,525" size="225,60" alphatest="blend" zPosition="1" />
 		<widget name="key_red" position="80,525" size="200,36" backgroundColor="ButtonRed" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
-		<ePixmap pixmap="icons/plugin.png" position="980,525" size="100,40" alphatest="on" transparent="1" zPosition="4" />
-		<widget name="thumbnail" position="0,0" size="180,135" alphatest="on" /><!-- fake entry for dynamic thumbnail resizing, currently there is no other way doing this. -->
+		<ePixmap pixmap="icons/plugin.png" position="980,525" size="100,40" alphatest="blend" transparent="1" zPosition="4" />
+		<widget name="thumbnail" position="0,0" size="180,135" alphatest="blend" /><!-- fake entry for dynamic thumbnail resizing, currently there is no other way doing this. -->
 	</screen>
 
 	<screen name="MyTubeSettingsScreen" title="MyTubeSettingsScreen" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig0" />
 	</screen>
 
@@ -503,9 +503,9 @@
 			</convert>
 		</widget>
 		<eLabel position="0,518" size="680,2" backgroundColor="crypt_emm" />
-		<ePixmap pixmap="buttons/button_block_red.png" position="80,525" size="225,60" alphatest="on" zPosition="1" />
+		<ePixmap pixmap="buttons/button_block_red.png" position="80,525" size="225,60" alphatest="blend" zPosition="1" />
 		<widget name="key_red" position="80,525" size="200,36" backgroundColor="ButtonRed" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
-		<ePixmap pixmap="icons/plugin.png" position="550,525" size="100,40" alphatest="on" transparent="1" zPosition="4" />
+		<ePixmap pixmap="icons/plugin.png" position="550,525" size="100,40" alphatest="blend" transparent="1" zPosition="4" />
 		<widget name="title" position="0,0" size="0,0" />
 	</screen>
 
@@ -513,7 +513,7 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_source_youtube.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_source_youtube.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig0" />
 		<widget source="feedlist" render="Listbox" position="590,160" size="635,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" zPosition="2">
 			<convert type="TemplatedMultiContent">
@@ -541,13 +541,13 @@
 			</convert>
 		</widget>
 		<eLabel text="Info" position="948,635" size="200,36" backgroundColor="TextBackground" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
-		<widget name="thumbnail" position="0,0" size="100,75" alphatest="on" /><!-- fake entry for dynamic thumbnail resizing, currently there is no other way doing this. -->
-		<widget name="HelpWindow" position="90,210" size="1,1" alphatest="on" transparent="1" zPosition="1" />
+		<widget name="thumbnail" position="0,0" size="100,75" alphatest="blend" /><!-- fake entry for dynamic thumbnail resizing, currently there is no other way doing this. -->
+		<widget name="HelpWindow" position="90,210" size="1,1" alphatest="blend" transparent="1" zPosition="1" />
 		<widget name="VKeyIcon" position="0,0" size="0,0" />
 	</screen>
 
 	<screen name="MyTubeSuggestionsListScreen" position="70,140" size="502,337" backgroundColor="ScreenBackground" flags="wfNoBorder" zPosition="6">
-		<ePixmap position="0,0" size="505,227" alphatest="on" backgroundColor="transparent" transparent="1" zPosition="-1" />
+		<ePixmap position="0,0" size="505,227" alphatest="blend" backgroundColor="transparent" transparent="1" zPosition="-1" />
 		<widget source="suggestionslist" render="Listbox" position="0,0" size="500,325" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" zPosition="7">
 			<convert type="TemplatedMultiContent">
 				{
@@ -583,7 +583,7 @@
 	<screen name="WebcamViewer" title="Webcam Viewer" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -601,7 +601,7 @@
 	<screen name="TravelWebcamviewer" title="Travel Webcam Viewer" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
-		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="list" render="Listbox" position="400,80" size="830,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -630,7 +630,7 @@
 		<widget name="count" position="400,625" size="140,25" backgroundColor="TextBackground" font="Regular;20" transparent="1" valign="center" />
 		<widget name="page" position="560,625" size="140,25" backgroundColor="TextBackground" font="Regular;20" transparent="1" valign="center" />
 		<widget name="currentnumbers" position="990,625" size="240,25" backgroundColor="TextBackground" font="Regular;20" halign="right" transparent="1" valign="center" />
-		<widget name="thumbnail" position="0,0" size="100,75" alphatest="on" transparent="1" /><!-- Fake entry for dynamic thumbnail resizing, currently there is no other way doing this. -->
+		<widget name="thumbnail" position="0,0" size="100,75" alphatest="blend" transparent="1" /><!-- Fake entry for dynamic thumbnail resizing, currently there is no other way doing this. -->
 	</screen>
 
 <!-- YouTube -->
@@ -671,7 +671,7 @@
 	<screen name="YouTubeInfo" title="YouTube Media Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtons" />
-		<widget name="pic" position="50,100" size="320,180" alphatest="on" transparent="1" />
+		<widget name="pic" position="50,100" size="320,180" alphatest="blend" transparent="1" />
 		<widget name="title" position="400,80" size="830,60" font="Regular;25" />
 		<widget name="description" position="400,155" size="830,405" font="Regular;20" />
 		<widget name="views" position="400,575" size="400,25" font="Regular;20" />
@@ -710,7 +710,7 @@
 	<screen name="YouTubeDownloadList" title="YouTube Active Video Downloads" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtons" />
-		<ePixmap pixmap="menus/mainmenu_tasks_scan.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tasks_scan.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="list" render="Listbox" position="400,80" size="830,575" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{

@@ -24,7 +24,7 @@
 	<!-- This panel is shown separated from MoviePlayer when "MENU > Setup > System > GUI Settings > Show PVR status in Movie Player infobar" is set to "No". -->
 
 	<screen name="PVRState" position="10,10" size="125,65" backgroundColor="InfobarMediaBackground" flags="wfNoBorder">
-		<widget name="statusicon" pixmaps="icons/play.png,icons/pause.png,icons/stop.png,icons/forward.png,icons/backward.png,icons/slow.png" position="10,10" size="20,20" alphatest="on" transparent="1" />
+		<widget name="statusicon" pixmaps="icons/play.png,icons/pause.png,icons/stop.png,icons/forward.png,icons/backward.png,icons/slow.png" position="10,10" size="20,20" alphatest="blend" transparent="1" />
 		<widget name="speed" position="35,10" size="70,20" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TimeShiftData" transparent="1" />
 		<!-- The eventname always appears to be blank?!?! -->
 		<widget name="eventname" position="10,35" size="105,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TimeShiftData" halign="center" />
@@ -35,7 +35,7 @@
 <!-- OK - Main TV InfoBar Timeshift Status -->
 
 	<screen name="TimeshiftState" position="10,10" size="270,80" backgroundColor="InfobarMediaBackground" flags="wfNoBorder">
-		<widget name="statusicon" pixmaps="icons/play.png,icons/pause.png,icons/stop.png,icons/forward.png,icons/backward.png,icons/slow.png" position="10,10" size="20,20" alphatest="on" transparent="1" />
+		<widget name="statusicon" pixmaps="icons/play.png,icons/pause.png,icons/stop.png,icons/forward.png,icons/backward.png,icons/slow.png" position="10,10" size="20,20" alphatest="blend" transparent="1" />
 		<widget name="speed" position="35,10" size="70,20" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TimeShiftData" transparent="1" />
 		<widget source="session.CurrentService" render="Label" position="100,10" size="70,20" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TimeShiftData" halign="center" transparent="1">
 			<convert type="ServicePosition">Remaining</convert>
@@ -44,7 +44,7 @@
 			<convert type="ServicePosition">Length</convert>
 		</widget>
 		<!-- This as the bar graph background that isn't required for a bordered bar graph.
-		<ePixmap pixmap="sliders/progress_back.png" position="10,38" size="250,12" alphatest="on" />
+		<ePixmap pixmap="sliders/progress_back.png" position="10,38" size="250,12" alphatest="blend" />
 		<widget source="session.CurrentService" render="Progress" pixmap="sliders/progress_timeshift.png" position="10,38" size="250,12" borderColor="TimeShiftBorder" borderWidth="1" transparent="1" valign="bottom" >
 			<convert type="ServicePosition">Position</convert>
 		</widget>
@@ -56,8 +56,8 @@
 		<!-- This is a text version of the statusicon and speed information.  Already displayed so not needed here but must be defined to avoid skin errors!  -->
 		<widget name="state" position="0,0" size="0,0" font="Regular;20" transparent="1" />
 		<!-- These are position pointers.  Already displayed so not needed here but must be defined to avoid skin errors!  -->
-		<widget name="PTSSeekBack" position="0,0" size="0,0" pixmap="sliders/sliderdef_back.png" alphatest="on" transparent="1" />
-		<widget name="PTSSeekPointer" position="0,0" size="0,0" pixmap="sliders/position_pointer2.png" alphatest="on" transparent="1" zPosition="+1" />
+		<widget name="PTSSeekBack" position="0,0" size="0,0" pixmap="sliders/sliderdef_back.png" alphatest="blend" transparent="1" />
+		<widget name="PTSSeekPointer" position="0,0" size="0,0" pixmap="sliders/position_pointer2.png" alphatest="blend" transparent="1" zPosition="+1" />
 	</screen>
 
 <!-- OK / Media - Seekbar -->
@@ -65,7 +65,7 @@
 	<!--
 	<screen name="Seekbar" position="center,10" size="600,50" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<widget name="time" position="10,15" size="100,20" backgroundColor="TextBackground" font="Regular;20" halign="right" transparent="1" />
-		<widget name="cursor" position="0,0" size="8,18" pixmap="sliders/position_arrow.png" alphatest="on" transparent="1" zPosition="+1" />
+		<widget name="cursor" position="0,0" size="8,18" pixmap="sliders/position_arrow.png" alphatest="blend" transparent="1" zPosition="+1" />
 		<widget source="session.CurrentService" render="PositionGauge" position="120,15" size="360,20" foregroundColor="MediumBlue" pointer="sliders/position_pointer.png:720,0" transparent="1">
 			<convert type="ServicePosition">Gauge</convert>
 		</widget>
@@ -78,7 +78,7 @@
 	<screen name="Seekbar" position="center,0" size="570,50" backgroundColor="TransparentBackground" flags="wfNoBorder">
 		<eLabel position="28,10" size="512,50" backgroundColor="InfobarMediaBackground" transparent="0" zPosition="-1" />
 		<widget name="time" position="28,23" size="100,20" backgroundColor="TextBackground" font="Regular;20" halign="right" transparent="1" />
-		<widget name="cursor" position="0,0" size="8,18" pixmap="sliders/position_arrow.png" alphatest="on" transparent="1" zPosition="+1" />
+		<widget name="cursor" position="0,0" size="8,18" pixmap="sliders/position_arrow.png" alphatest="blend" transparent="1" zPosition="+1" />
 		<widget source="session.CurrentService" render="PositionGauge" position="148,23" size="272,20" foregroundColor="MediumBlue" pointer="sliders/position_pointer.png:544,0" transparent="1">
 			<convert type="ServicePosition">Gauge</convert>
 		</widget>
@@ -322,7 +322,7 @@
 		<eLabel position="0,650" size="1280,70" backgroundColor="InfobarMediaBackground" transparent="0" zPosition="-1" />
 		<eLabel position="172,660" size="2,50" backgroundColor="Pinstripe" />
 		<!-- Playback state and speed indicator -->
-		<widget name="statusicon" pixmaps="icons/media_play.png,icons/media_pause.png,icons/media_stop.png,icons/media_ff.png,icons/media_rew.png,icons/media_slow.png,icons/blank.png" position="20,661" size="48,48" alphatest="on" transparent="1" />
+		<widget name="statusicon" pixmaps="icons/media_play.png,icons/media_pause.png,icons/media_stop.png,icons/media_ff.png,icons/media_rew.png,icons/media_slow.png,icons/blank.png" position="20,661" size="48,48" alphatest="blend" transparent="1" />
 		<widget name="speed" position="80,668" size="100,35" backgroundColor="TextBackground" font="Regular;35" transparent="1" valign="center" />
 		<!-- Recording length -->
 		<widget source="session.CurrentService" render="Label" position="182,660" size="100,20" backgroundColor="InfoBackground" font="Regular;20" foregroundColor="InfoMediaLength" transparent="1" valign="center">
@@ -337,7 +337,7 @@
 			<convert type="ServicePosition">Position</convert>
 		</widget>
 		<!-- Playback progress bar -->
-		<ePixmap pixmap="sliders/mpslider.png" position="393,661" size="600,16" alphatest="on" transparent="1" />
+		<ePixmap pixmap="sliders/mpslider.png" position="393,661" size="600,16" alphatest="blend" transparent="1" />
 		<widget source="session.CurrentService" render="PositionGauge" position="413,662" size="560,14" pointer="sliders/pointer.png:13,3">
 			<convert type="ServicePosition">Gauge</convert>
 		</widget>
@@ -445,11 +445,11 @@
 			<convert type="RdsInfo">RadioText</convert>
 		</widget>
 		<!-- i_rass.png icon is missing!!! -->
-		<widget source="RdsDecoder" render="Pixmap" pixmap="icons/i_rass.png" position="70,310" size="48,48" alphatest="on">
+		<widget source="RdsDecoder" render="Pixmap" pixmap="icons/i_rass.png" position="70,310" size="48,48" alphatest="blend">
 			<convert type="RdsInfo">RasInteractiveAvailable</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.RecordState" render="Pixmap" pixmap="icons/i_rec.png" position="20,310" size="48,48" alphatest="on">
+		<widget source="session.RecordState" render="Pixmap" pixmap="icons/i_rec.png" position="20,310" size="48,48" alphatest="blend">
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 	</screen>
