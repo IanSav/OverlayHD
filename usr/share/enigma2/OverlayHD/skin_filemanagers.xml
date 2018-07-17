@@ -30,6 +30,7 @@
 		<panel name="ScreenTemplateButtonInfo" />
 		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateButtonTextVKey" />
+		<panel name="ScreenTemplateButtonHelp" />
 		<eLabel position="640,66" size="2,595" backgroundColor="Pinstripe" />
 		<widget name="list_left_head" position="50,80" size="580,60" backgroundColor="TextBackground" font="Regular;18" foregroundColor="Text" transparent="1" valign="center" />
 		<widget name="list_right_head" position="650,80" size="580,60" backgroundColor="TextBackground" font="Regular;18" foregroundColor="Text" transparent="1" valign="center" />
@@ -41,6 +42,7 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonInfo" />
 		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonHelp" />
 		<eLabel position="640,66" size="2,595" backgroundColor="Pinstripe" />
 		<widget name="list_left_head" position="50,80" size="580,60" backgroundColor="TextBackground" font="Regular;18" foregroundColor="Text" transparent="1" valign="center" />
 		<widget name="list_right_head" position="650,80" size="580,60" backgroundColor="TextBackground" font="Regular;18" foregroundColor="Text" transparent="1" valign="center" />
@@ -68,7 +70,7 @@
 		</widget>
 	</screen>
 
-	<!--
+	<!-- This screen is now handled by the built in Setup screen!
 	<screen name="FileCommanderConfigScreen" title="File Commander Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="Setup" />
 	</screen>
@@ -101,6 +103,7 @@
 	<screen name="vEditor" title="File Commander - Editor" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
+		<panel name="ScreenTemplateButtonHelp" />
 		<widget name="list_head" position="50,80" size="1180,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" />
 		<widget name="filedata" position="50,115" size="1180,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
