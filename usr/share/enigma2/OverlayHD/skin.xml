@@ -327,6 +327,7 @@
 		<alias name="FAVEventFont" font="NemesisFlatline" size="20" height="25" width="18" />
 		<alias name="FAVLCNFont" font="NemesisFlatline" size="20" height="25" width="18" />
 		<alias name="FAVServiceFont" font="NemesisFlatline" size="20" height="25" width="18" />
+		<alias name="FileList" font="NemesisFlatline" size="20" height="25" width="18" />
 		<alias name="FileMonoFont" font="MPluss1M" size="20" height="25" width="18" />
 		<alias name="FilePropFont" font="ValisEnigma" size="20" height="25" width="18" />
 		<alias name="FixedFont" font="VeraSansMono" size="20" height="25" width="18" />
