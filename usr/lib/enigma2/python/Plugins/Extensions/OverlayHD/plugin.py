@@ -270,6 +270,16 @@ colour_choices = [
 	("WarmYellow", _("Warm Yellow")),
 	("White", _("White")),
 	("Yellow", _("Yellow"))
+	# ("User1", _("User 1")),
+	# ("User2", _("User 2")),
+	# ("User3", _("User 3")),
+	# ("User4", _("User 4")),
+	# ("User5", _("User 5")),
+	# ("User6", _("User 6")),
+	# ("User7", _("User 7")),
+	# ("User8", _("User 8")),
+	# ("User9", _("User 9")),
+	# ("User0", _("User 10"))
 ]
 
 background_choice = [("Background", _("Background"))]

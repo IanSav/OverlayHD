@@ -68,6 +68,16 @@
 		<color name="WarmYellow" value="#00fff000" />
 		<color name="White" value="#00ffffff" />
 		<color name="Yellow" value="#00ffff00" />
+		<color name="User1" value="#00000000" />
+		<color name="User2" value="#00000000" />
+		<color name="User3" value="#00000000" />
+		<color name="User4" value="#00000000" />
+		<color name="User5" value="#00000000" />
+		<color name="User6" value="#00000000" />
+		<color name="User7" value="#00000000" />
+		<color name="User8" value="#00000000" />
+		<color name="User9" value="#00000000" />
+		<color name="User0" value="#00000000" />
 
 		<color name="ButtonBack" value="#00313131" />
 		<color name="ButtonBlue" value="#0018188b" />
