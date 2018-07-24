@@ -68,6 +68,16 @@
 		<color name="WarmYellow" value="#00fff000" />
 		<color name="White" value="#00ffffff" />
 		<color name="Yellow" value="#00ffff00" />
+		<color name="User1" value="#00000000" />
+		<color name="User2" value="#00000000" />
+		<color name="User3" value="#00000000" />
+		<color name="User4" value="#00000000" />
+		<color name="User5" value="#00000000" />
+		<color name="User6" value="#00000000" />
+		<color name="User7" value="#00000000" />
+		<color name="User8" value="#00000000" />
+		<color name="User9" value="#00000000" />
+		<color name="User0" value="#00000000" />
 
 		<color name="ButtonBack" value="#00313131" />
 		<color name="ButtonBlue" value="#0018188b" />
@@ -298,6 +308,14 @@
 	<fonts>
 		<font name="AndaleMono" filename="fonts/andale.ttf" scale="100" />
 		<font name="ArialNarrow" filename="fonts/eg.ttf" scale="100" />
+		<font name="DejaVuSans" filename="fonts/DejaVuSans.ttf" scale="100" />
+		<font name="DejaVuSansBold" filename="fonts/DejaVuSansBold.ttf" scale="100" />
+		<font name="DejaVuSansCondensed" filename="fonts/DejaVuSansCondensed.ttf" scale="100" />
+		<font name="DejaVuSansCondensedBold" filename="fonts/DejaVuSansCondensedBold.ttf" scale="100" />
+		<font name="DejaVuSansMono" filename="fonts/DejaVuSansMono.ttf" scale="100" />
+		<font name="DejaVuSansMonoBold" filename="fonts/DejaVuSansMonoBold.ttf" scale="100" />
+		<font name="DejaVuSerifCondensed" filename="fonts/DejaVuSerifCondensed.ttf" scale="100" />
+		<font name="DejaVuSerifCondensedBold" filename="fonts/DejaVuSerifCondensedBold.ttf" scale="100" />
 		<font name="DroidSansBold" filename="fonts/DroidSans-Bold.ttf" scale="100" />
 		<font name="DSDigital" filename="fonts/ds_digital.ttf" scale="100" />
 		<font name="GoodTimes" filename="fonts/goodtime.ttf" scale="100" />
