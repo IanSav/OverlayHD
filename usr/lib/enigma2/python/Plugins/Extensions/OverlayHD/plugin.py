@@ -300,6 +300,12 @@ transparency_choices = [
 
 banner_font_choices = [
 	("ArialNarrow", _("Arial Narrow")),
+	("DejaVuSans", _("DejaVu Sans")),
+	("DejaVuSansBold", _("DejaVu Sans Bold")),
+	("DejaVuSansCondensed", _("DejaVu Sans Condensed")),
+	("DejaVuSansCondensedBold", _("DejaVu Sans Condensed Bold")),
+	("DejaVuSerifCondensed", _("DejaVu Serif Condensed")),
+	("DejaVuSerifCondensedBold", _("DejaVu Serif Condensed Bold")),
 	("DroidSansBold", _("DroidSans Bold")),
 	("GoodTimes", _("Good Times")),
 	("KhammuRabi", _("Khammu Rabi")),
@@ -311,6 +317,10 @@ banner_font_choices = [
 
 text_font_choices = [
 	("ArialNarrow", _("Arial Narrow")),
+	("DejaVuSansCondensed", _("DejaVu Sans Condensed")),
+	("DejaVuSansCondensedBold", _("DejaVu Sans Condensed Bold")),
+	("DejaVuSerifCondensed", _("DejaVu Serif Condensed")),
+	("DejaVuSerifCondensedBold", _("DejaVu Serif Condensed Bold")),
 	("KhammuRabi", _("Khammu Rabi")),
 	("NemesisFlatline", _("Nemesis Flatline")),
 	("ValisEnigma", _("Valis Enigma"))
@@ -318,6 +328,8 @@ text_font_choices = [
 
 fixed_font_choices = [
 	("AndaleMono", _("Andale Mono")),
+	("DejaVuSansMono", _("DejaVu Sans Mono")),
+	("DejaVuSansMonoBold", _("DejaVu Sans Mono Bold")),
 	("MPluss1M", _("M+ 1M")),
 	("VeraSansMono", _("Vera Sans Mono"))
 ]

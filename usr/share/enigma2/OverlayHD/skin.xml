@@ -298,6 +298,14 @@
 	<fonts>
 		<font name="AndaleMono" filename="fonts/andale.ttf" scale="100" />
 		<font name="ArialNarrow" filename="fonts/eg.ttf" scale="100" />
+		<font name="DejaVuSans" filename="fonts/DejaVuSans.ttf" scale="100" />
+		<font name="DejaVuSansBold" filename="fonts/DejaVuSansBold.ttf" scale="100" />
+		<font name="DejaVuSansCondensed" filename="fonts/DejaVuSansCondensed.ttf" scale="100" />
+		<font name="DejaVuSansCondensedBold" filename="fonts/DejaVuSansCondensedBold.ttf" scale="100" />
+		<font name="DejaVuSansMono" filename="fonts/DejaVuSansMono.ttf" scale="100" />
+		<font name="DejaVuSansMonoBold" filename="fonts/DejaVuSansMonoBold.ttf" scale="100" />
+		<font name="DejaVuSerifCondensed" filename="fonts/DejaVuSerifCondensed.ttf" scale="100" />
+		<font name="DejaVuSerifCondensedBold" filename="fonts/DejaVuSerifCondensedBold.ttf" scale="100" />
 		<font name="DroidSansBold" filename="fonts/DroidSans-Bold.ttf" scale="100" />
 		<font name="DSDigital" filename="fonts/ds_digital.ttf" scale="100" />
 		<font name="GoodTimes" filename="fonts/goodtime.ttf" scale="100" />
