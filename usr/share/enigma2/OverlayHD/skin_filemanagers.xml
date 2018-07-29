@@ -50,6 +50,14 @@
 		<widget name="list_right" position="650,140" size="580,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
+	<screen name="FileCommanderContextMenu" title="File Commander Context Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonMenu" />
+		<panel name="ScreenTemplateButtonColours" />
+		<ePixmap pixmap="menus/mainmenu_tasks_browser.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<panel name="ScreenTemplateMenu0" />
+	</screen>
+
 	<screen name="FileCommanderFileStatInfo" title="File Commander - File/Directory Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonColours" />
