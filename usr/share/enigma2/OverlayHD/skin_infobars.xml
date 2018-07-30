@@ -364,7 +364,6 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonInfo" />
-		<panel name="ScreenTemplateButtonColours" />
 		<widget name="channel" position="50,80" size="280,25" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoChannel" transparent="1" />
 		<widget source="Event" render="Label" position="365,80" size="500,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" halign="center" transparent="1">
 			<convert type="EventTime">Times</convert>

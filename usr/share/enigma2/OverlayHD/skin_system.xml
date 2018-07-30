@@ -7,7 +7,6 @@
 
 	<screen name="menu_shutdown" title="Power / Restart" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="blend" transparent="1" /> -->
 		<panel name="ShutdownEnigma2" base="Shutdown" />
 		<widget name="charlist" position="0,0" size="0,0" conditional="charlist" transparent="1" />
@@ -16,7 +15,6 @@
 
 	<screen name="Menu_shutdown" title="Power / Restart" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="blend" transparent="1" /> -->
 		<panel name="ShutdownEnigma2" base="Shutdown" />
 		<widget name="charlist" position="0,0" size="0,0" conditional="charlist" transparent="1" />
@@ -92,7 +90,6 @@
 
 	<screen name="QuitMainloopScreen" title="Power / Restart" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="OverlayHD/menus/mainmenu_shuffle.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateOverlayText0" />
 	</screen>
@@ -105,7 +102,6 @@
 
 	<screen name="menu_information" title="Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="blend" transparent="1" /> -->
 		<panel name="InformationEnigma2" base="Information" />
 		<widget name="charlist" position="0,0" size="0,0" conditional="charlist" transparent="1" />
@@ -114,7 +110,6 @@
 
 	<screen name="Menu_information" title="Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="blend" transparent="1" /> -->
 		<panel name="InformationEnigma2" base="Information" />
 		<widget name="charlist" position="0,0" size="0,0" conditional="charlist" transparent="1" />
@@ -196,7 +191,6 @@
 
 	<screen name="About" title="About" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_info.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="list" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
@@ -223,7 +217,6 @@
 
 	<screen name="AboutOE" title="About" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_info.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="lab1" render="Label" position="50,575" size="458,25" font="Boldit;24" transparent="1" />
 		<widget source="lab2" render="Label" position="50,600" size="458,25" font="Italic;19" transparent="1" />
@@ -235,7 +228,6 @@
 
 	<screen name="Devices" title="Device Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_backup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="DevicesEnigma2" base="Devices" />
 	</screen>
@@ -289,7 +281,6 @@
 
 	<screen name="SystemMemoryInfo" title="Memory Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_browser.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="SystemMemoryInfoEnigma2" base="SystemMemoryInfo" />
 	</screen>
@@ -333,7 +324,6 @@
 
 	<screen name="SystemNetworkInfo" title="Network Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="SystemNetworkInfoEnigma2" base="SystemNetworkInfo" />
 	</screen>
@@ -393,7 +383,6 @@
 
 	<screen name="ServiceInfo" title="Service Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tv_live.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ServiceInfoEnigma2" base="ServiceInfo" />
 	</screen>
@@ -428,13 +417,11 @@
 
 	<screen name="StreamingClientsInfo" title="Streaming Client Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<widget name="ScrollLabel" position="400,80" size="830,550" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" />
 	</screen>
 
 	<screen name="TranslationInfo" title="Translation Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<eLabel text="Translation:" position="400,80" size="830,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
 		<widget source="TranslatorName" render="Label" position="400,105" size="830,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
 		<widget source="TranslationInfo" render="Label" position="400,130" size="830,450" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1"/>
@@ -442,13 +429,11 @@
 
 	<screen name="AboutReleaseNotes" title="Release Notes" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<widget name="list" position="400,80" size="830,560" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" />
 	</screen>
 
 	<screen name="SoftwareUpdateChanges" title="Software Update Changes" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<!-- <widget source="Title" render="Label" position="20,25" size="800,43" font="Boldit;32" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1"/> -->
 		<widget name="text" position="50,80" size="1180,550" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" />
 	</screen>
@@ -459,7 +444,6 @@
 
 	<screen name="LogManager" title="System Log" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<widget name="list" position="400,80" size="830,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
 		<panel name="ScreenTemplateFrame830x120" />
 		<widget name="LogsSize" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
@@ -467,7 +451,6 @@
 
 	<screen name="LogManagerViewLog" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<widget name="list" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
 
@@ -477,7 +460,6 @@
 
 	<screen name="ExtensionsList" title="Choose Extension" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_plugins.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateChoiceList0" />
 		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />
@@ -489,7 +471,6 @@
 
 	<screen name="TaskListScreen" title="Task List" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_scan.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="tasklist" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
@@ -517,7 +498,6 @@
 	<screen name="TimerEditList" title="Timer List" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonInfo" />
-		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateTimerList4" />
 		<panel name="ScreenTemplateDescription4" />
@@ -527,7 +507,6 @@
 
 	<screen name="TimerLogDefault" title="Timer Log" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateLogList4" />
 		<panel name="ScreenTemplateLogEntry4" />
@@ -539,7 +518,6 @@
 
 	<screen name="TimerLog" title="Timer Log" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateLogList4" />
 		<panel name="ScreenTemplateLogEntry4" />
@@ -549,8 +527,6 @@
 
 	<screen name="TimerEntry" title="Timer Entry" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
-		<panel name="ScreenTemplateButtonTextVKey" />
 		<panel name="ScreenTemplateButtonHelp" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
@@ -561,7 +537,6 @@
 
 	<screen name="TimerSanityConflict" title="Timer Sanity Error" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<widget source="lab1" render="Label" position="120,85" size="510,24" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" halign="center" transparent="1" valign="center" />
 		<widget source="lab2" render="Label" position="650,85" size="510,24" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" halign="center" transparent="1" valign="center" />
 		<widget name="timer1" position="120,115" size="510,500" scrollbarMode="showOnDemand" transparent="1" />
@@ -572,7 +547,6 @@
 
 	<screen name="TimerSelection" title="Timer Selection" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateTimerList4" />
 		<panel name="ScreenTemplateDescription4" />
 	</screen>
@@ -592,7 +566,6 @@
 
 	<screen name="SleepTimerEdit" title="Power / Sleep Timer" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<!--
 		<ePixmap pixmap="icons/clock.png" position="50,30" size="14,14" alphatest="blend" zPosition="3" />
 		<widget source="global.CurrentTime" render="Label" position="75,30" size="80,22" backgroundColor="Black" font="Named;16" foregroundColor="White" halign="left" transparent="1">
@@ -623,7 +596,6 @@
 	<screen name="AutoTimerOverview" title="Auto Timer Overview" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
-		<panel name="ScreenTemplateButtonColours" />
 		<panel name="ScreenTemplateButtonHelp" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateEntriesTall0" />
@@ -631,28 +603,24 @@
 
 	<screen name="AutoTimerHelp" title="Auto Timer Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateHelp0" />
 	</screen>
 
 	<screen name="AutoTimerFAQ" title="Auto Timer Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateHelp0" />
 	</screen>
 
 	<screen name="AutoTimerPreview" title="Auto Timer Overview" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateTimerList0" />
 	</screen>
 
 	<screen name="AutoTimerSettings" title="Auto Timer Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateSHelp4" />
@@ -660,14 +628,12 @@
 
 	<screen name="AutoTimerImporter" title="Auto Timer Importer" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateChoiceList0" />
 	</screen>
 
 	<screen name="AutoTimerEditor" title="Auto Timer Editor" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateSHelp4" />
@@ -675,15 +641,12 @@
 
 	<screen name="AutoTimerFilterEditor" title="Auto Timer Filter Editor" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
-		<panel name="ScreenTemplateButtonTextVKey" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig0" />
 	</screen>
 
 	<screen name="AutoTimerServiceEditor" title="Auto Timer Service Editor" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig0" />
 	</screen>
@@ -714,7 +677,6 @@
 
 	<screen name="CronTimers" title="Cron Manager" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_system.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<eLabel position="400,80" size="830,420" backgroundColor="MenuBackground" zPosition="-1" />
 		<widget name="lab1" position="420,80" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />

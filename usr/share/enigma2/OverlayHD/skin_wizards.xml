@@ -6,8 +6,6 @@
 
 	<screen name="WizardTemplate" title="Welcome..." position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
-		<panel name="ScreenTemplateButtonTextVKey" />
 		<ePixmap name="wizard" pixmap="images/wizard.png" position="230,250" size="220,220" alphatest="blend" transparent="1" />
 		<eLabel position="500,80" size="730,2" backgroundColor="Pinstripe" />
 		<eLabel position="500,329" size="730,2" backgroundColor="Pinstripe" />
