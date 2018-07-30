@@ -443,9 +443,36 @@
 
 	<setups>
 		<setup key="default" image="menus/mainmenu_tasks_setup_system.png" />
+		<!-- <setup key="time" image="menus/mainmenu_tasks_setup_system.png" /> -->
+		<!-- <setup key="avsetup" image="menus/mainmenu_tasks_setup_system.png" /> -->
+		<!-- <setup key="tunersetup" image="menus/mainmenu_tasks_setup_system.png" /> -->
 		<setup key="userinterface" image="menus/mainmenu_tasks_setup_photo.png" />
 		<setup key="channelselection" image="menus/mainmenu_tasks_setup_default.png" />
 		<setup key="epgsettings" image="menus/mainmenu_tv_epg.png" />
+		<!-- <setup key="subtitlesetup" image="menus/mainmenu_tasks_setup_system.png" /> -->
+		<!-- <setup key="autolanguagesetup" image="menus/mainmenu_tasks_setup_system.png" /> -->
+		<!-- <setup key="recording" image="menus/mainmenu_tasks_setup_system.png" /> -->
+		<!-- <setup key="hdmirecord" image="menus/mainmenu_tasks_setup_system.png" /> -->
+		<!-- <setup key="fanspeed" image="menus/mainmenu_tasks_setup_system.png" /> -->
+		<!-- <setup key="harddisk" image="menus/mainmenu_tasks_setup_system.png" /> -->
+		<!-- <setup key="network" image="menus/mainmenu_tasks_setup_system.png" /> -->
+		<!-- <setup key="RFmod" image="menus/mainmenu_tasks_setup_system.png" /> -->
+		<!-- <setup key="keyboard" image="menus/mainmenu_tasks_setup_system.png" /> -->
+		<!-- <setup key="display" image="menus/mainmenu_tasks_setup_system.png" /> -->
+		<!-- <setup key="satconfig" image="menus/mainmenu_tasks_setup_system.png" /> -->
+		<!-- <setup key="softwareupdate" image="menus/mainmenu_tasks_setup_system.png" /> -->
+		<!-- <setup key="buttonsetup" image="menus/mainmenu_tasks_setup_system.png" /> -->
+		<!-- <setup key="softcamsetup" image="menus/mainmenu_tasks_setup_system.png" /> -->
+		<!-- <setup key="logs" image="menus/mainmenu_tasks_setup_system.png" /> -->
+		<!-- <setup key="timeshift" image="menus/mainmenu_tasks_setup_system.png" /> -->
+		<!-- <setup key="epgsingle" image="menus/mainmenu_tasks_setup_system.png" /> -->
+		<!-- <setup key="epgmulti" image="menus/mainmenu_tasks_setup_system.png" /> -->
+		<!-- <setup key="epgenhanced" image="menus/mainmenu_tasks_setup_system.png" /> -->
+		<!-- <setup key="epginfobar" image="menus/mainmenu_tasks_setup_system.png" /> -->
+		<!-- <setup key="epginfobargraphical" image="menus/mainmenu_tasks_setup_system.png" /> -->
+		<!-- <setup key="epggraphical" image="menus/mainmenu_tasks_setup_system.png" /> -->
+		<!-- <setup key="pluginbrowsersetup" image="menus/mainmenu_tasks_setup_system.png" /> -->
+		<!-- <setup key="fallback" image="menus/mainmenu_tasks_setup_system.png" /> -->
 		<setup key="UserInterfacePositioner" image="menus/mainmenu_tasks_setup_tv.png" />
 		<setup key="OSD3DSetupScreen" image="menus/mainmenu_tasks_setup_tv.png" />
 		<setup key="SkinSelector" image="menus/mainmenu_tasks_setup_tv.png" />
