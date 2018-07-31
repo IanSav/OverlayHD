@@ -82,7 +82,7 @@
 	<screen name="FileCommanderFileStatInfo" title="File Commander - File/Directory Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="filename" position="400,80" size="830,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" />
-		<widget source="list" render="Listbox" position="400,140" size="830,500" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1">
+		<widget source="list" render="Listbox" position="400,140" size="830,275" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -96,6 +96,9 @@
 				}
 			</convert>
 		</widget>
+		<widget name="link_sep"  position="400,420" size="830,2" backgroundColor="Pinstripe" transparent="0"/>
+		<widget name="link_label" position="400,425" size="830,23" font="Regular;20"/>
+		<widget name="link_value" position="400,448" size="830,46" font="Regular;20"/>
 	</screen>
 
 	<!-- This screen is now handled by the built in Setup screen!
