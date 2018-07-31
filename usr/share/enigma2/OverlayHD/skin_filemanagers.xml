@@ -23,16 +23,46 @@
 
 <!-- MENU - File Commander -->
 
+	<screen name="FileCommanderFileListPanel" position="0,0" size="1280,720">
+		<eLabel position="640,66" size="2,595" backgroundColor="Pinstripe" />
+		<widget name="list_left_head1" position="50,80" size="580,40" backgroundColor="TextBackground" font="Regular;18" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="list_left_head2" render="Listbox" position="50,120" size="580,20" backgroundColor="TextBackground" foregroundColor="Text" selectionDisabled="1" transparent="1" >
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos = (0, 0), size = (115, 20), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is a symbolic mode
+					MultiContentEntryText(pos = (130, 0), size = (90, 20), font = 0, flags = RT_HALIGN_RIGHT, text = 11), # index 11 is the scaled size
+					MultiContentEntryText(pos = (235, 0), size = (260, 20), font = 0, flags = RT_HALIGN_LEFT, text = 13), # index 13 is the modification time
+					],
+					"fonts": [gFont("Regular", 18)],
+					"itemHeight": 20,
+					"selectionEnabled": False
+				}
+			</convert>
+		</widget>
+		<widget name="list_right_head1" position="650,80" size="580,40" backgroundColor="TextBackground" font="Regular;18" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="list_right_head2" render="Listbox" position="650,120" size="580,20" backgroundColor="TextBackground" foregroundColor="Text" selectionDisabled="1" transparent="1" >
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos = (0, 0), size = (115, 20), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is a symbolic mode
+					MultiContentEntryText(pos = (130, 0), size = (90, 20), font = 0, flags = RT_HALIGN_RIGHT, text = 11), # index 11 is the scaled size
+					MultiContentEntryText(pos = (235, 0), size = (260, 20), font = 0, flags = RT_HALIGN_LEFT, text = 13), # index 13 is the modification time
+					],
+					"fonts": [gFont("Regular", 18)],
+					"itemHeight": 20,
+					"selectionEnabled": False
+				}
+			</convert>
+		</widget>
+		<widget name="list_left" position="50,140" size="580,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="list_right" position="650,140" size="580,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+	</screen>
+
 	<screen name="FileCommanderScreen" title="File Commander" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonInfo" />
 		<panel name="ScreenTemplateButtonHelp" />
-		<eLabel position="640,66" size="2,595" backgroundColor="Pinstripe" />
-		<widget name="list_left_head" position="50,80" size="580,60" backgroundColor="TextBackground" font="Regular;18" foregroundColor="Text" transparent="1" valign="center" />
-		<widget name="list_right_head" position="650,80" size="580,60" backgroundColor="TextBackground" font="Regular;18" foregroundColor="Text" transparent="1" valign="center" />
-		<widget name="list_left" position="50,140" size="580,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
-		<widget name="list_right" position="650,140" size="580,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+		<panel name="FileCommanderFileListPanel"/>
 	</screen>
 
 	<screen name="FileCommanderContextMenu" title="File Commander - Context Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
@@ -46,17 +76,13 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonInfo" />
 		<panel name="ScreenTemplateButtonHelp" />
-		<eLabel position="640,66" size="2,595" backgroundColor="Pinstripe" />
-		<widget name="list_left_head" position="50,80" size="580,60" backgroundColor="TextBackground" font="Regular;18" foregroundColor="Text" transparent="1" valign="center" />
-		<widget name="list_right_head" position="650,80" size="580,60" backgroundColor="TextBackground" font="Regular;18" foregroundColor="Text" transparent="1" valign="center" />
-		<widget name="list_left" position="50,140" size="580,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
-		<widget name="list_right" position="650,140" size="580,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+		<panel name="FileCommanderFileListPanel"/>
 	</screen>
 
 	<screen name="FileCommanderFileStatInfo" title="File Commander - File/Directory Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="filename" position="400,80" size="830,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" />
-		<widget source="list" render="Listbox" position="400,140" size="830,500" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1">
+		<widget source="list" render="Listbox" position="400,140" size="830,275" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -70,6 +96,9 @@
 				}
 			</convert>
 		</widget>
+		<widget name="link_sep"  position="400,420" size="830,2" backgroundColor="Pinstripe" transparent="0"/>
+		<widget name="link_label" position="400,425" size="830,23" font="Regular;20"/>
+		<widget name="link_value" position="400,448" size="830,46" font="Regular;20"/>
 	</screen>
 
 	<!-- This screen is now handled by the built in Setup screen!
