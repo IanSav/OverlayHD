@@ -1,7 +1,7 @@
 # ====================================================
 # OverlayHD Skin Manager
-# Version Date - 11-Feb-2018
-# Version Number - 1.65
+# Version Date - 30-Jul-2018
+# Version Number - 1.66
 # Repository - https://bitbucket.org/IanSav/overlayhd
 # Coding by IanSav (c) 2015-2018
 # ====================================================
@@ -17,19 +17,9 @@
 # and original author details), but it may not be
 # commercially distributed.
 
-from Components.ActionMap import HelpableActionMap
-from Components.Button import Button
-from Components.Sources.List import List
-from Components.config import config, ConfigSubsection, ConfigYesNo, ConfigEnableDisable, ConfigSelection
-from Plugins.Plugin import PluginDescriptor
-from Screens.ChoiceBox import ChoiceBox
-from Screens.HelpMenu import HelpableScreen
-from Screens.MessageBox import MessageBox
-from Screens.Screen import Screen
-from Screens.Setup import Setup
-from Screens.Standby import TryQuitMainloop
-from Screens.VirtualKeyBoard import VirtualKeyBoard
-from Tools.Directories import resolveFilename, SCOPE_CONFIG, SCOPE_CURRENT_SKIN, SCOPE_CURRENT_PLUGIN
+import errno
+import shutil
+import xml.etree.cElementTree
 
 from boxbranding import getImageDistro
 from enigma import eEnv, gRGB
@@ -37,14 +27,19 @@ from os import listdir, remove, symlink, unlink
 from os.path import exists, isdir, isfile, islink
 from skin import dom_screens, colorNames, fonts  # , reloadWindowstyles
 
-import errno
-import shutil
-import xml.etree.cElementTree
-
-distro_configs = {
-	"beyonwiz": ("Beyonwiz", "Beyonwiz"),
-	"openvix": ("OpenViX", "Enigma2")
-}
+from Components.ActionMap import HelpableActionMap
+from Components.Sources.List import List
+from Components.Sources.StaticText import StaticText
+from Components.config import config, ConfigSubsection, ConfigYesNo, ConfigEnableDisable, ConfigSelection
+from Plugins.Plugin import PluginDescriptor
+from Screens.ChoiceBox import ChoiceBox
+from Screens.HelpMenu import HelpableScreen
+from Screens.MessageBox import MessageBox
+from Screens.Screen import Screen
+from Screens.Setup import Setup
+from Screens.Standby import TryQuitMainloop, QUIT_RESTART
+from Screens.VirtualKeyBoard import VirtualKeyBoard
+from Tools.Directories import resolveFilename, SCOPE_CONFIG, SCOPE_CURRENT_SKIN, SCOPE_CURRENT_PLUGIN
 
 # Items with a colour and transparency require two lines in the setup XML file.
 # (One for ItemColour and one for ItemTransparency.)
@@ -517,42 +512,18 @@ for (label, default, config_type, option_table) in option_elements:
 class OverlayHDSkinManager(Setup, HelpableScreen):
 	ALLOW_SUSPEND = True
 
-	skin = """
-	<screen name="OverlayHDSkinManager" title="OverlayHD Skin Manager" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonColours" />
-		<panel name="ScreenTemplateButtonTextVKey" />
-		<panel name="ScreenTemplateButtonHelp" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_system.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
-		<widget name="menuimage" position="50,100" size="300,500" alphatest="on" conditional="menuimage" transparent="1" zPosition="+1" />
-		<panel name="ScreenTemplateConfig4" />
-		<panel name="ScreenTemplateFootnote4" />
-		<panel name="ScreenTemplateDescription4" />
-	</screen>"""
-
 	def __init__(self, session):
 		Setup.__init__(self, session=session, setup="OverlayHDSkinManager", plugin="Extensions/OverlayHD")
-		self.skin = OverlayHDSkinManager.skin
-		self.skinName = ["OverlayHDSkinManager", "Setup"]
 		HelpableScreen.__init__(self)
-		self.setup_title = _("OverlayHD Skin Manager")
 
-		self["key_red"] = Button(_("Cancel"))
-		self["key_green"] = Button(_("Save"))
-		self["key_yellow"] = Button(_("Themes"))
-		self["key_blue"] = Button(_("Default"))
+		self["key_yellow"] = StaticText(_("Themes"))
+		self["key_blue"] = StaticText(_("Default"))
+		self["key_help"] = StaticText(_("HELP"))
 
-		(distro, code) = distro_configs.get(getImageDistro(), ("Unknown", "Enigma2"))
-		if code == "Beyonwiz":
-			self["OverlayHDActions"] = HelpableActionMap(self, "ColorActions", {
-				"yellow": (self.theme, _("Manage themes")),
-				"blue": (self.default, _("Apply the default skin settings"))
-			}, prio=0, description=_("OverlayHD Functions"))
-		else:
-			self["OverlayHDActions"] = HelpableActionMap(self, "ColorActions", {
-				"yellow": (self.theme, _("Manage themes")),
-				"blue": (self.default, _("Apply the default skin settings"))
-			}, prio=0)
+		self["OverlayHDActions"] = HelpableActionMap(self, "ColorActions", {
+			"yellow": (self.theme, _("Manage themes")),
+			"blue": (self.default, _("Apply the default skin settings"))
+		}, prio=0, description=_("OverlayHD Functions"))
 
 		background_image_choices = [("", _("Default"))]
 		for fname in sorted(listdir(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/backgrounds"))):
@@ -563,11 +534,17 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 			spinner_choices.append((fname, _(fname)))
 		config.plugins.skin.OverlayHD.Spinner.setChoices(default=config.plugins.skin.OverlayHD.Spinner.value, choices=spinner_choices)
 
-		self.redraw = False
-		config.plugins.skin.OverlayHD.UseGroups.addNotifier(self.changeGrouping)
+		self.addNotifiers()
+
+	def addNotifiers(self):
+		config.plugins.skin.OverlayHD.UseGroups.addNotifier(self.changeGrouping, initial_call=False, immediate_feedback=True)
 		for x in repaint_list:
-			getattr(config.plugins.skin.OverlayHD, x).addNotifier(self.changeSettings)
-		self.redraw = True
+			getattr(config.plugins.skin.OverlayHD, x).addNotifier(self.changeSettings, initial_call=False, immediate_feedback=True)
+
+	def removeNotifiers(self):
+		config.plugins.skin.OverlayHD.UseGroups.removeNotifier(self.changeGrouping)
+		for x in repaint_list:
+			getattr(config.plugins.skin.OverlayHD, x).removeNotifier(self.changeSettings)
 
 # 	def selectionChanged(self):
 # 		entry = self["config"].getCurrent()[1]
@@ -576,44 +553,51 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 # 				print "[OverlayHD] DEBUG: 'config.plugins.skin.OverlayHD.%s'" % x
 # 				break
 
-	def removeNotify(self):
-		self.redraw = False
-		config.plugins.skin.OverlayHD.UseGroups.removeNotifier(self.changeGrouping)
-		for x in repaint_list:
-			getattr(config.plugins.skin.OverlayHD, x).removeNotifier(self.changeSettings)
-		self.redraw = True
-
 	def changeGrouping(self, configElement):
-		if self.redraw:
-			if config.plugins.skin.OverlayHD.UseGroups.value:
-				for x in display_groups:
-					getattr(config.plugins.skin.OverlayHD, x).value = False
-			else:
-				for x in display_groups:
-					getattr(config.plugins.skin.OverlayHD, x).value = True
+		if config.plugins.skin.OverlayHD.UseGroups.value:
+			for x in display_groups:
+				getattr(config.plugins.skin.OverlayHD, x).value = False
+		else:
+			for x in display_groups:
+				getattr(config.plugins.skin.OverlayHD, x).value = True
 
 	def changeSettings(self, configElement):
-		if self.redraw:
-			self.applySettings()
-
-	def keyOK(self):
-		if isinstance(self["config"].getCurrent()[1], (ConfigYesNo, ConfigEnableDisable)):
-			Setup.keyRight(self)
-		else:
-			Setup.keyOK(self)
+		self.applySettings()
 
 	def keyCancel(self):
-		self.removeNotify()
+		self.recursiveClose = False
+		self.confirmCancel()
+
+	def closeRecursive(self):
+		self.recursiveClose = True
+		self.confirmCancel()
+
+	def confirmCancel(self):
+		if self.changedSettings(checkNoRestartList=False) or self["config"].isChanged():
+			self.session.openWithCallback(self.cancelConfirm, MessageBox, self.cancelMsg, default=False)
+		else:
+			self.close(self.recursiveClose)
+
+	def cancelConfirm(self, result):
+		if not result:
+			return
+		self.removeNotifiers()
 		for x in config.plugins.skin.OverlayHD.dict():
 			getattr(config.plugins.skin.OverlayHD, x).cancel()
+		# This may not be needed...
+		for x in self["config"].list:
+			x[1].cancel()
 		self.applySettings()
-		self.close()
+		self.close(self.recursiveClose)
 
 	def keySave(self):
-		self.removeNotify()
-		changed = self.changedSettings()
+		self.removeNotifiers()
+		changed = self.changedSettings(checkNoRestartList=True)
 		for x in config.plugins.skin.OverlayHD.dict():
 			getattr(config.plugins.skin.OverlayHD, x).save()
+		# This may not be needed...
+		for x in self["config"].list:
+			x[1].save()
 		config.plugins.skin.OverlayHD.save()
 		self.applySettings()
 		if changed:
@@ -624,12 +608,13 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 
 	def restartGUI(self, answer):
 		if answer:
-			self.session.open(TryQuitMainloop, retvalue=3)
+			self.session.open(TryQuitMainloop, retvalue=QUIT_RESTART)
 		self.close()
 
-	def changedSettings(self):
+	def changedSettings(self, checkNoRestartList=True):
+		# print "[OverlayHD] DEBUG: Looking for changes. checkNoRestartList = ", checkNoRestartList
 		for x in config.plugins.skin.OverlayHD.dict():
-			if x in dont_restart:
+			if checkNoRestartList and x in dont_restart:
 				continue
 			if getattr(config.plugins.skin.OverlayHD, x).isChanged():
 				# print "[OverlayHD] DEBUG: Entries changed."
@@ -638,15 +623,15 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 		return False
 
 	def theme(self):
-		self.redraw = False
+		self.removeNotifiers()
 		self.session.openWithCallback(self.themeClosed, OverlayHDThemeManager)
 
 	def themeClosed(self):
-		self.redraw = True
 		self.applySettings()
+		self.addNotifiers()
 
 	def default(self):
-		self.redraw = False
+		self.removeNotifiers()
 		print "[OverlayHD] Setting OverlayHD skin to default settings."
 		for (label, colour, transparency) in colour_elements:
 			if colour is None or transparency is None:
@@ -668,7 +653,6 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 			item = getattr(config.plugins.skin.OverlayHD, label)
 			item.value = item.default
 			# print "[OverlayHD] DEBUG (default): '%s' = '%s'" % (label, item.default)
-		self.redraw = True
 		if config.skin.primary_skin.value == "OverlayHD/skin.xml":
 			self.applySettings()
 			msg = ""
@@ -676,10 +660,11 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 			msg = "\n\nNOTE: OverlayHD is not the active skin."
 		popup = self.session.open(MessageBox, _("Default OverlayHD skin settings applied.%s") % msg, MessageBox.TYPE_INFO, 5)
 		popup.setTitle(self.setup_title)
+		self.addNotifiers()
 
 	def applySettings(self):
 		index = self["config"].getCurrentIndex()
-		applySkinSettings(0)
+		applySkinSettings(False)
 		self.applySkin()
 		self.instance.invalidate()  # Remove this when the underlying bug is fixed!
 		self["config"].setCurrentIndex(index)
@@ -689,9 +674,6 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 	skin = """
 	<screen name="OverlayHDThemeManager" title="OverlayHD Theme Manager" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonMenu" />
-		<panel name="ScreenTemplateButtonColours" />
-		<panel name="ScreenTemplateButtonHelp" />
 		<ePixmap pixmap="menus/setup_default.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<widget source="themes" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
@@ -715,36 +697,22 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 		self.setup_title = _("OverlayHD Theme Manager")
 		Screen.setTitle(self, self.setup_title)
 
-		self["key_red"] = Button(_("Cancel"))
-		self["key_green"] = Button(_("Apply"))
-		self["key_yellow"] = Button(_("Save"))
-		self["key_blue"] = Button(_("Create"))
+		self["key_menu"] = StaticText(_("MENU"))
+		self["key_red"] = StaticText(_("Cancel"))
+		self["key_green"] = StaticText(_("Apply"))
+		self["key_yellow"] = StaticText(_("Save"))
+		self["key_blue"] = StaticText(_("Create"))
+		self["key_help"] = StaticText(_("HELP"))
 
-		(distro, code) = distro_configs.get(getImageDistro(), ("Unknown", "Enigma2"))
-		if code == "Beyonwiz":
-			self["actions"] = HelpableActionMap(self, ["OkCancelActions", "ColorActions", "MenuActions"], {
-				"ok": (self.applyTheme, _("Apply the currently highlighted theme, return to Skin Manager")),
-				"cancel": (self.cancelTheme, _("Cancel theme selection, return to Skin Manager")),
-				"menu": (self.themeMenu, _("Menu of actions applicable to the currently highlighted theme")),
-				"red": (self.cancelTheme, _("Cancel theme selection, return to Skin Manager")),
-				"green": (self.applyTheme, _("Apply the currently highlighted theme, return to Skin Manager")),
-				"yellow": (self.saveTheme, _("Save current skin settings as the currently highlighted theme")),
-				"blue": (self.newTheme, _("Create a new theme using the current skin settings"))
-			}, prio=0, description=_("Theme Functions"))
-		else:
-			self["OkCancelActions"] = HelpableActionMap(self, "OkCancelActions", {
-				"ok": (self.applyTheme, _("Apply the currently highlighted theme, return to Skin Manager")),
-				"cancel": (self.cancelTheme, _("Cancel theme selection, return to Skin Manager"))
-			}, prio=0)
-			self["ColorActions"] = HelpableActionMap(self, "ColorActions", {
-				"red": (self.cancelTheme, _("Cancel theme selection, return to Skin Manager")),
-				"green": (self.applyTheme, _("Apply the currently highlighted theme, return to Skin Manager")),
-				"yellow": (self.saveTheme, _("Save current skin settings as the currently highlighted theme")),
-				"blue": (self.newTheme, _("Create a new theme using the current skin settings"))
-			})
-			self["MenuActions"] = HelpableActionMap(self, "MenuActions", {
-				"menu": (self.themeMenu, _("Menu of actions applicable to the currently highlighted theme"))
-			}, prio=0)
+		self["actions"] = HelpableActionMap(self, ["OkCancelActions", "ColorActions", "MenuActions"], {
+			"ok": (self.applyTheme, _("Apply the currently highlighted theme, return to OverlayHD Skin Manager")),
+			"cancel": (self.cancelTheme, _("Cancel theme selection, return to OverlayHD Skin Manager")),
+			"menu": (self.themeMenu, _("Menu of actions applicable to the currently highlighted theme")),
+			"red": (self.cancelTheme, _("Cancel theme selection, return to OverlayHD Skin Manager")),
+			"green": (self.applyTheme, _("Apply the currently highlighted theme, return to OverlayHD Skin Manager")),
+			"yellow": (self.saveTheme, _("Save current skin settings as the currently highlighted theme")),
+			"blue": (self.newTheme, _("Create a new theme using the current skin settings"))
+		}, prio=0, description=_("Theme Functions"))
 		self["themes"] = List()
 		self.filename = resolveFilename(SCOPE_CONFIG, "OverlayHD_themes.xml")
 		self.dom_themes = None
@@ -998,6 +966,11 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 		popup.setTitle(self.setup_title)
 		# self.saveThemes()
 
+distro_configs = {
+	"beyonwiz": ("Beyonwiz", "Beyonwiz"),
+	"openpli": ("OpenPLi", "Enigma2"),
+	"openvix": ("OpenViX", "Enigma2")
+}
 
 def applySkinSettings(fullinit):
 	if config.skin.primary_skin.value == "OverlayHD/skin.xml":
@@ -1005,17 +978,18 @@ def applySkinSettings(fullinit):
 		if fullinit:
 			print "[OverlayHD] Configuring to run with '%s'." % distro
 			for screen in dom_screens:
-				elements, path = dom_screens.get(screen, (None, None))
-				if elements:
-					panels = elements.findall("panel")
-					for panel in panels:
-						name = panel.get("name", "")
-						base = panel.get("base", "")
-						if name and base:
-							panel.set("name", base + code)
-							# print "[OverlayHD] DEBUG: Screen '%s', Base '%s', OldName '%s' -> NewName '%s'" % (screen, base, name, base + code)
-							print "[OverlayHD] Adjusting screen '%s'." % screen
-							break
+				element, path = dom_screens.get(screen, (None, None))
+				if element is not None:
+					panels = element.findall("panel")
+					if panels is not None:
+						for panel in panels:
+							name = panel.get("name", None)
+							base = panel.get("base", None)
+							if name and base:
+								panel.set("name", base + code)
+								# print "[OverlayHD] DEBUG: Screen '%s', Base '%s', OldName '%s' -> NewName '%s'" % (screen, base, name, base + code)
+								print "[OverlayHD] Adjusting screen '%s'." % screen
+								break
 		#
 		print "[OverlayHD] Applying OverlayHD skin settings."
 		for (label, colour, transparency) in colour_elements:
@@ -1051,27 +1025,68 @@ def applySkinSettings(fullinit):
 		for (label, default, config_type, options_table) in option_elements:
 			if label == "AlwaysShowButtons":
 				for colour in button_colours:
-					elements, path = dom_screens.get(button_base + "Colours", (None, None))
-					if elements:
-						elements = elements.findall("panel")
-						for element in elements:
-							if config.plugins.skin.OverlayHD.AlwaysShowButtons.value:
-								if "conditional" in element.attrib:
-									del element.attrib["conditional"]
-							else:
-								if "conditional" not in element.attrib:
-									element.set("conditional", "key_%s" % colour)
-					for (style, label) in button_choices:
-						elements, path = dom_screens.get(button_base + colour + style, (None, None))
-						if elements:
-							elements = elements.findall("ePixmap")
-							for element in elements:
+					element, path = dom_screens.get(button_base + colour, (None, None))
+					if element is not None:
+						panels = element.findall("panel")
+						if panels is not None:
+							# print "[OverlayHD] %s panel (%d instances):" % (button_base + colour, len(panels))
+							for panel in panels:
 								if config.plugins.skin.OverlayHD.AlwaysShowButtons.value:
-									if "objectTypes" in element.attrib:
-										del element.attrib["objectTypes"]
+									if panel.get("conditional", None) is not None:
+										del panel.attrib["conditional"]
+										# print "[OverlayHD]       panel - Removing conditional attribute."
 								else:
-									if "objectTypes" not in element.attrib:
-										element.set("objectTypes", "key_%s,Button,Label" % colour)
+									if panel.get("conditional", None) is None:
+										panel.set("conditional", "key_%s" % colour.lower())
+										# print "[OverlayHD]       panel - Adding conditional attribute."
+								# print "[OverlayHD] DEBUG: XML dump:\n\t%s\n" % xml.etree.cElementTree.tostring(element)
+					for (style, label) in button_choices:
+						element, path = dom_screens.get(button_base + colour + style, (None, None))
+						if element is not None:
+							pixmaps = element.findall("ePixmap")
+							if pixmaps is not None:
+								# print "[OverlayHD] %s ePixmap (%d instances):" % (button_base + colour + style, len(pixmaps))
+								for pixmap in pixmaps:
+									if config.plugins.skin.OverlayHD.AlwaysShowButtons.value:
+										if pixmap.get("objectTypes", None) is not None:
+											del pixmap.attrib["objectTypes"]
+											# print "[OverlayHD]       ePixmap - Removing objectTypes attribute."
+									else:
+										if pixmap.get("objectTypes", None) is None:
+											pixmap.set("objectTypes", "key_%s,Button,Label" % colour.lower())
+											# print "[OverlayHD]       ePixmap - Adding objectTypes attribute."
+							widgets = element.findall("widget")
+							if widgets is not None:
+								# print "[OverlayHD] %s widget (%d instances):" % (button_base + colour + style, len(widgets))
+								for widget in widgets:
+									if widget.get("render", None) == "Pixmap":
+										if config.plugins.skin.OverlayHD.AlwaysShowButtons.value:
+											if widget.get("objectTypes", None) is not None:
+												del widget.attrib["objectTypes"]
+												# print "[OverlayHD]       Pixmap - Removing objectTypes attribute."
+												converts = widget.findall("convert")
+												if converts is not None:
+													for convert in converts:
+														if convert.get("type", None) == "ConditionalShowHide":
+															widget.remove(convert)
+															# print "[OverlayHD]       Pixmap - Removing 'ConditionalShowHide' converter."
+															break
+										else:
+											if widget.get("objectTypes", None) is None:
+												widget.set("objectTypes", "key_%s,StaticText" % colour.lower())
+												# print "[OverlayHD]       Pixmap - Adding 'source' objectTypes attribute."
+												found = False
+												converts = widget.findall("convert")
+												if converts is not None:
+													for convert in converts:
+														if convert.get("type", None) == "ConditionalShowHide":
+															found = True
+															# print "[OverlayHD]       Pixmap - 'ConditionalShowHide' converter exists."
+												if not found:
+													convert = xml.etree.cElementTree.Element("convert", type="ConditionalShowHide")
+													widget.append(convert)
+													# print "[OverlayHD]       Pixmap - Adding 'ConditionalShowHide' converter."
+							# print "[OverlayHD] DEBUG: XML widget dump:\n\t%s\n" % xml.etree.cElementTree.tostring(element)
 			elif label == "BackgroundImage":
 				dst = eEnv.resolve("${datadir}") + "/backdrop.mvi"
 				try:
@@ -1090,39 +1105,42 @@ def applySkinSettings(fullinit):
 					print "[OverlayHD] Error copying boot logo image! (%s)" % errtext
 			elif label == "ButtonStyle":
 				for colour in button_colours:
-					elements, path = dom_screens.get(button_base + colour, (None, None))
-					if elements:
-						element = elements.find("panel")
-						name = element.get("name", None)
-						if name:
-							element.set("name", button_base + colour + config.plugins.skin.OverlayHD.ButtonStyle.value)
+					element, path = dom_screens.get(button_base + colour, (None, None))
+					if element is not None:
+						panel = element.find("panel")
+						name = panel.get("name", None)
+						if name is not None:
+							panel.set("name", button_base + colour + config.plugins.skin.OverlayHD.ButtonStyle.value)
 			elif label == "EPGShowTicks":
 				if config.plugins.skin.OverlayHD.EPGShowTicks.value:
 					setting = "yes"
 				else:
 					setting = "no"
 				for screen in ("EPGTimeLinePanel", "GraphicalEPG", "GraphicalEPGPIG", "GraphicalInfoBarEPG"):
-					elements, path = dom_screens.get(screen, (None, None))
-					if elements:
-						widgets = elements.findall("widget")
-						for widget in widgets:
-							if widget.get("TimelineTicksOn", "") != "":
-								widget.set("TimelineTicksOn", setting)
-								break
-			elif label == "RecordBlink":
-				elements, path = dom_screens.get("ChannelFormatPanel", (None, None))
-				if elements:
-					widgets = elements.findall("widget")
-					for widget in widgets:
-						if widget.get("source", "") == "session.RecordState":
-							converts = widget.findall("convert")
-							for convert in converts:
-								if convert.get("type", "") == "ConditionalShowHide":
-									if config.plugins.skin.OverlayHD.RecordBlink.value:
-										convert.text = "Blink"
-									else:
-										convert.text = ""
+					element, path = dom_screens.get(screen, (None, None))
+					if element is not None:
+						widgets = element.findall("widget")
+						if widgets is not None:
+							for widget in widgets:
+								if widget.get("TimelineTicksOn", None) is not None:
+									widget.set("TimelineTicksOn", setting)
 									break
+			elif label == "RecordBlink":
+				element, path = dom_screens.get("ChannelFormatPanel", (None, None))
+				if element is not None:
+					widgets = element.findall("widget")
+					if widgets is not None:
+						for widget in widgets:
+							if widget.get("source", None) == "session.RecordState":
+								converts = widget.findall("convert")
+								if converts is not None:
+									for convert in converts:
+										if convert.get("type", None) == "ConditionalShowHide":
+											if config.plugins.skin.OverlayHD.RecordBlink.value:
+												convert.text = "Blink"
+											else:
+												convert.text = ""
+											break
 			elif label == "Spinner":
 				linkname = resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/spinner")
 				if islink(linkname):
@@ -1141,19 +1159,21 @@ def applySkinSettings(fullinit):
 						errtext = "Error %d: %s - '%s'" % (err, errmsg, linkname)
 						print "[OverlayHD] Error linking spinner directory! (%s)" % errtext
 			elif label == "UpdateBlink":
-				elements, path = dom_screens.get("ChannelFormatPanel", (None, None))
-				if elements:
-					widgets = elements.findall("widget")
-					for widget in widgets:
-						if widget.get("source", "") in ("global.OnlineStableUpdateState", "global.OnlineUnstableUpdateState"):
-							converts = widget.findall("convert")
-							for convert in converts:
-								if convert.get("type", "") == "ConditionalShowHide":
-									if config.plugins.skin.OverlayHD.UpdateBlink.value:
-										convert.text = "Blink"
-									else:
-										convert.text = ""
-									break
+				element, path = dom_screens.get("ChannelFormatPanel", (None, None))
+				if element is not None:
+					widgets = element.findall("widget")
+					if widgets is not None:
+						for widget in widgets:
+							if widget.get("source", None) in ("global.OnlineStableUpdateState", "global.OnlineUnstableUpdateState"):
+								converts = widget.findall("convert")
+								if converts is not None:
+									for convert in converts:
+										if convert.get("type", None) == "ConditionalShowHide":
+											if config.plugins.skin.OverlayHD.UpdateBlink.value:
+												convert.text = "Blink"
+											else:
+												convert.text = ""
+											break
 		if code == "Beyonwiz":
 			from skin import reloadWindowstyles
 			reloadWindowstyles()
@@ -1198,7 +1218,7 @@ def autostart(reason, **kwargs):
 	if reason == 0:
 		# print "[OverlayHD] OverlayHD Skin Manager for '%s' loaded." % distro
 		updateOverlayHD()
-		applySkinSettings(1)
+		applySkinSettings(True)
 	elif reason == 1:
 		# print "[OverlayHD] OverlayHD Skin Manager for '%s' unloaded." % distro
 		pass
@@ -1207,7 +1227,7 @@ def Plugins(**kwargs):
 	list = []
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
-		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU], description="OverlayHD Skin Manager version 1.65", icon="OverlayHD.png", fnc=main))
+		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU], description="OverlayHD Skin Manager version 1.66", icon="OverlayHD.png", fnc=main))
 		if config.plugins.skin.OverlayHD.ShowInExtensions.value:
-			list.append(PluginDescriptor(name=_("OverlayHD Skin Manager"), where=[PluginDescriptor.WHERE_EXTENSIONSMENU], description="OverlayHD Skin Manager version 1.65", icon="OverlayHD.png", fnc=main))
+			list.append(PluginDescriptor(name=_("OverlayHD Skin Manager"), where=[PluginDescriptor.WHERE_EXTENSIONSMENU], description="OverlayHD Skin Manager version 1.66", icon="OverlayHD.png", fnc=main))
 	return list
