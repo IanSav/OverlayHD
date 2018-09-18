@@ -366,7 +366,7 @@
 		<alias name="Regular" font="NemesisFlatline" size="20" height="25" width="18" />
 		<alias name="SMSHelperFont" font="MPluss1M" size="20" height="24" width="18" />
 		<alias name="TextFont" font="ValisEnigma" size="20" height="25" width="18" />
-		<alias name="TextNormal" font="NemesisFlatline" size="20" height="24" width="18" />
+		<alias name="TextNormal" font="NemesisFlatline" size="20" height="25" width="18" />
 		<alias name="TitleFont" font="RobotoBlack" size="25" height="35" width="20" />
 		<alias name="VirtualKeyboard" font="NemesisFlatline" size="25" height="45" width="20" />
 	</fonts>
@@ -1227,7 +1227,6 @@
 
 	<screen name="Setup" title="Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonHelp" />
 		<widget name="menuimage" position="50,100" size="300,500" alphatest="blend" conditional="menuimage" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateFootnote4" />
@@ -2045,7 +2044,7 @@
 
 <!-- Screen Saver -->
 
-	<screen name="Screensaver" title="Help" position="0,0" size="1280,720" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
+	<screen name="Screensaver" title="Screen Saver" position="0,0" size="1280,720" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
 		<panel name="ScreensaverEnigma2" base="Screensaver" />
 	</screen>
 
