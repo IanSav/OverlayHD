@@ -308,7 +308,7 @@
 
 	<screen name="MovieSelectionSlimListBeyonwiz">
 		<widget name="list" position="50,80" size="1180,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0"
-			font="MovieSelectionFont;20" pbarHeight="10" pbarLargeWidth="45" spaceIconeText="5" iconsWidth="25" spaceRight="5" dateWidthScale="9.0" lenWidthScale="4.0" sizeWidthScale="5.0" />
+			font="MovieSelectionFont;20" markWidth="20" listPos="30" pbarHeight="10" pbarLargeWidth="45" spaceIconeText="5" iconsWidth="25" spaceRight="5" dateWidthScale="9.0" lenWidthScale="4.0" sizeWidthScale="5.0" />
 	</screen>
 
 	<screen name="MovieSelectionSlimListEnigma2">
