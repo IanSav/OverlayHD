@@ -228,10 +228,10 @@
 		<!-- Chapter info -->
 		<widget name="chapterLabel" position="184,645" size="380,22" backgroundColor="TextBackground" font="Regular;20" foregroundColor="unc3c3c9" transparent="1" />
 		<!-- Icons for help -->
-		<ePixmap pixmap="icons/icon_rewind.png" position="1056,594" size="36,36" alphatest="blend" />
-		<ePixmap pixmap="icons/icon_play.png" position="1094,594" size="36,36" alphatest="blend" />
-		<ePixmap pixmap="icons/icon_pause.png" position="1132,594" size="36,36" alphatest="blend" />
-		<ePixmap pixmap="icons/icon_forward.png" position="1170,594" size="36,36" alphatest="blend" />
+		<ePixmap pixmap="icons/icon_rewind.png" position="1056,594" size="32,24" alphatest="blend" />
+		<ePixmap pixmap="icons/icon_play.png" position="1094,594" size="32,24" alphatest="blend" />
+		<ePixmap pixmap="icons/icon_pause.png" position="1132,594" size="32,24" alphatest="blend" />
+		<ePixmap pixmap="icons/icon_forward.png" position="1170,594" size="32,24" alphatest="blend" />
 		<!-- Audio icon (is there multichannel audio?) -->
 		<ePixmap pixmap="icons/i_dolby.png" position="1018,594" size="36,36" alphatest="blend" zPosition="1" />
 		<widget name="audioLabel" position="968,645" size="130,22" backgroundColor="TextBackground" font="Regular;18" shadowColor="#001d354c" shadowOffset="-1,-1" transparent="1" valign="bottom" />
@@ -382,10 +382,10 @@
 
 	<screen name="MyTubePlayer" title="InfoBar" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" zPosition="-1">
 		<ePixmap pixmap="images/infobar.png" position="0,70" size="1280,720" zPosition="-1" />
-		<ePixmap pixmap="icons/icon_rewind.png" position="82,601" size="36,36" alphatest="blend" transparent="1" zPosition="0" />
-		<ePixmap pixmap="icons/icon_play.png" position="120,601" size="36,36" alphatest="blend" transparent="1" zPosition="0" />
-		<ePixmap pixmap="icons/icon_pause.png" position="158,601" size="36,36" alphatest="blend" transparent="1" zPosition="0" />
-		<ePixmap pixmap="icons/icon_forward.png" position="196,601" size="36,36" alphatest="blend" transparent="1" zPosition="0" />
+		<ePixmap pixmap="icons/icon_rewind.png" position="82,601" size="32,24" alphatest="blend" transparent="1" zPosition="0" />
+		<ePixmap pixmap="icons/icon_play.png" position="120,601" size="32,24" alphatest="blend" transparent="1" zPosition="0" />
+		<ePixmap pixmap="icons/icon_pause.png" position="158,601" size="32,24" alphatest="blend" transparent="1" zPosition="0" />
+		<ePixmap pixmap="icons/icon_forward.png" position="196,601" size="32,24" alphatest="blend" transparent="1" zPosition="0" />
 		<eLabel position="55,659" size="205,1" backgroundColor="crypt_emm" zPosition="2" />
 		<widget source="session.CurrentService" render="Label" position="93,665" size="57,20" backgroundColor="TextBackground" font="Regular;18" foregroundColor="White" halign="right" transparent="1">
 			<convert type="ServiceInfo">VideoWidth</convert>

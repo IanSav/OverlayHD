@@ -216,10 +216,10 @@
 
 	<screen name="MusicExplorer" title="InfoBar" position="0,70" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" zPosition="-1">
 		<ePixmap pixmap="images/infobar.png" position="0,0" size="1280,720" zPosition="-1" />
-		<ePixmap pixmap="icons/icon_rewind.png" position="82,520" size="36,36" alphatest="blend" transparent="1" zPosition="0" />
-		<ePixmap pixmap="icons/icon_play.png" position="120,520" size="36,36" alphatest="blend" transparent="1" zPosition="0" />
-		<ePixmap pixmap="icons/icon_pause.png" position="158,520" size="36,36" alphatest="blend" transparent="1" zPosition="0" />
-		<ePixmap pixmap="icons/icon_forward.png" position="196,520" size="36,36" alphatest="blend" transparent="1" zPosition="0" />
+		<ePixmap pixmap="icons/icon_rewind.png" position="82,520" size="32,24" alphatest="blend" transparent="1" zPosition="0" />
+		<ePixmap pixmap="icons/icon_play.png" position="120,520" size="32,24" alphatest="blend" transparent="1" zPosition="0" />
+		<ePixmap pixmap="icons/icon_pause.png" position="158,520" size="32,24" alphatest="blend" transparent="1" zPosition="0" />
+		<ePixmap pixmap="icons/icon_forward.png" position="196,520" size="32,24" alphatest="blend" transparent="1" zPosition="0" />
 		<widget source="session.CurrentService" render="Label" position="55,490" size="1220,26" backgroundColor="TextBackground" font="Named;20" foregroundColor="White" halign="center" noWrap="1" transparent="1" valign="center">
 			<convert type="ServiceName">Name</convert>
 		</widget>
