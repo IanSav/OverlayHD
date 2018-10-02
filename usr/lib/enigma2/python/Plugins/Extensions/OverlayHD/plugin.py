@@ -1,7 +1,7 @@
 # ====================================================
 # OverlayHD Skin Manager
-# Version Date - 30-Jul-2018
-# Version Number - 1.66
+# Version Date - 28-Sep-2018
+# Version Number - 1.68
 # Repository - https://bitbucket.org/IanSav/overlayhd
 # Coding by IanSav (c) 2015-2018
 # ====================================================
@@ -359,7 +359,7 @@ font_elements = [
 	("InfoTimeFont", "NemesisFlatline", text_font_choices),
 	("MenuFont", "NemesisFlatline", text_font_choices),
 	("MovieSelectionFont", "NemesisFlatline", text_font_choices),
-	("SMSHelperFont", "MPluss1M", fixed_font_choices),
+	("SMSHelperFont", "DejaVuSansCondensed", text_font_choices),
 	("Regular", "NemesisFlatline", text_font_choices),
 	("TextFont", "NemesisFlatline", text_font_choices),
 	("TitleFont", "RobotoBlack", banner_font_choices)
@@ -1227,7 +1227,7 @@ def Plugins(**kwargs):
 	list = []
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
-		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU], description="OverlayHD Skin Manager version 1.66", icon="OverlayHD.png", fnc=main))
+		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU], description="OverlayHD Skin Manager version 1.68", icon="OverlayHD.png", fnc=main))
 		if config.plugins.skin.OverlayHD.ShowInExtensions.value:
-			list.append(PluginDescriptor(name=_("OverlayHD Skin Manager"), where=[PluginDescriptor.WHERE_EXTENSIONSMENU], description="OverlayHD Skin Manager version 1.66", icon="OverlayHD.png", fnc=main))
+			list.append(PluginDescriptor(name=_("OverlayHD Skin Manager"), where=[PluginDescriptor.WHERE_EXTENSIONSMENU], description="OverlayHD Skin Manager version 1.68", icon="OverlayHD.png", fnc=main))
 	return list
