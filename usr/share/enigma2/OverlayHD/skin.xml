@@ -585,10 +585,10 @@
 			<convert type="ConditionalShowHide" />
 		</widget>
 		-->
-		<panel name="ScreenTemplateButtonRed" />
-		<panel name="ScreenTemplateButtonGreen" />
-		<panel name="ScreenTemplateButtonYellow" />
-		<panel name="ScreenTemplateButtonBlue" />
+		<panel name="ScreenTemplateButtonRed" conditional="key_red" />
+		<panel name="ScreenTemplateButtonGreen" conditional="key_green" />
+		<panel name="ScreenTemplateButtonYellow" conditional="key_yellow" />
+		<panel name="ScreenTemplateButtonBlue" conditional="key_blue" />
 		<widget source="key_text" render="Pixmap" pixmap="buttons/button_block_text.png" position="1120,670" size="50,35" alphatest="blend" objectTypes="key_text,StaticText" transparent="1">
 			<convert type="ConditionalShowHide" />
 		</widget>
