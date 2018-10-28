@@ -1,12 +1,11 @@
 # ====================================================
 # OverlayHD Skin Manager
-# Version Date - 28-Sep-2018
-# Version Number - 1.68
+# Version Date - 22-Oct-2018
+# Remember to change version number variable below!!!
+#
 # Repository - https://bitbucket.org/IanSav/overlayhd
 # Coding by IanSav (c) 2015-2018
-# ====================================================
-# Remember to change the version number below!!!
-# ====================================================
+#
 # This plugin was originally developed for the
 # Beyonwiz Australia distribution of Enigma2.  It
 # may be distributed and executed on Beyonwiz and
@@ -16,6 +15,8 @@
 # you are allowed to modify it (if you keep the license
 # and original author details), but it may not be
 # commercially distributed.
+
+PLUGIN_VERSION_NUMBER = "1.69"
 
 import errno
 import shutil
@@ -40,6 +41,12 @@ from Screens.Setup import Setup
 from Screens.Standby import TryQuitMainloop, QUIT_RESTART
 from Screens.VirtualKeyBoard import VirtualKeyBoard
 from Tools.Directories import resolveFilename, SCOPE_CONFIG, SCOPE_CURRENT_SKIN, SCOPE_CURRENT_PLUGIN
+
+distro_configs = {
+	"beyonwiz": ("Beyonwiz", "Beyonwiz"),
+	"openpli": ("OpenPLi", "Enigma2"),
+	"openvix": ("OpenViX", "Enigma2")
+}
 
 # Items with a colour and transparency require two lines in the setup XML file.
 # (One for ItemColour and one for ItemTransparency.)
@@ -966,17 +973,11 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 		popup.setTitle(self.setup_title)
 		# self.saveThemes()
 
-distro_configs = {
-	"beyonwiz": ("Beyonwiz", "Beyonwiz"),
-	"openpli": ("OpenPLi", "Enigma2"),
-	"openvix": ("OpenViX", "Enigma2")
-}
-
 def applySkinSettings(fullinit):
 	if config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		(distro, code) = distro_configs.get(getImageDistro(), ("Unknown", "Enigma2"))
 		if fullinit:
-			print "[OverlayHD] Configuring to run with '%s'." % distro
+			print "[OverlayHD] OverlayHD Skin Manager version %s: Configuring to run in '%s' mode." % (PLUGIN_VERSION_NUMBER, distro)
 			for screen in dom_screens:
 				element, path = dom_screens.get(screen, (None, None))
 				if element is not None:
@@ -1214,7 +1215,7 @@ def main(session, **kwargs):
 	session.open(OverlayHDSkinManager)
 
 def autostart(reason, **kwargs):
-	# distro = getImageDistro()
+	# (distro, code) = distro_configs.get(getImageDistro(), ("Unknown", "Enigma2"))
 	if reason == 0:
 		# print "[OverlayHD] OverlayHD Skin Manager for '%s' loaded." % distro
 		updateOverlayHD()
@@ -1227,7 +1228,7 @@ def Plugins(**kwargs):
 	list = []
 	if config.plugins.skin.OverlayHD.AlwaysActive.value or config.skin.primary_skin.value == "OverlayHD/skin.xml":
 		list.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
-		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU], description="OverlayHD Skin Manager version 1.68", icon="OverlayHD.png", fnc=main))
+		list.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU], description="OverlayHD Skin Manager version %s" % PLUGIN_VERSION_NUMBER, icon="OverlayHD.png", fnc=main))
 		if config.plugins.skin.OverlayHD.ShowInExtensions.value:
-			list.append(PluginDescriptor(name=_("OverlayHD Skin Manager"), where=[PluginDescriptor.WHERE_EXTENSIONSMENU], description="OverlayHD Skin Manager version 1.68", icon="OverlayHD.png", fnc=main))
+			list.append(PluginDescriptor(name=_("OverlayHD Skin Manager"), where=[PluginDescriptor.WHERE_EXTENSIONSMENU], description="OverlayHD Skin Manager version %s" % PLUGIN_VERSION_NUMBER, icon="OverlayHD.png", fnc=main))
 	return list
