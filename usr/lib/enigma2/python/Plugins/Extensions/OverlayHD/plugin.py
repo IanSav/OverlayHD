@@ -16,7 +16,7 @@
 # and original author details), but it may not be
 # commercially distributed.
 
-PLUGIN_VERSION_NUMBER = "1.69"
+PLUGIN_VERSION_NUMBER = "1.70"
 
 import errno
 import shutil
@@ -521,11 +521,11 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 
 	def __init__(self, session):
 		Setup.__init__(self, session=session, setup="OverlayHDSkinManager", plugin="Extensions/OverlayHD")
-		HelpableScreen.__init__(self)
+		HelpableScreen.__init__(self)  # TEMP
 
 		self["key_yellow"] = StaticText(_("Themes"))
 		self["key_blue"] = StaticText(_("Default"))
-		self["key_help"] = StaticText(_("HELP"))
+		self["key_help"] = StaticText(_("HELP"))  # TEMP
 
 		self["OverlayHDActions"] = HelpableActionMap(self, "ColorActions", {
 			"yellow": (self.theme, _("Manage themes")),
@@ -540,7 +540,6 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 		for fname in sorted(listdir(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/spinners"))):
 			spinner_choices.append((fname, _(fname)))
 		config.plugins.skin.OverlayHD.Spinner.setChoices(default=config.plugins.skin.OverlayHD.Spinner.value, choices=spinner_choices)
-
 		self.addNotifiers()
 
 	def addNotifiers(self):
@@ -571,21 +570,20 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 	def changeSettings(self, configElement):
 		self.applySettings()
 
-	def keyCancel(self):
-		self.recursiveClose = False
-		self.confirmCancel()
+	def keyCancel(self):  # TEMP
+		self.confirmCancel(False)
 
-	def closeRecursive(self):
-		self.recursiveClose = True
-		self.confirmCancel()
+	def closeRecursive(self):  # TEMP
+		self.confirmCancel(True)
 
-	def confirmCancel(self):
+	def confirmCancel(self, recursiveClose):  # TEMP
 		if self.changedSettings(checkNoRestartList=False) or self["config"].isChanged():
-			self.session.openWithCallback(self.cancelConfirm, MessageBox, self.cancelMsg, default=False)
+			self.recursiveClose = recursiveClose
+			self.session.openWithCallback(self.cancelConfirm, MessageBox, _("Really close without saving settings?"), default=False)
 		else:
-			self.close(self.recursiveClose)
+			self.close(recursiveClose)
 
-	def cancelConfirm(self, result):
+	def cancelConfirm(self, result):  # TEMP
 		if not result:
 			return
 		self.removeNotifiers()
@@ -597,7 +595,7 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 		self.applySettings()
 		self.close(self.recursiveClose)
 
-	def keySave(self):
+	def keySave(self):  # TEMP
 		self.removeNotifiers()
 		changed = self.changedSettings(checkNoRestartList=True)
 		for x in config.plugins.skin.OverlayHD.dict():
@@ -613,7 +611,7 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 		else:
 			self.close()
 
-	def restartGUI(self, answer):
+	def restartGUI(self, answer):  # TEMP
 		if answer:
 			self.session.open(TryQuitMainloop, retvalue=QUIT_RESTART)
 		self.close()
