@@ -239,9 +239,10 @@
 			font="MovieSelectionFont;20" markWidth="20" listPos="30" pbarHeight="10" pbarLargeWidth="45" spaceIconeText="5" iconsWidth="25" spaceRight="5" dateWidthScale="9.0" lenWidthScale="4.0" sizeWidthScale="5.0" />
 			<!-- Other available attributes...
 			font="MovieSelectionFont;20" pbarHeight="10" pbarLargeWidth="45" spaceIconeText="5" iconsWidth="25" spaceRight="5" dateWidth="140" dateWidthScale="9.0" lenWidth="60" lenWidthScale="4.0" sizeWidth="70" sizeWidthScale="5.0"
-			dirShift="None"partIconeShift="None" pbarColour="206333" pbarColourRec="ff001d" pbarColourSeen="ffc71d" pbarColourSeenSel="ffc71d"
+			dirShift="None" partIconeShift="None" pbarColour="206333" pbarColourRec="ff001d" pbarColourSeen="ffc71d" pbarColourSeenSel="ffc71d"
 			pbarColourSel="20e333" pbarShift="None" pbarColourRecSel="ff001d" spaceRight="5" trashShift="None"
 			listPos="50" markWidth="16" markShift="0" (vertical offset for centering)
+			NOTE: dirShift and trashShift removed in OpenViX 5.2.014!
 			-->
 		<widget name="numFolders" position="50,605" size="220,25" font="InfoOtherFont;20" foregroundColor="InfoDiskStats" transparent="1" />
 		<widget name="numFiles" position="50,630" size="220,25" font="InfoOtherFont;20" foregroundColor="InfoDiskStats" transparent="1" />
