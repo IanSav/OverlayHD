@@ -452,4 +452,195 @@
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 	</screen>
+
+<!-- InfoBar Recording Timers Plugin -->
+
+	<!-- Template fields:
+		 0 -> Image, taken from "Icons" list above, that represents the state of the timer (Waiting, Preparing, Running or Ended)
+		 1 -> Text message representation of field 0
+		 2 -> Image, taken from "Icons" list above, that represents the type of timer (AutoTimer, IceTV, Repeating)
+		 3 -> Text message representation of field 2
+		 4 -> Tuner letter of tuner being used for a running timer (A, B, C, ...)
+		 5 -> Tuner type of tuner being used for a running timer (DVB-C, DVB-S, DVB-T, ...)
+		 6 -> Tuner Bit Error Rate of tuner being used for a running timer
+		 7 -> Tuner Signal to Noise Ratio of tuner being used for a running timer to be used for a bar graph type display
+		 8 -> Tuner Signal to Noise Ratio of tuner being used for a running timer in percentage format
+		 9 -> Tuner Signal to Noise Ratio (in dB) of tuner being used for a running timer
+		10 -> Tuner signal power of tuner being used for a running timer to be used for a bar graph type display
+		11 -> Tuner signal power of tuner being used for a running timer in percentage format
+		12 -> Service picon for the timer
+		13 -> Service name for the timer
+		14 -> Timer name for the timer
+		15 -> Prepare time for the timer
+		16 -> Begin date and time for the timer (includes padding)
+		17 -> Begin date for the timer (includes padding)
+		18 -> Begin time for the timer (includes padding)
+		19 -> End date and time for the timer (includes padding)
+		20 -> End date for the timer (includes padding)
+		21 -> End time for the timer (includes padding)
+		22 -> Begin date, time, separator " - " and end time for the timer (includes padding)
+		23 -> Duration of the timer shown in the user selected format
+		24 -> Duration of the timer shown in minutes based text string (eg "65 Mins")
+		25 -> Duration of the timer shown in hours based clock format (eg "1:05")
+		26 -> Duration of the timer shown in minutes based clock format (eg "1:05")
+		27 -> Duration of the timer shown in seconds based clock format (eg "1:05:08")
+		28 -> Elapsed time of a running timer shown in the user selected format
+		29 -> Elapsed time of a running timer in minutes based test string (eg "25 Mins")
+		30 -> Elapsed of the timer shown in hours based clock format (eg "0:25")
+		31 -> Elapsed of the timer shown in minutes based clock format (eg "0:25")
+		32 -> Elapsed of the timer shown in seconds based clock format (eg "0:25:08")
+		33 -> Remaining time of a running timer shown in the user selected format
+		34 -> Remaining time of a running timer in minutes based text string (eg "40 Mins")
+		35 -> Remaining of the timer shown in hours based clock format (eg "0:40")
+		36 -> Remaining of the timer shown in minutes based clock format (eg "0:40")
+		37 -> Remaining of the timer shown in seconds based clock format (eg "0:40:08")
+		38 -> Elapsed / Remaining time of a running timer formatted to UI settings
+		39 -> Progress of a running timer to be used for a bar graph type display
+		40 -> Progress of a running timer shown as a percentage based text string (eg "68%")
+		41 -> List of tags associated with the timer
+		42 -> Description text associated with this timer
+		43 -> Directory name to be used for the timer if the default is NOT being used
+	-->
+
+	<screen name="InfoBarRecTimersOverlay" title="InfoBar Recording Timers" position="50,140" size="1180,420" backgroundColor="background" flags="wfNoBorder" zPosition="+1">
+		<widget name="Icons" position="0,0" size="20,20" pixmaps="icons/timer_off.png,icons/timer_wait.png,icons/timer_prep.png,icons/timer_rec.png,icons/timer_zap.png,icons/timer_failed.png,icons/timer_done.png,icons/timer_autotimer.png,icons/timer_rep.png" alphatest="blend" transparent="1" />
+		<widget source="Timers" render="Listbox" position="10,10" size="1160,400" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"templates":
+					{
+					"default": (25,
+						[
+						MultiContentEntryPixmapAlphaBlend(pos = (0, 2), size = (20, 20), png = 0),  # State icon
+						MultiContentEntryPixmapAlphaBlend(pos = (25, 2), size = (20, 20), png = 2),  # Type icon (AutoTimer, IceTV, Repeat)
+						MultiContentEntryText(pos = (50, 0), size = (20, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4, color = "InfoRecordingColour"),  # Tuner letter
+						MultiContentEntryPixmapAlphaBlend(pos = (70, 1), size = (40, 24), png = 12, flags = BT_SCALE),  # Service picon
+						MultiContentEntryText(pos = (120, 0), size = (150, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 13, color = "InfoChannel"),  # Service name
+						MultiContentEntryText(pos = (280, 0), size = (340, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 14, color = "InfoDetailsNow"),  # Timer name
+						MultiContentEntryText(pos = (630, 0), size = (360, 25), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 22, color = "InfoTimesNow"),  # Begin - End time
+						MultiContentEntryProgressPixmap(pos = (1000, 8), size = (50, 9), percent = -39, pixmap = "sliders/progress_record.png", borderWidth = 1, foreColor = "InfoRecordingBorder", backColor = "InfoRecordingBackground"),  # Progress bar
+						MultiContentEntryText(pos = (1060, 0), size = (100, 25), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 23, color = "InfoDurationNow")  # Duration
+						]),
+					"Enhanced": (30,
+						[
+						MultiContentEntryPixmapAlphaBlend(pos = (0, 5), size = (20, 20), png = 0, flags = BT_SCALE),  # State icon
+						MultiContentEntryPixmapAlphaBlend(pos = (25, 5), size = (20, 20), png = 2, flags = BT_SCALE),  # Type icon (AutoTimer, IceTV, Repeat)
+						MultiContentEntryPixmapAlphaBlend(pos = (50, 1), size = (47, 28), png = 12, flags = BT_SCALE),  # Service picon
+						MultiContentEntryText(pos = (110, 0), size = (390, 30), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 14, color = "InfoDetailsNow"),  # Timer name
+						MultiContentEntryText(pos = (510, 0), size = (20, 15), font = 3, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 4, color = "InfoRecordingColour"),  # Tuner letter
+						MultiContentEntryText(pos = (540, 0), size = (330, 15), font = 3, flags = RT_HALIGN_RIGHT | RT_VALIGN_TOP, text = 22, color = "InfoTimesNow"),  # Begin - End time
+						MultiContentEntryText(pos = (510, 15), size = (120, 15), font = 3, flags = RT_HALIGN_LEFT | RT_VALIGN_BOTTOM, text = 13, color = "InfoChannel"),  # Service name
+						MultiContentEntryText(pos = (640, 15), size = (80, 15), font = 3, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 11, color = "InfoServiceData"),  # Power
+						MultiContentEntryText(pos = (730, 15), size = (80, 15), font = 3, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 8, color = "InfoServiceData"),  # SNR
+						MultiContentEntryText(pos = (820, 15), size = (80, 15), font = 3, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 5, color = "InfoBroadcaster"),  # Tuner type
+						MultiContentEntryText(pos = (910, 0), size = (140, 20), font = 2, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 38, color = "InfoDurationNow"),  # Elapsed / Remaining time
+						MultiContentEntryProgressPixmap(pos = (910, 20), size = (140, 6), percent = -39, pixmap = "sliders/progress_record.png", borderWidth = 1, foreColor = "InfoRecordingBorder", backColor = "InfoRecordingBackground"),  # Progress bar
+						MultiContentEntryText(pos = (1060, 0), size = (100, 30), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 23, color = "InfoDurationNow")  # Duration
+						]),
+					"Enhanced (Alt)": (30,
+						[
+						MultiContentEntryPixmapAlphaBlend(pos = (0, 5), size = (20, 20), png = 0, flags = BT_SCALE),  # State icon
+						MultiContentEntryPixmapAlphaBlend(pos = (25, 5), size = (20, 20), png = 2, flags = BT_SCALE),  # Type icon (AutoTimer, IceTV, Repeat)
+						MultiContentEntryPixmapAlphaBlend(pos = (50, 1), size = (47, 28), png = 12, flags = BT_SCALE),  # Service picon
+						MultiContentEntryText(pos = (110, 0), size = (450, 15), font = 3, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 14, color = "InfoDetailsNow"),  # Timer name
+						MultiContentEntryText(pos = (120, 15), size = (140, 15), font = 3, flags = RT_HALIGN_LEFT | RT_VALIGN_BOTTOM, text = 13, color = "InfoChannel"),  # Service name
+						MultiContentEntryText(pos = (270, 15), size = (20, 15), font = 3, flags = RT_HALIGN_LEFT | RT_VALIGN_BOTTOM, text = 4, color = "InfoRecordingColour"),  # Tuner letter
+						MultiContentEntryText(pos = (300, 15), size = (80, 15), font = 3, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 11, color = "InfoServiceData"),  # Power
+						MultiContentEntryText(pos = (390, 15), size = (80, 15), font = 3, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 8, color = "InfoServiceData"),  # SNR
+						MultiContentEntryText(pos = (480, 15), size = (80, 15), font = 3, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 5, color = "InfoBroadcaster"),  # Tuner type
+						MultiContentEntryText(pos = (570, 0), size = (330, 30), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 22, color = "InfoTimesNow"),  # Begin - End time
+						MultiContentEntryText(pos = (910, 0), size = (140, 18), font = 2, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 38, color = "InfoDurationNow"),  # Elapsed / Remaining time
+						MultiContentEntryProgressPixmap(pos = (910, 20), size = (140, 6), percent = -39, pixmap = "sliders/progress_record.png", borderWidth = 1, foreColor = "InfoRecordingBorder", backColor = "InfoRecordingBackground"),  # Progress bar
+						MultiContentEntryText(pos = (1060, 0), size = (100, 30), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 23, color = "InfoDurationNow")  # Duration
+						]),
+					"Detailed": (40,
+						[
+						MultiContentEntryPixmapAlphaBlend(pos = (0, 10), size = (20, 20), png = 0, flags = BT_SCALE),  # State icon
+						MultiContentEntryPixmapAlphaBlend(pos = (25, 10), size = (20, 20), png = 2, flags = BT_SCALE),  # Type icon (AutoTimer, IceTV, Repeat)
+						MultiContentEntryPixmapAlphaBlend(pos = (55, 1), size = (63, 38), png = 12, flags = BT_SCALE),  # Service picon
+						MultiContentEntryText(pos = (130, 0), size = (540, 23), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 14, color = "InfoDetailsNow"),  # Timer name
+						MultiContentEntryText(pos = (150, 23), size = (220, 17), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_BOTTOM, text = 13, color = "InfoChannel"),  # Service name
+						MultiContentEntryText(pos = (380, 23), size = (20, 17), font = 1, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 4, color = "InfoRecordingColour"),  # Tuner letter
+						MultiContentEntryText(pos = (410, 23), size = (80, 17), font = 1, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 11, color = "InfoServiceData"),  # Power
+						MultiContentEntryText(pos = (500, 23), size = (80, 17), font = 1, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 8, color = "InfoServiceData"),  # SNR
+						MultiContentEntryText(pos = (590, 23), size = (80, 17), font = 1, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 5, color = "InfoBroadcaster"),  # Tuner type
+						MultiContentEntryText(pos = (680, 0), size = (370, 23), font = 0, flags = RT_HALIGN_CENTER | RT_VALIGN_TOP, text = 22, color = "InfoTimesNow"),  # Begin - End time
+						MultiContentEntryText(pos = (680, 23), size = (100, 17), font = 1, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 28, color = "InfoDurationNow"),  # Elapsed time
+						MultiContentEntryProgressPixmap(pos = (790, 28), size = (150, 7), percent = -39, pixmap = "sliders/progress_record.png", borderWidth = 1, foreColor = "InfoRecordingBorder", backColor = "InfoRecordingBackground"),  # Progress bar
+						MultiContentEntryText(pos = (950, 23), size = (100, 17), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_BOTTOM, text = 33, color = "InfoDurationNow"),  # Remaining time
+						MultiContentEntryText(pos = (1060, 0), size = (100, 23), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_TOP, text = 23, color = "InfoDurationNow"),  # Duration
+						MultiContentEntryText(pos = (1060, 23), size = (100, 17), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_BOTTOM, text = 40, color = "InfoProgressColour")  # Progress percentage
+						])
+					},
+				"fonts": [parseFont("Regular;20"), parseFont("Regular;15"), parseFont("Regular;17"), parseFont("Regular;13")],
+				"scrollbarMode": "showNever",
+				"selectionEnabled": False
+				}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="InfoBarRecTimersShow" title="Recording Timers" position="0,0" size="1280,720" backgroundColor="background" flags="wfNoBorder">
+		<widget name="Icons" position="0,0" size="20,20" pixmaps="icons/timer_off.png,icons/timer_wait.png,icons/timer_prep.png,icons/timer_rec.png,icons/timer_zap.png,icons/timer_failed.png,icons/timer_done.png,icons/timer_autotimer.png,icons/timer_rep.png" alphatest="blend" transparent="1" />
+		<widget source="Timers" render="Listbox" position="50,80" size="1180,520" transparent="1">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryPixmapAlphaBlend(pos = (10, 10), size = (20, 20), png = 0, flags = BT_SCALE),  # State icon
+					MultiContentEntryPixmapAlphaBlend(pos = (35, 10), size = (20, 20), png = 2, flags = BT_SCALE),  # Type icon (AutoTimer, IceTV, Repeat)
+					MultiContentEntryPixmapAlphaBlend(pos = (65, 1), size = (63, 38), png = 12, flags = BT_SCALE),  # Service picon
+					MultiContentEntryText(pos = (140, 0), size = (530, 23), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 14, color = "InfoDetailsNow"),  # Timer name
+					MultiContentEntryText(pos = (160, 23), size = (150, 17), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_BOTTOM, text = 13, color = "InfoChannel"),  # Service name
+					MultiContentEntryText(pos = (320, 23), size = (20, 17), font = 1, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 4, color = "InfoRecordingColour"),  # Tuner letter
+					MultiContentEntryText(pos = (350, 23), size = (100, 17), font = 1, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 11, color = "InfoServiceData"),  # Power
+					MultiContentEntryText(pos = (460, 23), size = (100, 17), font = 1, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 8, color = "InfoServiceData"),  # SNR
+					MultiContentEntryText(pos = (570, 23), size = (100, 17), font = 1, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 5, color = "InfoBroadcaster"),  # Tuner type
+					MultiContentEntryText(pos = (680, 0), size = (370, 23), font = 0, flags = RT_HALIGN_CENTER | RT_VALIGN_TOP, text = 22, color = "InfoTimesNow"),  # Begin - End time
+					MultiContentEntryText(pos = (680, 23), size = (100, 17), font = 1, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 28, color = "InfoDurationNow"),  # Elapsed time
+					MultiContentEntryProgressPixmap(pos = (790, 28), size = (150, 7), percent = -39, pixmap = "sliders/progress_record.png", borderWidth = 1, foreColor = "InfoRecordingBorder", backColor = "InfoRecordingBackground"),  # Progress bar
+					MultiContentEntryText(pos = (950, 23), size = (100, 17), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_BOTTOM, text = 33, color = "InfoDurationNow"),  # Remaining time
+					MultiContentEntryText(pos = (1060, 0), size = (100, 23), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_TOP, text = 23, color = "InfoDurationNow"),  # Duration
+					MultiContentEntryText(pos = (1060, 23), size = (100, 17), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_BOTTOM, text = 40, color = "InfoProgressColour")  # Progress percentage
+					],
+				"fonts": [parseFont("Regular;20"), parseFont("Regular;15")],
+				"itemHeight": 40,
+				"scrollbarMode": "showOnDemand",
+				"selectionEnabled": True
+				}
+			</convert>
+		</widget>
+	</screen>
+
+<!-- InfoBar Tuner State Plugin -->
+
+	<screen name="TunerState" title="Tuner State" position="50,160" size="1180,25" backgroundColor="ScreenBackground" flags="wfNoBorder" padding="20" spacing="15" zPosition="+1">
+		<widget name="Type" position="0,0" size="20,20" pixmaps="icons/timer_rec.png,icons/timer_zap.png,icons/timer_done.png,icons/timer_wait.png" alphatest="blend" transparent="1" />
+		<widget name="Progress" position="0,0" size="80,10" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/progress.png" backgroundColor="ScreenBackground" borderColor="Grey" borderWidth="2" transparent="1" />
+		<!-- nowrap=1 is essential for calculateSize -->
+		<widget name="Field0" font="Regular;20" foregroundColor="White" halign="left" noWrap="1" transparent="1" valign="center" />
+		<widget name="Field1" font="Regular;20" foregroundColor="Silver" halign="left" noWrap="1" transparent="1" valign="center" />
+		<widget name="Field2" font="Regular;20" foregroundColor="White" halign="left" noWrap="1" transparent="1" valign="center" />
+		<widget name="Field3" font="Regular;20" foregroundColor="Silver" halign="left" noWrap="1" transparent="1" valign="center" />
+		<widget name="Field4" font="Regular;20" foregroundColor="White" halign="left" noWrap="1" transparent="1" valign="center" />
+		<widget name="Field5" font="Regular;20" foregroundColor="Silver" halign="left" noWrap="1" transparent="1" valign="center" />
+		<widget name="Field6" font="Regular;20" foregroundColor="White" halign="left" noWrap="1" transparent="1" valign="center" />
+		<widget name="Field7" font="Regular;20" foregroundColor="Silver" halign="left" noWrap="1" transparent="1" valign="center" />
+		<widget name="Field8" font="Regular;20" foregroundColor="White" halign="left" noWrap="1" transparent="1" valign="center" />
+		<widget name="Field9" font="Regular;20" foregroundColor="Silver" halign="left" noWrap="1" transparent="1" valign="center" />
+	</screen>
+
+<!-- Recording InfoBar plugin -->
+
+	<screen name="RecInfoBar" title="Recording Information" position="160,0" size="1280,40" backgroundColor="ScreenBackground" flags="wfNoBorder" zPosition="+1">
+		<widget name="chTuner" position="0,2" size="180,18" font="Regular;18" foregroundColor="Cyan" halign="left" noWrap="1" transparent="1" />
+		<widget name="chProv" position="190,2" size="250,18" font="Regular;18" foregroundColor="Yellow" halign="left" noWrap="1" transparent="1" />
+		<widget name="chBouq" position="450,2" size="300,18" font="Regular;18" foregroundColor="Yellow" halign="left" noWrap="1" transparent="1" />
+		<widget name="chNum" position="760,2"  size="50,18" font="Regular;18" foregroundColor="White" halign="right" noWrap="1" transparent="1" />
+		<widget name="chName" position="820,2" size="300,18" font="Regular;18" foregroundColor="White" halign="left" noWrap="1" transparent="1" />
+		<widget name="timelen" position="1130,2" size="150,18" font="Regular;18" foregroundColor="White" halign="right" noWrap="1" transparent="1" />
+		<widget name="chSnr" position="10,20" size="150,18" font="Regular;18" foregroundColor="Cyan" halign="left" noWrap="1" transparent="1" />
+		<widget name="remaining" position="160,20" size="480,18" font="Regular;18" foregroundColor="Grey" halign="center" noWrap="1" transparent="1" />
+		<widget name="recName" position="820,20" size="630,18" font="Regular;18" foregroundColor="Grey" halign="left" noWrap="1" transparent="1" />
+	</screen>
 </skin>
