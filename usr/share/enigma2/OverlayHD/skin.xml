@@ -435,6 +435,8 @@
 		-->
 		<parameter name="VirtualKeyboard" value="45,45" />
 		<parameter name="VirtualKeyBoard" value="45,45" />
+		<parameter name="VirtualKeyBoardAlignment" value="0,0" />
+		<parameter name="VirtualKeyBoardPadding" value="4,4" />
 		<parameter name="VirtualKeyBoardShiftColors" value="White,White,Cyan,Magenta" />
 		<!--
 		<parameter name="SHOUTcastListItem" value="30,27,35,96,35,33,60,32" />
@@ -2065,10 +2067,22 @@
 	<screen name="VirtualKeyBoard" title="Virtual Keyboard" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_shuffle.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
-		<panel name="VirtualKeyBoardEnigma2" base="VirtualKeyBoard" />
+		<widget name="prompt" position="420,80" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<eLabel position="415,200" size="815,2" backgroundColor="Pinstripe" />
+		<eLabel position="415,245" size="815,2" backgroundColor="Pinstripe" />
+		<eLabel position="415,200" size="2,45" backgroundColor="Pinstripe" />
+		<eLabel position="1229,200" size="2,45" backgroundColor="Pinstripe" />
+		<widget name="text" position="420,210" size="800,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" noWrap="1" transparent="1" valign="center" />
+		<widget name="list" position="500,300" size="630,225" selectionDisabled="1" transparent="1" />
+		<widget name="mode" position="1170,400" size="60,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" halign="right" transparent="1" valign="center" />
+		<widget name="locale" position="420,630" size="600,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="language" position="1030,630" size="200,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" halign="right" transparent="1" valign="center" />
 	</screen>
 
-	<screen name="VirtualKeyBoardBeyonwiz" title="Virtual Keyboard" position="center,center" size="800,400" backgroundColor="ScreenBackground" zPosition="+90">
+	<!-- The Beyonwiz version of the Virtual Keyboard is no longer supportable as it too far out of date!  The images now in use are too different from those used in the old code!
+	<screen name="VirtualKeyBoard" title="Virtual Keyboard" position="center,center" size="800,400" backgroundColor="ScreenBackground" zPosition="+90">
+		<panel name="ScreenTemplate" />
+		<ePixmap pixmap="menus/mainmenu_shuffle.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="header" position="420,80" size="810,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
 		<eLabel position="415,170" size="815,2" backgroundColor="Pinstripe" />
 		<eLabel position="415,215" size="815,2" backgroundColor="Pinstripe" />
@@ -2079,19 +2093,7 @@
 		<widget name="country" position="420,630" size="650,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="HelpPress" transparent="1" />
 		<widget name="current_language" position="1090,630" size="140,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="HelpPress" halign="right" transparent="1" />
 	</screen>
-
-	<screen name="VirtualKeyBoardEnigma2" title="Virtual Keyboard" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<widget name="prompt" position="420,80" size="810,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
-		<eLabel position="415,170" size="815,2" backgroundColor="Pinstripe" />
-		<eLabel position="415,215" size="815,2" backgroundColor="Pinstripe" />
-		<eLabel position="415,170" size="2,45" backgroundColor="Pinstripe" />
-		<eLabel position="1229,170" size="2,45" backgroundColor="Pinstripe" />
-		<widget name="text" position="420,180" size="800,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" noWrap="1" transparent="1" valign="center" />
-		<widget name="list" position="500,300" size="630,225" selectionDisabled="1" transparent="1" />
-		<widget name="mode" position="1170,400" size="60,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" halign="right" transparent="1" valign="center" />
-		<widget name="locale" position="420,630" size="600,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
-		<widget name="language" position="1030,630" size="200,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" halign="right" transparent="1" valign="center" />
-	</screen>
+	-->
 
 	<!-- This is the pop up window version of the VirtualKeyBoard... (Not currently in use!)
 	<screen name="VirtualKeyBoard" title="Virtual Keyboard" position="center,center" size="660,410" backgroundColor="ScreenBackground" zPosition="99">
