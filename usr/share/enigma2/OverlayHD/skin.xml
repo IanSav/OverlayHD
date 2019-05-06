@@ -498,21 +498,7 @@
 	</setups>
 
 	<windowstyle id="0" type="skinned">
-		<title font="Named;23" offset="20,8" />
-		<!--
-		<color name="Background" color="#30000000" />
-		<color name="LabelForeground" color="#00dddddd" />
-		<color name="ListboxBackground" color="#30000000" />
-		<color name="ListboxForeground" color="#00dddddd" />
-		<color name="ListboxSelectedBackground" color="#251357a3" />
-		<color name="ListboxSelectedForeground" color="White" />
-		<color name="ListboxMarkedBackground" color="#253658a4" />
-		<color name="ListboxMarkedForeground" color="Red" />
-		<color name="ListboxMarkedAndSelectedBackground" color="#253658a4" />
-		<color name="ListboxMarkedAndSelectedForeground" color="#00800000" />
-		<color name="WindowTitleBackground" color="#30000000" />
-		<color name="WindowTitleForeground" color="#0075a6ff" />
-		-->
+		<title font="TitleFont;23" offset="20,8" />
 		<color name="Background" color="ScreenBackground" />
 		<color name="LabelForeground" color="Scrollbar" />
 		<color name="ListboxBackground" color="MenuBackground" />
@@ -539,6 +525,7 @@
 			<pixmap filename="borders/tib-v.png" pos="bpTop" />
 			<pixmap filename="borders/tib-v.png" pos="bpBottom" />
 		</borderset>
+		<scrollbar scrollbarMode="showOnDemand" scrollbarBackgroundPicture="borders/s_back.png" scrollbarSliderBorderColor="Blue" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="Red" scrollbarSliderPicture="borders/s_thumb.png" scrollbarWidth="10" />
 	</windowstyle>
 
 	<windowstyle id="1" type="skinned">
