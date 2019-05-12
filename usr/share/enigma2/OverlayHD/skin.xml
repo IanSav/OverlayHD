@@ -1070,7 +1070,6 @@
 	</screen>
 
 	<screen name="HelpMenuBeyonwiz" title="Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplateButtonHelp" />
 		<panel position="150,110" size="154,500">
 			<panel name="ScreenTemplateRemote" />
 		</panel>
