@@ -1113,6 +1113,66 @@
 		<widget name="long_key" position="400,620" size="830,30" backgroundColor="TextBackground" font="HelpFont;25" foregroundColor="HelpPress" halign="right" transparent="1" />
 	</screen>
 
+	<screen name="HelpMenuEnigma2New" title="Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel position="150,110" size="154,500">
+			<panel name="ScreenTemplateRemote" />
+		</panel>
+		<!--
+		 |	To display the extended help for the current item in a description widget instead of in
+		 |	a second line in the help list, change the size of the description wizard to something
+		 |	appropriate (e.g. "280,44") and change over to the commented out "extended" template below.
+		 +-->
+		<widget source="list" render="Listbox" position="400,80" size="830,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+			<convert type="TemplatedMultiContent">
+				{
+				# Template for use when "description" is used
+				#
+				# For integrated extended help uncomment the "MultiContentEntryText" entries,
+				# set the itemHeight for the extended entries to 50 and remove the panel for
+				# "ScreenTemplateDescription4".
+				"templates":
+					{
+					# Simple help with no headings ("flat")
+					# data[1:] = [helpText]
+					"default": (25,  # itemHeight
+						[
+						MultiContentEntryText(pos = (20, 0), size = (790, 25), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1)
+						]),
+					# Simple help with headings
+					# data[1:] = [heading, None]  # For heading entries
+					# data[1:] = [None, helpText]  # For help entries
+					"default+headings": (25,  # itemHeight
+						[
+						MultiContentEntryText(pos = (0, 0), size = (810, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
+						MultiContentEntryText(pos = (20, 0), size = (790, 25), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2)
+						]),
+					# Extended help with no headings
+					# data[1:] = [helpText, extendedHelpText]
+					"extended": (25,  # itemHeight
+						[
+						MultiContentEntryText(pos = (20, 0), size = (790, 25), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1)
+						# MultiContentEntryText(pos = (50, 25), size = (760, 25), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2)
+						]),
+					# Extended help with headings
+					# data[1:] = [heading, None, None]  # For heading entries
+					# data[1:] = [None, helpText, extendedHelpText]  # For help entries
+					"extended+headings": (25,  # itemHeight
+						[
+						MultiContentEntryText(pos = (0, 0), size = (810, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
+						MultiContentEntryText(pos = (20, 0), size = (790, 25), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2)
+						# MultiContentEntryText(pos = (50, 25), size = (760, 25), font = 2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3)
+						]),
+					},
+				"fonts": [parseFont("HelpFont;20"), parseFont("HelpFont;20"), parseFont("HelpFont;20")],
+				"itemHeight": 25
+				}
+			</convert>
+		</widget>
+		<widget name="longshift_key0" position="400,510" size="830,25" backgroundColor="TextBackground" font="HelpFont;20" foregroundColor="HelpPress" halign="right" transparent="1" valign="center" />
+		<widget name="longshift_key1" position="400,510" size="830,25" backgroundColor="TextBackground" font="HelpFont;20" foregroundColor="HelpPress" transparent="1" valign="center" />
+		<panel name="ScreenTemplateDescription4" />
+	</screen>
+
 	<screen name="MPHelp" title="XML Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/help.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
