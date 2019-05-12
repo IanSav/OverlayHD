@@ -502,7 +502,7 @@
 		43 -> Directory name to be used for the timer if the default is NOT being used
 	-->
 
-	<screen name="InfoBarRecTimersOverlay" title="InfoBar Recording Timers" position="50,140" size="1180,420" backgroundColor="background" flags="wfNoBorder" zPosition="+1">
+	<screen name="InfoBarTimersOverlay" title="InfoBar Timers" position="50,140" size="1180,420" backgroundColor="background" flags="wfNoBorder" zPosition="+1">
 		<widget name="Icons" position="0,0" size="20,20" pixmaps="icons/timer_off.png,icons/timer_wait.png,icons/timer_prep.png,icons/timer_rec.png,icons/timer_zap.png,icons/timer_failed.png,icons/timer_done.png,icons/timer_autotimer.png,icons/timer_rep.png" alphatest="blend" transparent="1" />
 		<widget source="Timers" render="Listbox" position="10,10" size="1160,400" transparent="1">
 			<convert type="TemplatedMultiContent">
@@ -580,7 +580,7 @@
 		</widget>
 	</screen>
 
-	<screen name="InfoBarRecTimersShow" title="Recording Timers" position="0,0" size="1280,720" backgroundColor="background" flags="wfNoBorder">
+	<screen name="InfoBarTimersShow" title="Show Timers" position="0,0" size="1280,720" backgroundColor="background" flags="wfNoBorder">
 		<widget name="Icons" position="0,0" size="20,20" pixmaps="icons/timer_off.png,icons/timer_wait.png,icons/timer_prep.png,icons/timer_rec.png,icons/timer_zap.png,icons/timer_failed.png,icons/timer_done.png,icons/timer_autotimer.png,icons/timer_rep.png" alphatest="blend" transparent="1" />
 		<widget source="Timers" render="Listbox" position="50,80" size="1180,520" transparent="1">
 			<convert type="TemplatedMultiContent">
