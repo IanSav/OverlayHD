@@ -446,6 +446,9 @@
 		-->
 	</parameters>
 
+	<menus>
+	</menus>
+
 	<setups>
 		<setup key="default" image="menus/mainmenu_tasks_setup_system.png" />
 		<!-- <setup key="time" image="menus/mainmenu_tasks_setup_system.png" /> -->
