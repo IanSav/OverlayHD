@@ -1145,6 +1145,7 @@
 		<widget name="indicator_u13" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
 		<widget name="indicator_u14" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
 		<widget name="indicator_u15" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicator_u16" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
 		<widget name="indicator_l0" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
 		<widget name="indicator_l1" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
 		<widget name="indicator_l2" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
@@ -1161,12 +1162,7 @@
 		<widget name="indicator_l13" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
 		<widget name="indicator_l14" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
 		<widget name="indicator_l15" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
-		<!-- Old pointers
-		<widget name="arrowdown" pixmap="images/arrowdown.png" position="-100,-100" size="37,70" alphatest="blend" />
-		<widget name="arrowdown2" pixmap="images/arrowdown.png" position="-100,-100" size="37,70" alphatest="blend" />
-		<widget name="arrowup" pixmap="images/arrowup.png" position="-100,-100" size="37,70" alphatest="blend" />
-		<widget name="arrowup2" pixmap="images/arrowup.png" position="-100,-100" size="37,70" alphatest="blend" />
-		-->
+		<widget name="indicator_l16" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
 	</screen>
 
 <!-- MENU > Setup - Beyonwiz Top Level Setup Menu -->
