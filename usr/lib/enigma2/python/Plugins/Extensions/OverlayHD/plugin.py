@@ -1,6 +1,6 @@
 # ====================================================
 # OverlayHD Skin Manager
-# Version Date - 22-May-2019
+# Version Date - 26-May-2019
 # Remember to change version number variable below!!!
 #
 # Repository - https://bitbucket.org/IanSav/overlayhd
@@ -16,7 +16,7 @@
 # and original author details), but it may not be
 # commercially distributed.
 
-PLUGIN_VERSION_NUMBER = "1.71"
+PLUGIN_VERSION_NUMBER = "1.72"
 
 import errno
 import shutil
@@ -157,6 +157,7 @@ colour_elements = [
 	("ScreenSaver", "Black", "0x19000000"),
 	("Scrollbar", "Gainsboro", None),
 	("SMSHelperBackground", "Background", "Background"),
+	("SMSHelperLabel", "Grey", None),
 	("SMSHelperText", "White", None),
 	("Text", "White", None),
 	("TextBackground", "Background", "Background"),
