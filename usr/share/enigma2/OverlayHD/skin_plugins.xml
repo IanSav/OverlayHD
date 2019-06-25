@@ -800,6 +800,13 @@
 		<widget name="text" position="50,620" size="1180,35" font="Regular;25" transparent="1" valign="center" />
 	</screen>
 
+<!-- Stalker Plugin -->
+
+	<screen name="StalkerEdit" title="Stalker Settup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="Setup" />
+		<widget source="mac" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
 <!-- StreamTVPlayer Plugin -->
 
 	<screen name="StreamTVList" title="StreamTV List" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
