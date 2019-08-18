@@ -1,6 +1,6 @@
 # ====================================================
 # OverlayHD Skin Manager
-# Version Date - 15-Aug-2019
+# Version Date - 16-Aug-2019
 # Remember to change version number variable below!!!
 #
 # Repository - https://bitbucket.org/IanSav/overlayhd
@@ -16,7 +16,7 @@
 # and original author details), but it may not be
 # commercially distributed.
 
-PLUGIN_VERSION_NUMBER = "1.75"
+PLUGIN_VERSION_NUMBER = "1.76"
 
 import errno
 import shutil
@@ -1013,69 +1013,7 @@ def applySkinSettings(fullinit):
 			fonts[label] = tuple(data)
 		for (label, default, configType, optionsTable) in optionElements:
 			if label == "AlwaysShowButtons":
-				for colour in buttonColours:
-					element, path = domScreens.get(buttonBase + colour, (None, None))
-					if element is not None:
-						panels = element.findall("panel")
-						if panels is not None:
-							# print "[OverlayHD] %s panel (%d instances):" % (buttonBase + colour, len(panels))
-							for panel in panels:
-								if config.plugins.skin.OverlayHD.AlwaysShowButtons.value:
-									if panel.get("conditional", None) is not None:
-										del panel.attrib["conditional"]
-										# print "[OverlayHD]       panel - Removing conditional attribute."
-								else:
-									if panel.get("conditional", None) is None:
-										panel.set("conditional", "key_%s" % colour.lower())
-										# print "[OverlayHD]       panel - Adding conditional attribute."
-								# print "[OverlayHD] DEBUG: XML dump:\n\t%s\n" % xml.etree.cElementTree.tostring(element)
-					for (style, label) in buttonChoices:
-						element, path = domScreens.get(buttonBase + colour + style, (None, None))
-						if element is not None:
-							pixmaps = element.findall("ePixmap")
-							if pixmaps is not None:
-								# print "[OverlayHD] %s ePixmap (%d instances):" % (buttonBase + colour + style, len(pixmaps))
-								for pixmap in pixmaps:
-									if config.plugins.skin.OverlayHD.AlwaysShowButtons.value:
-										if pixmap.get("objectTypes", None) is not None:
-											del pixmap.attrib["objectTypes"]
-											# print "[OverlayHD]       ePixmap - Removing objectTypes attribute."
-									else:
-										if pixmap.get("objectTypes", None) is None:
-											pixmap.set("objectTypes", "key_%s,Button,Label" % colour.lower())
-											# print "[OverlayHD]       ePixmap - Adding objectTypes attribute."
-							widgets = element.findall("widget")
-							if widgets is not None:
-								# print "[OverlayHD] %s widget (%d instances):" % (buttonBase + colour + style, len(widgets))
-								for widget in widgets:
-									if widget.get("render", None) == "Pixmap":
-										if config.plugins.skin.OverlayHD.AlwaysShowButtons.value:
-											if widget.get("objectTypes", None) is not None:
-												del widget.attrib["objectTypes"]
-												# print "[OverlayHD]       Pixmap - Removing objectTypes attribute."
-												converts = widget.findall("convert")
-												if converts is not None:
-													for convert in converts:
-														if convert.get("type", None) == "ConditionalShowHide":
-															widget.remove(convert)
-															# print "[OverlayHD]       Pixmap - Removing 'ConditionalShowHide' converter."
-															break
-										else:
-											if widget.get("objectTypes", None) is None:
-												widget.set("objectTypes", "key_%s,StaticText" % colour.lower())
-												# print "[OverlayHD]       Pixmap - Adding 'source' objectTypes attribute."
-												found = False
-												converts = widget.findall("convert")
-												if converts is not None:
-													for convert in converts:
-														if convert.get("type", None) == "ConditionalShowHide":
-															found = True
-															# print "[OverlayHD]       Pixmap - 'ConditionalShowHide' converter exists."
-												if not found:
-													convert = xml.etree.cElementTree.Element("convert", type="ConditionalShowHide")
-													widget.append(convert)
-													# print "[OverlayHD]       Pixmap - Adding 'ConditionalShowHide' converter."
-							# print "[OverlayHD] DEBUG: XML widget dump:\n\t%s\n" % xml.etree.cElementTree.tostring(element)
+				applyButtons(label)
 			elif label == "BackgroundImage":
 				applyImage(label, "backdrop.mvi")
 			elif label == "BootImage":
@@ -1158,6 +1096,71 @@ def applySkinSettings(fullinit):
 			reloadWindowstyles()
 	else:
 		print "[OverlayHD] OverlayHD is not the active skin."
+
+def applyButtons(mode):
+	for colour in buttonColours:
+		element, path = domScreens.get(buttonBase + colour, (None, None))
+		if element is not None:
+			panels = element.findall("panel")
+			if panels is not None:
+				# print "[OverlayHD] %s panel (%d instances):" % (buttonBase + colour, len(panels))
+				for panel in panels:
+					if getattr(config.plugins.skin.OverlayHD, mode).value:
+						if panel.get("conditional", None) is not None:
+							del panel.attrib["conditional"]
+							# print "[OverlayHD]       panel - Removing conditional attribute."
+					else:
+						if panel.get("conditional", None) is None:
+							panel.set("conditional", "key_%s" % colour.lower())
+							# print "[OverlayHD]       panel - Adding conditional attribute."
+					# print "[OverlayHD] DEBUG: XML dump:\n\t%s\n" % xml.etree.cElementTree.tostring(element)
+		for (style, label) in buttonChoices:
+			element, path = domScreens.get(buttonBase + colour + style, (None, None))
+			if element is not None:
+				pixmaps = element.findall("ePixmap")
+				if pixmaps is not None:
+					# print "[OverlayHD] %s ePixmap (%d instances):" % (buttonBase + colour + style, len(pixmaps))
+					for pixmap in pixmaps:
+						if getattr(config.plugins.skin.OverlayHD, mode).value:
+							if pixmap.get("objectTypes", None) is not None:
+								del pixmap.attrib["objectTypes"]
+								# print "[OverlayHD]       ePixmap - Removing objectTypes attribute."
+						else:
+							if pixmap.get("objectTypes", None) is None:
+								pixmap.set("objectTypes", "key_%s,Button,Label" % colour.lower())
+								# print "[OverlayHD]       ePixmap - Adding objectTypes attribute."
+				widgets = element.findall("widget")
+				if widgets is not None:
+					# print "[OverlayHD] %s widget (%d instances):" % (buttonBase + colour + style, len(widgets))
+					for widget in widgets:
+						if widget.get("render", None) == "Pixmap":
+							if getattr(config.plugins.skin.OverlayHD, mode).value:
+								if widget.get("objectTypes", None) is not None:
+									del widget.attrib["objectTypes"]
+									# print "[OverlayHD]       Pixmap - Removing objectTypes attribute."
+									converts = widget.findall("convert")
+									if converts is not None:
+										for convert in converts:
+											if convert.get("type", None) == "ConditionalShowHide":
+												widget.remove(convert)
+												# print "[OverlayHD]       Pixmap - Removing 'ConditionalShowHide' converter."
+												break
+							else:
+								if widget.get("objectTypes", None) is None:
+									widget.set("objectTypes", "key_%s,StaticText" % colour.lower())
+									# print "[OverlayHD]       Pixmap - Adding 'source' objectTypes attribute."
+									found = False
+									converts = widget.findall("convert")
+									if converts is not None:
+										for convert in converts:
+											if convert.get("type", None) == "ConditionalShowHide":
+												found = True
+												# print "[OverlayHD]       Pixmap - 'ConditionalShowHide' converter exists."
+									if not found:
+										convert = xml.etree.cElementTree.Element("convert", type="ConditionalShowHide")
+										widget.append(convert)
+										# print "[OverlayHD]       Pixmap - Adding 'ConditionalShowHide' converter."
+				# print "[OverlayHD] DEBUG: XML widget dump:\n\t%s\n" % xml.etree.cElementTree.tostring(element)
 
 def applyImage(image, target):
 	src = getattr(config.plugins.skin.OverlayHD, image).value
