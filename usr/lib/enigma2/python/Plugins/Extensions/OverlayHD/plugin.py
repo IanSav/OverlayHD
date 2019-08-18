@@ -575,8 +575,8 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 	def confirmCancel(self, recursiveClose):  # TEMP
 		if self.changedSettings(checkNoRestartList=False) or self["config"].isChanged():
 			self.recursiveClose = recursiveClose
-			self.session.openWithCallback(self.cancelConfirm, MessageBox, _("Really close without saving settings?"), default=False)
-			info.setTitle(self.setup_title)
+			popup = self.session.openWithCallback(self.cancelConfirm, MessageBox, _("Really close without saving settings?"), default=False)
+			popup.setTitle(self.setup_title)
 		else:
 			self.close(recursiveClose)
 
@@ -834,7 +834,8 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 		menu = []
 		for action in themeActions:
 			menu.append(action)
-		self.session.openWithCallback(self.themeMenuAction, ChoiceBox, title=_("OverlayHD Theme: '%s'") % name, list=menu, skin_name="OverlayHDThemeMenu")
+		popup = self.session.openWithCallback(self.themeMenuAction, ChoiceBox, title=_("OverlayHD Theme: '%s'") % name, list=menu, skin_name="OverlayHDThemeMenu")
+		popup.setTitle(self.setup_title)
 
 	def themeMenuAction(self, choice):
 		if choice is None:
