@@ -1,6 +1,6 @@
 # ====================================================
 # OverlayHD Skin Manager
-# Version Date - 14-Aug-2019
+# Version Date - 15-Aug-2019
 # Remember to change version number variable below!!!
 #
 # Repository - https://bitbucket.org/IanSav/overlayhd
@@ -16,7 +16,7 @@
 # and original author details), but it may not be
 # commercially distributed.
 
-PLUGIN_VERSION_NUMBER = "1.74"
+PLUGIN_VERSION_NUMBER = "1.75"
 
 import errno
 import shutil
@@ -29,7 +29,7 @@ except ImportError:
 		return "openpli"
 from enigma import eEnv, gRGB
 from os import listdir, remove, symlink, unlink
-from os.path import exists, isdir, isfile, islink
+from os.path import exists, isdir, isfile, islink, join as pathjoin
 from skin import dom_screens as domScreens, colorNames, fonts  # , reloadWindowstyles
 
 from Components.ActionMap import HelpableActionMap
@@ -44,7 +44,7 @@ from Screens.Screen import Screen
 from Screens.Setup import Setup
 from Screens.Standby import TryQuitMainloop, QUIT_RESTART
 from Screens.VirtualKeyBoard import VirtualKeyBoard
-from Tools.Directories import resolveFilename, SCOPE_CONFIG, SCOPE_CURRENT_SKIN, SCOPE_CURRENT_PLUGIN
+from Tools.Directories import resolveFilename, SCOPE_CONFIG, SCOPE_SKIN, SCOPE_CURRENT_SKIN, SCOPE_CURRENT_PLUGIN
 
 distroConfigs = {
 	"beyonwiz": ("Beyonwiz", "Beyonwiz"),
@@ -378,7 +378,7 @@ fontElements = [
 	("TitleFont", "RobotoBlack", bannerFontChoices)
 ]
 
-backgroundImageChoices = [
+imageChoices = [
 	("", _("Default"))
 ]
 
@@ -407,7 +407,8 @@ spinnerChoices = [
 optionElements = [
 	("AlwaysActive", False, ConfigYesNo, None),
 	("AlwaysShowButtons", True, ConfigYesNo, None),
-	("BackgroundImage", "", ConfigSelection, backgroundImageChoices),
+	("BackgroundImage", "", ConfigSelection, imageChoices),
+	("BootImage", "", ConfigSelection, imageChoices),
 	("ButtonStyle", "Block", ConfigSelection, buttonChoices),
 	("EnhancedMenu", False, ConfigEnableDisable, None),
 	("EPGSettings", False, ConfigYesNo, None),
@@ -418,6 +419,7 @@ optionElements = [
 	("InfoSettings", False, ConfigYesNo, None),
 	("MenuSettings", False, ConfigYesNo, None),
 	("PanelSettings", False, ConfigYesNo, None),
+	("RadioImage", "", ConfigSelection, imageChoices),
 	("RecordBlink", True, ConfigYesNo, None),
 	("ShowInExtensions", False, ConfigYesNo, None),
 	("SortThemes", False, ConfigYesNo, None),
@@ -468,12 +470,14 @@ repaintList = [
 
 dontRestart = [
 	"BackgroundImage",
+	"BootImage",
 	"EPGSettings",
 	"GeneralSettings",
 	"FontSettings",
 	"InfoSettings",
 	"MenuSettings",
 	"PanelSettings",
+	"RadioImage",
 	"RecordBlink",
 	"SortThemes",
 	"Spinner",
@@ -507,9 +511,9 @@ for (label, colour, transparency) in colourElements:
 for (label, font, fontTable) in fontElements:
 	setattr(config.plugins.skin.OverlayHD, label, ConfigSelection(default=font, choices=fontTable))
 	# print "[OverlayHD] DEBUG (definition): Font '%s' = '%s' (%s)" % (label, font, fontTable)
-for fname in sorted(listdir(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/backgrounds"))):
-	backgroundImageChoices.append((fname, _(fname[0:-4])))
-for fname in sorted(listdir(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/spinners"))):
+for fname in sorted(listdir(resolveFilename(SCOPE_CURRENT_SKIN, "backgrounds"))):
+	imageChoices.append((fname, _(fname[0:-4])))
+for fname in sorted(listdir(resolveFilename(SCOPE_CURRENT_SKIN, "spinners"))):
 	spinnerChoices.append((fname, _(fname)))
 for (label, default, configType, optionTable) in optionElements:
 	if optionTable:
@@ -532,14 +536,6 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 			"yellow": (self.theme, _("Manage themes")),
 			"blue": (self.default, _("Apply the default skin settings"))
 		}, prio=0, description=_("OverlayHD Functions"))
-		backgroundImageChoices = [("", _("Default"))]
-		for fname in sorted(listdir(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/backgrounds"))):
-			backgroundImageChoices.append((fname, _(fname[0:-4])))
-		config.plugins.skin.OverlayHD.BackgroundImage.setChoices(default=config.plugins.skin.OverlayHD.BackgroundImage.value, choices=backgroundImageChoices)
-		spinnerChoices = [("", _("Default"))]
-		for fname in sorted(listdir(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/spinners"))):
-			spinnerChoices.append((fname, _(fname)))
-		config.plugins.skin.OverlayHD.Spinner.setChoices(default=config.plugins.skin.OverlayHD.Spinner.value, choices=spinnerChoices)
 		self.addNotifiers()
 
 	def addNotifiers(self):
@@ -1081,21 +1077,9 @@ def applySkinSettings(fullinit):
 													# print "[OverlayHD]       Pixmap - Adding 'ConditionalShowHide' converter."
 							# print "[OverlayHD] DEBUG: XML widget dump:\n\t%s\n" % xml.etree.cElementTree.tostring(element)
 			elif label == "BackgroundImage":
-				dst = eEnv.resolve("${datadir}") + "/backdrop.mvi"
-				try:
-					unlink(dst)
-				except:
-					pass
-				src = getattr(config.plugins.skin.OverlayHD, label).value
-				try:
-					if src == "":
-						src = eEnv.resolve("${datadir}/bootlogo.mvi")
-						shutil.copy(src, dst)
-					else:
-						shutil.copy(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/backgrounds/%s" % src), dst)
-				except (IOError, OSError), (err, errmsg):
-					errtext = "Error %d: %s - '%s'" % (err, errmsg, dst)
-					print "[OverlayHD] Error copying boot logo image! (%s)" % errtext
+				applyImage(label, "backdrop.mvi")
+			elif label == "BootImage":
+				applyImage(label, "bootlogo.mvi")
 			elif label == "ButtonStyle":
 				for colour in buttonColours:
 					element, path = domScreens.get(buttonBase + colour, (None, None))
@@ -1118,6 +1102,8 @@ def applySkinSettings(fullinit):
 								if widget.get("TimelineTicksOn", None) is not None:
 									widget.set("TimelineTicksOn", setting)
 									break
+			elif label == "RadioImage":
+				applyImage(label, "radio.mvi")
 			elif label == "RecordBlink":
 				element, path = domScreens.get("ChannelFormatPanel", (None, None))
 				if element is not None:
@@ -1173,6 +1159,22 @@ def applySkinSettings(fullinit):
 	else:
 		print "[OverlayHD] OverlayHD is not the active skin."
 
+def applyImage(image, target):
+	src = getattr(config.plugins.skin.OverlayHD, image).value
+	dst = resolveFilename(SCOPE_CONFIG, target)
+	try:
+		unlink(dst)
+	except (IOError, OSError), (err, errmsg):
+		if err != errno.ENOENT:
+			errtext = "Error %d: %s - '%s'" % (err, errmsg, dst)
+			print "[OverlayHD] Error deleting the %s image! (%s)" % (image, errtext)
+	if src:
+		try:
+			symlink(resolveFilename(SCOPE_CURRENT_SKIN, "backgrounds/%s" % src), dst)
+		except (IOError, OSError), (err, errmsg):
+			errtext = "Error %d: %s - '%s'" % (err, errmsg, dst)
+			print "[OverlayHD] Error linking the %s image! (%s)" % (image, errtext)
+
 def updateOverlayHD():
 	# This code is used to ensure that older environments are brought up to current requirements...
 	# Remove the old settings conversion program...
@@ -1191,7 +1193,7 @@ def updateOverlayHD():
 			remove(src)
 			print "[OverlayHD] Default themes file deleted."
 	# Set defunct attributes to the default so they will be removed from the settings file...
-	for attr in ("BootImage", "ClockStyle", "EPGChannel", "EPGChannelSelected", "EPGDetails", "EPGDuration", "EPGLCN", "EPGProgram", "EPGProgramSelected", "EPGProvider", "EPGRating", "EPGTimes", "EPGTimesSelected", "InfoFileSize"):
+	for attr in ("ClockStyle", "EPGChannel", "EPGChannelSelected", "EPGDetails", "EPGDuration", "EPGLCN", "EPGProgram", "EPGProgramSelected", "EPGProvider", "EPGRating", "EPGTimes", "EPGTimesSelected", "InfoFileSize"):
 		setattr(config.plugins.skin.OverlayHD, attr, ConfigSelection(default="Default", choices=[("Default"), ("None")]))
 		getattr(config.plugins.skin.OverlayHD, attr).value = getattr(config.plugins.skin.OverlayHD, attr).default
 		getattr(config.plugins.skin.OverlayHD, attr).save()
