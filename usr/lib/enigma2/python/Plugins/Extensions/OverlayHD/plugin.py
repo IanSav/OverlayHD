@@ -1,6 +1,6 @@
 # ====================================================
 # OverlayHD Skin Manager
-# Version Date - 16-Aug-2019
+# Version Date - 17-Aug-2019
 # Remember to change version number variable below!!!
 #
 # Repository - https://bitbucket.org/IanSav/overlayhd
@@ -16,7 +16,7 @@
 # and original author details), but it may not be
 # commercially distributed.
 
-PLUGIN_VERSION_NUMBER = "1.76"
+PLUGIN_VERSION_NUMBER = "1.77"
 
 import errno
 import shutil
@@ -1043,21 +1043,7 @@ def applySkinSettings(fullinit):
 			elif label == "RadioImage":
 				applyImage(label, "radio.mvi")
 			elif label == "RecordBlink":
-				element, path = domScreens.get("ChannelFormatPanel", (None, None))
-				if element is not None:
-					widgets = element.findall("widget")
-					if widgets is not None:
-						for widget in widgets:
-							if widget.get("source", None) == "session.RecordState":
-								converts = widget.findall("convert")
-								if converts is not None:
-									for convert in converts:
-										if convert.get("type", None) == "ConditionalShowHide":
-											if config.plugins.skin.OverlayHD.RecordBlink.value:
-												convert.text = "Blink"
-											else:
-												convert.text = ""
-											break
+				applyBlink(label, ["session.RecordState"])
 			elif label == "Spinner":
 				linkname = resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/spinner")
 				if islink(linkname):
@@ -1076,26 +1062,29 @@ def applySkinSettings(fullinit):
 						errtext = "Error %d: %s - '%s'" % (err, errmsg, linkname)
 						print "[OverlayHD] Error linking spinner directory! (%s)" % errtext
 			elif label == "UpdateBlink":
-				element, path = domScreens.get("ChannelFormatPanel", (None, None))
-				if element is not None:
-					widgets = element.findall("widget")
-					if widgets is not None:
-						for widget in widgets:
-							if widget.get("source", None) in ("global.OnlineStableUpdateState", "global.OnlineUnstableUpdateState"):
-								converts = widget.findall("convert")
-								if converts is not None:
-									for convert in converts:
-										if convert.get("type", None) == "ConditionalShowHide":
-											if config.plugins.skin.OverlayHD.UpdateBlink.value:
-												convert.text = "Blink"
-											else:
-												convert.text = ""
-											break
+				applyBlink(label, ["global.OnlineStableUpdateState", "global.OnlineUnstableUpdateState"])
 		if code == "Beyonwiz":
 			from skin import reloadWindowstyles
 			reloadWindowstyles()
 	else:
 		print "[OverlayHD] OverlayHD is not the active skin."
+
+def applyBlink(image, sourceList):
+	element, path = domScreens.get("ChannelFormatPanel", (None, None))
+	if element is not None:
+		widgets = element.findall("widget")
+		if widgets is not None:
+			for widget in widgets:
+				if widget.get("source", None) in sourceList:
+					converts = widget.findall("convert")
+					if converts is not None:
+						for convert in converts:
+							if convert.get("type", None) == "ConditionalShowHide":
+								if getattr(config.plugins.skin.OverlayHD, image).value:
+									convert.text = "Blink"
+								else:
+									convert.text = ""
+								break
 
 def applyButtons(mode):
 	for colour in buttonColours:
