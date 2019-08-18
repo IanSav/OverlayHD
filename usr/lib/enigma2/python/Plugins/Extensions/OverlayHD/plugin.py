@@ -1,6 +1,6 @@
 # ====================================================
 # OverlayHD Skin Manager
-# Version Date - 17-Aug-2019
+# Version Date - 18-Aug-2019
 # Remember to change version number variable below!!!
 #
 # Repository - https://bitbucket.org/IanSav/overlayhd
@@ -16,7 +16,7 @@
 # and original author details), but it may not be
 # commercially distributed.
 
-PLUGIN_VERSION_NUMBER = "1.77"
+PLUGIN_VERSION_NUMBER = "1.78"
 
 import errno
 import shutil
@@ -1046,22 +1046,7 @@ def applySkinSettings(fullinit):
 			elif label == "RecordBlink":
 				applyBlink(label, ["session.RecordState"])
 			elif label == "Spinner":
-				linkname = resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/spinner")
-				if islink(linkname):
-					unlink(linkname)
-				elif isdir(linkname):
-					shutil.rmtree(linkname)
-					print "[OverlayHD] NOTE: Unexpected spinner directory found and deleted!"
-				elif exists(linkname):
-					remove(linkname)
-					print "[OverlayHD] NOTE: Unexpected spinner file found and deleted!"
-				item = getattr(config.plugins.skin.OverlayHD, label).value
-				if item != "":
-					try:
-						symlink(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/spinners/%s" % item), linkname)
-					except (IOError, OSError), (err, errmsg):
-						errtext = "Error %d: %s - '%s'" % (err, errmsg, linkname)
-						print "[OverlayHD] Error linking spinner directory! (%s)" % errtext
+				applySpinner(label)
 			elif label == "UpdateBlink":
 				applyBlink(label, ["global.OnlineStableUpdateState", "global.OnlineUnstableUpdateState"])
 		if code == "Beyonwiz":
@@ -1167,6 +1152,29 @@ def applyImage(image, target):
 		except (IOError, OSError), (err, errmsg):
 			errtext = "Error %d: %s - '%s'" % (err, errmsg, dst)
 			print "[OverlayHD] Error linking the %s image! (%s)" % (image, errtext)
+
+def applySpinner(label):
+	defaultSpinner = pathjoin(resolveFilename(SCOPE_SKIN), "spinner")
+	currentSpinner = pathjoin(resolveFilename(SCOPE_CURRENT_SKIN), "spinner")
+	# print "[OverlayHD] DEBUG: defaultSpinner='%s', currentSpinner='%s'" % (defaultSpinner, currentSpinner)
+	if currentSpinner != defaultSpinner:
+		if islink(currentSpinner):
+			unlink(currentSpinner)
+			# print "[OverlayHD] DEBUG: Old spinner directory found and deleted!"
+		elif isdir(currentSpinner):
+			shutil.rmtree(currentSpinner)
+			print "[OverlayHD] NOTE: Unexpected spinner directory found and deleted!"
+		elif exists(currentSpinner):
+			remove(currentSpinner)
+			print "[OverlayHD] NOTE: Unexpected spinner file found and deleted!"
+		item = getattr(config.plugins.skin.OverlayHD, label).value
+		if item:
+			# print "[OverlayHD] DEBUG: Linking '%s' spinner directory as '%s'!" % (item, currentSpinner)
+			try:
+				symlink(resolveFilename(SCOPE_CURRENT_SKIN, "spinners/%s" % item), currentSpinner)
+			except (IOError, OSError), (err, errmsg):
+				errtext = "Error %d: %s - '%s'" % (err, errmsg, linkname)
+				print "[OverlayHD] Error linking spinner directory! (%s)" % errtext
 
 def updateOverlayHD():
 	# This code is used to ensure that older environments are brought up to current requirements...
