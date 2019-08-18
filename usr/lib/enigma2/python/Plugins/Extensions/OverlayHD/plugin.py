@@ -1,10 +1,10 @@
 # ====================================================
 # OverlayHD Skin Manager
-# Version Date - 26-May-2019
+# Version Date - 14-Aug-2019
 # Remember to change version number variable below!!!
 #
 # Repository - https://bitbucket.org/IanSav/overlayhd
-# Coding by IanSav (c) 2015-2018
+# Coding by IanSav (c) 2015-2019
 #
 # This plugin was originally developed for the
 # Beyonwiz Australia distribution of Enigma2.  It
@@ -16,7 +16,7 @@
 # and original author details), but it may not be
 # commercially distributed.
 
-PLUGIN_VERSION_NUMBER = "1.72"
+PLUGIN_VERSION_NUMBER = "1.73"
 
 import errno
 import shutil
@@ -26,7 +26,7 @@ from boxbranding import getImageDistro
 from enigma import eEnv, gRGB
 from os import listdir, remove, symlink, unlink
 from os.path import exists, isdir, isfile, islink
-from skin import dom_screens, colorNames, fonts  # , reloadWindowstyles
+from skin import dom_screens as domScreens, colorNames, fonts  # , reloadWindowstyles
 
 from Components.ActionMap import HelpableActionMap
 from Components.Sources.List import List
@@ -42,7 +42,7 @@ from Screens.Standby import TryQuitMainloop, QUIT_RESTART
 from Screens.VirtualKeyBoard import VirtualKeyBoard
 from Tools.Directories import resolveFilename, SCOPE_CONFIG, SCOPE_CURRENT_SKIN, SCOPE_CURRENT_PLUGIN
 
-distro_configs = {
+distroConfigs = {
 	"beyonwiz": ("Beyonwiz", "Beyonwiz"),
 	"openpli": ("OpenPLi", "Enigma2"),
 	"openvix": ("OpenViX", "Enigma2")
@@ -51,7 +51,7 @@ distro_configs = {
 # Items with a colour and transparency require two lines in the setup XML file.
 # (One for ItemColour and one for ItemTransparency.)
 #
-colour_elements = [
+colourElements = [
 	("BannerBorder", "Black", None),
 	("BannerClock", "White", None),
 	("BannerClockBackground", "Background", "Background"),
@@ -186,7 +186,7 @@ colour_elements = [
 	("WeatherProvider", "Orange", None)
 ]
 
-derived_background_elements = [
+derivedBackgroundElements = [
 	"EPGEntryBackgroundColor",
 	"EPGEntryBackgroundColorNow",
 	"EPGEntryBackgroundColorNowSelected",
@@ -199,7 +199,7 @@ derived_background_elements = [
 	"EPGZapBackgroundColorSelected"
 ]
 
-derived_foreground_elements = [
+derivedForegroundElements = [
 	"EPGEntryForegroundColor",
 	"EPGEntryForegroundColorNow",
 	"EPGEntryForegroundColorNowSelected",
@@ -212,7 +212,7 @@ derived_foreground_elements = [
 	"EPGZapForegroundColorSelected"
 ]
 
-colour_choices = [
+colourChoices = [
 	("Arsenic", _("Arsenic")),
 	("Black", _("Black")),
 	("Blue", _("Blue")),
@@ -285,9 +285,9 @@ colour_choices = [
 	# ("User0", _("User 10"))
 ]
 
-background_choice = [("Background", _("Background"))]
+backgroundChoice = [("Background", _("Background"))]
 
-transparency_choices = [
+transparencyChoices = [
 	("0x00000000", _("0% (Opaque)")),
 	("0x0c000000", _("5%")),
 	("0x19000000", _("10%")),
@@ -311,7 +311,7 @@ transparency_choices = [
 	("0xff000000", _("100% (Transparent)"))
 ]
 
-banner_font_choices = [
+bannerFontChoices = [
 	("ArialNarrow", _("Arial Narrow")),
 	("DejaVuSans", _("DejaVu Sans")),
 	("DejaVuSansBold", _("DejaVu Sans Bold")),
@@ -328,7 +328,7 @@ banner_font_choices = [
 	("ValisEnigma", _("Valis Enigma"))
 ]
 
-text_font_choices = [
+textFontChoices = [
 	("ArialNarrow", _("Arial Narrow")),
 	("DejaVuSansCondensed", _("DejaVu Sans Condensed")),
 	("DejaVuSansCondensedBold", _("DejaVu Sans Condensed Bold")),
@@ -339,7 +339,7 @@ text_font_choices = [
 	("ValisEnigma", _("Valis Enigma"))
 ]
 
-fixed_font_choices = [
+fixedFontChoices = [
 	("AndaleMono", _("Andale Mono")),
 	("DejaVuSansMono", _("DejaVu Sans Mono")),
 	("DejaVuSansMonoBold", _("DejaVu Sans Mono Bold")),
@@ -347,46 +347,46 @@ fixed_font_choices = [
 	("VeraSansMono", _("Vera Sans Mono"))
 ]
 
-font_elements = [
-	("Body", "NemesisFlatline", text_font_choices),
-	("ButtonFont", "NemesisFlatline", text_font_choices),
-	("ChoiceList", "NemesisFlatline", text_font_choices),
-	("ClockFont", "RobotoBlack", banner_font_choices),
-	("DescriptionFont", "NemesisFlatline", text_font_choices),
-	("EPGEventFont", "NemesisFlatline", text_font_choices),
-	("EPGServiceFont", "NemesisFlatline", text_font_choices),
-	("EPGTimeLineFont", "NemesisFlatline", text_font_choices),
-	("FAVEventFont", "NemesisFlatline", text_font_choices),
-	("FAVLCNFont", "NemesisFlatline", text_font_choices),
-	("FAVServiceFont", "NemesisFlatline", text_font_choices),
-	("FixedFont", "MPluss1M", fixed_font_choices),
-	("HelpFont", "NemesisFlatline", text_font_choices),
-	("InfoDescriptionFont", "NemesisFlatline", text_font_choices),
-	("InfoEventFont", "NemesisFlatline", text_font_choices),
-	("InfoOtherFont", "NemesisFlatline", text_font_choices),
-	("InfoTimeFont", "NemesisFlatline", text_font_choices),
-	("MenuFont", "NemesisFlatline", text_font_choices),
-	("MovieSelectionFont", "NemesisFlatline", text_font_choices),
-	("SMSHelperFont", "DejaVuSansCondensed", text_font_choices),
-	("Regular", "NemesisFlatline", text_font_choices),
-	("TextFont", "NemesisFlatline", text_font_choices),
-	("TitleFont", "RobotoBlack", banner_font_choices)
+fontElements = [
+	("Body", "NemesisFlatline", textFontChoices),
+	("ButtonFont", "NemesisFlatline", textFontChoices),
+	("ChoiceList", "NemesisFlatline", textFontChoices),
+	("ClockFont", "RobotoBlack", bannerFontChoices),
+	("DescriptionFont", "NemesisFlatline", textFontChoices),
+	("EPGEventFont", "NemesisFlatline", textFontChoices),
+	("EPGServiceFont", "NemesisFlatline", textFontChoices),
+	("EPGTimeLineFont", "NemesisFlatline", textFontChoices),
+	("FAVEventFont", "NemesisFlatline", textFontChoices),
+	("FAVLCNFont", "NemesisFlatline", textFontChoices),
+	("FAVServiceFont", "NemesisFlatline", textFontChoices),
+	("FixedFont", "MPluss1M", fixedFontChoices),
+	("HelpFont", "NemesisFlatline", textFontChoices),
+	("InfoDescriptionFont", "NemesisFlatline", textFontChoices),
+	("InfoEventFont", "NemesisFlatline", textFontChoices),
+	("InfoOtherFont", "NemesisFlatline", textFontChoices),
+	("InfoTimeFont", "NemesisFlatline", textFontChoices),
+	("MenuFont", "NemesisFlatline", textFontChoices),
+	("MovieSelectionFont", "NemesisFlatline", textFontChoices),
+	("SMSHelperFont", "DejaVuSansCondensed", textFontChoices),
+	("Regular", "NemesisFlatline", textFontChoices),
+	("TextFont", "NemesisFlatline", textFontChoices),
+	("TitleFont", "RobotoBlack", bannerFontChoices)
 ]
 
-background_image_choices = [
+backgroundImageChoices = [
 	("", _("Default"))
 ]
 
-button_base = "ScreenTemplateButton"
+buttonBase = "ScreenTemplateButton"
 
-button_colours = [
+buttonColours = [
 	"Red",
 	"Green",
 	"Yellow",
 	"Blue",
 ]
 
-button_choices = [
+buttonChoices = [
 	("Bar", _("Bar")),
 	("Block", _("Block")),
 	("Button", _("Button")),
@@ -395,15 +395,15 @@ button_choices = [
 	("Wizard", _("Wizard"))
 ]
 
-spinner_choices = [
+spinnerChoices = [
 	("", _("Default"))
 ]
 
-option_elements = [
+optionElements = [
 	("AlwaysActive", False, ConfigYesNo, None),
 	("AlwaysShowButtons", True, ConfigYesNo, None),
-	("BackgroundImage", "", ConfigSelection, background_image_choices),
-	("ButtonStyle", "Block", ConfigSelection, button_choices),
+	("BackgroundImage", "", ConfigSelection, backgroundImageChoices),
+	("ButtonStyle", "Block", ConfigSelection, buttonChoices),
 	("EnhancedMenu", False, ConfigEnableDisable, None),
 	("EPGSettings", False, ConfigYesNo, None),
 	("EPGShowTicks", True, ConfigYesNo, None),
@@ -416,13 +416,13 @@ option_elements = [
 	("RecordBlink", True, ConfigYesNo, None),
 	("ShowInExtensions", False, ConfigYesNo, None),
 	("SortThemes", False, ConfigYesNo, None),
-	("Spinner", "", ConfigSelection, spinner_choices),
+	("Spinner", "", ConfigSelection, spinnerChoices),
 	("TextSettings", False, ConfigYesNo, None),
 	("UpdateBlink", True, ConfigYesNo, None),
 	("UseGroups", True, ConfigYesNo, None)
 ]
 
-display_groups = [
+displayGroups = [
 	"EPGSettings",
 	"FAVSettings",
 	"FontSettings",
@@ -433,7 +433,7 @@ display_groups = [
 	"TextSettings"
 ]
 
-repaint_list = [
+repaintList = [
 	"BannerBorder",
 	"BannerClock",
 	"BannerClockBackgroundColour",
@@ -461,7 +461,7 @@ repaint_list = [
 	"VolumeColour"
 ]
 
-dont_restart = [
+dontRestart = [
 	"BackgroundImage",
 	"EPGSettings",
 	"GeneralSettings",
@@ -480,41 +480,38 @@ dont_restart = [
 config.plugins.skin = ConfigSubsection()
 config.plugins.skin.OverlayHD = ConfigSubsection()
 
-for (label, colour, transparency) in colour_elements:
+for (label, colour, transparency) in colourElements:
 	if colour is None or transparency is None:
 		if colour is not None:
-			setattr(config.plugins.skin.OverlayHD, label, ConfigSelection(default=colour, choices=colour_choices))
+			setattr(config.plugins.skin.OverlayHD, label, ConfigSelection(default=colour, choices=colourChoices))
 			# print "[OverlayHD] DEBUG (definition): Colour '%s' = '%s'" % (label, colour)
 		if transparency is not None:
-			setattr(config.plugins.skin.OverlayHD, label, ConfigSelection(default=transparency, choices=transparency_choices))
+			setattr(config.plugins.skin.OverlayHD, label, ConfigSelection(default=transparency, choices=transparencyChoices))
 			# print "[OverlayHD] DEBUG (definition): Colour '%s' = '%s'" % (label, transparency)
 	else:
 		if label == "ScreenBackground":
-			c_choices = colour_choices
-			t_choices = transparency_choices
+			cChoices = colourChoices
+			tChoices = transparencyChoices
 		else:
-			c_choices = background_choice + colour_choices
-			t_choices = background_choice + transparency_choices
-		setattr(config.plugins.skin.OverlayHD, "%sColour" % label, ConfigSelection(default=colour, choices=c_choices))
-		setattr(config.plugins.skin.OverlayHD, "%sTransparency" % label, ConfigSelection(default=transparency, choices=t_choices))
+			cChoices = backgroundChoice + colourChoices
+			tChoices = backgroundChoice + transparencyChoices
+		setattr(config.plugins.skin.OverlayHD, "%sColour" % label, ConfigSelection(default=colour, choices=cChoices))
+		setattr(config.plugins.skin.OverlayHD, "%sTransparency" % label, ConfigSelection(default=transparency, choices=tChoices))
 		# print "[OverlayHD] DEBUG (definition): Colour '%sColour' = '%s'" % (label, colour)
 		# print "[OverlayHD] DEBUG (definition): Colour '%sTransparency' = '%s'" % (label, transparency)
-
-for (label, font, font_table) in font_elements:
-	setattr(config.plugins.skin.OverlayHD, label, ConfigSelection(default=font, choices=font_table))
-	# print "[OverlayHD] DEBUG (definition): Font '%s' = '%s' (%s)" % (label, font, font_table)
-
+for (label, font, fontTable) in fontElements:
+	setattr(config.plugins.skin.OverlayHD, label, ConfigSelection(default=font, choices=fontTable))
+	# print "[OverlayHD] DEBUG (definition): Font '%s' = '%s' (%s)" % (label, font, fontTable)
 for fname in sorted(listdir(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/backgrounds"))):
-	background_image_choices.append((fname, _(fname[0:-4])))
+	backgroundImageChoices.append((fname, _(fname[0:-4])))
 for fname in sorted(listdir(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/spinners"))):
-	spinner_choices.append((fname, _(fname)))
-
-for (label, default, config_type, option_table) in option_elements:
-	if option_table:
-		setattr(config.plugins.skin.OverlayHD, label, config_type(default=default, choices=option_table))
+	spinnerChoices.append((fname, _(fname)))
+for (label, default, configType, optionTable) in optionElements:
+	if optionTable:
+		setattr(config.plugins.skin.OverlayHD, label, configType(default=default, choices=optionTable))
 	else:
-		setattr(config.plugins.skin.OverlayHD, label, config_type(default=default))
-	# print "[OverlayHD] DEBUG (definition): Option '%s' = '%s' (%s)" % (label, default, option_table)
+		setattr(config.plugins.skin.OverlayHD, label, configType(default=default))
+	# print "[OverlayHD] DEBUG (definition): Option '%s' = '%s' (%s)" % (label, default, optionTable)
 
 
 class OverlayHDSkinManager(Setup, HelpableScreen):
@@ -523,34 +520,31 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 	def __init__(self, session):
 		Setup.__init__(self, session=session, setup="OverlayHDSkinManager", plugin="Extensions/OverlayHD")
 		HelpableScreen.__init__(self)  # TEMP
-
 		self["key_yellow"] = StaticText(_("Themes"))
 		self["key_blue"] = StaticText(_("Default"))
 		self["key_help"] = StaticText(_("HELP"))  # TEMP
-
 		self["OverlayHDActions"] = HelpableActionMap(self, "ColorActions", {
 			"yellow": (self.theme, _("Manage themes")),
 			"blue": (self.default, _("Apply the default skin settings"))
 		}, prio=0, description=_("OverlayHD Functions"))
-
-		background_image_choices = [("", _("Default"))]
+		backgroundImageChoices = [("", _("Default"))]
 		for fname in sorted(listdir(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/backgrounds"))):
-			background_image_choices.append((fname, _(fname[0:-4])))
-		config.plugins.skin.OverlayHD.BackgroundImage.setChoices(default=config.plugins.skin.OverlayHD.BackgroundImage.value, choices=background_image_choices)
-		spinner_choices = [("", _("Default"))]
+			backgroundImageChoices.append((fname, _(fname[0:-4])))
+		config.plugins.skin.OverlayHD.BackgroundImage.setChoices(default=config.plugins.skin.OverlayHD.BackgroundImage.value, choices=backgroundImageChoices)
+		spinnerChoices = [("", _("Default"))]
 		for fname in sorted(listdir(resolveFilename(SCOPE_CURRENT_SKIN, "OverlayHD/spinners"))):
-			spinner_choices.append((fname, _(fname)))
-		config.plugins.skin.OverlayHD.Spinner.setChoices(default=config.plugins.skin.OverlayHD.Spinner.value, choices=spinner_choices)
+			spinnerChoices.append((fname, _(fname)))
+		config.plugins.skin.OverlayHD.Spinner.setChoices(default=config.plugins.skin.OverlayHD.Spinner.value, choices=spinnerChoices)
 		self.addNotifiers()
 
 	def addNotifiers(self):
 		config.plugins.skin.OverlayHD.UseGroups.addNotifier(self.changeGrouping, initial_call=False, immediate_feedback=True)
-		for x in repaint_list:
+		for x in repaintList:
 			getattr(config.plugins.skin.OverlayHD, x).addNotifier(self.changeSettings, initial_call=False, immediate_feedback=True)
 
 	def removeNotifiers(self):
 		config.plugins.skin.OverlayHD.UseGroups.removeNotifier(self.changeGrouping)
-		for x in repaint_list:
+		for x in repaintList:
 			getattr(config.plugins.skin.OverlayHD, x).removeNotifier(self.changeSettings)
 
 # 	def selectionChanged(self):
@@ -562,10 +556,10 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 
 	def changeGrouping(self, configElement):
 		if config.plugins.skin.OverlayHD.UseGroups.value:
-			for x in display_groups:
+			for x in displayGroups:
 				getattr(config.plugins.skin.OverlayHD, x).value = False
 		else:
-			for x in display_groups:
+			for x in displayGroups:
 				getattr(config.plugins.skin.OverlayHD, x).value = True
 
 	def changeSettings(self, configElement):
@@ -620,7 +614,7 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 	def changedSettings(self, checkNoRestartList=True):
 		# print "[OverlayHD] DEBUG: Looking for changes. checkNoRestartList = ", checkNoRestartList
 		for x in config.plugins.skin.OverlayHD.dict():
-			if checkNoRestartList and x in dont_restart:
+			if checkNoRestartList and x in dontRestart:
 				continue
 			if getattr(config.plugins.skin.OverlayHD, x).isChanged():
 				# print "[OverlayHD] DEBUG: Entries changed."
@@ -639,7 +633,7 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 	def default(self):
 		self.removeNotifiers()
 		print "[OverlayHD] Setting OverlayHD skin to default settings."
-		for (label, colour, transparency) in colour_elements:
+		for (label, colour, transparency) in colourElements:
 			if colour is None or transparency is None:
 				item = getattr(config.plugins.skin.OverlayHD, label)
 				item.value = item.default
@@ -651,11 +645,11 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 				item = getattr(config.plugins.skin.OverlayHD, "%sTransparency" % label)
 				item.value = item.default
 				# print "[OverlayHD] DEBUG (default): '%sTransparency' = '%s'" % (label, item.default)
-		for (label, font, font_table) in font_elements:
+		for (label, font, fontTable) in fontElements:
 			item = getattr(config.plugins.skin.OverlayHD, label)
 			item.value = item.default
 			# print "[OverlayHD] DEBUG (default): '%s' = '%s'" % (label, item.default)
-		for (label, default, config_type, option_table) in option_elements:
+		for (label, default, configType, optionTable) in optionElements:
 			item = getattr(config.plugins.skin.OverlayHD, label)
 			item.value = item.default
 			# print "[OverlayHD] DEBUG (default): '%s' = '%s'" % (label, item.default)
@@ -702,14 +696,12 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 		HelpableScreen.__init__(self)
 		self.setup_title = _("OverlayHD Theme Manager")
 		Screen.setTitle(self, self.setup_title)
-
 		self["key_menu"] = StaticText(_("MENU"))
 		self["key_red"] = StaticText(_("Cancel"))
 		self["key_green"] = StaticText(_("Apply"))
 		self["key_yellow"] = StaticText(_("Save"))
 		self["key_blue"] = StaticText(_("Create"))
 		self["key_help"] = StaticText(_("HELP"))
-
 		self["actions"] = HelpableActionMap(self, ["OkCancelActions", "ColorActions", "MenuActions"], {
 			"ok": (self.applyTheme, _("Apply the currently highlighted theme, return to OverlayHD Skin Manager")),
 			"cancel": (self.cancelTheme, _("Cancel theme selection, return to OverlayHD Skin Manager")),
@@ -721,12 +713,12 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 		}, prio=0, description=_("Theme Functions"))
 		self["themes"] = List()
 		self.filename = resolveFilename(SCOPE_CONFIG, "OverlayHD_themes.xml")
-		self.dom_themes = None
+		self.domThemes = None
 		try:
-			self.dom_themes = xml.etree.cElementTree.parse(self.filename)
+			self.domThemes = xml.etree.cElementTree.parse(self.filename)
 		except (IOError, OSError), (err, errmsg):
 			if err == errno.ENOENT:
-				self.dom_themes = xml.etree.cElementTree.ElementTree(xml.etree.cElementTree.Element("themes"))
+				self.domThemes = xml.etree.cElementTree.ElementTree(xml.etree.cElementTree.Element("themes"))
 				self.updateTheme("Default", mode="default")
 				self.updateTheme("Current", mode="value")
 				self.saveThemes()
@@ -738,14 +730,14 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 		self.onShown.append(self.screenShown)
 
 	def screenShown(self):
-		if self.dom_themes is None:
+		if self.domThemes is None:
 			popup = self.session.open(MessageBox, _("Unable to open/access themes file!\n\n%s") % self.errtext, MessageBox.TYPE_ERROR, 10)
 			popup.setTitle(self.setup_title)
 			self.close()
 
 	def findTheme(self, name):
-		if self.dom_themes:
-			themes = self.dom_themes.findall("theme")
+		if self.domThemes:
+			themes = self.domThemes.findall("theme")
 			for theme in themes:
 				n = theme.get("name", None)
 				if n == name:
@@ -757,11 +749,11 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 			name = self["themes"].getCurrent()[0]
 		theme = self.findTheme(name)
 		if theme is None:
-			theme = xml.etree.cElementTree.SubElement(self.dom_themes.getroot(), "theme", {"name": name})
+			theme = xml.etree.cElementTree.SubElement(self.domThemes.getroot(), "theme", {"name": name})
 		else:
 			theme.clear()
 			theme.set("name", name)
-		for (label, colour, transparency) in colour_elements:
+		for (label, colour, transparency) in colourElements:
 			if colour is None or transparency is None:
 				item = eval("config.plugins.skin.OverlayHD.%s.%s" % (label, mode))
 				element = xml.etree.cElementTree.SubElement(theme, "colour", {"name": label, "value": item})
@@ -773,13 +765,13 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 				item = eval("config.plugins.skin.OverlayHD.%sTransparency.%s" % (label, mode))
 				element = xml.etree.cElementTree.SubElement(theme, "colour", {"name": "%sTransparency" % label, "value": item})
 				# print "[OverlayHD] DEBUG: '%sTransparency' = '%s'" % (label, item)
-		for (label, font, font_table) in font_elements:
+		for (label, font, fontTable) in fontElements:
 			item = eval("config.plugins.skin.OverlayHD.%s.%s" % (label, mode))
 			element = xml.etree.cElementTree.SubElement(theme, "font", {"name": label, "value": item})
 			# print "[OverlayHD] DEBUG: '%s' = '%s'" % (label, item)
-		for (label, default, config_type, option_table) in option_elements:
+		for (label, default, configType, optionTable) in optionElements:
 			item = str(eval("config.plugins.skin.OverlayHD.%s.%s" % (label, mode)))
-			if option_table is None:
+			if optionTable is None:
 				element = xml.etree.cElementTree.SubElement(theme, "option", {"name": label, "type": "boolean", "value": item})
 			else:
 				element = xml.etree.cElementTree.SubElement(theme, "option", {"name": label, "value": item})
@@ -787,8 +779,8 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 
 	def listThemes(self):
 		list = []
-		if self.dom_themes:
-			themes = self.dom_themes.findall("theme")
+		if self.domThemes:
+			themes = self.domThemes.findall("theme")
 			# print "[OverlayHD] Theme count = %d" % len(themes)
 			for theme in themes:
 				name = theme.get("name", None)
@@ -800,8 +792,8 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 
 	def saveThemes(self):
 		self["themes"].updateList(self.listThemes())
-		self.xmlIndent(self.dom_themes.getroot())
-		self.dom_themes.write(self.filename)
+		self.xmlIndent(self.domThemes.getroot())
+		self.domThemes.write(self.filename)
 
 	def xmlIndent(self, element, level=0):
 		indent = "\n" + level * "\t"
@@ -833,7 +825,7 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 		return validflag
 
 	def themeMenu(self):
-		theme_actions = [
+		themeActions = [
 			(_("Save theme"), self.saveTheme),
 			(_("Rename theme"), self.renameTheme),
 			(_("Delete theme"), self.deleteTheme),
@@ -843,7 +835,7 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 		]
 		name = self["themes"].getCurrent()[0]
 		menu = []
-		for action in theme_actions:
+		for action in themeActions:
 			menu.append(action)
 		self.session.openWithCallback(self.themeMenuAction, ChoiceBox, title=_("OverlayHD Theme: '%s'") % name, list=menu, skin_name="OverlayHDThemeMenu")
 
@@ -955,7 +947,7 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 			theme = self.findTheme(name)
 			if theme is not None:
 				print "[OverlayHD] Deleting theme '%s'." % name
-				self.dom_themes.getroot().remove(theme)
+				self.domThemes.getroot().remove(theme)
 				self.saveThemes()
 				# popup = self.session.open(MessageBox, _("Theme '%s' deleted.") % name, MessageBox.TYPE_INFO, 3)
 				# popup.setTitle(self.setup_title)
@@ -974,11 +966,11 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 
 def applySkinSettings(fullinit):
 	if config.skin.primary_skin.value == "OverlayHD/skin.xml":
-		(distro, code) = distro_configs.get(getImageDistro(), ("Unknown", "Enigma2"))
+		(distro, code) = distroConfigs.get(getImageDistro(), ("Unknown", "Enigma2"))
 		if fullinit:
 			print "[OverlayHD] OverlayHD Skin Manager version %s: Configuring to run in '%s' mode." % (PLUGIN_VERSION_NUMBER, distro)
-			for screen in dom_screens:
-				element, path = dom_screens.get(screen, (None, None))
+			for screen in domScreens:
+				element, path = domScreens.get(screen, (None, None))
 				if element is not None:
 					panels = element.findall("panel")
 					if panels is not None:
@@ -992,14 +984,14 @@ def applySkinSettings(fullinit):
 								break
 		#
 		print "[OverlayHD] Applying OverlayHD skin settings."
-		for (label, colour, transparency) in colour_elements:
+		for (label, colour, transparency) in colourElements:
 			if transparency is None:
 				item = getattr(config.plugins.skin.OverlayHD, label).value
 				piglabel = "%s%s%s" % (label[0:3], "PIG", label[3:])
-				if label in derived_foreground_elements:
+				if label in derivedForegroundElements:
 					colorNames[label] = colorNames[item]
 					colorNames[piglabel] = colorNames[item]
-				elif label in derived_background_elements:
+				elif label in derivedBackgroundElements:
 					if config.plugins.skin.OverlayHD.EPGTransparency.value == "Background":
 						tran = long(config.plugins.skin.OverlayHD.ScreenBackgroundTransparency.value, 0x10)
 					else:
@@ -1018,18 +1010,18 @@ def applySkinSettings(fullinit):
 				else:
 					tran = long(tran, 0x10)
 				colorNames[label] = gRGB(colorNames[col].argb() | tran)
-		for (label, font, font_table) in font_elements:
+		for (label, font, fontTable) in fontElements:
 			data = list(fonts[label])
 			data[0] = getattr(config.plugins.skin.OverlayHD, label).value
 			fonts[label] = tuple(data)
-		for (label, default, config_type, options_table) in option_elements:
+		for (label, default, configType, optionsTable) in optionElements:
 			if label == "AlwaysShowButtons":
-				for colour in button_colours:
-					element, path = dom_screens.get(button_base + colour, (None, None))
+				for colour in buttonColours:
+					element, path = domScreens.get(buttonBase + colour, (None, None))
 					if element is not None:
 						panels = element.findall("panel")
 						if panels is not None:
-							# print "[OverlayHD] %s panel (%d instances):" % (button_base + colour, len(panels))
+							# print "[OverlayHD] %s panel (%d instances):" % (buttonBase + colour, len(panels))
 							for panel in panels:
 								if config.plugins.skin.OverlayHD.AlwaysShowButtons.value:
 									if panel.get("conditional", None) is not None:
@@ -1040,12 +1032,12 @@ def applySkinSettings(fullinit):
 										panel.set("conditional", "key_%s" % colour.lower())
 										# print "[OverlayHD]       panel - Adding conditional attribute."
 								# print "[OverlayHD] DEBUG: XML dump:\n\t%s\n" % xml.etree.cElementTree.tostring(element)
-					for (style, label) in button_choices:
-						element, path = dom_screens.get(button_base + colour + style, (None, None))
+					for (style, label) in buttonChoices:
+						element, path = domScreens.get(buttonBase + colour + style, (None, None))
 						if element is not None:
 							pixmaps = element.findall("ePixmap")
 							if pixmaps is not None:
-								# print "[OverlayHD] %s ePixmap (%d instances):" % (button_base + colour + style, len(pixmaps))
+								# print "[OverlayHD] %s ePixmap (%d instances):" % (buttonBase + colour + style, len(pixmaps))
 								for pixmap in pixmaps:
 									if config.plugins.skin.OverlayHD.AlwaysShowButtons.value:
 										if pixmap.get("objectTypes", None) is not None:
@@ -1057,7 +1049,7 @@ def applySkinSettings(fullinit):
 											# print "[OverlayHD]       ePixmap - Adding objectTypes attribute."
 							widgets = element.findall("widget")
 							if widgets is not None:
-								# print "[OverlayHD] %s widget (%d instances):" % (button_base + colour + style, len(widgets))
+								# print "[OverlayHD] %s widget (%d instances):" % (buttonBase + colour + style, len(widgets))
 								for widget in widgets:
 									if widget.get("render", None) == "Pixmap":
 										if config.plugins.skin.OverlayHD.AlwaysShowButtons.value:
@@ -1104,20 +1096,20 @@ def applySkinSettings(fullinit):
 					errtext = "Error %d: %s - '%s'" % (err, errmsg, dst)
 					print "[OverlayHD] Error copying boot logo image! (%s)" % errtext
 			elif label == "ButtonStyle":
-				for colour in button_colours:
-					element, path = dom_screens.get(button_base + colour, (None, None))
+				for colour in buttonColours:
+					element, path = domScreens.get(buttonBase + colour, (None, None))
 					if element is not None:
 						panel = element.find("panel")
 						name = panel.get("name", None)
 						if name is not None:
-							panel.set("name", button_base + colour + config.plugins.skin.OverlayHD.ButtonStyle.value)
+							panel.set("name", buttonBase + colour + config.plugins.skin.OverlayHD.ButtonStyle.value)
 			elif label == "EPGShowTicks":
 				if config.plugins.skin.OverlayHD.EPGShowTicks.value:
 					setting = "yes"
 				else:
 					setting = "no"
 				for screen in ("EPGTimeLinePanel", "GraphicalEPG", "GraphicalEPGPIG", "GraphicalInfoBarEPG"):
-					element, path = dom_screens.get(screen, (None, None))
+					element, path = domScreens.get(screen, (None, None))
 					if element is not None:
 						widgets = element.findall("widget")
 						if widgets is not None:
@@ -1126,7 +1118,7 @@ def applySkinSettings(fullinit):
 									widget.set("TimelineTicksOn", setting)
 									break
 			elif label == "RecordBlink":
-				element, path = dom_screens.get("ChannelFormatPanel", (None, None))
+				element, path = domScreens.get("ChannelFormatPanel", (None, None))
 				if element is not None:
 					widgets = element.findall("widget")
 					if widgets is not None:
@@ -1159,7 +1151,7 @@ def applySkinSettings(fullinit):
 						errtext = "Error %d: %s - '%s'" % (err, errmsg, linkname)
 						print "[OverlayHD] Error linking spinner directory! (%s)" % errtext
 			elif label == "UpdateBlink":
-				element, path = dom_screens.get("ChannelFormatPanel", (None, None))
+				element, path = domScreens.get("ChannelFormatPanel", (None, None))
 				if element is not None:
 					widgets = element.findall("widget")
 					if widgets is not None:
@@ -1214,7 +1206,7 @@ def main(session, **kwargs):
 	session.open(OverlayHDSkinManager)
 
 def autostart(reason, **kwargs):
-	# (distro, code) = distro_configs.get(getImageDistro(), ("Unknown", "Enigma2"))
+	# (distro, code) = distroConfigs.get(getImageDistro(), ("Unknown", "Enigma2"))
 	if reason == 0:
 		# print "[OverlayHD] OverlayHD Skin Manager for '%s' loaded." % distro
 		updateOverlayHD()
