@@ -16,13 +16,17 @@
 # and original author details), but it may not be
 # commercially distributed.
 
-PLUGIN_VERSION_NUMBER = "1.73"
+PLUGIN_VERSION_NUMBER = "1.74"
 
 import errno
 import shutil
 import xml.etree.cElementTree
 
-from boxbranding import getImageDistro
+try:
+	from boxbranding import getImageDistro
+except ImportError:
+	def getImageDistro():
+		return "openpli"
 from enigma import eEnv, gRGB
 from os import listdir, remove, symlink, unlink
 from os.path import exists, isdir, isfile, islink
@@ -44,6 +48,7 @@ from Tools.Directories import resolveFilename, SCOPE_CONFIG, SCOPE_CURRENT_SKIN,
 
 distroConfigs = {
 	"beyonwiz": ("Beyonwiz", "Beyonwiz"),
+	"openatv": ("OpenATV", "Enigma2"),
 	"openpli": ("OpenPLi", "Enigma2"),
 	"openvix": ("OpenViX", "Enigma2")
 }
@@ -575,6 +580,7 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 		if self.changedSettings(checkNoRestartList=False) or self["config"].isChanged():
 			self.recursiveClose = recursiveClose
 			self.session.openWithCallback(self.cancelConfirm, MessageBox, _("Really close without saving settings?"), default=False)
+			info.setTitle(self.setup_title)
 		else:
 			self.close(recursiveClose)
 
@@ -593,15 +599,10 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 	def keySave(self):  # TEMP
 		self.removeNotifiers()
 		changed = self.changedSettings(checkNoRestartList=True)
-		for x in config.plugins.skin.OverlayHD.dict():
-			getattr(config.plugins.skin.OverlayHD, x).save()
-		# This may not be needed...
-		for x in self["config"].list:
-			x[1].save()
 		config.plugins.skin.OverlayHD.save()
 		self.applySettings()
 		if changed:
-			popup = self.session.openWithCallback(self.restartGUI, MessageBox, _("The GUI needs to be restarted to apply the changes.\n\nDo you want to restart the GUI now?"), MessageBox.TYPE_YESNO)
+			popup = self.session.openWithCallback(self.restartGUI, MessageBox, _("The GUI needs to be restarted to apply the changes.\n\nDo you want to restart the GUI now?"))
 			popup.setTitle(self.setup_title)
 		else:
 			self.close()
@@ -658,7 +659,7 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 			msg = ""
 		else:
 			msg = "\n\nNOTE: OverlayHD is not the active skin."
-		popup = self.session.open(MessageBox, _("Default OverlayHD skin settings applied.%s") % msg, MessageBox.TYPE_INFO, 5)
+		popup = self.session.open(MessageBox, _("Default OverlayHD skin settings applied.%s") % msg, MessageBox.TYPE_INFO, timeout=5)
 		popup.setTitle(self.setup_title)
 		self.addNotifiers()
 
@@ -731,7 +732,7 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 
 	def screenShown(self):
 		if self.domThemes is None:
-			popup = self.session.open(MessageBox, _("Unable to open/access themes file!\n\n%s") % self.errtext, MessageBox.TYPE_ERROR, 10)
+			popup = self.session.open(MessageBox, _("Unable to open/access themes file!\n\n%s") % self.errtext, MessageBox.TYPE_ERROR, timeout=10)
 			popup.setTitle(self.setup_title)
 			self.close()
 
@@ -816,11 +817,11 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 			validflag = False
 		if name == "":
 			validflag = False
-			popup = self.session.open(MessageBox, _("Theme name can not be blank!"), MessageBox.TYPE_ERROR, 5)
+			popup = self.session.open(MessageBox, _("Theme name can not be blank!"), MessageBox.TYPE_ERROR, timeout=5)
 			popup.setTitle(self.setup_title)
 		if self.findTheme(name):
 			validflag = False
-			popup = self.session.open(MessageBox, _("Theme name '%s' already exists!") % name, MessageBox.TYPE_ERROR, 5)
+			popup = self.session.open(MessageBox, _("Theme name '%s' already exists!") % name, MessageBox.TYPE_ERROR, timeout=5)
 			popup.setTitle(self.setup_title)
 		return validflag
 
@@ -853,7 +854,7 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 			try:
 				name = self["themes"].getCurrent()[0]
 			except:
-				popup = self.session.open(MessageBox, _("There are no themes to apply!"), MessageBox.TYPE_ERROR, 5)
+				popup = self.session.open(MessageBox, _("There are no themes to apply!"), MessageBox.TYPE_ERROR, timeout=5)
 				popup.setTitle(self.setup_title)
 				return
 		theme = self.findTheme(name)
@@ -906,7 +907,7 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 			print "[OverlayHD] Creating theme '%s'." % name
 			self.updateTheme(name)
 			self.saveThemes()
-			# popup = self.session.open(MessageBox, _("Theme '%s' created.") % name, MessageBox.TYPE_INFO, 3)
+			# popup = self.session.open(MessageBox, _("Theme '%s' created.") % name, MessageBox.TYPE_INFO, timeout=3)
 			# popup.setTitle(self.setup_title)
 
 	def saveTheme(self, name=None):
@@ -919,7 +920,7 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 		print "[OverlayHD] Saving theme '%s'." % name
 		self.updateTheme(name)
 		self.saveThemes()
-		popup = self.session.open(MessageBox, _("Theme '%s' saved.") % name, MessageBox.TYPE_INFO, 3)
+		popup = self.session.open(MessageBox, _("Theme '%s' saved.") % name, MessageBox.TYPE_INFO, timeout=3)
 		popup.setTitle(self.setup_title)
 
 	def renameTheme(self, name):
@@ -934,11 +935,11 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 				print "[OverlayHD] Renaming theme '%s' to '%s'." % (oldname, name)
 				theme.set("name", name)
 				self.saveThemes()
-				# popup = self.session.open(MessageBox, _("Theme '%s' renamed to '%s'.") % (oldname, name), MessageBox.TYPE_INFO, 3)
+				# popup = self.session.open(MessageBox, _("Theme '%s' renamed to '%s'.") % (oldname, name), MessageBox.TYPE_INFO, timeout=3)
 				# popup.setTitle(self.setup_title)
 
 	def deleteTheme(self, name):
-		popup = self.session.openWithCallback(self.deleteThemeAction, MessageBox, _("Do you really want to delete the '%s' theme?") % name, MessageBox.TYPE_YESNO)
+		popup = self.session.openWithCallback(self.deleteThemeAction, MessageBox, _("Do you really want to delete the '%s' theme?") % name)
 		popup.setTitle(self.setup_title)
 
 	def deleteThemeAction(self, answer):
@@ -949,18 +950,18 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 				print "[OverlayHD] Deleting theme '%s'." % name
 				self.domThemes.getroot().remove(theme)
 				self.saveThemes()
-				# popup = self.session.open(MessageBox, _("Theme '%s' deleted.") % name, MessageBox.TYPE_INFO, 3)
+				# popup = self.session.open(MessageBox, _("Theme '%s' deleted.") % name, MessageBox.TYPE_INFO, timeout=3)
 				# popup.setTitle(self.setup_title)
 
 	def exportTheme(self, name):
 		print "[OverlayHD] Export theme."
-		popup = self.session.open(MessageBox, _("Theme export not yet available!"), MessageBox.TYPE_ERROR, 5)
+		popup = self.session.open(MessageBox, _("Theme export not yet available!"), MessageBox.TYPE_ERROR, timeout=5)
 		popup.setTitle(self.setup_title)
 		# self.saveThemes()
 
 	def importTheme(self, name):
 		print "[OverlayHD] Import theme."
-		popup = self.session.open(MessageBox, _("Theme import not yet available!"), MessageBox.TYPE_ERROR, 5)
+		popup = self.session.open(MessageBox, _("Theme import not yet available!"), MessageBox.TYPE_ERROR, timeout=5)
 		popup.setTitle(self.setup_title)
 		# self.saveThemes()
 
