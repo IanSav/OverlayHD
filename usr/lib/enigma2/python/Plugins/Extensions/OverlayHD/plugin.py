@@ -28,7 +28,7 @@ except ImportError:
 	def getImageDistro():
 		return "openpli"
 from enigma import eEnv, gRGB
-from os import listdir, remove, symlink, unlink
+from os import listdir, readlink, remove, symlink, unlink
 from os.path import exists, isdir, isfile, islink, join as pathjoin
 from skin import dom_screens as domScreens, colorNames, fonts  # , reloadWindowstyles
 
@@ -1055,6 +1055,11 @@ def applySkinSettings(fullinit):
 	else:
 		print "[OverlayHD] OverlayHD is not the active skin."
 
+def clearSkinSettings():
+	applyImage("BackgroundImage", "")
+	applyImage("BootImage", "")
+	applyImage("RadioImage", "")
+
 def applyBlink(image, sourceList):
 	element, path = domScreens.get("ChannelFormatPanel", (None, None))
 	if element is not None:
@@ -1141,7 +1146,8 @@ def applyImage(image, target):
 	src = getattr(config.plugins.skin.OverlayHD, image).value
 	dst = resolveFilename(SCOPE_CONFIG, target)
 	try:
-		unlink(dst)
+		if islink(dst) and readlink(dst).startswith(pathjoin(resolveFilename(SCOPE_SKIN), "OverlayHD/backgrounds")):
+			unlink(dst)
 	except (IOError, OSError), (err, errmsg):
 		if err != errno.ENOENT:
 			errtext = "Error %d: %s - '%s'" % (err, errmsg, dst)
@@ -1158,15 +1164,16 @@ def applySpinner(label):
 	currentSpinner = pathjoin(resolveFilename(SCOPE_CURRENT_SKIN), "spinner")
 	# print "[OverlayHD] DEBUG: defaultSpinner='%s', currentSpinner='%s'" % (defaultSpinner, currentSpinner)
 	if currentSpinner != defaultSpinner:
+		msg = "[OverlayHD] NOTE: Unexpected spinner %s found within OverlayHD and deleted!"
 		if islink(currentSpinner):
 			unlink(currentSpinner)
 			# print "[OverlayHD] DEBUG: Old spinner directory found and deleted!"
 		elif isdir(currentSpinner):
 			shutil.rmtree(currentSpinner)
-			print "[OverlayHD] NOTE: Unexpected spinner directory found and deleted!"
+			print msg % "directory"
 		elif exists(currentSpinner):
 			remove(currentSpinner)
-			print "[OverlayHD] NOTE: Unexpected spinner file found and deleted!"
+			print msg % "file"
 		item = getattr(config.plugins.skin.OverlayHD, label).value
 		if item:
 			# print "[OverlayHD] DEBUG: Linking '%s' spinner directory as '%s'!" % (item, currentSpinner)
@@ -1217,7 +1224,7 @@ def autostart(reason, **kwargs):
 		applySkinSettings(True)
 	elif reason == 1:
 		# print "[OverlayHD] OverlayHD Skin Manager for '%s' unloaded." % distro
-		pass
+		clearSkinSettings()
 
 def Plugins(**kwargs):
 	list = []
