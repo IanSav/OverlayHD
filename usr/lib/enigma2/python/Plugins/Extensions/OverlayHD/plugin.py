@@ -1,6 +1,6 @@
 # ====================================================
 # OverlayHD Skin Manager
-# Version Date - 18-Aug-2019
+# Version Date - 19-Aug-2019
 # Remember to change version number variable below!!!
 #
 # Repository - https://bitbucket.org/IanSav/overlayhd
@@ -16,7 +16,7 @@
 # and original author details), but it may not be
 # commercially distributed.
 
-PLUGIN_VERSION_NUMBER = "1.78"
+PLUGIN_VERSION_NUMBER = "1.79"
 
 import errno
 import shutil
@@ -511,9 +511,9 @@ for (label, colour, transparency) in colourElements:
 for (label, font, fontTable) in fontElements:
 	setattr(config.plugins.skin.OverlayHD, label, ConfigSelection(default=font, choices=fontTable))
 	# print "[OverlayHD] DEBUG (definition): Font '%s' = '%s' (%s)" % (label, font, fontTable)
-for fname in sorted(listdir(resolveFilename(SCOPE_CURRENT_SKIN, "backgrounds"))):
+for fname in sorted(listdir(resolveFilename(SCOPE_SKIN, "OverlayHD/backgrounds"))):
 	imageChoices.append((fname, _(fname[0:-4])))
-for fname in sorted(listdir(resolveFilename(SCOPE_CURRENT_SKIN, "spinners"))):
+for fname in sorted(listdir(resolveFilename(SCOPE_SKIN, "OverlayHD/spinners"))):
 	spinnerChoices.append((fname, _(fname)))
 for (label, default, configType, optionTable) in optionElements:
 	if optionTable:
