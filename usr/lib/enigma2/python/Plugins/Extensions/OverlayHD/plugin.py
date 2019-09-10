@@ -1,6 +1,6 @@
 # ====================================================
 # OverlayHD Skin Manager
-# Version Date - 19-Aug-2019
+# Version Date - 25-Aug-2019
 # Remember to change version number variable below!!!
 #
 # Repository - https://bitbucket.org/IanSav/overlayhd
@@ -16,7 +16,7 @@
 # and original author details), but it may not be
 # commercially distributed.
 
-PLUGIN_VERSION_NUMBER = "1.79"
+PLUGIN_VERSION_NUMBER = "1.80"
 
 import errno
 import shutil
@@ -28,8 +28,9 @@ except ImportError:
 	def getImageDistro():
 		return "openpli"
 from enigma import eEnv, gRGB
-from os import listdir, readlink, remove, symlink, unlink
-from os.path import exists, isdir, isfile, islink, join as pathjoin
+from os import listdir, makedirs, readlink, remove, symlink, unlink
+from os.path import dirname, exists, isdir, isfile, islink, join as pathjoin
+from random import randrange
 from skin import dom_screens as domScreens, colorNames, fonts  # , reloadWindowstyles
 
 from Components.ActionMap import HelpableActionMap
@@ -44,7 +45,8 @@ from Screens.Screen import Screen
 from Screens.Setup import Setup
 from Screens.Standby import TryQuitMainloop, QUIT_RESTART
 from Screens.VirtualKeyBoard import VirtualKeyBoard
-from Tools.Directories import resolveFilename, SCOPE_CONFIG, SCOPE_SKIN, SCOPE_CURRENT_SKIN, SCOPE_CURRENT_PLUGIN
+from Tools.BoundFunction import boundFunction
+from Tools.Directories import resolveFilename, SCOPE_CONFIG, SCOPE_CURRENT_PLUGIN, SCOPE_CURRENT_SKIN, SCOPE_MEDIA, SCOPE_SKIN
 
 distroConfigs = {
 	"beyonwiz": ("Beyonwiz", "Beyonwiz"),
@@ -379,7 +381,20 @@ fontElements = [
 ]
 
 imageChoices = [
-	("", _("Default"))
+	("", _("Default")),
+	("Random", _("Random"))
+]
+
+imageNames = {
+	"BackgroundImage": "backdrop.mvi",
+	"BootImage": "bootlogo.mvi",
+	"RadioImage": "radio.mvi"
+}
+
+imageElements = [
+	"BackgroundImage",
+	"BootImage",
+	"RadioImage"
 ]
 
 buttonBase = "ScreenTemplateButton"
@@ -511,10 +526,30 @@ for (label, colour, transparency) in colourElements:
 for (label, font, fontTable) in fontElements:
 	setattr(config.plugins.skin.OverlayHD, label, ConfigSelection(default=font, choices=fontTable))
 	# print "[OverlayHD] DEBUG (definition): Font '%s' = '%s' (%s)" % (label, font, fontTable)
-for fname in sorted(listdir(resolveFilename(SCOPE_SKIN, "OverlayHD/backgrounds"))):
-	imageChoices.append((fname, _(fname[0:-4])))
-for fname in sorted(listdir(resolveFilename(SCOPE_SKIN, "OverlayHD/spinners"))):
-	spinnerChoices.append((fname, _(fname)))
+images = {}
+imagePath = resolveFilename(SCOPE_SKIN, "OverlayHD/backgrounds")
+if isdir(imagePath):
+	for imageFile in listdir(imagePath):
+		images[imageFile[0:-4].replace("_", " ")] = pathjoin(imagePath, imageFile)
+imagePath = resolveFilename(SCOPE_MEDIA, "hdd/backgrounds")
+if isdir(imagePath):
+	for imageFile in listdir(imagePath):
+		images[imageFile[0:-4].replace("_", " ")] = pathjoin(imagePath, imageFile)
+for key in sorted(images.keys()):
+	imageChoices.append((images.get(key), key))
+images.clear()
+spinners = {}
+spinnerPath = resolveFilename(SCOPE_SKIN, "OverlayHD/spinners")
+if isdir(spinnerPath):
+	for spinnerDir in listdir(spinnerPath):
+		spinners[spinnerDir.replace("_", " ")] = pathjoin(spinnerPath, spinnerDir)
+spinnerPath = resolveFilename(SCOPE_MEDIA, "hdd/spinners")
+if isdir(spinnerPath):
+	for spinnerDir in listdir(spinnerPath):
+		spinners[spinnerDir.replace("_", " ")] = pathjoin(spinnerPath, spinnerDir)
+for key in sorted(spinners.keys()):
+	spinnerChoices.append((spinners.get(key), key))
+spinners.clear()
 for (label, default, configType, optionTable) in optionElements:
 	if optionTable:
 		setattr(config.plugins.skin.OverlayHD, label, configType(default=default, choices=optionTable))
@@ -548,12 +583,28 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 		for x in repaintList:
 			getattr(config.plugins.skin.OverlayHD, x).removeNotifier(self.changeSettings)
 
-# 	def selectionChanged(self):
-# 		entry = self["config"].getCurrent()[1]
-# 		for x in config.plugins.skin.OverlayHD.dict():
-# 			if entry is getattr(config.plugins.skin.OverlayHD, x):
-# 				print "[OverlayHD] DEBUG: 'config.plugins.skin.OverlayHD.%s'" % x
-# 				break
+	def selectionChanged(self):
+		entry = self["config"].getCurrent()[1]
+		for x in config.plugins.skin.OverlayHD.dict():
+			if entry is getattr(config.plugins.skin.OverlayHD, x) and x in imageElements:
+				# print "[OverlayHD] DEBUG: 'config.plugins.skin.OverlayHD.%s'" % x
+				image = resolveFilename(SCOPE_CONFIG, imageNames.get(x, None))
+				if exists(image) and not (islink(image) and readlink(image).startswith(pathjoin(resolveFilename(SCOPE_SKIN), "OverlayHD/backgrounds"))):
+					popup = self.session.openWithCallback(boundFunction(self.handleExistingImage, x, image), MessageBox, _("An externally defined %s image already exists.  Would you like to delete it?") % x)
+					popup.setTitle(self.setup_title)
+				break
+
+	def handleExistingImage(self, element, image, answer):
+		if answer:
+			try:
+				if islink(image):
+					unlink(image)
+				else:
+					remove(image)
+			except (IOError, OSError), (err, errmsg):
+				if err != errno.ENOENT:
+					errtext = "Error %d: %s - '%s'" % (err, errmsg, image)
+					print "[OverlayHD] Error deleting the %s image! (%s)" % (element, errtext)
 
 	def changeGrouping(self, configElement):
 		if config.plugins.skin.OverlayHD.UseGroups.value:
@@ -587,8 +638,8 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 		for x in config.plugins.skin.OverlayHD.dict():
 			getattr(config.plugins.skin.OverlayHD, x).cancel()
 		# This may not be needed...
-		for x in self["config"].list:
-			x[1].cancel()
+		# for x in self["config"].list:
+		# 	x[1].cancel()
 		self.applySettings()
 		self.close(self.recursiveClose)
 
@@ -962,10 +1013,11 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 		popup.setTitle(self.setup_title)
 		# self.saveThemes()
 
-def applySkinSettings(fullinit):
-	if config.skin.primary_skin.value == "OverlayHD/skin.xml":
+def applySkinSettings(fullInit):
+	skin = dirname(config.skin.primary_skin.value)
+	if skin == "OverlayHD":
 		(distro, code) = distroConfigs.get(getImageDistro(), ("Unknown", "Enigma2"))
-		if fullinit:
+		if fullInit:
 			print "[OverlayHD] OverlayHD Skin Manager version %s: Configuring to run in '%s' mode." % (PLUGIN_VERSION_NUMBER, distro)
 			for screen in domScreens:
 				element, path = domScreens.get(screen, (None, None))
@@ -1013,12 +1065,10 @@ def applySkinSettings(fullinit):
 			data[0] = getattr(config.plugins.skin.OverlayHD, label).value
 			fonts[label] = tuple(data)
 		for (label, default, configType, optionsTable) in optionElements:
-			if label == "AlwaysShowButtons":
+			if label in imageElements:
+				applyImage(label, True)
+			elif label == "AlwaysShowButtons":
 				applyButtons(label)
-			elif label == "BackgroundImage":
-				applyImage(label, "backdrop.mvi")
-			elif label == "BootImage":
-				applyImage(label, "bootlogo.mvi")
 			elif label == "ButtonStyle":
 				for colour in buttonColours:
 					element, path = domScreens.get(buttonBase + colour, (None, None))
@@ -1041,8 +1091,6 @@ def applySkinSettings(fullinit):
 								if widget.get("TimelineTicksOn", None) is not None:
 									widget.set("TimelineTicksOn", setting)
 									break
-			elif label == "RadioImage":
-				applyImage(label, "radio.mvi")
 			elif label == "RecordBlink":
 				applyBlink(label, ["session.RecordState"])
 			elif label == "Spinner":
@@ -1056,9 +1104,9 @@ def applySkinSettings(fullinit):
 		print "[OverlayHD] OverlayHD is not the active skin."
 
 def clearSkinSettings():
-	applyImage("BackgroundImage", "")
-	applyImage("BootImage", "")
-	applyImage("RadioImage", "")
+	# for element in imageElements:
+	# 	applyImage(element, False)
+	pass
 
 def applyBlink(image, sourceList):
 	element, path = domScreens.get("ChannelFormatPanel", (None, None))
@@ -1142,22 +1190,47 @@ def applyButtons(mode):
 										# print "[OverlayHD]       Pixmap - Adding 'ConditionalShowHide' converter."
 				# print "[OverlayHD] DEBUG: XML widget dump:\n\t%s\n" % xml.etree.cElementTree.tostring(element)
 
-def applyImage(image, target):
-	src = getattr(config.plugins.skin.OverlayHD, image).value
-	dst = resolveFilename(SCOPE_CONFIG, target)
+def applyImage(image, flag):
+	if flag:
+		src = getattr(config.plugins.skin.OverlayHD, image).value
+		if src == "Random":
+			src = imageChoices[randrange(len(imageChoices) - 2) + 2][0]
+	else:
+		src = ""
+	dst = resolveFilename(SCOPE_CONFIG, imageNames.get(image, None))  # Change shared image in /etc/enigma2/.
+	# dst = resolveFilename(SCOPE_CONFIG, pathjoin(dirname(config.skin.primary_skin.value), imageNames.get(image, None)))  # Change image in /etc/enigma2/<skin>/.
+	# dst = resolveFilename(SCOPE_CURRENT_SKIN, imageNames.get(image, None))  # Change image in /usr/share/enigma2/<skin>/.
 	try:
-		if islink(dst) and readlink(dst).startswith(pathjoin(resolveFilename(SCOPE_SKIN), "OverlayHD/backgrounds")):
-			unlink(dst)
+		# Use this code when manipulating shared images in /etc/enigma2/.
+		if islink(dst):
+			target = readlink(dst)
+			if target.startswith(pathjoin(resolveFilename(SCOPE_SKIN), "OverlayHD/backgrounds")) or target.startswith(pathjoin(resolveFilename(SCOPE_MEDIA), "hdd/backgrounds")):
+				unlink(dst)
+		# Use this code when manipulating images not in /etc/enigma2/.
+		# if islink(dst):
+		# 	unlink(dst)
+		# else:
+		# 	remove(dst)
 	except (IOError, OSError), (err, errmsg):
 		if err != errno.ENOENT:
 			errtext = "Error %d: %s - '%s'" % (err, errmsg, dst)
 			print "[OverlayHD] Error deleting the %s image! (%s)" % (image, errtext)
 	if src:
+		# Use this code when creating images in /etc/enigma2/<skin>/.
+		# skinDir = dirname(dst)
+		# if not isdir(skinDir):
+		# 	try:
+		# 		makedirs(skinDir)
+		# 	except (IOError, OSError), (err, errmsg):
+		# 		errtext = "Error %d: %s - '%s'" % (err, errmsg, skinDir)
+		# 		print "[OverlayHD] Error creating skin subdirectory! (%s)" % errtext
 		try:
-			symlink(resolveFilename(SCOPE_CURRENT_SKIN, "backgrounds/%s" % src), dst)
+			# shutil.copy(src, dst)
+			# shutil.copystat(src, dst)
+			symlink(src, dst)
 		except (IOError, OSError), (err, errmsg):
 			errtext = "Error %d: %s - '%s'" % (err, errmsg, dst)
-			print "[OverlayHD] Error linking the %s image! (%s)" % (image, errtext)
+			print "[OverlayHD] Error copying the %s image! (%s)" % (image, errtext)
 
 def applySpinner(label):
 	defaultSpinner = pathjoin(resolveFilename(SCOPE_SKIN), "spinner")
@@ -1174,11 +1247,11 @@ def applySpinner(label):
 		elif exists(currentSpinner):
 			remove(currentSpinner)
 			print msg % "file"
-		item = getattr(config.plugins.skin.OverlayHD, label).value
-		if item:
-			# print "[OverlayHD] DEBUG: Linking '%s' spinner directory as '%s'!" % (item, currentSpinner)
+		newSpinner = getattr(config.plugins.skin.OverlayHD, label).value
+		if newSpinner:
+			# print "[OverlayHD] DEBUG: Linking '%s' spinner directory as '%s'!" % (newSpinner, currentSpinner)
 			try:
-				symlink(resolveFilename(SCOPE_CURRENT_SKIN, "spinners/%s" % item), currentSpinner)
+				symlink(newSpinner, currentSpinner)
 			except (IOError, OSError), (err, errmsg):
 				errtext = "Error %d: %s - '%s'" % (err, errmsg, linkname)
 				print "[OverlayHD] Error linking spinner directory! (%s)" % errtext
