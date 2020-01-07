@@ -124,7 +124,7 @@
 				"template":
 					[
 					MultiContentEntryText(pos = (85, 0), size = (705, 50), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1), # index 1 is the language name,
-					MultiContentEntryPixmap(pos = (5, 5), size = (60, 50), png = 2), # index 2 is the pixmap
+					MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (60, 50), png = 2), # index 2 is the pixmap
 					],
 				"fonts": [gFont("Regular", 25)],
 				"itemHeight": 50
@@ -679,7 +679,7 @@
 					MultiContentEntryText(pos = (180, 35), size = (565, 25), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3, color = "TextIndented", color_sel = "TextIndentedSelected"), # index 3 is the DIRdescription
 					MultiContentEntryPixmapAlphaTest(pos = (765, 15), size = (48, 48), png = 4), # index 4 is the activepng pixmap
 					],
-				"fonts": [gFont("Regular", 25),gFont("Regular", 20)],
+				"fonts": [gFont("Regular", 25), gFont("Regular", 20)],
 				"itemHeight": 60
 				}
 			</convert>
@@ -814,7 +814,7 @@
 					MultiContentEntryText(pos = (570, 10), size = (230, 25), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2), # index 0 is the signal
 					MultiContentEntryText(pos = (570, 35), size = (230, 25), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3), # index 0 is the maxrate
 					],
-				"fonts": [gFont("Regular", 25),gFont("Regular", 20)],
+				"fonts": [gFont("Regular", 25), gFont("Regular", 20)],
 				"itemHeight": 60
 				}
 			</convert>

@@ -28,7 +28,7 @@
 				"template": [
 					MultiContentEntryText(pos = (20,0), size = (560,38), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0	)
 					],
-				"fonts": [gFont("Regular",28)],
+				"fonts": [gFont("Regular", 28)],
 				"itemHeight": 38
 				}
 			</convert>

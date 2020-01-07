@@ -699,7 +699,7 @@
 						# MultiContentEntryPixmapAlphaTest(pos = (0, 38), size = (650, 2), png = 3), # index 3 is the div pixmap
 						])
 					},
-				"fonts": [gFont("Regular", 22),gFont("Regular", 18)],
+				"fonts": [gFont("Regular", 22), gFont("Regular", 18)],
 				"itemHeight": 50
 				}
 			</convert>
@@ -760,7 +760,7 @@
 					MultiContentEntryPixmapAlphaTest(pos = (760, 1), size = (48, 48), png = 4), # index 4 is the status pixmap
 					# MultiContentEntryPixmapAlphaTest(pos = (5, 58), size = (0, 0), png = 5), # index 4 is the div pixmap
 					],
-				"fonts": [gFont("Regular", 22),gFont("Regular", 18)],
+				"fonts": [gFont("Regular", 22), gFont("Regular", 18)],
 				"itemHeight": 50
 				}
 			</convert>

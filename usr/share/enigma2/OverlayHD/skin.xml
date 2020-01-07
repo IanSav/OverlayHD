@@ -1377,7 +1377,7 @@
 					[
 					MultiContentEntryText(pos = (20, 0), size = (790, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1)
 					],
-				"fonts": [gFont("Regular", 25)],
+				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
 				}
 			</convert>
@@ -1396,7 +1396,7 @@
 					[
 					MultiContentEntryText(pos = (20, 0), size = (790, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0)
 					],
-				"fonts": [gFont("Regular", 25)],
+				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
 				}
 			</convert>
@@ -1414,8 +1414,8 @@
 					MultiContentEntryText(pos = (20, 25), size = (400, 25), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0, color = "InfoProgramNow", color_sel = "InfoProgramSelected"),  # Event name
 					MultiContentEntryText(pos = (440, 25), size = (360, 25), font = 1, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4, color = "InfoTimesNow", color_sel = "InfoTimesSelected")  # Event time
 					],
-				 "fonts": [gFont("Regular", 20), gFont("Regular", 18)],
-				 "itemHeight": 50
+				"fonts": [gFont("Regular", 20), gFont("Regular", 18)],
+				"itemHeight": 50
 				}
 			</convert>
 		</widget>
@@ -1552,7 +1552,7 @@
 					MultiContentEntryPixmapAlphaBlend(pos = (20, 2), size = (31, 31), png = 1),
 					MultiContentEntryText(pos = (70, 0), size = (720, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0)
 					],
-				"fonts": [gFont("Regular", 25)],
+				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
 				}
 			</convert>
@@ -1573,7 +1573,7 @@
 					MultiContentEntryText(pos = (95, 35), size = (695, 25), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2, color = "TextIndented", color_sel = "TextIndentedSelected"), # index 2 is the Description
 					MultiContentEntryPixmapAlphaTest(pos = (20, 6), size = (48, 48), png = 3), # index 3 is the pixmap
 					],
-				"fonts": [gFont("Regular", 25),gFont("Regular", 20)],
+				"fonts": [parseFont("MenuFont;25"), parseFont("MenuFont;20")],
 				"itemHeight": 60
 				}
 			</convert>
@@ -1606,7 +1606,7 @@
 					[
 					MultiContentEntryText(pos = (20, 0), size = (790, 35), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0), # index 0 is the name
 					],
-				"fonts": [gFont("Regular", 25)],
+				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
 				}
 			</convert>

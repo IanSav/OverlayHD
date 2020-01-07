@@ -456,7 +456,7 @@
 						MultiContentEntryText(pos = (0, 35), size = (740, 65), font=2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER| RT_WRAP, text = 0), # index 0 is the name
 						])
 					},
-				"fonts": [gFont("Regular", 20),gFont("Regular", 14),gFont("Regular", 28)],
+				"fonts": [gFont("Regular", 20), gFont("Regular", 14), gFont("Regular", 28)],
 				"itemHeight": 135
 				}
 			</convert>
@@ -487,7 +487,7 @@
 					MultiContentEntryProgress(pos = (440, 3), size = (100, 24), percent = -3), # index 3 should be progress
 					MultiContentEntryText(pos = (550, 3), size = (70, 24), font=1, flags = RT_HALIGN_RIGHT, text = 4), # index 4 is the percentage
 					],
-				"fonts": [gFont("Regular", 22),gFont("Regular", 18)],
+				"fonts": [gFont("Regular", 22), gFont("Regular", 18)],
 				"itemHeight": 30
 				}
 			</convert>
@@ -524,7 +524,7 @@
 						MultiContentEntryText(pos = (20, 43), size = (560, 30), font=3, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 1),
 						])
 					},
-				"fonts": [gFont("Regular", 20),gFont("Regular", 16),gFont("Regular", 22),gFont("Regular", 18)],
+				"fonts": [gFont("Regular", 20), gFont("Regular", 16), gFont("Regular", 22), gFont("Regular", 18)],
 				"itemHeight": 85
 				}
 			</convert>
@@ -545,7 +545,7 @@
 					MultiContentEntryText(pos = (10, 1), size = (380, 24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
 					MultiContentEntryText(pos = (390, 1), size = (180, 24), font=1, flags = RT_HALIGN_RIGHT, text = 1), # index 1 are the rtesults
 					],
-				"fonts": [gFont("Regular", 22),gFont("Regular", 18)],
+				"fonts": [gFont("Regular", 22), gFont("Regular", 18)],
 				"itemHeight": 25
 				}
 			</convert>
@@ -560,7 +560,7 @@
 					[
 					MultiContentEntryText(pos = (10, 1), size = (340, 24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
 					],
-				"fonts": [gFont("Regular", 22),gFont("Regular", 18)],
+				"fonts": [gFont("Regular", 22), gFont("Regular", 18)],
 				"itemHeight": 25
 				}
 			</convert>
@@ -609,7 +609,7 @@
 						MultiContentEntryText(pos = (20, 50), size = (790, 25), font=3, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 1), # index 2 is the description
 						])
 					},
-				"fonts": [gFont("Regular", 22),gFont("Regular", 18),gFont("Regular", 25),gFont("Regular", 20)],
+				"fonts": [gFont("Regular", 22), gFont("Regular", 18), gFont("Regular", 25), gFont("Regular", 20)],
 				"itemHeight": 75
 				}
 			</convert>
