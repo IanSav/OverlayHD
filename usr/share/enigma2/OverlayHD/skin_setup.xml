@@ -69,15 +69,14 @@
 
 	<screen name="SkinSelector" title="Skin Selector" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonInfo" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_tv.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateSkinList4" />
 		<eLabel position="960,80" size="270,2" backgroundColor="Pinstripe" />
 		<eLabel position="960,524" size="270,2" backgroundColor="Pinstripe" />
 		<eLabel position="960,80" size="2,445" backgroundColor="Pinstripe" />
 		<eLabel position="1228,80" size="2,445" backgroundColor="Pinstripe" />
-		<widget name="Preview" position="970,90" size="250,425" alphatest="blend" transparent="1" />
-		<panel name="ScreenTemplateSIntroduction4" />
+		<widget name="preview" position="970,90" size="250,425" alphatest="blend" transparent="1" />
+		<panel name="ScreenTemplateSDescription4" />
 	</screen>
 
 <!-- MENU > Setup > AV Setup > HDMI-CEC -->
