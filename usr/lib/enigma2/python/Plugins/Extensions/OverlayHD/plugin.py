@@ -1,10 +1,10 @@
 # ====================================================
 # OverlayHD Skin Manager
-# Version Date - 25-Aug-2019
+# Version Date - 5-Jan-2020
 # Remember to change version number variable below!!!
 #
 # Repository - https://bitbucket.org/IanSav/overlayhd
-# Coding by IanSav (c) 2015-2019
+# Coding by IanSav (c) 2015-2020
 #
 # This plugin was originally developed for the
 # Beyonwiz Australia distribution of Enigma2.  It
@@ -16,7 +16,7 @@
 # and original author details), but it may not be
 # commercially distributed.
 
-PLUGIN_VERSION_NUMBER = "1.80"
+PLUGIN_VERSION_NUMBER = "1.81"
 
 import errno
 import shutil
@@ -31,7 +31,7 @@ from enigma import eEnv, gRGB
 from os import listdir, makedirs, readlink, remove, symlink, unlink
 from os.path import dirname, exists, isdir, isfile, islink, join as pathjoin
 from random import randrange
-from skin import dom_screens as domScreens, colorNames, fonts  # , reloadWindowstyles
+from skin import domScreens, colorNames, fonts  # reloadWindowstyles
 
 from Components.ActionMap import HelpableActionMap
 from Components.Sources.List import List
