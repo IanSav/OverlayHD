@@ -85,6 +85,13 @@
 		<color name="ButtonRed" value="#009f1313" />
 		<color name="ButtonText" value="White" />
 		<color name="ButtonYellow" value="#00a08500" />
+		<!-- These are the globally defined button colours. -->
+		<color name="key_back" value="ButtonBack" />
+		<color name="key_blue" value="ButtonBlue" />
+		<color name="key_green" value="ButtonGreen" />
+		<color name="key_red" value="ButtonRed" />
+		<color name="key_text" value="White" />
+		<color name="key_yellow" value="ButtonYellow" />
 
 		<color name="ScreenBackground" value="#3f000000" />
 		<color name="ScreenSaverBackground" value="#19000000" />
@@ -504,7 +511,7 @@
 	<windowstyle id="0" type="skinned">
 		<title font="TitleFont;23" offset="20,8" />
 		<color name="Background" color="ScreenBackground" />
-		<color name="LabelForeground" color="Scrollbar" />
+		<color name="LabelForeground" color="Text" />
 		<color name="ListboxBackground" color="MenuBackground" />
 		<color name="ListboxForeground" color="MenuText" />
 		<color name="ListboxSelectedBackground" color="MenuSelected" />
