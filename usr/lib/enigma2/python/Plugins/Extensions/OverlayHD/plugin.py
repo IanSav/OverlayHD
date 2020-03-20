@@ -601,9 +601,9 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 					unlink(image)
 				else:
 					remove(image)
-			except (IOError, OSError), (err, errmsg):
-				if err != errno.ENOENT:
-					errtext = "Error %d: %s - '%s'" % (err, errmsg, image)
+			except (IOError, OSError) as err:
+				if err.errno != errno.ENOENT:
+					errtext = "Error %d: %s - '%s'" % (err.errno, err.strerror, image)
 					print "[OverlayHD] Error deleting the %s image! (%s)" % (element, errtext)
 
 	def changeGrouping(self, configElement):
@@ -764,15 +764,15 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 		self.domThemes = None
 		try:
 			self.domThemes = xml.etree.cElementTree.parse(self.filename)
-		except (IOError, OSError), (err, errmsg):
-			if err == errno.ENOENT:
+		except (IOError, OSError) as err:
+			if err.errno == errno.ENOENT:
 				self.domThemes = xml.etree.cElementTree.ElementTree(xml.etree.cElementTree.Element("themes"))
 				self.updateTheme("Default", mode="default")
 				self.updateTheme("Current", mode="value")
 				self.saveThemes()
 				print "[OverlayHD] Themes 'Default' and 'Current' created."
 			else:
-				self.errtext = "Error %d: %s - '%s'" % (err, errmsg, self.filename)
+				self.errtext = "Error %d: %s - '%s'" % (err.errno, err.strerror, self.filename)
 				print "[OverlayHD] Error opening themes file! (%s)" % self.errtext
 		self["themes"].updateList(self.listThemes())
 		self.onShown.append(self.screenShown)
@@ -901,7 +901,7 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 		if name is None:
 			try:
 				name = self["themes"].getCurrent()[0]
-			except:
+			except Exception:
 				popup = self.session.open(MessageBox, _("There are no themes to apply!"), MessageBox.TYPE_ERROR, timeout=5)
 				popup.setTitle(self.setup_title)
 				return
@@ -916,7 +916,7 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 					try:
 						getattr(config.plugins.skin.OverlayHD, name).value = value
 						# print "[OverlayHD] Theme colour = '%s', value = '%s'" % (name, value)
-					except:
+					except Exception:
 						print "[OverlayHD] Theme colour = '%s', value = '%s' is invalid!" % (name, value)
 			fonts = theme.findall("font")
 			for font in fonts:
@@ -926,7 +926,7 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 					try:
 						getattr(config.plugins.skin.OverlayHD, name).value = value
 						# print "[OverlayHD] Theme font = '%s', value = '%s'" % (name, value)
-					except:
+					except Exception:
 						print "[OverlayHD] Theme font = '%s', value = '%s' is invalid!" % (name, value)
 			options = theme.findall("option")
 			for option in options:
@@ -942,7 +942,7 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 								value = False
 						getattr(config.plugins.skin.OverlayHD, name).value = value
 						# print "[OverlayHD] Theme option = '%s', value = '%s'" % (name, value)
-					except:
+					except Exception:
 						print "[OverlayHD] Theme option = '%s', value = '%s' is invalid!" % (name, value)
 		self.close()
 
@@ -962,7 +962,7 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 		if name is None:
 			try:
 				name = self["themes"].getCurrent()[0]
-			except:
+			except Exception:
 				self.newTheme()
 				return
 		print "[OverlayHD] Saving theme '%s'." % name
@@ -1211,9 +1211,9 @@ def applyImage(image, flag):
 		# 	unlink(dst)
 		# else:
 		# 	remove(dst)
-	except (IOError, OSError), (err, errmsg):
-		if err != errno.ENOENT:
-			errtext = "Error %d: %s - '%s'" % (err, errmsg, dst)
+	except (IOError, OSError) as err:
+		if err.errno != errno.ENOENT:
+			errtext = "Error %d: %s - '%s'" % (err.errno, err.strerror, dst)
 			print "[OverlayHD] Error deleting the %s image! (%s)" % (image, errtext)
 	if src:
 		# Use this code when creating images in /etc/enigma2/<skin>/.
@@ -1221,15 +1221,15 @@ def applyImage(image, flag):
 		# if not isdir(skinDir):
 		# 	try:
 		# 		makedirs(skinDir)
-		# 	except (IOError, OSError), (err, errmsg):
-		# 		errtext = "Error %d: %s - '%s'" % (err, errmsg, skinDir)
+		# 	except (IOError, OSError) as err:
+		# 		errtext = "Error %d: %s - '%s'" % (err.errno, err.strerror, skinDir)
 		# 		print "[OverlayHD] Error creating skin subdirectory! (%s)" % errtext
 		try:
 			# shutil.copy(src, dst)
 			# shutil.copystat(src, dst)
 			symlink(src, dst)
-		except (IOError, OSError), (err, errmsg):
-			errtext = "Error %d: %s - '%s'" % (err, errmsg, dst)
+		except (IOError, OSError) as err:
+			errtext = "Error %d: %s - '%s'" % (err.errno, err.strerror, dst)
 			print "[OverlayHD] Error copying the %s image! (%s)" % (image, errtext)
 
 def applySpinner(label):
@@ -1252,8 +1252,8 @@ def applySpinner(label):
 			# print "[OverlayHD] DEBUG: Linking '%s' spinner directory as '%s'!" % (newSpinner, currentSpinner)
 			try:
 				symlink(newSpinner, currentSpinner)
-			except (IOError, OSError), (err, errmsg):
-				errtext = "Error %d: %s - '%s'" % (err, errmsg, linkname)
+			except (IOError, OSError) as err:
+				errtext = "Error %d: %s - '%s'" % (err.errno, err.strerror, linkname)
 				print "[OverlayHD] Error linking spinner directory! (%s)" % errtext
 
 def updateOverlayHD():
