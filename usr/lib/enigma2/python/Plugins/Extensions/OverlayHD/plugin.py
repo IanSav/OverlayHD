@@ -31,22 +31,22 @@ from enigma import eEnv, gRGB
 from os import listdir, makedirs, readlink, remove, symlink, unlink
 from os.path import dirname, exists, isdir, isfile, islink, join as pathjoin
 from random import randrange
-from skin import domScreens, colorNames, fonts  # reloadWindowstyles
+from skin import colorNames, domScreens, fonts  # reloadWindowstyles
 
 from Components.ActionMap import HelpableActionMap
 from Components.Sources.List import List
 from Components.Sources.StaticText import StaticText
-from Components.config import config, ConfigSubsection, ConfigYesNo, ConfigEnableDisable, ConfigSelection
+from Components.config import ConfigEnableDisable, ConfigSelection, ConfigSubsection, ConfigYesNo, config
 from Plugins.Plugin import PluginDescriptor
 from Screens.ChoiceBox import ChoiceBox
 from Screens.HelpMenu import HelpableScreen
 from Screens.MessageBox import MessageBox
 from Screens.Screen import Screen
 from Screens.Setup import Setup
-from Screens.Standby import TryQuitMainloop, QUIT_RESTART
+from Screens.Standby import QUIT_RESTART, TryQuitMainloop
 from Screens.VirtualKeyBoard import VirtualKeyBoard
 from Tools.BoundFunction import boundFunction
-from Tools.Directories import resolveFilename, SCOPE_CONFIG, SCOPE_CURRENT_PLUGIN, SCOPE_CURRENT_SKIN, SCOPE_MEDIA, SCOPE_SKIN
+from Tools.Directories import SCOPE_CONFIG, SCOPE_CURRENT_PLUGIN, SCOPE_CURRENT_SKIN, SCOPE_MEDIA, SCOPE_SKIN, resolveFilename
 
 distroConfigs = {
 	"beyonwiz": ("Beyonwiz", "Beyonwiz"),
