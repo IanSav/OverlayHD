@@ -1,4 +1,4 @@
-# ====================================================
+# ===================================================================
 # OverlayHD Skin Manager
 # Version Date - 5-Jan-2020
 # Remember to change version number variable below!!!
@@ -6,15 +6,15 @@
 # Repository - https://bitbucket.org/IanSav/overlayhd
 # Coding by IanSav (c) 2015-2020
 #
-# This plugin was originally developed for the
-# Beyonwiz Australia distribution of Enigma2.  It
-# may be distributed and executed on Beyonwiz and
-# OpenViX firmware.
+# This skin and plugin was originally developed for the Beyonwiz
+# Australia distribution of Enigma2.  It may be distributed and
+# used on Beyonwiz and other Enigma2 firmware.
 #
-# This plugin is NOT free software. It is open source,
-# you are allowed to modify it (if you keep the license
-# and original author details), but it may not be
-# commercially distributed.
+# This skin and plugin are NOT free software. It is open source,
+# you are allowed to modify it (if you keep the license and
+# original author details), but it may not be commercially
+# distributed.
+# ===================================================================
 
 PLUGIN_VERSION_NUMBER = "1.81"
 

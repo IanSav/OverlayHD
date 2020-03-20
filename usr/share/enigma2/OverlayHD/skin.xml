@@ -1,6 +1,19 @@
 <skin>
 <!--
- |	OverlayHD skin based on easy-skin-aus-hd refined and enhanced by IanSav.
+ |	OverlayHD skin based on easy-skin-aus-hd refined and enhanced
+ |	by IanSav.
+ |
+ |	Repository - https://bitbucket.org/IanSav/overlayhd
+ |	Coding by IanSav (c) 2015-2020
+ |
+ |	This skin and plugin was originally developed for the Beyonwiz
+ |	Australia distribution of Enigma2.  It may be distributed and
+ |	used on Beyonwiz and other Enigma2 firmware.
+ |
+ |	This skin and plugin are NOT free software. It is open source,
+ |	you are allowed to modify it (if you keep the license and
+ |	original author details), but it may not be commercially
+ |	distributed.
  +-->
 
 	<output id="0">
