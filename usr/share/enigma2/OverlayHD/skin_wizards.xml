@@ -94,7 +94,7 @@
 
 <!-- Language Wizard -->
 
-	<screen name="LanguageWizard" title="Language Selection" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="LanguageWizard" title="Welcome: Language Selection" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="WizardTemplate" />
 		<widget source="languages" render="Listbox" position="500,350" size="730,300" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
