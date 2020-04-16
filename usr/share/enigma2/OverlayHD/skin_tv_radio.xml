@@ -1,7 +1,7 @@
 <skin>
 <!-- NUMBER - Direct Channel Number Zap -->
 
-	<screen name="NumberZap" title="Channel Zap..." position="center,center" size="260,79" backgroundColor="ScreenBackground"> <!--460,300-->
+	<screen name="NumberZap" title="Channel Zap..." position="center,center" size="260,79"> <!--460,300-->
 		<widget name="channel" position="10,15" size="110,25" backgroundColor="InfoBackground" font="Regular;22" foregroundColor="TextLabel" transparent="1" valign="center" />
 		<widget name="number" position="170,15" size="80,25" backgroundColor="InfoBackground" font="Regular;22" foregroundColor="InfoLCN" halign="right" transparent="1" valign="center" />
 		<widget name="servicename" position="10,45" size="240,25" backgroundColor="InfoBackground" font="Regular;22" foregroundColor="InfoChannel" halign="right" transparent="1" valign="center" />
@@ -10,7 +10,7 @@
 <!-- BACK | PREV | NEXT - History Zap Menu -->
 
 	<!--
-	<screen name="HistoryZapSelector" title="History Zap..." position="center,center" size="350,240" backgroundColor="ScreenBackground">
+	<screen name="HistoryZapSelector" title="History Zap..." position="center,center" size="350,240">
 		<widget source="menu" render="Listbox" position="0,0" size="350,240" scrollbarMode="showOnDemand" transparent="1" zPosition="2">
 			<convert type="TemplatedMultiContent">
 				{
@@ -27,7 +27,7 @@
 	</screen>
 	-->
 
-	<screen name="HistoryZapSelector" title="History Zap..." position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="HistoryZapSelector" title="History Zap..." position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tv_zaphistory.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
@@ -50,7 +50,7 @@
 
 <!-- ??? - ToDo! -->
 
-	<screen name="ZapHistoryBrowser" title="Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="ZapHistoryBrowser" title="Setup" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tv_zaphistory.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="list" position="590,170" size="610,415" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="0" />
@@ -58,7 +58,7 @@
 
 <!-- FAV - TV Channel Selection -->
 
-	<screen name="ChannelSelection" title="Channel Selection" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="ChannelSelection" title="Channel Selection" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonInfo" />
@@ -171,7 +171,7 @@
 		</panel>
 	</screen>
 
-	<screen name="ChannelContextMenu" title="Channel Selection Context Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="ChannelContextMenu" title="Channel Selection Context Menu" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<ePixmap pixmap="menus/mainmenu_tv_live.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
@@ -180,7 +180,7 @@
 
 <!-- Screen names change for "Simple" mode channel selection -> "SlimChannelSelection", "SimpleChannelSelection", "ChannelSelection" -->
 
-	<screen name="SlimChannelSelection" title="Channel Selection" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="SlimChannelSelection" title="Channel Selection" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonInfo" />
@@ -195,7 +195,7 @@
 			progressbarHeight="6" progressbarBorderWidth="1" progressBarWidth="50" scrollbarMode="showOnDemand" serviceInfoFont="FAVEventFont;20" serviceItemHeight="25" serviceNameFont="FAVServiceFont;20" serviceNumberFont="FAVLCNFont;20" transparent="0" />
 	</screen>
 
-	<screen name="SimpleChannelSelection" title="Channel Selection" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="SimpleChannelSelection" title="Channel Selection" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="SlimChannelSelection" />
 	</screen>
 
@@ -224,7 +224,7 @@
 
 <!-- AUDIO - Audio Selection Pop Up -->
 
-	<screen name="AudioSelection" title="Select Audio Track" position="center,center" size="680,280" backgroundColor="ScreenBackground">
+	<screen name="AudioSelection" title="Select Audio Track" position="center,center" size="680,280">
 		<widget name="config" position="50,0" size="630,140" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showNever" transparent="0" />
 		<widget source="key_red" render="Pixmap" pixmap="buttons/key_red.png" position="5,5" size="35,25" alphatest="blend" transparent="1">
 			<convert type="ConditionalShowHide" />
@@ -274,7 +274,7 @@
 
 	<screen name="HbbTVHelper" title=" " position="0,0" size="1280,720" backgroundColor="ScreenTransparent" flags="wfNoBorder" />
 
-	<screen name="HbbTVBrowserBookmarkWindow" title="HbbTV Browser Bookmarks" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="HbbTVBrowserBookmarkWindow" title="HbbTV Browser Bookmarks" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="OperaBrowserBookmarkWindow" />
 	</screen>
 

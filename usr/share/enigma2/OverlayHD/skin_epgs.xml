@@ -1,7 +1,7 @@
 <skin>
 <!-- EPG (Long) - EPG Extensions Selection List -->
 
-	<screen name="EPGExtensionsList" title="EPG Extensions" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="EPGExtensionsList" title="EPG Extensions" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="text" position="360,30" size="870,35" borderColor="BannerBorder" borderWidth="1" conditional="text" font="TitleFont;25" foregroundColor="BannerTitle" halign="right" transparent="1" />
@@ -105,7 +105,7 @@
 
 <!-- EPG - Graphical EPG (Text and Graphics Modes) -->
 
-	<screen name="GraphicalEPG" title="Graphical EPG" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="GraphicalEPG" title="Graphical EPG" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonInfo" />
@@ -192,7 +192,7 @@
 
 <!-- EPG - InfoBarEPG > INFO - Event Info View -->
 
-	<screen name="InfoBarEventView" title="InfoBar Event View" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder" zPosition="+1">
+	<screen name="InfoBarEventView" title="InfoBar Event View" position="0,0" size="1280,720" flags="wfNoBorder" zPosition="+1">
 		<panel name="EventView" />
 	</screen>
 
@@ -292,7 +292,7 @@
 
 <!-- INFO > YELLOW - Single Channel EPG -->
 
-	<screen name="EPGSelection" title="Single Channel EPG" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="EPGSelection" title="Single Channel EPG" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonInfo" />
@@ -308,7 +308,7 @@
 
 <!-- EPG > YELLOW - EPG Search -->
 
-	<screen name="EPGSearch" title="EPG Search" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="EPGSearch" title="EPG Search" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonInfo" />
@@ -337,7 +337,7 @@
 
 <!-- EPG > TEXT - Date & Time Input -->
 
-	<screen name="TimeDateInput" title="Date/Time Input" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="TimeDateInput" title="Date/Time Input" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
@@ -346,7 +346,7 @@
 
 <!-- EPG > TEXT - Date & Time With Linked Duration Input -->
 
-	<screen name="TimeDateDurationInput" title="Time/Date/Duration Input" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="TimeDateDurationInput" title="Time/Date/Duration Input" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
@@ -357,14 +357,14 @@
 
 <!--  CrossEPG Plugin -->
 
-	<screen name="CrossEPG_Setup" title="CrossEPG Configuration" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="CrossEPG_Setup" title="CrossEPG Configuration" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateInformation4" />
 	</screen>
 
-	<screen name="CrossEPG_Menu" title="CrossEPG Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="CrossEPG_Menu" title="CrossEPG Menu" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="list" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
@@ -381,7 +381,7 @@
 		</widget>
 	</screen>
 
-	<screen name="CrossEPG_Providers" title="CrossEPG Provider XMLTV-OpenTV-XEPGDB-MHW2-M7-RAI" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="CrossEPG_Providers" title="CrossEPG Provider XMLTV-OpenTV-XEPGDB-MHW2-M7-RAI" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="list" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
@@ -398,7 +398,7 @@
 		</widget>
 	</screen>
 
-	<screen name="CrossEPG_Ordering" title="CrossEPG Order Download List" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="CrossEPG_Ordering" title="CrossEPG Order Download List" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="list" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
@@ -415,7 +415,7 @@
 		</widget>
 	</screen>
 
-	<screen name="CrossEPG_Info" title="CrossEPG - DB Info" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="CrossEPG_Info" title="CrossEPG - DB Info" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="version" position="400,80" size="830,35" backgroundColor="TextBackground" font="TextFont;25" foregroundColor="Text" transparent="1" valign="center" />
@@ -436,7 +436,7 @@
 		<eLabel position="400,465" size="830,2" backgroundColor="Pinstripe" />
 	</screen>
 
-	<screen name="CrossEPG_About" title="CrossEPG About" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="CrossEPG_About" title="CrossEPG About" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="about" position="400,80" size="830,560" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" transparent="1" />
@@ -444,7 +444,7 @@
 
 <!-- EPG-Import Plugin -->
 
-	<screen name="EPGImportConfig" title="EPG Import Configuration" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="EPGImportConfig" title="EPG Import Configuration" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonInfo" />
@@ -456,31 +456,31 @@
 		<widget name="status" position="410,585" size="810,75" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
-	<screen name="EPGImportSources" title="EPG Import Sources" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="EPGImportSources" title="EPG Import Sources" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="list" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
-	<screen name="EPGImportProfile" title="EPG Import Profile" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="EPGImportProfile" title="EPG Import Profile" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="config" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
-	<screen name="EPGImportLog" title="EPG Import Log" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="EPGImportLog" title="EPG Import Log" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="list" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
 
-	<screen name="filtersServicesSelection" title="Channel Selection" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="filtersServicesSelection" title="Channel Selection" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="list" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
-	<screen name="filtersServicesSetup" title="Ignore Services List" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="filtersServicesSetup" title="Ignore Services List" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="list" render="Listbox" position="400,80" size="830,560" scrollbarMode="showOnDemand">
@@ -500,7 +500,7 @@
 
 <!-- EPGRefresh Plugin -->
 
-	<screen name="EPGRefreshConfiguration" title="EPGRefresh Settings" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="EPGRefreshConfiguration" title="EPGRefresh Settings" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonInfo" />
 		<panel name="ScreenTemplateButtonHelp" />
@@ -509,19 +509,19 @@
 		<panel name="ScreenTemplateHelp4" />
 	</screen>
 
-	<screen name="EPGRefreshServiceEditor" title="Edit Services To Refresh" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="EPGRefreshServiceEditor" title="Edit Services To Refresh" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig0" />
 	</screen>
 
-	<screen name="EPGRefreshConfigurationFunctionContextMenu" title="EPGRefresh Context Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="EPGRefreshConfigurationFunctionContextMenu" title="EPGRefresh Context Menu" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateSMenu0" />
 	</screen>
 
-	<screen name="EPGRefreshConfigurationHelpContextMenu" title="EPGRefresh Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="EPGRefreshConfigurationHelpContextMenu" title="EPGRefresh Help" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateSMenu0" />
@@ -529,13 +529,13 @@
 
 <!-- YourTV Plugin -->
 
-	<screen name="YourTVRegion" title="YourTV Region" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="YourTVRegion" title="YourTV Region" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="list" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" font="Regular;25" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
-	<screen name="YourTV" title="YourTV Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="YourTV" title="YourTV Information" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="info" position="400,80" size="830,525" backgroundColor="TextBackground" font="DescriptionFont;25" foregroundColor="Text" transparent="1" valign="center" />

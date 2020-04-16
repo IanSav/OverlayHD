@@ -134,7 +134,7 @@
 		</widget>
 	</screen>
 
-	<screen name="Subtitles" title="Subtitle selection" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="Subtitles" title="Subtitle selection" position="0,0" size="1280,720" flags="wfNoBorder">
 		<ePixmap pixmap="icons/clock.png" position="50,30" size="14,14" alphatest="blend" zPosition="3" />
 		<widget source="global.CurrentTime" render="Label" position="75,30" size="80,20" backgroundColor="TextBackground" font="Named;16" foregroundColor="White" halign="left" transparent="1">
 			<convert type="ClockToText">Default</convert>
@@ -247,7 +247,7 @@
 
 <!-- RSS (Rich Site Summary) - (RDF Site Summary) - (Really Simple Syndication) -->
 
-	<screen name="RSSSetup" title="Simple RSS Reader Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="RSSSetup" title="Simple RSS Reader Setup" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<!--
 		<ePixmap pixmap="icons/clock.png" position="50,30" size="14,14" alphatest="blend" zPosition="3" />
@@ -272,7 +272,7 @@
 		<widget name="config" position="400,170" size="810,421" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
 	</screen>
 
-	<screen name="RSSFeedView" title="Simple RSS Reader" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="RSSFeedView" title="Simple RSS Reader" position="0,0" size="1280,720" flags="wfNoBorder">
 		<ePixmap pixmap="icons/clock.png" position="50,30" size="14,14" alphatest="blend" zPosition="3" />
 		<widget source="global.CurrentTime" render="Label" position="75,30" size="80,20" backgroundColor="TextBackground" font="Named;16" foregroundColor="White" halign="left" transparent="1">
 			<convert type="ClockToText">Default</convert>
@@ -296,7 +296,7 @@
 		<widget source="summary" render="Label" position="155,550" size="1060,95" backgroundColor="TextBackground" font="Regular;16" transparent="1" />
 	</screen>
 
-	<screen name="RSSEntryView" title="Simple RSS Reader" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="RSSEntryView" title="Simple RSS Reader" position="0,0" size="1280,720" flags="wfNoBorder">
 		<ePixmap pixmap="icons/clock.png" position="50,30" size="14,14" alphatest="blend" zPosition="3" />
 		<widget source="global.CurrentTime" render="Label" position="75,30" size="80,20" backgroundColor="TextBackground" font="Named;16" foregroundColor="White" halign="left" transparent="1">
 			<convert type="ClockToText">Default</convert>
@@ -310,7 +310,7 @@
 		<widget name="content" position="400,170" size="810,480" backgroundColor="TextBackground" font="Regular;22" transparent="1" />
 	</screen>
 
-	<screen name="RSSOverview" title="Simple RSS Reader" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="RSSOverview" title="Simple RSS Reader" position="0,0" size="1280,720" flags="wfNoBorder">
 		<ePixmap pixmap="icons/clock.png" position="50,30" size="14,14" alphatest="blend" zPosition="3" />
 		<widget source="global.CurrentTime" render="Label" position="75,30" size="80,20" backgroundColor="TextBackground" font="Named;16" foregroundColor="White" halign="left" transparent="1">
 			<convert type="ClockToText">Default</convert>
@@ -361,12 +361,12 @@
 		<eLabel position="0,290" size="600,1" backgroundColor="Pinstripe" />
 	</screen>
 
-	<screen name="ServerEditor" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="ServerEditor" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="config" position="590,145" size="610,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
-	<screen name="StreamingChannelFromServerScreen" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="StreamingChannelFromServerScreen" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="list" position="590,145" size="610,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="0" />
 <!--####-->		<!-- <ePixmap pixmap="frame/frame_400x200.png" position="50,195" size="400,200" alphatest="blend" /> -->

@@ -5,7 +5,7 @@
 
 <!-- MediaPlayer -->
 
-	<screen name="MediaPlayer" title="MediaPlayer" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="MediaPlayer" title="MediaPlayer" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonInfo" />
@@ -34,7 +34,7 @@
 		<widget name="PositionGauge" position="420,635" size="400,14" pointer="sliders/slider_10x497_hfg.png:490,0" transparent="1" zPosition="+1" />
 	</screen>
 
-	<screen name="MediaPlayerDirectoryBrowser" title="File Browser" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="MediaPlayerDirectoryBrowser" title="File Browser" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_backup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateFileList0" />
@@ -46,7 +46,7 @@
 
 <!-- Last.FM -->
 
-	<screen name="LastFMScreenMain" title="Last.FM" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="LastFMScreenMain" title="Last.FM" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonHelp" />
@@ -66,7 +66,7 @@
 
 <!-- SHOUTCast -->
 
-	<screen name="SHOUTcastWidget" title="SHOUTcast" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="SHOUTcastWidget" title="SHOUTcast" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<ePixmap pixmap="images/shoutcast-logo.png" position="50,80" size="120,35" alphatest="blend" transparent="1" />
@@ -81,14 +81,14 @@
 		<widget name="console" position="170,610" size="1060,25" backgroundColor="TextBackground" font="Regular;20" transparent="1" valign="center" />
 	</screen>
 
-	<screen name="SHOUTcastSetup" title="SHOUTCast Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="SHOUTcastSetup" title="SHOUTCast Setup" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateSMSHelper" />
 		<ePixmap pixmap="menus/mainmenu_music_bouquets.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig0" />
 	</screen>
 
-	<screen name="SHOUTcastStreamripperRecordingPath" title="Select record path for streamripper" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="SHOUTcastStreamripperRecordingPath" title="Select record path for streamripper" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="target" position="400,150" size="705,22" backgroundColor="TextBackground" font="Regular;22" transparent="1" valign="center" />
@@ -161,7 +161,7 @@
 
 <!-- Flickr -->
 
-	<screen name="EcasaPictureWall" title="Flickr Featured Photos" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="EcasaPictureWall" title="Flickr Featured Photos" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonHelp" />
 		<widget name="waitingtext" position="0,0" size="1280,720" backgroundColor="TextBackground" font="Regular;25" foregroundColor="Text" halign="center" transparent="1" valign="center" />
@@ -469,7 +469,7 @@
 		<widget name="thumbnail" position="0,0" size="180,135" alphatest="blend" /><!-- fake entry for dynamic thumbnail resizing, currently there is no other way doing this. -->
 	</screen>
 
-	<screen name="MyTubeSettingsScreen" title="MyTubeSettingsScreen" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="MyTubeSettingsScreen" title="MyTubeSettingsScreen" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig0" />
@@ -499,7 +499,7 @@
 		<widget name="title" position="0,0" size="0,0" />
 	</screen>
 
-	<screen name="MyTubePlayerMainScreen" title="MyTubePlayerMainScreen..." position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="MyTubePlayerMainScreen" title="MyTubePlayerMainScreen..." position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<ePixmap pixmap="menus/mainmenu_source_youtube.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
@@ -535,7 +535,7 @@
 		<widget name="VKeyIcon" position="0,0" size="0,0" />
 	</screen>
 
-	<screen name="MyTubeSuggestionsListScreen" position="70,140" size="502,337" backgroundColor="ScreenBackground" flags="wfNoBorder" zPosition="6">
+	<screen name="MyTubeSuggestionsListScreen" position="70,140" size="502,337" flags="wfNoBorder" zPosition="6">
 		<ePixmap position="0,0" size="505,227" alphatest="blend" backgroundColor="transparent" transparent="1" zPosition="-1" />
 		<widget source="suggestionslist" render="Listbox" position="0,0" size="500,325" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" zPosition="7">
 			<convert type="TemplatedMultiContent">
@@ -552,7 +552,7 @@
 		</widget>
 	</screen>
 
-	<screen name="MyTubeHistoryScreen" position="70,140" size="505,327" backgroundColor="ScreenBackground" flags="wfNoBorder" zPosition="6">
+	<screen name="MyTubeHistoryScreen" position="70,140" size="505,327" flags="wfNoBorder" zPosition="6">
 		<widget source="historylist" render="Listbox" position="0,0" size="503,325" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" zPosition="7">
 			<convert type="TemplatedMultiContent">
 				{
@@ -569,7 +569,7 @@
 
 <!-- Web Cams -->
 
-	<screen name="WebcamViewer" title="Webcam Viewer" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="WebcamViewer" title="Webcam Viewer" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
@@ -586,7 +586,7 @@
 		</widget>
 	</screen>
 
-	<screen name="TravelWebcamviewer" title="Travel Webcam Viewer" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="TravelWebcamviewer" title="Travel Webcam Viewer" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="list" render="Listbox" position="400,80" size="830,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
@@ -629,11 +629,10 @@
 	YouTubeSetup, Setup
 	-->
 
-	<screen name="YouTubeMain" title="YouTube" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="YouTubeMain" title="YouTube" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="menu" pixmap="buttons/button_block_menu.png" position="50,670" size="50,35" alphatest="blend" objectTypes="menu,Pixmap" transparent="1" />
 		<widget name="info" pixmap="buttons/button_block_info.png" position="110,670" size="50,35" alphatest="blend" objectTypes="info,Pixmap" transparent="1" />
-		<panel name="ScreenTemplateButtons" />
 		<widget source="list" render="Listbox" position="400,80" size="830,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -655,9 +654,8 @@
 		<widget name="green" position="0,0" size="0,0" conditional="green" transparent="1" />
 	</screen>
 
-	<screen name="YouTubeInfo" title="YouTube Media Information" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="YouTubeInfo" title="YouTube Media Information" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtons" />
 		<widget name="pic" position="50,100" size="320,180" alphatest="blend" transparent="1" />
 		<widget name="title" position="400,80" size="830,60" font="Regular;25" />
 		<widget name="description" position="400,155" size="830,405" font="Regular;20" />
@@ -668,7 +666,7 @@
 		<widget name="published" position="400,625" size="830,25" font="Regular;20" />
 	</screen>
 
-	<screen name="YouTubeSearch" title="YouTube Search" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="YouTubeSearch" title="YouTube Search" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="menu" pixmap="buttons/button_block_menu.png" position="50,670" size="50,35" alphatest="blend" objectTypes="menu,Pixmap" transparent="1" />
 		<widget name="config" position="400,80" size="830,30" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnNever" transparent="0" />
@@ -687,14 +685,13 @@
 	</screen>
 
 	<!--
-	<screen name="YouTubeDownloadList" title="YouTube Active Video Downloads" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="YouTubeDownloadList" title="YouTube Active Video Downloads" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="TaskListScreen" />
 	</screen>
 	-->
 
-	<screen name="YouTubeDownloadList" title="YouTube Active Video Downloads" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="YouTubeDownloadList" title="YouTube Active Video Downloads" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtons" />
 		<ePixmap pixmap="menus/mainmenu_tasks_scan.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="list" render="Listbox" position="400,80" size="830,575" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
@@ -717,7 +714,7 @@
  |	??? Unknown
  +-->
 
-	<screen name="ViewerSelectScreen" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="ViewerSelectScreen" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="list" position="590,170" size="610,415" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>

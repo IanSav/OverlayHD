@@ -580,6 +580,7 @@
 		<panel position="50,35" size="305,25">
 			<panel name="ClockBannerPanel" />
 		</panel>
+		<widget source="screen_path" render="Label" position="360,5" size="870,20" borderColor="BannerBorder" borderWidth="1" conditional="screen_path" font="TitleFont;15" foregroundColor="BannerTitle" halign="right" transparent="1" /><!-- OpenPLi -->
 		<widget source="menu_path_compressed" render="Label" position="360,5" size="870,20" borderColor="BannerBorder" borderWidth="1" conditional="menu_path_compressed" font="TitleFont;15" foregroundColor="BannerTitle" halign="right" transparent="1" />
 		<widget source="Title" render="Label" position="360,30" size="870,35" borderColor="BannerBorder" borderWidth="1" font="TitleFont;25" foregroundColor="BannerTitle" halign="right" noWrap="1" transparent="1" />
 		<eLabel position="50,65" size="1180,2" backgroundColor="Pinstripe" />
@@ -977,7 +978,7 @@
 		<widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="50,350" size="350,250" alphatest="blend" conditional="HelpWindow" transparent="1" zPosition="+1" />
 	</screen>
 
-	<screen name="NumericalTextInputHelpDialog" position="50,350" size="330,270" backgroundColor="ScreenBackground" flags="wfNoBorder" zPosition="+1">
+	<screen name="NumericalTextInputHelpDialog" position="50,350" size="330,270" flags="wfNoBorder" zPosition="+1">
 		<eLabel position="0,0" size="330,2" backgroundColor="Pinstripe" />
 		<eLabel position="0,268" size="330,2" backgroundColor="Pinstripe" />
 		<eLabel position="0,0" size="2,270" backgroundColor="Pinstripe" />
@@ -1008,7 +1009,7 @@
 
 <!-- MENU - Generic And Enhanced Main Menus -->
 
-	<screen name="Menu" title="Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="Menu" title="Menu" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="blend" conditional="menuimage" transparent="1" zPosition="+1" /> -->
@@ -1017,7 +1018,7 @@
 		<widget name="charframe" position="0,0" size="0,0" conditional="charframe" transparent="1" />
 	</screen>
 
-	<screen name="MenuBeyonwiz" title="Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="MenuBeyonwiz" title="Menu" position="0,0" size="1280,720" flags="wfNoBorder">
 		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -1033,7 +1034,7 @@
 		</widget>
 	</screen>
 
-	<screen name="MenuEnhanced" title="Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="MenuEnhanced" title="Menu" position="0,0" size="1280,720" flags="wfNoBorder">
 		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -1050,7 +1051,7 @@
 		</widget>
 	</screen>
 
-	<screen name="MenuEnigma2" title="Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="MenuEnigma2" title="Menu" position="0,0" size="1280,720" flags="wfNoBorder">
 		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -1072,7 +1073,7 @@
 	Sublists: selectedColor="#00ffffff" enabledColor="#00999999" offColor="#00555555" font="Regular;22" itemHeight="50" (default values shown)
 	The widget height should be 6 * itemHeight.
 -->
-	<screen name="GeneralMenu" title="Main Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="GeneralMenu" title="Main Menu" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel position="50,35" size="305,25">
 			<panel name="ClockBannerPanel" />
 		</panel>
@@ -1098,12 +1099,12 @@
 
 <!-- HELP - Generic Help Menu -->
 
-	<screen name="HelpMenu" title="Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="HelpMenu" title="Help" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="HelpMenuEnigma2" base="HelpMenu" />
 	</screen>
 
-	<screen name="HelpMenuBeyonwiz" title="Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="HelpMenuBeyonwiz" title="Help" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel position="150,110" size="154,500">
 			<panel name="ScreenTemplateRemote" />
 		</panel>
@@ -1134,7 +1135,7 @@
 		<widget name="longshift_key1" position="400,620" size="830,30" backgroundColor="TextBackground" font="HelpFont;25" foregroundColor="HelpPress" halign="right" transparent="1" />
 	</screen>
 
-	<screen name="HelpMenuEnigma2" title="Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="HelpMenuEnigma2" title="Help" position="0,0" size="1280,720" flags="wfNoBorder">
 		<widget name="rc" pixmaps="images/rc.png,images/rcold.png" position="150,110" size="154,500" alphatest="blend" transparent="0" />
 		<widget name="arrowdown" pixmap="images/arrowdown.png" position="-100,-100" size="37,70" alphatest="blend" />
 		<widget name="arrowdown2" pixmap="images/arrowdown.png" position="-100,-100" size="37,70" alphatest="blend" />
@@ -1144,7 +1145,7 @@
 		<widget name="long_key" position="400,620" size="830,30" backgroundColor="TextBackground" font="HelpFont;25" foregroundColor="HelpPress" halign="right" transparent="1" />
 	</screen>
 
-	<screen name="HelpMenuEnigma2New" title="Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="HelpMenuEnigma2New" title="Help" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel position="150,110" size="154,500">
 			<panel name="ScreenTemplateRemote" />
 		</panel>
@@ -1204,7 +1205,7 @@
 		<panel name="ScreenTemplateDescription4" />
 	</screen>
 
-	<screen name="MPHelp" title="XML Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="MPHelp" title="XML Help" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/help.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateHelp0" />
@@ -1236,7 +1237,6 @@
 		<widget name="indicator_u13" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
 		<widget name="indicator_u14" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
 		<widget name="indicator_u15" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
-		<widget name="indicator_u16" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
 		<widget name="indicator_l0" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
 		<widget name="indicator_l1" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
 		<widget name="indicator_l2" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
@@ -1253,7 +1253,6 @@
 		<widget name="indicator_l13" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
 		<widget name="indicator_l14" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
 		<widget name="indicator_l15" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
-		<widget name="indicator_l16" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
 	</screen>
 
 <!-- MENU > Setup - Beyonwiz Top Level Setup Menu -->
@@ -1265,7 +1264,7 @@
 		<eLabel position="403,0" size="2,485" backgroundColor="Pinstripe" />
 	</screen>
 
-	<screen name="GeneralSetup" title="Setup Menu" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="GeneralSetup" title="Setup Menu" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel position="400,80" size="405,485">
@@ -1306,7 +1305,7 @@
 
 <!-- MENU > Setup > *Item* - Generic Setup Menus -->
 
-	<screen name="Setup" title="Setup" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="Setup" title="Setup" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="menuimage" position="50,100" size="300,500" alphatest="blend" conditional="menuimage" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
@@ -1606,8 +1605,8 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (20, 0), size = (300, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
-					MultiContentEntryText(pos = (340, 0), size = (180, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 2)
+					MultiContentEntryText(pos = (20, 0), size = (280, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
+					MultiContentEntryText(pos = (320, 0), size = (200, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 2)
 					],
 				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
@@ -2095,7 +2094,7 @@
 
 <!-- Video Resolution -->
 
-	<screen name="VideoResolution" title="Video Resolution" position="center,center" size="300,60" backgroundColor="ScreenBackground" zPosition="+99">
+	<screen name="VideoResolution" title="Video Resolution" position="center,center" size="300,60" zPosition="+99">
 		<widget name="resolution" position="10,10" size="280,40" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1" />
 	</screen>
 
@@ -2121,7 +2120,7 @@
 
 <!-- Picture In Picture Setup -->
 
-	<screen name="PiPSetup" position="center,center" size="620,228" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="PiPSetup" position="center,center" size="620,228" flags="wfNoBorder">
 		<widget name="text" position="10,10" size="600,208" font="Regular;23" />
 	</screen>
 
@@ -2142,7 +2141,7 @@
 <!-- Virtual Keyboard -->
 
 	<!-- This is the full screen version of the VirtualKeyBoard... -->
-	<screen name="VirtualKeyBoard" title="Virtual Keyboard" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="VirtualKeyBoard" title="Virtual Keyboard" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_shuffle.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="prompt" position="420,80" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
@@ -2158,7 +2157,7 @@
 	</screen>
 
 	<!-- The Beyonwiz version of the Virtual Keyboard is no longer supportable as it too far out of date!  The images now in use are too different from those used in the old code!
-	<screen name="VirtualKeyBoard" title="Virtual Keyboard" position="center,center" size="800,400" backgroundColor="ScreenBackground" zPosition="+90">
+	<screen name="VirtualKeyBoard" title="Virtual Keyboard" position="center,center" size="800,400" zPosition="+90">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_shuffle.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="header" position="420,80" size="810,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
@@ -2174,7 +2173,7 @@
 	-->
 
 	<!-- This is the pop up window version of the VirtualKeyBoard... (Not currently in use!)
-	<screen name="VirtualKeyBoard" title="Virtual Keyboard" position="center,center" size="660,410" backgroundColor="ScreenBackground" zPosition="99">
+	<screen name="VirtualKeyBoard" title="Virtual Keyboard" position="center,center" size="660,410" zPosition="99">
 		<widget name="prompt" position="15,10" size="630,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
 		<eLabel position="15,80" size="630,2" backgroundColor="Pinstripe" />
 		<eLabel position="15,124" size="630,2" backgroundColor="Pinstripe" />
@@ -2191,10 +2190,10 @@
 <!-- Message Box Pop Up -->
 
 	<screen name="MessageBoxTemplate">
-		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="0,0" size="53,53" alphatest="blend" transparent="1" />
-		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="0,0" size="53,53" alphatest="blend" transparent="1" />
-		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="0,0" size="53,53" alphatest="blend" transparent="1" />
-		<widget name="icon" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" position="0,0" size="53,53" alphatest="blend" transparent="1" />
+		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="0,0" size="53,53" alphatest="blend" scale="1" transparent="1" />
+		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="0,0" size="53,53" alphatest="blend" scale="1" transparent="1" />
+		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="0,0" size="53,53" alphatest="blend" scale="1" transparent="1" />
+		<widget name="icon" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" position="0,0" size="53,53" alphatest="blend" scale="1" transparent="1" />
 		<widget name="text" position="65,10" size="700,0" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1" />
 		<!-- <widget name="list" position="100,100" size="700,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" /> -->
 		<widget name="list" position="100,100" size="700,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
@@ -2203,18 +2202,26 @@ self.autoResize()
 		</applet>
 	</screen>
 
-	<screen name="MessageBox" title="Message Selection..." position="center,center" size="700,10" backgroundColor="ScreenBackground" zPosition="+90">
+	<screen name="MessageBox" title="Message Selection..." position="center,center" size="700,10" zPosition="+90">
 		<panel name="MessageBoxTemplate" />
 	</screen>
 
-	<screen name="MessageBoxSimple" title="Message..." position="center,center" size="700,10" backgroundColor="ScreenBackground" zPosition="+90">
+	<screen name="MessageBoxSimple" title="Message..." position="center,center" size="700,10" zPosition="+90">
 		<panel name="MessageBoxTemplate" />
 	</screen>
 
 <!-- Choice Box Pop Up -->
 
-	<screen name="ChoiceBox" position="center,center" size="700,130" backgroundColor="ScreenBackground" zPosition="+90">
+	<screen name="ChoiceBoxOld" position="center,center" size="700,130" zPosition="+90">
 		<widget name="text" position="0,0" size="700,0" backgroundColor="TextBackground" conditional="text" font="TitleFont;25" foregroundColor="BannerTitle" transparent="1" />
+		<widget name="list" position="100,100" size="700,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+		<applet type="onLayoutFinish">
+self.autoResize()
+		</applet>
+	</screen>
+	<screen name="ChoiceBox" position="center,center" size="700,130" zPosition="+90">
+		<widget name="text" position="0,0" size="700,35" backgroundColor="TextBackground" conditional="text" font="TitleFont;25" foregroundColor="BannerTitle" transparent="1" />
+		<widget name="description" position="0,35" size="700,35" backgroundColor="TextBackground" conditional="description" font="TitleFont;25" foregroundColor="BannerTitle" transparent="1" />
 		<widget name="list" position="100,100" size="700,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 		<applet type="onLayoutFinish">
 self.autoResize()
@@ -2223,7 +2230,7 @@ self.autoResize()
 
 <!-- Input Box Pop Up -->
 
-	<screen name="InputBox" title="Search" position="center,center" size="700,135" backgroundColor="ScreenBackground" zPosition="+90">
+	<screen name="InputBox" title="Search" position="center,center" size="700,135" zPosition="+90">
 		<widget name="text" position="10,10" size="680,50" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1" valign="center" />
 		<eLabel position="0,80" size="700,2" backgroundColor="Pinstripe" />
 		<widget name="input" position="10,90" size="680,25" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" noWrap="1" transparent="1" />
@@ -2238,7 +2245,7 @@ self.autoResize()
 
 <!-- Command Prompt Output -->
 
-	<screen name="Console" title="Command execution..." position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="Console" title="Command execution..." position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="text" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
