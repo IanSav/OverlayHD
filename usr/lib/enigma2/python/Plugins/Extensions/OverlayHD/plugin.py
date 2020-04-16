@@ -1,6 +1,6 @@
 # ===================================================================
 # OverlayHD Skin Manager
-# Version Date - 5-Jan-2020
+# Version Date - 16-Apr-2020
 # Remember to change version number variable below!!!
 #
 # Repository - https://bitbucket.org/IanSav/overlayhd
@@ -16,7 +16,7 @@
 # distributed.
 # ===================================================================
 
-PLUGIN_VERSION_NUMBER = "1.81"
+PLUGIN_VERSION_NUMBER = "1.82"
 
 import errno
 import shutil
@@ -31,7 +31,7 @@ from enigma import eEnv, gRGB
 from os import listdir, makedirs, readlink, remove, symlink, unlink
 from os.path import dirname, exists, isdir, isfile, islink, join as pathjoin
 from random import randrange
-from skin import colorNames, domScreens, fonts  # reloadWindowstyles
+from skin import colors, domScreens, fonts, reloadWindowStyles
 
 from Components.ActionMap import HelpableActionMap
 from Components.Sources.List import List
@@ -1039,17 +1039,17 @@ def applySkinSettings(fullInit):
 				item = getattr(config.plugins.skin.OverlayHD, label).value
 				piglabel = "%s%s%s" % (label[0:3], "PIG", label[3:])
 				if label in derivedForegroundElements:
-					colorNames[label] = colorNames[item]
-					colorNames[piglabel] = colorNames[item]
+					colors[label] = colors[item]
+					colors[piglabel] = colors[item]
 				elif label in derivedBackgroundElements:
 					if config.plugins.skin.OverlayHD.EPGTransparency.value == "Background":
 						tran = long(config.plugins.skin.OverlayHD.ScreenBackgroundTransparency.value, 0x10)
 					else:
 						tran = long(config.plugins.skin.OverlayHD.EPGTransparency.value, 0x10)
-					colorNames[label] = gRGB(colorNames[item].argb() | tran)
-					colorNames[piglabel] = colorNames[item]
+					colors[label] = gRGB(colors[item].argb() | tran)
+					colors[piglabel] = colors[item]
 				else:
-					colorNames[label] = colorNames[item]
+					colors[label] = colors[item]
 			elif colour is not None:
 				col = getattr(config.plugins.skin.OverlayHD, "%sColour" % label).value
 				if col == "Background":
@@ -1059,7 +1059,7 @@ def applySkinSettings(fullInit):
 					tran = long(config.plugins.skin.OverlayHD.ScreenBackgroundTransparency.value, 0x10)
 				else:
 					tran = long(tran, 0x10)
-				colorNames[label] = gRGB(colorNames[col].argb() | tran)
+				colors[label] = gRGB(colors[col].argb() | tran)
 		for (label, font, fontTable) in fontElements:
 			data = list(fonts[label])
 			data[0] = getattr(config.plugins.skin.OverlayHD, label).value
@@ -1097,9 +1097,7 @@ def applySkinSettings(fullInit):
 				applySpinner(label)
 			elif label == "UpdateBlink":
 				applyBlink(label, ["global.OnlineStableUpdateState", "global.OnlineUnstableUpdateState"])
-		if code == "Beyonwiz":
-			from skin import reloadWindowstyles
-			reloadWindowstyles()
+		reloadWindowStyles()
 	else:
 		print "[OverlayHD] OverlayHD is not the active skin."
 
