@@ -389,7 +389,6 @@
 		<alias name="TextFont" font="ValisEnigma" size="20" height="25" width="18" />
 		<alias name="TextNormal" font="NemesisFlatline" size="20" height="25" width="18" />
 		<alias name="TitleFont" font="RobotoBlack" size="25" height="35" width="20" />
-		<alias name="VirtualKeyboard" font="DejaVuSansCondensed" size="28" height="45" width="20" />
 		<alias name="VirtualKeyBoard" font="DejaVuSansCondensed" size="28" height="45" width="20" />
 	</fonts>
 
@@ -454,7 +453,6 @@
 		<parameter name="SelectionListLock" value="0,2,36,36" />
 		<parameter name="SelectionListLockOff" value="0,2,36,36" />
 		-->
-		<parameter name="VirtualKeyboard" value="45,45" />
 		<parameter name="VirtualKeyBoard" value="45,45" />
 		<parameter name="VirtualKeyBoardAlignment" value="0,0" />
 		<parameter name="VirtualKeyBoardPadding" value="4,4" />
