@@ -130,6 +130,40 @@
 
 <!-- EPG - Graphical EPG (PIG Mode) -->
 
+	<screen name="GridEPGPIG" title="Grid EPG (PIG)" position="fill" backgroundColor="EPGBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel position="50,80" size="860,175">
+			<panel name="EPGEventInfoPIGPanel" />
+		</panel>
+		<widget source="session.VideoPicture" render="Pig" position="930,80" size="300,169" backgroundColor="TransparentBackground" />
+		<widget source="session.CurrentService" render="Label" position="930,80" size="300,20" borderColor="EPGOverlayBorder" borderWidth="1" font="InfoEventFont;17" foregroundColor="EPGOverlayColour" halign="center" noWrap="1" transparent="1" valign="top">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="930,229" size="300,20" borderColor="EPGOverlayBorder" borderWidth="1" font="InfoEventFont;17" foregroundColor="EPGOverlayColour" halign="center" noWrap="1" transparent="1" valign="bottom">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Progress" position="930,250" size="300,5" backgroundColor="EPGProgressBackground" borderColor="EPGProgressBorder" borderWidth="1" foregroundColor="EPGProgressColour" transparent="0">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<panel position="50,260" size="1180,30">
+			<panel name="EPGTimeLinePanel" />
+		</panel>
+		<widget name="lab1" position="50,295" size="1180,360" backgroundColor="EPGBackground" font="EPGTimeLineFont;35" foregroundColor="EPGTimeLine" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="list" position="50,295" size="1180,360" EntryBorderColor="EPGGridBorder" ServiceBorderColor="EPGGridBorder"
+			EntryFontGraphical="EPGEventFont;18" ServiceFontGraphical="EPGServiceFont;18"
+			EntryBackgroundColor="EPGPIGEntryBackgroundColor" EntryBackgroundColorNow="EPGPIGEntryBackgroundColorNow" EntryBackgroundColorNowSelected="EPGPIGEntryBackgroundColorNowSelected" EntryBackgroundColorSelected="EPGPIGEntryBackgroundColorSelected"
+			EntryForegroundColor="EPGPIGEntryForegroundColor" EntryForegroundColorNow="EPGPIGEntryForegroundColorNow" EntryForegroundColorNowSelected="EPGPIGEntryForegroundColorNowSelected" EntryForegroundColorSelected="EPGPIGEntryForegroundColorSelected"
+			RecordBackgroundColor="EPGPIGRecordBackgroundColor" RecordBackgroundColorSelected="EPGPIGRecordBackgroundColorSelected" RecordForegroundColor="EPGPIGRecordForegroundColor" RecordForegroundColorSelected="EPGPIGRecordForegroundColorSelected"
+			ServiceBackgroundColor="EPGPIGServiceBackgroundColor" ServiceBackgroundColorNow="EPGPIGServiceBackgroundColorNow" ServiceForegroundColor="EPGPIGServiceForegroundColor" ServiceForegroundColorNow="EPGPIGServiceForegroundColorNow"
+			ZapBackgroundColor="EPGPIGZapBackgroundColor" ZapBackgroundColorSelected="EPGPIGZapBackgroundColorSelected" ZapForegroundColor="EPGPIGZapForegroundColor" ZapForegroundColorSelected="EPGPIGZapForegroundColorSelected"
+			backgroundColor="EPGGridBackground" scrollbarMode="showNever" transparent="1" />
+		<widget name="timeline_now" position="50,290" size="20,370" pixmap="epg/timeline-now-pig.png" alphatest="blend" zPosition="+2" />
+		<widget name="primetime" position="0,0" size="0,0" conditional="primetime" />
+		<widget name="change_bouquet" position="0,0" size="0,0" conditional="change_bouquet" />
+		<widget name="jump" position="0,0" size="0,0" conditional="jump" />
+		<widget name="page" position="0,0" size="0,0" conditional="page" />
+	</screen>
+
 	<screen name="GraphicalEPGPIG" title="Graphical EPG (PIG)" position="fill" backgroundColor="EPGBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
