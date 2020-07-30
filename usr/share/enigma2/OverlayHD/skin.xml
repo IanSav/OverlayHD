@@ -1103,41 +1103,11 @@
 
 	<screen name="HelpMenu" title="Help" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="HelpMenuEnigma2" base="HelpMenu" />
+		<panel name="HelpMenuOld" conditional="arrowdown" />
+		<panel name="HelpMenuNew" conditional="indicator_u0" />
 	</screen>
 
-	<screen name="HelpMenuBeyonwiz" title="Help" position="fill" flags="wfNoBorder">
-		<panel position="150,110" size="154,500">
-			<panel name="ScreenTemplateRemote" />
-		</panel>
-		<widget source="list" render="Listbox" position="400,80" size="830,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
-			<convert type="TemplatedMultiContent">
-				{
-				"templates":
-					{
-					"default": (25,
-						[
-						MultiContentEntryText(pos = (0, 0), size = (810, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),  # Help label
-						MultiContentEntryText(pos = (20, 0), size = (790, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2)  # Help item
-						]),
-					"extended": (50,
-						[
-						MultiContentEntryText(pos = (0, 0), size = (810, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),  # Help label
-						MultiContentEntryText(pos = (20, 0), size = (790, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2),  # Help item
-						MultiContentEntryText(pos = (0, 25), size = (810, 25), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, color = "DarkGrey", color_sel = "Silver", text = 3),  # Help label (tupple with 1)
-						MultiContentEntryText(pos = (20, 25), size = (790, 25), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, color = "DarkGrey", color_sel = "Silver", text = 4),  # Help item (tupple with 2)
-						])
-					},
-				"fonts": [parseFont("HelpFont;20"), parseFont("HelpFont;20")],
-				"itemHeight": 25
-				}
-			</convert>
-		</widget>
-		<widget name="longshift_key0" position="400,620" size="830,30" backgroundColor="TextBackground" font="HelpFont;25" foregroundColor="HelpPress" halign="right" transparent="1" />
-		<widget name="longshift_key1" position="400,620" size="830,30" backgroundColor="TextBackground" font="HelpFont;25" foregroundColor="HelpPress" halign="right" transparent="1" />
-	</screen>
-
-	<screen name="HelpMenuEnigma2" title="Help" position="fill" flags="wfNoBorder">
+	<screen name="HelpMenuOld" title="Help" position="fill" flags="wfNoBorder">
 		<widget name="rc" pixmaps="images/rc.png,images/rcold.png" position="150,110" size="154,500" alphatest="blend" transparent="0" />
 		<widget name="arrowdown" pixmap="images/arrowdown.png" position="-100,-100" size="37,70" alphatest="blend" />
 		<widget name="arrowdown2" pixmap="images/arrowdown.png" position="-100,-100" size="37,70" alphatest="blend" />
@@ -1147,7 +1117,7 @@
 		<widget name="long_key" position="400,620" size="830,30" backgroundColor="TextBackground" font="HelpFont;25" foregroundColor="HelpPress" halign="right" transparent="1" />
 	</screen>
 
-	<screen name="HelpMenuEnigma2New" title="Help" position="fill" flags="wfNoBorder">
+	<screen name="HelpMenuNew" title="Help" position="fill" flags="wfNoBorder">
 		<panel position="150,110" size="154,500">
 			<panel name="ScreenTemplateRemote" />
 		</panel>
