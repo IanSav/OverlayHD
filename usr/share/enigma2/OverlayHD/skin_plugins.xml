@@ -1,7 +1,7 @@
 <skin>
 <!-- Add Stream URL Plugin -->
 
-	<screen name="LiveStreamingLinks" title="Add Stream URL" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="LiveStreamingLinks" title="Add Stream URL" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="menu" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 		<panel name="ScreenTemplateFrame830x120" />
@@ -14,7 +14,7 @@
 
 <!-- Air Player Plugin -->
 
-	<screen name="AP_ConfigScreen" title="Air Player" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="AP_ConfigScreen" title="Air Player" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="config" position="400,80" size="830,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
@@ -23,7 +23,7 @@
 
 <!-- AutoBouquetsMaker (ABM) Plugin -->
 
-	<screen name="AutoBouquetsMaker_Menu" title="AutoBouquetsMaker Menu" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="AutoBouquetsMaker_Menu" title="AutoBouquetsMaker Menu" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget source="list" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
@@ -40,17 +40,17 @@
 		</widget>
 	</screen>
 
-	<screen name="AutoBouquetsMaker_Setup" title="AutoBouquetsMaker Settings" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="AutoBouquetsMaker_Setup" title="AutoBouquetsMaker Settings" position="fill" flags="wfNoBorder">
 		<panel name="Setup" />
 		<widget name="pleasewait" position="400,80" size="830,420" backgroundColor="TextBackground" font="TextFont;50" foregroundColor="TextWaiting" halign="center" transparent="0" valign="center" zPosition="+1" />
 	</screen>
 
 	<!-- Note to skinners: No need to skin this screen if you have skinned the screen 'AutoBouquetsMaker_Setup'. -->
-	<screen name="AutoBouquetsMaker_ProvidersSetup" title="AutoBouquetsMaker Settings" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="AutoBouquetsMaker_ProvidersSetup" title="AutoBouquetsMaker Settings" position="fill" flags="wfNoBorder">
 		<panel name="AutoBouquetsMaker_Setup" />
 	</screen>
 
-	<screen name="AutoBouquetsMaker_Ordering" title="AutoBouquetsMaker Ordering" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="AutoBouquetsMaker_Ordering" title="AutoBouquetsMaker Ordering" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget source="list" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
@@ -66,7 +66,7 @@
 		<widget name="pleasewait" position="400,80" size="830,560" backgroundColor="TextBackground" font="TextFont;50" foregroundColor="TextWaiting" halign="center" transparent="0" valign="center" zPosition="+1" />
 	</screen>
 
-	<screen name="AutoBouquetsMaker_HideSections" title="AutoBouquetsMaker Hide Sections" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="AutoBouquetsMaker_HideSections" title="AutoBouquetsMaker Hide Sections" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget source="list" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
@@ -91,22 +91,22 @@
 	</screen>
 
 	<!-- Note to skinners: No need to skin this screen if you have skinned the screen 'AutoBouquetsMaker'. -->
-	<screen name="AutoBouquetsMaker_UpdateProviders" title="AutoBouquetsMaker Update Providers" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="AutoBouquetsMaker_UpdateProviders" title="AutoBouquetsMaker Update Providers" position="fill" flags="wfNoBorder">
 		<panel name="AutoBouquetsMaker" />
 	</screen>
 
-	<screen name="AutoBouquetsMaker_Log" title="AutoBouquetsmaker Log" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="AutoBouquetsMaker_Log" title="AutoBouquetsmaker Log" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="list" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
 
-	<screen name="AutoBouquetsMaker_About" title="AutoBouquetsMaker About" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="AutoBouquetsMaker_About" title="AutoBouquetsMaker About" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="oealogo" position="100,150" size="200,135" alphatest="blend" transparent="1" />
 		<widget name="about" position="400,80" size="830,550" backgroundColor="TextBackground" font="TextFont;25" foregroundColor="Text" transparent="1" />
 	</screen>
 
-	<screen name="AutoBouquetsMaker_KeepBouquets" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="AutoBouquetsMaker_KeepBouquets" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget source="list" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
@@ -125,7 +125,7 @@
 
 <!-- Bluetooth Devices Manager Plugin -->
 
-	<screen name="BluetoothDevicesManager" title="Bluetooth Device Manager" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="BluetoothDevicesManager" title="Bluetooth Device Manager" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateDeviceList4" />
@@ -136,7 +136,7 @@
 		-->
 	</screen>
 
-	<screen name="BluetoothDevicesManagerSetup" title="Bluetooth Device Manager" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="BluetoothDevicesManagerSetup" title="Bluetooth Device Manager" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig0" />
@@ -144,14 +144,14 @@
 
 <!-- Cut List Editor Plugin -->
 
-	<screen name="CutListEditor" title="CutList Editor" position="0,0" size="1280,720" backgroundColor="Black" flags="wfNoBorder">
+	<screen name="CutListEditor" title="CutList Editor" position="fill" backgroundColor="Black" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonHelp" />
 		<panel name="CutListEditorEnigma2" base="CutListEditor" />
 	</screen>
 
-	<screen name="CutListEditorEnigma2" title="CutList Editor" position="0,0" size="1280,720" backgroundColor="Black" flags="wfNoBorder">
+	<screen name="CutListEditorEnigma2" title="CutList Editor" position="fill" backgroundColor="Black" flags="wfNoBorder">
 		<widget source="cutlist" render="Listbox" position="50,80" size="300,575" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
@@ -160,7 +160,7 @@
 					MultiContentEntryText(pos = (10, 0), size = (80, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2, backcolor = MultiContentTemplateColor(3)),
 					MultiContentEntryText(pos = (110, 0), size = (170, 25), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 1, backcolor = MultiContentTemplateColor(3)),
 					],
-				"fonts": [gFont("Regular", 20)],
+				"fonts": [parseFont("Regular;20")],
 				"itemHeight": 25
 				}
 			</convert>
@@ -181,7 +181,7 @@
 		<widget name="Timeline" position="400,625" size="830,25" backgroundColor="Grey" foregroundColor="Black" pointer="sliders/position_arrow.png:4,15" />
 	</screen>
 
-	<screen name="CutListEditorBeyonwiz" title="CutList Editor" position="0,0" size="1280,720" backgroundColor="Black" flags="wfNoBorder">
+	<screen name="CutListEditorBeyonwiz" title="CutList Editor" position="fill" backgroundColor="Black" flags="wfNoBorder">
 		<widget source="cutlist" render="Listbox" position="50,80" size="400,575" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
@@ -191,7 +191,7 @@
 					MultiContentEntryText(pos = (110, 0), size = (170, 25), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 1, backcolor = MultiContentTemplateColor(4)),
 					MultiContentEntryText(pos = (300, 0), size = (80, 25), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 3, backcolor = MultiContentTemplateColor(4))
 					],
-				"fonts": [gFont("Regular", 20)],
+				"fonts": [parseFont("Regular;20")],
 				"itemHeight": 25
 				}
 			</convert>
@@ -213,7 +213,7 @@
 		<widget name="OutLen" position="1120,625" size="100,25" font="Regular;20" halign="right" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
-	<screen name="CutListMenu" title="CutList Editor - Menu" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="CutListMenu" title="CutList Editor - Menu" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_movies_musicvideos.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateSMenu0" />
@@ -223,7 +223,7 @@
 
 	<screen name="FanControl2" title="FanControl2" position="100,100" size="300,300" />
 
-	<screen name="FanControl2Plugin" title="Fan Control 2" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="FanControl2Plugin" title="Fan Control 2" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonInfo" />
@@ -247,11 +247,11 @@
 		<widget source="T10ERR" render="Label" position="570,422" size="40,20" zPosition="1" font="Regular;11" halign="left" valign="center" backgroundColor="#25062748" transparent="1" />
 	</screen>
 
-	<screen name="FanControl2SpezialSetup" title="Fan Control 2 - Setup" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="FanControl2SpezialSetup" title="Fan Control 2 - Setup" position="fill" flags="wfNoBorder">
 		<panel name="Setup" />
 	</screen>
 
-	<screen name="FanControl2Monitor" title="Fan Control 2 - Monitor" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="FanControl2Monitor" title="Fan Control 2 - Monitor" position="fill" flags="wfNoBorder">
 		<widget source="TxtTemp0" render="Label" position="5,30" size="250,25" zPosition="1" font="Regular;17" halign="right" valign="center" backgroundColor="#25062748" transparent="1" />
 		<widget source="TxtTemp1" render="Label" position="5,50" size="250,25" zPosition="1" font="Regular;17" halign="right" valign="center" backgroundColor="#25062748" transparent="1" />
 		<widget source="TxtTemp2" render="Label" position="5,70" size="250,25" zPosition="1" font="Regular;17" halign="right" valign="center" backgroundColor="#25062748" transparent="1" />
@@ -277,7 +277,7 @@
 		<widget source="ProFan" render="Progress" position="260,220" size="325,5" borderWidth="1" />
 	</screen>
 
-	<screen name="FanControl2Test" title="Fan Control 2 - Test" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="FanControl2Test" title="Fan Control 2 - Test" position="fill" flags="wfNoBorder">
 		<widget source="TextTest1" render="Label" position="5,20" size="620,30" zPosition="10" font="Regular;20" halign="left" valign="center" backgroundColor="#25062748" transparent="1" />
 		<widget source="TextTest2" render="Label" position="5,50" size="620,30" zPosition="10" font="Regular;20" halign="left" valign="center" backgroundColor="#25062748" transparent="1" />
 		<widget source="TextTest3" render="Label" position="5,80" size="620,30" zPosition="10" font="Regular;20" halign="left" valign="center" backgroundColor="#25062748" transparent="1" />
@@ -289,7 +289,7 @@
 
 <!-- Front Panel Update Plugin -->
 
-	<screen name="FirmwareUpgrade" title="Firmware Upgrade" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="FirmwareUpgrade" title="Firmware Upgrade" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_factoryreset.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="oldversion_label" position="420,80" size="390,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
@@ -299,7 +299,7 @@
 		<panel name="ScreenTemplateStatus4" />
 	</screen>
 
-	<screen name="Filebrowser" title="File Browser" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="Filebrowser" title="File Browser" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_factoryreset.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateFileList4" />
@@ -308,14 +308,14 @@
 
 <!-- Gmail Plugin -->
 
-	<screen name="GmailSetup" title="Gmail Settings" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="GmailSetup" title="Gmail Settings" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateInfo4" />
 	</screen>
 
-	<screen name="Gmailbodyviewer" title="Gmail - View Mail" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="Gmailbodyviewer" title="Gmail - View Mail" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="author" position="123,140" size="1020,30" font="Regular;20" foregroundColor="DullYellow" halign="left" transparent="1" />
@@ -323,7 +323,7 @@
 		<widget name="text" position="center,210" size="1020,400" font="Regular;22" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
 	</screen>
 
-	<screen name="Gmailfeedsscrn" title="Gmail - Mail List" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="Gmailfeedsscrn" title="Gmail - Mail List" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="menu" position="center,center" size="1020,500" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
@@ -332,7 +332,7 @@
 
 <!-- Gmail News Plugin -->
 
-	<screen name="GnewsFeedScreenList" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="GnewsFeedScreenList" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<eLabel text="Google News" position="890,80" size="320,22" backgroundColor="TextBackground" font="Named;20" foregroundColor="crypt_emm" halign="right" transparent="1" zPosition="2" />
@@ -340,7 +340,7 @@
 		<widget name="mylist" position="590,150" size="610,440" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
-	<screen name="GnewsFeedScreenContent" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="GnewsFeedScreenContent" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="info" position="890,80" size="320,22" backgroundColor="TextBackground" font="Named;20" foregroundColor="crypt_emm" halign="right" transparent="1" zPosition="2" />
@@ -363,7 +363,7 @@
 
 <!-- HRTunerProxy Plugin -->
 
-	<screen name="HRTunerProxy_Setup" title="HR-Tuner Proxy Setup" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="HRTunerProxy_Setup" title="HR-Tuner Proxy Setup" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/plex.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfigShort" />
@@ -375,7 +375,7 @@
 		<panel name="ScreenTemplateHintText4" />
 	</screen>
 
-	<screen name="HRTunerProxy_About" title="About HR-Tuner Proxy" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="HRTunerProxy_About" title="About HR-Tuner Proxy" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/plex.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="about" position="400,80" size="830,560" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" transparent="1" />
@@ -383,7 +383,7 @@
 
 <!-- IMDb Plugin -->
 
-	<screen name="IMDB" title="IMDb Details Plugin" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="IMDB" title="IMDb Details Plugin" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonInfo" />
@@ -400,7 +400,7 @@
 	</screen>
 
 	<!--
-	<screen name="IMDbSetup" title="IMDb Setup" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="IMDbSetup" title="IMDb Setup" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/setup_default.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
@@ -408,7 +408,7 @@
 		<panel name="ScreenTemplateSHelp4" />
 	</screen>
 
-	<screen name="EPGSearchSetup" title="IMDb Setup" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="EPGSearchSetup" title="IMDb Setup" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/setup_default.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
@@ -419,7 +419,7 @@
 
 <!-- Media Portal Plugin -->
 
-	<screen name="haupt_Screen" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="haupt_Screen" position="fill" flags="wfNoBorder">
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/liquidblue/images/mpback.png" position="0,0" size="1280,720" zPosition="-1" />
 		<widget source="session.VideoPicture" render="Pig" position="886,22" size="328,186" backgroundColor="transparent" zPosition="3" />
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/liquidblue/images/buttongrey.png" position="1160,555" size="90,36" alphatest="blend" backgroundColor="#26181d20" zPosition="1" />
@@ -444,7 +444,7 @@
 		<eLabel name="Videoback" position="885,21" size="330,188" backgroundColor="White" foregroundColor="White" zPosition="0" />
 	</screen>
 
-	<screen name="hauptScreenSetup" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="hauptScreenSetup" position="fill" flags="wfNoBorder">
 		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/MediaPortal/skins/liquidblue/images/mpback.png" position="0,0" size="1280,720" zPosition="-1" />
 		<widget source="global.CurrentTime" render="Label" position="840,42" size="300,28" backgroundColor="#26181d20" font="mediaportal;25" foregroundColor="#00bbbbbb" halign="left" transparent="1">
 			<convert type="ClockToText">Format:%A, %d.%m.%Y</convert>
@@ -462,7 +462,7 @@
 
 <!-- Movie Cut Plugin -->
 
-	<screen name="AdvancedCutInput" title="Cut Parameter Input" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="AdvancedCutInput" title="Cut Parameter Input" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_movies_musicvideos.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig0" />
@@ -498,17 +498,17 @@
 		<widget render="Label" source="statustext" position="0,0" zPosition="1" size="664,340" font="Regular;20" halign="center" valign="center" transparent="1"/>
 	</screen>
 
-	<screen name="MSNWeatherPluginEntryConfigScreen" title="Weather Plugin Configuration" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="MSNWeatherPluginEntryConfigScreen" title="Weather Plugin Configuration" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateConfig0" />
 	</screen>
 
-	<screen name="MSNWeatherPluginSearch" title="Weather Plugin Configuration" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="MSNWeatherPluginSearch" title="Weather Plugin Configuration" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateEntryList0" />
 	</screen>
 
-	<screen name="MSNWeatherPluginEntriesListConfigScreen" title="Weather Plugin Configuration" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="MSNWeatherPluginEntriesListConfigScreen" title="Weather Plugin Configuration" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget render="Label" source="city" position="5,60" size="400,50" font="Regular;20" halign="left"/>
 		<widget render="Label" source="degreetype" position="410,60" size="130,50" font="Regular;20" halign="left"/>
@@ -517,7 +517,7 @@
 
 <!-- OpenWeb Interface Plugin -->
 
-	<screen name="OpenWebifConfig" title="OpenWebIf Configuration" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="OpenWebifConfig" title="OpenWebIf Configuration" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
@@ -526,7 +526,7 @@
 
 <!-- Opera Web Browser Plugin -->
 
-	<screen name="OperaBrowser" title="Opera Web Browser" position="0,0" size="1280,720" backgroundColor="ScreenTransparent" flags="wfNoBorder">
+	<screen name="OperaBrowser" title="Opera Web Browser" position="fill" backgroundColor="ScreenTransparent" flags="wfNoBorder">
 		<widget name="topArea" position="50,30" size="1180,30" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
 		<widget name="bottomArea" position="810,30" size="410,30" backgroundColor="Black" font="Regular;20" halign="right" transparent="1" valign="center" zPosition="+1" />
 		<widget name="menuitemFile" position="60,30" size="150,30" backgroundColor="Black" font="Regular;20" foregroundColors="#9f1313,#a08500" transparent="1" valign="center" zPosition="+1" />
@@ -536,7 +536,7 @@
 		<widget name="submenulist" position="302,540" size="200,150" backgroundColor="Black" scrollbarMode="showOnDemand" zPosition="+2" />
 	</screen>
 	<!--
-	<screen name="OperaBrowser" title="Opera Browser" position="0,0" size="1280,720" backgroundColor="ScreenTransparent" flags="wfNoBorder">
+	<screen name="OperaBrowser" title="Opera Browser" position="fill" backgroundColor="ScreenTransparent" flags="wfNoBorder">
 		<widget name="topArea" position="0,0" size="1280,60" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
 		<widget name="menuitemFile" position="30,20" size="150,30" backgroundColor="Black" font="Regular;20" foregroundColors="#9f1313,#a08500" halign="center" valign="center" zPosition="+1" />
 		<widget name="menuitemTool" position="180,20" size="150,30" backgroundColor="Black" font="Regular;20" foregroundColors="#9f1313,#a08500" halign="center" valign="center" zPosition="+1" />
@@ -547,7 +547,7 @@
 	</screen>
 	-->
 
-	<screen name="OperaBrowserBookmarkWindow" title="Browser Bookmarks" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="OperaBrowserBookmarkWindow" title="Browser Bookmarks" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/menu_photo_years.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<ePixmap pixmap="buttons/key_0.png" position="50,625" size="35,25" alphatest="blend" transparent="1" />
@@ -555,30 +555,30 @@
 		<panel name="ScreenTemplateBookmarkList0" />
 	</screen>
 
-	<screen name="BookmarkEditWindow" title="Browser Bookmark Edit" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="BookmarkEditWindow" title="Browser Bookmark Edit" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/menu_photo_years.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig0" />
 	</screen>
 
-	<screen name="OperaBrowserPreferenceWindow" title="Browser Preferences" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="OperaBrowserPreferenceWindow" title="Browser Preferences" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateURL4" />
 	</screen>
 
-	<screen name="BrowserHelpWindow" title="Browser Help" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="BrowserHelpWindow" title="Browser Help" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 	</screen>
 
 <!-- OverlayHD Manager Plugin -->
 
-	<screen name="OverlayHDSkinManager" title="OverlayHD Skin Manager" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="OverlayHDSkinManager" title="OverlayHD Skin Manager" position="fill" flags="wfNoBorder">
 		<panel name="Setup" />
 	</screen>
 
-	<screen name="OverlayHDThemeManager" title="OverlayHD Theme Manager" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="OverlayHDThemeManager" title="OverlayHD Theme Manager" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tv_channel.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="themes" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
@@ -595,7 +595,7 @@
 		</widget>
 	</screen>
 
-	<screen name="OverlayHDThemeMenu" title="OverlayHD Theme Menu" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="OverlayHDThemeMenu" title="OverlayHD Theme Menu" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tv_channel.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateChoiceList0" />
@@ -605,7 +605,7 @@
 <!-- Shoot Your Screen Plugin -->
 
 	<!-- This screen is not compliant with current Enigma2 button or Setup standards! -->
-	<screen name="ShootYourScreen" title="Shoot Your Screen" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="ShootYourScreen" title="Shoot Your Screen" position="fill" flags="wfNoBorder">
 		<panel name="Setup" />
 		<widget name="buttonred" position="207,670" size="190,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_red,StaticText" transparent="1" valign="center" zPosition="+2" />
 		<widget name="buttongreen" position="444,670" size="190,35" backgroundColor="ButtonBack" font="ButtonFont;20" foregroundColor="ButtonText" halign="left" objectTypes="key_green,StaticText" transparent="1" valign="center" zPosition="+2" />
@@ -614,7 +614,7 @@
 
 <!-- Simple Unmount Plugin -->
 
-	<screen name="SimpleUmount" title="Simple Umount" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="SimpleUmount" title="Simple Umount" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="wdg_config" position="400,80" size="830,35" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" valign="center" />
 		<widget name="wdg_label_legend_1" position="400,150" size="130,35" backgroundColor="TextBackground" font="Regular;25" foregroundColor="Grey" transparent="1" valign="center" />
@@ -627,7 +627,7 @@
 
 <!-- Software Management Plugin -->
 
-	<screen name="UpdatePluginMenu" title="Softwaremanager..." position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="UpdatePluginMenu" title="Softwaremanager..." position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<!-- <panel name="ScreenTemplateButtonInfo" /> -->
@@ -640,7 +640,7 @@
 					MultiContentEntryText(pos = (20, 0), size = (680, 35), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
 					MultiContentEntryText(pos = (740, 0), size = (50, 35), flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = '>')
 					],
-				"fonts": [gFont("Regular", 25)],
+				"fonts": [parseFont("Regular;25")],
 				"itemHeight": 35
 				}
 			</convert>
@@ -653,14 +653,14 @@
 					[
 					MultiContentEntryText(pos = (0, 0), size = (810, 125), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 2), # index 0 is the MenuText,
 					],
-				"fonts": [gFont("Regular", 20)],
+				"fonts": [parseFont("Regular;20")],
 				"itemHeight": 125
 				}
 			</convert>
 		</widget>
 	</screen>
 
-	<screen name="SoftwareManagerSetup" title="Software Manager Setup" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="SoftwareManagerSetup" title="Software Manager Setup" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_factoryreset.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
@@ -668,14 +668,14 @@
 		<panel name="ScreenTemplateSIntroduction4" />
 	</screen>
 
-	<screen name="SoftwareManagerInfo" title="Softwaremanager informations" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="SoftwareManagerInfo" title="Softwaremanager informations" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_factoryreset.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateSoftwareList4" />
 		<panel name="ScreenTemplateSIntroduction4" />
 	</screen>
 
-	<screen name="PluginManager" title="Extensions management" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="PluginManager" title="Extensions management" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<!-- <panel name="ScreenTemplateButtonInfo" /> -->
 		<panel name="ScreenTemplateButtonHelp" />
@@ -699,7 +699,7 @@
 						# MultiContentEntryPixmapAlphaTest(pos = (0, 38), size = (650, 2), png = 3), # index 3 is the div pixmap
 						])
 					},
-				"fonts": [gFont("Regular", 22), gFont("Regular", 18)],
+				"fonts": [parseFont("Regular;22"), parseFont("Regular;18")],
 				"itemHeight": 50
 				}
 			</convert>
@@ -707,7 +707,7 @@
 		<panel name="ScreenTemplateSStatus4" />
 	</screen>
 
-	<screen name="PluginManagerHelp" title="Extensions management" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="PluginManagerHelp" title="Extensions management" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_factoryreset.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="list" render="Listbox" position="400,80" size="830,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
@@ -720,7 +720,7 @@
 					MultiContentEntryPixmapAlphaTest(pos = (20, 1), size = (48, 48), png = 2), # index 2 is the status pixmap
 					# MultiContentEntryPixmapAlphaTest(pos = (0, 49), size = (550, 2), png = 3), # index 3 is the div pixmap
 					],
-				"fonts": [gFont("Regular", 22), gFont("Regular", 18)],
+				"fonts": [parseFont("Regular;22"), parseFont("Regular;18")],
 				"itemHeight": 50
 				}
 			</convert>
@@ -728,7 +728,7 @@
 		<panel name="ScreenTemplateSStatus4" />
 	</screen>
 
-	<screen name="PluginDetails" title="Plugin details" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="PluginDetails" title="Plugin details" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_factoryreset.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="author" render="Label" position="400,120" size="830,35" backgroundColor="TextBackground" font="Regular;25" foregroundColor="Text" halign="center" transparent="1" valign="center" />
@@ -742,13 +742,13 @@
 
 	<!-- "Select Backup Files" same as MENU > Setup > Software Manager > Select Backup Files -->
 
-	<screen name="RestoreMenu" title="Restore Backups" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="RestoreMenu" title="Restore Backups" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_factoryreset.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateFileList0" />
 	</screen>
 
-	<screen name="PacketManager" title="Package Manager" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="PacketManager" title="Package Manager" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_factoryreset.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="list" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0"><!-- scrollbarMode="showNever" selectionDisabled="1" -->
@@ -760,14 +760,14 @@
 					MultiContentEntryPixmapAlphaTest(pos = (760, 1), size = (48, 48), png = 4), # index 4 is the status pixmap
 					# MultiContentEntryPixmapAlphaTest(pos = (5, 58), size = (0, 0), png = 5), # index 4 is the div pixmap
 					],
-				"fonts": [gFont("Regular", 22), gFont("Regular", 18)],
+				"fonts": [parseFont("Regular;22"), parseFont("Regular;18")],
 				"itemHeight": 50
 				}
 			</convert>
 		</widget>
 	</screen>
 
-	<screen name="PluginManagerInfo" title="Extensions management" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="PluginManagerInfo" title="Extensions management" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget source="list" render="Listbox" position="500,80" size="730,463" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
@@ -779,7 +779,7 @@
 					MultiContentEntryPixmapAlphaTest(pos = (0, 1), size = (48, 48), png = 2), # index 2 is the status pixmap
 					# MultiContentEntryPixmapAlphaTest(pos = (0, 49), size = (650, 2), png = 3), # index 3 is the div pixmap
 					],
-				"fonts": [gFont("Regular", 22), gFont("Regular", 18)],
+				"fonts": [parseFont("Regular;22"), parseFont("Regular;18")],
 				"itemHeight": 50
 				}
 			</convert>
@@ -788,13 +788,13 @@
 		<widget source="status" render="Label" position="85,205" size="350,260" font="Regular;22" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="3" />
 	</screen>
 
-	<screen name="IPKGMenu" title="Select IPKG Source" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="IPKGMenu" title="Select IPKG Source" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_factoryreset.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateFileList0" />
 	</screen>
 
-	<screen name="IPKGSource" title="IPKG Source" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="IPKGSource" title="IPKG Source" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_factoryreset.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="text" position="50,620" size="1180,35" font="Regular;25" transparent="1" valign="center" />
@@ -802,14 +802,14 @@
 
 <!-- Stalker Plugin -->
 
-	<screen name="StalkerEdit" title="Stalker Settup" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="StalkerEdit" title="Stalker Settup" position="fill" flags="wfNoBorder">
 		<panel name="Setup" />
 		<widget source="mac" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 <!-- StreamTVPlayer Plugin -->
 
-	<screen name="StreamTVList" title="StreamTV List" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="StreamTVList" title="StreamTV List" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="streamlist" position="400,80" size="830,415" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
@@ -827,7 +827,7 @@
 
 <!-- Temperature and Fan Control Plugin -->
 
-	<screen name="TempFanControl" title="Temperature / Fan Control" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="TempFanControl" title="Temperature / Fan Control" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="config" position="400,80" size="830,245" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 		<eLabel position="400,360" size="830,2" backgroundColor="Pinstripe" />
@@ -904,7 +904,7 @@
 
 <!-- Transcoding Plugin -->
 
-	<screen name="TranscodingSetup" title="Transcoding Setup" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="TranscodingSetup" title="Transcoding Setup" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_movies_bouquets.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
@@ -920,7 +920,7 @@
 
 <!-- ViX Plugin -->
 
-	<screen name="VIXMenu" title="ViX Management Menu" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="VIXMenu" title="ViX Management Menu" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget source="menu" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
@@ -948,7 +948,7 @@
 		<widget source="status" render="Label" position="50,600" size="340,50" conditional="status" font="Regular;20" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" />
 	</screen>
 
-	<screen name="VIXBackupManager" title="ViX Backup Manager" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="VIXBackupManager" title="ViX Backup Manager" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonInfo" />
@@ -958,22 +958,22 @@
 	</screen>
 
 	<!-- Already defined in skin_setup.xml  XtraPluginsSelection
-	<screen name="BackupSelection" title="ViX Backup Selection" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="BackupSelection" title="ViX Backup Selection" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateCheckList0" />
 	</screen>
 	-->
 
-	<screen name="VIXBackupManagerMenu" title="ViX Backup Manager Menu" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="VIXBackupManagerMenu" title="ViX Backup Manager Menu" position="fill" flags="wfNoBorder">
 		<panel name="Setup" />
 	</screen>
 
-	<screen name="VIXBackupManagerLogView" title="ViX Backup Log" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="VIXBackupManagerLogView" title="ViX Backup Log" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="list" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
 
-	<screen name="VIXImageManager" title="ViX Image Manager" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="VIXImageManager" title="ViX Image Manager" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<widget name="lab1" position="400,80" size="830,50" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" transparent="1" />
@@ -981,7 +981,7 @@
 		<widget name="backupstatus" position="400,625" size="830,25" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" transparent="1" />
 	</screen>
 
-	<screen name="ImageManagerDownload" title="ViX Image Manager" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="ImageManagerDownload" title="ViX Image Manager" position="fill" flags="wfNoBorder">
 		<panel name="VIXImageManager" />
 		<!-- <widget name="list" position="10,105" size="540,260" scrollbarMode="showOnDemand" />
 		<applet type="onLayoutFinish">
@@ -989,14 +989,14 @@
 		</applet> -->
 	</screen>
 
-	<screen name="VIXIPKInstaller" title="ViX IPK Installer" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="VIXIPKInstaller" title="ViX IPK Installer" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="lab1" position="400,80" size="830,50" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" transparent="1" />
 		<widget name="list" position="400,140" size="830,475" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
 	<!-- Already defined in skin_setup.xml
-	<screen name="IpkgInstaller" title="ViX Install Extensions" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="IpkgInstaller" title="ViX Install Extensions" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_plugin.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="list" position="400,80" size="830,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
@@ -1004,7 +1004,7 @@
 	</screen>
 	-->
 
-	<screen name="VIXDevicesPanel" title="ViX Mount Manager" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="VIXDevicesPanel" title="ViX Mount Manager" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="lab1" position="400,80" size="830,560" backgroundColor="TextBackground" font="TextFont;40" foregroundColor="TextWaiting" halign="center" transparent="0" valign="center" zPosition="+1" />
 		<widget source="list" render="Listbox" position="400,80" size="830,560" scrollbarMode="showOnDemand">
@@ -1022,7 +1022,7 @@
 		</widget>
 	</screen>
 
-	<screen name="VIXDevicePanelConf" title="Choose where to mount your devices:" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="VIXDevicePanelConf" title="Choose where to mount your devices:" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateFrame830x120" />
@@ -1030,7 +1030,7 @@
 		<widget name="Linconn" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
-	<screen name="VIXSoftcamManager" title="ViX Softcam Setup" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="VIXSoftcamManager" title="ViX Softcam Setup" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="lab1" position="400,80" size="830,25" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" halign="right" transparent="1" valign="center" />
 		<widget name="list" position="400,110" size="830,400" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
@@ -1048,12 +1048,12 @@
 		<widget name="lab1" position="10,80" size="460,60" font="Regular;20" transparent="1" valign="top" />
 	</screen>
 
-	<screen name="VIXSoftcamLog" title="ViX Softcam Log" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="VIXSoftcamLog" title="ViX Softcam Log" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="list" position="400,80" size="830,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
 
-	<screen name="VIXSwap" title="ViX Swap File Manager" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="VIXSwap" title="ViX Swap File Manager" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<eLabel position="400,80" size="830,420" backgroundColor="MenuBackground" zPosition="-1" />
 		<widget name="lab1" position="420,80" size="600,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="1" valign="center" />
@@ -1071,19 +1071,19 @@
 
 <!-- VU+ DUO Fan Control Plugin -->
 
-	<screen name="FanSetupConfiguration" title="Standby Mode FanSetup Settings" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="FanSetupConfiguration" title="Standby Mode FanSetup Settings" position="fill" flags="wfNoBorder">
 		<panel name="Setup" />
 	</screen>
 
 <!-- VU+ Remote Control Plugin -->
 
-	<screen name="RemoteControlCode" title="Remote Control Settings" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="RemoteControlCode" title="Remote Control Settings" position="fill" flags="wfNoBorder">
 		<panel name="Setup" />
 	</screen>
 
 <!-- Weather Plugin -->
 
-	<screen name="MeteoMain" title="Weather" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="MeteoMain" title="Weather" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<!-- Column 1 -->
 		<widget name="lab1" position="60,95" size="220,20" font="Regular;16" foregroundColor="WeatherLabel" halign="right" transparent="1" valign="top" />
@@ -1148,7 +1148,7 @@
 
 	<!-- These screens do not appear to be active! -->
 
-	<screen name="MainWheaterPlugin" title="AccuWeatherWeatherPlugin: Select Source" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="MainWheaterPlugin" title="AccuWeatherWeatherPlugin: Select Source" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="list" position="9,29" size="642,140" scrollbarMode="showOnDemand" />
 		<!--
@@ -1316,19 +1316,19 @@
 		<widget name="ico_temp" position="59,50" size="74,74" alphatest="blend" zPosition="2" />
 	</screen>
 
-	<screen name="WeatherPluginEntriesListConfigScreenfore" title="WeatherPlugin: List of Entries (foreca.com)" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="WeatherPluginEntriesListConfigScreenfore" title="WeatherPlugin: List of Entries (foreca.com)" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="city" position="605,115" size="150,50" font="Regular;20" halign="left" />
 		<widget name="language" position="735,115" size="150,50" font="Regular;20" halign="left" />
 		<widget name="entrylist" position="590,170" size="610,415" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
-	<screen name="WeatherPluginEntryConfigScreenfore" title="WeatherPlugin: Edit Entry (foreca.com)" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="WeatherPluginEntryConfigScreenfore" title="WeatherPlugin: Edit Entry (foreca.com)" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateConfig0" />
 	</screen>
 
-	<screen name="WeatherPluginEntriesListConfigScreenacu" title="WeatherPlugin: List of Entries (accuwheater.com)" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="WeatherPluginEntriesListConfigScreenacu" title="WeatherPlugin: List of Entries (accuwheater.com)" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="city" position="5,0" size="150,50" font="Regular;20" halign="left" />
 		<widget name="language" position="155,0" size="150,50" font="Regular;20" halign="left" />
@@ -1360,7 +1360,7 @@
 	</screen>
 	-->
 
-	<screen name="WeatherPluginEntriesListConfigScreen" title="WeatherPlugin: List of Entries (google.com)" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="WeatherPluginEntriesListConfigScreen" title="WeatherPlugin: List of Entries (google.com)" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="city" position="5,0" size="150,50" font="Regular;20" halign="left" />
 		<widget name="language" position="155,0" size="150,50" font="Regular;20" halign="left" />
@@ -1392,7 +1392,7 @@
 	</screen>
 	-->
 
-	<screen name="WeatherPluginEntryConfigScreenacu" title="WeatherPlugin: Edit Entry (accuwheater.com)" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="WeatherPluginEntryConfigScreenacu" title="WeatherPlugin: Edit Entry (accuwheater.com)" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="config" position="20,10" size="720,200" scrollbarMode="showOnDemand" />
 		<!--
@@ -1416,7 +1416,7 @@
 	</screen>
 	-->
 
-	<screen name="WeatherPluginEntryConfigScreen" title="WeatherPlugin: Edit Entry (google.com)" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="WeatherPluginEntryConfigScreen" title="WeatherPlugin: Edit Entry (google.com)" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="config" position="20,10" size="720,200" scrollbarMode="showOnDemand" />
 		<!--

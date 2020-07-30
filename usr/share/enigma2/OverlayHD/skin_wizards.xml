@@ -1,10 +1,10 @@
 <skin>
 <!--
  |	WizardTemplate - Template for all wizards except
- |	LanguageWizard and TutorialWizard
+ |	LanguageWizard and TutorialWizard.
  +-->
 
-	<screen name="WizardTemplate" title="Welcome..." position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="WizardTemplate" title="Welcome..." position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap name="wizard" pixmap="images/wizard.png" position="230,250" size="220,220" alphatest="blend" transparent="1" />
 		<eLabel position="500,80" size="730,2" backgroundColor="Pinstripe" />
@@ -23,10 +23,10 @@
  |	WizardList - Template for list menu element in wizards
  |
  |	Used by NetworkWizard, DefaultWizard, DefaultSatLists,
- |	DreamPackageWizard, VideoWizard and ImageWizard
+ |	DreamPackageWizard, VideoWizard and ImageWizard.
  +-->
  
-	<screen name="WizardList" title="Welcome..." position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="WizardList" title="Welcome..." position="fill" flags="wfNoBorder">
 		<panel name="WizardTemplate" />
 		<widget source="list" render="Listbox" position="500,350" size="730,280" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<!-- <convert type="StringList" /> -->
@@ -37,7 +37,7 @@
 					MultiContentEntryText(pos = (20, 0), size = (650, 35), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),
 					MultiContentEntryText(pos = (670, 0), size = (30, 35), flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = ">")
 					],
-				"fonts": [gFont("Regular", 25)],
+				"fonts": [parseFont("Regular;25")],
 				"itemHeight": 35
 				}
 			</convert>
@@ -47,10 +47,10 @@
 <!--	WizardConfig - Template for config menu element in wizards
  |
  |	Used by NetworkWizard, DefaultWizard, DefaultSatLists,
- |	DreamPackageWizard, VideoWizard and ImageWizard
+ |	DreamPackageWizard, VideoWizard and ImageWizard.
  +-->
  
-	<screen name="WizardConfig" title="Welcome..." position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="WizardConfig" title="Welcome..." position="fill" flags="wfNoBorder">
 		<panel name="WizardList" />
 		<widget name="config" position="500,350" size="730,280" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
@@ -64,37 +64,37 @@
 
 <!-- AutoTimer Wizard -->
 
-	<screen name="AutoTimerWizard" title="Welcome..." position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="AutoTimerWizard" title="Welcome..." position="fill" flags="wfNoBorder">
 		<panel name="WizardConfig" />
 	</screen>
 
 <!-- Network Wizard -->
 
-	<screen name="NetworkWizard" title="Welcome..." position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="NetworkWizard" title="Welcome..." position="fill" flags="wfNoBorder">
 		<panel name="WizardConfig" />
 	</screen>
 
 <!-- Default wizard -->
 
-	<screen name="DefaultWizard" title="Welcome..." position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="DefaultWizard" title="Welcome..." position="fill" flags="wfNoBorder">
 		<panel name="WizardConfig" />
 	</screen>
 
 <!-- DefaultSatLists -->
 
-	<screen name="DefaultSatLists" title="Welcome..." position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="DefaultSatLists" title="Welcome..." position="fill" flags="wfNoBorder">
 		<panel name="WizardConfig" />
 	</screen>
 
 <!-- DreamPackageWizard -->
 
-	<screen name="DreamPackageWizard" title="Welcome..." position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="DreamPackageWizard" title="Welcome..." position="fill" flags="wfNoBorder">
 		<panel name="WizardConfig" />
 	</screen>
 
 <!-- Language Wizard -->
 
-	<screen name="LanguageWizard" title="Welcome: Language Selection" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="LanguageWizard" title="Welcome: Language Selection" position="fill" flags="wfNoBorder">
 		<panel name="WizardTemplate" />
 		<widget source="languages" render="Listbox" position="500,350" size="730,300" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
@@ -104,7 +104,7 @@
 					MultiContentEntryText(pos = (100, 0), size = (600, 50), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1), # index 1 is the language name,
 					MultiContentEntryPixmap(pos = (20, 5), size = (60, 40), png = 2), # index 2 is the pixmap
 					],
-				"fonts": [gFont("Regular", 25)],
+				"fonts": [parseFont("SMSHelperFont;25")],
 				"itemHeight": 50
 				}
 			</convert>
@@ -113,7 +113,7 @@
 
 <!-- Skin Wizard -->
 
-	<screen name="SkinSelectorWizard" title="Welcome: Skin Selection" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="SkinSelectorWizard" title="Welcome: Skin Selection" position="fill" flags="wfNoBorder">
 		<panel name="WizardTemplate" />
 		<widget name="skins" position="600,230" size="450,240" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
@@ -139,54 +139,54 @@
 
 <!-- Terrestrial Location Scan Wizard -->
 
-	<screen name="IniTerrestrialLocationWizard" title="Welcome..." position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="IniTerrestrialLocationWizard" title="Welcome..." position="fill" flags="wfNoBorder">
 		<panel name="WizardConfig" />
 	</screen>
 
 <!-- Tutorial Wizard -->
 
-	<screen name="TutorialWizard" title="Welcome..." position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="TutorialWizard" title="Welcome..." position="fill" flags="wfNoBorder">
 		<panel name="WizardTemplate" />
 		<widget name="list" position="500,350" size="730,280" backgroundColor="TextBackground" foregroundColor="Text" transparent="1" />
 	</screen>
 
 <!-- VideoWizard -->
 
-	<screen name="VideoWizard" title="Select Video Output..." position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="VideoWizard" title="Select Video Output..." position="fill" flags="wfNoBorder">
 		<panel name="WizardConfig" />
 	</screen>
 
 <!-- Image Backup Wizard -->
 
-	<screen name="ImageWizard" title="Welcome..." position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="ImageWizard" title="Welcome..." position="fill" flags="wfNoBorder">
 		<panel name="WizardConfig" />
 	</screen>
 
 <!-- Startup HDD Format Wizard -->
 
-	<screen name="StartHDDFormatWizard" title="Welcome..." position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="StartHDDFormatWizard" title="Welcome..." position="fill" flags="wfNoBorder">
 		<panel name="WizardTemplate" />
 		<widget name="errors" position="500,350" size="730,280" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" valign="top" />
 	</screen>
 
 <!-- Final "Congratulations" Setup Wizard -->
 
-	<screen name="IniEndWizard" title="Welcome..." position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="IniEndWizard" title="Welcome..." position="fill" flags="wfNoBorder">
 		<panel name="WizardTemplate" />
 	</screen>
 
 <!-- Remote IP Tuner Scanner Wizard -->
 
 	<!-- Moved to skin_setup.xml
-	<screen name="RemoteTunerScanner" title="IPTV Server Scanner" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="RemoteTunerScanner" title="IPTV Server Scanner" position="fill" flags="wfNoBorder">
 		<panel name="WizardList" />
 	</screen>
 
-	<screen name="RemoteTunerServerDownloader" title="IPTV Server Channel Downloader" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="RemoteTunerServerDownloader" title="IPTV Server Channel Downloader" position="fill" flags="wfNoBorder">
 		<panel name="WizardConfig" />
 	</screen>
 
-	<screen name="RemoteTunerServerEditor" title="IPTV Server Setup" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="RemoteTunerServerEditor" title="IPTV Server Setup" position="fill" flags="wfNoBorder">
 		<panel name="WizardConfig" />
 	</screen>
 	-->

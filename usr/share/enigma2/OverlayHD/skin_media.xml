@@ -5,7 +5,7 @@
 
 <!-- MediaPlayer -->
 
-	<screen name="MediaPlayer" title="MediaPlayer" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="MediaPlayer" title="MediaPlayer" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonInfo" />
@@ -34,7 +34,7 @@
 		<widget name="PositionGauge" position="420,635" size="400,14" pointer="sliders/slider_10x497_hfg.png:490,0" transparent="1" zPosition="+1" />
 	</screen>
 
-	<screen name="MediaPlayerDirectoryBrowser" title="File Browser" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="MediaPlayerDirectoryBrowser" title="File Browser" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_backup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateFileList0" />
@@ -46,7 +46,7 @@
 
 <!-- Last.FM -->
 
-	<screen name="LastFMScreenMain" title="Last.FM" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="LastFMScreenMain" title="Last.FM" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonHelp" />
@@ -66,7 +66,7 @@
 
 <!-- SHOUTCast -->
 
-	<screen name="SHOUTcastWidget" title="SHOUTcast" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="SHOUTcastWidget" title="SHOUTcast" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<ePixmap pixmap="images/shoutcast-logo.png" position="50,80" size="120,35" alphatest="blend" transparent="1" />
@@ -81,14 +81,14 @@
 		<widget name="console" position="170,610" size="1060,25" backgroundColor="TextBackground" font="Regular;20" transparent="1" valign="center" />
 	</screen>
 
-	<screen name="SHOUTcastSetup" title="SHOUTCast Setup" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="SHOUTcastSetup" title="SHOUTCast Setup" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateSMSHelper" />
 		<ePixmap pixmap="menus/mainmenu_music_bouquets.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig0" />
 	</screen>
 
-	<screen name="SHOUTcastStreamripperRecordingPath" title="Select record path for streamripper" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="SHOUTcastStreamripperRecordingPath" title="Select record path for streamripper" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="target" position="400,150" size="705,22" backgroundColor="TextBackground" font="Regular;22" transparent="1" valign="center" />
@@ -101,7 +101,7 @@
 
 <!-- Picture Player -->
 
-	<screen name="picshow" title="Picture Player" position="0,0" size="1280,720" backgroundColor="PictureBackground" flags="wfNoBorder">
+	<screen name="picshow" title="Picture Player" position="fill" backgroundColor="PictureBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="filelist" position="50,80" size="700,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 		<widget name="thn" position="814,80" size="372,280" alphatest="blend" transparent="1" />
@@ -110,7 +110,7 @@
 	</screen>
 
 	<!-- Only enable this screen if you wish to override the Picture Player settings which are dynamic! -->
-	<!-- <screen name="Pic_Thumb" title="Picture Thumbnails" position="0,0" size="1280,720" backgroundColor="PictureBackground" flags="wfNoBorder">
+	<!-- <screen name="Pic_Thumb" title="Picture Thumbnails" position="fill" backgroundColor="PictureBackground" flags="wfNoBorder">
 		<eLabel position="0,0" size="1280,720" backgroundColor="PictureBackground" />
 		<widget name="frame" pixmap="pic_frame.png" position="35,30" size="190,200" alphatest="blend" transparent="1" zPosition="+1" />
 
@@ -133,7 +133,7 @@
 	</screen> -->
 
 	<!-- Only enable this screen if you wish to override the Picture Player settings which are dynamic! -->
-	<!-- <screen name="Pic_Full_View" title="Picture Viewer" position="0,0" size="1280,720" backgroundColor="PictureBackground" flags="wfNoBorder">
+	<!-- <screen name="Pic_Full_View" title="Picture Viewer" position="fill" backgroundColor="PictureBackground" flags="wfNoBorder">
 		<eLabel position="0,0" size="1280,720" backgroundColor="PictureBackground" />
 		<widget name="pic" position="30,30" size="1220,660" alphatest="blend" zPosition="+1" />
 		<widget name="point" position="20,22" size="20,20" pixmap="icons/record.png" alphatest="blend" transparent="1" zPosition="+2" />
@@ -141,7 +141,7 @@
 		<widget source="file" render="Label" position="60,20" size="1170,25" borderColor="PictureLabelBorder" borderWidth="1" font="Regular;20" foregroundColor="PictureLabel" noWrap="1" transparent="1" zPosition="+2" />
 	</screen> -->
 
-	<screen name="Pic_Exif" title="Picture Information" position="0,0" size="1280,720" backgroundColor="PictureBackground" flags="wfNoBorder">
+	<screen name="Pic_Exif" title="Picture Information" position="fill" backgroundColor="PictureBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_photos_albums_user.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="menu" render="Listbox" position="400,80" size="830,540" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1">
@@ -152,7 +152,7 @@
 					MultiContentEntryText(pos = (20, 0), size = (320, 30), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, font = 0, text = 0),
 					MultiContentEntryText(pos = (360, 0), size = (450, 30), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, font = 0, text = 1)
 					],
-				"fonts": [gFont("Regular", 20)],
+				"fonts": [parseFont("Regular;20")],
 				"itemHeight": 30
 				}
 			</convert>
@@ -161,7 +161,7 @@
 
 <!-- Flickr -->
 
-	<screen name="EcasaPictureWall" title="Flickr Featured Photos" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="EcasaPictureWall" title="Flickr Featured Photos" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonHelp" />
 		<widget name="waitingtext" position="0,0" size="1280,720" backgroundColor="TextBackground" font="Regular;25" foregroundColor="Text" halign="center" transparent="1" valign="center" />
@@ -193,9 +193,9 @@
 
 <!-- DVD Player -->
 
-	<screen name="DVDOverlay" title="DVD Overlay" position="0,0" size="1280,720" backgroundColor="ScreenTransparent" flags="wfNoBorder" zPosition="-1" />
+	<screen name="DVDOverlay" title="DVD Overlay" position="fill" backgroundColor="ScreenTransparent" flags="wfNoBorder" zPosition="-1" />
 
-	<screen name="DVDPlayer" title="DVD Player" position="0,0" size="1280,720" backgroundColor="ScreenTransparent" flags="wfNoBorder">
+	<screen name="DVDPlayer" title="DVD Player" position="fill" backgroundColor="ScreenTransparent" flags="wfNoBorder">
 		<!-- Background -->
 		<ePixmap pixmap="images/infobar.png" position="0,70" size="1280,720" zPosition="-1" />
 		<!-- Time -->
@@ -243,7 +243,7 @@
 		<widget name="subtitleLabel" position="920,645" size="48,22" backgroundColor="TextBackground" font="Regular;18" shadowColor="#001d354c" shadowOffset="-1,-1" transparent="1" valign="bottom" />
 	</screen>
 
-	<screen name="DVDPlayerNew" title="DVD Player" position="0,0" size="1280,720" backgroundColor="TransparentBackground" flags="wfNoBorder">
+	<screen name="DVDPlayerNew" title="DVD Player" position="fill" backgroundColor="TransparentBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplateClock" />
 		<eLabel position="0,650" size="1280,70" backgroundColor="InfobarMediaBackground" transparent="0" zPosition="-1" />
 		<eLabel position="172,660" size="2,50" backgroundColor="Pinstripe" />
@@ -304,7 +304,7 @@
 					MultiContentEntryText(pos = (450, 20), size = (160, 17), font = 1, flags = RT_HALIGN_RIGHT, text = 4), # index 4 date,
 					MultiContentEntryText(pos = (620, 20), size = (58, 20), font = 1, flags = RT_HALIGN_LEFT, text = 5), # index 4 time,
 					],
-				"fonts": [gFont("Regular", 20), gFont("Regular", 14)],
+				"fonts": [parseFont("Regular;20"), parseFont("Regular;14")],
 				"itemHeight": 37
 				}
 			</convert>
@@ -318,7 +318,7 @@
 		<eLabel position="0,525" size="920,2" backgroundColor="Pinstripe" />
 	</screen>
 
-	<screen name="DVDMovieSelection" title="Select a movie" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="DVDMovieSelection" title="Select a movie" position="fill" flags="wfNoBorder">
 		<widget name="waitingtext" position="55,135" size="760,448" font="Regular;22" halign="center" valign="center" zPosition="4" />
 		<widget source="Service" render="Label" position="280,95" size="190,22" backgroundColor="TextBackground" font="Named;18" foregroundColor="grey" halign="center" transparent="1" zPosition="1">
 			<convert type="MovieInfo">FileSize</convert>
@@ -380,7 +380,7 @@
 
 <!-- MyTubePlayer -->
 
-	<screen name="MyTubePlayer" title="InfoBar" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" zPosition="-1">
+	<screen name="MyTubePlayer" title="InfoBar" position="fill" backgroundColor="transparent" flags="wfNoBorder" zPosition="-1">
 		<ePixmap pixmap="images/infobar.png" position="0,70" size="1280,720" zPosition="-1" />
 		<ePixmap pixmap="icons/icon_rewind.png" position="82,601" size="32,24" alphatest="blend" transparent="1" zPosition="0" />
 		<ePixmap pixmap="icons/icon_play.png" position="120,601" size="32,24" alphatest="blend" transparent="1" zPosition="0" />
@@ -456,7 +456,7 @@
 						MultiContentEntryText(pos = (0, 35), size = (740, 65), font=2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER| RT_WRAP, text = 0), # index 0 is the name
 						])
 					},
-				"fonts": [gFont("Regular", 20), gFont("Regular", 14), gFont("Regular", 28)],
+				"fonts": [parseFont("Regular;20"), parseFont("Regular;14"), parseFont("Regular;28")],
 				"itemHeight": 135
 				}
 			</convert>
@@ -469,7 +469,7 @@
 		<widget name="thumbnail" position="0,0" size="180,135" alphatest="blend" /><!-- fake entry for dynamic thumbnail resizing, currently there is no other way doing this. -->
 	</screen>
 
-	<screen name="MyTubeSettingsScreen" title="MyTubeSettingsScreen" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="MyTubeSettingsScreen" title="MyTubeSettingsScreen" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig0" />
@@ -487,7 +487,7 @@
 					MultiContentEntryProgress(pos = (440, 3), size = (100, 24), percent = -3), # index 3 should be progress
 					MultiContentEntryText(pos = (550, 3), size = (70, 24), font=1, flags = RT_HALIGN_RIGHT, text = 4), # index 4 is the percentage
 					],
-				"fonts": [gFont("Regular", 22), gFont("Regular", 18)],
+				"fonts": [parseFont("Regular;22"), parseFont("Regular;18")],
 				"itemHeight": 30
 				}
 			</convert>
@@ -499,7 +499,7 @@
 		<widget name="title" position="0,0" size="0,0" />
 	</screen>
 
-	<screen name="MyTubePlayerMainScreen" title="MyTubePlayerMainScreen..." position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="MyTubePlayerMainScreen" title="MyTubePlayerMainScreen..." position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<ePixmap pixmap="menus/mainmenu_source_youtube.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
@@ -524,7 +524,7 @@
 						MultiContentEntryText(pos = (20, 43), size = (560, 30), font=3, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 1),
 						])
 					},
-				"fonts": [gFont("Regular", 20), gFont("Regular", 16), gFont("Regular", 22), gFont("Regular", 18)],
+				"fonts": [parseFont("Regular;20"), parseFont("Regular;16"), parseFont("Regular;22"), parseFont("Regular;18")],
 				"itemHeight": 85
 				}
 			</convert>
@@ -545,7 +545,7 @@
 					MultiContentEntryText(pos = (10, 1), size = (380, 24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
 					MultiContentEntryText(pos = (390, 1), size = (180, 24), font=1, flags = RT_HALIGN_RIGHT, text = 1), # index 1 are the rtesults
 					],
-				"fonts": [gFont("Regular", 22), gFont("Regular", 18)],
+				"fonts": [parseFont("Regular;22"), parseFont("Regular;18")],
 				"itemHeight": 25
 				}
 			</convert>
@@ -560,7 +560,7 @@
 					[
 					MultiContentEntryText(pos = (10, 1), size = (340, 24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
 					],
-				"fonts": [gFont("Regular", 22), gFont("Regular", 18)],
+				"fonts": [parseFont("Regular;22"), parseFont("Regular;18")],
 				"itemHeight": 25
 				}
 			</convert>
@@ -569,7 +569,7 @@
 
 <!-- Web Cams -->
 
-	<screen name="WebcamViewer" title="Webcam Viewer" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="WebcamViewer" title="Webcam Viewer" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
@@ -579,14 +579,14 @@
 					[
 					MultiContentEntryText(pos = (20, 0), size = (790, 35), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, font = 0, text = 0)
 					],
-				"fonts": [gFont("Regular", 25)],
+				"fonts": [parseFont("Regular;25")],
 				"itemHeight": 35
 				}
 			</convert>
 		</widget>
 	</screen>
 
-	<screen name="TravelWebcamviewer" title="Travel Webcam Viewer" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="TravelWebcamviewer" title="Travel Webcam Viewer" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="list" render="Listbox" position="400,80" size="830,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
@@ -609,7 +609,7 @@
 						MultiContentEntryText(pos = (20, 50), size = (790, 25), font=3, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 1), # index 2 is the description
 						])
 					},
-				"fonts": [gFont("Regular", 22), gFont("Regular", 18), gFont("Regular", 25), gFont("Regular", 20)],
+				"fonts": [parseFont("Regular;22"), parseFont("Regular;18"), parseFont("Regular;25"), parseFont("Regular;20")],
 				"itemHeight": 75
 				}
 			</convert>
@@ -629,7 +629,7 @@
 	YouTubeSetup, Setup
 	-->
 
-	<screen name="YouTubeMain" title="YouTube" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="YouTubeMain" title="YouTube" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="menu" pixmap="buttons/button_block_menu.png" position="50,670" size="50,35" alphatest="blend" objectTypes="menu,Pixmap" transparent="1" />
 		<widget name="info" pixmap="buttons/button_block_info.png" position="110,670" size="50,35" alphatest="blend" objectTypes="info,Pixmap" transparent="1" />
@@ -643,7 +643,7 @@
 					MultiContentEntryText(pos = (610, 50), size = (200, 20), font = 1, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4), # Views
 					MultiContentEntryText(pos = (400, 50), size = (200, 20), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 5), # Duration
 					],
-				"fonts": [gFont("Regular", 20), gFont("Regular", 18)],
+				"fonts": [parseFont("Regular;20"), parseFont("Regular;18")],
 				"itemHeight": 75
 				}
 			</convert>
@@ -654,7 +654,7 @@
 		<widget name="green" position="0,0" size="0,0" conditional="green" transparent="1" />
 	</screen>
 
-	<screen name="YouTubeInfo" title="YouTube Media Information" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="YouTubeInfo" title="YouTube Media Information" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="pic" position="50,100" size="320,180" alphatest="blend" transparent="1" />
 		<widget name="title" position="400,80" size="830,60" font="Regular;25" />
@@ -666,7 +666,7 @@
 		<widget name="published" position="400,625" size="830,25" font="Regular;20" />
 	</screen>
 
-	<screen name="YouTubeSearch" title="YouTube Search" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="YouTubeSearch" title="YouTube Search" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="menu" pixmap="buttons/button_block_menu.png" position="50,670" size="50,35" alphatest="blend" objectTypes="menu,Pixmap" transparent="1" />
 		<widget name="config" position="400,80" size="830,30" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnNever" transparent="0" />
@@ -677,7 +677,7 @@
 					[
 					MultiContentEntryText(pos = (20, 0), size = (810, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0)
 					],
-				"fonts": [gFont("Regular", 20)],
+				"fonts": [parseFont("Regular;20")],
 				"itemHeight": 25
 				}
 			</convert>
@@ -685,12 +685,12 @@
 	</screen>
 
 	<!--
-	<screen name="YouTubeDownloadList" title="YouTube Active Video Downloads" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="YouTubeDownloadList" title="YouTube Active Video Downloads" position="fill" flags="wfNoBorder">
 		<panel name="TaskListScreen" />
 	</screen>
 	-->
 
-	<screen name="YouTubeDownloadList" title="YouTube Active Video Downloads" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="YouTubeDownloadList" title="YouTube Active Video Downloads" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_scan.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="list" render="Listbox" position="400,80" size="830,575" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
@@ -703,7 +703,7 @@
 					MultiContentEntryProgress( pos = (520, 3), size = (200, 19), percent = -3), # Progress
 					MultiContentEntryText(pos = (730, 0), size = (80, 25), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4), # Percentage
 					],
-				"fonts": [gFont("Regular", 20)],
+				"fonts": [parseFont("Regular;20")],
 				"itemHeight": 25
 				}
 			</convert>
@@ -714,7 +714,7 @@
  |	??? Unknown
  +-->
 
-	<screen name="ViewerSelectScreen" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="ViewerSelectScreen" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="list" position="590,170" size="610,415" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>

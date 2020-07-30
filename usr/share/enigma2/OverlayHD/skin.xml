@@ -1009,7 +1009,7 @@
 
 <!-- MENU - Generic And Enhanced Main Menus -->
 
-	<screen name="Menu" title="Menu" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="Menu" title="Menu" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="blend" conditional="menuimage" transparent="1" zPosition="+1" /> -->
@@ -1018,7 +1018,7 @@
 		<widget name="charframe" position="0,0" size="0,0" conditional="charframe" transparent="1" />
 	</screen>
 
-	<screen name="MenuBeyonwiz" title="Menu" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="MenuBeyonwiz" title="Menu" position="fill" flags="wfNoBorder">
 		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -1034,7 +1034,7 @@
 		</widget>
 	</screen>
 
-	<screen name="MenuEnhanced" title="Menu" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="MenuEnhanced" title="Menu" position="fill" flags="wfNoBorder">
 		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -1051,7 +1051,7 @@
 		</widget>
 	</screen>
 
-	<screen name="MenuEnigma2" title="Menu" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="MenuEnigma2" title="Menu" position="fill" flags="wfNoBorder">
 		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -1073,7 +1073,7 @@
 	Sublists: selectedColor="#00ffffff" enabledColor="#00999999" offColor="#00555555" font="Regular;22" itemHeight="50" (default values shown)
 	The widget height should be 6 * itemHeight.
 -->
-	<screen name="GeneralMenu" title="Main Menu" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="GeneralMenu" title="Main Menu" position="fill" flags="wfNoBorder">
 		<panel position="50,35" size="305,25">
 			<panel name="ClockBannerPanel" />
 		</panel>
@@ -1099,12 +1099,12 @@
 
 <!-- HELP - Generic Help Menu -->
 
-	<screen name="HelpMenu" title="Help" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="HelpMenu" title="Help" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="HelpMenuEnigma2" base="HelpMenu" />
 	</screen>
 
-	<screen name="HelpMenuBeyonwiz" title="Help" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="HelpMenuBeyonwiz" title="Help" position="fill" flags="wfNoBorder">
 		<panel position="150,110" size="154,500">
 			<panel name="ScreenTemplateRemote" />
 		</panel>
@@ -1135,7 +1135,7 @@
 		<widget name="longshift_key1" position="400,620" size="830,30" backgroundColor="TextBackground" font="HelpFont;25" foregroundColor="HelpPress" halign="right" transparent="1" />
 	</screen>
 
-	<screen name="HelpMenuEnigma2" title="Help" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="HelpMenuEnigma2" title="Help" position="fill" flags="wfNoBorder">
 		<widget name="rc" pixmaps="images/rc.png,images/rcold.png" position="150,110" size="154,500" alphatest="blend" transparent="0" />
 		<widget name="arrowdown" pixmap="images/arrowdown.png" position="-100,-100" size="37,70" alphatest="blend" />
 		<widget name="arrowdown2" pixmap="images/arrowdown.png" position="-100,-100" size="37,70" alphatest="blend" />
@@ -1145,7 +1145,7 @@
 		<widget name="long_key" position="400,620" size="830,30" backgroundColor="TextBackground" font="HelpFont;25" foregroundColor="HelpPress" halign="right" transparent="1" />
 	</screen>
 
-	<screen name="HelpMenuEnigma2New" title="Help" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="HelpMenuEnigma2New" title="Help" position="fill" flags="wfNoBorder">
 		<panel position="150,110" size="154,500">
 			<panel name="ScreenTemplateRemote" />
 		</panel>
@@ -1205,7 +1205,7 @@
 		<panel name="ScreenTemplateDescription4" />
 	</screen>
 
-	<screen name="MPHelp" title="XML Help" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="MPHelp" title="XML Help" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/help.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateHelp0" />
@@ -1264,7 +1264,7 @@
 		<eLabel position="403,0" size="2,485" backgroundColor="Pinstripe" />
 	</screen>
 
-	<screen name="GeneralSetup" title="Setup Menu" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="GeneralSetup" title="Setup Menu" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel position="400,80" size="405,485">
@@ -1305,7 +1305,7 @@
 
 <!-- MENU > Setup > *Item* - Generic Setup Menus -->
 
-	<screen name="Setup" title="Setup" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="Setup" title="Setup" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="menuimage" position="50,100" size="300,500" alphatest="blend" conditional="menuimage" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
@@ -1433,7 +1433,7 @@
 					MultiContentEntryText(pos = (20, 25), size = (400, 25), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0, color = "InfoProgramNow", color_sel = "InfoProgramSelected"),  # Event name
 					MultiContentEntryText(pos = (440, 25), size = (360, 25), font = 1, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4, color = "InfoTimesNow", color_sel = "InfoTimesSelected")  # Event time
 					],
-				"fonts": [gFont("Regular", 20), gFont("Regular", 18)],
+				"fonts": [parseFont("Regular;20"), parseFont("Regular;18")],
 				"itemHeight": 50
 				}
 			</convert>
@@ -2062,7 +2062,7 @@
 
 <!-- Standby -->
 
-	<screen name="Standby" title="Standby" position="0,0" size="1280,720" flags="wfNoBorder" />
+	<screen name="Standby" title="Standby" position="fill" flags="wfNoBorder" />
 
 <!-- Mute -->
 
@@ -2110,7 +2110,7 @@
 
 <!-- Subtitle Display -->
 
-	<screen name="SubtitleDisplay" position="0,0" size="1280,720" backgroundColor="ScreenTransparent" flags="wfNoBorder" zPosition="-1" />
+	<screen name="SubtitleDisplay" position="fill" backgroundColor="ScreenTransparent" flags="wfNoBorder" zPosition="-1" />
 
 <!-- Picture In Picture -->
 
@@ -2126,22 +2126,22 @@
 
 <!-- Screen Saver -->
 
-	<screen name="Screensaver" title="Screen Saver" position="0,0" size="1280,720" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
+	<screen name="Screensaver" title="Screen Saver" position="fill" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
 		<panel name="ScreensaverEnigma2" base="Screensaver" />
 	</screen>
 
-	<screen name="ScreensaverBeyonwiz" position="0,0" size="1280,720" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
+	<screen name="ScreensaverBeyonwiz" position="fill" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
 		<widget name="picture" pixmap="images/beyonwiz.png" position="0,0" size="220,80" alphatest="blend" transparent="0" />
 	</screen>
 
-	<screen name="ScreensaverEnigma2" position="0,0" size="1280,720" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
+	<screen name="ScreensaverEnigma2" position="fill" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
 		<widget name="picture" pixmap="images/openvix.png" position="0,0" size="220,84" alphatest="blend" transparent="0" />
 	</screen>
 
 <!-- Virtual Keyboard -->
 
 	<!-- This is the full screen version of the VirtualKeyBoard... -->
-	<screen name="VirtualKeyBoard" title="Virtual Keyboard" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="VirtualKeyBoard" title="Virtual Keyboard" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_shuffle.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="prompt" position="420,80" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
@@ -2245,7 +2245,7 @@ self.autoResize()
 
 <!-- Command Prompt Output -->
 
-	<screen name="Console" title="Command execution..." position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="Console" title="Command execution..." position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="text" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>

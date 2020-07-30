@@ -19,7 +19,7 @@
 					MultiContentEntryText(pos = (10, 0), size = (20, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
 					MultiContentEntryText(pos = (40, 0), size = (290, 25), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2)
 					],
-				"fonts": [gFont("Regular", 18), gFont("Regular", 20)],
+				"fonts": [parseFont("Regular;18"), parseFont("Regular;20")],
 				"itemHeight": 25
 				}
 			</convert>
@@ -27,7 +27,7 @@
 	</screen>
 	-->
 
-	<screen name="HistoryZapSelector" title="History Zap..." position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="HistoryZapSelector" title="History Zap..." position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tv_zaphistory.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
@@ -41,7 +41,7 @@
 					MultiContentEntryText(pos = (140, 32), size = (670, 20), font = 2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3, color = "InfoProgramNow", color_sel = "InfoProgramSelected"),
 					MultiContentEntryText(pos = (140, 52), size = (670, 20), font = 3, flags = RT_HALIGN_LEFT, text = 5, color = "InfoTimesNow", color_sel = "InfoTimesSelected"),
 					],
-				"fonts": [gFont("Regular", 22), gFont("Regular", 20), gFont("Regular", 17), gFont("Regular", 16)],
+				"fonts": [parseFont("Regular;22"), parseFont("Regular;20"), parseFont("Regular;17"), parseFont("Regular;16")],
 				"itemHeight": 80
 				}
 			</convert>
@@ -50,7 +50,7 @@
 
 <!-- ??? - ToDo! -->
 
-	<screen name="ZapHistoryBrowser" title="Setup" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="ZapHistoryBrowser" title="Setup" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tv_zaphistory.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="list" position="590,170" size="610,415" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="0" />
@@ -58,7 +58,7 @@
 
 <!-- FAV - TV Channel Selection -->
 
-	<screen name="ChannelSelection" title="Channel Selection" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="ChannelSelection" title="Channel Selection" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonInfo" />
@@ -171,7 +171,7 @@
 		</panel>
 	</screen>
 
-	<screen name="ChannelContextMenu" title="Channel Selection Context Menu" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="ChannelContextMenu" title="Channel Selection Context Menu" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<ePixmap pixmap="menus/mainmenu_tv_live.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
@@ -180,7 +180,7 @@
 
 <!-- Screen names change for "Simple" mode channel selection -> "SlimChannelSelection", "SimpleChannelSelection", "ChannelSelection" -->
 
-	<screen name="SlimChannelSelection" title="Channel Selection" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="SlimChannelSelection" title="Channel Selection" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonInfo" />
@@ -195,7 +195,7 @@
 			progressbarHeight="6" progressbarBorderWidth="1" progressBarWidth="50" scrollbarMode="showOnDemand" serviceInfoFont="FAVEventFont;20" serviceItemHeight="25" serviceNameFont="FAVServiceFont;20" serviceNumberFont="FAVLCNFont;20" transparent="0" />
 	</screen>
 
-	<screen name="SimpleChannelSelection" title="Channel Selection" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="SimpleChannelSelection" title="Channel Selection" position="fill" flags="wfNoBorder">
 		<panel name="SlimChannelSelection" />
 	</screen>
 
@@ -261,7 +261,7 @@
 						MultiContentEntryText(pos = (535, 0), size = (105, 25), font = 1, flags = RT_HALIGN_RIGHT, text = 5), # selection,
 						], False, "showNever")
 					},
-				"fonts": [gFont("Regular", 20), gFont("Regular", 20)],
+				"fonts": [parseFont("Regular;20"), parseFont("Regular;20")],
 				"itemHeight": 25
 				}
 			</convert>
@@ -270,11 +270,11 @@
 
 <!-- HbbTV -->
 
-	<screen name="HbbTVWindow" title="HbbTV Plugin" position="0,0" size="1280,720" backgroundColor="ScreenTransparent" flags="wfNoBorder" />
+	<screen name="HbbTVWindow" title="HbbTV Plugin" position="fill" backgroundColor="ScreenTransparent" flags="wfNoBorder" />
 
-	<screen name="HbbTVHelper" title=" " position="0,0" size="1280,720" backgroundColor="ScreenTransparent" flags="wfNoBorder" />
+	<screen name="HbbTVHelper" title=" " position="fill" backgroundColor="ScreenTransparent" flags="wfNoBorder" />
 
-	<screen name="HbbTVBrowserBookmarkWindow" title="HbbTV Browser Bookmarks" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="HbbTVBrowserBookmarkWindow" title="HbbTV Browser Bookmarks" position="fill" flags="wfNoBorder">
 		<panel name="OperaBrowserBookmarkWindow" />
 	</screen>
 

@@ -89,7 +89,7 @@
 
 <!-- OK - Main TV InfoBar -->
 
-	<screen name="InfoBar" title="TV Information Bar" position="0,0" size="1280,720" backgroundColor="TransparentBackground" flags="wfNoBorder">
+	<screen name="InfoBar" title="TV Information Bar" position="fill" backgroundColor="TransparentBackground" flags="wfNoBorder">
 		<panel name="InfoBarCommon" />
 		<widget name="serviceName" position="0,0" size="0,0" conditional="serviceName" transparent="1" />
 		<widget name="serviceName1" position="0,0" size="0,0" conditional="serviceName1" transparent="1" />
@@ -103,7 +103,7 @@
 
 <!-- OK > OK - Second TV InfoBar With Now/Next Extended Information -->
 
-	<screen name="SecondInfoBar" title="Detailed Information Bar" position="0,0" size="1280,720" backgroundColor="TransparentBackground" flags="wfNoBorder">
+	<screen name="SecondInfoBar" title="Detailed Information Bar" position="fill" backgroundColor="TransparentBackground" flags="wfNoBorder">
 		<panel name="InfoBarCommon" />
 		<panel position="50,160" size="580,380">
 			<panel name="SecondInfoBarNow" />
@@ -317,7 +317,7 @@
 
 <!-- MEDIA > OK - Media Player InfoBar -->
 
-	<screen name="MoviePlayer" title="Media Player" position="0,0" size="1280,720" backgroundColor="TransparentBackground" flags="wfNoBorder">
+	<screen name="MoviePlayer" title="Media Player" position="fill" backgroundColor="TransparentBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplateClock" />
 		<eLabel position="0,650" size="1280,70" backgroundColor="InfobarMediaBackground" transparent="0" zPosition="-1" />
 		<eLabel position="172,660" size="2,50" backgroundColor="Pinstripe" />
@@ -360,7 +360,7 @@
 
 <!-- INFO - Event Info View -->
 
-	<screen name="EventView" title="Event View" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="EventView" title="Event View" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonInfo" />
@@ -419,7 +419,7 @@
 
 <!-- MEDIA > INFO - Event Info View -->
 
-	<screen name="EventViewSimple" title="Simple Event View" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="EventViewSimple" title="Simple Event View" position="fill" flags="wfNoBorder">
 		<panel name="EventView" />
 	</screen>
 
@@ -580,7 +580,7 @@
 		</widget>
 	</screen>
 
-	<screen name="InfoBarTimersShow" title="Show Timers" position="0,0" size="1280,720" backgroundColor="background" flags="wfNoBorder">
+	<screen name="InfoBarTimersShow" title="Show Timers" position="fill" backgroundColor="background" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="Icons" position="0,0" size="20,20" pixmaps="icons/timer_off.png,icons/timer_wait.png,icons/timer_prep.png,icons/timer_rec.png,icons/timer_zap.png,icons/timer_failed.png,icons/timer_done.png,icons/timer_autotimer.png,icons/timer_rep.png" alphatest="blend" transparent="1" />
 		<widget source="Timers" render="Listbox" position="50,80" size="1180,520" transparent="1">

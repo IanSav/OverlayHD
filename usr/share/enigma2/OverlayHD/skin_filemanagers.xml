@@ -2,7 +2,7 @@
 
 <!-- MENU - File Browser -->
 
-	<screen name="FilebrowserScreen" title="File Browser" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="FilebrowserScreen" title="File Browser" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<widget name="red" position="172,670" size="225,35" backgroundColor="ButtonRed" font="ButtonFont;20" conditional="red" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
@@ -13,7 +13,7 @@
 		<widget name="list_right" position="650,80" size="580,555" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
-	<screen name="FilebrowserConfigScreen" title="File Browser Settings" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="FilebrowserConfigScreen" title="File Browser Settings" position="fill" flags="wfNoBorder">
 		<panel name="Setup" />
 		<widget name="buttonred" position="172,670" size="225,35" backgroundColor="ButtonRed" font="ButtonFont;20" conditional="buttonred" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget name="buttongreen" position="409,670" size="225,35" backgroundColor="ButtonGreen" conditional="buttongreen" font="ButtonFont;20" foregroundColor="ButtonText" halign="center" transparent="1" valign="center" zPosition="+1" />
@@ -23,7 +23,7 @@
 
 <!-- MENU - File Commander -->
 
-	<screen name="FileCommanderScreen" title="File Commander" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="FileCommanderScreen" title="File Commander" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonInfo" />
@@ -31,14 +31,14 @@
 		<panel name="FileCommanderFileListPanel"/>
 	</screen>
 
-	<screen name="FileCommanderScreenFileSelect" title="File Commander - File Selection" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="FileCommanderScreenFileSelect" title="File Commander - File Selection" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonInfo" />
 		<panel name="ScreenTemplateButtonHelp" />
 		<panel name="FileCommanderFileListPanel"/>
 	</screen>
 
-	<screen name="FileCommanderFileListPanel" position="0,0" size="1280,720">
+	<screen name="FileCommanderFileListPanel" position="fill">
 		<eLabel position="640,66" size="2,595" backgroundColor="Pinstripe" />
 		<widget name="list_left_head" position="50,80" size="580,60" backgroundColor="TextBackground" conditional="list_left_head" font="Regular;18" foregroundColor="Text" transparent="1" valign="center" />
 		<widget name="list_left_head1" position="50,80" size="580,40" backgroundColor="TextBackground" conditional="list_left_head1" font="Regular;18" foregroundColor="Text" transparent="1" valign="center" />
@@ -51,7 +51,7 @@
 					MultiContentEntryText(pos = (160, 0), size = (290, 20), font = 0, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 13),  # index 13 is the modification time
 					MultiContentEntryText(pos = (460, 0), size = (105, 20), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 11),  # index 11 is the scaled size
 					],
-				"fonts": [gFont("Regular", 18)],
+				"fonts": [parseFont("Regular;18")],
 				"itemHeight": 20,
 				"selectionEnabled": False
 				}
@@ -69,7 +69,7 @@
 					MultiContentEntryText(pos = (160, 0), size = (290, 20), font = 0, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 13),  # index 13 is the modification time
 					MultiContentEntryText(pos = (460, 0), size = (105, 20), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 11),  # index 11 is the scaled size
 					],
-				"fonts": [gFont("Regular", 18)],
+				"fonts": [parseFont("Regular;18")],
 				"itemHeight": 20,
 				"selectionEnabled": False
 				}
@@ -78,14 +78,14 @@
 		<widget name="list_right" position="650,140" size="580,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
-	<screen name="FileCommanderContextMenu" title="File Commander - Context Menu" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="FileCommanderContextMenu" title="File Commander - Context Menu" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<ePixmap pixmap="menus/mainmenu_tasks_browser.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateMenu0" />
 	</screen>
 
-	<screen name="FileCommanderFileStatInfo" title="File Commander - File/Directory Information" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="FileCommanderFileStatInfo" title="File Commander - File/Directory Information" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="filename" position="400,80" size="830,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" />
 		<widget source="list" render="Listbox" position="400,140" size="830,275" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1">
@@ -96,7 +96,7 @@
 					MultiContentEntryText(pos = (0, 0), size = (200, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),  # index 0 is a label
 					MultiContentEntryText(pos = (220, 0), size = (590, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),  # index 1 is the information
 					],
-				"fonts": [gFont("Regular", 20)],
+				"fonts": [parseFont("Regular;20")],
 				"itemHeight": 25,
 				"selectionEnabled": False
 				}
@@ -108,11 +108,11 @@
 	</screen>
 
 	<!-- This screen is now handled by the built in Setup screen!
-	<screen name="FileCommanderConfigScreen" title="File Commander Settings" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="FileCommanderConfigScreen" title="File Commander Settings" position="fill" flags="wfNoBorder">
 		<panel name="Setup" />
 	</screen>
 
-	<screen name="FileCommanderConfigScreen" title="File Commander Settings" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="FileCommanderConfigScreen" title="File Commander Settings" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonHelp" />
 		<widget name="menuimage" position="50,100" size="300,500" alphatest="blend" conditional="menuimage" transparent="1" />
@@ -125,7 +125,7 @@
 	<!-- No longer used!
 		s, w, h = 30, getDesktop(0).size().width(), getDesktop(0).size().height()
 		(s, s, w - (s * 2), h - (s * 2), s + 5, s + 2, s + 25, s + 2, s + 45, s, w - (s * 2) - 50)
-	<screen name="ImageViewer" title="File Commander - Image Viewer" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="ImageViewer" title="File Commander - Image Viewer" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<eLabel position="0,0" size="1280,720" backgroundColor="Black" />
 		<widget name="image" position="%d,%d" size="%d,%d" alphatest="blend" zPosition="+1" />
@@ -135,14 +135,14 @@
 	</screen>
 	-->
 
-	<screen name="vEditor" title="File Commander - Editor" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="vEditor" title="File Commander - Editor" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonHelp" />
 		<widget name="list_head" position="50,80" size="1180,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" />
 		<widget name="filedata" position="50,115" size="1180,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
-	<screen name="ArchiverMenuScreen" title="File Commander - Archiver" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="ArchiverMenuScreen" title="File Commander - Archiver" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_source_mount.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateListLeftHead" />
@@ -150,39 +150,39 @@
 		<panel name="ScreenTemplateUnpacking4" />
 	</screen>
 
-	<screen name="GunzipMenuScreen" title="File Commander - Archiver" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="GunzipMenuScreen" title="File Commander - Archiver" position="fill" flags="wfNoBorder">
 		<panel name="ArchiverMenuScreen" />
 	</screen>
 
-	<screen name="ipkMenuScreen" title="File Commander - Archiver" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="ipkMenuScreen" title="File Commander - Archiver" position="fill" flags="wfNoBorder">
 		<panel name="ArchiverMenuScreen" />
 	</screen>
 
-	<screen name="RarMenuScreen" title="File Commander - Archiver" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="RarMenuScreen" title="File Commander - Archiver" position="fill" flags="wfNoBorder">
 		<panel name="ArchiverMenuScreen" />
 	</screen>
 
-	<screen name="TarMenuScreen" title="File Commander - Archiver" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="TarMenuScreen" title="File Commander - Archiver" position="fill" flags="wfNoBorder">
 		<panel name="ArchiverMenuScreen" />
 	</screen>
 
-	<screen name="UnzipMenuScreen" title="File Commander - Archiver" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="UnzipMenuScreen" title="File Commander - Archiver" position="fill" flags="wfNoBorder">
 		<panel name="ArchiverMenuScreen" />
 	</screen>
 
-	<screen name="ArchiverInfoScreen" title="File Commander - Archiver" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="ArchiverInfoScreen" title="File Commander - Archiver" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateListLeftHead" />
 		<panel name="ScreenTemplateListLeftData0" />
 	</screen>
 
-	<screen name="UnpackInfoScreen" title="File Commander - Archiver" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="UnpackInfoScreen" title="File Commander - Archiver" position="fill" flags="wfNoBorder">
 		<panel name="ArchiverInfoScreen" />
 	</screen>
 
 <!-- MEDIA - Movie Selection Menu -->
 
-	<screen name="MovieSelection" title="Media Selection" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="MovieSelection" title="Media Selection" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonInfo" />
@@ -260,7 +260,7 @@
 		<widget name="movie_sort" position="735,630" size="35,20" pixmaps="icons/ms_az_no.png,icons/ms_no_az.png,icons/ms_shuffle.png,icons/ms_za_on.png,icons/ms_on_za.png,icons/ms_faz.png,icons/ms_fza.png,icons/ms_rec.png,icons/ms_az_on.png,icons/ms_za_no.png,icons/ms_sl.png,icons/ms_ls.png,icons/ms_sb.png,icons/ms_bs.png,icons/ms_daz.png" alphatest="blend" transparent="1" />
 	</screen>
 
-	<screen name="MovieSelectionSlim" title="Media Selection" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="MovieSelectionSlim" title="Media Selection" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonInfo" />
@@ -317,53 +317,53 @@
 			font="MovieSelectionFont;20" pbarHeight="10" pbarLargeWidth="45" spaceIconeText="5" iconsWidth="25" spaceRight="5" dateWidth="140" lenWidth="60" sizeWidth="70" />
 	</screen>
 
-	<screen name="MovieSelectionLocations" title="Media Selection Locations" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="MovieSelectionLocations" title="Media Selection Locations" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_video.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateChoiceList0" />
 		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />
 	</screen>
 
-	<screen name="MovieSelectionOnEnd" title="Media Selection On End Of Media" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="MovieSelectionOnEnd" title="Media Selection On End Of Media" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_video.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateChoiceList0" />
 		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />
 	</screen>
 
-	<screen name="MovieSelectionRecordings" title="Media Selection Recordings" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="MovieSelectionRecordings" title="Media Selection Recordings" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_video.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateChoiceList0" />
 		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />
 	</screen>
 
-	<screen name="MovieSelectionSort" title="Media Selection Sort" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="MovieSelectionSort" title="Media Selection Sort" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_video.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateChoiceList0" />
 		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />
 	</screen>
 
-	<screen name="MovieListTags" title="Media Selection Tags" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="MovieListTags" title="Media Selection Tags" position="fill" flags="wfNoBorder">
 		<panel name="MovieSelectionTags" />
 	</screen>
 
-	<screen name="MovieSelectionTags" title="Media Selection Tags" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="MovieSelectionTags" title="Media Selection Tags" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_video.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateChoiceList0" />
 		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />
 	</screen>
 
-	<screen name="MovieContextMenu" title="Media Selection Menu" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="MovieContextMenu" title="Media Selection Menu" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_video.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateSConfig0" />
 		<widget name="footnote" position="0,0" size="0,0" alphatest="blend" transparent="1" />
 	</screen>
 
-	<screen name="MovieBrowserConfiguration" title="Media Selection Setup" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="MovieBrowserConfiguration" title="Media Selection Setup" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_video.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
@@ -373,7 +373,7 @@
 
 <!-- Location Box -->
 
-	<screen name="LocationBox" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="LocationBox" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonHelp" />
@@ -392,7 +392,7 @@
 
 <!-- Media Player plug in uses "MediaPlayerDirectoryBrowser" first and then "FileBrowser" if the first is not found. -->
 
-	<screen name="FileManager" title="File Manager" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="FileManager" title="File Manager" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<widget name="list_left_text" position="90,70" size="150,35" backgroundColor="TextBackground" font="Regular;28" foregroundColor="White" transparent="1" zPosition="1" />
@@ -403,13 +403,13 @@
 
 <!-- Movie Location Box -->
 
-	<screen name="MovieLocationBox" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="MovieLocationBox" position="fill" flags="wfNoBorder">
 		<panel name="LocationBox" />
 	</screen>
 
 <!-- Timeshift Location Box -->
 
-	<screen name="TimeshiftLocationBox" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="TimeshiftLocationBox" position="fill" flags="wfNoBorder">
 		<panel name="LocationBox" />
 	</screen>
 </skin>

@@ -5,7 +5,7 @@
 
 <!-- MENU > Power - Power / Restart Menu -->
 
-	<screen name="menu_shutdown" title="Power / Restart" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="menu_shutdown" title="Power / Restart" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="blend" transparent="1" /> -->
 		<panel name="ShutdownEnigma2" base="Shutdown" />
@@ -13,7 +13,7 @@
 		<widget name="charframe" position="0,0" size="0,0" conditional="charframe" transparent="1" />
 	</screen>
 
-	<screen name="Menu_shutdown" title="Power / Restart" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="Menu_shutdown" title="Power / Restart" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="blend" transparent="1" /> -->
 		<panel name="ShutdownEnigma2" base="Shutdown" />
@@ -88,7 +88,7 @@
 		</widget>
 	</screen>
 
-	<screen name="QuitMainloopScreen" title="Power / Restart" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="QuitMainloopScreen" title="Power / Restart" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="OverlayHD/menus/mainmenu_shuffle.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateOverlayText0" />
@@ -100,7 +100,7 @@
 
 <!-- Information (MENU > Information) Menu -->
 
-	<screen name="menu_information" title="Information" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="menu_information" title="Information" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="blend" transparent="1" /> -->
 		<panel name="InformationEnigma2" base="Information" />
@@ -108,7 +108,7 @@
 		<widget name="charframe" position="0,0" size="0,0" conditional="charframe" transparent="1" />
 	</screen>
 
-	<screen name="Menu_information" title="Information" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="Menu_information" title="Information" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="blend" transparent="1" /> -->
 		<panel name="InformationEnigma2" base="Information" />
@@ -116,7 +116,7 @@
 		<widget name="charframe" position="0,0" size="0,0" conditional="charframe" transparent="1" />
 	</screen>
 
-	<screen name="InformationBeyonwiz" title="Information(Skin)" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="InformationBeyonwiz" title="Information(Skin)" position="fill" flags="wfNoBorder">
 		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -152,7 +152,7 @@
 		</widget>
 	</screen>
 
-	<screen name="InformationEnigma2" title="Information(Skin)" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="InformationEnigma2" title="Information(Skin)" position="fill" flags="wfNoBorder">
 		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -189,7 +189,7 @@
 
 <!-- About Information (MENU > Information > About) Screen -->
 
-	<screen name="About" title="About" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="About" title="About" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_info.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="list" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
@@ -206,7 +206,7 @@
 					MultiContentEntryText(pos = (20, 0), size = (215, 25), font = 0, flags = RT_HALIGN_LEFT, text = 3), # Index 3
 					MultiContentEntryText(pos = (260, 0), size = (530, 25), font = 0, flags = RT_HALIGN_LEFT, text = 4) # Index 4
 					],
-				"fonts": [gFont("Regular", 20)],
+				"fonts": [parseFont("Regular;20")],
 				"itemHeight": 25,
 				"selectionEnabled": False
 				}
@@ -215,7 +215,7 @@
 		<!-- <widget name="AboutScrollLabel" position="400,80" size="830,550" font="Regular;22" transparent="1" /> -->
 	</screen>
 
-	<screen name="AboutOE" title="About" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="AboutOE" title="About" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_info.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="lab1" render="Label" position="50,575" size="458,25" font="Boldit;24" transparent="1" />
@@ -226,13 +226,13 @@
 
 <!-- Devices Information (MENU > Information > Devices) Screen -->
 
-	<screen name="Devices" title="Device Information" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="Devices" title="Device Information" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_backup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="DevicesEnigma2" base="Devices" />
 	</screen>
 
-	<screen name="DevicesBeyonwiz" title="Device Information" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="DevicesBeyonwiz" title="Device Information" position="fill" flags="wfNoBorder">
 		<widget source="list" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
@@ -260,7 +260,7 @@
 					MultiContentEntryText(pos = (45, 0), size = (745, 25), font = 0, flags = RT_HALIGN_LEFT, text = 12, color = "TextIndented"), # Index C
 					MultiContentEntryText(pos = (45, 0), size = (745, 25), font = 0, flags = RT_HALIGN_LEFT, text = 13, color = "TextIndented") # Index D
 					],
-				"fonts": [gFont("Regular", 20)],
+				"fonts": [parseFont("Regular;20")],
 				"itemHeight": 25,
 				"selectionEnabled": False
 				}
@@ -279,13 +279,13 @@
 
 <!-- Memory Information (MENU > Information > Memory) Screen -->
 
-	<screen name="SystemMemoryInfo" title="Memory Information" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="SystemMemoryInfo" title="Memory Information" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_browser.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="SystemMemoryInfoEnigma2" base="SystemMemoryInfo" />
 	</screen>
 
-	<screen name="SystemMemoryInfoBeyonwiz" title="Memory Information" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="SystemMemoryInfoBeyonwiz" title="Memory Information" position="fill" flags="wfNoBorder">
 		<widget source="list" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
@@ -297,7 +297,7 @@
 					MultiContentEntryText(pos = (45, 0), size = (195, 25), font = 0, flags = RT_HALIGN_LEFT, text = 1, color = "TextIndented"), # Index 1
 					MultiContentEntryText(pos = (260, 0), size = (530, 25), font = 0, flags = RT_HALIGN_LEFT, text = 2, color = "TextIndented") # Index 2
 					],
-				"fonts": [gFont("Regular", 20)],
+				"fonts": [parseFont("Regular;20")],
 				"itemHeight": 25,
 				"selectionEnabled": False
 				}
@@ -306,7 +306,7 @@
 		<!-- <widget name="AboutScrollLabel" position="400,80" size="830,550" font="Regular;22" transparent="1" /> -->
 	</screen>
 
-	<screen name="SystemMemoryInfoEnigma2" title="Memory Information" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="SystemMemoryInfoEnigma2" title="Memory Information" position="fill" flags="wfNoBorder">
 		<widget source="lab1" render="Label" position="50,575" size="458,25" font="Boldit;24" transparent="1" />
 		<widget source="lab2" render="Label" position="50,600" size="458,25" font="Italic;19" transparent="1" />
 		<widget source="lab3" render="Label" position="50,625" size="458,25" font="Italic;19" transparent="1" />
@@ -322,13 +322,13 @@
  |	the first place.
  +-->
 
-	<screen name="SystemNetworkInfo" title="Network Information" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="SystemNetworkInfo" title="Network Information" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="SystemNetworkInfoEnigma2" base="SystemNetworkInfo" />
 	</screen>
 
-	<screen name="SystemNetworkInfoBeyonwiz" title="Network Information" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="SystemNetworkInfoBeyonwiz" title="Network Information" position="fill" flags="wfNoBorder">
 		<eLabel text="Hostname:" position="420,80" size="225,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
 		<widget name="hostname" position="660,80" size="450,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
 		<eLabel text="Internet:" position="950,80" size="150,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
@@ -356,7 +356,7 @@
 					# MultiContentEntryPixmapAlphaTest(pos = (750, 6), size = (15, 16), png = 9) # Index 9
 					MultiContentEntryPixmapAlphaTest(pos = (750, 3), size = (22, 22), png = 9) # Index 9
 					],
-				"fonts": [gFont("Regular", 20)],
+				"fonts": [parseFont("Regular;20")],
 				"itemHeight": 25,
 				"selectionEnabled": False
 				}
@@ -371,7 +371,7 @@
 		-->
 	</screen>
 
-	<screen name="SystemNetworkInfoEnigma2" title="Network Information" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="SystemNetworkInfoEnigma2" title="Network Information" position="fill" flags="wfNoBorder">
 		<widget source="IFtext" render="Label" position="400,80" size="150,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
 		<widget source="IF" render="Label" position="560,80" size="450,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
 		<widget source="Statustext" render="Label" position="400,105" size="150,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
@@ -381,17 +381,17 @@
 
 <!-- Sevice Information (MENU > Information > Service) Screens -->
 
-	<screen name="ServiceInfo" title="Service Information" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="ServiceInfo" title="Service Information" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tv_live.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ServiceInfoEnigma2" base="ServiceInfo" />
 	</screen>
 
-	<screen name="ServiceInfoSimple" title="Service Information" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="ServiceInfoSimple" title="Service Information" position="fill" flags="wfNoBorder">
 		<panel name="ServiceInfo" />
 	</screen>
 
-	<screen name="ServiceInfoBeyonwiz" title="Service Information" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="ServiceInfoBeyonwiz" title="Service Information" position="fill" flags="wfNoBorder">
 		<widget source="list" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
@@ -401,7 +401,7 @@
 					MultiContentEntryText(pos = (20, 0), size = (215, 25), font = 0, flags = RT_HALIGN_LEFT, text = 0), # Index 0
 					MultiContentEntryText(pos = (260, 0), size = (530, 25), font = 0, flags = RT_HALIGN_LEFT, text = 1) # Index 1
 					],
-				"fonts": [gFont("Regular", 20)],
+				"fonts": [parseFont("Regular;20")],
 				"itemHeight": 25,
 				"selectionEnabled": False
 				}
@@ -409,30 +409,30 @@
 		</widget>
 	</screen>
 
-	<screen name="ServiceInfoEnigma2" title="Service Information" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="ServiceInfoEnigma2" title="Service Information" position="fill" flags="wfNoBorder">
 		<widget name="infolist" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" />
 	</screen>
 
 <!-- Extra OpenViX Information Screens -->
 
-	<screen name="StreamingClientsInfo" title="Streaming Client Information" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="StreamingClientsInfo" title="Streaming Client Information" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="ScrollLabel" position="400,80" size="830,550" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" />
 	</screen>
 
-	<screen name="TranslationInfo" title="Translation Information" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="TranslationInfo" title="Translation Information" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<eLabel text="Translation:" position="400,80" size="830,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
 		<widget source="TranslatorName" render="Label" position="400,105" size="830,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
 		<widget source="TranslationInfo" render="Label" position="400,130" size="830,450" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1"/>
 	</screen>
 
-	<screen name="AboutReleaseNotes" title="Release Notes" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="AboutReleaseNotes" title="Release Notes" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="list" position="400,80" size="830,560" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" />
 	</screen>
 
-	<screen name="SoftwareUpdateChanges" title="Software Update Changes" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="SoftwareUpdateChanges" title="Software Update Changes" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<!-- <widget source="Title" render="Label" position="20,25" size="800,43" font="Boldit;32" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1"/> -->
 		<widget name="text" position="50,80" size="1180,550" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" />
@@ -442,14 +442,14 @@
  |	System Logs
  +-->
 
-	<screen name="LogManager" title="System Log" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="LogManager" title="System Log" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="list" position="400,80" size="830,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
 		<panel name="ScreenTemplateFrame830x120" />
 		<widget name="LogsSize" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
-	<screen name="LogManagerViewLog" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="LogManagerViewLog" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="list" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
@@ -458,7 +458,7 @@
  |	Extension List
  +-->
 
-	<screen name="ExtensionsList" title="Choose Extension" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="ExtensionsList" title="Choose Extension" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_plugins.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateChoiceList0" />
@@ -469,7 +469,7 @@
  |	Console / Task List
  +-->
 
-	<screen name="TaskListScreen" title="Task List" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="TaskListScreen" title="Task List" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_scan.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="tasklist" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
@@ -482,7 +482,7 @@
 					MultiContentEntryProgress(pos = (320, 28), size = (400, 19), percent = -3), # Progress
 					MultiContentEntryText(pos = (730, 25), size = (80, 25), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4), # Percentage
 					],
-				"fonts": [gFont("Regular", 20)],
+				"fonts": [parseFont("Regular;20")],
 				"itemHeight": 50
 				}
 			</convert>
@@ -495,7 +495,7 @@
 
 <!-- TIMER | SLEEP - Sleep / PowerTimer Timer List Menu -->
 
-	<screen name="TimerEditList" title="Timer List" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="TimerEditList" title="Timer List" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonInfo" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
@@ -505,7 +505,7 @@
 
 <!-- Timer Log -->
 
-	<screen name="TimerLogDefault" title="Timer Log" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="TimerLogDefault" title="Timer Log" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateLogList4" />
@@ -516,7 +516,7 @@
 		-->
 	</screen>
 
-	<screen name="TimerLog" title="Timer Log" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="TimerLog" title="Timer Log" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateLogList4" />
@@ -525,7 +525,7 @@
 
 <!-- Timer Entry -->
 
-	<screen name="TimerEntry" title="Timer Entry" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="TimerEntry" title="Timer Entry" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonHelp" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
@@ -535,7 +535,7 @@
 
 <!-- Timer Sanity Conflict -->
 
-	<screen name="TimerSanityConflict" title="Timer Sanity Error" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="TimerSanityConflict" title="Timer Sanity Error" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget source="lab1" render="Label" position="120,85" size="510,24" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" halign="center" transparent="1" valign="center" />
 		<widget source="lab2" render="Label" position="650,85" size="510,24" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" halign="center" transparent="1" valign="center" />
@@ -545,7 +545,7 @@
 
 <!-- Timer Selection ??? -->
 
-	<screen name="TimerSelection" title="Timer Selection" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="TimerSelection" title="Timer Selection" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateTimerList4" />
 		<panel name="ScreenTemplateDescription4" />
@@ -564,7 +564,7 @@
 
 <!-- Original Sleep Timer List Menu ??? - Unused -->
 
-	<screen name="SleepTimerEdit" title="Power / Sleep Timer" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="SleepTimerEdit" title="Power / Sleep Timer" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<!--
 		<ePixmap pixmap="icons/clock.png" position="50,30" size="14,14" alphatest="blend" zPosition="3" />
@@ -593,7 +593,7 @@
 
 <!-- AutoTimer Plugin -->
 
-	<screen name="AutoTimerOverview" title="Auto Timer Overview" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="AutoTimerOverview" title="Auto Timer Overview" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonHelp" />
@@ -601,51 +601,51 @@
 		<panel name="ScreenTemplateEntriesTall0" />
 	</screen>
 
-	<screen name="AutoTimerHelp" title="Auto Timer Help" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="AutoTimerHelp" title="Auto Timer Help" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateHelp0" />
 	</screen>
 
-	<screen name="AutoTimerFAQ" title="Auto Timer Help" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="AutoTimerFAQ" title="Auto Timer Help" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateHelp0" />
 	</screen>
 
-	<screen name="AutoTimerPreview" title="Auto Timer Overview" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="AutoTimerPreview" title="Auto Timer Overview" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateTimerList0" />
 	</screen>
 
-	<screen name="AutoTimerSettings" title="Auto Timer Settings" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="AutoTimerSettings" title="Auto Timer Settings" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateSHelp4" />
 	</screen>
 
-	<screen name="AutoTimerImporter" title="Auto Timer Importer" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="AutoTimerImporter" title="Auto Timer Importer" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateChoiceList0" />
 	</screen>
 
-	<screen name="AutoTimerEditor" title="Auto Timer Editor" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="AutoTimerEditor" title="Auto Timer Editor" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateSHelp4" />
 	</screen>
 
-	<screen name="AutoTimerFilterEditor" title="Auto Timer Filter Editor" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="AutoTimerFilterEditor" title="Auto Timer Filter Editor" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig0" />
 	</screen>
 
-	<screen name="AutoTimerServiceEditor" title="Auto Timer Service Editor" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="AutoTimerServiceEditor" title="Auto Timer Service Editor" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateConfig0" />
@@ -675,7 +675,7 @@
 
 <!-- Cron Timer Screens -->
 
-	<screen name="CronTimers" title="Cron Manager" position="0,0" size="1280,720" flags="wfNoBorder">
+	<screen name="CronTimers" title="Cron Manager" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_system.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<eLabel position="400,80" size="830,420" backgroundColor="MenuBackground" zPosition="-1" />
@@ -719,7 +719,7 @@
 				"template": [
 					MultiContentEntryText(pos = (25, 7), size = (550, 30), flags = RT_HALIGN_LEFT, text = 0)
 					],
-				"fonts": [gFont("Regular", 24)],
+				"fonts": [parseFont("Regular;24")],
 				"itemHeight": 40
 				}
 			</convert>
