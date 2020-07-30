@@ -4,8 +4,9 @@
 	<screen name="EPGExtensionsList" title="EPG Extensions" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tv_epg.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
-		<widget name="text" position="360,30" size="870,35" borderColor="BannerBorder" borderWidth="1" conditional="text" font="TitleFont;25" foregroundColor="BannerTitle" halign="right" transparent="1" />
 		<panel name="ScreenTemplateChoiceList0" />
+		<widget name="text" position="50,600" size="585,25" backgroundColor="TextBackground" conditional="text" font="Regular;20" foregroundColor="Text" transparent="1" />
+		<widget name="description" position="645,600" size="585,25" backgroundColor="TextBackground" conditional="description" font="Regular;20" foregroundColor="Text" transparent="1" />
 	</screen>
 
 <!-- Panel To Display Wide EPG Event Information (1180 x 125 pixels) -->
