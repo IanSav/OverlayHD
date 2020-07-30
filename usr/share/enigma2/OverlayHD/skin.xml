@@ -520,6 +520,7 @@
 		<setup key="PicturePlayerSetup" image="menus/mainmenu_tasks_setup_photo.png" />
 		<setup key="MediaPlayerSettings" image="menus/mainmenu_tasks_setup_movie.png" />
 		<setup key="FileCommander" image="menus/mainmenu_tasks_setup_tv.png" />
+		<setup key="FactoryReset" image="menus/mainmenu_tasks_setup_factoryreset.png" />
 	</setups>
 
 	<windowstyle id="0" type="skinned">
