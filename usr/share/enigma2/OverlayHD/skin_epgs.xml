@@ -94,13 +94,21 @@
 <!-- Panel To Display EPG Time Line Bar (1180 x 30 pixels) -->
 
 	<screen name="EPGTimeLinePanel" title="Time Line" flags="wfNoBorder">
-		<widget name="timeline_text" position="0,0" size="1180,30" TimelineTicksOn="yes" TimelineTickAlignment="center" TimelineTextPadding="2" backgroundColor="EPGBackground" borderWidth="0" font="EPGTimeLineFont;20" foregroundColor="EPGTimeLine" transparent="1" />
+		<panel name="EPGTimeLinePanelEnigma2" base="EPGTimeLinePanel" />
 		<widget name="timeline0" position="0,22" size="2,7" pixmap="epg/timeline-tick.png" alphatest="blend" zPosition="+1" />
 		<widget name="timeline1" position="0,22" size="2,7" pixmap="epg/timeline-tick.png" alphatest="blend" zPosition="+1" />
 		<widget name="timeline2" position="0,22" size="2,7" pixmap="epg/timeline-tick.png" alphatest="blend" zPosition="+1" />
 		<widget name="timeline3" position="0,22" size="2,7" pixmap="epg/timeline-tick.png" alphatest="blend" zPosition="+1" />
 		<widget name="timeline4" position="0,22" size="2,7" pixmap="epg/timeline-tick.png" alphatest="blend" zPosition="+1" />
 		<widget name="timeline5" position="0,22" size="2,7" pixmap="epg/timeline-tick.png" alphatest="blend" zPosition="+1" />
+	</screen>
+
+	<screen name="EPGTimeLinePanelBeyonwiz" title="Time Line" flags="wfNoBorder">
+		<widget name="timeline_text" position="0,0" size="1180,30" TimelineTicksOn="yes" TimelineTickAlignment="center" TimelineTextPadding="2" backgroundColor="EPGBackground" borderWidth="0" font="EPGTimeLineFont;20" foregroundColor="EPGTimeLine" transparent="1" />
+	</screen>
+
+	<screen name="EPGTimeLinePanelEnigma2" title="Time Line" flags="wfNoBorder">
+		<widget name="timeline_text" position="0,0" size="1180,30" backgroundColor="EPGBackground" borderWidth="0" font="EPGTimeLineFont;20" foregroundColor="EPGTimeLine" transparent="1" />
 	</screen>
 
 <!-- EPG - Graphical EPG (Text and Graphics Modes) -->
