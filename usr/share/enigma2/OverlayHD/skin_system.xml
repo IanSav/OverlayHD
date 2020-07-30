@@ -94,6 +94,14 @@
 		<panel name="ScreenTemplateOverlayText0" />
 	</screen>
 
+<!-- MultiBoot Image Selector (MENU > Standby and Reset > MultiBoot Image Selector) Screen -->
+
+	<screen name="MultiBootSelector" title="MultiBoot Image Selector" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateConfig4" />
+		<panel name="ScreenTemplateSDescription4" />
+	</screen>
+
 <!--
  |	Information
  +-->
