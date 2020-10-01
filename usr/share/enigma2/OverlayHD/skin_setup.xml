@@ -374,50 +374,69 @@
 		<widget source="key_red" render="Label" position="c-140,e-45" size="140,40" backgroundColor="ButtonRed" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="1" />
 	</screen>
 
-<!-- MENU > Setup > Tuners > SatFinder - NO LONGER ENABLED IN MENUS! -->
+<!-- MENU > Setup > Tuners > Signal/Sat Finder -->
 
-	<screen name="Satfinder" title="Satfinder" position="fill" flags="wfNoBorder">
-		<ePixmap pixmap="icons/clock.png" position="50,30" size="14,14" alphatest="blend" zPosition="3" />
-		<widget source="global.CurrentTime" render="Label" position="75,30" size="80,20" backgroundColor="TextBackground" font="Named;16" foregroundColor="White" halign="left" transparent="1">
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="155,30" size="500,20" backgroundColor="TextBackground" font="Named;16" foregroundColor="White" halign="left" transparent="1">
-			<convert type="ClockToText">Date</convert>
-		</widget>
-		<eLabel position="50,102" size="1160,1" backgroundColor="Pinstripe" zPosition="2" />
-		<eLabel position="50,625" size="1160,1" backgroundColor="Pinstripe" zPosition="1" />
-		<widget name="header" position="890,80" size="320,22" backgroundColor="TextBackground" font="Named;20" foregroundColor="bluette" halign="right" transparent="1" zPosition="2" />
-		<!-- <panel name="ScreenTemplateConfig2"> -->
-		<widget name="config" position="590,170" size="610,418" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="0" zPosition="2" />
-<!--####-->		<!-- <ePixmap pixmap="frame/frame_400x400.png" position="150,195" size="400,400" alphatest="blend" /> -->
-		<ePixmap pixmap="icons/dish_scan.png" position="220,250" size="119,110" alphatest="blend" transparent="1" zPosition="1" />
-		<widget name="introduction" position="350,260" size="90,30" font="Regular;23" transparent="1" zPosition="2" />
-		<widget source="Frontend" render="Label" position="260,325" size="260,20" font="Regular;19" halign="center" transparent="1" valign="center" zPosition="2">
-			<convert type="FrontendInfo">SNRdB</convert>
-		</widget>
-		<eLabel name="snr" text="SNR:" position="180,405" size="60,22" font="Regular;21" halign="right" transparent="1" zPosition="1" />
-		<widget source="Frontend" render="Progress" position="242,406" size="200,14" backgroundColor="ProgressBackground" borderColor="ProgressBorder" borderWidth="2" foregroundColor="ProgressColour" transparent="1" zPosition="1">
+	<screen name="Satfinder" title="Signal Finder" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<panel name="ScreenTemplateConfigShort" />
+		<!-- <panel name="ScreenTemplateFootnote4" /> -->
+		<panel name="ScreenTemplateDescription4" />
+		<widget name="introduction" position="420,410" size="790,25" font="Regular;20" transparent="1" valign="center" />
+		<eLabel position="400,445" size="830,2" backgroundColor="Pinstripe" />
+		<eLabel position="400,445" size="2,95" backgroundColor="Pinstripe" />
+		<eLabel position="1228,445" size="2,95" backgroundColor="Pinstripe" />
+		<eLabel name="snr" text="SNR:" position="420,455" size="70,25" font="Regular;20" transparent="1" valign="center" />
+		<widget source="Frontend" render="Progress" position="500,460" size="200,15" backgroundColor="ProgressBackground" borderColor="ProgressBorder" borderWidth="2" foregroundColor="ProgressColour" transparent="1">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
-		<widget source="Frontend" render="Label" position="463,405" size="60,22" font="Regular;21" zPosition="1">
+		<widget source="Frontend" render="Label" position="710,455" size="80,25" font="Regular;20" halign="right" transparent="1" valign="center">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
-		<eLabel name="ber" text="BER:" position="180,445" size="60,22" font="Regular;21" halign="right" transparent="1" zPosition="1" />
-		<widget source="Frontend" render="Progress" position="242,446" size="200,14" backgroundColor="ProgressBackground" borderColor="ProgressBorder" borderWidth="2" foregroundColor="ProgressColour" transparent="1" zPosition="1">
+		<eLabel name="ber" text="BER:" position="420,480" size="70,25" font="Regular;20" transparent="1" valign="center" />
+		<widget source="Frontend" render="Progress" position="500,485" size="200,15" backgroundColor="ProgressBackground" borderColor="ProgressBorder" borderWidth="2" foregroundColor="ProgressColour" transparent="1">
 			<convert type="FrontendInfo">BER</convert>
 		</widget>
-		<widget source="Frontend" render="Label" position="463,445" size="60,22" font="Regular;21" zPosition="1">
+		<widget source="Frontend" render="Label" position="710,480" size="80,25" font="Regular;20" halign="right" transparent="1" valign="center">
 			<convert type="FrontendInfo">BER</convert>
 		</widget>
-		<eLabel name="lock" text="Lock:" position="200,530" size="240,22" font="Regular;21" />
-		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_on.png" position="463,525" size="80,23" alphatest="blend" zPosition="1">
+		<eLabel name="lock" text="Lock:" position="420,505" size="70,25" font="Regular;20" transparent="1" />
+		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_on.png" position="500,505" size="25,25" alphatest="blend">
 			<convert type="FrontendInfo">LOCK</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_off.png" position="463,525" size="80,23" alphatest="blend" zPosition="1">
+		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_off.png" position="500,505" size="25,25" alphatest="blend">
 			<convert type="FrontendInfo">LOCK</convert>
 			<convert type="ConditionalShowHide">Invert</convert>
 		</widget>
+		<widget source="Frontend" render="Label" position="550,505" size="150,20" font="Regular;20" halign="right" transparent="1" valign="center">
+			<convert type="FrontendInfo">SNRdB</convert>
+		</widget>
+		<widget source="pos" render="FixedLabel" text="Orb Pos:" position="930,460" size="100,25" font="Regular;20" transparent="1" valign="center">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="pos" render="Label" position="1040,460" size="170,25" font="Regular;20" halign="right" transparent="1" valign="center">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="onid" render="FixedLabel" text="ONID:" position="930,485" size="100,25" font="Regular;20" transparent="1" valign="center">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="onid" render="Label" position="1040,485" size="170,25" font="Regular;20" halign="right" transparent="1" valign="center">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="tsid" render="FixedLabel" text="TSID:" position="930,505" size="100,25" font="Regular;20" transparent="1" valign="center">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="tsid" render="Label" position="1040,505" size="170,25" font="Regular;20" halign="right" transparent="1" valign="center">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+	</screen>
+
+	<screen name="ServicesFound" title="Services Found" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<widget name="servicesfound" position="420,80" size="810,530" font="Regular;20" transparent="1" />
+		<widget name="legend" position="420,625" size="810,25" font="Regular;20" transparent="1" />
 	</screen>
 
 <!-- MENU > Setup > Tuners > (CI) Common Interface Assignment -->
