@@ -902,6 +902,32 @@
 		<panel name="ScreenTemplateFrame830x120" />
 	</screen>
 
+<!-- TerrestrialScan Plugin -->
+
+	<screen name="TerrestrialScan" position="0,0" size="e,50" flags="wfNoBorder">
+		<widget name="action" position="10,10" size="450,30" font="Regular;22" transparent="1" valign="center" />
+		<widget name="status" position="470,10" size="450,30" font="Regular;22" halign="center" transparent="1" valign="center" />
+		<widget name="tuner_text" position="935,10" size="25,30" font="LCD;22" halign="center" transparent="1" valign="center" />
+		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_on.png" position="970,11" size="30,27" alphatest="blend">
+			<convert type="FrontendInfo">LOCK</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="Frontend" render="Pixmap" pixmap="icons/lock_off.png" position="970,11" size="30,27" alphatest="blend">
+			<convert type="FrontendInfo">LOCK</convert>
+			<convert type="ConditionalShowHide">Invert</convert>
+		</widget>
+		<widget source="Frontend" render="Label" position="1010,10" size="90,30" conditional="Frontend" font="Regular;22" halign="right" transparent="1" valign="center">
+			<convert type="FrontendInfo">SNRdB</convert>
+		</widget>
+		<widget source="progress_text" render="Label" position="1110,10" size="90,30" font="Regular;20" halign="right" transparent="1" valign="center">
+			<convert type="ProgressToText">InText</convert>
+		</widget>
+		<!-- <widget name="progress" position="1095,34" size="90,6" backgroundColor="ProgressBackground" borderColor="ProgressBorder" borderWidth="2" foregroundColor="ProgressColour" transparent="1" /> -->
+		<widget source="progress_text" render="Label" position="1210,10" size="60,30" font="Regular;22" halign="right" transparent="1" valign="center">
+			<convert type="ProgressToText">InPercent</convert>
+		</widget>
+	</screen>
+
 <!-- Transcoding Plugin -->
 
 	<screen name="TranscodingSetup" title="Transcoding Setup" position="fill" flags="wfNoBorder">
