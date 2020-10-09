@@ -668,8 +668,8 @@
 
 	<screen name="YouTubeSearch" title="YouTube Search" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget name="menu" pixmap="buttons/button_block_menu.png" position="50,670" size="50,35" alphatest="blend" objectTypes="menu,Pixmap" transparent="1" />
-		<widget name="config" position="400,80" size="830,30" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnNever" transparent="0" />
+		<panel name="ScreenTemplateButtonMenu" />
+		<widget name="config" position="400,80" size="830,30" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showNever" transparent="0" />
 		<widget source="list" render="Listbox" position="400,120" size="830,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
