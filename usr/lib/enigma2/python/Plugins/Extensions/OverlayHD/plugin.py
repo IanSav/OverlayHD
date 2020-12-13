@@ -16,7 +16,7 @@
 # distributed.
 # ===================================================================
 
-PLUGIN_VERSION_NUMBER = "1.82C"
+PLUGIN_VERSION_NUMBER = "1.82D"
 
 import errno
 import shutil
@@ -367,6 +367,8 @@ fontElements = [
 	("FAVEventFont", "NemesisFlatline", textFontChoices),
 	("FAVLCNFont", "NemesisFlatline", textFontChoices),
 	("FAVServiceFont", "NemesisFlatline", textFontChoices),
+	("FileListFont", "NemesisFlatline", textFontChoices),
+	("FileListMultiFont", "NemesisFlatline", textFontChoices),
 	("FixedFont", "MPluss1M", fixedFontChoices),
 	("HelpFont", "NemesisFlatline", textFontChoices),
 	("InfoDescriptionFont", "NemesisFlatline", textFontChoices),
