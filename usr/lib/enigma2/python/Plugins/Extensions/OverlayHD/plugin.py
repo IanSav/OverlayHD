@@ -1,6 +1,6 @@
 # ===================================================================
 # OverlayHD Skin Manager
-# Version Date - 16-Apr-2020
+# Version Date - 19-Dec-2020
 # Remember to change version number variable below!!!
 #
 # Repository - https://bitbucket.org/IanSav/overlayhd
@@ -16,7 +16,7 @@
 # distributed.
 # ===================================================================
 
-PLUGIN_VERSION_NUMBER = "1.82"
+PLUGIN_VERSION_NUMBER = "1.82A"
 
 import errno
 import shutil
@@ -24,7 +24,7 @@ import xml.etree.cElementTree
 
 try:
 	from boxbranding import getImageDistro
-except ImportError:
+except ImportError as err:
 	def getImageDistro():
 		return "openpli"
 from enigma import eEnv, gRGB
@@ -508,10 +508,10 @@ for (label, colour, transparency) in colourElements:
 	if colour is None or transparency is None:
 		if colour is not None:
 			setattr(config.plugins.skin.OverlayHD, label, ConfigSelection(default=colour, choices=colourChoices))
-			# print "[OverlayHD] DEBUG (definition): Colour '%s' = '%s'" % (label, colour)
+			# print("[OverlayHD] DEBUG (definition): Colour '%s' = '%s'" % (label, colour))
 		if transparency is not None:
 			setattr(config.plugins.skin.OverlayHD, label, ConfigSelection(default=transparency, choices=transparencyChoices))
-			# print "[OverlayHD] DEBUG (definition): Colour '%s' = '%s'" % (label, transparency)
+			# print("[OverlayHD] DEBUG (definition): Colour '%s' = '%s'" % (label, transparency))
 	else:
 		if label == "ScreenBackground":
 			cChoices = colourChoices
@@ -521,11 +521,11 @@ for (label, colour, transparency) in colourElements:
 			tChoices = backgroundChoice + transparencyChoices
 		setattr(config.plugins.skin.OverlayHD, "%sColour" % label, ConfigSelection(default=colour, choices=cChoices))
 		setattr(config.plugins.skin.OverlayHD, "%sTransparency" % label, ConfigSelection(default=transparency, choices=tChoices))
-		# print "[OverlayHD] DEBUG (definition): Colour '%sColour' = '%s'" % (label, colour)
-		# print "[OverlayHD] DEBUG (definition): Colour '%sTransparency' = '%s'" % (label, transparency)
+		# print("[OverlayHD] DEBUG (definition): Colour '%sColour' = '%s'" % (label, colour))
+		# print("[OverlayHD] DEBUG (definition): Colour '%sTransparency' = '%s'" % (label, transparency))
 for (label, font, fontTable) in fontElements:
 	setattr(config.plugins.skin.OverlayHD, label, ConfigSelection(default=font, choices=fontTable))
-	# print "[OverlayHD] DEBUG (definition): Font '%s' = '%s' (%s)" % (label, font, fontTable)
+	# print("[OverlayHD] DEBUG (definition): Font '%s' = '%s' (%s)" % (label, font, fontTable))
 images = {}
 imagePath = resolveFilename(SCOPE_SKIN, "OverlayHD/backgrounds")
 if isdir(imagePath):
@@ -555,7 +555,7 @@ for (label, default, configType, optionTable) in optionElements:
 		setattr(config.plugins.skin.OverlayHD, label, configType(default=default, choices=optionTable))
 	else:
 		setattr(config.plugins.skin.OverlayHD, label, configType(default=default))
-	# print "[OverlayHD] DEBUG (definition): Option '%s' = '%s' (%s)" % (label, default, optionTable)
+	# print("[OverlayHD] DEBUG (definition): Option '%s' = '%s' (%s)" % (label, default, optionTable))
 
 
 class OverlayHDSkinManager(Setup, HelpableScreen):
@@ -587,7 +587,7 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 		entry = self["config"].getCurrent()[1]
 		for x in config.plugins.skin.OverlayHD.dict():
 			if entry is getattr(config.plugins.skin.OverlayHD, x) and x in imageElements:
-				# print "[OverlayHD] DEBUG: 'config.plugins.skin.OverlayHD.%s'" % x
+				# print("[OverlayHD] DEBUG: 'config.plugins.skin.OverlayHD.%s'" % x)
 				image = resolveFilename(SCOPE_CONFIG, imageNames.get(x, None))
 				if exists(image) and not (islink(image) and readlink(image).startswith(pathjoin(resolveFilename(SCOPE_SKIN), "OverlayHD/backgrounds"))):
 					popup = self.session.openWithCallback(boundFunction(self.handleExistingImage, x, image), MessageBox, _("An externally defined %s image already exists.  Would you like to delete it?") % x)
@@ -604,7 +604,7 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 			except (IOError, OSError) as err:
 				if err.errno != errno.ENOENT:
 					errtext = "Error %d: %s - '%s'" % (err.errno, err.strerror, image)
-					print "[OverlayHD] Error deleting the %s image! (%s)" % (element, errtext)
+					print("[OverlayHD] Error deleting the %s image! (%s)" % (element, errtext))
 
 	def changeGrouping(self, configElement):
 		if config.plugins.skin.OverlayHD.UseGroups.value:
@@ -660,14 +660,14 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 		self.close()
 
 	def changedSettings(self, checkNoRestartList=True):
-		# print "[OverlayHD] DEBUG: Looking for changes. checkNoRestartList = ", checkNoRestartList
+		# print("[OverlayHD] DEBUG: Looking for changes. checkNoRestartList=%s" % checkNoRestartList)
 		for x in config.plugins.skin.OverlayHD.dict():
 			if checkNoRestartList and x in dontRestart:
 				continue
 			if getattr(config.plugins.skin.OverlayHD, x).isChanged():
-				# print "[OverlayHD] DEBUG: Entries changed."
+				# print("[OverlayHD] DEBUG: Entries changed.")
 				return True
-		# print "[OverlayHD] DEBUG: Entries NOT changed."
+		# print("[OverlayHD] DEBUG: Entries NOT changed.")
 		return False
 
 	def theme(self):
@@ -680,27 +680,27 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 
 	def default(self):
 		self.removeNotifiers()
-		print "[OverlayHD] Setting OverlayHD skin to default settings."
+		print("[OverlayHD] Setting OverlayHD skin to default settings.")
 		for (label, colour, transparency) in colourElements:
 			if colour is None or transparency is None:
 				item = getattr(config.plugins.skin.OverlayHD, label)
 				item.value = item.default
-				# print "[OverlayHD] DEBUG (default): '%s' = '%s'" % (label, item.default)
+				# print("[OverlayHD] DEBUG (default): '%s' = '%s'" % (label, item.default))
 			else:
 				item = getattr(config.plugins.skin.OverlayHD, "%sColour" % label)
 				item.value = item.default
-				# print "[OverlayHD] DEBUG (default): '%sColour' = '%s'" % (label, item.default)
+				# print("[OverlayHD] DEBUG (default): '%sColour' = '%s'" % (label, item.default))
 				item = getattr(config.plugins.skin.OverlayHD, "%sTransparency" % label)
 				item.value = item.default
-				# print "[OverlayHD] DEBUG (default): '%sTransparency' = '%s'" % (label, item.default)
+				# print("[OverlayHD] DEBUG (default): '%sTransparency' = '%s'" % (label, item.default))
 		for (label, font, fontTable) in fontElements:
 			item = getattr(config.plugins.skin.OverlayHD, label)
 			item.value = item.default
-			# print "[OverlayHD] DEBUG (default): '%s' = '%s'" % (label, item.default)
+			# print("[OverlayHD] DEBUG (default): '%s' = '%s'" % (label, item.default))
 		for (label, default, configType, optionTable) in optionElements:
 			item = getattr(config.plugins.skin.OverlayHD, label)
 			item.value = item.default
-			# print "[OverlayHD] DEBUG (default): '%s' = '%s'" % (label, item.default)
+			# print("[OverlayHD] DEBUG (default): '%s' = '%s'" % (label, item.default))
 		if config.skin.primary_skin.value == "OverlayHD/skin.xml":
 			self.applySettings()
 			msg = ""
@@ -770,10 +770,10 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 				self.updateTheme("Default", mode="default")
 				self.updateTheme("Current", mode="value")
 				self.saveThemes()
-				print "[OverlayHD] Themes 'Default' and 'Current' created."
+				print("[OverlayHD] Themes 'Default' and 'Current' created.")
 			else:
 				self.errtext = "Error %d: %s - '%s'" % (err.errno, err.strerror, self.filename)
-				print "[OverlayHD] Error opening themes file! (%s)" % self.errtext
+				print("[OverlayHD] Error opening themes file! (%s)" % self.errtext)
 		self["themes"].updateList(self.listThemes())
 		self.onShown.append(self.screenShown)
 
@@ -805,35 +805,35 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 			if colour is None or transparency is None:
 				item = eval("config.plugins.skin.OverlayHD.%s.%s" % (label, mode))
 				element = xml.etree.cElementTree.SubElement(theme, "colour", {"name": label, "value": item})
-				# print "[OverlayHD] DEBUG: '%s' = '%s'" % (label, item)
+				# print("[OverlayHD] DEBUG: '%s' = '%s'" % (label, item))
 			else:
 				item = eval("config.plugins.skin.OverlayHD.%sColour.%s" % (label, mode))
 				element = xml.etree.cElementTree.SubElement(theme, "colour", {"name": "%sColour" % label, "value": item})
-				# print "[OverlayHD] DEBUG: '%sColour' = '%s'" % (label, item)
+				# print("[OverlayHD] DEBUG: '%sColour' = '%s'" % (label, item))
 				item = eval("config.plugins.skin.OverlayHD.%sTransparency.%s" % (label, mode))
 				element = xml.etree.cElementTree.SubElement(theme, "colour", {"name": "%sTransparency" % label, "value": item})
-				# print "[OverlayHD] DEBUG: '%sTransparency' = '%s'" % (label, item)
+				# print("[OverlayHD] DEBUG: '%sTransparency' = '%s'" % (label, item))
 		for (label, font, fontTable) in fontElements:
 			item = eval("config.plugins.skin.OverlayHD.%s.%s" % (label, mode))
 			element = xml.etree.cElementTree.SubElement(theme, "font", {"name": label, "value": item})
-			# print "[OverlayHD] DEBUG: '%s' = '%s'" % (label, item)
+			# print("[OverlayHD] DEBUG: '%s' = '%s'" % (label, item))
 		for (label, default, configType, optionTable) in optionElements:
 			item = str(eval("config.plugins.skin.OverlayHD.%s.%s" % (label, mode)))
 			if optionTable is None:
 				element = xml.etree.cElementTree.SubElement(theme, "option", {"name": label, "type": "boolean", "value": item})
 			else:
 				element = xml.etree.cElementTree.SubElement(theme, "option", {"name": label, "value": item})
-			# print "[OverlayHD] DEBUG: '%s' = '%s'" % (label, item)
+			# print("[OverlayHD] DEBUG: '%s' = '%s'" % (label, item))
 
 	def listThemes(self):
 		list = []
 		if self.domThemes:
 			themes = self.domThemes.findall("theme")
-			# print "[OverlayHD] Theme count = %d" % len(themes)
+			# print("[OverlayHD] Theme count = %d" % len(themes))
 			for theme in themes:
 				name = theme.get("name", None)
 				list.append((name, name))
-				# print "[OverlayHD] Theme = '%s'" % name
+				# print("[OverlayHD] Theme = '%s'" % name)
 			if config.plugins.skin.OverlayHD.SortThemes.value:
 				list.sort(key=lambda item: item[0])
 		return list
@@ -891,7 +891,7 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 	def themeMenuAction(self, choice):
 		if choice is None:
 			return
-		# print "[OverlayHD] Theme menu choice =", choice
+		# print("[OverlayHD] Theme menu choice=%s." % choice)
 		choice[1](self["themes"].getCurrent()[0])
 
 	def cancelTheme(self):
@@ -901,13 +901,13 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 		if name is None:
 			try:
 				name = self["themes"].getCurrent()[0]
-			except Exception:
+			except Exception as err:
 				popup = self.session.open(MessageBox, _("There are no themes to apply!"), MessageBox.TYPE_ERROR, timeout=5)
 				popup.setTitle(self.setup_title)
 				return
 		theme = self.findTheme(name)
 		if theme is not None:
-			print "[OverlayHD] Loading theme '%s'." % name
+			print("[OverlayHD] Loading theme '%s'." % name)
 			colours = theme.findall("colour")
 			for colour in colours:
 				name = colour.get("name", None)
@@ -915,9 +915,9 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 				if name and value:
 					try:
 						getattr(config.plugins.skin.OverlayHD, name).value = value
-						# print "[OverlayHD] Theme colour = '%s', value = '%s'" % (name, value)
-					except Exception:
-						print "[OverlayHD] Theme colour = '%s', value = '%s' is invalid!" % (name, value)
+						# print("[OverlayHD] Theme colour = '%s', value = '%s'" % (name, value))
+					except Exception as err:
+						print("[OverlayHD] Theme colour = '%s', value = '%s' is invalid!" % (name, value))
 			fonts = theme.findall("font")
 			for font in fonts:
 				name = font.get("name", None)
@@ -925,9 +925,9 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 				if name and value:
 					try:
 						getattr(config.plugins.skin.OverlayHD, name).value = value
-						# print "[OverlayHD] Theme font = '%s', value = '%s'" % (name, value)
-					except Exception:
-						print "[OverlayHD] Theme font = '%s', value = '%s' is invalid!" % (name, value)
+						# print("[OverlayHD] Theme font = '%s', value = '%s'" % (name, value))
+					except Exception as err:
+						print("[OverlayHD] Theme font = '%s', value = '%s' is invalid!" % (name, value))
 			options = theme.findall("option")
 			for option in options:
 				name = option.get("name", None)
@@ -941,9 +941,9 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 							if value in ("False", "No", "Off", "Disable", "Disabled"):
 								value = False
 						getattr(config.plugins.skin.OverlayHD, name).value = value
-						# print "[OverlayHD] Theme option = '%s', value = '%s'" % (name, value)
-					except Exception:
-						print "[OverlayHD] Theme option = '%s', value = '%s' is invalid!" % (name, value)
+						# print("[OverlayHD] Theme option = '%s', value = '%s'" % (name, value))
+					except Exception as err:
+						print("[OverlayHD] Theme option = '%s', value = '%s' is invalid!" % (name, value))
 		self.close()
 
 	def newTheme(self, name=None):
@@ -952,20 +952,20 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 
 	def newThemeAction(self, name):
 		if self.checkThemeName(name):
-			print "[OverlayHD] Creating theme '%s'." % name
+			print("[OverlayHD] Creating theme '%s'." % name)
 			self.updateTheme(name)
 			self.saveThemes()
 			# popup = self.session.open(MessageBox, _("Theme '%s' created.") % name, MessageBox.TYPE_INFO, timeout=3)
-			# popup.setTitle(self.setup_title)
+			# popup.setTitle(self.getTitle())
 
 	def saveTheme(self, name=None):
 		if name is None:
 			try:
 				name = self["themes"].getCurrent()[0]
-			except Exception:
+			except Exception as err:
 				self.newTheme()
 				return
-		print "[OverlayHD] Saving theme '%s'." % name
+		print("[OverlayHD] Saving theme '%s'." % name)
 		self.updateTheme(name)
 		self.saveThemes()
 		popup = self.session.open(MessageBox, _("Theme '%s' saved.") % name, MessageBox.TYPE_INFO, timeout=3)
@@ -980,7 +980,7 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 			oldname = self["themes"].getCurrent()[0]
 			theme = self.findTheme(oldname)
 			if theme is not None:
-				print "[OverlayHD] Renaming theme '%s' to '%s'." % (oldname, name)
+				print("[OverlayHD] Renaming theme '%s' to '%s'." % (oldname, name))
 				theme.set("name", name)
 				self.saveThemes()
 				# popup = self.session.open(MessageBox, _("Theme '%s' renamed to '%s'.") % (oldname, name), MessageBox.TYPE_INFO, timeout=3)
@@ -995,20 +995,20 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 			name = self["themes"].getCurrent()[0]
 			theme = self.findTheme(name)
 			if theme is not None:
-				print "[OverlayHD] Deleting theme '%s'." % name
+				print("[OverlayHD] Deleting theme '%s'." % name)
 				self.domThemes.getroot().remove(theme)
 				self.saveThemes()
 				# popup = self.session.open(MessageBox, _("Theme '%s' deleted.") % name, MessageBox.TYPE_INFO, timeout=3)
 				# popup.setTitle(self.setup_title)
 
 	def exportTheme(self, name):
-		print "[OverlayHD] Export theme."
+		print("[OverlayHD] Export theme.")
 		popup = self.session.open(MessageBox, _("Theme export not yet available!"), MessageBox.TYPE_ERROR, timeout=5)
 		popup.setTitle(self.setup_title)
 		# self.saveThemes()
 
 	def importTheme(self, name):
-		print "[OverlayHD] Import theme."
+		print("[OverlayHD] Import theme.")
 		popup = self.session.open(MessageBox, _("Theme import not yet available!"), MessageBox.TYPE_ERROR, timeout=5)
 		popup.setTitle(self.setup_title)
 		# self.saveThemes()
@@ -1018,7 +1018,7 @@ def applySkinSettings(fullInit):
 	if skin == "OverlayHD":
 		(distro, code) = distroConfigs.get(getImageDistro(), ("Unknown", "Enigma2"))
 		if fullInit:
-			print "[OverlayHD] OverlayHD Skin Manager version %s: Configuring to run in '%s' mode." % (PLUGIN_VERSION_NUMBER, distro)
+			print("[OverlayHD] OverlayHD Skin Manager version %s: Configuring to run in '%s' mode." % (PLUGIN_VERSION_NUMBER, distro))
 			for screen in domScreens:
 				element, path = domScreens.get(screen, (None, None))
 				if element is not None:
@@ -1029,11 +1029,11 @@ def applySkinSettings(fullInit):
 							base = panel.get("base", None)
 							if name and base:
 								panel.set("name", base + code)
-								# print "[OverlayHD] DEBUG: Screen '%s', Base '%s', OldName '%s' -> NewName '%s'" % (screen, base, name, base + code)
-								print "[OverlayHD] Adjusting screen '%s'." % screen
+								# print("[OverlayHD] DEBUG: Screen '%s', Base '%s', OldName '%s' -> NewName '%s'" % (screen, base, name, base + code))
+								print("[OverlayHD] Adjusting screen '%s'." % screen)
 								break
 		#
-		print "[OverlayHD] Applying OverlayHD skin settings."
+		print("[OverlayHD] Applying OverlayHD skin settings.")
 		for (label, colour, transparency) in colourElements:
 			if transparency is None:
 				item = getattr(config.plugins.skin.OverlayHD, label).value
@@ -1099,7 +1099,7 @@ def applySkinSettings(fullInit):
 				applyBlink(label, ["global.OnlineStableUpdateState", "global.OnlineUnstableUpdateState"])
 		reloadWindowStyles()
 	else:
-		print "[OverlayHD] OverlayHD is not the active skin."
+		print("[OverlayHD] OverlayHD is not the active skin.")
 
 def clearSkinSettings():
 	# for element in imageElements:
@@ -1129,64 +1129,64 @@ def applyButtons(mode):
 		if element is not None:
 			panels = element.findall("panel")
 			if panels is not None:
-				# print "[OverlayHD] %s panel (%d instances):" % (buttonBase + colour, len(panels))
+				# print("[OverlayHD] %s panel (%d instances):" % (buttonBase + colour, len(panels)))
 				for panel in panels:
 					if getattr(config.plugins.skin.OverlayHD, mode).value:
 						if panel.get("conditional", None) is not None:
 							del panel.attrib["conditional"]
-							# print "[OverlayHD]       panel - Removing conditional attribute."
+							# print("[OverlayHD]       panel - Removing conditional attribute.")
 					else:
 						if panel.get("conditional", None) is None:
 							panel.set("conditional", "key_%s" % colour.lower())
-							# print "[OverlayHD]       panel - Adding conditional attribute."
-					# print "[OverlayHD] DEBUG: XML dump:\n\t%s\n" % xml.etree.cElementTree.tostring(element)
+							# print("[OverlayHD]       panel - Adding conditional attribute.")
+					# print("[OverlayHD] DEBUG: XML dump:\n\t%s\n" % xml.etree.cElementTree.tostring(element))
 		for (style, label) in buttonChoices:
 			element, path = domScreens.get(buttonBase + colour + style, (None, None))
 			if element is not None:
 				pixmaps = element.findall("ePixmap")
 				if pixmaps is not None:
-					# print "[OverlayHD] %s ePixmap (%d instances):" % (buttonBase + colour + style, len(pixmaps))
+					# print("[OverlayHD] %s ePixmap (%d instances):" % (buttonBase + colour + style, len(pixmaps)))
 					for pixmap in pixmaps:
 						if getattr(config.plugins.skin.OverlayHD, mode).value:
 							if pixmap.get("objectTypes", None) is not None:
 								del pixmap.attrib["objectTypes"]
-								# print "[OverlayHD]       ePixmap - Removing objectTypes attribute."
+								# print("[OverlayHD]       ePixmap - Removing objectTypes attribute.")
 						else:
 							if pixmap.get("objectTypes", None) is None:
 								pixmap.set("objectTypes", "key_%s,Button,Label" % colour.lower())
-								# print "[OverlayHD]       ePixmap - Adding objectTypes attribute."
+								# print("[OverlayHD]       ePixmap - Adding objectTypes attribute.")
 				widgets = element.findall("widget")
 				if widgets is not None:
-					# print "[OverlayHD] %s widget (%d instances):" % (buttonBase + colour + style, len(widgets))
+					# print("[OverlayHD] %s widget (%d instances):" % (buttonBase + colour + style, len(widgets)))
 					for widget in widgets:
 						if widget.get("render", None) == "Pixmap":
 							if getattr(config.plugins.skin.OverlayHD, mode).value:
 								if widget.get("objectTypes", None) is not None:
 									del widget.attrib["objectTypes"]
-									# print "[OverlayHD]       Pixmap - Removing objectTypes attribute."
+									# print("[OverlayHD]       Pixmap - Removing objectTypes attribute.")
 									converts = widget.findall("convert")
 									if converts is not None:
 										for convert in converts:
 											if convert.get("type", None) == "ConditionalShowHide":
 												widget.remove(convert)
-												# print "[OverlayHD]       Pixmap - Removing 'ConditionalShowHide' converter."
+												# print("[OverlayHD]       Pixmap - Removing 'ConditionalShowHide' converter.")
 												break
 							else:
 								if widget.get("objectTypes", None) is None:
 									widget.set("objectTypes", "key_%s,StaticText" % colour.lower())
-									# print "[OverlayHD]       Pixmap - Adding 'source' objectTypes attribute."
+									# print("[OverlayHD]       Pixmap - Adding 'source' objectTypes attribute.")
 									found = False
 									converts = widget.findall("convert")
 									if converts is not None:
 										for convert in converts:
 											if convert.get("type", None) == "ConditionalShowHide":
 												found = True
-												# print "[OverlayHD]       Pixmap - 'ConditionalShowHide' converter exists."
+												# print("[OverlayHD]       Pixmap - 'ConditionalShowHide' converter exists.")
 									if not found:
 										convert = xml.etree.cElementTree.Element("convert", type="ConditionalShowHide")
 										widget.append(convert)
-										# print "[OverlayHD]       Pixmap - Adding 'ConditionalShowHide' converter."
-				# print "[OverlayHD] DEBUG: XML widget dump:\n\t%s\n" % xml.etree.cElementTree.tostring(element)
+										# print("[OverlayHD]       Pixmap - Adding 'ConditionalShowHide' converter.")
+				# print("[OverlayHD] DEBUG: XML widget dump:\n\t%s\n" % xml.etree.cElementTree.tostring(element))
 
 def applyImage(image, flag):
 	if flag:
@@ -1212,7 +1212,7 @@ def applyImage(image, flag):
 	except (IOError, OSError) as err:
 		if err.errno != errno.ENOENT:
 			errtext = "Error %d: %s - '%s'" % (err.errno, err.strerror, dst)
-			print "[OverlayHD] Error deleting the %s image! (%s)" % (image, errtext)
+			print("[OverlayHD] Error deleting the %s image! (%s)" % (image, errtext))
 	if src:
 		# Use this code when creating images in /etc/enigma2/<skin>/.
 		# skinDir = dirname(dst)
@@ -1221,38 +1221,38 @@ def applyImage(image, flag):
 		# 		makedirs(skinDir)
 		# 	except (IOError, OSError) as err:
 		# 		errtext = "Error %d: %s - '%s'" % (err.errno, err.strerror, skinDir)
-		# 		print "[OverlayHD] Error creating skin subdirectory! (%s)" % errtext
+		# 		print("[OverlayHD] Error creating skin subdirectory! (%s)" % errtext)
 		try:
 			# shutil.copy(src, dst)
 			# shutil.copystat(src, dst)
 			symlink(src, dst)
 		except (IOError, OSError) as err:
 			errtext = "Error %d: %s - '%s'" % (err.errno, err.strerror, dst)
-			print "[OverlayHD] Error copying the %s image! (%s)" % (image, errtext)
+			print("[OverlayHD] Error copying the %s image! (%s)" % (image, errtext))
 
 def applySpinner(label):
 	defaultSpinner = pathjoin(resolveFilename(SCOPE_SKIN), "spinner")
 	currentSpinner = pathjoin(resolveFilename(SCOPE_CURRENT_SKIN), "spinner")
-	# print "[OverlayHD] DEBUG: defaultSpinner='%s', currentSpinner='%s'" % (defaultSpinner, currentSpinner)
+	# print("[OverlayHD] DEBUG: defaultSpinner='%s', currentSpinner='%s'" % (defaultSpinner, currentSpinner))
 	if currentSpinner != defaultSpinner:
 		msg = "[OverlayHD] NOTE: Unexpected spinner %s found within OverlayHD and deleted!"
 		if islink(currentSpinner):
 			unlink(currentSpinner)
-			# print "[OverlayHD] DEBUG: Old spinner directory found and deleted!"
+			# print("[OverlayHD] DEBUG: Old spinner directory found and deleted!")
 		elif isdir(currentSpinner):
 			shutil.rmtree(currentSpinner)
-			print msg % "directory"
+			print(msg % "directory")
 		elif exists(currentSpinner):
 			remove(currentSpinner)
-			print msg % "file"
+			print(msg % "file")
 		newSpinner = getattr(config.plugins.skin.OverlayHD, label).value
 		if newSpinner:
-			# print "[OverlayHD] DEBUG: Linking '%s' spinner directory as '%s'!" % (newSpinner, currentSpinner)
+			# print("[OverlayHD] DEBUG: Linking '%s' spinner directory as '%s'!" % (newSpinner, currentSpinner))
 			try:
 				symlink(newSpinner, currentSpinner)
 			except (IOError, OSError) as err:
 				errtext = "Error %d: %s - '%s'" % (err.errno, err.strerror, linkname)
-				print "[OverlayHD] Error linking spinner directory! (%s)" % errtext
+				print("[OverlayHD] Error linking spinner directory! (%s)" % errtext)
 
 def updateOverlayHD():
 	# This code is used to ensure that older environments are brought up to current requirements...
@@ -1260,17 +1260,17 @@ def updateOverlayHD():
 	src = resolveFilename(SCOPE_CURRENT_PLUGIN, "Extensions/OverlayHD/OverlayHD_Update")
 	if isfile(src):
 		remove(src)
-		print "[OverlayHD] Defunct settings converter deleted."
+		print("[OverlayHD] Defunct settings converter deleted.")
 	# Relocate and remove the original themes.xml template...
 	src = resolveFilename(SCOPE_CURRENT_PLUGIN, "Extensions/OverlayHD/themes.xml")
 	dst = resolveFilename(SCOPE_CONFIG, "OverlayHD_themes.xml")
 	if isfile(src):
 		if not isfile(dst):
 			shutil.move(src, dst)
-			print "[OverlayHD] Themes file moved to new location."
+			print("[OverlayHD] Themes file moved to new location.")
 		else:
 			remove(src)
-			print "[OverlayHD] Default themes file deleted."
+			print("[OverlayHD] Default themes file deleted.")
 	# Set defunct attributes to the default so they will be removed from the settings file...
 	for attr in ("ClockStyle", "EPGChannel", "EPGChannelSelected", "EPGDetails", "EPGDuration", "EPGLCN", "EPGProgram", "EPGProgramSelected", "EPGProvider", "EPGRating", "EPGTimes", "EPGTimesSelected", "InfoFileSize"):
 		setattr(config.plugins.skin.OverlayHD, attr, ConfigSelection(default="Default", choices=[("Default"), ("None")]))
@@ -1290,11 +1290,11 @@ def main(session, **kwargs):
 def autostart(reason, **kwargs):
 	# (distro, code) = distroConfigs.get(getImageDistro(), ("Unknown", "Enigma2"))
 	if reason == 0:
-		# print "[OverlayHD] OverlayHD Skin Manager for '%s' loaded." % distro
+		# print("[OverlayHD] OverlayHD Skin Manager for '%s' loaded." % distro)
 		updateOverlayHD()
 		applySkinSettings(True)
 	elif reason == 1:
-		# print "[OverlayHD] OverlayHD Skin Manager for '%s' unloaded." % distro
+		# print("[OverlayHD] OverlayHD Skin Manager for '%s' unloaded." % distro)
 		clearSkinSettings()
 
 def Plugins(**kwargs):
