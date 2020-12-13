@@ -16,7 +16,7 @@
 # distributed.
 # ===================================================================
 
-PLUGIN_VERSION_NUMBER = "1.82B"
+PLUGIN_VERSION_NUMBER = "1.82C"
 
 import errno
 import shutil
@@ -721,7 +721,7 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 
 class OverlayHDThemeManager(Screen, HelpableScreen):
 	skin = """
-	<screen name="OverlayHDThemeManager" title="OverlayHD Theme Manager" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+	<screen name="OverlayHDThemeManager" title="OverlayHD Theme Manager" position="fill" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/setup_default.png" position="50,100" size="300,500" alphatest="on" transparent="1" />
 		<widget source="themes" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
