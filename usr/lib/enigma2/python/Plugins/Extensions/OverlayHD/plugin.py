@@ -16,7 +16,7 @@
 # distributed.
 # ===================================================================
 
-PLUGIN_VERSION_NUMBER = "1.82D"
+PLUGIN_VERSION_NUMBER = "1.82E"
 
 import errno
 import shutil
@@ -573,7 +573,7 @@ class OverlayHDSkinManager(Setup, HelpableScreen):
 		self["OverlayHDActions"] = HelpableActionMap(self, "ColorActions", {
 			"yellow": (self.theme, _("Manage themes")),
 			"blue": (self.default, _("Apply the default skin settings"))
-		}, prio=0, description=_("OverlayHD Functions"))
+		}, prio=0, description=_("OverlayHD Actions"))
 		self.addNotifiers()
 
 	def addNotifiers(self):
@@ -761,7 +761,7 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 			"green": (self.applyTheme, _("Apply the currently highlighted theme, return to OverlayHD Skin Manager")),
 			"yellow": (self.saveTheme, _("Save current skin settings as the currently highlighted theme")),
 			"blue": (self.newTheme, _("Create a new theme using the current skin settings"))
-		}, prio=0, description=_("Theme Functions"))
+		}, prio=0, description=_("OverlayHD Theme Actions"))
 		self["themes"] = List()
 		self.filename = resolveFilename(SCOPE_CONFIG, "OverlayHD_themes.xml")
 		self.domThemes = None
