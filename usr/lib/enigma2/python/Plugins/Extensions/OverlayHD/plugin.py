@@ -1,6 +1,6 @@
 # ===================================================================
 # OverlayHD Skin Manager
-# Version Date - 19-Dec-2020
+# Version Date - 13-Dec-2020
 # Remember to change version number variable below!!!
 #
 # Repository - https://bitbucket.org/IanSav/overlayhd
@@ -16,7 +16,7 @@
 # distributed.
 # ===================================================================
 
-PLUGIN_VERSION_NUMBER = "1.82A"
+PLUGIN_VERSION_NUMBER = "1.82B"
 
 import errno
 import shutil
@@ -52,6 +52,7 @@ distroConfigs = {
 	"beyonwiz": ("Beyonwiz", "Beyonwiz"),
 	"openatv": ("OpenATV", "Enigma2"),
 	"openpli": ("OpenPLi", "Enigma2"),
+	"openvision": ("OpenVision", "Enigma2"),
 	"openvix": ("OpenViX", "Enigma2")
 }
 
@@ -1016,9 +1017,9 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 def applySkinSettings(fullInit):
 	skin = dirname(config.skin.primary_skin.value)
 	if skin == "OverlayHD":
-		(distro, code) = distroConfigs.get(getImageDistro(), ("Unknown", "Enigma2"))
+		(distro, code) = distroConfigs.get(getImageDistro().lower(), ("Unknown", "Enigma2"))
 		if fullInit:
-			print("[OverlayHD] OverlayHD Skin Manager version %s: Configuring to run in '%s' mode." % (PLUGIN_VERSION_NUMBER, distro))
+			print("[OverlayHD] OverlayHD Skin Manager version %s: Configuring to run on '%s' in '%s' mode." % (PLUGIN_VERSION_NUMBER, distro, code))
 			for screen in domScreens:
 				element, path = domScreens.get(screen, (None, None))
 				if element is not None:
@@ -1288,13 +1289,13 @@ def main(session, **kwargs):
 	session.open(OverlayHDSkinManager)
 
 def autostart(reason, **kwargs):
-	# (distro, code) = distroConfigs.get(getImageDistro(), ("Unknown", "Enigma2"))
+	# (distro, code) = distroConfigs.get(getImageDistro().lower(), ("Unknown", "Enigma2"))
 	if reason == 0:
-		# print("[OverlayHD] OverlayHD Skin Manager for '%s' loaded." % distro)
+		# print("[OverlayHD] OverlayHD Skin Manager for '%s' ('%s' mode) loaded." % (distro, code))
 		updateOverlayHD()
 		applySkinSettings(True)
 	elif reason == 1:
-		# print("[OverlayHD] OverlayHD Skin Manager for '%s' unloaded." % distro)
+		# print("[OverlayHD] OverlayHD Skin Manager for '%s' ('%s' mode) unloaded." % (distro, code))
 		clearSkinSettings()
 
 def Plugins(**kwargs):
