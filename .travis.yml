@@ -21,7 +21,7 @@ git:
   depth: 1
 
 script:
-- echo compiling OverlayHD skin
+- echo Compiling OverlayHD skin and plugin...
 - python -m compileall .
 - find . -type f -name "*.po" -exec msgfmt {} -o {}.mo \;
-- echo done!
+- echo Done!
