@@ -1016,6 +1016,7 @@ class OverlayHDThemeManager(Screen, HelpableScreen):
 		popup.setTitle(self.setup_title)
 		# self.saveThemes()
 
+
 def applySkinSettings(fullInit):
 	skin = dirname(config.skin.primary_skin.value)
 	if skin == "OverlayHD":
@@ -1104,10 +1105,12 @@ def applySkinSettings(fullInit):
 	else:
 		print("[OverlayHD] OverlayHD is not the active skin.")
 
+
 def clearSkinSettings():
 	# for element in imageElements:
 	# 	applyImage(element, False)
 	pass
+
 
 def applyBlink(image, sourceList):
 	element, path = domScreens.get("ChannelFormatPanel", (None, None))
@@ -1125,6 +1128,7 @@ def applyBlink(image, sourceList):
 								else:
 									convert.text = ""
 								break
+
 
 def applyButtons(mode):
 	for colour in buttonColours:
@@ -1191,6 +1195,7 @@ def applyButtons(mode):
 										# print("[OverlayHD]       Pixmap - Adding 'ConditionalShowHide' converter.")
 				# print("[OverlayHD] DEBUG: XML widget dump:\n\t%s\n" % xml.etree.cElementTree.tostring(element))
 
+
 def applyImage(image, flag):
 	if flag:
 		src = getattr(config.plugins.skin.OverlayHD, image).value
@@ -1233,6 +1238,7 @@ def applyImage(image, flag):
 			errtext = "Error %d: %s - '%s'" % (err.errno, err.strerror, dst)
 			print("[OverlayHD] Error copying the %s image! (%s)" % (image, errtext))
 
+
 def applySpinner(label):
 	defaultSpinner = pathjoin(resolveFilename(SCOPE_SKIN), "spinner")
 	currentSpinner = pathjoin(resolveFilename(SCOPE_CURRENT_SKIN), "spinner")
@@ -1256,6 +1262,7 @@ def applySpinner(label):
 			except (IOError, OSError) as err:
 				errtext = "Error %d: %s - '%s'" % (err.errno, err.strerror, linkname)
 				print("[OverlayHD] Error linking spinner directory! (%s)" % errtext)
+
 
 def updateOverlayHD():
 	# This code is used to ensure that older environments are brought up to current requirements...
@@ -1281,14 +1288,17 @@ def updateOverlayHD():
 		getattr(config.plugins.skin.OverlayHD, attr).save()
 	config.plugins.skin.OverlayHD.save()
 
+
 def start_menu_main(menuid, **kwargs):
 	if menuid == "system":
 		return [(_("OverlayHD Skin Manager"), main, "OverlayHD", None)]
 	else:
 		return []
 
+
 def main(session, **kwargs):
 	session.open(OverlayHDSkinManager)
+
 
 def autostart(reason, **kwargs):
 	# (distro, code) = distroConfigs.get(getImageDistro().lower(), ("Unknown", "Enigma2"))
@@ -1299,6 +1309,7 @@ def autostart(reason, **kwargs):
 	elif reason == 1:
 		# print("[OverlayHD] OverlayHD Skin Manager for '%s' ('%s' mode) unloaded." % (distro, code))
 		clearSkinSettings()
+
 
 def Plugins(**kwargs):
 	list = []
