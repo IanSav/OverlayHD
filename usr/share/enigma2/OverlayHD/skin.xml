@@ -1764,7 +1764,7 @@
 
 	<screen name="TunerSignalPanel" title="Tuner Status" flags="wfNoBorder">
 		<!-- AGC label, bar and percentage -->
-		<widget source="session.FrontendStatus" render="FixedLabel" text="BIT ERRORS DETECTED!              " position="0,2" size="160,28" backgroundColor="TunerBER" font="Regular;8" foregroundColor="Black" halign="center" valign="center">
+		<widget source="session.FrontendStatus" render="FixedLabel" text="        BIT ERRORS DETECTED!" position="0,2" size="160,28" backgroundColor="TunerBER" font="Regular;8" foregroundColor="Black" valign="center">
 			<convert type="FrontendInfo">BER</convert>
 			<convert type="ConditionalShowHide">Blink,375</convert>
 		</widget>
