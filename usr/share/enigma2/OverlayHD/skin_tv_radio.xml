@@ -163,7 +163,7 @@
 		<panel position="877,595" size="353,20">
 			<panel name="ChannelFormatPanel" />
 		</panel>
-		<panel position="710,625" size="165,25">
+		<panel position="710,625" size="320,25">
 			<panel name="TunerUsagePanel" />
 		</panel>
 		<panel position="1070,620" size="160,30">

@@ -260,7 +260,7 @@
 		<panel position="50,625" size="160,30">
 			<panel name="TunerSignalPanel" />
 		</panel>
-		<panel position="230,630" size="165,25">
+		<panel position="230,630" size="320,25">
 			<panel name="TunerUsagePanel" />
 		</panel>
 		<panel position="697,635" size="160,20">

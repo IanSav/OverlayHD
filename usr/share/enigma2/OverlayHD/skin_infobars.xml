@@ -156,9 +156,6 @@
 		<widget source="session.CurrentService" render="Label" position="182,575" size="577,25" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoChannel" transparent="1" valign="top">
 			<convert type="ServiceName">NameOnly</convert>
 		</widget>
-		<panel position="840,575" size="245,15">
-			<panel name="ServiceInformationPanel" />
-		</panel>
 		<!-- Now Event Start & End Times, Event Name and Time Remaining Area -->
 		<widget source="session.Event_Now" render="Label" position="180,615" size="180,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" halign="center" noWrap="1" transparent="1" valign="bottom" >
 			<convert type="EventTime">Times</convert>
@@ -203,14 +200,17 @@
 			<panel name="RecordingInfoPanel" />
 		</panel>
 		<!-- Tuner Usage, Signal Strength & Quality, Resolution and Status Panel Area -->
-		<panel position="1105,575" size="165,25">
-			<panel name="TunerUsagePanel" />
+		<panel position="950,575" size="320,25">
+			<panel name="TunerUsageRightPanel" />
 		</panel>
 		<panel position="1110,610" size="160,30">
 			<panel name="TunerSignalPanel" />
 		</panel>
-		<panel position="1110,660" size="160,20">
+		<panel position="1110,650" size="160,20">
 			<panel name="ResolutionRightPanel" />
+		</panel>
+		<panel position="650,695" size="245,15">
+			<panel name="ServiceInformationPanel" />
 		</panel>
 		<panel position="917,690" size="353,20">
 			<panel name="ChannelFormatPanel" />

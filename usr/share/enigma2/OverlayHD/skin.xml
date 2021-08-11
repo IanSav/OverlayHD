@@ -3,8 +3,8 @@
  |	OverlayHD skin based on easy-skin-aus-hd refined and enhanced
  |	by IanSav.
  |
- |	Repository - https://bitbucket.org/IanSav/overlayhd
- |	Coding by IanSav (c) 2015-2020
+ |	Repository - https://github.com/IanSav/OverlayHD/
+ |	Coding by IanSav (c) 2015-2021
  |
  |	This skin and plugin was originally developed for the Beyonwiz
  |	Australia distribution of Enigma2.  It may be distributed and
@@ -1786,141 +1786,48 @@
 		</widget>
 	</screen>
 
-<!-- Panel To Display The Tuner Use / Activity (Size is conditional on number of enabled tuners)
-		105 x 25 pixels - 1 Tuner,
-		125 x 25 pixels - 2 Tuners,
-		145 x 25 pixels - 3 Tuners,
-		165 x 25 pixels - 4 Tuners,
-		185 x 25 pixels - 5 Tuners,
-		105 x 25 pixels - 6 Tuners,
-		225 x 25 pixels - 7 Tuners,
-		245 x 25 pixels - 8 Tuners -->
+<!-- Panel To Display The Tuner Use / Activity (320 x 25 pixels - 26 Tuners) -->
 
 	<screen name="TunerUsagePanel" title="Tuner Status" flags="wfNoBorder">
-		<!-- Display a label and icon to identify the type of tuner in use -->
-		<eLabel text="Tuner" position="0,6" size="60,18" backgroundColor="TunerBackground" font="Regular;18" foregroundColor="TunerLabel" transparent="1" />
-		<widget source="session.FrontendInfo" render="Pixmap" pixmap="icons/info_dvb-s.png" position="60,0" size="25,25" alphatest="blend" transparent="1">
+		<widget source="session.FrontendInfo" render="Pixmap" pixmap="icons/info_dvb-s.png" position="0,0" size="25,25" alphatest="blend" transparent="1">
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">0,0</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.FrontendInfo" render="Pixmap" pixmap="icons/info_dvb-c.png" position="60,0" size="25,25" alphatest="blend" transparent="1">
+		<widget source="session.FrontendInfo" render="Pixmap" pixmap="icons/info_dvb-c.png" position="0,0" size="25,25" alphatest="blend" transparent="1">
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">1,1</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.FrontendInfo" render="Pixmap" pixmap="icons/info_dvb-t.png" position="60,0" size="25,25" alphatest="blend" transparent="1">
+		<widget source="session.FrontendInfo" render="Pixmap" pixmap="icons/info_dvb-t.png" position="0,0" size="25,25" alphatest="blend" transparent="1">
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">2,2</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-
-		<!-- Tuner 1 -->
-		<!-- Display unused tuner placeholders - Overwritten by tuners in use -->
-		<eLabel text="A" position="96,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerIdle" halign="center" transparent="1" />
-		<!-- Display tuners used for recording - Overwrites "unused" backgrounds -->
-		<widget source="session.TunerInfo" render="FixedLabel" text="A" position="96,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerRecording" halign="center" transparent="1" zPosition="+1">
-			<convert type="TunerInfo">TunerUseMask</convert>
-			<convert type="ValueBitTest">1</convert>
-			<convert type="ConditionalShowHide" />
+		<widget source="session.FrontendInfo" render="Label" position="35,3" size="285,22" backgroundColor="TunerBackground" font="LCD;22" noWrap="1" transparent="1">
+			<convert type="FrontendInfo">STRING</convert>
 		</widget>
-		<!-- Display tuner used for live TV - Overwrites "unused" background & recording tuners -->
-		<widget source="session.FrontendInfo" render="FixedLabel" text="A" position="96,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerCurrent" halign="center" transparent="1" zPosition="+2">
-			<convert type="FrontendInfo">NUMBER</convert>
+	</screen>
+
+	<screen name="TunerUsageRightPanel" title="Tuner Status" flags="wfNoBorder">
+		<widget source="session.FrontendInfo" render="Label" position="0,3" size="285,22" backgroundColor="TunerBackground" font="LCD;22" halign="right" noWrap="1" transparent="1">
+			<convert type="FrontendInfo">STRING</convert>
+		</widget>
+		<widget source="session.FrontendInfo" render="Pixmap" pixmap="icons/info_dvb-s.png" position="295,0" size="25,25" alphatest="blend" transparent="1">
+			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">0,0</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-
-		<!-- Tuner 2 -->
-		<eLabel text="B" position="116,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerIdle" halign="center" transparent="1" />
-		<widget source="session.TunerInfo" render="FixedLabel" text="B" position="116,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerRecording" halign="center" transparent="1" zPosition="+1">
-			<convert type="TunerInfo">TunerUseMask</convert>
-			<convert type="ValueBitTest">2</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.FrontendInfo" render="FixedLabel" text="B" position="116,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerCurrent" halign="center" transparent="1" zPosition="+2">
-			<convert type="FrontendInfo">NUMBER</convert>
+		<widget source="session.FrontendInfo" render="Pixmap" pixmap="icons/info_dvb-c.png" position="295,0" size="25,25" alphatest="blend" transparent="1">
+			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">1,1</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-
-		<!-- Tuner 3 -->
-		<eLabel text="C" position="136,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerIdle" halign="center" transparent="1" />
-		<widget source="session.TunerInfo" render="FixedLabel" text="C" position="136,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerRecording" halign="center" transparent="1" zPosition="+1">
-			<convert type="TunerInfo">TunerUseMask</convert>
-			<convert type="ValueBitTest">4</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.FrontendInfo" render="FixedLabel" text="C" position="136,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerCurrent" halign="center" transparent="1" zPosition="+2">
-			<convert type="FrontendInfo">NUMBER</convert>
+		<widget source="session.FrontendInfo" render="Pixmap" pixmap="icons/info_dvb-t.png" position="295,0" size="25,25" alphatest="blend" transparent="1">
+			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">2,2</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-
-		<!-- Tuner 4 -->
-		<eLabel text="D" position="156,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerIdle" halign="center" transparent="1" />
-		<widget source="session.TunerInfo" render="FixedLabel" text="D" position="156,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerRecording" halign="center" transparent="1" zPosition="+1">
-			<convert type="TunerInfo">TunerUseMask</convert>
-			<convert type="ValueBitTest">8</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.FrontendInfo" render="FixedLabel" text="D" position="156,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerCurrent" halign="center" transparent="1" zPosition="+2">
-			<convert type="FrontendInfo">NUMBER</convert>
-			<convert type="ValueRange">3,3</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-
-		<!-- Tuner 5 -->
-		<!-- <eLabel text="E" position="176,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerIdle" halign="center" transparent="1" />
-		<widget source="session.TunerInfo" render="FixedLabel" text="E" position="176,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerRecording" halign="center" transparent="1" zPosition="+1">
-			<convert type="TunerInfo">TunerUseMask</convert>
-			<convert type="ValueBitTest">16</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.FrontendInfo" render="FixedLabel" text="E" position="176,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerCurrent" halign="center" transparent="1" zPosition="+2">
-			<convert type="FrontendInfo">NUMBER</convert>
-			<convert type="ValueRange">4,4</convert>
-			<convert type="ConditionalShowHide" />
-		</widget> -->
-
-		<!-- Tuner 6 -->
-		<!-- <eLabel text="F" position="196,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerIdle" halign="center" transparent="1" />
-		<widget source="session.TunerInfo" render="FixedLabel" text="F" position="196,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerRecording" halign="center" transparent="1" zPosition="+1">
-			<convert type="TunerInfo">TunerUseMask</convert>
-			<convert type="ValueBitTest">32</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.FrontendInfo" render="FixedLabel" text="F" position="196,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerCurrent" halign="center" transparent="1" zPosition="+2">
-			<convert type="FrontendInfo">NUMBER</convert>
-			<convert type="ValueRange">5,5</convert>
-			<convert type="ConditionalShowHide" />
-		</widget> -->
-
-		<!-- Tuner 7 -->
-		<!-- <eLabel text="G" position="216,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerIdle" halign="center" transparent="1" />
-		<widget source="session.TunerInfo" render="FixedLabel" text="G" position="216,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerRecording" halign="center" transparent="1" zPosition="+1">
-			<convert type="TunerInfo">TunerUseMask</convert>
-			<convert type="ValueBitTest">64</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.FrontendInfo" render="FixedLabel" text="G" position="216,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerCurrent" halign="center" transparent="1" zPosition="+2">
-			<convert type="FrontendInfo">NUMBER</convert>
-			<convert type="ValueRange">6,6</convert>
-			<convert type="ConditionalShowHide" />
-		</widget> -->
-
-		<!-- Tuner 8 -->
-		<!-- <eLabel text="H" position="236,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerIdle" halign="center" transparent="1" />
-		<widget source="session.TunerInfo" render="FixedLabel" text="H" position="236,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerRecording" halign="center" transparent="1" zPosition="+1">
-			<convert type="TunerInfo">TunerUseMask</convert>
-			<convert type="ValueBitTest">128</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.FrontendInfo" render="FixedLabel" text="H" position="236,5" size="9,22" backgroundColor="TunerBackground" font="LCD;22" foregroundColor="TunerCurrent" halign="center" transparent="1" zPosition="+2">
-			<convert type="FrontendInfo">NUMBER</convert>
-			<convert type="ValueRange">7,7</convert>
-			<convert type="ConditionalShowHide" />
-		</widget> -->
 	</screen>
 
 <!-- Panel To Display The Channel Format Icons (353 x 20 pixels) -->
