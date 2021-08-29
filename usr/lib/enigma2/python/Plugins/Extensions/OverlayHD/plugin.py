@@ -1048,9 +1048,9 @@ def applySkinSettings(fullInit):
 					colors[piglabel] = colors[item]
 				elif label in derivedBackgroundElements:
 					if config.plugins.skin.OverlayHD.EPGTransparency.value == "Background":
-						tran = long(config.plugins.skin.OverlayHD.ScreenBackgroundTransparency.value, 0x10)
+						tran = int(config.plugins.skin.OverlayHD.ScreenBackgroundTransparency.value, 0x10)
 					else:
-						tran = long(config.plugins.skin.OverlayHD.EPGTransparency.value, 0x10)
+						tran = int(config.plugins.skin.OverlayHD.EPGTransparency.value, 0x10)
 					colors[label] = gRGB(colors[item].argb() | tran)
 					colors[piglabel] = colors[item]
 				else:
@@ -1061,9 +1061,9 @@ def applySkinSettings(fullInit):
 					col = config.plugins.skin.OverlayHD.ScreenBackgroundColour.value
 				tran = getattr(config.plugins.skin.OverlayHD, "%sTransparency" % label).value
 				if tran == "Background":
-					tran = long(config.plugins.skin.OverlayHD.ScreenBackgroundTransparency.value, 0x10)
+					tran = int(config.plugins.skin.OverlayHD.ScreenBackgroundTransparency.value, 0x10)
 				else:
-					tran = long(tran, 0x10)
+					tran = int(tran, 0x10)
 				colors[label] = gRGB(colors[col].argb() | tran)
 		for (label, font, fontTable) in fontElements:
 			data = list(fonts[label])
