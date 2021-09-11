@@ -122,11 +122,11 @@
 				{
 				"template":
 					[
-					MultiContentEntryPixmapAlphaTest(pos = (5, 3), size = (60, 30), flags = BT_SCALE, png = 0), # index 0 is the flag pixmap
+					MultiContentEntryPixmapAlphaBlend(pos = (5, 3), size = (60, 30), flags = BT_SCALE, png = 0), # index 0 is the flag pixmap
 					MultiContentEntryText(pos = (75, 0), size = (315, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),  # index 1 is the language name.
 					MultiContentEntryText(pos = (400, 0), size = (290, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2),  # index 2 is the English language name.
 					MultiContentEntryText(pos = (700, 0), size = (70, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3),  # index 3 is the locale.
-					MultiContentEntryPixmapAlphaTest(pos = (780, 4), size = (30, 27), png = 4) # index 4 is the status pixmap.
+					MultiContentEntryPixmapAlphaBlend(pos = (780, 4), size = (30, 27), png = 4) # index 4 is the status pixmap.
 					],
 				"fonts": [parseFont("SMSHelperFont;23")],
 				"itemHeight": 35
@@ -145,7 +145,7 @@
 				"template":
 					[
 					MultiContentEntryText(pos = (85, 0), size = (705, 50), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1), # index 1 is the language name,
-					MultiContentEntryPixmapAlphaTest(pos = (5, 5), size = (60, 50), png = 2), # index 2 is the pixmap
+					MultiContentEntryPixmapAlphaBlend(pos = (5, 5), size = (60, 50), png = 2), # index 2 is the pixmap
 					],
 				"fonts": [parseFont("SMSHelperFont;25")],
 				"itemHeight": 50
@@ -654,12 +654,12 @@
 				{
 				"template":
 					[
-					MultiContentEntryPixmapAlphaTest(pos = (10, 0), size = (48, 48), png = 1), # index 1 is the expandable/expanded/verticalline icon
+					MultiContentEntryPixmapAlphaBlend(pos = (10, 0), size = (48, 48), png = 1), # index 1 is the expandable/expanded/verticalline icon
 					MultiContentEntryText(pos = (70, 0), size = (760, 48), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2), # index 2 is the Hostname
 					MultiContentEntryText(pos = (160, 0), size = (670, 25), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3), # index 3 is the ShareName
 					MultiContentEntryText(pos = (180, 25), size = (670, 23), font=2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4, color = "TextIndented", color_sel = "TextIndentedSelected"), # index 4 is the ShareDescription
-					MultiContentEntryPixmapAlphaTest(pos = (48, 0), size = (48, 48), png = 5), # index 5 is the nfs/cifs icon
-					MultiContentEntryPixmapAlphaTest(pos = (100, 0), size = (48, 48), png = 6), # index 6 is the isMounted icon
+					MultiContentEntryPixmapAlphaBlend(pos = (48, 0), size = (48, 48), png = 5), # index 5 is the nfs/cifs icon
+					MultiContentEntryPixmapAlphaBlend(pos = (100, 0), size = (48, 48), png = 6), # index 6 is the isMounted icon
 					],
 				"fonts": [parseFont("Regular;25"), parseFont("Regular;22"), parseFont("Regular;17")],
 				"itemHeight": 48
@@ -712,12 +712,12 @@
 				{
 				"template":
 					[
-					MultiContentEntryPixmapAlphaTest(pos = (20, 6), size = (48, 48), png = 0), # index 0 is the isMounted pixmap
-					MultiContentEntryPixmapAlphaTest(pos = (70, 6), size = (48, 48), png = 5), # index 5 is the mounttype pixmap
+					MultiContentEntryPixmapAlphaBlend(pos = (20, 6), size = (48, 48), png = 0), # index 0 is the isMounted pixmap
+					MultiContentEntryPixmapAlphaBlend(pos = (70, 6), size = (48, 48), png = 5), # index 5 is the mounttype pixmap
 					MultiContentEntryText(pos = (160, 0), size = (370, 35), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1), # index 1 is the sharename
 					MultiContentEntryText(pos = (545, 10), size = (200, 25), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2, color = "TextIndented", color_sel = "TextIndentedSelected"), # index 2 is the IPdescription
 					MultiContentEntryText(pos = (180, 35), size = (565, 25), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3, color = "TextIndented", color_sel = "TextIndentedSelected"), # index 3 is the DIRdescription
-					MultiContentEntryPixmapAlphaTest(pos = (765, 15), size = (48, 48), png = 4), # index 4 is the activepng pixmap
+					MultiContentEntryPixmapAlphaBlend(pos = (765, 15), size = (48, 48), png = 4), # index 4 is the activepng pixmap
 					],
 				"fonts": [parseFont("Regular;25"), parseFont("Regular;20")],
 				"itemHeight": 60
@@ -736,7 +736,7 @@
 				"template":
 					[
 					MultiContentEntryText(pos = (90, 0), size = (715, 60), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0), # index 0 is the name
-					MultiContentEntryPixmapAlphaTest(pos = (20, 6), size = (48, 48), png = 3), # index 3 is the status pixmap
+					MultiContentEntryPixmapAlphaBlend(pos = (20, 6), size = (48, 48), png = 3), # index 3 is the status pixmap
 					],
 				"fonts": [parseFont("Regular;25")],
 				"itemHeight": 60
@@ -766,8 +766,8 @@
 					[
 					MultiContentEntryText(pos = (100, 0), size = (690, 35), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1), # index 1 is the interfacename
 					MultiContentEntryText(pos = (120, 35), size = (670, 25), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2, color = "TextIndented", color_sel = "TextIndentedSelected"), # index 2 is the description
-					MultiContentEntryPixmapAlphaTest(pos = (20, 3), size = (54, 54), png = 3), # index 3 is the interface pixmap
-					MultiContentEntryPixmapAlphaTest(pos = (80, 38), size = (15, 16), png = 4), # index 4 is the default pixmap
+					MultiContentEntryPixmapAlphaBlend(pos = (20, 3), size = (54, 54), png = 3), # index 3 is the interface pixmap
+					MultiContentEntryPixmapAlphaBlend(pos = (80, 38), size = (15, 16), png = 4), # index 4 is the default pixmap
 					],
 				"fonts": [parseFont("Regular;25"), parseFont("Regular;20")],
 				"itemHeight": 60

@@ -1044,7 +1044,7 @@
 					[
 					MultiContentEntryText(pos = (65, 0), size = (655, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),
 					MultiContentEntryText(pos = (740, 0), size = (50, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4),
-					MultiContentEntryPixmapAlphaTest(pos = (20, 5), size = (35, 25), png = 5)
+					MultiContentEntryPixmapAlphaBlend(pos = (20, 5), size = (35, 25), png = 5)
 					],
 				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
@@ -1562,7 +1562,7 @@
 					[
 					MultiContentEntryText(pos = (75, 0), size = (715, 35), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0), # index 0 is the Menu Title
 					MultiContentEntryText(pos = (95, 35), size = (695, 25), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2, color = "TextIndented", color_sel = "TextIndentedSelected"), # index 2 is the Description
-					MultiContentEntryPixmapAlphaTest(pos = (20, 6), size = (48, 48), png = 3), # index 3 is the pixmap
+					MultiContentEntryPixmapAlphaBlend(pos = (20, 6), size = (48, 48), png = 3), # index 3 is the pixmap
 					],
 				"fonts": [parseFont("MenuFont;25"), parseFont("MenuFont;20")],
 				"itemHeight": 60

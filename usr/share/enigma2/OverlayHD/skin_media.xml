@@ -446,10 +446,10 @@
 					{
 					"default": (135,
 						[
-						MultiContentEntryPixmapAlphaTest(pos = (10, 0), size = (180, 135), png = 0), # index 0 is the thumbnail
-						MultiContentEntryPixmapAlphaTest(pos = (190, 0), size = (180, 135), png = 1), # index 0 is the thumbnail
-						MultiContentEntryPixmapAlphaTest(pos = (370, 0), size = (180, 135), png = 2), # index 0 is the thumbnail
-						MultiContentEntryPixmapAlphaTest(pos = (550, 0), size = (180, 135), png = 3), # index 0 is the thumbnail
+						MultiContentEntryPixmapAlphaBlend(pos = (10, 0), size = (180, 135), png = 0), # index 0 is the thumbnail
+						MultiContentEntryPixmapAlphaBlend(pos = (190, 0), size = (180, 135), png = 1), # index 0 is the thumbnail
+						MultiContentEntryPixmapAlphaBlend(pos = (370, 0), size = (180, 135), png = 2), # index 0 is the thumbnail
+						MultiContentEntryPixmapAlphaBlend(pos = (550, 0), size = (180, 135), png = 3), # index 0 is the thumbnail
 						]),
 					"state": (135,
 						[
@@ -511,7 +511,7 @@
 					{
 					"default": (85,
 						[
-						MultiContentEntryPixmapAlphaTest(pos = (5, 1), size = (100, 75), png = 4),
+						MultiContentEntryPixmapAlphaBlend(pos = (5, 1), size = (100, 75), png = 4),
 						MultiContentEntryText(pos = (110, 1), size = (590, 25), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 1),
 						MultiContentEntryText(pos = (110, 27), size = (300, 20), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 5),
 						MultiContentEntryText(pos = (110, 48), size = (300, 20), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 6),
@@ -596,7 +596,7 @@
 					{
 					"default": (75,
 						[
-						MultiContentEntryPixmapAlphaTest(pos = (0, 0), size = (100, 75), png = 4), # index 4 is the thumbnail
+						MultiContentEntryPixmapAlphaBlend(pos = (0, 0), size = (100, 75), png = 4), # index 4 is the thumbnail
 						MultiContentEntryText(pos = (120, 0), size = (670, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 1), # index 1 is the Title
 						MultiContentEntryText(pos = (120, 25), size = (320, 25), font = 1, color = "TextIndented", color_sel = "TextIndentedSelected", flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 5), # index 5 is the Published Date
 						MultiContentEntryText(pos = (120, 50), size = (320, 25), font = 1, color = "TextIndented", color_sel = "TextIndentedSelected", flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 6), # index 6 is the Views Count
@@ -638,7 +638,7 @@
 				{
 				"template":
 					[
-					MultiContentEntryPixmapAlphaTest(pos = (0, 1), size = (100, 72), png = 2), # Thumbnail
+					MultiContentEntryPixmapAlphaBlend(pos = (0, 1), size = (100, 72), png = 2), # Thumbnail
 					MultiContentEntryText(pos = (110, 5), size = (730, 45), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 3), # Title
 					MultiContentEntryText(pos = (610, 50), size = (200, 20), font = 1, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4), # Views
 					MultiContentEntryText(pos = (400, 50), size = (200, 20), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 5), # Duration

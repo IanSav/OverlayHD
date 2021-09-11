@@ -361,8 +361,8 @@
 					MultiContentEntryText(pos = (550, 0), size = (240, 25), font = 0, flags = RT_HALIGN_LEFT, text = 6, color = "TextIndented"), # Index 6
 					MultiContentEntryText(pos = (260, 0), size = (270, 25), font = 0, flags = RT_HALIGN_LEFT, text = 7), # Index 7
 					MultiContentEntryText(pos = (550, 0), size = (150, 25), font = 0, flags = RT_HALIGN_LEFT, text = 8), # Index 8
-					# MultiContentEntryPixmapAlphaTest(pos = (750, 6), size = (15, 16), png = 9) # Index 9
-					MultiContentEntryPixmapAlphaTest(pos = (750, 3), size = (22, 22), png = 9) # Index 9
+					# MultiContentEntryPixmapAlphaBlend(pos = (750, 6), size = (15, 16), png = 9) # Index 9
+					MultiContentEntryPixmapAlphaBlend(pos = (750, 3), size = (22, 22), png = 9) # Index 9
 					],
 				"fonts": [parseFont("Regular;20")],
 				"itemHeight": 25,

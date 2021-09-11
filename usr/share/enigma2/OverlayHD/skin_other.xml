@@ -190,7 +190,7 @@
 				{
 				"template": [
 					MultiContentEntryText(pos = (80, 5), size = (990, 100), flags = RT_HALIGN_LEFT, text = 0, border_width=1),
-					MultiContentEntryPixmapAlphaTest(pos = (5, 20), size = (64, 64), png = 1)
+					MultiContentEntryPixmapAlphaBlend(pos = (5, 20), size = (64, 64), png = 1)
 					],
 				"fonts": [parseFont("Regular;18")],
 				"itemHeight": 110
@@ -334,7 +334,7 @@
 			<convert type="TemplatedMultiContent">
 				{
 				"template": [
-					MultiContentEntryPixmapAlphaTest(pos = (10, 8), size = (64, 64), png = 0),
+					MultiContentEntryPixmapAlphaBlend(pos = (10, 8), size = (64, 64), png = 0),
 					MultiContentEntryText(pos = (90, 5), size = (660, 35), flags = RT_HALIGN_CENTER, text = 1, border_width=1),
 					MultiContentEntryText(pos = (90, 40), size = (660, 35), flags = RT_VALIGN_CENTER|RT_HALIGN_LEFT, text = 2, font=1)
 					],
