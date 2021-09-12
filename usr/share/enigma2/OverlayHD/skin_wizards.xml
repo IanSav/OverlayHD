@@ -4,19 +4,38 @@
  |	LanguageWizard and TutorialWizard.
  +-->
 
-	<screen name="WizardTemplate" title="Welcome..." position="fill" flags="wfNoBorder">
+	<screen name="WizardTemplate" title="Welcome" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap name="wizard" pixmap="images/wizard.png" position="230,250" size="220,220" alphatest="blend" transparent="1" />
-		<eLabel position="500,80" size="730,2" backgroundColor="Pinstripe" />
-		<eLabel position="500,329" size="730,2" backgroundColor="Pinstripe" />
-		<eLabel position="500,80" size="2,250" backgroundColor="Pinstripe" />
-		<eLabel position="1229,80" size="2,250" backgroundColor="Pinstripe" />
-		<widget name="text" position="520,100" size="690,215" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
-		<!-- The language selector and remote control helper are normally disabled in the Beyonwiz firmware!  :( -->
-		<widget name="languagetext" position="50,630" size="1180,27" backgroundColor="TextBackground" font="SMSHelperFont;20" foregroundColor="Text" transparent="1" valign="center" />
 		<panel position="50,80" size="154,500">
 			<panel name="ScreenTemplateRemote" />
 		</panel>
+		<ePixmap pixmap="images/wizard.png" position="200,250" size="190,190" alphatest="blend" scale="1" transparent="1" />
+		<widget name="image" position="231,450" size="128,128" alphatest="blend" conditional="image" scale="1" transparent="1" />
+		<eLabel position="400,80" size="830,2" backgroundColor="Pinstripe" />
+		<eLabel position="400,329" size="830,2" backgroundColor="Pinstripe" />
+		<eLabel position="400,80" size="2,250" backgroundColor="Pinstripe" />
+		<eLabel position="1229,80" size="2,250" backgroundColor="Pinstripe" />
+		<widget name="text" position="420,100" size="790,215" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="step" position="50,615" size="150,25" backgroundColor="TextBackground" conditional="step" font="SMSHelperFont;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="stepslider" position="50,645" size="200,10" backgroundColor="Black" borderColor="DavysGrey" borderWidth="2" conditional="stepslider" foregroundColor="White" transparent="0" />
+		<widget source="list" render="Listbox" position="400,350" size="830,280" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="list" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+			<!-- <convert type="StringList" /> -->
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (20, 0), size = (740, 35), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),
+					MultiContentEntryText(pos = (770, 0), size = (30, 35), flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = ">")
+					],
+				"fonts": [parseFont("Regular;25")],
+				"itemHeight": 35
+				}
+			</convert>
+		</widget>
+		<widget name="config" position="400,350" size="830,280" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="config" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="wizard" position="0,0" size="0,0" conditional="wizard" transparent="1" />
+		<widget name="localetext" position="0,0" size="0,0" conditional="localetext" transparent="1" />
+		<widget name="languagetext" position="0,0" size="0,0" conditional="languagetext" transparent="1" />
 	</screen>
 
 <!--
@@ -26,16 +45,16 @@
  |	DreamPackageWizard, VideoWizard and ImageWizard.
  +-->
  
-	<screen name="WizardList" title="Welcome..." position="fill" flags="wfNoBorder">
+	<screen name="WizardList" title="Welcome" position="fill" flags="wfNoBorder">
 		<panel name="WizardTemplate" />
-		<widget source="list" render="Listbox" position="500,350" size="730,280" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="list" render="Listbox" position="400,350" size="830,280" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="list" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<!-- <convert type="StringList" /> -->
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (20, 0), size = (650, 35), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),
-					MultiContentEntryText(pos = (670, 0), size = (30, 35), flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = ">")
+					MultiContentEntryText(pos = (20, 0), size = (740, 35), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),
+					# MultiContentEntryText(pos = (770, 0), size = (30, 35), flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = ">")
 					],
 				"fonts": [parseFont("Regular;25")],
 				"itemHeight": 35
@@ -50,9 +69,47 @@
  |	DreamPackageWizard, VideoWizard and ImageWizard.
  +-->
  
-	<screen name="WizardConfig" title="Welcome..." position="fill" flags="wfNoBorder">
-		<panel name="WizardList" />
-		<widget name="config" position="500,350" size="730,280" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+	<screen name="WizardConfig" title="Welcome" position="fill" flags="wfNoBorder">
+		<panel name="WizardTemplate" />
+		<widget name="config" position="400,350" size="830,280" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="config" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+	</screen>
+
+<!--	WizardMessage - Template for text message element in wizards
+ |
+ |	Used by Unknown.
+ +-->
+ 
+	<screen name="WizardMessage" title="Welcome" position="fill" flags="wfNoBorder">
+		<panel name="WizardTemplate" />
+		<widget name="message" position="400,350" size="830,280" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="message" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+	</screen>
+
+<!-- Default Wizard Screen -->
+
+	<screen name="Wizard" title="Welcome" position="fill" flags="wfNoBorder">
+		<panel name="WizardTemplate" />
+	</screen>
+
+<!-- Wizard Start -->
+
+	<screen name="WizardStart" title="Welcome" position="fill" flags="wfNoBorder">
+		<panel name="WizardTemplate" />
+	</screen>
+
+	<screen name="StartWizard" title="Welcome" position="fill" flags="wfNoBorder">
+		<panel name="WizardTemplate" />
+	</screen>
+
+<!-- Wizard Internet -->
+
+	<screen name="WizardInternet" title="Welcome" position="fill" flags="wfNoBorder">
+		<panel name="WizardTemplate"/>
+	</screen>
+
+<!-- Wizard Internet Package Updater -->
+
+	<screen name="WizardInternetPkgUpdater" title="Welcome" position="fill" flags="wfNoBorder">
+		<panel name="WizardTemplate" />
 	</screen>
 
 <!-- Wizard Notification Box -->
@@ -64,44 +121,67 @@
 
 <!-- AutoTimer Wizard -->
 
-	<screen name="AutoTimerWizard" title="Welcome..." position="fill" flags="wfNoBorder">
+	<screen name="AutoTimerWizard" title="Welcome" position="fill" flags="wfNoBorder">
 		<panel name="WizardConfig" />
 	</screen>
 
 <!-- Network Wizard -->
 
-	<screen name="NetworkWizard" title="Welcome..." position="fill" flags="wfNoBorder">
+	<screen name="NetworkWizard" title="Welcome" position="fill" flags="wfNoBorder">
 		<panel name="WizardConfig" />
 	</screen>
 
 <!-- Default wizard -->
 
-	<screen name="DefaultWizard" title="Welcome..." position="fill" flags="wfNoBorder">
+	<screen name="DefaultWizard" title="Welcome" position="fill" flags="wfNoBorder">
 		<panel name="WizardConfig" />
 	</screen>
 
 <!-- DefaultSatLists -->
 
-	<screen name="DefaultSatLists" title="Welcome..." position="fill" flags="wfNoBorder">
+	<screen name="DefaultSatLists" title="Welcome" position="fill" flags="wfNoBorder">
 		<panel name="WizardConfig" />
 	</screen>
 
 <!-- DreamPackageWizard -->
 
-	<screen name="DreamPackageWizard" title="Welcome..." position="fill" flags="wfNoBorder">
+	<screen name="DreamPackageWizard" title="Welcome" position="fill" flags="wfNoBorder">
 		<panel name="WizardConfig" />
+	</screen>
+
+<!-- Locale Wizard -->
+
+	<screen name="LocaleWizard" title="Welcome: Locale/Language Selection" position="fill" flags="wfNoBorder">
+		<panel name="WizardTemplate" />
+		<widget name="icons" position="0,0" size="30,27" pixmaps="icons/lock_off.png,icons/lock_on.png,icons/lock_error.png" alphatest="blend" />
+		<widget source="locales" render="Listbox" position="400,350" size="830,280" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryPixmapAlphaBlend(pos = (5, 3), size = (60, 30), flags = BT_SCALE, png = 0), # Index 0 is the flag pixmap.
+					MultiContentEntryText(pos = (75, 0), size = (350, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),  # Index 1 is the native language name.
+					MultiContentEntryText(pos = (435, 0), size = (340, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2),  # Index 2 is the English language name.
+					MultiContentEntryPixmapAlphaBlend(pos = (775, 4), size = (30, 27), flags = BT_SCALE, png = 5) # Index 5 is the status pixmap.
+					],
+				"fonts": [parseFont("SMSHelperFont;23")],
+				"itemHeight": 35
+				}
+			</convert>
+		</widget>
+		<widget source="description" render="Label" position="0,0" size="0,0" transparent="1" />
 	</screen>
 
 <!-- Language Wizard -->
 
 	<screen name="LanguageWizard" title="Welcome: Language Selection" position="fill" flags="wfNoBorder">
 		<panel name="WizardTemplate" />
-		<widget source="languages" render="Listbox" position="500,350" size="730,300" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="languages" render="Listbox" position="400,350" size="830,300" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (100, 0), size = (600, 50), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1), # index 1 is the language name,
+					MultiContentEntryText(pos = (100, 0), size = (710, 50), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1), # index 1 is the language name,
 					MultiContentEntryPixmap(pos = (20, 5), size = (60, 40), png = 2), # index 2 is the pixmap
 					],
 				"fonts": [parseFont("SMSHelperFont;25")],
@@ -113,7 +193,7 @@
 
 <!-- Skin Wizard -->
 
-	<screen name="SkinSelectorWizard" title="Welcome: Skin Selection" position="fill" flags="wfNoBorder">
+	<screen name="WizardSkinSelector" title="Welcome: Skin Selection" position="fill" flags="wfNoBorder">
 		<panel name="WizardTemplate" />
 		<widget name="skins" position="600,230" size="450,240" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
@@ -128,51 +208,49 @@
 				}
 			</convert>
 		</widget>
-		<widget name="preview" position="200,230" size="280,210" alphatest="on" />
-	</screen>
-
-<!--Start Wizard -->
-
-	<screen name="StartWizard" title="Welcome..." position="0,0" size="1280,720" flags="wfNoBorder">
-		<panel name="WizardConfig"/>
+		<widget name="preview" position="200,230" size="280,210" alphatest="blend" />
 	</screen>
 
 <!-- Terrestrial Location Scan Wizard -->
 
-	<screen name="IniTerrestrialLocationWizard" title="Welcome..." position="fill" flags="wfNoBorder">
+	<screen name="IniTerrestrialLocationWizard" title="Welcome" position="fill" flags="wfNoBorder">
 		<panel name="WizardConfig" />
 	</screen>
 
 <!-- Tutorial Wizard -->
 
-	<screen name="TutorialWizard" title="Welcome..." position="fill" flags="wfNoBorder">
+	<screen name="TutorialWizard" title="Welcome" position="fill" flags="wfNoBorder">
 		<panel name="WizardTemplate" />
 		<widget name="list" position="500,350" size="730,280" backgroundColor="TextBackground" foregroundColor="Text" transparent="1" />
 	</screen>
 
 <!-- VideoWizard -->
 
-	<screen name="VideoWizard" title="Select Video Output..." position="fill" flags="wfNoBorder">
+	<screen name="VideoWizard" title="Welcome: Video Output Selection" position="fill" flags="wfNoBorder">
 		<panel name="WizardConfig" />
 	</screen>
 
 <!-- Image Backup Wizard -->
 
-	<screen name="ImageWizard" title="Welcome..." position="fill" flags="wfNoBorder">
+	<screen name="ImageWizard" title="Welcome" position="fill" flags="wfNoBorder">
 		<panel name="WizardConfig" />
 	</screen>
 
 <!-- Startup HDD Format Wizard -->
 
-	<screen name="StartHDDFormatWizard" title="Welcome..." position="fill" flags="wfNoBorder">
+	<screen name="StartHDDFormatWizard" title="Welcome" position="fill" flags="wfNoBorder">
 		<panel name="WizardTemplate" />
 		<widget name="errors" position="500,350" size="730,280" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" valign="top" />
 	</screen>
 
 <!-- Final "Congratulations" Setup Wizard -->
 
-	<screen name="IniEndWizard" title="Welcome..." position="fill" flags="wfNoBorder">
+	<screen name="IniEndWizard" title="Welcome" position="fill" flags="wfNoBorder">
 		<panel name="WizardTemplate" />
+	</screen>
+
+	<screen name="WizardSummary" title="Welcome" position="fill" flags="wfNoBorder">
+		<widget name="text" position="0,0" size="1280,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Orange" transparent="1" valign="center" />
 	</screen>
 
 <!-- Remote IP Tuner Scanner Wizard -->
