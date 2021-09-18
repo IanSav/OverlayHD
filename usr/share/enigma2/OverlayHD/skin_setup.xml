@@ -75,8 +75,10 @@
 		<eLabel position="960,524" size="270,2" backgroundColor="Pinstripe" />
 		<eLabel position="960,80" size="2,445" backgroundColor="Pinstripe" />
 		<eLabel position="1228,80" size="2,445" backgroundColor="Pinstripe" />
-		<widget name="preview" position="970,90" size="250,425" alphatest="blend" transparent="1" />
-		<panel name="ScreenTemplateSDescription4" />
+		<widget name="preview" position="970,90" size="250,425" alphatest="blend" conditional="preview" transparent="1" />
+		<widget name="Preview" position="970,90" size="250,425" alphatest="blend" conditional="Preview" transparent="1" />
+		<panel name="ScreenTemplateSDescription4" conditional="description" />
+		<panel name="ScreenTemplateSIntroduction4" conditional="introduction" />
 	</screen>
 
 <!-- MENU > Setup > AV Setup > HDMI-CEC -->
