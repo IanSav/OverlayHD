@@ -375,19 +375,16 @@
 
 	<screen name="LocationBox" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonMenu" />
-		<panel name="ScreenTemplateButtonHelp" />
 		<ePixmap pixmap="menus/mainmenu_tasks_browser.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
-		<widget name="filelist" position="400,80" size="830,250" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
-		<widget name="textbook" position="400,340" size="830,25" backgroundColor="DarkGrey" font="Regular;20" foregroundColor="Black" valign="center" />
+		<widget name="filetext" position="400,80" size="830,25" backgroundColor="DarkGrey" conditional="filetext" font="Regular;20" foregroundColor="Black" valign="center" />
+		<widget name="filelist" position="400,105" size="830,225" enableWrapAround="1" itemHeight="25" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="quickselect" position="400,105" size="830,225" font="SMSHelperFont;100" foregroundColor="FindCharacter" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="booktext" position="400,340" size="830,25" backgroundColor="DarkGrey" conditional="booktext" font="Regular;20" foregroundColor="Black" valign="center" />
+		<widget name="textbook" position="400,340" size="830,25" backgroundColor="DarkGrey" conditional="textbook" font="Regular;20" foregroundColor="Black" valign="center" />
 		<widget name="booklist" position="400,365" size="830,200" font="FilePropFont;20" itemHeight="25" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" />
 		<panel name="ScreenTemplateFrame830x70" />
-		<widget name="text" position="410,600" size="810,25" font="Regular;20" transparent="1" valign="center" zPosition="+1" />
-		<widget name="target" position="410,625" size="810,25" font="Regular;20" transparent="1" valign="center" zPosition="+1" />
-		<widget name="red" position="0,0" size="0,0" />
-		<widget name="green" position="0,0" size="0,0" />
-		<widget name="yellow" position="0,0" size="0,0" />
-		<widget name="blue" position="0,0" size="0,0" />
+		<widget name="text" position="410,600" size="810,25" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" zPosition="+1" />
+		<widget name="target" position="410,625" size="810,25" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" zPosition="+1" />
 	</screen>
 
 <!-- Media Player plug in uses "MediaPlayerDirectoryBrowser" first and then "FileBrowser" if the first is not found. -->
