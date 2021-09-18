@@ -373,6 +373,9 @@
 		<alias name="FilePropFont" font="ValisEnigma" size="20" height="25" width="18" />
 		<alias name="FixedFont" font="VeraSansMono" size="20" height="25" width="18" />
 		<alias name="HelpFont" font="NemesisFlatline" size="20" height="25" width="18" />
+		<alias name="HelpMenuList" font="ValisEnigma" size="20" height="25" width="18" />
+		<alias name="HelpMenuListExt0" font="ValisEnigma" size="25" height="35" width="18" />
+		<alias name="HelpMenuListExt1" font="ValisEnigma" size="20" height="25" width="18" />
 		<alias name="InfoEventFont" font="NemesisFlatline" size="20" height="25" width="18" />
 		<alias name="InfoDescriptionFont" font="NemesisFlatline" size="20" height="25" width="18" />
 		<alias name="InfoOtherFont" font="NemesisFlatline" size="20" height="25" width="18" />
@@ -413,15 +416,17 @@
 		<parameter name="EPGSingleColumnScales" value="5.7,6.0,1.5" />
 		<parameter name="EPGSingleColumnSpecs" value="0,125,5,135,20" />
 		-->
-		<parameter name="FileListName" value="35,0,795,25" />
 		<parameter name="FileListIcon" value="10,2,20,20" />
+		<parameter name="FileListName" value="35,0,795,25" />
+		<parameter name="FileListBookmark" value="10,0,820,25" />
 		<parameter name="FileListMultiName" value="55,0,470,25" />
 		<parameter name="FileListMultiIcon" value="30,2,20,20" />
 		<parameter name="FileListMultiLock" value="2,0,25,25" />
+		<parameter name="FrontendInfoColors" value="TunerCurrent,TunerRecording,TunerIdle" />
+		<parameter name="HelpMenuListHlp" value="0,0,900,25" />
+		<parameter name="HelpMenuListExtHlp0" value="0,0,900,35" />
+		<parameter name="HelpMenuListExtHlp1" value="0,42,900,25" />
 		<!--
-		<parameter name="HelpMenuListHlp" value="0,0,900,42" />
-		<parameter name="HelpMenuListExtHlp0" value="0,0,900,39" />
-		<parameter name="HelpMenuListExtHlp1" value="0,42,900,30" />
 		<parameter name="PartnerBoxEntryListName" value="8,2,225,38" />
 		<parameter name="PartnerBoxEntryListIP" value="180,2,225,38" />
 		<parameter name="PartnerBoxEntryListPort" value="405,2,150,38" />
@@ -470,58 +475,78 @@
 	</parameters>
 
 	<menus>
+		<menu key="default" image="menus/mainmenu_tasks_setup.png" />
+		<menu key="info_screen" image="menus/mainmenu_tasks_setup.png" />
+		<menu key="about_screen" image="menus/mainmenu_tasks_power_standby.png" />
+		<menu key="boxbranding_screen" image="menus/mainmenu_tasks_power_restartshell.png" />
+		<menu key="multiboot_screen" image="menus/mainmenu_tasks_power_reboot.png" />
+		<menu key="device_screen" image="menus/mainmenu_tasks_power_restartshell.png" />
+		<menu key="memory_screen" image="menus/mainmenu_tasks_power_shutdown.png" />
+		<menu key="network_screen" image="menus/mainmenu_tasks_setup.png" />
+		<menu key="service_info_screen" image="menus/mainmenu_tasks_setup.png" />
+		<menu key="streaming_clients_info_screen" image="menus/mainmenu_tasks_setup.png" />
+		<menu key="standby_restart_list" image="menus/mainmenu_tasks_setup.png" />
+		<menu key="standby" image="menus/mainmenu_tasks_power_standby.png" />
+		<menu key="restart_enigma" image="menus/mainmenu_tasks_power_restartshell.png" />
+		<menu key="restart" image="menus/mainmenu_tasks_power_reboot.png" />
+		<menu key="multiboot" image="menus/mainmenu_tasks_power_restartshell.png" />
+		<menu key="deep_standby" image="menus/mainmenu_tasks_power_shutdown.png" />
+		<menu key="maintenance_mode" image="menus/mainmenu_tasks_setup.png" />
+		<menu key="android_mode" image="menus/mainmenu_tasks_setup.png" />
 	</menus>
 
 	<setups>
 		<setup key="default" image="menus/mainmenu_tasks_setup_system.png" />
-		<!-- <setup key="time" image="menus/mainmenu_tasks_setup_system.png" /> -->
-		<!-- <setup key="avsetup" image="menus/mainmenu_tasks_setup_system.png" /> -->
-		<!-- <setup key="tunersetup" image="menus/mainmenu_tasks_setup_system.png" /> -->
-		<setup key="userinterface" image="menus/mainmenu_tasks_setup_photo.png" />
-		<setup key="channelselection" image="menus/mainmenu_tasks_setup_default.png" />
-		<setup key="epgsettings" image="menus/mainmenu_tv_epg.png" />
-		<!-- <setup key="subtitlesetup" image="menus/mainmenu_tasks_setup_system.png" /> -->
-		<!-- <setup key="autolanguagesetup" image="menus/mainmenu_tasks_setup_system.png" /> -->
-		<!-- <setup key="recording" image="menus/mainmenu_tasks_setup_system.png" /> -->
-		<!-- <setup key="hdmirecord" image="menus/mainmenu_tasks_setup_system.png" /> -->
-		<!-- <setup key="fanspeed" image="menus/mainmenu_tasks_setup_system.png" /> -->
-		<!-- <setup key="harddisk" image="menus/mainmenu_tasks_setup_system.png" /> -->
-		<!-- <setup key="network" image="menus/mainmenu_tasks_setup_system.png" /> -->
-		<!-- <setup key="RFmod" image="menus/mainmenu_tasks_setup_system.png" /> -->
-		<!-- <setup key="keyboard" image="menus/mainmenu_tasks_setup_system.png" /> -->
-		<!-- <setup key="display" image="menus/mainmenu_tasks_setup_system.png" /> -->
-		<!-- <setup key="satconfig" image="menus/mainmenu_tasks_setup_system.png" /> -->
-		<!-- <setup key="softwareupdate" image="menus/mainmenu_tasks_setup_system.png" /> -->
-		<!-- <setup key="buttonsetup" image="menus/mainmenu_tasks_setup_system.png" /> -->
-		<!-- <setup key="softcamsetup" image="menus/mainmenu_tasks_setup_system.png" /> -->
-		<!-- <setup key="logs" image="menus/mainmenu_tasks_setup_system.png" /> -->
-		<!-- <setup key="timeshift" image="menus/mainmenu_tasks_setup_system.png" /> -->
-		<!-- <setup key="epgsingle" image="menus/mainmenu_tasks_setup_system.png" /> -->
-		<!-- <setup key="epgmulti" image="menus/mainmenu_tasks_setup_system.png" /> -->
-		<!-- <setup key="epgenhanced" image="menus/mainmenu_tasks_setup_system.png" /> -->
-		<!-- <setup key="epginfobar" image="menus/mainmenu_tasks_setup_system.png" /> -->
-		<!-- <setup key="epginfobargraphical" image="menus/mainmenu_tasks_setup_system.png" /> -->
-		<!-- <setup key="epggraphical" image="menus/mainmenu_tasks_setup_system.png" /> -->
-		<!-- <setup key="pluginbrowsersetup" image="menus/mainmenu_tasks_setup_system.png" /> -->
-		<!-- <setup key="fallback" image="menus/mainmenu_tasks_setup_system.png" /> -->
-		<setup key="UserInterfacePositioner" image="menus/mainmenu_tasks_setup_tv.png" />
-		<setup key="OSD3DSetupScreen" image="menus/mainmenu_tasks_setup_tv.png" />
-		<setup key="SkinSelector" image="menus/mainmenu_tasks_setup_tv.png" />
+		<!-- Setup based screens that may eventually get subclassed to Setup.
+		<setup key="FileCommander" image="menus/mainmenu_tasks_setup_tv.png" />
 		<setup key="HdmiCECSetupScreen" image="menus/mainmenu_tasks_setup_tv.png" />
+		<setup key="IniTerrestrialLocation" image="menus/mainmenu_tasks_setup_tv.png" />
 		<setup key="LanguageSelection" image="menus/mainmenu_tasks_setup_softwaremanager.png" />
+		<setup key="MediaPlayerSettings" image="menus/mainmenu_tasks_setup_movie.png" />
 		<setup key="NimSelection" image="menus/mainmenu_tasks_setup_tv.png" />
 		<setup key="NimSetup" image="menus/mainmenu_tasks_setup_tv.png" />
-		<setup key="IniTerrestrialLocation" image="menus/mainmenu_tasks_setup_tv.png" />
-		<setup key="ScanSetup" image="menus/mainmenu_tasks_setup_tv.png" />
-		<setup key="parentalcontrol" image="menus/mainmenu_tasks_setup_parental.png" />
-		<setup key="ParentalControlSetup" image="menus/mainmenu_tasks_setup_parental.png" />
-		<setup key="ParentalControlEditor" image="menus/mainmenu_tasks_setup_parental.png" />
+		<setup key="OSD3DSetupScreen" image="menus/mainmenu_tasks_setup_tv.png" />
 		<setup key="ParentalControlChangePin" image="menus/mainmenu_tasks_setup_parental.png" />
-		<setup key="ZapHistoryConfigurator" image="menus/mainmenu_tv_zaphistory.png" />
+		<setup key="ParentalControlEditor" image="menus/mainmenu_tasks_setup_parental.png" />
+		<setup key="ParentalControlSetup" image="menus/mainmenu_tasks_setup_parental.png" />
 		<setup key="PicturePlayerSetup" image="menus/mainmenu_tasks_setup_photo.png" />
-		<setup key="MediaPlayerSettings" image="menus/mainmenu_tasks_setup_movie.png" />
-		<setup key="FileCommander" image="menus/mainmenu_tasks_setup_tv.png" />
-		<setup key="FactoryReset" image="menus/mainmenu_tasks_setup_factoryreset.png" />
+		<setup key="ScanSetup" image="menus/mainmenu_tasks_setup_tv.png" />
+		<setup key="SkinSelector" image="menus/mainmenu_tasks_setup_tv.png" />
+		<setup key="UserInterfacePositioner" image="menus/mainmenu_tasks_setup_tv.png" />
+		<setup key="ZapHistoryConfigurator" image="menus/mainmenu_tv_zaphistory.png" />
+		-->
+		<setup key="autolanguagesetup" image="menus/mainmenu_tasks_setup_system.png" />
+		<setup key="avsetup" image="menus/mainmenu_tasks_setup_system.png" />
+		<setup key="buttonsetup" image="menus/mainmenu_tasks_setup_system.png" />
+		<setup key="channelselection" image="menus/mainmenu_tasks_setup_default.png" />
+		<setup key="display" image="menus/mainmenu_tasks_setup_system.png" />
+		<setup key="epgenhanced" image="menus/mainmenu_tasks_setup_system.png" />
+		<setup key="epggraphical" image="menus/mainmenu_tasks_setup_system.png" />
+		<setup key="epginfobar" image="menus/mainmenu_tasks_setup_system.png" />
+		<setup key="epginfobargraphical" image="menus/mainmenu_tasks_setup_system.png" />
+		<setup key="epgmulti" image="menus/mainmenu_tasks_setup_system.png" />
+		<setup key="epgsettings" image="menus/mainmenu_tv_epg.png" />
+		<setup key="epgsingle" image="menus/mainmenu_tasks_setup_system.png" />
+		<setup key="factoryreset" image="menus/mainmenu_tasks_setup_factoryreset.png" />
+		<setup key="fallback" image="menus/mainmenu_tasks_setup_system.png" />
+		<setup key="fanspeed" image="menus/mainmenu_tasks_setup_system.png" />
+		<setup key="harddisk" image="menus/mainmenu_tasks_setup_system.png" />
+		<setup key="hdmirecord" image="menus/mainmenu_tasks_setup_system.png" />
+		<setup key="keyboard" image="menus/mainmenu_tasks_setup_system.png" />
+		<setup key="logs" image="menus/mainmenu_tasks_setup_system.png" />
+		<setup key="network" image="menus/mainmenu_tasks_setup_system.png" />
+		<setup key="parentalcontrol" image="menus/mainmenu_tasks_setup_parental.png" />
+		<setup key="pluginbrowsersetup" image="menus/mainmenu_tasks_setup_system.png" />
+		<setup key="recording" image="menus/mainmenu_tv_live.png" />
+		<setup key="RFmod" image="menus/mainmenu_tasks_setup_system.png" />
+		<setup key="satconfig" image="menus/mainmenu_tasks_setup_system.png" />
+		<setup key="softcamsetup" image="menus/mainmenu_tasks_setup_system.png" />
+		<setup key="softwareupdate" image="menus/mainmenu_tasks_setup_system.png" />
+		<setup key="subtitlesetup" image="menus/mainmenu_tasks_setup_system.png" />
+		<setup key="time" image="menus/mainmenu_tv_live.png" />
+		<setup key="timeshift" image="menus/mainmenu_tv_live.png" />
+		<setup key="tunersetup" image="menus/mainmenu_tasks_setup_system.png" />
+		<setup key="userinterface" image="menus/mainmenu_tasks_setup_photo.png" />
 	</setups>
 
 	<windowstyle id="0" type="skinned">
@@ -552,7 +577,9 @@
 			<pixmap filename="borders/tib-v.png" pos="bpTop" />
 			<pixmap filename="borders/tib-v.png" pos="bpBottom" />
 		</borderset>
-		<scrollbar scrollbarMode="showOnDemand" scrollbarBackgroundPicture="borders/s_back.png" scrollbarSliderBorderColor="Blue" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="Red" scrollbarSliderPicture="borders/s_thumb.png" scrollbarWidth="10" />
+		<!-- <scrollbar scrollbarMode="showOnDemand" scrollbarBackgroundPicture="borders/s_back.png" scrollbarSliderBorderColor="Blue" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="Red" scrollbarSliderPicture="borders/s_thumb.png" scrollbarWidth="10" /> -->
+		<scrollbar scrollbarSliderBorderColor="Blue" scrollbarSliderBorderWidth="2" scrollbarSliderForegroundColor="Red" scrollbarMode="showOnDemand" scrollbarWidth="10" />
+		<!-- scrollbarbackgroundPixmap=scrollbarBackgroundPicture, sliderPixmap=scrollbarSliderPicture -->
 	</windowstyle>
 
 	<windowstyle id="1" type="skinned">
@@ -1014,10 +1041,14 @@
 	<screen name="Menu" title="Menu" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
-		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="blend" conditional="menuimage" transparent="1" zPosition="+1" /> -->
+		<widget name="menuimage" position="50,100" size="300,500" alphatest="blend" conditional="menuimage" transparent="1" />
 		<panel name="MenuEnigma2" base="Menu" />
 		<widget name="charlist" position="0,0" size="0,0" conditional="charlist" transparent="1" />
 		<widget name="charframe" position="0,0" size="0,0" conditional="charframe" transparent="1" />
+	</screen>
+
+	<screen name="MenuSort" title="Menu Sorter" position="fill" flags="wfNoBorder">
+		<panel name="Menu" />
 	</screen>
 
 	<screen name="MenuBeyonwiz" title="Menu" position="fill" flags="wfNoBorder">
@@ -1104,7 +1135,8 @@
 	<screen name="HelpMenu" title="Help" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="HelpMenuOld" conditional="arrowdown" />
-		<panel name="HelpMenuNew" conditional="indicator_u0" />
+		<panel name="HelpMenuNew" conditional="indicatorU0" />
+		<panel name="HelpMenuBeyonwiz" conditional="indicator_u0" />
 	</screen>
 
 	<screen name="HelpMenuOld" title="Help" position="fill" flags="wfNoBorder">
@@ -1172,9 +1204,42 @@
 				}
 			</convert>
 		</widget>
-		<widget name="longshift_key0" position="400,510" size="830,25" backgroundColor="TextBackground" font="HelpFont;20" foregroundColor="HelpPress" halign="right" transparent="1" valign="center" />
-		<widget name="longshift_key1" position="400,510" size="830,25" backgroundColor="TextBackground" font="HelpFont;20" foregroundColor="HelpPress" transparent="1" valign="center" />
+		<widget name="longshift" position="400,620" size="830,30" backgroundColor="TextBackground" conditional="longshift" font="HelpFont;25" foregroundColor="HelpPress" transparent="1" valign="center" />
+		<widget name="longshift_key0" position="400,620" size="830,30" backgroundColor="TextBackground" conditional="longshift_key0" font="HelpFont;25" foregroundColor="HelpPress" halign="right" transparent="1" valign="center" />
+		<widget name="longshift_key1" position="400,620" size="830,30" backgroundColor="TextBackground" conditional="longshift_key1" font="HelpFont;25" foregroundColor="HelpPress" transparent="1" valign="center" />
 		<panel name="ScreenTemplateDescription4" />
+	</screen>
+
+	<screen name="HelpMenuBeyonwiz" title="Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
+		<panel name="ScreenTemplateButtonHelp" />
+		<panel position="150,110" size="154,500">
+			<panel name="ScreenTemplateRemote" />
+		</panel>
+		<widget source="list" render="Listbox" position="400,80" size="830,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+			<convert type="TemplatedMultiContent">
+				{
+				"templates":
+					{
+					"default": (25,
+						[
+						MultiContentEntryText(pos = (0, 0), size = (810, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),  # Help label
+						MultiContentEntryText(pos = (20, 0), size = (790, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2)  # Help item
+						]),
+					"extended": (50,
+						[
+						MultiContentEntryText(pos = (0, 0), size = (810, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),  # Help label
+						MultiContentEntryText(pos = (20, 0), size = (790, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2),  # Help item
+						MultiContentEntryText(pos = (0, 25), size = (810, 25), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, color = "DarkGrey", color_sel = "Silver", text = 3),  # Help label (tupple with 1)
+						MultiContentEntryText(pos = (20, 25), size = (790, 25), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, color = "DarkGrey", color_sel = "Silver", text = 4),  # Help item (tupple with 2)
+						])
+					},
+				"fonts": [parseFont("HelpFont;20"), parseFont("HelpFont;20")],
+				"itemHeight": 25
+				}
+			</convert>
+		</widget>
+		<widget name="longshift_key0" position="400,620" size="830,30" backgroundColor="TextBackground" font="HelpFont;25" foregroundColor="HelpPress" halign="right" transparent="1" valign="center" />
+		<widget name="longshift_key1" position="400,620" size="830,30" backgroundColor="TextBackground" font="HelpFont;25" foregroundColor="HelpPress" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="MPHelp" title="XML Help" position="fill" flags="wfNoBorder">
@@ -1186,6 +1251,52 @@
 <!-- Panel To Display The Remote Control (154 x 500 pixels) -->
 
 	<screen name="ScreenTemplateRemote">
+		<panel name="ScreenTemplateRemoteEnigma2" base="ScreenTemplateRemote" />
+	</screen>
+
+	<screen name="ScreenTemplateRemoteEnigma2">
+		<widget name="rc" position="0,0" size="154,500" alphatest="blend" />
+		<!--
+		 |	For the key indicator pixmaps, "position" is used for
+		 |	the position of the pixmap "hotspot".
+		 |	The screen positions the pixmap relative to the
+		 |	hotspot, not the pixmap's top left corner
+		 +-->
+		<widget name="indicatorU0" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicatorU1" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicatorU2" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicatorU3" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicatorU4" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicatorU5" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicatorU6" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicatorU7" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicatorU8" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicatorU9" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicatorU10" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicatorU11" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicatorU12" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicatorU13" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicatorU14" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicatorU15" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicatorL0" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicatorL1" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicatorL2" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicatorL3" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicatorL4" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicatorL5" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicatorL6" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicatorL7" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicatorL8" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicatorL9" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicatorL10" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicatorL11" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicatorL12" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicatorL13" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicatorL14" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+		<widget name="indicatorL15" pixmap="images/rc_circle.png" position="0,0" size="23,23" alphatest="blend" offset="11,11" zPosition="+1" />
+	</screen>
+
+	<screen name="ScreenTemplateRemoteBeyonwiz">
 		<widget name="rc" pixmaps="images/rc.png,images/rcold.png" position="0,0" size="154,500" alphatest="blend" />
 		<!--
 		 |	For the key indicator pixmaps, "position" is used for
@@ -1279,7 +1390,7 @@
 
 	<screen name="Setup" title="Setup" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget name="menuimage" position="50,100" size="300,500" alphatest="blend" conditional="menuimage" transparent="1" />
+		<widget name="setupimage" position="50,100" size="300,500" alphatest="blend" conditional="setupimage" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateFootnote4" />
 		<panel name="ScreenTemplateDescription4" />
@@ -1413,7 +1524,7 @@
 	</screen>
 
 	<screen name="ScreenTemplateOverlayText0">
-		<widget name="text" position="400,80" size="830,550" backgroundColor="TextBackground" font="Regular;25" foregroundColor="TextWaiting" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="text" position="400,80" size="830,550" backgroundColor="TextBackground" font="Regular;25" foregroundColor="TextWaiting" halign="center" transparent="1" valign="center" zPosition="-1" />
 	</screen>
 	
 <!-- Configuration items with a two line text window -->
@@ -1572,13 +1683,22 @@
 	</screen>
 
 	<screen name="ScreenTemplateSkinList4">
-		<widget source="skins" render="Listbox" position="400,80" size="540,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<panel name="ScreenTemplateSkinList4Enigma2" base="ScreenTemplateSkinList4" />
+	</screen>
+
+	<screen name="ScreenTemplateSkinList4Enigma2">
+		<widget source="skins" render="Listbox" position="400,80" size="540,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (20, 0), size = (280, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
-					MultiContentEntryText(pos = (320, 0), size = (200, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 2)
+					# MultiContentEntryText(pos = (20, 0), size = (280, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
+					# MultiContentEntryText(pos = (320, 0), size = (200, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 2)
+					# 0=SortKey, 1=Label, 2=Flag, 3=Directory, 4=Skin, 5=Resolution, 6=Preview, 7=Label + Flag
+					MultiContentEntryText(pos = (20, 0), size = (250, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
+					MultiContentEntryText(pos = (280, 0), size = (180, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 2),
+					MultiContentEntryText(pos = (470, 0), size = (50, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 5)
+					# MultiContentEntryText(pos = (20, 0), size = (440, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 7)
 					],
 				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
@@ -1587,7 +1707,7 @@
 		</widget>
 	</screen>
 
-	<screen name="ScreenTemplateSkinList4Old">
+	<screen name="ScreenTemplateSkinList4Beyonwiz">
 		<widget name="SkinList" position="400,80" size="540,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
@@ -1744,7 +1864,7 @@
 	</screen>
 
 	<screen name="ScreenTemplateConfigShort">
-		<widget name="config" position="400,80" size="830,290" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="config" position="400,80" size="830,280" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateMenuListShort">
@@ -1969,6 +2089,14 @@
 		<eLabel position="484,0" size="2,78" backgroundColor="PinstripeVolume" zPosition="+2" />
 		<ePixmap pixmap="images/volume.png" position="0,0" size="485,78" alphatest="blend" transparent="1" zPosition="+1" />
 		<widget name="Volume" position="63,25" size="335,30" backgroundColor="VolumeBackground" foregroundColor="VolumeColour" transparent="0" />
+		<panel name="VolumeTextEnigma2" base="VolumeText" />
+	</screen>
+
+	<screen name="VolumeTextBeyonwiz">
+		<widget source="global.CurrentTime" render="VolumeText" position="63,44" size="335,30" backgroundColor="VolumeBackground" font="LCD;30" foregroundColor="VolumeColour" halign="center" transparent="1" valign="center" zPosition="+2" />
+	</screen>
+
+	<screen name="VolumeTextEnigma2">
 		<widget name="VolumeText" position="63,44" size="335,30" backgroundColor="VolumeBackground" conditional="VolumeText" font="LCD;30" foregroundColor="VolumeColour" halign="center" transparent="1" valign="center" zPosition="+2" />
 	</screen>
 
@@ -2036,22 +2164,6 @@
 		<widget name="language" position="1030,630" size="200,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" halign="right" transparent="1" valign="center" />
 	</screen>
 
-	<!-- The Beyonwiz version of the Virtual Keyboard is no longer supportable as it too far out of date!  The images now in use are too different from those used in the old code!
-	<screen name="VirtualKeyBoard" title="Virtual Keyboard" position="center,center" size="800,400" zPosition="+90">
-		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_shuffle.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
-		<widget name="header" position="420,80" size="810,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
-		<eLabel position="415,170" size="815,2" backgroundColor="Pinstripe" />
-		<eLabel position="415,215" size="815,2" backgroundColor="Pinstripe" />
-		<eLabel position="415,170" size="2,45" backgroundColor="Pinstripe" />
-		<eLabel position="1229,170" size="2,45" backgroundColor="Pinstripe" />
-		<widget name="text" position="420,180" size="800,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" noWrap="1" transparent="1" valign="center" />
-		<widget name="list" position="545,300" size="540,225" selectionDisabled="1" transparent="1" />
-		<widget name="country" position="420,630" size="650,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="HelpPress" transparent="1" />
-		<widget name="current_language" position="1090,630" size="140,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="HelpPress" halign="right" transparent="1" />
-	</screen>
-	-->
-
 	<!-- This is the pop up window version of the VirtualKeyBoard... (Not currently in use!)
 	<screen name="VirtualKeyBoard" title="Virtual Keyboard" position="center,center" size="660,410" zPosition="99">
 		<widget name="prompt" position="15,10" size="630,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
@@ -2073,12 +2185,13 @@
 		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="0,0" size="53,53" alphatest="blend" scale="1" transparent="1" />
 		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="0,0" size="53,53" alphatest="blend" scale="1" transparent="1" />
 		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="0,0" size="53,53" alphatest="blend" scale="1" transparent="1" />
-		<widget name="icon" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" position="0,0" size="53,53" alphatest="blend" scale="1" transparent="1" />
+		<widget name="icon" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" position="0,0" size="53,53" alphatest="blend" conditional="icon" scale="1" transparent="1" />
 		<widget name="text" position="65,10" size="700,0" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1" />
 		<!-- <widget name="list" position="100,100" size="700,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" /> -->
 		<widget name="list" position="100,100" size="700,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 		<applet type="onLayoutFinish">
-self.autoResize()
+if hasattr(self, "autoResize"):
+	self.autoResize()
 		</applet>
 	</screen>
 
@@ -2096,15 +2209,18 @@ self.autoResize()
 		<widget name="text" position="0,0" size="700,0" backgroundColor="TextBackground" conditional="text" font="TitleFont;25" foregroundColor="BannerTitle" transparent="1" />
 		<widget name="list" position="100,100" size="700,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 		<applet type="onLayoutFinish">
-self.autoResize()
+if hasattr(self, "autoResize"):
+	self.autoResize()
 		</applet>
 	</screen>
+
 	<screen name="ChoiceBox" position="center,center" size="700,130" zPosition="+90">
-		<widget name="text" position="0,0" size="700,35" backgroundColor="TextBackground" conditional="text" font="TitleFont;25" foregroundColor="BannerTitle" transparent="1" />
-		<widget name="description" position="0,35" size="700,35" backgroundColor="TextBackground" conditional="description" font="TitleFont;25" foregroundColor="BannerTitle" transparent="1" />
+		<widget name="text" position="0,0" size="700,35" backgroundColor="TextBackground" conditional="text" font="DescriptionFont;25" foregroundColor="Text" transparent="1" />
+		<widget name="description" position="0,35" size="700,35" backgroundColor="TextBackground" conditional="description" font="DescriptionFont;25" foregroundColor="Text" transparent="1" />
 		<widget name="list" position="100,100" size="700,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 		<applet type="onLayoutFinish">
-self.autoResize()
+if hasattr(self, "autoResize"):
+	self.autoResize()
 		</applet>
 	</screen>
 
@@ -2119,8 +2235,8 @@ self.autoResize()
 
 <!-- Text Box Pop Up -->
 
-	<screen name="TextBox" title="Message..." position="0,0" size="700,400" backgroundColor="ScreenBackground">
-		<widget name="text" position="0,0" size="700,390" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" transparent="1" />
+	<screen name="TextBox" title="Message..." position="center,center" size="700,400">
+		<widget name="text" position="10,10" size="680,380" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" transparent="1" />
 	</screen>
 
 <!-- Command Prompt Output -->
