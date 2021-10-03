@@ -1,9 +1,7 @@
 <skin>
-<!--
- |	Power / Restart
- +-->
+<!-- Power / Restart Menu and Screens -->
 
-<!-- MENU > Power - Power / Restart Menu -->
+	<!-- MENU > Power - Power / Restart Menu -->
 
 	<screen name="menu_shutdown" title="Power / Restart" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
@@ -94,7 +92,7 @@
 		<panel name="ScreenTemplateOverlayText0" />
 	</screen>
 
-<!-- MultiBoot Image Selector (MENU > Standby and Reset > MultiBoot Image Selector) Screen -->
+	<!-- MultiBoot Image Selector (MENU > Standby and Reset > MultiBoot Image Selector) Screen -->
 
 	<screen name="MultiBootSelector" title="MultiBoot Image Selector" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
@@ -102,11 +100,9 @@
 		<panel name="ScreenTemplateSDescription4" />
 	</screen>
 
-<!--
- |	Information
- +-->
+<!-- Information Menu and Screens -->
 
-<!-- Information (MENU > Information) Menu -->
+	<!-- Information (MENU > Information) Menu -->
 
 	<screen name="menu_information" title="Information" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
@@ -118,7 +114,7 @@
 
 	<screen name="Menu_information" title="Information" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="blend" transparent="1" /> -->
+		<widget name="menuimage" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="InformationEnigma2" base="Information" />
 		<widget name="charlist" position="0,0" size="0,0" conditional="charlist" transparent="1" />
 		<widget name="charframe" position="0,0" size="0,0" conditional="charframe" transparent="1" />
@@ -195,7 +191,37 @@
 		</widget>
 	</screen>
 
-<!-- About Information (MENU > Information > About) Screen -->
+	<!-- System Information (MENU > Information > System Information) Screen -->
+
+	<screen name="Information" title="Information" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<widget source="lab1" render="Label" position="50,500" size="350,25" conditional="lab1" font="Text;22" foregroundColor="TextWaiting" transparent="1" />
+		<widget source="lab2" render="Label" position="50,525" size="350,25" conditional="lab2" font="Text;18" foregroundColor="Text" transparent="1" />
+		<widget source="lab3" render="Label" position="50,550" size="350,25" conditional="lab3" font="Text;18" foregroundColor="TextIndentedSelected" transparent="1" />
+		<widget source="lab4" render="Label" position="50,575" size="350,25" conditional="lab4" font="Text;18" foregroundColor="TextIndented" transparent="1" />
+		<widget source="lab5" render="Label" position="50,600" size="350,25" conditional="lab5" font="Text;18" foregroundColor="TextIndentedSelected" transparent="1" />
+		<widget source="lab6" render="Label" position="50,625" size="350,25" conditional="lab6" font="Text;18" foregroundColor="TextIndented" transparent="1" />
+		<widget name="information" position="400,80" size="830,550" colPosition="320" conditional="information" divideChar="|" font="Text;20" noWrap="1" leftColAlign="left" rightColAlign="left" split="1" transparent="1" />
+	</screen>
+
+	<screen name="InformationImage" title="Receiver Image" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<widget source="lab1" render="Label" position="50,500" size="350,25" conditional="lab1" font="Text;22" foregroundColor="TextWaiting" transparent="1" />
+		<widget source="lab2" render="Label" position="50,525" size="350,25" conditional="lab2" font="Text;18" foregroundColor="Text" transparent="1" />
+		<widget source="lab3" render="Label" position="50,550" size="350,25" conditional="lab3" font="Text;18" foregroundColor="TextIndentedSelected" transparent="1" />
+		<widget source="lab4" render="Label" position="50,575" size="350,25" conditional="lab4" font="Text;18" foregroundColor="TextIndented" transparent="1" />
+		<widget source="lab5" render="Label" position="50,600" size="350,25" conditional="lab5" font="Text;18" foregroundColor="TextIndentedSelected" transparent="1" />
+		<widget source="lab6" render="Label" position="50,625" size="350,25" conditional="lab6" font="Text;18" foregroundColor="TextIndented" transparent="1" />
+		<widget name="name" position="400,80" size="830,25" font="Text;20" halign="center" transparent="1" valign="center" />
+		<widget name="image" position="400,115" size="830,515" alphatest="blend" scale="1" transparent="1" />
+	</screen>
+
+	<screen name="SystemInformation" title="System Information" position="fill" flags="wfNoBorder">
+		<panel name="Information" />
+		<ePixmap pixmap="menus/mainmenu_tasks_info.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+	</screen>
+
+	<!-- About Information (MENU > Information > About) Screen -->
 
 	<screen name="About" title="About" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
@@ -220,7 +246,6 @@
 				}
 			</convert>
 		</widget>
-		<!-- <widget name="AboutScrollLabel" position="400,80" size="830,550" font="Regular;22" transparent="1" /> -->
 	</screen>
 
 	<screen name="AboutOE" title="About" position="fill" flags="wfNoBorder">
@@ -232,7 +257,47 @@
 		<widget name="AboutScrollLabel" position="400,80" size="830,550" font="Regular;20" transparent="1" />
 	</screen>
 
-<!-- Devices Information (MENU > Information > Devices) Screen -->
+	<screen name="CommitInfo" title="About" position="fill" flags="wfNoBorder">
+		<panel name="AboutOE" />
+	</screen>
+
+	<!-- Translation Information (MENU > Information > System Information > Translation Information) Screen -->
+
+	<screen name="TranslationInformation" title="Translation Information" position="fill" flags="wfNoBorder">
+		<panel name="Information" />
+		<ePixmap pixmap="menus/mainmenu_tasks_info.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+	</screen>
+
+	<screen name="TranslationInfo" title="Translation Information" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<eLabel text="Translation:" position="400,80" size="830,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="TranslatorName" render="Label" position="400,105" size="830,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="TranslationInfo" render="Label" position="400,130" size="830,450" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1"/>
+	</screen>
+
+	<!-- Software Updates (MENU > Information > System Information > Software Updates) Screen -->
+
+	<screen name="SoftwareUpdateChanges" title="Software Update Changes" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<!-- <widget source="Title" render="Label" position="20,25" size="800,43" font="Boldit;32" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1"/> -->
+		<widget name="text" position="50,80" size="1180,550" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" />
+	</screen>
+
+	<!-- Release Notes (MENU > Information > System Information > Release Notes) Screen -->
+
+	<screen name="AboutReleaseNotes" title="Release Notes" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<widget name="list" position="400,80" size="830,560" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" />
+	</screen>
+
+	<!-- Device Information (MENU > Information > Device Information) Screen -->
+
+	<screen name="DeviceInformation" title="Device Information" position="fill" flags="wfNoBorder">
+		<panel name="Information" />
+		<ePixmap pixmap="menus/mainmenu_tasks_backup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+	</screen>
+
+	<!-- Devices Information (MENU > Information > Devices) Screen -->
 
 	<screen name="Devices" title="Device Information" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
@@ -277,15 +342,26 @@
 	</screen>
 
 	<screen name="DevicesEnigma2" position="0,0" size="541,720" flags="wfNoBorder" backgroundColor="transparent">
-		<widget source="TunerHeader" render="Label" position="400,80" size="458,36" font="Bold;20" transparent="0" />
-		<widget source="nims" render="Label" position="400,105" size="458,100" font="Regular;18" transparent="0" />
-		<widget source="HDDHeader" render="Label" position="400,247" size="458,36" font="Bold;20" transparent="0" />
-		<widget source="hdd" render="Label" position="400,272" size="458,100" font="Regular;18" transparent="0" />
-		<widget source="MountsHeader" render="Label" position="400,447" size="458,36" font="Bold;20" transparent="0" />
-		<widget source="mounts" render="Label" position="400,472" size="458,143" font="Regular;18" transparent="0" />
+		<widget source="TunerHeader" render="Label" position="400,80" size="830,36" font="Bold;20" transparent="0" />
+		<!-- <widget source="nims" render="Label" position="400,105" size="830,100" font="Regular;18" transparent="0" /> -->
+		<widget source="Tuner0" render="Label" position="420,105" size="810,20" font="Regular;18" transparent="0" />
+		<widget source="Tuner1" render="Label" position="420,125" size="810,20" font="Regular;18" transparent="0" />
+		<widget source="Tuner2" render="Label" position="420,145" size="810,20" font="Regular;18" transparent="0" />
+		<widget source="Tuner3" render="Label" position="420,165" size="810,20" font="Regular;18" transparent="0" />
+		<widget source="HDDHeader" render="Label" position="400,247" size="830,36" font="Bold;20" transparent="0" />
+		<widget source="hdd" render="Label" position="420,272" size="810,100" font="Regular;18" transparent="0" />
+		<widget source="MountsHeader" render="Label" position="400,447" size="830,36" font="Bold;20" transparent="0" />
+		<widget source="mounts" render="Label" position="420,472" size="810,143" font="Regular;18" transparent="0" />
 	</screen>
 
-<!-- Memory Information (MENU > Information > Memory) Screen -->
+	<!-- Memory Information (MENU > Information > Memory Information) Screen -->
+
+	<screen name="MemoryInformation" title="Memory Information" position="fill" flags="wfNoBorder">
+		<panel name="Information" />
+		<ePixmap pixmap="menus/mainmenu_tasks_browser.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+	</screen>
+
+	<!-- Memory Information (MENU > Information > Memory) Screen -->
 
 	<screen name="SystemMemoryInfo" title="Memory Information" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
@@ -311,7 +387,6 @@
 				}
 			</convert>
 		</widget>
-		<!-- <widget name="AboutScrollLabel" position="400,80" size="830,550" font="Regular;22" transparent="1" /> -->
 	</screen>
 
 	<screen name="SystemMemoryInfoEnigma2" title="Memory Information" position="fill" flags="wfNoBorder">
@@ -321,14 +396,21 @@
 		<widget name="AboutScrollLabel" position="400,80" size="830,400" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
 
-<!-- Network Information (MENU > Information > Network) Screen -->
+	<!-- Network Information (MENU > Information > Network Information) Screen -->
 
-<!--
- |	This should be the same screen as the others of this type above except 
- |	that some network status stuff has been grafted in as skin hacks!!!  This 
- |	should really come from the code that populates the networking data in 
- |	the first place.
- +-->
+	<screen name="NetworkInformation" title="Network Information" position="fill" flags="wfNoBorder">
+		<panel name="Information" />
+		<ePixmap pixmap="menus/mainmenu_tasks_browser.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+	</screen>
+
+	<!-- Network Information (MENU > Information > Network) Screen -->
+
+	<!--
+	 |	This should be the same screen as the others of this type above except 
+	 |	that some network status stuff has been grafted in as skin hacks!!!  This 
+	 |	should really come from the code that populates the networking data in 
+	 |	the first place.
+	 +-->
 
 	<screen name="SystemNetworkInfo" title="Network Information" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
@@ -370,13 +452,6 @@
 				}
 			</convert>
 		</widget>
-		<!--
-		<widget source="IFtext" render="Label" position="400,80" size="120,21" backgroundColor="TextBackground" font="Regular;20" halign="left" transparent="1" />
-		<widget source="IF" render="Label" position="577,80" size="600,21" backgroundColor="TextBackground" font="Regular;20" halign="left" transparent="1" />
-		<widget source="Statustext" render="Label" position="400,103" size="115,21" backgroundColor="TextBackground" font="Regular;20" halign="left" transparent="1" />
-		<widget name="statuspic" pixmaps="buttons/button_small_green.png,buttons/button_small_green_off.png" position="577,103" size="15,16" alphatest="blend" transparent="1" />
-		<widget name="AboutScrollLabel" position="400,165" size="830,415" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
-		-->
 	</screen>
 
 	<screen name="SystemNetworkInfoEnigma2" title="Network Information" position="fill" flags="wfNoBorder">
@@ -387,7 +462,7 @@
 		<widget name="AboutScrollLabel" position="400,155" size="830,440" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
 
-<!-- Sevice Information (MENU > Information > Service) Screens -->
+	<!-- Service Information (MENU > Information > Service Information) Screens -->
 
 	<screen name="ServiceInfo" title="Service Information" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
@@ -421,34 +496,14 @@
 		<widget name="infolist" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" />
 	</screen>
 
-<!-- Extra OpenViX Information Screens -->
+	<!-- Streaming Clients (MENU > Information > Streaming Clients) Screen -->
 
 	<screen name="StreamingClientsInfo" title="Streaming Client Information" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="ScrollLabel" position="400,80" size="830,550" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" />
 	</screen>
 
-	<screen name="TranslationInfo" title="Translation Information" position="fill" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<eLabel text="Translation:" position="400,80" size="830,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
-		<widget source="TranslatorName" render="Label" position="400,105" size="830,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
-		<widget source="TranslationInfo" render="Label" position="400,130" size="830,450" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1"/>
-	</screen>
-
-	<screen name="AboutReleaseNotes" title="Release Notes" position="fill" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<widget name="list" position="400,80" size="830,560" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" />
-	</screen>
-
-	<screen name="SoftwareUpdateChanges" title="Software Update Changes" position="fill" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<!-- <widget source="Title" render="Label" position="20,25" size="800,43" font="Boldit;32" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1"/> -->
-		<widget name="text" position="50,80" size="1180,550" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" />
-	</screen>
-
-<!--
- |	System Logs
- +-->
+<!-- System Logs Screens -->
 
 	<screen name="LogManager" title="System Log" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
@@ -462,9 +517,7 @@
 		<widget name="list" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
 
-<!--
- |	Extension List
- +-->
+<!-- Extension List Screen -->
 
 	<screen name="ExtensionsList" title="Choose Extension" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
@@ -473,9 +526,7 @@
 		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />
 	</screen>
 
-<!--
- |	Console / Task List
- +-->
+<!-- Console / Task List Screen -->
 
 	<screen name="TaskListScreen" title="Task List" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
@@ -497,11 +548,9 @@
 		</widget>
 	</screen>
 
-<!--
- |	Timers
- +-->
+<!-- Timer Screens -->
 
-<!-- TIMER | SLEEP - Sleep / PowerTimer Timer List Menu -->
+	<!-- TIMER | SLEEP - Sleep / PowerTimer Timer List Menu -->
 
 	<screen name="TimerEditList" title="Timer List" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
@@ -511,7 +560,7 @@
 		<panel name="ScreenTemplateDescription4" />
 	</screen>
 
-<!-- Timer Log -->
+	<!-- Timer Log -->
 
 	<screen name="TimerLogDefault" title="Timer Log" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
@@ -531,7 +580,7 @@
 		<panel name="ScreenTemplateLogEntry4" />
 	</screen>
 
-<!-- Timer Entry -->
+	<!-- Timer Entry -->
 
 	<screen name="TimerEntry" title="Timer Entry" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
@@ -541,7 +590,7 @@
 		<panel name="ScreenTemplateDescription4" />
 	</screen>
 
-<!-- Timer Sanity Conflict -->
+	<!-- Timer Sanity Conflict -->
 
 	<screen name="TimerSanityConflict" title="Timer Sanity Error" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
@@ -551,7 +600,7 @@
 		<widget name="timer2" position="650,115" size="510,500" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
 
-<!-- Timer Selection ??? -->
+	<!-- Timer Selection ??? -->
 
 	<screen name="TimerSelection" title="Timer Selection" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
@@ -559,7 +608,7 @@
 		<panel name="ScreenTemplateDescription4" />
 	</screen>
 
-<!-- Timer Screens ??? -->
+	<!-- Timer Screens ??? -->
 
 	<screen name="TimerEdit" position="70,130" size="590,335">
 		<widget name="description" position="10,10" size="580,40" font="Regular;25" transparent="1" />
@@ -570,7 +619,7 @@
 		<widget name="apply" position="10,240" size="250,35" transparent="1" />
 	</screen>
 
-<!-- Original Sleep Timer List Menu ??? - Unused -->
+	<!-- Original Sleep Timer List Menu ??? - Unused -->
 
 	<screen name="SleepTimerEdit" title="Power / Sleep Timer" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
@@ -599,7 +648,7 @@
 		<eLabel position="50,625" size="1160,1" backgroundColor="Pinstripe" />
 	</screen>
 
-<!-- AutoTimer Plugin -->
+<!-- AutoTimer Plugin Screens -->
 
 	<screen name="AutoTimerOverview" title="Auto Timer Overview" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
@@ -699,7 +748,7 @@
 		<panel name="ScreenTemplateFrame830x120" />
 	</screen>
 
-<!-- VLC Transcoding Server -->
+<!-- VLC Transcoding Server Screens -->
 
 	<screen name="VlcMediaListScreen" title="VlcMediaListScreen" position="90,90" size="1100,576">
 		<eLabel text="vlc player" position="800,25" size="300,22" font="Regular;20" halign="center" />
