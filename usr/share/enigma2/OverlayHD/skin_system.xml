@@ -3,20 +3,20 @@
 
 	<!-- MENU > Power - Power / Restart Menu -->
 
-	<screen name="menu_shutdown" title="Power / Restart" position="fill" flags="wfNoBorder">
+	<screen name="MenuShutdown" title="Power / Restart" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="blend" transparent="1" /> -->
+		<widget name="menuimage" position="50,100" size="300,500" alphatest="blend" conditional="menuimage" transparent="1" />
 		<panel name="ShutdownEnigma2" base="Shutdown" />
 		<widget name="charlist" position="0,0" size="0,0" conditional="charlist" transparent="1" />
 		<widget name="charframe" position="0,0" size="0,0" conditional="charframe" transparent="1" />
 	</screen>
 
-	<screen name="Menu_shutdown" title="Power / Restart" position="fill" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="blend" transparent="1" /> -->
-		<panel name="ShutdownEnigma2" base="Shutdown" />
-		<widget name="charlist" position="0,0" size="0,0" conditional="charlist" transparent="1" />
-		<widget name="charframe" position="0,0" size="0,0" conditional="charframe" transparent="1" />
+	<screen name="Menushutdown" title="Power / Restart" position="fill" flags="wfNoBorder">
+		<panel name="MenuShutdown" />
+	</screen>
+
+	<screen name="menu_shutdown" title="Power / Restart" position="fill" flags="wfNoBorder">
+		<panel name="MenuShutdown" />
 	</screen>
 
 	<screen name="ShutdownBeyonwiz">
@@ -33,6 +33,14 @@
 				}
 			</convert>
 		</widget>
+		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_power_reboot.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
+			<convert type="MenuEntryCompare">mainmenu_tasks_power_reboot</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_power_restartshell.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
+			<convert type="MenuEntryCompare">mainmenu_tasks_power_restartshell</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
 		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_power_sleeptimer.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
 			<convert type="MenuEntryCompare">mainmenu_tasks_power_sleeptimer</convert>
 			<convert type="ConditionalShowHide" />
@@ -41,16 +49,8 @@
 			<convert type="MenuEntryCompare">mainmenu_tasks_power_standby</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_power_reboot.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
-			<convert type="MenuEntryCompare">mainmenu_tasks_power_reboot</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
 		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_power_shutdown.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
 			<convert type="MenuEntryCompare">mainmenu_tasks_power_shutdown</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_power_restartshell.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
-			<convert type="MenuEntryCompare">mainmenu_tasks_power_restartshell</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 	</screen>
@@ -68,20 +68,28 @@
 				}
 			</convert>
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_power_standby.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
-			<convert type="MenuEntryCompare">standby</convert>
+		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_power_shutdown.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
+			<convert type="MenuEntryCompare">deep_standby</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_shuffle.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
+			<convert type="MenuEntryCompare">multiboot</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_power_reboot.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
 			<convert type="MenuEntryCompare">restart</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_power_shutdown.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
-			<convert type="MenuEntryCompare">deep_standby</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
 		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_power_restartshell.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
 			<convert type="MenuEntryCompare">restart_enigma</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_power_sleeptimer.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
+			<convert type="MenuEntryCompare">sleep</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_power_standby.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
+			<convert type="MenuEntryCompare">standby</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 	</screen>
@@ -104,20 +112,20 @@
 
 	<!-- Information (MENU > Information) Menu -->
 
-	<screen name="menu_information" title="Information" position="fill" flags="wfNoBorder">
+	<screen name="MenuInformation" title="Information" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<!-- <widget name="menuimage" position="50,100" size="300,500" alphatest="blend" transparent="1" /> -->
+		<widget name="menuimage" position="50,100" size="300,500" alphatest="blend" conditional="menuimage" transparent="1" />
 		<panel name="InformationEnigma2" base="Information" />
 		<widget name="charlist" position="0,0" size="0,0" conditional="charlist" transparent="1" />
 		<widget name="charframe" position="0,0" size="0,0" conditional="charframe" transparent="1" />
 	</screen>
 
-	<screen name="Menu_information" title="Information" position="fill" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<widget name="menuimage" position="50,100" size="300,500" alphatest="blend" transparent="1" />
-		<panel name="InformationEnigma2" base="Information" />
-		<widget name="charlist" position="0,0" size="0,0" conditional="charlist" transparent="1" />
-		<widget name="charframe" position="0,0" size="0,0" conditional="charframe" transparent="1" />
+	<screen name="Menuinformation" title="Information" position="fill" flags="wfNoBorder">
+		<panel name="MenuInformation" />
+	</screen>
+
+	<screen name="menu_information" title="Information" position="fill" flags="wfNoBorder">
+		<panel name="MenuInformation" />
 	</screen>
 
 	<screen name="InformationBeyonwiz" title="Information(Skin)" position="fill" flags="wfNoBorder">
@@ -170,19 +178,19 @@
 			</convert>
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_info.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
-			<convert type="MenuEntryCompare">about_screen</convert>
+			<convert type="MenuEntryCompare">receiver_info_screen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_backup.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
-			<convert type="MenuEntryCompare">device_screen</convert>
+			<convert type="MenuEntryCompare">device_info_screen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_browser.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
-			<convert type="MenuEntryCompare">memory_screen</convert>
+			<convert type="MenuEntryCompare">memory_info_screen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
-			<convert type="MenuEntryCompare">network_screen</convert>
+			<convert type="MenuEntryCompare">network_info_screen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tv_live.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
