@@ -531,7 +531,8 @@
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_plugins.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateChoiceList0" />
-		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />
+		<widget name="description" position="50,550" size="1180,25" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="text" position="50,575" size="1180,25" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 <!-- Console / Task List Screen -->
