@@ -66,9 +66,9 @@
 		<eLabel position="698,66" size="2,595" backgroundColor="Pinstripe" />
 		<eLabel position="698,558" size="532,2" backgroundColor="Pinstripe" />
 		<widget name="list" position="50,80" size="640,550" backgroundColor="MenuBackground" backgroundColorMarked="FAVMarkedBackground" backgroundColorMarkedSelected="FAVMarked" backgroundColorSelected="MenuSelected"
-			colorEventProgressbar="InfoProgressColour" colorEventProgressbarBorder="InfoProgressBorder" colorEventProgressbarBorderSelected="InfoProgressBorder" colorEventProgressbarSelected="InfoProgressColour"
+			colorEventProgressbar="InfoProgressColor" colorEventProgressbarBorder="InfoProgressBorder" colorEventProgressbarBorderSelected="InfoProgressBorder" colorEventProgressbarSelected="InfoProgressColor"
 			colorFallbackItem="Magenta" colorServiceDescription="FAVService" colorServiceDescriptionFallback="FAVServiceFallback" colorServiceDescriptionSelected="FAVServiceSelected"
-			colorServiceDescriptionSelectedFallback="FAVServiceSelectedFallback" colorServiceRecorded="InfoRecordingColour" colorServiceSelectedFallback="FAVServiceSelectedFallback"
+			colorServiceDescriptionSelectedFallback="FAVServiceSelectedFallback" colorServiceRecorded="InfoRecordingColor" colorServiceSelectedFallback="FAVServiceSelectedFallback"
 			enableWrapAround="1" fieldMargins="10" foregroundColor="MenuText" foregroundColorEventborder="Red" foregroundColorEventborderSelected="Yellow" foregroundColorMarked="FAVServiceMarked"
 			foregroundColorMarkedSelected="FAVServiceMarkedSelected" foregroundColorSelected="MenuTextSelected" foregroundColorServiceNotAvail="FAVServiceNotAvailable"
 			progressbarHeight="6" progressbarBorderWidth="1" progressBarWidth="50" scrollbarMode="showOnDemand" serviceInfoFont="FAVEventFont;20" serviceItemHeight="25" serviceNameFont="FAVServiceFont;20" serviceNumberFont="FAVLCNFont;20" transparent="0" />
@@ -88,7 +88,7 @@
 		<widget source="ServiceEvent" render="Label" position="1120,105" size="110,20" backgroundColor="InfoBackground" font="InfoOtherFont;16" foregroundColor="InfoBroadcaster" halign="right" transparent="1">
 			<convert type="ServiceName2">%F</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Progress" position="820,134" size="410,6" backgroundColor="InfoProgressBackground" borderColor="InfoProgressBorder" borderWidth="1" foregroundColor="InfoProgressColour" transparent="0">
+		<widget source="ServiceEvent" render="Progress" position="820,134" size="410,6" backgroundColor="InfoProgressBackground" borderColor="InfoProgressBorder" borderWidth="1" foregroundColor="InfoProgressColor" transparent="0">
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<!-- 
@@ -187,9 +187,9 @@
 		<panel name="ScreenTemplateButtonHelp" />
 		<ePixmap pixmap="menus/mainmenu_tv_live.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="list" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorMarked="FAVMarkedBackground" backgroundColorMarkedSelected="FAVMarked" backgroundColorSelected="MenuSelected"
-			colorEventProgressbar="InfoProgressColour" colorEventProgressbarBorder="InfoProgressBorder" colorEventProgressbarBorderSelected="InfoProgressBorder" colorEventProgressbarSelected="InfoProgressColour"
+			colorEventProgressbar="InfoProgressColor" colorEventProgressbarBorder="InfoProgressBorder" colorEventProgressbarBorderSelected="InfoProgressBorder" colorEventProgressbarSelected="InfoProgressColor"
 			colorFallbackItem="Magenta" colorServiceDescription="FAVService" colorServiceDescriptionFallback="FAVServiceFallback" colorServiceDescriptionSelected="FAVServiceSelected"
-			colorServiceDescriptionSelectedFallback="FAVServiceSelectedFallback" colorServiceRecorded="InfoRecordingColour" colorServiceSelectedFallback="FAVServiceSelectedFallback"
+			colorServiceDescriptionSelectedFallback="FAVServiceSelectedFallback" colorServiceRecorded="InfoRecordingColor" colorServiceSelectedFallback="FAVServiceSelectedFallback"
 			enableWrapAround="1" fieldMargins="10" foregroundColor="MenuText" foregroundColorEventborder="Red" foregroundColorEventborderSelected="Yellow" foregroundColorMarked="FAVServiceMarked"
 			foregroundColorMarkedSelected="FAVServiceMarkedSelected" foregroundColorSelected="MenuTextSelected" foregroundColorServiceNotAvail="FAVServiceNotAvailable"
 			progressbarHeight="6" progressbarBorderWidth="1" progressBarWidth="50" scrollbarMode="showOnDemand" serviceInfoFont="FAVEventFont;20" serviceItemHeight="25" serviceNameFont="FAVServiceFont;20" serviceNumberFont="FAVLCNFont;20" transparent="0" />
@@ -208,10 +208,10 @@
 		<ePixmap pixmap="buttons/button_200x60_green.png" position="290,500" size="200,60" alphatest="blend" zPosition="2" />
 		<ePixmap pixmap="buttons/button_200x60_yellow.png" position="490,500" size="200,60" alphatest="blend" zPosition="2" />
 		<ePixmap pixmap="buttons/button_200x60_blue.png" position="690,500" size="200,60" alphatest="blend" zPosition="2" />
-		<widget name="key_red" position="90,500" size="200,36" backgroundColor="ButtonRed" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
-		<widget name="key_green" position="290,500" size="200,36" backgroundColor="ButtonGreen" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
-		<widget name="key_yellow" position="490,500" size="200,36" backgroundColor="ButtonYellow" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
-		<widget name="key_blue" position="690,500" size="200,36" backgroundColor="ButtonBlue" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_red" position="90,500" size="200,36" backgroundColor="KeyRed" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_green" position="290,500" size="200,36" backgroundColor="KeyGreen" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_yellow" position="490,500" size="200,36" backgroundColor="KeyYellow" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_blue" position="690,500" size="200,36" backgroundColor="KeyBlue" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
 		-->
 		<eLabel position="0,20" size="980,2" backgroundColor="#003366cc" zPosition="1" />
 		<eLabel text="Channel Selection" position="520,40" size="440,35" font="Regular;28" transparent="1" zPosition="2" />

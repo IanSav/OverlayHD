@@ -49,7 +49,7 @@
 			<convert type="ServicePosition">Position</convert>
 		</widget>
 		-->
-		<widget source="session.CurrentService" render="Progress" position="10,35" size="250,6" backgroundColor="TimeShiftBackground" borderColor="TimeShiftBorder" borderWidth="1" foregroundColor="TimeShiftColour" transparent="0">
+		<widget source="session.CurrentService" render="Progress" position="10,35" size="250,6" backgroundColor="TimeShiftBackground" borderColor="TimeShiftBorder" borderWidth="1" foregroundColor="TimeShiftColor" transparent="0">
 			<convert type="ServicePosition">Position</convert>
 		</widget>
 		<widget name="eventname" position="10,50" size="250,20" backgroundColor="TextBackground" font="Regular;16" foregroundColor="TimeShiftData" transparent="1" />
@@ -169,7 +169,7 @@
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
 		<!-- Now Event Progress Bar Area -->
-		<widget source="session.Event_Now" render="Progress" position="370,643" size="715,6" backgroundColor="InfoProgressBackground" borderColor="InfoProgressBorder" borderWidth="1" foregroundColor="InfoProgressColour" transparent="0">
+		<widget source="session.Event_Now" render="Progress" position="370,643" size="715,6" backgroundColor="InfoProgressBackground" borderColor="InfoProgressBorder" borderWidth="1" foregroundColor="InfoProgressColor" transparent="0">
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<!-- Next Event Start & End Times, Event Name and Duration Area -->
@@ -222,7 +222,7 @@
 	</screen>
 
 	<screen name="RecordingInfoPanelBeyonwiz" title="Recording Information" flags="wfNoBorder">
-		<widget source="session.RecordState" render="Label" position="0,0" size="270,20" backgroundColor="InfoBackground" font="Regular;15" foregroundColor="InfoRecordingColour" noWrap="1" transparent="1" valign="center">
+		<widget source="session.RecordState" render="Label" position="0,0" size="270,20" backgroundColor="InfoBackground" font="Regular;15" foregroundColor="InfoRecordingColor" noWrap="1" transparent="1" valign="center">
 			<convert type="infoRecBm">NombreyCanal</convert>
 		</widget>
 		<!--
@@ -236,7 +236,7 @@
 		<widget source="session.RecordState" render="FixedLabel" text=" " position="0,20" size="270,5" backgroundColor="InfoRecordingBackground" borderColor="InfoRecordingBorder" borderWidth="1" transparent="0">
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="session.RecordState" render="Progress" position="1,21" size="268,3" foregroundColor="InfoRecordingColour" transparent="1" zPosition="+1">
+		<widget source="session.RecordState" render="Progress" position="1,21" size="268,3" foregroundColor="InfoRecordingColor" transparent="1" zPosition="+1">
 			<convert type="infoRecBm">Progress</convert>
 		</widget>
 	</screen>
@@ -513,7 +513,7 @@
 						[
 						MultiContentEntryPixmapAlphaBlend(pos = (0, 2), size = (20, 20), png = 0),  # State icon
 						MultiContentEntryPixmapAlphaBlend(pos = (25, 2), size = (20, 20), png = 2),  # Type icon (AutoTimer, IceTV, Repeat)
-						MultiContentEntryText(pos = (50, 0), size = (20, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4, color = "InfoRecordingColour"),  # Tuner letter
+						MultiContentEntryText(pos = (50, 0), size = (20, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4, color = "InfoRecordingColor"),  # Tuner letter
 						MultiContentEntryPixmapAlphaBlend(pos = (70, 1), size = (40, 24), png = 12, flags = BT_SCALE),  # Service picon
 						MultiContentEntryText(pos = (120, 0), size = (150, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 13, color = "InfoChannel"),  # Service name
 						MultiContentEntryText(pos = (280, 0), size = (340, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 14, color = "InfoDetailsNow"),  # Timer name
@@ -527,7 +527,7 @@
 						MultiContentEntryPixmapAlphaBlend(pos = (25, 5), size = (20, 20), png = 2, flags = BT_SCALE),  # Type icon (AutoTimer, IceTV, Repeat)
 						MultiContentEntryPixmapAlphaBlend(pos = (50, 1), size = (47, 28), png = 12, flags = BT_SCALE),  # Service picon
 						MultiContentEntryText(pos = (110, 0), size = (390, 30), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 14, color = "InfoDetailsNow"),  # Timer name
-						MultiContentEntryText(pos = (510, 0), size = (20, 15), font = 3, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 4, color = "InfoRecordingColour"),  # Tuner letter
+						MultiContentEntryText(pos = (510, 0), size = (20, 15), font = 3, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 4, color = "InfoRecordingColor"),  # Tuner letter
 						MultiContentEntryText(pos = (540, 0), size = (330, 15), font = 3, flags = RT_HALIGN_RIGHT | RT_VALIGN_TOP, text = 22, color = "InfoTimesNow"),  # Begin - End time
 						MultiContentEntryText(pos = (510, 15), size = (120, 15), font = 3, flags = RT_HALIGN_LEFT | RT_VALIGN_BOTTOM, text = 13, color = "InfoChannel"),  # Service name
 						MultiContentEntryText(pos = (640, 15), size = (80, 15), font = 3, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 11, color = "InfoServiceData"),  # Power
@@ -544,7 +544,7 @@
 						MultiContentEntryPixmapAlphaBlend(pos = (50, 1), size = (47, 28), png = 12, flags = BT_SCALE),  # Service picon
 						MultiContentEntryText(pos = (110, 0), size = (450, 15), font = 3, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 14, color = "InfoDetailsNow"),  # Timer name
 						MultiContentEntryText(pos = (120, 15), size = (140, 15), font = 3, flags = RT_HALIGN_LEFT | RT_VALIGN_BOTTOM, text = 13, color = "InfoChannel"),  # Service name
-						MultiContentEntryText(pos = (270, 15), size = (20, 15), font = 3, flags = RT_HALIGN_LEFT | RT_VALIGN_BOTTOM, text = 4, color = "InfoRecordingColour"),  # Tuner letter
+						MultiContentEntryText(pos = (270, 15), size = (20, 15), font = 3, flags = RT_HALIGN_LEFT | RT_VALIGN_BOTTOM, text = 4, color = "InfoRecordingColor"),  # Tuner letter
 						MultiContentEntryText(pos = (300, 15), size = (80, 15), font = 3, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 11, color = "InfoServiceData"),  # Power
 						MultiContentEntryText(pos = (390, 15), size = (80, 15), font = 3, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 8, color = "InfoServiceData"),  # SNR
 						MultiContentEntryText(pos = (480, 15), size = (80, 15), font = 3, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 5, color = "InfoBroadcaster"),  # Tuner type
@@ -560,7 +560,7 @@
 						MultiContentEntryPixmapAlphaBlend(pos = (55, 1), size = (63, 38), png = 12, flags = BT_SCALE),  # Service picon
 						MultiContentEntryText(pos = (130, 0), size = (540, 23), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 14, color = "InfoDetailsNow"),  # Timer name
 						MultiContentEntryText(pos = (150, 23), size = (220, 17), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_BOTTOM, text = 13, color = "InfoChannel"),  # Service name
-						MultiContentEntryText(pos = (380, 23), size = (20, 17), font = 1, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 4, color = "InfoRecordingColour"),  # Tuner letter
+						MultiContentEntryText(pos = (380, 23), size = (20, 17), font = 1, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 4, color = "InfoRecordingColor"),  # Tuner letter
 						MultiContentEntryText(pos = (410, 23), size = (80, 17), font = 1, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 11, color = "InfoServiceData"),  # Power
 						MultiContentEntryText(pos = (500, 23), size = (80, 17), font = 1, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 8, color = "InfoServiceData"),  # SNR
 						MultiContentEntryText(pos = (590, 23), size = (80, 17), font = 1, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 5, color = "InfoBroadcaster"),  # Tuner type
@@ -569,7 +569,7 @@
 						MultiContentEntryProgressPixmap(pos = (790, 28), size = (150, 7), percent = -39, pixmap = "sliders/progress_record.png", borderWidth = 1, foreColor = "InfoRecordingBorder", backColor = "InfoRecordingBackground"),  # Progress bar
 						MultiContentEntryText(pos = (950, 23), size = (100, 17), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_BOTTOM, text = 33, color = "InfoDurationNow"),  # Remaining time
 						MultiContentEntryText(pos = (1060, 0), size = (100, 23), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_TOP, text = 23, color = "InfoDurationNow"),  # Duration
-						MultiContentEntryText(pos = (1060, 23), size = (100, 17), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_BOTTOM, text = 40, color = "InfoProgressColour")  # Progress percentage
+						MultiContentEntryText(pos = (1060, 23), size = (100, 17), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_BOTTOM, text = 40, color = "InfoProgressColor")  # Progress percentage
 						])
 					},
 				"fonts": [parseFont("Regular;20"), parseFont("Regular;15"), parseFont("Regular;17"), parseFont("Regular;13")],
@@ -593,7 +593,7 @@
 					MultiContentEntryPixmapAlphaBlend(pos = (65, 1), size = (63, 38), png = 12, flags = BT_SCALE),  # Service picon
 					MultiContentEntryText(pos = (140, 0), size = (530, 23), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP, text = 14, color = "InfoDetailsNow"),  # Timer name
 					MultiContentEntryText(pos = (160, 23), size = (150, 17), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_BOTTOM, text = 13, color = "InfoChannel"),  # Service name
-					MultiContentEntryText(pos = (320, 23), size = (20, 17), font = 1, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 4, color = "InfoRecordingColour"),  # Tuner letter
+					MultiContentEntryText(pos = (320, 23), size = (20, 17), font = 1, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 4, color = "InfoRecordingColor"),  # Tuner letter
 					MultiContentEntryText(pos = (350, 23), size = (100, 17), font = 1, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 11, color = "InfoServiceData"),  # Power
 					MultiContentEntryText(pos = (460, 23), size = (100, 17), font = 1, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 8, color = "InfoServiceData"),  # SNR
 					MultiContentEntryText(pos = (570, 23), size = (100, 17), font = 1, flags = RT_HALIGN_RIGHT | RT_VALIGN_BOTTOM, text = 5, color = "InfoBroadcaster"),  # Tuner type
@@ -602,7 +602,7 @@
 					MultiContentEntryProgressPixmap(pos = (790, 28), size = (150, 7), percent = -39, pixmap = "sliders/progress_record.png", borderWidth = 1, foreColor = "InfoRecordingBorder", backColor = "InfoRecordingBackground"),  # Progress bar
 					MultiContentEntryText(pos = (950, 23), size = (100, 17), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_BOTTOM, text = 33, color = "InfoDurationNow"),  # Remaining time
 					MultiContentEntryText(pos = (1060, 0), size = (100, 23), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_TOP, text = 23, color = "InfoDurationNow"),  # Duration
-					MultiContentEntryText(pos = (1060, 23), size = (100, 17), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_BOTTOM, text = 40, color = "InfoProgressColour")  # Progress percentage
+					MultiContentEntryText(pos = (1060, 23), size = (100, 17), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_BOTTOM, text = 40, color = "InfoProgressColor")  # Progress percentage
 					],
 				"fonts": [parseFont("Regular;20"), parseFont("Regular;15")],
 				"itemHeight": 40,

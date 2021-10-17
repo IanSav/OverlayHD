@@ -648,9 +648,9 @@
 		<ePixmap pixmap="buttons/button_200x60_green.png" position="398,635" size="200,60" alphatest="blend" zPosition="1" />
 		<ePixmap pixmap="buttons/button_200x60_yellow.png" position="673,635" size="200,60" alphatest="blend" zPosition="1" />
 		<ePixmap pixmap="buttons/button_200x60_blue.png" position="948,635" size="200,60" alphatest="blend" zPosition="1" />
-		<widget name="key_red" position="123,635" size="200,36" backgroundColor="ButtonRed" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
-		<widget name="key_green" position="398,635" size="200,36" backgroundColor="ButtonGreen" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
-		<widget name="key_blue" position="948,635" size="200,36" backgroundColor="ButtonBlue" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_red" position="123,635" size="200,36" backgroundColor="KeyRed" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_green" position="398,635" size="200,36" backgroundColor="KeyGreen" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_blue" position="948,635" size="200,36" backgroundColor="KeyBlue" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
 		-->
 		<widget name="config" position="650,195" size="510,384" backgroundColor="background" font="Regular;20" halign="center" transparent="1" zPosition="2" />
 		<widget name="current_status" position="200,210" size="300,170" backgroundColor="#31000000" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
@@ -769,10 +769,10 @@
 		<eLabel position="740,133" size="540,2" backgroundColor="Pinstripe" />
 		<widget name="filelist" position="140,145" size="500,375" scrollbarMode="showOnDemand" transparent="1" zPosition="3" />
 		<widget name="playlist" position="640,145" size="460,375" scrollbarMode="showOnDemand" transparent="1" zPosition="3" />
-		<widget name="key_red" position="240,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonRed" halign="center" transparent="1" valign="center" zPosition="3" />
-		<widget name="key_green" position="440,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonGreen" halign="center" transparent="1" valign="center" zPosition="3" />
-		<widget name="key_yellow" position="640,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonYellow" halign="center" transparent="1" valign="center" zPosition="3" />
-		<widget name="key_blue" position="840,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonBlue" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_red" position="240,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="KeyRed" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_green" position="440,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="KeyGreen" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_yellow" position="640,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="KeyYellow" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_blue" position="840,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="KeyBlue" halign="center" transparent="1" valign="center" zPosition="3" />
 		<eLabel position="0,525" size="1100,2" backgroundColor="Pinstripe" />
 	</screen>
 
@@ -790,10 +790,10 @@
 				}
 			</convert>
 		</widget>
-		<widget name="key_red" position="240,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonRed" halign="center" transparent="1" valign="center" zPosition="3" />
-		<widget name="key_green" position="440,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonGreen" halign="center" transparent="1" valign="center" zPosition="3" />
-		<widget name="key_yellow" position="640,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonYellow" halign="center" transparent="1" valign="center" zPosition="3" />
-		<widget name="key_blue" position="840,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonBlue" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_red" position="240,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="KeyRed" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_green" position="440,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="KeyGreen" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_yellow" position="640,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="KeyYellow" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_blue" position="840,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="KeyBlue" halign="center" transparent="1" valign="center" zPosition="3" />
 		<eLabel position="0,520" size="1100,2" backgroundColor="Pinstripe" />
 	</screen>
 
@@ -801,10 +801,10 @@
 		<eLabel text="vlc server config" position="800,25" size="300,22" font="Regular;20" halign="right" />
 		<eLabel position="180,47" size="920,2" backgroundColor="Pinstripe" />
 		<widget name="config" position="200,110" size="880,400" scrollbarMode="showOnDemand" transparent="1" />
-		<widget name="key_red" position="240,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonRed" halign="center" transparent="1" valign="center" zPosition="3" />
-		<widget name="key_green" position="440,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonGreen" halign="center" transparent="1" valign="center" zPosition="3" />
-		<widget name="key_yellow" position="640,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonYellow" halign="center" transparent="1" valign="center" zPosition="3" />
-		<widget name="key_blue" position="840,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonBlue" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_red" position="240,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="KeyRed" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_green" position="440,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="KeyGreen" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_yellow" position="640,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="KeyYellow" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_blue" position="840,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="KeyBlue" halign="center" transparent="1" valign="center" zPosition="3" />
 		<eLabel position="0,525" size="1100,2" backgroundColor="Pinstripe" />
 	</screen>
 </skin>

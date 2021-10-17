@@ -39,8 +39,8 @@
 		<panel name="Setup" />
 		<panel name="ScreenTemplateSIntroduction4" />
 		<!--
-		<widget source="key_red" render="Label" position="85,125" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonRed" halign="center" transparent="1" valign="center" zPosition="3" />
-		<widget source="key_green" render="Label" position="300,125" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonGreen" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget source="key_red" render="Label" position="85,125" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="KeyRed" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget source="key_green" render="Label" position="300,125" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="KeyGreen" halign="center" transparent="1" valign="center" zPosition="3" />
 		<widget name="config" position="5,0" size="550,60" scrollbarMode="showOnDemand" />
 		<widget source="introduction" render="Label" position="5,80" size="550,25" backgroundColor="TextBackground" font="Regular;21" halign="center" transparent="1" valign="center" zPosition="10" />
 		<eLabel position="0,115" size="560,2" backgroundColor="Pinstripe" />
@@ -314,7 +314,7 @@
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget name="network" position="50,290" size="300,25" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" halign="center" transparent="1" />
-		<widget name="scan_progress" position="50,325" size="300,15" backgroundColor="ProgressBackground" borderColor="ProgressBorder" borderWidth="2" foregroundColor="ProgressColour" transparent="1" />
+		<widget name="scan_progress" position="50,325" size="300,15" backgroundColor="ProgressBackground" borderColor="ProgressBorder" borderWidth="2" foregroundColor="ProgressColor" transparent="1" />
 		<widget name="transponder" position="50,350" size="300,25" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" halign="center" transparent="1" />
 		<widget name="scan_state" position="50,400" size="300,45" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" />
 		<widget name="pass" position="50,450" size="300,25" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" />
@@ -349,10 +349,10 @@
 		<ePixmap pixmap="buttons/button_200x60_yellow.png" position="673,635" size="200,60" alphatest="blend" zPosition="1" />
 		<ePixmap pixmap="buttons/button_200x60_blue.png" position="948,635" size="200,60" alphatest="blend" zPosition="1" />
 		-->
-		<widget name="red" position="123,635" size="200,36" backgroundColor="ButtonRed" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
-		<widget name="green" position="398,635" size="200,36" backgroundColor="ButtonGreen" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
-		<widget name="yellow" position="673,635" size="200,36" backgroundColor="ButtonYellow" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
-		<widget name="blue" position="948,635" size="200,36" backgroundColor="ButtonBlue" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="red" position="123,635" size="200,36" backgroundColor="KeyRed" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="green" position="398,635" size="200,36" backgroundColor="KeyGreen" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="yellow" position="673,635" size="200,36" backgroundColor="KeyYellow" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="blue" position="948,635" size="200,36" backgroundColor="KeyBlue" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
 <!--####-->		<!-- <ePixmap pixmap="frame/frame_400x300.png" position="150,195" size="400,300" alphatest="blend" /> -->
 		<eLabel text="SNR:" position="180,223" size="60,22" font="Regular;21" halign="center" transparent="1" valign="center" zPosition="1" />
 		<widget name="snr_bar" position="242,224" size="200,14" transparent="1" zPosition="1" />
@@ -385,7 +385,7 @@
 		<widget name="config" position="10,100" size="e-10,100" scrollbarMode="showOnDemand" />
 		<!-- red.png not found - FIXED DEBUG - Replace with normal RED button -->
 		<!-- <ePixmap pixmap="buttons/red.png" position="c-140,e-45" size="140,40" alphatest="blend" /> -->
-		<widget source="key_red" render="Label" position="c-140,e-45" size="140,40" backgroundColor="ButtonRed" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="1" />
+		<widget source="key_red" render="Label" position="c-140,e-45" size="140,40" backgroundColor="KeyRed" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="1" />
 	</screen>
 
 <!-- MENU > Setup > Tuners > Signal/Sat Finder -->
@@ -401,14 +401,14 @@
 		<eLabel position="400,445" size="2,95" backgroundColor="Pinstripe" />
 		<eLabel position="1228,445" size="2,95" backgroundColor="Pinstripe" />
 		<eLabel name="snr" text="SNR:" position="420,455" size="70,25" font="Regular;20" transparent="1" valign="center" />
-		<widget source="Frontend" render="Progress" position="500,460" size="200,15" backgroundColor="ProgressBackground" borderColor="ProgressBorder" borderWidth="2" foregroundColor="ProgressColour" transparent="1">
+		<widget source="Frontend" render="Progress" position="500,460" size="200,15" backgroundColor="ProgressBackground" borderColor="ProgressBorder" borderWidth="2" foregroundColor="ProgressColor" transparent="1">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
 		<widget source="Frontend" render="Label" position="710,455" size="80,25" font="Regular;20" halign="right" transparent="1" valign="center">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
 		<eLabel name="ber" text="BER:" position="420,480" size="70,25" font="Regular;20" transparent="1" valign="center" />
-		<widget source="Frontend" render="Progress" position="500,485" size="200,15" backgroundColor="ProgressBackground" borderColor="ProgressBorder" borderWidth="2" foregroundColor="ProgressColour" transparent="1">
+		<widget source="Frontend" render="Progress" position="500,485" size="200,15" backgroundColor="ProgressBackground" borderColor="ProgressBorder" borderWidth="2" foregroundColor="ProgressColor" transparent="1">
 			<convert type="FrontendInfo">BER</convert>
 		</widget>
 		<widget source="Frontend" render="Label" position="710,480" size="80,25" font="Regular;20" halign="right" transparent="1" valign="center">
@@ -1207,7 +1207,7 @@
 		<widget name="capacity" position="420,105" size="810,35" font="Regular;25" transparent="1" valign="center" />
 		<widget name="bus" position="420,140" size="810,35" font="Regular;25" transparent="1" valign="center" />
 		<!-- These two items simulate a standard RED button.  The background is already provided so only the text remains active.
-		<widget name="initialize" position="123,670" size="200,36" backgroundColor="ButtonRed" transparent="0" />
+		<widget name="initialize" position="123,670" size="200,36" backgroundColor="KeyRed" transparent="0" />
 		-->
 		<widget name="initializetext" position="160,670" size="200,36" font="Regular;20" halign="center" transparent="1" valign="center" />
 		<panel name="ScreenTemplateFrame830x120" />
@@ -1259,10 +1259,10 @@
 	<screen name="UpdatePlugin" title="Software Update" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
-		<widget name="activityslider" position="400,250" size="830,10" backgroundColor="ProgressBackground" borderColor="ProgressBorder" borderWidth="2" foregroundColor="ProgressColour" transparent="1" />
+		<widget name="activityslider" position="400,250" size="830,10" backgroundColor="ProgressBackground" borderColor="ProgressBorder" borderWidth="2" foregroundColor="ProgressColor" transparent="1" />
 		<widget source="package" render="Label" position="400,280" size="830,75" backgroundColor="TextBackground" font="Regular;20" transparent="1" valign="center" />
 		<widget source="status" render="Label" position="400,375" size="830,75" backgroundColor="TextBackground" font="Regular;20" transparent="1" valign="center" />
-		<widget name="slider" position="400,470" size="830,10" backgroundColor="ProgressBackground" borderColor="ProgressBorder" borderWidth="2" foregroundColor="ProgressColour" transparent="1" />
+		<widget name="slider" position="400,470" size="830,10" backgroundColor="ProgressBackground" borderColor="ProgressBorder" borderWidth="2" foregroundColor="ProgressColor" transparent="1" />
 	</screen>
 
 	<screen name="SoftwareUpdateChoices" title="Software Update" position="fill" flags="wfNoBorder">

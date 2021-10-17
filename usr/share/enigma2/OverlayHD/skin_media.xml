@@ -285,9 +285,9 @@
 		<eLabel position="0,195" size="1100,2" backgroundColor="Pinstripe" />
 		<widget name="config" position="20,210" size="1060,300" scrollbarMode="showOnDemand" transparent="1" />
 		<eLabel position="0,518" size="1100,2" backgroundColor="Pinstripe" />
-		<widget source="key_red" render="Label" position="20,525" size="250,30" font="Regular;24" foregroundColor="ButtonRed" halign="center" valign="center" />
-		<widget source="key_green" render="Label" position="290,525" size="250,30" font="Regular;24" foregroundColor="ButtonGreen" halign="center" valign="center" />
-		<widget source="key_blue" render="Label" position="830,525" size="250,30" font="Regular;24" foregroundColor="ButtonBlue" halign="center" valign="center" />
+		<widget source="key_red" render="Label" position="20,525" size="250,30" font="Regular;24" foregroundColor="KeyRed" halign="center" valign="center" />
+		<widget source="key_green" render="Label" position="290,525" size="250,30" font="Regular;24" foregroundColor="KeyGreen" halign="center" valign="center" />
+		<widget source="key_blue" render="Label" position="830,525" size="250,30" font="Regular;24" foregroundColor="KeyBlue" halign="center" valign="center" />
 	</screen>
 
 	<screen name="TitleList" title="DVD Tool" position="170,90" size="920,576">
@@ -311,10 +311,10 @@
 		</widget>
 		<widget source="space_bar" render="Progress" position="10,480" size="900,26" backgroundColor="grey" borderWidth="1" />
 		<widget source="space_label" render="Label" position="20,483" size="880,22" font="Regular;18" foregroundColor="Black" halign="center" transparent="1" zPosition="2" />
-		<widget source="key_red" render="Label" position="20,535" size="195,35" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonRed" halign="center" transparent="1" valign="center" zPosition="3" />
-		<widget source="key_green" render="Label" position="245,535" size="195,35" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonGreen" halign="center" transparent="1" valign="center" zPosition="3" />
-		<widget source="key_yellow" render="Label" position="465,535" size="195,35" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonYellow" halign="center" transparent="1" valign="center" zPosition="3" />
-		<widget source="key_blue" render="Label" position="695,535" size="195,35" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonBlue" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget source="key_red" render="Label" position="20,535" size="195,35" backgroundColor="TextBackground" font="Regular;20" foregroundColor="KeyRed" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget source="key_green" render="Label" position="245,535" size="195,35" backgroundColor="TextBackground" font="Regular;20" foregroundColor="KeyGreen" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget source="key_yellow" render="Label" position="465,535" size="195,35" backgroundColor="TextBackground" font="Regular;20" foregroundColor="KeyYellow" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget source="key_blue" render="Label" position="695,535" size="195,35" backgroundColor="TextBackground" font="Regular;20" foregroundColor="KeyBlue" halign="center" transparent="1" valign="center" zPosition="3" />
 		<eLabel position="0,525" size="920,2" backgroundColor="Pinstripe" />
 	</screen>
 
@@ -335,9 +335,9 @@
 			<convert type="ServiceTime">Duration</convert>
 			<convert type="ClockToText">AsLength</convert>
 		</widget>
-		<widget source="key_red" render="Label" position="800,635" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonRed" halign="center" transparent="1" valign="center" zPosition="3" />
-		<widget source="key_green" render="Label" position="400,635" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonGreen" halign="center" transparent="1" valign="center" zPosition="3" />
-		<widget source="key_yellow" render="Label" position="600,635" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="ButtonYellow" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget source="key_red" render="Label" position="800,635" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="KeyRed" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget source="key_green" render="Label" position="400,635" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="KeyGreen" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget source="key_yellow" render="Label" position="600,635" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="KeyYellow" halign="center" transparent="1" valign="center" zPosition="3" />
 		<widget name="DescriptionBorder" position="0,0" size="0,0" />
 		<eLabel position="820,80" size="1,546" backgroundColor="Pinstripe" />
 		<eLabel position="55,625" size="1100,2" backgroundColor="Pinstripe" />
@@ -356,9 +356,9 @@
 		<widget source="space_bar" render="Progress" position="10,480" size="1080,26" backgroundColor="grey" borderWidth="1" />
 		<widget source="space_label" render="Label" position="20,482" size="1060,22" font="Regular;18" foregroundColor="Black" halign="center" transparent="1" zPosition="2" />
 		<eLabel position="0,518" size="1100,2" backgroundColor="Pinstripe" />
-		<widget source="key_red" render="Label" position="20,525" size="250,30" font="Regular;24" foregroundColor="ButtonRed" halign="center" valign="center" />
-		<widget source="key_green" render="Label" position="290,525" size="250,30" font="Regular;24" foregroundColor="ButtonGreen" halign="center" valign="center" />
-		<widget source="key_yellow" render="Label" position="560,525" size="250,30" font="Regular;24" foregroundColor="ButtonYellow" halign="center" valign="center" />
+		<widget source="key_red" render="Label" position="20,525" size="250,30" font="Regular;24" foregroundColor="KeyRed" halign="center" valign="center" />
+		<widget source="key_green" render="Label" position="290,525" size="250,30" font="Regular;24" foregroundColor="KeyGreen" halign="center" valign="center" />
+		<widget source="key_yellow" render="Label" position="560,525" size="250,30" font="Regular;24" foregroundColor="KeyYellow" halign="center" valign="center" />
 	</screen>
 
 	<screen name="CDInfo" title="CDInfo" position="90,100" size="1100,560">
@@ -368,9 +368,9 @@
 		<eLabel position="300,0" size="2,518" backgroundColor="Pinstripe" />
 		<widget name="config" position="320,20" size="760,475" scrollbarMode="showOnDemand" transparent="1" zPosition="3" />
 		<eLabel position="0,518" size="1100,2" backgroundColor="Pinstripe" />
-		<widget source="key_red" render="Label" position="20,525" size="250,30" font="Regular;24" foregroundColor="ButtonRed" halign="center" valign="center" />
-		<widget source="key_green" render="Label" position="290,525" size="250,30" font="Regular;24" foregroundColor="ButtonGreen" halign="center" valign="center" />
-		<widget source="key_blue" render="Label" position="830,525" size="250,30" font="Regular;24" foregroundColor="ButtonBlue" halign="center" valign="center" />
+		<widget source="key_red" render="Label" position="20,525" size="250,30" font="Regular;24" foregroundColor="KeyRed" halign="center" valign="center" />
+		<widget source="key_green" render="Label" position="290,525" size="250,30" font="Regular;24" foregroundColor="KeyGreen" halign="center" valign="center" />
+		<widget source="key_blue" render="Label" position="830,525" size="250,30" font="Regular;24" foregroundColor="KeyBlue" halign="center" valign="center" />
 	</screen>
 
 	<screen name="ChapterZap" title="Chapter" position="235,255" size="250,60">
@@ -464,7 +464,7 @@
 		<widget name="detailtext" position="350,225" size="730,280" backgroundColor="TextBackground" font="Regular;22" foregroundColor="White" transparent="1" zPosition="10" />
 		<eLabel position="0,518" size="1100,2" backgroundColor="crypt_emm" />
 		<ePixmap pixmap="buttons/button_block_red.png" position="80,525" size="225,60" alphatest="blend" zPosition="1" />
-		<widget name="key_red" position="80,525" size="200,36" backgroundColor="ButtonRed" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_red" position="80,525" size="200,36" backgroundColor="KeyRed" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
 		<ePixmap pixmap="icons/plugin.png" position="980,525" size="100,40" alphatest="blend" transparent="1" zPosition="4" />
 		<widget name="thumbnail" position="0,0" size="180,135" alphatest="blend" /><!-- fake entry for dynamic thumbnail resizing, currently there is no other way doing this. -->
 	</screen>
@@ -494,7 +494,7 @@
 		</widget>
 		<eLabel position="0,518" size="680,2" backgroundColor="crypt_emm" />
 		<ePixmap pixmap="buttons/button_block_red.png" position="80,525" size="225,60" alphatest="blend" zPosition="1" />
-		<widget name="key_red" position="80,525" size="200,36" backgroundColor="ButtonRed" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
+		<widget name="key_red" position="80,525" size="200,36" backgroundColor="KeyRed" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
 		<ePixmap pixmap="icons/plugin.png" position="550,525" size="100,40" alphatest="blend" transparent="1" zPosition="4" />
 		<widget name="title" position="0,0" size="0,0" />
 	</screen>

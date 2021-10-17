@@ -145,13 +145,13 @@
 			<panel name="EPGEventInfoPIGPanel" />
 		</panel>
 		<widget source="session.VideoPicture" render="Pig" position="930,80" size="300,169" backgroundColor="TransparentBackground" />
-		<widget source="session.CurrentService" render="Label" position="930,80" size="300,20" borderColor="EPGOverlayBorder" borderWidth="1" font="InfoEventFont;17" foregroundColor="EPGOverlayColour" halign="center" noWrap="1" transparent="1" valign="top">
+		<widget source="session.CurrentService" render="Label" position="930,80" size="300,20" borderColor="EPGOverlayBorder" borderWidth="1" font="InfoEventFont;17" foregroundColor="EPGOverlayColor" halign="center" noWrap="1" transparent="1" valign="top">
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="930,229" size="300,20" borderColor="EPGOverlayBorder" borderWidth="1" font="InfoEventFont;17" foregroundColor="EPGOverlayColour" halign="center" noWrap="1" transparent="1" valign="bottom">
+		<widget source="session.Event_Now" render="Label" position="930,229" size="300,20" borderColor="EPGOverlayBorder" borderWidth="1" font="InfoEventFont;17" foregroundColor="EPGOverlayColor" halign="center" noWrap="1" transparent="1" valign="bottom">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Progress" position="930,250" size="300,5" backgroundColor="EPGProgressBackground" borderColor="EPGProgressBorder" borderWidth="1" foregroundColor="EPGProgressColour" transparent="0">
+		<widget source="session.Event_Now" render="Progress" position="930,250" size="300,5" backgroundColor="EPGProgressBackground" borderColor="EPGProgressBorder" borderWidth="1" foregroundColor="EPGProgressColor" transparent="0">
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<panel position="50,260" size="1180,30">
@@ -183,13 +183,13 @@
 			<panel name="EPGEventInfoPIGPanel" />
 		</panel>
 		<widget source="session.VideoPicture" render="Pig" position="930,80" size="300,169" backgroundColor="TransparentBackground" />
-		<widget source="session.CurrentService" render="Label" position="930,80" size="300,20" borderColor="EPGOverlayBorder" borderWidth="1" font="InfoEventFont;17" foregroundColor="EPGOverlayColour" halign="center" noWrap="1" transparent="1" valign="top">
+		<widget source="session.CurrentService" render="Label" position="930,80" size="300,20" borderColor="EPGOverlayBorder" borderWidth="1" font="InfoEventFont;17" foregroundColor="EPGOverlayColor" halign="center" noWrap="1" transparent="1" valign="top">
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="930,229" size="300,20" borderColor="EPGOverlayBorder" borderWidth="1" font="InfoEventFont;17" foregroundColor="EPGOverlayColour" halign="center" noWrap="1" transparent="1" valign="bottom">
+		<widget source="session.Event_Now" render="Label" position="930,229" size="300,20" borderColor="EPGOverlayBorder" borderWidth="1" font="InfoEventFont;17" foregroundColor="EPGOverlayColor" halign="center" noWrap="1" transparent="1" valign="bottom">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Progress" position="930,250" size="300,5" backgroundColor="EPGProgressBackground" borderColor="EPGProgressBorder" borderWidth="1" foregroundColor="EPGProgressColour" transparent="0">
+		<widget source="session.Event_Now" render="Progress" position="930,250" size="300,5" backgroundColor="EPGProgressBackground" borderColor="EPGProgressBorder" borderWidth="1" foregroundColor="EPGProgressColor" transparent="0">
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<panel position="50,260" size="1180,30">
@@ -291,10 +291,10 @@
 		<widget name="date" position="530,80" size="200,34" backgroundColor="EPGBackground" font="EPGTimeLineFont;20" foregroundColor="EPGTimeLine" transparent="1" valign="center" />
 		<widget name="list" position="50,115" size="660,540" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" font="EPGServiceFont;20" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 		<widget source="session.VideoPicture" render="Pig" position="730,80" size="500,282" backgroundColor="TransparentBackground" />
-		<widget source="session.CurrentService" render="Label" position="730,80" size="500,20" borderColor="EPGOverlayBorder" borderWidth="1" font="InfoEventFont;17" foregroundColor="EPGOverlayColour" halign="center" noWrap="1" transparent="1" valign="top">
+		<widget source="session.CurrentService" render="Label" position="730,80" size="500,20" borderColor="EPGOverlayBorder" borderWidth="1" font="InfoEventFont;17" foregroundColor="EPGOverlayColor" halign="center" noWrap="1" transparent="1" valign="top">
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="730,342" size="500,20" borderColor="EPGOverlayBorder" borderWidth="1" font="InfoEventFont;17" foregroundColor="EPGOverlayColour" halign="center" noWrap="1" transparent="1" valign="bottom">
+		<widget source="session.Event_Now" render="Label" position="730,342" size="500,20" borderColor="EPGOverlayBorder" borderWidth="1" font="InfoEventFont;17" foregroundColor="EPGOverlayColor" halign="center" noWrap="1" transparent="1" valign="bottom">
 			<convert type="EventName">Name</convert>
 		</widget>
 		<widget name="bouquetlist" position="730,365" size="500,290" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" zPosition="+1" />
