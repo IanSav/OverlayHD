@@ -417,6 +417,47 @@
 	</screen>
 	-->
 
+<!-- Info Panel (OpenATV) Plugin -->
+
+	<screen name="Infopanel" title="Info Panel Menu" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<widget name="Mlist" position="400,80" size="830,550" backgroundColor="TextBackground" font="Text;25" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="label1" position="0,0" size="0,0" transparent="1" /><!-- This should be "Title"! -->
+	</screen>
+
+	<screen name="Info" title="Info Panel Details" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<widget name="label1" position="400,80" size="830,548" backgroundColor="TextBackground" font="FixedFont;20" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="label2" position="0,0" size="0,0" transparent="1" /><!-- This should be "Title"! -->
+	</screen>
+
+	<!-- Mount Manager -->
+
+	<screen name="HddMount" title="Mount Manager" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<widget source="list" render="Listbox" position="400,80" size="830,550" scrollbarMode="showOnDemand" >
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryPixmapAlphaBlend(pos = (10, 2), size = (80, 80), png = 2, flags = BT_SCALE),
+					MultiContentEntryText(pos = (110, 0), size = (700, 30), font=0, text = 0),
+					MultiContentEntryText(pos = (130, 30), size = (680, 50), font=1, flags = RT_VALIGN_TOP, text = 1),
+					],
+				"fonts": [gFont("Regular", 24), gFont("Regular", 20)],
+				"itemHeight": 85
+				}
+			</convert>
+		</widget>
+		<widget name="lab1" position="400,80" size="830,550" font="Regular;25" halign="center" transparent="1" valign="center" zPosition="+1" />
+	</screen>
+
+	<screen name="DevicePanelConf" title="Choose where to mount your devices:" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<widget name="config" position="30,60" size="580,275" scrollbarMode="showOnDemand" />
+		<widget name="Linconn" position="400,80" size="830,550" backgroundColor="#9f1313" font="Regular;25" halign="center" valign="center" />
+	</screen>
+
 <!-- Media Portal Plugin -->
 
 	<screen name="haupt_Screen" position="fill" flags="wfNoBorder">

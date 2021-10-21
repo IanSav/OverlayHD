@@ -1969,6 +1969,10 @@
 		<widget name="SkinList" position="400,80" size="540,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
+	<screen name="ScreenTemplateSkinList4OpenATV">
+		<widget name="SkinList" position="400,80" size="540,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+	</screen>
+
 	<screen name="ScreenTemplateSoftwareList4">
 		<widget source="list" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" selectionDisabled="0" transparent="0"> <!--  itemHeight="35" -->
 			<convert type="TemplatedMultiContent">
