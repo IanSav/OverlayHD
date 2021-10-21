@@ -108,7 +108,7 @@
 		<panel name="ScreenTemplateSDescription4" />
 	</screen>
 
-<!-- Information Menu and Screens -->
+<!-- Information Menus and Screens -->
 
 	<!-- Information (MENU > Information) Menu -->
 
@@ -414,9 +414,9 @@
 	<!-- Network Information (MENU > Information > Network) Screen -->
 
 	<!--
-	 |	This should be the same screen as the others of this type above except 
-	 |	that some network status stuff has been grafted in as skin hacks!!!  This 
-	 |	should really come from the code that populates the networking data in 
+	 |	This should be the same screen as the others of this type above except
+	 |	that some network status stuff has been grafted in as skin hacks!!!  This
+	 |	should really come from the code that populates the networking data in
 	 |	the first place.
 	 +-->
 
