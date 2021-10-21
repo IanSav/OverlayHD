@@ -2440,24 +2440,24 @@
 <!-- Message Box Pop Up -->
 
 	<screen name="MessageBoxTemplate">
-		<widget name="ErrorPixmap" pixmap="icons/input_error.png" position="0,0" size="53,53" alphatest="blend" scale="1" transparent="1" />
-		<widget name="QuestionPixmap" pixmap="icons/input_question.png" position="0,0" size="53,53" alphatest="blend" scale="1" transparent="1" />
-		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="0,0" size="53,53" alphatest="blend" scale="1" transparent="1" />
-		<widget name="icon" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" position="0,0" size="53,53" alphatest="blend" conditional="icon" scale="1" transparent="1" />
-		<widget name="text" position="65,10" size="700,0" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1" />
-		<!-- <widget name="list" position="100,100" size="700,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" /> -->
-		<widget name="list" position="100,100" size="700,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="ErrorPixmap" position="10,10" size="53,53" pixmap="icons/input_error.png" alphatest="blend" scale="1" transparent="1" />
+		<widget name="QuestionPixmap" position="10,10" size="53,53" pixmap="icons/input_question.png" alphatest="blend" scale="1" transparent="1" />
+		<widget name="InfoPixmap" position="10,10" size="53,53" pixmap="icons/input_info.png" alphatest="blend" scale="1" transparent="1" />
+		<widget name="WarningPixmap" position="10,10" size="53,53" pixmap="icons/input_warning.png" alphatest="blend" scale="1" transparent="1" />
+		<widget name="icon" position="10,10" size="53,53" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" alphatest="blend" conditional="icon" scale="1" transparent="1" />
+		<widget name="text" position="80,10" size="620,100" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1" />
+		<widget name="list" position="10,e-80" size="680,70" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 		<applet type="onLayoutFinish">
 if hasattr(self, "autoResize"):
 	self.autoResize()
 		</applet>
 	</screen>
 
-	<screen name="MessageBox" title="Message Selection..." position="center,center" size="700,10" zPosition="+90">
+	<screen name="MessageBox" title="Message Selection..." position="center,center" size="700,200" zPosition="+90">
 		<panel name="MessageBoxTemplate" />
 	</screen>
 
-	<screen name="MessageBoxSimple" title="Message..." position="center,center" size="700,10" zPosition="+90">
+	<screen name="MessageBoxSimple" title="Message..." position="center,center" size="700,200" zPosition="+90">
 		<panel name="MessageBoxTemplate" />
 	</screen>
 
