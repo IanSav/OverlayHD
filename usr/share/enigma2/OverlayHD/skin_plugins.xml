@@ -634,6 +634,7 @@
 				}
 			</convert>
 		</widget>
+		<panel name="ScreenTemplateDescription4" />
 	</screen>
 
 	<screen name="OverlayHDThemeMenu" title="OverlayHD Theme Menu" position="fill" flags="wfNoBorder">
