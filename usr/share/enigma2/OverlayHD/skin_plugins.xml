@@ -422,13 +422,13 @@
 	<screen name="Infopanel" title="Info Panel Menu" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="Mlist" position="400,80" size="830,550" backgroundColor="TextBackground" font="Text;25" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
-		<widget name="label1" position="0,0" size="0,0" transparent="1" /><!-- This should be "Title"! -->
+		<widget name="label1" position="0,0" size="0,0" conditional="label1" transparent="1" /><!-- This should be "Title"! -->
 	</screen>
 
 	<screen name="Info" title="Info Panel Details" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="label1" position="400,80" size="830,548" backgroundColor="TextBackground" font="FixedFont;20" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
-		<widget name="label2" position="0,0" size="0,0" transparent="1" /><!-- This should be "Title"! -->
+		<widget name="label2" position="0,0" size="0,0" conditional="label2" transparent="1" /><!-- This should be "Title"! -->
 	</screen>
 
 	<!-- Mount Manager -->
@@ -456,6 +456,60 @@
 		<panel name="ScreenTemplate" />
 		<widget name="config" position="30,60" size="580,275" scrollbarMode="showOnDemand" />
 		<widget name="Linconn" position="400,80" size="830,550" backgroundColor="#9f1313" font="Regular;25" halign="center" valign="center" />
+	</screen>
+
+	<!-- Script Runner -->
+
+	<screen name="ScriptRunner" title="Script Runner" position="fill" flags="wfBorder">
+		<panel name="ScreenTemplate" />
+		<widget name="lab1" position="400,80" size="830,35" backgroundColor="TextBackground" font="Text;25" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="list" position="400,115" size="830,300" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
+	</screen>
+
+	<!-- Script Runner -->
+
+	<screen name="SoftwarePanel" title="Software Update" position="fill" flags="wfBorder">
+		<panel name="ScreenTemplate" />
+		<widget name="a_off" position="50,500" size="36,97" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/aoff.png" />
+		<widget name="a_red" position="50,500" size="36,97" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/ared.png" />
+		<widget name="a_yellow" position="50,500" size="36,97" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/ayellow.png" />
+		<widget name="a_green" position="50,500" size="36,97" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/agreen.png" />
+		<widget name="feedstatusRED" position="100,500" size="200,35" font="Text;25" transparent="1" valign="center" />
+		<widget name="feedstatusYELLOW" position="100,533" size="200,35" font="Text;25" transparent="1" valign="center" />
+		<widget name="feedstatusGREEN" position="100,566" size="200,35" font="Text;25" transparent="1" valign="center" />
+		<widget name="packagetext" position="50,615" size="250,30" font="Text;25" transparent="1" valign="center" />
+		<widget name="packagenr" position="300,615" size="50,35" font="Text;25" halign="right" transparent="1" valign="center" />
+		<widget source="list" render="Listbox" position="400,80" size="830,550" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (20, 0), size = (810, 30), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0), # index 0 is the name
+					MultiContentEntryText(pos = (40, 30), size = (790, 20), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2), # index 2 is the description
+					MultiContentEntryPixmapAlphaBlend(pos = (760, 1), size = (48, 48), flags = BT_SCALE, png = 4), # index 4 is the status pixmap
+					# MultiContentEntryPixmapAlphaBlend(pos = (5, 50), size = (610, 2), png = 5), # index 4 is the div pixmap
+					],
+				"fonts": [parseFont("MenuFont;24"), parseFont("MenuFont;15")],
+				"itemHeight": 50
+				}
+			</convert>
+		</widget>
+	</screen>
+
+	<!-- Swap Manager -->
+
+	<screen name="Swap" title="Swap File Manager" position="fill" flags="wfBorder">
+		<panel name="ScreenTemplate" />
+		<widget name="lab1" position="400,80" size="500,35" font="MenuFont;25" transparent="1" valign="center" />
+		<widget name="autostart_off" position="1198,82" size="32,32" alphatest="blend" pixmap="icons/lock_off.png" />
+		<widget name="autostart_on" position="1198,82" size="32,32" alphatest="blend" pixmap="icons/lock_on.png" />
+		<widget name="lab2" position="400,115" size="570,35" font="MenuFont;25" valign="center" transparent="1" />
+		<widget name="labplace" position="930,115" size="300,35" font="MenuFont;25" halign="right" valign="center" />
+		<widget name="lab3" position="400,150" size="570,35" font="MenuFont;25" valign="center" transparent="1" />
+		<widget name="labsize" position="930,150" size="300,35" font="MenuFont;25" valign="center" />
+		<widget name="lab4" position="400,185" size="150,30" font="MenuFont;25" valign="center" transparent="1" />
+		<widget name="inactive" position="1080,185" size="150,30" backgroundColor="Red" font="MenuFont;25" halign="center" valign="center" />
+		<widget name="active" position="1080,185" size="150,30" backgroundColor="Green" font="MenuFont;25" halign="center" valign="center" />
 	</screen>
 
 <!-- Media Portal Plugin -->
