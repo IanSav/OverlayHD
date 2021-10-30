@@ -2501,12 +2501,12 @@
 <!-- Message Box Pop Up -->
 
 	<screen name="MessageBoxTemplate">
-		<widget name="ErrorPixmap" position="10,10" size="53,53" pixmap="icons/input_error.png" alphatest="blend" scale="1" transparent="1" />
-		<widget name="QuestionPixmap" position="10,10" size="53,53" pixmap="icons/input_question.png" alphatest="blend" scale="1" transparent="1" />
-		<widget name="InfoPixmap" position="10,10" size="53,53" pixmap="icons/input_info.png" alphatest="blend" scale="1" transparent="1" />
-		<widget name="WarningPixmap" position="10,10" size="53,53" pixmap="icons/input_warning.png" alphatest="blend" scale="1" transparent="1" />
+		<widget name="ErrorPixmap" position="10,10" size="53,53" pixmap="icons/input_error.png" alphatest="blend" conditional="ErrorPixmap" scale="1" transparent="1" />
+		<widget name="QuestionPixmap" position="10,10" size="53,53" pixmap="icons/input_question.png" alphatest="blend" conditional="QuestionPixmap" scale="1" transparent="1" />
+		<widget name="InfoPixmap" position="10,10" size="53,53" pixmap="icons/input_info.png" alphatest="blend" conditional="InfoPixmap" scale="1" transparent="1" />
+		<widget name="WarningPixmap" position="10,10" size="53,53" pixmap="icons/input_warning.png" alphatest="blend" conditional="WarningPixmap" scale="1" transparent="1" />
 		<widget name="icon" position="10,10" size="53,53" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" alphatest="blend" conditional="icon" scale="1" transparent="1" />
-		<widget name="text" position="80,10" size="620,100" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1" />
+		<widget name="text" position="80,10" size="610,100" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1" />
 		<widget name="list" position="10,e-80" size="680,70" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 		<applet type="onLayoutFinish">
 if hasattr(self, "autoResize"):
@@ -2514,11 +2514,11 @@ if hasattr(self, "autoResize"):
 		</applet>
 	</screen>
 
-	<screen name="MessageBox" title="Message Selection..." position="center,center" size="700,200" zPosition="+90">
+	<screen name="MessageBox" title="Message Selection..." position="center,center" size="700,300" zPosition="+90">
 		<panel name="MessageBoxTemplate" />
 	</screen>
 
-	<screen name="MessageBoxSimple" title="Message..." position="center,center" size="700,200" zPosition="+90">
+	<screen name="MessageBoxSimple" title="Message..." position="center,center" size="700,300" zPosition="+90">
 		<panel name="MessageBoxTemplate" />
 	</screen>
 
@@ -2533,10 +2533,10 @@ if hasattr(self, "autoResize"):
 		</applet>
 	</screen>
 
-	<screen name="ChoiceBox" position="center,center" size="700,130" zPosition="+90">
-		<widget name="text" position="0,0" size="700,35" backgroundColor="TextBackground" conditional="text" font="DescriptionFont;25" foregroundColor="Text" transparent="1" />
-		<widget name="description" position="0,35" size="700,35" backgroundColor="TextBackground" conditional="description" font="DescriptionFont;25" foregroundColor="Text" transparent="1" />
-		<widget name="list" position="100,100" size="700,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+	<screen name="ChoiceBox" position="center,center" size="700,400" zPosition="+90">
+		<widget name="text" position="10,10" size="680,35" backgroundColor="TextBackground" conditional="text" font="DescriptionFont;25" foregroundColor="Text" transparent="1" />
+		<widget name="description" position="10,45" size="680,35" backgroundColor="TextBackground" conditional="description" font="DescriptionFont;25" foregroundColor="Text" transparent="1" />
+		<widget name="list" position="10,90" size="680,300" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 		<applet type="onLayoutFinish">
 if hasattr(self, "autoResize"):
 	self.autoResize()
