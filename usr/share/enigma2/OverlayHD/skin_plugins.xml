@@ -625,6 +625,39 @@
 		<panel name="CommonBackupManagerLogView" />
 	</screen>
 
+	<!-- Client Mode Manager -->
+
+	<screen name="ClientModeBoxWizard" title="Client Mode Wizard" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateBranding" />
+		<widget source="list" render="Listbox" position="400,80" size="830,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (20, 0), size = (810, 35), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),
+					],
+				"fonts": [parseFont("MenuFont;25")],
+				"itemHeight": 35
+				}
+			</convert>
+		</widget>
+		<panel name="ScreenTemplateFrame830x120" />
+		<widget name="text" position="410,550" size="810,100" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="config" position="0,0" size="0,0" conditional="config" scrollbarMode="showNone" transparent="1" />
+		<widget name="languagetext" position="0,0" size="0,0" conditional="languagetext" transparent="1" />
+		<widget name="step" position="0,0" size="0,0" conditional="step" transparent="1" />
+		<widget name="stepslider" position="0,0" size="0,0" borderWidth="0" conditional="stepslider" transparent="1" />
+	</screen>
+
+	<screen name="ClientModeBoxMenu" title="Client Mode Setup" position="fill" flags="wfNoBorder">
+		<panel name="Setup" />
+	</screen>
+
+	<screen name="ClientModeBoxAbout" title="Client Mode About" position="center,center" size="500,150">
+		<widget name="about" position="10,10" size="480,130" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" transparent="1" />
+	</screen>
+
 	<!-- Image Manager -->
 
 	<screen name="CommonImageManager" title="Image Manager" position="fill" flags="wfNoBorder">
@@ -679,7 +712,7 @@
 		<widget name="lab1" position="410,550" size="810,100" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
-	<screen name="OpkgInstaller" title="ViX Softcam Setup" position="fill" flags="wfBorder">
+	<screen name="OpkgInstaller" title="ViX Softcam Setup" position="fill" flags="wfNoBorder">
 		<panel name="CommonScriptRunner" />
 	</screen>
 
@@ -723,17 +756,17 @@
 
 	<screen name="HddMount" title="Mount Manager" position="fill" flags="wfNoBorder">
 		<panel name="CommonHddMount" />
-		<widget name="lab1" position="400,80" size="830,560" backgroundColor="TextBackground" font="TextFont;40" foregroundColor="TextWaiting" halign="center" transparent="0" valign="center" zPosition="+1" />
+		<widget name="lab1" position="400,80" size="830,560" backgroundColor="TextBackground" font="TextFont;30" foregroundColor="TextWaiting" halign="center" transparent="0" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="VISIONDevicesPanel" title="ViX Mount Manager" position="fill" flags="wfNoBorder">
 		<panel name="CommonHddMount" />
-		<widget name="lab7" position="400,80" size="830,560" backgroundColor="TextBackground" font="TextFont;40" foregroundColor="TextWaiting" halign="center" transparent="0" valign="center" zPosition="+1" />
+		<widget name="lab7" position="400,80" size="830,560" backgroundColor="TextBackground" font="TextFont;30" foregroundColor="TextWaiting" halign="center" transparent="0" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="VIXDevicesPanel" title="ViX Mount Manager" position="fill" flags="wfNoBorder">
 		<panel name="CommonHddMount" />
-		<widget name="lab1" position="400,80" size="830,560" backgroundColor="TextBackground" font="TextFont;40" foregroundColor="TextWaiting" halign="center" transparent="0" valign="center" zPosition="+1" />
+		<widget name="lab1" position="400,80" size="830,560" backgroundColor="TextBackground" font="TextFont;30" foregroundColor="TextWaiting" halign="center" transparent="0" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="DeviceMountSetup" title="Choose where to mount your device:" position="fill" flags="wfNoBorder">
@@ -765,24 +798,24 @@
 	<screen name="CommonScriptRunner" title="Script Runner" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateBranding" />
-		<widget name="list" position="400,115" size="830,300" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="list" position="400,80" size="830,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
 		<widget source="introduction" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" transparent="1" valign="center" />
 		<panel name="ScreenTemplateFrame830x120" />
 	</screen>
 
-	<screen name="ScriptRunner" title="Script Runner" position="fill" flags="wfBorder">
+	<screen name="ScriptRunner" title="Script Runner" position="fill" flags="wfNoBorder">
 		<panel name="CommonScriptRunner" />
 		<widget name="lab1" position="410,550" size="810,100" backgroundColor="TextBackground" font="Text;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
-	<screen name="VISIONScriptRunner" title="Vision Script Runner" position="fill" flags="wfBorder">
+	<screen name="VISIONScriptRunner" title="Vision Script Runner" position="fill" flags="wfNoBorder">
 		<panel name="CommonScriptRunner" />
 		<widget name="lab7" position="410,550" size="810,100" backgroundColor="TextBackground" font="Text;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
-	<screen name="VIXScriptRunner" title="ViX Script Runner" position="fill" flags="wfBorder">
+	<screen name="VIXScriptRunner" title="ViX Script Runner" position="fill" flags="wfNoBorder">
 		<panel name="CommonScriptRunner" />
-		<widget name="lab1" position="400,80" size="830,35" backgroundColor="TextBackground" font="Text;25" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="lab1" position="410,550" size="810,100" backgroundColor="TextBackground" font="Text;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<!-- Softcam Manager -->
@@ -835,7 +868,7 @@
 
 	<!-- Software Update -->
 
-	<screen name="SoftwarePanel" title="Software Update" position="fill" flags="wfBorder">
+	<screen name="SoftwarePanel" title="Software Update" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="a_off" position="50,500" size="36,97" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/aoff.png" />
 		<widget name="a_red" position="50,500" size="36,97" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/ared.png" />
@@ -870,10 +903,10 @@
 		<panel name="ScreenTemplateBranding" />
 		<widget name="autostart_off" position="1200,84" size="30,27" pixmap="icons/lock_off.png" alphatest="blend" />
 		<widget name="autostart_on" position="1200,84" size="30,27" pixmap="icons/lock_on.png" alphatest="blend" />
-		<widget name="labplace" position="950,115" size="260,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" halign="right" transparent="0" valign="center" />
-		<widget name="labsize" position="950,150" size="260,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" halign="right" transparent="0" valign="center" />
-		<widget name="inactive" position="950,185" size="260,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="Red" halign="right" transparent="0" valign="center" />
-		<widget name="active" position="950,185" size="260,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="Green" halign="right" transparent="0" valign="center" />
+		<widget name="labplace" position="970,115" size="260,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" halign="right" transparent="0" valign="center" />
+		<widget name="labsize" position="970,150" size="260,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" halign="right" transparent="0" valign="center" />
+		<widget name="inactive" position="970,185" size="260,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="Red" halign="right" transparent="0" valign="center" />
+		<widget name="active" position="970,185" size="260,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="Green" halign="right" transparent="0" valign="center" />
 		<!--
 		<widget name="inactive" position="1030,185" size="200,35" backgroundColor="LightRed" font="MenuFont;25" foregroundColor="MenuText" halign="center" transparent="0" valign="center" />
 		<widget name="active" position="1030,185" size="200,35" backgroundColor="DullGreen" font="MenuFont;25" foregroundColor="MenuText" halign="center" transparent="0" valign="center" />
@@ -881,7 +914,7 @@
 		<panel name="ScreenTemplateFrame830x120" />
 	</screen>
 
-	<screen name="Swap" title="Swap File Manager" position="fill" flags="wfBorder">
+	<screen name="Swap" title="Swap File Manager" position="fill" flags="wfNoBorder">
 		<panel name="CommanSwap" />
 		<widget name="lab1" position="420,80" size="550,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="1" valign="center" />
 		<widget name="lab2" position="420,115" size="550,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="1" valign="center" />
@@ -1029,7 +1062,7 @@
 				"template":
 					[
 					MultiContentEntryText(pos = (20, 0), size = (680, 35), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
-					MultiContentEntryText(pos = (740, 0), size = (50, 35), flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = '>')
+					MultiContentEntryText(pos = (740, 0), size = (50, 35), flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = ">")
 					],
 				"fonts": [parseFont("Regular;25")],
 				"itemHeight": 35
