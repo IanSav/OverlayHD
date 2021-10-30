@@ -1302,11 +1302,13 @@
 
 <!-- MENU > Setup > Software Manager > Backup Settings -->
 
+	<!--
 	<screen name="BackupSelection" title="Select Files/Folders To Backup" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_setup_browser.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<panel name="ScreenTemplateCheckList0" />
 	</screen>
+	-->
 
 <!--
  |	Unallocated Plugin and Software Settings
