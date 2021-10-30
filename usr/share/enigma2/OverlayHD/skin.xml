@@ -675,6 +675,63 @@
 		</widget>
 	</screen>
 
+<!-- Screen Template Branding / Logo -->
+
+	<screen name="ScreenTemplateBranding" title="Branding" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplateBrandingEnigma2" base="ScreenTemplateBranding" />
+	</screen>
+
+	<screen name="ScreenTemplateBrandingBeyonwiz" />
+
+	<screen name="ScreenTemplateBrandingEnigma2" />
+
+	<screen name="ScreenTemplateBrandingOpenATV">
+		<eLabel text="openATV" position="50,620" size="200,35" font="TextFont;25" foregroundColor="TextWaiting" transparent="1" valign="center" />
+	</screen>
+
+	<!--
+	<screen name="ScreenTemplateBrandingOpenVisionOld">
+		<widget source="lab1" render="Label" position="50,500" size="350,25" conditional="lab1" font="TextFont;22" foregroundColor="TextWaiting" transparent="1" valign="center" />
+		<widget source="lab2" render="Label" position="50,525" size="350,25" conditional="lab2" font="TextFont;18" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="lab3" render="Label" position="50,550" size="350,25" conditional="lab3" font="TextFont;18" foregroundColor="TextIndentedSelected" transparent="1" valign="center" />
+		<widget source="lab4" render="Label" position="50,575" size="350,25" conditional="lab4" font="TextFont;18" foregroundColor="TextIndented" transparent="1" valign="center" />
+		<widget source="lab5" render="Label" position="50,600" size="350,25" conditional="lab5" font="TextFont;18" foregroundColor="TextIndentedSelected" transparent="1" valign="center" />
+		<widget source="lab6" render="Label" position="50,625" size="350,25" conditional="lab6" font="TextFont;18" foregroundColor="TextIndented" transparent="1" valign="center" />
+	</screen>
+	-->
+
+	<screen name="ScreenTemplateBrandingOpenVision">
+		<eLabel text="OpenVision" position="50,500" size="350,25" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="TextWaiting" transparent="1" valign="center" />
+		<eLabel text="Report problems to:" position="50,525" size="350,25" backgroundColor="TextBackground" font="TextFont;18" foregroundColor="TextIndentedSelected" transparent="1" valign="center" />
+		<eLabel text="https://openvision.tech/" position="60,550" size="350,25" backgroundColor="TextBackground" font="TextFont;18" foregroundColor="TextIndented" transparent="1" valign="center" />
+		<eLabel text="Sources are available at:" position="50,575" size="350,25" backgroundColor="TextBackground" font="TextFont;18" foregroundColor="TextIndentedSelected" transparent="1" valign="center" />
+		<eLabel text="https://github.com/OpenVisionE2/" position="60,600" size="350,25" backgroundColor="TextBackground" font="TextFont;18" foregroundColor="TextIndented" transparent="1" valign="center" />
+		<eLabel text="Let's define Enigma2 once more." position="50,625" size="350,25" backgroundColor="TextBackground" font="TextFont;18" foregroundColor="Text" transparent="1" valign="center" />
+		<widget source="lab1" render="Label" position="0,0" size="0,0" conditional="lab1" transparent="1" />
+		<widget source="lab2" render="Label" position="0,0" size="0,0" conditional="lab2" transparent="1" />
+		<widget source="lab3" render="Label" position="0,0" size="0,0" conditional="lab3" transparent="1" />
+		<widget source="lab4" render="Label" position="0,0" size="0,0" conditional="lab4" transparent="1" />
+		<widget source="lab5" render="Label" position="0,0" size="0,0" conditional="lab5" transparent="1" />
+		<widget source="lab6" render="Label" position="0,0" size="0,0" conditional="lab6" transparent="1" />
+	</screen>
+
+	<!--
+	<screen name="ScreenTemplateBrandingOpenViXOld">
+		<widget source="lab1" render="Label" position="50,575" size="458,25" conditional="lab1" font="Boldit;24" transparent="1" valign="center" />
+		<widget source="lab2" render="Label" position="50,600" size="458,25" conditional="lab2" font="Italic;19" transparent="1" valign="center" />
+		<widget source="lab3" render="Label" position="50,625" size="458,25" conditional="lab3" font="Italic;19" transparent="1" valign="center" />
+	</screen>
+	-->
+
+	<screen name="ScreenTemplateBrandingOpenViX">
+		<eLabel text="Virtuosso Image Xtreme" position="50,575" size="458,25" font="Boldit;24" transparent="1" valign="center" />
+		<eLabel text="By Team ViX" position="50,600" size="458,25" font="Italic;19" transparent="1" valign="center" />
+		<eLabel text="Support at https://www.world-of-satellite.com/" position="50,625" size="458,25" font="Italic;19" transparent="1" valign="center" />
+		<widget source="lab1" render="Label" position="0,0" size="0,0" conditional="lab1" transparent="1" />
+		<widget source="lab2" render="Label" position="0,0" size="0,0" conditional="lab2" transparent="1" />
+		<widget source="lab3" render="Label" position="0,0" size="0,0" conditional="lab3" transparent="1" />
+	</screen>
+
 <!-- MENU Button -->
 
 	<screen name="ScreenTemplateButtonMenu">

@@ -203,23 +203,13 @@
 
 	<screen name="Information" title="Information" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget source="lab1" render="Label" position="50,500" size="350,25" conditional="lab1" font="Text;22" foregroundColor="TextWaiting" transparent="1" />
-		<widget source="lab2" render="Label" position="50,525" size="350,25" conditional="lab2" font="Text;18" foregroundColor="Text" transparent="1" />
-		<widget source="lab3" render="Label" position="50,550" size="350,25" conditional="lab3" font="Text;18" foregroundColor="TextIndentedSelected" transparent="1" />
-		<widget source="lab4" render="Label" position="50,575" size="350,25" conditional="lab4" font="Text;18" foregroundColor="TextIndented" transparent="1" />
-		<widget source="lab5" render="Label" position="50,600" size="350,25" conditional="lab5" font="Text;18" foregroundColor="TextIndentedSelected" transparent="1" />
-		<widget source="lab6" render="Label" position="50,625" size="350,25" conditional="lab6" font="Text;18" foregroundColor="TextIndented" transparent="1" />
+		<panel name="ScreenTemplateBranding" />
 		<widget name="information" position="400,80" size="830,550" colPosition="320" conditional="information" divideChar="|" font="Text;20" noWrap="1" leftColAlign="left" rightColAlign="left" split="1" transparent="1" />
 	</screen>
 
 	<screen name="InformationImage" title="Receiver Image" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget source="lab1" render="Label" position="50,500" size="350,25" conditional="lab1" font="Text;22" foregroundColor="TextWaiting" transparent="1" />
-		<widget source="lab2" render="Label" position="50,525" size="350,25" conditional="lab2" font="Text;18" foregroundColor="Text" transparent="1" />
-		<widget source="lab3" render="Label" position="50,550" size="350,25" conditional="lab3" font="Text;18" foregroundColor="TextIndentedSelected" transparent="1" />
-		<widget source="lab4" render="Label" position="50,575" size="350,25" conditional="lab4" font="Text;18" foregroundColor="TextIndented" transparent="1" />
-		<widget source="lab5" render="Label" position="50,600" size="350,25" conditional="lab5" font="Text;18" foregroundColor="TextIndentedSelected" transparent="1" />
-		<widget source="lab6" render="Label" position="50,625" size="350,25" conditional="lab6" font="Text;18" foregroundColor="TextIndented" transparent="1" />
+		<panel name="ScreenTemplateBranding" />
 		<widget name="name" position="400,80" size="830,25" font="Text;20" halign="center" transparent="1" valign="center" />
 		<widget name="image" position="400,115" size="830,515" alphatest="blend" scale="1" transparent="1" />
 	</screen>
@@ -259,9 +249,7 @@
 	<screen name="AboutOE" title="About" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_info.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
-		<widget source="lab1" render="Label" position="50,575" size="458,25" font="Boldit;24" transparent="1" />
-		<widget source="lab2" render="Label" position="50,600" size="458,25" font="Italic;19" transparent="1" />
-		<widget source="lab3" render="Label" position="50,625" size="458,25" font="Italic;19" transparent="1" />
+		<panel name="ScreenTemplateBranding" />
 		<widget name="AboutScrollLabel" position="400,80" size="830,550" font="Regular;20" transparent="1" />
 	</screen>
 
@@ -398,9 +386,7 @@
 	</screen>
 
 	<screen name="SystemMemoryInfoEnigma2" title="Memory Information" position="fill" flags="wfNoBorder">
-		<widget source="lab1" render="Label" position="50,575" size="458,25" font="Boldit;24" transparent="1" />
-		<widget source="lab2" render="Label" position="50,600" size="458,25" font="Italic;19" transparent="1" />
-		<widget source="lab3" render="Label" position="50,625" size="458,25" font="Italic;19" transparent="1" />
+		<panel name="ScreenTemplateBranding" />
 		<widget name="AboutScrollLabel" position="400,80" size="830,400" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
 	</screen>
 
