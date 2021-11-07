@@ -1519,9 +1519,7 @@
 				}
 			</convert>
 		</widget>
-		<widget name="longshift" position="400,620" size="830,30" backgroundColor="TextBackground" conditional="longshift" font="HelpFont;25" foregroundColor="HelpPress" transparent="1" valign="center" />
-		<widget name="longshift_key0" position="400,620" size="830,30" backgroundColor="TextBackground" conditional="longshift_key0" font="HelpFont;25" foregroundColor="HelpPress" halign="right" transparent="1" valign="center" />
-		<widget name="longshift_key1" position="400,620" size="830,30" backgroundColor="TextBackground" conditional="longshift_key1" font="HelpFont;25" foregroundColor="HelpPress" transparent="1" valign="center" />
+		<widget name="buttonlist" position="400,510" size="830,25" backgroundColor="TextBackground" conditional="buttonlist" font="HelpFont;20" foregroundColor="HelpPress" transparent="1" valign="center" />
 		<panel name="ScreenTemplateDescription4" />
 	</screen>
 
