@@ -5,10 +5,7 @@
 
 	<screen name="MenuShutdown" title="Power / Restart" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget name="menuimage" position="50,100" size="300,500" alphatest="blend" conditional="menuimage" transparent="1" />
 		<panel name="ShutdownEnigma2" base="Shutdown" />
-		<widget name="charlist" position="0,0" size="0,0" conditional="charlist" transparent="1" />
-		<widget name="charframe" position="0,0" size="0,0" conditional="charframe" transparent="1" />
 	</screen>
 
 	<screen name="Menushutdown" title="Power / Restart" position="fill" flags="wfNoBorder">
@@ -53,9 +50,14 @@
 			<convert type="MenuEntryCompare">mainmenu_tasks_power_shutdown</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
+		<widget name="charlist" position="0,0" size="0,0" conditional="charlist" transparent="1" />
+		<widget name="charframe" position="0,0" size="0,0" conditional="charframe" transparent="1" />
 	</screen>
 
 	<screen name="ShutdownEnigma2">
+		<panel name="Menu" />
+		<!--
+		<widget name="menuimage" position="50,100" size="300,500" alphatest="blend" conditional="menuimage" transparent="1" />
 		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -92,6 +94,7 @@
 			<convert type="MenuEntryCompare">standby</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
+		-->
 	</screen>
 
 	<screen name="QuitMainloopScreen" title="Power / Restart" position="fill" flags="wfNoBorder">
@@ -114,10 +117,7 @@
 
 	<screen name="MenuInformation" title="Information" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget name="menuimage" position="50,100" size="300,500" alphatest="blend" conditional="menuimage" transparent="1" />
 		<panel name="InformationEnigma2" base="Information" />
-		<widget name="charlist" position="0,0" size="0,0" conditional="charlist" transparent="1" />
-		<widget name="charframe" position="0,0" size="0,0" conditional="charframe" transparent="1" />
 	</screen>
 
 	<screen name="Menuinformation" title="Information" position="fill" flags="wfNoBorder">
@@ -162,9 +162,14 @@
 			<convert type="MenuEntryCompare">mainmenu_tasks_info_service</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
+		<widget name="charlist" position="0,0" size="0,0" conditional="charlist" transparent="1" />
+		<widget name="charframe" position="0,0" size="0,0" conditional="charframe" transparent="1" />
 	</screen>
 
 	<screen name="InformationEnigma2" title="Information(Skin)" position="fill" flags="wfNoBorder">
+		<panel name="Menu" />
+		<!--
+		<widget name="menuimage" position="50,100" size="300,500" alphatest="blend" conditional="menuimage" transparent="1" />
 		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -197,6 +202,7 @@
 			<convert type="MenuEntryCompare">service_info_screen</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
+		-->
 	</screen>
 
 	<!-- System Information (MENU > Information > System Information) Screen -->
