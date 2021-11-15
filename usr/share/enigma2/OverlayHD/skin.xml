@@ -489,24 +489,30 @@
 	</parameters>
 
 	<menus>
-		<menu key="default" image="menus/mainmenu_tasks_setup.png" />
-		<menu key="info_screen" image="menus/mainmenu_tasks_setup.png" />
 		<menu key="about_screen" image="menus/mainmenu_tasks_power_standby.png" />
-		<menu key="boxbranding_screen" image="menus/mainmenu_tasks_power_restartshell.png" />
-		<menu key="multiboot_screen" image="menus/mainmenu_tasks_power_reboot.png" />
-		<menu key="device_screen" image="menus/mainmenu_tasks_power_restartshell.png" />
-		<menu key="memory_screen" image="menus/mainmenu_tasks_power_shutdown.png" />
-		<menu key="network_screen" image="menus/mainmenu_tasks_setup.png" />
-		<menu key="service_info_screen" image="menus/mainmenu_tasks_setup.png" />
-		<menu key="streaming_clients_info_screen" image="menus/mainmenu_tasks_setup.png" />
-		<menu key="standby_restart_list" image="menus/mainmenu_tasks_setup.png" />
-		<menu key="standby" image="menus/mainmenu_tasks_power_standby.png" />
-		<menu key="restart_enigma" image="menus/mainmenu_tasks_power_restartshell.png" />
-		<menu key="restart" image="menus/mainmenu_tasks_power_reboot.png" />
-		<menu key="multiboot" image="menus/mainmenu_tasks_power_restartshell.png" />
-		<menu key="deep_standby" image="menus/mainmenu_tasks_power_shutdown.png" />
-		<menu key="maintenance_mode" image="menus/mainmenu_tasks_setup.png" />
 		<menu key="android_mode" image="menus/mainmenu_tasks_setup.png" />
+		<menu key="boxbranding_screen" image="menus/mainmenu_tasks_power_restartshell.png" />
+		<menu key="deep_standby" image="menus/mainmenu_tasks_power_shutdown.png" />
+		<menu key="default" image="menus/mainmenu_tasks_setup.png" />
+		<menu key="device_info_screen" image="menus/mainmenu_tasks_backup.png" />
+		<menu key="device_screen" image="menus/mainmenu_tasks_power_restartshell.png" />
+		<menu key="dualboot" image="menus/mainmenu_shuffle.png" />
+		<menu key="info_screen" image="menus/mainmenu_tasks_setup.png" />
+		<menu key="maintenance_mode" image="menus/mainmenu_tasks_setup.png" />
+		<menu key="memory_info_screen" image="menus/mainmenu_tasks_browser.png" />
+		<menu key="memory_screen" image="menus/mainmenu_tasks_power_shutdown.png" />
+		<menu key="multiboot" image="menus/mainmenu_shuffle.png" />
+		<menu key="multiboot_screen" image="menus/mainmenu_shuffle.png" />
+		<menu key="network_info_screen" image="menus/mainmenu_source_radio.png" />
+		<menu key="network_screen" image="menus/mainmenu_tasks_setup.png" />
+		<menu key="receiver_info_screen" image="menus/mainmenu_tasks_info.png" />
+		<menu key="restart" image="menus/mainmenu_tasks_power_reboot.png" />
+		<menu key="restart_enigma" image="menus/mainmenu_tasks_power_restartshell.png" />
+		<menu key="service_info_screen" image="menus/mainmenu_tv_live.png" />
+		<menu key="sleep" image="menus/mainmenu_tasks_power_sleeptimer.png" />
+		<menu key="standby" image="menus/mainmenu_tasks_power_standby.png" />
+		<menu key="standby_restart_list" image="menus/mainmenu_tasks_setup.png" />
+		<menu key="streaming_clients_info_screen" image="menus/mainmenu_tasks_setup.png" />
 	</menus>
 
 	<setups>
@@ -1353,13 +1359,58 @@
 
 <!-- MENU - Generic And Enhanced Main Menus -->
 
+	<!-- Default vertical menu -->
+
 	<screen name="Menu" title="Menu" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
-		<widget name="menuimage" position="50,100" size="300,500" alphatest="blend" conditional="menuimage" transparent="1" />
 		<panel name="MenuEnigma2" base="Menu" />
-		<widget name="charlist" position="0,0" size="0,0" conditional="charlist" transparent="1" />
-		<widget name="charframe" position="0,0" size="0,0" conditional="charframe" transparent="1" />
+	</screen>
+
+	<!-- Horizontal Menu -->
+
+	<screen name="AnimMain" title="Menu" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<widget name="menuimage" position="490,100" size="300,250" alphatest="blend" conditional="menuimage" transparent="1" />
+		<widget name="title" position="286,515" size="708,35" backgroundColor="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" halign="center" noWrap="1" transparent="0" valign="center" />
+		<widget source="label1" render="Label" position="50,550" size="236,100" backgroundColor="MenuBackground" font="MenuFont;17" foregroundColor="MenuText" halign="center" transparent="1" valign="center" />
+		<widget source="label2" render="Label" position="286,550" size="236,100" backgroundColor="MenuBackground" font="MenuFont;21" foregroundColor="MenuText" halign="center" transparent="1" valign="center" />
+		<widget source="label3" render="Label" position="522,550" size="236,100" backgroundColor="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" halign="center" transparent="0" valign="center" />
+		<widget source="label4" render="Label" position="758,550" size="236,100" backgroundColor="MenuBackground" font="MenuFont;21" foregroundColor="MenuText" halign="center" transparent="1" valign="center" />
+		<widget source="label5" render="Label" position="994,550" size="236,100" backgroundColor="MenuBackground" font="MenuFont;17" foregroundColor="MenuText" halign="center" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="Animmain" title="Menu" position="fill" flags="wfNoBorder">
+		<panel name="AnimMain" />
+	</screen>
+
+	<!-- Horizontal Icon Menu -->
+
+	<screen name="IconMain" title="Menu" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<widget name="menuimage" position="490,100" size="300,250" alphatest="blend" conditional="menuimage" transparent="1" />
+		<widget name="title" position="286,505" size="708,35" backgroundColor="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" halign="center" noWrap="1" transparent="0" valign="center" />
+		<widget source="label1" render="Label" position="50,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" halign="center" transparent="1" valign="center" />
+		<widget source="label1s" render="Label" position="50,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuSelected" halign="center" transparent="1" valign="center" />
+		<widget source="label2" render="Label" position="248,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" halign="center" transparent="1" valign="center" />
+		<widget source="label2s" render="Label" position="248,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuSelected" halign="center" transparent="1" valign="center" />
+		<widget source="label3" render="Label" position="446,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" halign="center" transparent="1" valign="center" />
+		<widget source="label3s" render="Label" position="446,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuSelected" halign="center" transparent="1" valign="center" />
+		<widget source="label4" render="Label" position="644,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" halign="center" transparent="1" valign="center" />
+		<widget source="label4s" render="Label" position="644,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuSelected" halign="center" transparent="1" valign="center" />
+		<widget source="label5" render="Label" position="842,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" halign="center" transparent="1" valign="center" />
+		<widget source="label5s" render="Label" position="842,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuSelected" halign="center" transparent="1" valign="center" />
+		<widget source="label6" render="Label" position="1040,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" halign="center" transparent="1" valign="center" />
+		<widget source="label6s" render="Label" position="1040,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuSelected" halign="center" transparent="1" valign="center" />
+		<widget name="pixmap1" position="0,0" size="0,0" alphatest="blend" transparent="1" />
+		<widget name="pixmap2" position="0,0" size="0,0" alphatest="blend" transparent="1" />
+		<widget name="pixmap3" position="0,0" size="0,0" alphatest="blend" transparent="1" />
+		<widget name="pixmap4" position="0,0" size="0,0" alphatest="blend" transparent="1" />
+		<widget name="pixmap5" position="0,0" size="0,0" alphatest="blend" transparent="1" />
+		<widget name="pixmap6" position="0,0" size="0,0" alphatest="blend" transparent="1" />
+	</screen>
+
+	<screen name="Iconmain" title="Menu" position="fill" flags="wfNoBorder">
+		<panel name="IconMain" />
 	</screen>
 
 	<screen name="MenuSort" title="Menu Sorter" position="fill" flags="wfNoBorder">
@@ -1367,6 +1418,7 @@
 	</screen>
 
 	<screen name="MenuBeyonwiz" title="Menu" position="fill" flags="wfNoBorder">
+		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -1374,6 +1426,24 @@
 					[
 					MultiContentEntryText(pos = (20, 0), size = (790, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),
 					MultiContentEntryText(pos = (740, 0), size = (50, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4),
+					],
+				"fonts": [parseFont("MenuFont;25")],
+				"itemHeight": 35
+				}
+			</convert>
+		</widget>
+		<widget name="charlist" position="0,0" size="0,0" conditional="charlist" transparent="1" />
+		<widget name="charframe" position="0,0" size="0,0" conditional="charframe" transparent="1" />
+	</screen>
+
+	<screen name="MenuEnigma2" title="Menu" position="fill" flags="wfNoBorder">
+		<widget name="menuimage" position="50,100" size="300,500" alphatest="blend" conditional="menuimage" transparent="1" />
+		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (20, 0), size = (810, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0)
 					],
 				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
@@ -1391,21 +1461,6 @@
 					MultiContentEntryText(pos = (65, 0), size = (655, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),
 					MultiContentEntryText(pos = (740, 0), size = (50, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4),
 					MultiContentEntryPixmapAlphaBlend(pos = (20, 5), size = (35, 25), png = 5)
-					],
-				"fonts": [parseFont("MenuFont;25")],
-				"itemHeight": 35
-				}
-			</convert>
-		</widget>
-	</screen>
-
-	<screen name="MenuEnigma2" title="Menu" position="fill" flags="wfNoBorder">
-		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
-			<convert type="TemplatedMultiContent">
-				{
-				"template":
-					[
-					MultiContentEntryText(pos = (20, 0), size = (810, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0)
 					],
 				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
