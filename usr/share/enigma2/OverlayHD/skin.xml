@@ -489,11 +489,11 @@
 	</parameters>
 
 	<menus>
+		<menu key="default" image="menus/mainmenu_tasks_setup.png" />
 		<menu key="about_screen" image="menus/mainmenu_tasks_power_standby.png" />
 		<menu key="android_mode" image="menus/mainmenu_tasks_setup.png" />
 		<menu key="boxbranding_screen" image="menus/mainmenu_tasks_power_restartshell.png" />
 		<menu key="deep_standby" image="menus/mainmenu_tasks_power_shutdown.png" />
-		<menu key="default" image="menus/mainmenu_tasks_setup.png" />
 		<menu key="device_info_screen" image="menus/mainmenu_tasks_backup.png" />
 		<menu key="device_screen" image="menus/mainmenu_tasks_power_restartshell.png" />
 		<menu key="dualboot" image="menus/mainmenu_shuffle.png" />
