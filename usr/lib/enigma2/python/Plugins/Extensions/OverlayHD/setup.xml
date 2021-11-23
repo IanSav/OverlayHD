@@ -182,6 +182,7 @@
 		<item level="0" text="Help font" description="Choose a font for the help text." requires="config.plugins.skin.OverlayHD.FontSettings">config.plugins.skin.OverlayHD.HelpFont</item>
 		<item level="0" text="Menu font" description="Choose a font for the menu item text." requires="config.plugins.skin.OverlayHD.FontSettings">config.plugins.skin.OverlayHD.MenuFont</item>
 		<item level="0" text="Choice list font" description="Choose a font for the choice list item text." requires="config.plugins.skin.OverlayHD.FontSettings">config.plugins.skin.OverlayHD.ChoiceList</item>
+		<item level="0" text="Selection list font" description="Choose a font for the selection list item text." requires="config.plugins.skin.OverlayHD.FontSettings">config.plugins.skin.OverlayHD.SelectionList</item>
 		<item level="0" text="Movie selection font" description="Choose a font for the movie selection list text." requires="config.plugins.skin.OverlayHD.FontSettings">config.plugins.skin.OverlayHD.MovieSelectionFont</item>
 		<item level="0" text="EPG time line font" description="Choose a font for the EPG time line text." requires="config.plugins.skin.OverlayHD.FontSettings">config.plugins.skin.OverlayHD.EPGTimeLineFont</item>
 		<item level="0" text="EPG service font" description="Choose a font for the EPG service text." requires="config.plugins.skin.OverlayHD.FontSettings">config.plugins.skin.OverlayHD.EPGServiceFont</item>

@@ -2,7 +2,7 @@
 #
 # OverlayHD Skin Manager
 #
-# Version Date - 23-Oct-2021
+# Version Date - 23-Nov-2021
 # Remember to change version number variable below!!!
 #
 # Repository - https://github.com/IanSav/OverlayHD
@@ -69,7 +69,7 @@ from Tools.BoundFunction import boundFunction
 from Tools.Directories import SCOPE_CONFIG, SCOPE_GUISKIN, SCOPE_MEDIA, SCOPE_PLUGIN, SCOPE_SKINS, fileReadXML, resolveFilename
 
 MODULE_NAME = __name__.split(".")[-1]
-PLUGIN_VERSION_NUMBER = "1.90"
+PLUGIN_VERSION_NUMBER = "1.91"
 
 DISTRO_MENU_IDVAL = 0
 DISTRO_SCREENLIST = 1
@@ -416,6 +416,7 @@ fontElements = [
 	("MovieSelectionFont", "NemesisFlatline", textFontChoices),
 	("SMSHelperFont", "DejaVuSansCondensed", textFontChoices),
 	("Regular", "NemesisFlatline", textFontChoices),
+	("SelectionList", "NemesisFlatline", textFontChoices),
 	("TextFont", "NemesisFlatline", textFontChoices),
 	("TitleFont", "RobotoBlack", bannerFontChoices)
 ]
@@ -580,7 +581,7 @@ class OverlayHDSkinManager(Setup):
 		configfile.save()
 		# self.applySettings()
 		return restart
-		# Setup.saveAll(self)
+		# Setup.saveAll(self, restart)
 
 	def cancelConfirm(self, result):  # Cancel all changed entries, both displayed and not currently displayed.
 		if not result:
