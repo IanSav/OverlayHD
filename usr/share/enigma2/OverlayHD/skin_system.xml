@@ -555,6 +555,13 @@
 		</widget>
 	</screen>
 
+<!-- TagEditor Screen -->
+
+	<screen name="TagEditor" title="Tag Editor" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateTagList0" />
+	</screen>
+
 <!-- Timer Screens -->
 
 	<!-- TIMER | SLEEP - Sleep / PowerTimer Timer List Menu -->
