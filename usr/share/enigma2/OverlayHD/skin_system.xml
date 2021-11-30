@@ -217,7 +217,7 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateBranding" />
 		<widget name="name" position="400,80" size="830,25" font="TextFont;20" halign="center" transparent="1" valign="center" />
-		<widget name="image" position="400,115" size="830,515" alphatest="blend" scale="1" transparent="1" />
+		<widget name="image" position="400,115" size="830,515" alphatest="blend" scaleFlags="scaleCenter" transparent="1" />
 	</screen>
 
 	<screen name="SystemInformation" title="System Information" position="fill" flags="wfNoBorder">
