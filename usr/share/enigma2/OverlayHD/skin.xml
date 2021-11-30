@@ -418,9 +418,10 @@
 		<parameter name="AutotimerEnabledIcon" value="2,1,38,36" />
 		<parameter name="AutotimerRecordIcon" value="42,5,30,30" />
 		-->
-		<parameter name="ChoicelistDash" value="0,2,1280,35" />
-		<parameter name="ChoicelistName" value="50,2,1280,35" />
+		<parameter name="ChoicelistDash" value="0,0,830,35" />
+		<parameter name="ChoicelistName" value="50,0,780,35" />
 		<parameter name="ChoicelistIcon" value="5,5,35,25" />
+		<parameter name="ChoicelistNameSingle" value="20,0,810,35" />
 		<parameter name="ConfigListSeperator" value="430" />
 		<parameter name="ConfigListSlider" value="17,0" />
 		<!--
