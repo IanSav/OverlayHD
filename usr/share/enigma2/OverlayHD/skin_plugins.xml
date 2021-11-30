@@ -805,17 +805,17 @@
 
 	<screen name="ScriptRunner" title="Script Runner" position="fill" flags="wfNoBorder">
 		<panel name="CommonScriptRunner" />
-		<widget name="lab1" position="410,550" size="810,100" backgroundColor="TextBackground" font="Text;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="lab1" position="410,550" size="810,100" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="VISIONScriptRunner" title="Vision Script Runner" position="fill" flags="wfNoBorder">
 		<panel name="CommonScriptRunner" />
-		<widget name="lab7" position="410,550" size="810,100" backgroundColor="TextBackground" font="Text;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="lab7" position="410,550" size="810,100" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="VIXScriptRunner" title="ViX Script Runner" position="fill" flags="wfNoBorder">
 		<panel name="CommonScriptRunner" />
-		<widget name="lab1" position="410,550" size="810,100" backgroundColor="TextBackground" font="Text;20" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="lab1" position="410,550" size="810,100" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<!-- Softcam Manager -->
