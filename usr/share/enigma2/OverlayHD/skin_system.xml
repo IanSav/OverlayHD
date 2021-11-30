@@ -111,6 +111,12 @@
 		<panel name="ScreenTemplateSDescription4" />
 	</screen>
 
+	<screen name="MultibootSelection" title="MultiBoot Image Selector" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateList4" />
+		<panel name="ScreenTemplateSDescription4" />
+	</screen>
+
 <!-- Information Menus and Screens -->
 
 	<!-- Information (MENU > Information) Menu -->
