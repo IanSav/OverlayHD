@@ -137,6 +137,10 @@
 		<widget name="timeline_now" position="50,250" size="20,410" pixmap="epg/timeline-now-graphical.png" alphatest="blend" zPosition="+2" />
 	</screen>
 
+	<screen name="GraphMultiEPG" title="Graphical EPG" position="fill" flags="wfNoBorder">
+		<panel name="GraphicalEPG" />
+	</screen>
+
 <!-- EPG - Graphical EPG (PIG Mode) -->
 
 	<screen name="GridEPGPIG" title="Grid EPG (PIG)" position="fill" backgroundColor="EPGBackground" flags="wfNoBorder">
