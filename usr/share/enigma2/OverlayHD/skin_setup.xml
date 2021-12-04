@@ -51,7 +51,7 @@
 
 	<screen name="UserInterfacePositioner" title="OSD Position Settings" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_tv.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/tv_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateFootnote4" />
 		<panel name="ScreenTemplateStatus4" />
@@ -61,7 +61,7 @@
 
 	<screen name="OSD3DSetupScreen" title="OSD Positioner" position="fill" flags="wfNoBorder">
 		<panel name="Setup" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_tv.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/tv_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateStatus4" />
 	</screen>
 
@@ -69,7 +69,7 @@
 
 	<screen name="SkinSelector" title="Skin Selector" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_tv.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/tv_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateSkinList4" />
 		<eLabel position="960,80" size="270,2" backgroundColor="Pinstripe" />
 		<eLabel position="960,524" size="270,2" backgroundColor="Pinstripe" />
@@ -91,7 +91,7 @@
 
 	<screen name="HdmiCECSetupScreen" title="HDMI CEC" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_tv.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/tv_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateHDMICEC4" />
 	</screen>
@@ -124,7 +124,7 @@
 
 	<screen name="LocaleSelection" title="Locale/Language Selection" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/software_manager_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget name="icons" position="0,0" size="30,27" pixmaps="icons/lock_off.png,icons/lock_on.png,icons/lock_error.png" alphatest="blend" />
 		<widget source="locales" render="Listbox" position="400,80" size="830,455" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
@@ -150,7 +150,7 @@
 
 	<screen name="LanguageSelection" title="Language Selection" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/software_manager_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget source="languages" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -194,7 +194,7 @@
 
 	<screen name="InputDeviceSelection" title="Select Input Device" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_tv.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/tv_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget source="list" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -214,7 +214,7 @@
 
 	<screen name="InputDeviceSetup" title="Input Device Setup" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_tv.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/tv_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateFootnote4" />
 		<panel name="ScreenTemplateSIntroduction4" />
@@ -243,7 +243,7 @@
 	<screen name="NimSelection" title="Choose Tuner" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonInfo" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_tv.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/tv_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget source="nimlist" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -265,7 +265,7 @@
 
 	<screen name="NimSetup" title="Reception Settings" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_tv.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/tv_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateDescription4" />
 	</screen>
@@ -274,7 +274,7 @@
 
 	<screen name="IniTerrestrialLocation" title="Setup" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_tv.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/tv_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateText4" />
 	</screen>
@@ -292,7 +292,7 @@
 
 	<screen name="ScanSetup" title="Manual service scan" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_tv.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/tv_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateFootnote4" />
 		<panel name="ScreenTemplateIntroduction4" />
@@ -398,7 +398,7 @@
 
 	<screen name="Satfinder" title="Signal Finder" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/radio.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateConfigShort" />
 		<!-- <panel name="ScreenTemplateFootnote4" /> -->
 		<panel name="ScreenTemplateDescription4" />
@@ -454,7 +454,7 @@
 
 	<screen name="ServicesFound" title="Services Found" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/radio.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget name="servicesfound" position="420,80" size="810,530" font="Regular;20" transparent="1" />
 		<widget name="legend" position="420,625" size="810,25" font="Regular;20" transparent="1" />
 	</screen>
@@ -593,7 +593,7 @@
 
 	<screen name="ParentalControlSetup" title="Parental Control Settings" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_parental.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/parental_control_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateFrame830x120" />
 	</screen>
@@ -602,7 +602,7 @@
 
 	<screen name="ParentalControlEditor" title="Parental Control Services Editor" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_parental.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/parental_control_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateServiceList0" />
 	</screen>
 
@@ -610,7 +610,7 @@
 
 	<screen name="ParentalControlChangePin" title="Change PIN Code" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_parental.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/parental_control_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateConfig0" />
 	</screen>
 
@@ -618,7 +618,7 @@
 
 	<screen name="PinInput" title="Service Pin Code Needed" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_parental.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/parental_control_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget name="service" position="400,200" size="810,35" font="Regular;25" halign="center" transparent="1" valign="center" />
 		<widget name="text" position="400,300" size="810,35" font="Regular;25" halign="center" transparent="1" valign="center" />
 		<widget name="input" position="400,400" size="810,75" font="Regular;75" halign="center" transparent="1" valign="center" />
@@ -629,7 +629,7 @@
 
 	<screen name="ZapHistoryConfigurator" title="Zap History Settings" position="fill" flags="wfNoBorder">
 		<panel name="Setup" />
-		<ePixmap pixmap="menus/mainmenu_tv_zaphistory.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/tv_zap_history.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 	</screen>
 
 <!-- MENU > Setup > Media > Picture Player -->
@@ -638,21 +638,21 @@
 
 	<screen name="PicturePlayerSetup" title="Picture Player" position="fill" flags="wfNoBorder">
 		<panel name="Setup" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_photo.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/photo_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 	</screen>
 
 <!-- MENU > Setup > Media > Media Player -->
 
 	<screen name="MediaPlayerSettings" title="Media Player" position="fill" flags="wfNoBorder">
 		<panel name="Setup" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_movie.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/movie_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 	</screen>
 
 <!-- MENU > Setup > Media > Movie Browser - NO LONGER ENABLED IN MENUS! -->
 
 	<screen name="movieBrowserConfig" title="Movie Browser Setup" position="fill" flags="wfNoBorder">
 		<panel name="Setup" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_movie.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/movie_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget name="plugin" position="50,185" size="512,288" alphatest="blend" zPosition="1" />
 	</screen>
 
@@ -660,7 +660,7 @@
 
 	<screen name="mp3BrowserConfig" title="Movie Browser Setup" position="fill" flags="wfNoBorder">
 		<panel name="Setup" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_music.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/music_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget name="plugin" position="50,185" size="512,288" alphatest="blend" zPosition="1" />
 	</screen>
 
@@ -668,7 +668,7 @@
 
 	<screen name="NetworkBrowser" title="Network Neighbourhood" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/software_manager_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget source="list" render="Listbox" position="400,80" size="830,528" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -691,7 +691,7 @@
 
 	<screen name="ScanIP" title="Scan IP Address" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/software_manager_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateConfig0" />
 	</screen>
 
@@ -700,21 +700,21 @@
 	<screen name="NetworkMountsMenu" title="Network Mount Menu" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonHelp" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/software_manager_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateMenuMenuList4" />
 		<panel name="ScreenTemplateSIntroduction4" />
 	</screen>
 
 	<screen name="AutoMountManager" title="Mount Manager" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/software_manager_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateMountConfig4" />
 		<panel name="ScreenTemplateSIntroduction4" />
 	</screen>
 
 	<screen name="AutoMountEdit" title="Mount Editor" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/software_manager_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateSIntroduction4" />
 	</screen>
@@ -723,7 +723,7 @@
 
 	<screen name="AutoMountView" title="Mount Viewer" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/software_manager_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget source="legend1" render="Label" position="410,80" size="130,60" backgroundColor="TextBackground" font="Regular;20" transparent="1" valign="center" />
 		<widget source="legend2" render="Label" position="560,80" size="310,60" backgroundColor="TextBackground" font="Regular;20" transparent="1" valign="center" />
 		<widget source="legend3" render="Label" position="1150,80" size="80,60" backgroundColor="TextBackground" font="Regular;20" transparent="1" valign="center" />
@@ -749,7 +749,7 @@
 
 	<screen name="UserManager" title="Username Manager" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_parental.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/parental_control_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget source="config" render="Listbox" position="400,80" size="830,430" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -768,7 +768,7 @@
 
 	<screen name="UserDialog" title="Username Editor" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_parental.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/parental_control_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateSIntroduction4" />
 	</screen>
@@ -778,7 +778,7 @@
 	<screen name="NetworkAdapterSelection" title="Select Network Adapter" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonHelp" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/software_manager_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget source="list" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" zPosition="10">
 			<convert type="TemplatedMultiContent"><!-- iface, name, description, interfacepng, defaultpng, activepng, divpng -->				
 				{
@@ -802,7 +802,7 @@
 	<screen name="AdapterSetupConfiguration" title="Network Connection" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonHelp" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/software_manager_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateMenuListShort" />
 		<eLabel position="400,495" size="830,2" backgroundColor="Pinstripe" />
 		<eLabel position="400,540" size="830,2" backgroundColor="Pinstripe" />
@@ -821,7 +821,7 @@
 	<screen name="AdapterSetup" title="Adapter Settings" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonHelp" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/software_manager_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateConfigShort" />
 		<!--
 		<widget source="introduction" render="Label" position="970,90" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
@@ -862,7 +862,7 @@
 
 	<screen name="WlanScan" title="Select Wireless Network" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/software_manager_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget source="list" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -886,7 +886,7 @@
 
 	<screen name="WlanStatus" title="Wireless Network Status" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/radio.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget source="IFtext" render="Label" position="420,80" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
 		<widget source="IF" render="Label" position="730,80" size="500,35" backgroundColor="TextBackground" font="Regular;25" halign="right" transparent="1" valign="center" />
 		<widget source="Statustext" render="Label" position="420,115" size="300,35" backgroundColor="TextBackground" font="Regular;25" transparent="1" valign="center" />
@@ -910,7 +910,7 @@
 	<screen name="NameserverSetup" title="Network Name Servers" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonHelp" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/software_manager_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateSIntroduction4" />
 	</screen>
@@ -920,7 +920,7 @@
 	<screen name="NetworkMacSetup" title="Network MAC Address" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonHelp" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/software_manager_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateSIntroduction4" />
 	</screen>
@@ -929,7 +929,7 @@
 
 	<screen name="NetworkAdapterTest" title="Network Test: %s" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/software_manager_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget name="Adaptertext" position="400,80" size="560,35" backgroundColor="TextBackground" font="TextFont;25" foregroundColor="TextLabel" transparent="1" valign="center" />
 		<widget name="Adapter" position="400,115" size="560,35" backgroundColor="TextBackground" font="TextFont;25" foregroundColors="#008c8c93,#00f23d21,#001cff1c" transparent="1" valign="center" />
 		<widget name="AdapterInfo_OK" position="980,98" size="30,27" pixmap="icons/lock_on.png" alphatest="blend" transparent="1" />
@@ -977,7 +977,7 @@
 
 	<screen name="NetworkServiceSetup" title="Network Service Status" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_system.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<eLabel position="400,80" size="830,420" backgroundColor="MenuBackground" zPosition="-1" />
 		<widget name="lab1" position="420,80" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
 		<widget name="labactive" position="790,80" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="MenuText" halign="right" transparent="0" valign="center" />
@@ -1006,7 +1006,7 @@
 	<screen name="NetworkMiniDLNA" title="DLNA Server Status" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/software_manager_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<eLabel position="400,80" size="830,420" backgroundColor="MenuBackground" zPosition="-1" />
 		<widget name="autostart" position="420,80" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
 		<widget name="labdisabled" position="790,80" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="Red" halign="right" transparent="0" valign="center" />
@@ -1056,7 +1056,7 @@
 	<screen name="NetworkInadyn" title="DynDNS Server Status" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/software_manager_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<eLabel position="400,80" size="830,420" backgroundColor="MenuBackground" zPosition="-1" />
 		<widget name="autostart" position="420,80" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
 		<widget name="labdisabled" position="790,80" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="Red" halign="right" transparent="0" valign="center" />
@@ -1081,7 +1081,7 @@
 
 	<screen name="NetworkInadynSetup" title="DynDNS Server Setup" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/software_manager_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateFrame830x120" />
 	</screen>
@@ -1118,7 +1118,7 @@
 
 	<screen name="NetworkSambaSetup" title="Samba Server Setup" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateFrame830x120" />
 	</screen>
@@ -1135,7 +1135,7 @@
 	<screen name="NetworkuShare" title="uShare Server Status" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/software_manager_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<eLabel position="400,80" size="830,455" backgroundColor="MenuBackground" zPosition="-1" />
 		<widget name="autostart" position="420,80" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
 		<widget name="labdisabled" position="790,80" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="Red" halign="right" transparent="0" valign="center" />
@@ -1170,14 +1170,14 @@
 
 	<screen name="NetworkuShareSetup" title="uServer Server Setup" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/software_manager_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateFrame830x120" />
 	</screen>
 
 	<screen name="uShareSelection" title="uServer Folder Selection" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/software_manager_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateCheckList4" />
 		<panel name="ScreenTemplateFrame830x120" />
 	</screen>
@@ -1199,7 +1199,7 @@
 
 	<screen name="HarddiskSelection" title="Select HDD" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_sources.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/storage.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateHDDList4" />
 		<panel name="ScreenTemplateFrame830x120" />
 	</screen>
@@ -1208,7 +1208,7 @@
 
 	<screen name="HarddiskSetup" title="Harddisk Setup" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_sources.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/storage.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget name="model" position="420,80" size="810,35" font="Regular;25" transparent="1" valign="center" />
 		<widget name="capacity" position="420,105" size="810,35" font="Regular;25" transparent="1" valign="center" />
 		<widget name="bus" position="420,140" size="810,35" font="Regular;25" transparent="1" valign="center" />
@@ -1230,7 +1230,7 @@
 	<screen name="PluginBrowser" title="Plugin Browser" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
-		<ePixmap pixmap="menus/mainmenu_plugins.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/plugins.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget name="list" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
@@ -1244,7 +1244,7 @@
 
 	<screen name="PluginDownloadBrowser" title="Downloadable Plugins" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_plugin.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/plugin_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateOverlayText0" />
 		<panel name="ScreenTemplatePlugList0" />
 	</screen>
@@ -1255,7 +1255,7 @@
 
 	<screen name="IpkgInstaller" title="Package (IPkg) Installer" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_plugin.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/plugin_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget name="list" position="400,80" size="830,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
 		<widget source="introduction" render="Label" position="410,570" size="810,75" font="Regular;20" transparent="1" valign="center" />
 	</screen>
@@ -1264,7 +1264,7 @@
 
 	<screen name="UpdatePlugin" title="Software Update" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/software_manager_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget name="activityslider" position="400,250" size="830,10" backgroundColor="ProgressBackground" borderColor="ProgressBorder" borderWidth="2" foregroundColor="ProgressColor" transparent="1" />
 		<widget source="package" render="Label" position="400,280" size="830,75" backgroundColor="TextBackground" font="Regular;20" transparent="1" valign="center" />
 		<widget source="status" render="Label" position="400,375" size="830,75" backgroundColor="TextBackground" font="Regular;20" transparent="1" valign="center" />
@@ -1273,7 +1273,7 @@
 
 	<screen name="SoftwareUpdateChoices" title="Software Update" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_softwaremanager.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/software_manager_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateChoiceList4" />
 		<panel name="ScreenTemplateText4" />
 	</screen>
@@ -1311,7 +1311,7 @@
 	<!--
 	<screen name="BackupSelection" title="Select Files/Folders To Backup" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_browser.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/browser_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateCheckList0" />
 	</screen>
 	-->

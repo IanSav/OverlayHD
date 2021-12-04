@@ -36,7 +36,7 @@
 
 	<screen name="MediaPlayerDirectoryBrowser" title="File Browser" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_backup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/backup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateFileList0" />
 	</screen>
 
@@ -84,13 +84,13 @@
 	<screen name="SHOUTcastSetup" title="SHOUTCast Setup" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateSMSHelper" />
-		<ePixmap pixmap="menus/mainmenu_music_bouquets.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_music_bouquets.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateConfig0" />
 	</screen>
 
 	<screen name="SHOUTcastStreamripperRecordingPath" title="Select record path for streamripper" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget name="target" position="400,150" size="705,22" backgroundColor="TextBackground" font="Regular;22" transparent="1" valign="center" />
 		<widget name="filelist" position="400,200" size="705,380" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
 	</screen>
@@ -143,7 +143,7 @@
 
 	<screen name="Pic_Exif" title="Picture Information" position="fill" backgroundColor="PictureBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_photos_albums_user.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_photos_albums_user.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget source="menu" render="Listbox" position="400,80" size="830,540" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
@@ -471,7 +471,7 @@
 
 	<screen name="MyTubeSettingsScreen" title="MyTubeSettingsScreen" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateConfig0" />
 	</screen>
 
@@ -502,7 +502,7 @@
 	<screen name="MyTubePlayerMainScreen" title="MyTubePlayerMainScreen..." position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
-		<ePixmap pixmap="menus/mainmenu_source_youtube.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/youtube.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateConfig0" />
 		<widget source="feedlist" render="Listbox" position="590,160" size="635,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" zPosition="2">
 			<convert type="TemplatedMultiContent">
@@ -571,7 +571,7 @@
 
 	<screen name="WebcamViewer" title="Webcam Viewer" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/radio.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -588,7 +588,7 @@
 
 	<screen name="TravelWebcamviewer" title="Travel Webcam Viewer" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/radio.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget source="list" render="Listbox" position="400,80" size="830,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -692,7 +692,7 @@
 
 	<screen name="YouTubeDownloadList" title="YouTube Active Video Downloads" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_scan.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tasks_scan.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget source="list" render="Listbox" position="400,80" size="830,575" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{

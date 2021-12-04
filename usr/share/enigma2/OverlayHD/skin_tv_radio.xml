@@ -29,7 +29,7 @@
 
 	<screen name="HistoryZapSelector" title="History Zap..." position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tv_zaphistory.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/tv_zap_history.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -52,7 +52,7 @@
 
 	<screen name="ZapHistoryBrowser" title="Setup" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tv_zaphistory.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/tv_zap_history.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget name="list" position="590,170" size="610,415" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
@@ -174,7 +174,7 @@
 	<screen name="ChannelContextMenu" title="Channel Selection Context Menu" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
-		<ePixmap pixmap="menus/mainmenu_tv_live.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/tv_live.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateMenu0" />
 	</screen>
 
@@ -185,7 +185,7 @@
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonInfo" />
 		<panel name="ScreenTemplateButtonHelp" />
-		<ePixmap pixmap="menus/mainmenu_tv_live.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/tv_live.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget name="list" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorMarked="FAVMarkedBackground" backgroundColorMarkedSelected="FAVMarked" backgroundColorSelected="MenuSelected"
 			colorEventProgressbar="InfoProgressColor" colorEventProgressbarBorder="InfoProgressBorder" colorEventProgressbarBorderSelected="InfoProgressBorder" colorEventProgressbarSelected="InfoProgressColor"
 			colorFallbackItem="Magenta" colorServiceDescription="FAVService" colorServiceDescriptionFallback="FAVServiceFallback" colorServiceDescriptionSelected="FAVServiceSelected"

@@ -491,34 +491,36 @@
 	</parameters>
 
 	<menus>
-		<menu key="default" image="menus/mainmenu_tasks_setup.png" />
-		<menu key="about_screen" image="menus/mainmenu_tasks_power_standby.png" />
-		<menu key="android_mode" image="menus/mainmenu_tasks_setup.png" />
-		<menu key="boxbranding_screen" image="menus/mainmenu_tasks_power_restartshell.png" />
-		<menu key="deep_standby" image="menus/mainmenu_tasks_power_shutdown.png" />
-		<menu key="device_info_screen" image="menus/mainmenu_tasks_backup.png" />
-		<menu key="device_screen" image="menus/mainmenu_tasks_power_restartshell.png" />
-		<menu key="dualboot" image="menus/mainmenu_shuffle.png" />
-		<menu key="info_screen" image="menus/mainmenu_tasks_setup.png" />
-		<menu key="maintenance_mode" image="menus/mainmenu_tasks_setup.png" />
-		<menu key="memory_info_screen" image="menus/mainmenu_tasks_browser.png" />
-		<menu key="memory_screen" image="menus/mainmenu_tasks_power_shutdown.png" />
-		<menu key="multiboot" image="menus/mainmenu_shuffle.png" />
-		<menu key="multiboot_screen" image="menus/mainmenu_shuffle.png" />
-		<menu key="network_info_screen" image="menus/mainmenu_source_radio.png" />
-		<menu key="network_screen" image="menus/mainmenu_tasks_setup.png" />
-		<menu key="receiver_info_screen" image="menus/mainmenu_tasks_info.png" />
-		<menu key="restart" image="menus/mainmenu_tasks_power_reboot.png" />
-		<menu key="restart_enigma" image="menus/mainmenu_tasks_power_restartshell.png" />
-		<menu key="service_info_screen" image="menus/mainmenu_tv_live.png" />
-		<menu key="sleep" image="menus/mainmenu_tasks_power_sleeptimer.png" />
-		<menu key="standby" image="menus/mainmenu_tasks_power_standby.png" />
-		<menu key="standby_restart_list" image="menus/mainmenu_tasks_setup.png" />
-		<menu key="streaming_clients_info_screen" image="menus/mainmenu_tasks_setup.png" />
+		<menu key="default" image="menus/menu.png" />
+		<menu key="about_screen" image="menus/standby.png" />
+		<menu key="android_mode" image="menus/menu.png" />
+		<menu key="boxbranding_screen" image="menus/restart.png" />
+		<menu key="deep_standby" image="menus/shutdown.png" />
+		<menu key="device_info_screen" image="menus/storage.png" />
+		<menu key="device_screen" image="menus/restart.png" />
+		<menu key="dualboot" image="menus/shuffle.png" />
+		<menu key="info_screen" image="menus/information.png" />
+		<menu key="maintenance_mode" image="menus/menu.png" />
+		<menu key="memory_info_screen" image="menus/browser.png" />
+		<menu key="memory_screen" image="menus/shutdown.png" />
+		<menu key="multiboot" image="menus/shuffle.png" />
+		<menu key="multiboot_screen" image="menus/shuffle.png" />
+		<menu key="network_info_screen" image="menus/radio.png" />
+		<menu key="network_screen" image="menus/menu.png" />
+		<menu key="plugin_selection" image="menus/plugins.png" />
+		<menu key="receiver_info_screen" image="menus/information.png" />
+		<menu key="restart" image="menus/reboot.png" />
+		<menu key="restart_enigma" image="menus/restart.png" />
+		<menu key="service_info_screen" image="menus/tv_live.png" />
+		<menu key="shutdown" image="menus/standby.png" /><!-- standby_restart_list -->
+		<menu key="sleep" image="menus/sleeptimer.png" />
+		<menu key="standby" image="menus/standby.png" />
+		<menu key="standby_restart_list" image="menus/standby.png" /><!-- shutdown -->
+		<menu key="streaming_clients_info_screen" image="menus/menu.png" />
 	</menus>
 
 	<setups>
-		<setup key="default" image="menus/mainmenu_tasks_setup_system.png" />
+		<setup key="default" image="menus/setup.png" />
 		<!-- Setup based screens that may eventually get subclassed to Setup.
 		<setup key="FileCommander" image="menus/mainmenu_tasks_setup_tv.png" />
 		<setup key="HdmiCECSetupScreen" image="menus/mainmenu_tasks_setup_tv.png" />
@@ -537,38 +539,38 @@
 		<setup key="UserInterfacePositioner" image="menus/mainmenu_tasks_setup_tv.png" />
 		<setup key="ZapHistoryConfigurator" image="menus/mainmenu_tv_zaphistory.png" />
 		-->
-		<setup key="autolanguagesetup" image="menus/mainmenu_tasks_setup_system.png" />
-		<setup key="avsetup" image="menus/mainmenu_tasks_setup_system.png" />
-		<setup key="buttonsetup" image="menus/mainmenu_tasks_setup_system.png" />
-		<setup key="channelselection" image="menus/mainmenu_tasks_setup_default.png" />
-		<setup key="display" image="menus/mainmenu_tasks_setup_system.png" />
-		<setup key="epgenhanced" image="menus/mainmenu_tasks_setup_system.png" />
-		<setup key="epggraphical" image="menus/mainmenu_tasks_setup_system.png" />
-		<setup key="epginfobar" image="menus/mainmenu_tasks_setup_system.png" />
-		<setup key="epginfobargraphical" image="menus/mainmenu_tasks_setup_system.png" />
-		<setup key="epgmulti" image="menus/mainmenu_tasks_setup_system.png" />
-		<setup key="epgsettings" image="menus/mainmenu_tv_epg.png" />
-		<setup key="epgsingle" image="menus/mainmenu_tasks_setup_system.png" />
-		<setup key="factoryreset" image="menus/mainmenu_tasks_setup_factoryreset.png" />
-		<setup key="fallback" image="menus/mainmenu_tasks_setup_system.png" />
-		<setup key="fanspeed" image="menus/mainmenu_tasks_setup_system.png" />
-		<setup key="harddisk" image="menus/mainmenu_tasks_setup_system.png" />
-		<setup key="hdmirecord" image="menus/mainmenu_tasks_setup_system.png" />
-		<setup key="keyboard" image="menus/mainmenu_tasks_setup_system.png" />
-		<setup key="logs" image="menus/mainmenu_tasks_setup_system.png" />
-		<setup key="network" image="menus/mainmenu_tasks_setup_system.png" />
-		<setup key="parentalcontrol" image="menus/mainmenu_tasks_setup_parental.png" />
-		<setup key="pluginbrowsersetup" image="menus/mainmenu_tasks_setup_system.png" />
-		<setup key="recording" image="menus/mainmenu_tv_live.png" />
-		<setup key="RFmod" image="menus/mainmenu_tasks_setup_system.png" />
-		<setup key="satconfig" image="menus/mainmenu_tasks_setup_system.png" />
-		<setup key="softcamsetup" image="menus/mainmenu_tasks_setup_system.png" />
-		<setup key="softwareupdate" image="menus/mainmenu_tasks_setup_system.png" />
-		<setup key="subtitlesetup" image="menus/mainmenu_tasks_setup_system.png" />
-		<setup key="time" image="menus/mainmenu_tv_live.png" />
-		<setup key="timeshift" image="menus/mainmenu_tv_live.png" />
-		<setup key="tunersetup" image="menus/mainmenu_tasks_setup_system.png" />
-		<setup key="userinterface" image="menus/mainmenu_tasks_setup_photo.png" />
+		<setup key="autolanguagesetup" image="menus/setup.png" />
+		<setup key="avsetup" image="menus/setup.png" />
+		<setup key="buttonsetup" image="menus/setup.png" />
+		<setup key="channelselection" image="menus/default_setup.png" />
+		<setup key="display" image="menus/setup.png" />
+		<setup key="epgenhanced" image="menus/setup.png" />
+		<setup key="epggraphical" image="menus/setup.png" />
+		<setup key="epginfobar" image="menus/setup.png" />
+		<setup key="epginfobargraphical" image="menus/setup.png" />
+		<setup key="epgmulti" image="menus/setup.png" />
+		<setup key="epgsettings" image="menus/tv_epg.png" />
+		<setup key="epgsingle" image="menus/setup.png" />
+		<setup key="factoryreset" image="menus/factory_reset_setup.png" />
+		<setup key="fallback" image="menus/setup.png" />
+		<setup key="fanspeed" image="menus/setup.png" />
+		<setup key="harddisk" image="menus/setup.png" />
+		<setup key="hdmirecord" image="menus/setup.png" />
+		<setup key="keyboard" image="menus/setup.png" />
+		<setup key="logs" image="menus/setup.png" />
+		<setup key="network" image="menus/setup.png" />
+		<setup key="parentalcontrol" image="menus/parental_control_setup.png" />
+		<setup key="pluginbrowsersetup" image="menus/setup.png" />
+		<setup key="recording" image="menus/tv_live.png" />
+		<setup key="RFmod" image="menus/setup.png" />
+		<setup key="satconfig" image="menus/setup.png" />
+		<setup key="softcamsetup" image="menus/setup.png" />
+		<setup key="softwareupdate" image="menus/setup.png" />
+		<setup key="subtitlesetup" image="menus/setup.png" />
+		<setup key="time" image="menus/tv_live.png" />
+		<setup key="timeshift" image="menus/tv_live.png" />
+		<setup key="tunersetup" image="menus/setup.png" />
+		<setup key="userinterface" image="menus/photo_setup.png" />
 	</setups>
 
 	<windowstyle id="0" type="skinned">
@@ -600,8 +602,9 @@
 			<pixmap filename="borders/tib-v.png" pos="bpBottom" />
 		</borderset>
 		<!-- <scrollbar scrollbarMode="showOnDemand" scrollbarBackgroundPicture="borders/s_back.png" scrollbarSliderBorderColor="Blue" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="Red" scrollbarSliderPicture="borders/s_thumb.png" scrollbarWidth="10" /> -->
-		<scrollbar scrollbarSliderBorderColor="Blue" scrollbarSliderBorderWidth="2" scrollbarSliderForegroundColor="Red" scrollbarMode="showOnDemand" scrollbarWidth="10" />
+		<!-- <scrollbar scrollbarSliderBorderColor="Blue" scrollbarSliderBorderWidth="2" scrollbarSliderForegroundColor="Red" scrollbarMode="showOnDemand" scrollbarWidth="10" /> -->
 		<!-- scrollbarbackgroundPixmap=scrollbarBackgroundPicture, sliderPixmap=scrollbarSliderPicture -->
+		<scrollbar scrollbarOffset="2" scrollbarWidth="5" />
 	</windowstyle>
 
 	<windowstyle id="1" type="skinned">
@@ -1420,7 +1423,7 @@
 	</screen>
 
 	<screen name="MenuBeyonwiz" title="Menu" position="fill" flags="wfNoBorder">
-		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/menu.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -1439,7 +1442,7 @@
 	</screen>
 
 	<screen name="MenuEnigma2" title="Menu" position="fill" flags="wfNoBorder">
-		<widget name="menuimage" position="50,100" size="300,500" alphatest="blend" conditional="menuimage" transparent="1" />
+		<widget name="menuimage" position="50,80" size="250,250" alphatest="blend" conditional="menuimage" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -1614,7 +1617,7 @@
 
 	<screen name="MPHelp" title="XML Help" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/help.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/help.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateHelp0" />
 	</screen>
 
@@ -1719,7 +1722,7 @@
 
 	<screen name="GeneralSetup" title="Setup Menu" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel position="400,80" size="405,485">
 			<panel name="ScreenTemplateFrame405x485" />
 		</panel>
@@ -1760,7 +1763,7 @@
 
 	<screen name="Setup" title="Setup" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget name="setupimage" position="50,100" size="300,500" alphatest="blend" conditional="setupimage" transparent="1" />
+		<widget name="setupimage" position="50,80" size="250,250" alphatest="blend" conditional="setupimage" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateFootnote4" />
 		<panel name="ScreenTemplateDescription4" />
@@ -2529,7 +2532,7 @@
 	<!-- This is the full screen version of the VirtualKeyBoard... -->
 	<screen name="VirtualKeyBoard" title="Virtual Keyboard" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_shuffle.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/shuffle.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget name="prompt" position="420,80" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
 		<eLabel position="415,200" size="815,2" backgroundColor="Pinstripe" />
 		<eLabel position="415,245" size="815,2" backgroundColor="Pinstripe" />

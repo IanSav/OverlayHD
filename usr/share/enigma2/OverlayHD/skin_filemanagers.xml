@@ -81,7 +81,7 @@
 	<screen name="FileCommanderContextMenu" title="File Commander - Context Menu" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
-		<ePixmap pixmap="menus/mainmenu_tasks_browser.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/browser.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateMenu0" />
 	</screen>
 
@@ -115,7 +115,7 @@
 	<screen name="FileCommanderConfigScreen" title="File Commander Settings" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonHelp" />
-		<widget name="menuimage" position="50,100" size="300,500" alphatest="blend" conditional="menuimage" transparent="1" />
+		<widget name="menuimage" position="50,80" size="250,250" alphatest="blend" conditional="menuimage" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateFootnote4" />
 		<panel name="ScreenTemplateDescription4" />
@@ -144,7 +144,7 @@
 
 	<screen name="ArchiverMenuScreen" title="File Commander - Archiver" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_source_mount.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/storage.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateListLeftHead" />
 		<panel name="ScreenTemplateListLeftMenu4" />
 		<panel name="ScreenTemplateUnpacking4" />
@@ -319,28 +319,28 @@
 
 	<screen name="MovieSelectionLocations" title="Media Selection Locations" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_video.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/movie_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateChoiceList0" />
 		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="MovieSelectionOnEnd" title="Media Selection On End Of Media" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_video.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/movie_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateChoiceList0" />
 		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="MovieSelectionRecordings" title="Media Selection Recordings" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_video.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/movie_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateChoiceList0" />
 		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="MovieSelectionSort" title="Media Selection Sort" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_video.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/movie_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateChoiceList0" />
 		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />
 	</screen>
@@ -351,21 +351,21 @@
 
 	<screen name="MovieSelectionTags" title="Media Selection Tags" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_video.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/movie_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateChoiceList0" />
 		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="MovieContextMenu" title="Media Selection Menu" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_video.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/movie_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateSConfig0" />
 		<widget name="footnote" position="0,0" size="0,0" alphatest="blend" transparent="1" />
 	</screen>
 
 	<screen name="MovieBrowserConfiguration" title="Media Selection Setup" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_video.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/movie_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateDescription4" />
 		<widget name="footnote" position="0,0" size="0,0" alphatest="blend" transparent="1" />
@@ -375,7 +375,7 @@
 
 	<screen name="LocationBox" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_browser.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/browser.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget name="filetext" position="400,80" size="830,25" backgroundColor="DarkGrey" conditional="filetext" font="Regular;20" foregroundColor="Black" valign="center" />
 		<widget name="filelist" position="400,105" size="830,225" enableWrapAround="1" itemHeight="25" scrollbarMode="showOnDemand" transparent="1" />
 		<widget name="quickselect" position="400,105" size="830,225" font="SMSHelperFont;100" foregroundColor="FindCharacter" halign="center" transparent="1" valign="center" zPosition="+1" />

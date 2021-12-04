@@ -30,23 +30,23 @@
 				}
 			</convert>
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_power_reboot.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
+		<widget source="menu" render="Pixmap" pixmap="menus/reboot.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1">
 			<convert type="MenuEntryCompare">mainmenu_tasks_power_reboot</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_power_restartshell.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
+		<widget source="menu" render="Pixmap" pixmap="menus/restart.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1">
 			<convert type="MenuEntryCompare">mainmenu_tasks_power_restartshell</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_power_sleeptimer.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
+		<widget source="menu" render="Pixmap" pixmap="menus/sleeptimer.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1">
 			<convert type="MenuEntryCompare">mainmenu_tasks_power_sleeptimer</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_power_standby.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
+		<widget source="menu" render="Pixmap" pixmap="menus/standby.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1">
 			<convert type="MenuEntryCompare">mainmenu_tasks_power_standby</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_power_shutdown.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
+		<widget source="menu" render="Pixmap" pixmap="menus/shutdown.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1">
 			<convert type="MenuEntryCompare">mainmenu_tasks_power_shutdown</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
@@ -57,7 +57,7 @@
 	<screen name="ShutdownEnigma2">
 		<panel name="Menu" />
 		<!--
-		<widget name="menuimage" position="50,100" size="300,500" alphatest="blend" conditional="menuimage" transparent="1" />
+		<widget name="menuimage" position="50,80" size="250,250" alphatest="blend" conditional="menuimage" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -99,7 +99,7 @@
 
 	<screen name="QuitMainloopScreen" title="Power / Restart" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="OverlayHD/menus/mainmenu_shuffle.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/shuffle.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateOverlayText0" />
 	</screen>
 
@@ -148,23 +148,23 @@
 				}
 			</convert>
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_info.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
+		<widget source="menu" render="Pixmap" pixmap="menus/information.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1">
 			<convert type="MenuEntryCompare">mainmenu_tasks_info_about</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_backup.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
+		<widget source="menu" render="Pixmap" pixmap="menus/backup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1">
 			<convert type="MenuEntryCompare">mainmenu_tasks_info_devices</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_browser.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
+		<widget source="menu" render="Pixmap" pixmap="menus/browser.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1">
 			<convert type="MenuEntryCompare">mainmenu_tasks_info_memory</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
+		<widget source="menu" render="Pixmap" pixmap="menus/radio.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1">
 			<convert type="MenuEntryCompare">mainmenu_tasks_info_network</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tv_live.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
+		<widget source="menu" render="Pixmap" pixmap="menus/tv_live.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1">
 			<convert type="MenuEntryCompare">mainmenu_tasks_info_service</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
@@ -228,14 +228,14 @@
 
 	<screen name="SystemInformation" title="System Information" position="fill" flags="wfNoBorder">
 		<panel name="Information" />
-		<ePixmap pixmap="menus/mainmenu_tasks_info.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/information.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 	</screen>
 
 	<!-- About Information (MENU > Information > About) Screen -->
 
 	<screen name="About" title="About" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_info.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/information.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget source="list" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
@@ -260,7 +260,7 @@
 
 	<screen name="AboutOE" title="About" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_info.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/information.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateBranding" />
 		<widget name="AboutScrollLabel" position="400,80" size="830,550" font="Regular;20" transparent="1" />
 	</screen>
@@ -273,7 +273,7 @@
 
 	<screen name="TranslationInformation" title="Translation Information" position="fill" flags="wfNoBorder">
 		<panel name="Information" />
-		<ePixmap pixmap="menus/mainmenu_tasks_info.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/information.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 	</screen>
 
 	<screen name="TranslationInfo" title="Translation Information" position="fill" flags="wfNoBorder">
@@ -302,14 +302,14 @@
 
 	<screen name="DeviceInformation" title="Device Information" position="fill" flags="wfNoBorder">
 		<panel name="Information" />
-		<ePixmap pixmap="menus/mainmenu_tasks_backup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/backup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 	</screen>
 
 	<!-- Devices Information (MENU > Information > Devices) Screen -->
 
 	<screen name="Devices" title="Device Information" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_backup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/backup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="DevicesEnigma2" base="Devices" />
 	</screen>
 
@@ -366,14 +366,14 @@
 
 	<screen name="MemoryInformation" title="Memory Information" position="fill" flags="wfNoBorder">
 		<panel name="Information" />
-		<ePixmap pixmap="menus/mainmenu_tasks_browser.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/browser.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 	</screen>
 
 	<!-- Memory Information (MENU > Information > Memory) Screen -->
 
 	<screen name="SystemMemoryInfo" title="Memory Information" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_browser.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/browser.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="SystemMemoryInfoEnigma2" base="SystemMemoryInfo" />
 	</screen>
 
@@ -406,7 +406,7 @@
 
 	<screen name="NetworkInformation" title="Network Information" position="fill" flags="wfNoBorder">
 		<panel name="Information" />
-		<ePixmap pixmap="menus/mainmenu_tasks_browser.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/browser.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 	</screen>
 
 	<!-- Network Information (MENU > Information > Network) Screen -->
@@ -420,7 +420,7 @@
 
 	<screen name="SystemNetworkInfo" title="Network Information" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/radio.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="SystemNetworkInfoEnigma2" base="SystemNetworkInfo" />
 	</screen>
 
@@ -472,7 +472,7 @@
 
 	<screen name="ServiceInfo" title="Service Information" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tv_live.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/tv_live.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ServiceInfoEnigma2" base="ServiceInfo" />
 	</screen>
 
@@ -527,7 +527,7 @@
 
 	<screen name="ExtensionsList" title="Choose Extension" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_plugins.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/plugins.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateChoiceList0" />
 		<widget name="description" position="50,550" size="1180,25" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 		<widget name="text" position="50,575" size="1180,25" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
@@ -537,7 +537,7 @@
 
 	<screen name="TaskListScreen" title="Task List" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_scan.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/mainmenu_tasks_scan.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget source="tasklist" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
@@ -569,7 +569,7 @@
 	<screen name="TimerEditList" title="Timer List" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonInfo" />
-		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/timer.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateTimerList4" />
 		<panel name="ScreenTemplateDescription4" />
 	</screen>
@@ -578,7 +578,7 @@
 
 	<screen name="TimerLogDefault" title="Timer Log" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/timer.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateLogList4" />
 		<panel name="ScreenTemplateLogEntry4" />
 		<!--
@@ -589,7 +589,7 @@
 
 	<screen name="TimerLog" title="Timer Log" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/timer.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateLogList4" />
 		<panel name="ScreenTemplateLogEntry4" />
 	</screen>
@@ -599,7 +599,7 @@
 	<screen name="TimerEntry" title="Timer Entry" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonHelp" />
-		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/timer.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateDescription4" />
 	</screen>
@@ -668,57 +668,57 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonHelp" />
-		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/timer.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateEntriesTall0" />
 	</screen>
 
 	<screen name="AutoTimerHelp" title="Auto Timer Help" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/timer.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateHelp0" />
 	</screen>
 
 	<screen name="AutoTimerFAQ" title="Auto Timer Help" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/timer.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateHelp0" />
 	</screen>
 
 	<screen name="AutoTimerPreview" title="Auto Timer Overview" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/timer.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateTimerList0" />
 	</screen>
 
 	<screen name="AutoTimerSettings" title="Auto Timer Settings" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/timer.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateSHelp4" />
 	</screen>
 
 	<screen name="AutoTimerImporter" title="Auto Timer Importer" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/timer.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateChoiceList0" />
 	</screen>
 
 	<screen name="AutoTimerEditor" title="Auto Timer Editor" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/timer.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateSHelp4" />
 	</screen>
 
 	<screen name="AutoTimerFilterEditor" title="Auto Timer Filter Editor" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/timer.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateConfig0" />
 	</screen>
 
 	<screen name="AutoTimerServiceEditor" title="Auto Timer Service Editor" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_timer.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/timer.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateConfig0" />
 	</screen>
 
@@ -748,7 +748,7 @@
 
 	<screen name="CronTimers" title="Cron Manager" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/mainmenu_tasks_setup_system.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<eLabel position="400,80" size="830,420" backgroundColor="MenuBackground" zPosition="-1" />
 		<widget name="lab1" position="420,80" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
 		<widget name="labdisabled" position="790,80" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="Red" halign="right" transparent="0" valign="center" />

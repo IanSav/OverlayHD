@@ -144,7 +144,7 @@
 		</widget>
 		<eLabel text="Subtitle selection" position="600,135" size="320,22" backgroundColor="TextBackground" font="Named;20" foregroundColor="bluette" halign="right" transparent="1" zPosition="2" />
 		<eLabel position="455,155" size="465,2" backgroundColor="Pinstripe" zPosition="2" />
-		<ePixmap pixmap="menus/mainmenu_tv_channel.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/tv_channel.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget name="config" position="450,195" size="400,400" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
 	</screen>
 
@@ -268,7 +268,7 @@
 		<widget source="key_blue" render="Label" position="948,635" size="200,36" backgroundColor="KeyBlue" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
 		<eLabel position="50,625" size="1160,1" backgroundColor="Pinstripe" zPosition="1" />
 		-->
-		<ePixmap pixmap="menus/mainmenu_tasks_setup.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget name="config" position="400,170" size="810,421" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
 	</screen>
 
@@ -305,7 +305,7 @@
 			<convert type="ClockToText">Date</convert>
 		</widget>
 		<eLabel position="50,102" size="1160,1" backgroundColor="Pinstripe" zPosition="2" />
-		<ePixmap pixmap="menus/mainmenu_tv_zaphistory.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/tv_zap_history.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget source="info" render="Label" position="400,120" size="810,30" backgroundColor="TextBackground" font="Regular;18" halign="right" transparent="1" />
 		<widget name="content" position="400,170" size="810,480" backgroundColor="TextBackground" font="Regular;22" transparent="1" />
 	</screen>
@@ -319,7 +319,7 @@
 			<convert type="ClockToText">Date</convert>
 		</widget>
 		<eLabel position="50,102" size="1160,1" backgroundColor="Pinstripe" zPosition="2" />
-		<ePixmap pixmap="menus/mainmenu_tv_zaphistory.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
+		<ePixmap pixmap="menus/tv_zap_history.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget source="info" render="Label" position="400,120" size="810,30" backgroundColor="TextBackground" font="Regular;18" halign="right" transparent="1" />
 		<widget name="content" position="400,170" size="810,380" backgroundColor="TextBackground" font="Regular;22" transparent="1" />
 		<widget source="summary" render="Label" position="400,560" size="810,95" backgroundColor="TextBackground" font="Regular;16" transparent="1" />
