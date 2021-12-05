@@ -499,7 +499,14 @@
 		<menu key="device_info_screen" image="menus/storage.png" />
 		<menu key="device_screen" image="menus/restart.png" />
 		<menu key="dualboot" image="menus/shuffle.png" />
-		<menu key="info_screen" image="menus/information.png" />
+		<menu key="epg_menu" image="menus/tv_epg.png" /><!-- epg -->
+		<menu key="epg" image="menus/tv_epg.png" /><!-- epg_menu -->
+		<menu key="harddisk_selection" image="menus/storage.png" /><!-- harddisk -->
+		<menu key="harddisk" image="menus/storage.png" /><!-- harddisk_selection -->
+		<menu key="info_screen" image="menus/information.png" /><!-- information -->
+		<menu key="information" image="menus/information.png" /><!-- info_screen -->
+		<menu key="main_menu" image="menus/tv_live.png" /> <!-- mainmenu -->
+		<menu key="mainmenu" image="menus/tv_live.png" /> <!-- main_menu -->
 		<menu key="maintenance_mode" image="menus/menu.png" />
 		<menu key="memory_info_screen" image="menus/browser.png" />
 		<menu key="memory_screen" image="menus/shutdown.png" />
@@ -507,16 +514,30 @@
 		<menu key="multiboot_screen" image="menus/shuffle.png" />
 		<menu key="network_info_screen" image="menus/radio.png" />
 		<menu key="network_screen" image="menus/menu.png" />
+		<menu key="network_setup" image="menus/radio.png" /><!-- network -->
+		<menu key="network" image="menus/radio.png" /><!-- network_setup -->
+		<menu key="osd_setup" image="menus/tv_setup.png" />
+		<menu key="osd_menu" image="menus/tv_setup.png" />
 		<menu key="plugin_selection" image="menus/plugins.png" />
 		<menu key="receiver_info_screen" image="menus/information.png" />
 		<menu key="restart" image="menus/reboot.png" />
 		<menu key="restart_enigma" image="menus/restart.png" />
+		<menu key="scart_switch" image="menus/scart.png" />
 		<menu key="service_info_screen" image="menus/tv_live.png" />
-		<menu key="shutdown" image="menus/standby.png" /><!-- standby_restart_list -->
+		<menu key="setup_selection" image="menus/setup.png" /><!-- setup -->
+		<menu key="setup" image="menus/setup.png" /><!-- setup_selection -->
 		<menu key="sleep" image="menus/sleeptimer.png" />
 		<menu key="standby" image="menus/standby.png" />
 		<menu key="standby_restart_list" image="menus/standby.png" /><!-- shutdown -->
+		<menu key="shutdown" image="menus/standby.png" /><!-- standby_restart_list -->
 		<menu key="streaming_clients_info_screen" image="menus/menu.png" />
+		<menu key="system_selection" image="menus/factory_reset_setup.png" /><!-- system -->
+		<menu key="system" image="menus/factory_reset_setup.png" /><!-- system_selection -->
+		<menu key="timer_menu" image="menus/timer.png" /><!-- timermenu -->
+		<menu key="timermenu" image="menus/timer.png" /><!-- timer_menu -->
+		<menu key="video_selection" image="menus/tv_live.png" /><!-- video -->
+		<menu key="video" image="menus/tv_live.png" /><!-- video_selection -->
+		<menu key="vision_menu" image="menus/default_setup.png" />
 	</menus>
 
 	<setups>
