@@ -1467,11 +1467,39 @@
 		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
-				"template":
-					[
-					MultiContentEntryText(pos = (20, 0), size = (810, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0)
-					],
+				"templates":
+					{
+					"default": (35,
+						[
+						MultiContentEntryText(pos = (20, 0), size = (810, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0)
+						]),
+					"Text": (35,
+						[
+						MultiContentEntryText(pos = (20, 0), size = (760, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4),
+						# MultiContentEntryText(pos = (790, 0), size = (20, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4)
+						]),
+					"Number": (35,
+						[
+						MultiContentEntryText(pos = (20, 0), size = (40, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 3),
+						MultiContentEntryText(pos = (80, 0), size = (700, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4),
+						# MultiContentEntryText(pos = (790, 0), size = (20, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4)
+						]),
+					"Image": (35,
+						[
+						MultiContentEntryPixmapAlphaBlend(pos = (20, 2), size = (31, 31), png = 5, flags = BT_SCALE | BT_KEEP_ASPECT_RATIO | BT_HALIGN_CENTER | BT_VALIGN_CENTER),
+						MultiContentEntryText(pos = (60, 0), size = (720, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4),
+						# MultiContentEntryText(pos = (790, 0), size = (20, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4)
+						]),
+					"Both": (35,
+						[
+						MultiContentEntryPixmapAlphaBlend(pos = (20, 2), size = (31, 31), png = 5, flags = BT_SCALE | BT_KEEP_ASPECT_RATIO | BT_HALIGN_CENTER | BT_VALIGN_CENTER),
+						MultiContentEntryText(pos = (55, 0), size = (40, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 3),
+						MultiContentEntryText(pos = (115, 0), size = (665, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4),
+						# MultiContentEntryText(pos = (790, 0), size = (20, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4)
+						])
+					},
 				"fonts": [parseFont("MenuFont;25")],
+				"scrollbarMode": "showOnDemand",
 				"itemHeight": 35
 				}
 			</convert>
