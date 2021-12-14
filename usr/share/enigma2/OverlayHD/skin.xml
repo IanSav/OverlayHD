@@ -508,6 +508,7 @@
 		<menu key="main_menu" image="menus/tv_live.png" /> <!-- mainmenu -->
 		<menu key="mainmenu" image="menus/tv_live.png" /> <!-- main_menu -->
 		<menu key="maintenance_mode" image="menus/menu.png" />
+		<menu key="media_player" image="menus/movie.png" />
 		<menu key="memory_info_screen" image="menus/browser.png" />
 		<menu key="memory_screen" image="menus/shutdown.png" />
 		<menu key="multiboot" image="menus/shuffle.png" />
@@ -535,6 +536,10 @@
 		<menu key="system" image="menus/factory_reset_setup.png" /><!-- system_selection -->
 		<menu key="timer_menu" image="menus/timer.png" /><!-- timermenu -->
 		<menu key="timermenu" image="menus/timer.png" /><!-- timer_menu -->
+		<menu key="timer_edit" image="menus/timer.png" />
+		<menu key="crontimer_edit" image="menus/timer.png" />
+		<menu key="powertimer_edit" image="menus/timer.png" />
+		<menu key="autotimer_setup" image="menus/timer.png" />
 		<menu key="video_selection" image="menus/tv_live.png" /><!-- video -->
 		<menu key="video" image="menus/tv_live.png" /><!-- video_selection -->
 		<menu key="vision_menu" image="menus/default_setup.png" />
