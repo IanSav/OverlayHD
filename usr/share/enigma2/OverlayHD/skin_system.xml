@@ -633,6 +633,12 @@
 		<widget name="apply" position="10,240" size="250,35" transparent="1" />
 	</screen>
 
+	<!-- Power Timer Entry -->
+
+	<screen name="PowerTimerEntry" title="Power Timer Entry" position="fill" flags="wfNoBorder">
+		<panel name="TimerEntry" />
+	</screen>
+
 	<!-- Original Sleep Timer List Menu ??? - Unused -->
 
 	<screen name="SleepTimerEdit" title="Power / Sleep Timer" position="fill" flags="wfNoBorder">
@@ -748,7 +754,7 @@
 
 	<screen name="CronTimers" title="Cron Manager" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
+		<ePixmap pixmap="menus/timer.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<eLabel position="400,80" size="830,420" backgroundColor="MenuBackground" zPosition="-1" />
 		<widget name="lab1" position="420,80" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
 		<widget name="labdisabled" position="790,80" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="Red" halign="right" transparent="0" valign="center" />
