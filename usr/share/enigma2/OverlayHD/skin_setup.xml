@@ -331,6 +331,18 @@
 		<widget name="done_text" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
+<!-- MENU > Setup > Tuners > Cable Scan -->
+
+	<screen name="CableScanScreen" title="Cable Scan" position="fill" flags="wfNoBorder">
+		<panel name="Setup" />
+	</screen>
+
+	<screen name="CableScanStatus" title="Cable Scan" position="center,115" size="420,180">
+		<widget name="frontend" pixmap="icons/scan-c.png" position="5,5" size="64,64" transparent="1" alphatest="on" />
+		<widget name="scan_state" position="10,120" zPosition="2" size="400,30" font="Regular;18" />
+		<widget name="scan_progress" position="10,155" size="400,15" pixmap="progress_big.png" borderWidth="2" borderColor="#cccccc" />
+	</screen>
+
 <!-- MENU > Setup > Tuners > Positioner Setup - NO LONGER ENABLED IN MENUS! -->
 
 	<screen name="PositionerSetup" title="Positioner setup" position="fill" flags="wfNoBorder">
