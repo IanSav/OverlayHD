@@ -357,7 +357,7 @@
 		<font name="KhammuRabi" filename="fonts/md_khmurabi_10.ttf" scale="100" />
 		<font name="MPluss1M" filename="fonts/mplus-1m-bold.ttf" scale="100" />
 		<font name="NemesisFlatline" filename="fonts/nmsbd.ttf" scale="100" />
-		<font name="Regular" filename="fonts/valis_enigma.ttf" scale="98" />
+		<!-- <font name="Regular" filename="fonts/valis_enigma.ttf" scale="98" /> Use the Alias version that can be redefined. -->
 		<font name="RobotoBlack" filename="fonts/Roboto-Black.ttf" scale="100" />
 		<font name="RobotoBlackItalic" filename="fonts/Roboto-BlackItalic.ttf" scale="95" />
 		<font name="RobotoBold" filename="fonts/Roboto-Bold.ttf" scale="100" />
@@ -523,7 +523,7 @@
 		<menu key="receiver_info_screen" image="menus/information.png" />
 		<menu key="restart" image="menus/reboot.png" />
 		<menu key="restart_enigma" image="menus/restart.png" />
-		<menu key="scart_switch" image="menus/scart.png" />
+		<!-- <menu key="scart_switch" image="menus/scart.png" /> -->
 		<menu key="service_info_screen" image="menus/tv_live.png" />
 		<menu key="setup_selection" image="menus/setup.png" /><!-- setup -->
 		<menu key="setup" image="menus/setup.png" /><!-- setup_selection -->
