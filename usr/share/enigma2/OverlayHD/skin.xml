@@ -2625,8 +2625,59 @@
 		<widget name="text" position="80,10" size="610,65" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1" />
 		<widget name="list" position="10,e-150" size="680,140" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="list" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 		<applet type="onLayoutFinish">
-if hasattr(self, "autoResize"):
-	self.autoResize()
+def getScreenObjectSize(data, screenObject, maxWidth, maxHeight):
+	from enigma import eLabel, eSize
+	if isinstance(data, str):
+		data = [(data, None)]
+	font = screenObject.instance.getFont()
+	size = eSize(maxWidth, maxHeight)
+	width = max([eLabel.calculateTextSize(font, line[0], size, False).width() for line in data]) if data else 0
+	height = max([eLabel.calculateTextSize(font, line[0], size, False).height() for line in data]) if data else 0
+	return (width, height)
+
+from enigma import ePoint, eSize, getDesktop
+screenSize = (getDesktop(0).size().width(), getDesktop(0).size().height())
+iconPos = (10, 10)
+listPos = (10, 85)
+listSize = (680, 140)
+if self.list:
+	scrollbarWidth = 25  # self["list"].instance.getScrollbarOffset() + self["list"].instance.getScrollbarWidth()
+	height = 35
+	listLines = 4
+	listLines = len(self.list)
+	newListWidth, newListHeight = getScreenObjectSize(self.list, self["list"], screenSize[0], screenSize[1])
+	newListWidth = max(listSize[0], min(screenSize[0] - 100, newListWidth + (scrollbarWidth if listLines > listLines else 0)))
+	newListSize = (newListWidth, height * (listLines if listLines > listLines else listLines))
+	self["list"].instance.resize(eSize(newListSize[0], newListSize[1]))
+	textAdjust = max(0, newListSize[0] - listSize[0])
+else:
+	textAdjust = 0
+textPos = (80, 10)
+textSize = (610, 65)
+maxWidth = textSize[0] + textAdjust + (0 if self.typeIcon else textPos[0] - iconPos[0])
+newTextWidth, newTextHeight = getScreenObjectSize(self.text, self["text"], maxWidth, screenSize[1])
+if newTextHeight > screenSize[1] - 100:
+	maxWidth += 300
+	newTextWidth, newTextHeight = getScreenObjectSize(self.text, self["text"], maxWidth, screenSize[1])
+newTextSize = (max(textSize[0], maxWidth), max(textSize[1], newTextHeight))
+self["text"].instance.resize(eSize(newTextSize[0], newTextSize[1]))
+if self.typeIcon == 0:
+	self["text"].instance.move(ePoint(iconPos[0], textPos[1]))
+if self.list:
+	spacer = listPos[1] - textPos[1] - textSize[1]
+	self["list"].instance.move(ePoint(listPos[0], textPos[1] + newTextSize[1] + spacer))
+	width = newListSize[0]
+	height = newTextSize[1] + newListSize[1] + spacer
+elif self.typeIcon:
+	width = textPos[0] - iconPos[0] + newTextSize[0]
+	height = newTextSize[1]
+else:
+	width = newTextSize[0]
+	height = newTextSize[1]
+width += 20
+height += 20
+self.instance.resize(eSize(width, height))
+self.instance.move(ePoint((screenSize[0] - width) // 2, (screenSize[1] - height) // 2))
 		</applet>
 	</screen>
 
