@@ -2623,7 +2623,7 @@
 		<widget name="WarningPixmap" position="10,10" size="53,53" pixmap="icons/input_warning.png" alphatest="blend" conditional="WarningPixmap" scale="1" transparent="1" />
 		<widget name="icon" position="10,10" size="53,53" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" alphatest="blend" conditional="icon" scale="1" transparent="1" />
 		<widget name="text" position="80,10" size="610,65" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1" />
-		<widget name="list" position="10,e-150" size="680,140" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="list" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="list" position="10,85" size="680,140" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="list" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 		<applet type="onLayoutFinish">
 def getScreenObjectSize(data, screenObject, maxWidth, maxHeight):
 	from enigma import eLabel, eSize
@@ -2642,12 +2642,12 @@ listPos = (10, 85)
 listSize = (680, 140)
 if self.list:
 	scrollbarWidth = 25  # self["list"].instance.getScrollbarOffset() + self["list"].instance.getScrollbarWidth()
-	height = 35
-	listLines = 4
+	itemHeight = 35
+	skinLines = 4
 	listLines = len(self.list)
 	newListWidth, newListHeight = getScreenObjectSize(self.list, self["list"], screenSize[0], screenSize[1])
-	newListWidth = max(listSize[0], min(screenSize[0] - 100, newListWidth + (scrollbarWidth if listLines > listLines else 0)))
-	newListSize = (newListWidth, height * (listLines if listLines > listLines else listLines))
+	newListWidth = max(listSize[0], min(screenSize[0] - 100, newListWidth + (scrollbarWidth if listLines > skinLines else 0)))
+	newListSize = (newListWidth, itemHeight * (skinLines if listLines > skinLines else listLines))
 	self["list"].instance.resize(eSize(newListSize[0], newListSize[1]))
 	textAdjust = max(0, newListSize[0] - listSize[0])
 else:
@@ -2687,22 +2687,61 @@ self.instance.move(ePoint((screenSize[0] - width) // 2, (screenSize[1] - height)
 
 <!-- Choice Box Pop Up -->
 
-	<screen name="ChoiceBoxOld" position="center,center" size="700,130" zPosition="+90">
-		<widget name="text" position="0,0" size="700,0" backgroundColor="TextBackground" conditional="text" font="TitleFont;25" foregroundColor="BannerTitle" transparent="1" />
-		<widget name="list" position="100,100" size="700,0" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
-		<applet type="onLayoutFinish">
-if hasattr(self, "autoResize"):
-	self.autoResize()
-		</applet>
-	</screen>
-
-	<screen name="ChoiceBox" position="center,center" size="700,400" zPosition="+90">
+	<screen name="ChoiceBox" position="center,center" size="700,580" zPosition="+90">
 		<widget name="text" position="10,10" size="680,35" backgroundColor="TextBackground" conditional="text" font="DescriptionFont;25" foregroundColor="Text" transparent="1" />
-		<widget name="description" position="10,45" size="680,35" backgroundColor="TextBackground" conditional="description" font="DescriptionFont;25" foregroundColor="Text" transparent="1" />
-		<widget name="list" position="10,90" size="680,300" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="list" position="10,45" size="680,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 		<applet type="onLayoutFinish">
-if hasattr(self, "autoResize"):
-	self.autoResize()
+# [ChoiceBox] List Format:
+# [(('Text', 'Data'), (0, 50, 0, 780, 35, 0, 17, 'Text'))]
+# [(('Text', 'Data'), (Arg Index, X, Y, W, H, Font, Flags, 'Text'))]
+
+def getScreenObjectSize(data, font, maxWidth, maxHeight):
+	from enigma import eLabel, eSize
+	if isinstance(data, str):
+		data = [((data, None), (0, 0, 0))]
+	size = eSize(maxWidth, maxHeight)
+	width = max([eLabel.calculateTextSize(font, line[0][0], size, False).width() for line in data]) if data else 0
+	width += data[0][1][1]  # Text indent to allow for leading icon space.
+	height = max([eLabel.calculateTextSize(font, line[0][0], size, False).height() for line in data]) if data else 0
+	return (width, height)
+
+from enigma import ePoint, eSize, getDesktop
+from skin import parseFont
+screenSize = (getDesktop(0).size().width(), getDesktop(0).size().height())
+listPos = (10, 45)
+listSize = (680, 525)
+scrollbarWidth = 25  # self["list"].instance.getScrollbarOffset() + self["list"].instance.getScrollbarWidth()
+itemHeight = 35
+skinLines = 15
+listLines = len(self.list)
+font = parseFont("ChoiceList;25")
+newListWidth, newListHeight = getScreenObjectSize(self.list, font, screenSize[0], screenSize[1])
+newListWidth = max(listSize[0], min(screenSize[0] - 100, newListWidth + (scrollbarWidth if listLines > skinLines else 0)))
+newListSize = (newListWidth, itemHeight * (skinLines if listLines > skinLines else listLines))
+self["list"].instance.resize(eSize(newListSize[0], newListSize[1]))
+textAdjust = max(0, newListSize[0] - listSize[0])
+textPos = (10, 10)
+textSize = (680, 35)
+font = parseFont("DescriptionFont;25")
+if self.text:
+	maxWidth = textSize[0] + textAdjust
+	newTextWidth, newTextHeight = getScreenObjectSize(self.text, font, maxWidth, screenSize[1])
+	if newTextHeight > screenSize[1] - 100:
+		maxWidth += 300
+		newTextWidth, newTextHeight = getScreenObjectSize(self.text, font, maxWidth, screenSize[1])
+	newTextSize = (max(textSize[0], maxWidth), max(textSize[1], newTextHeight))
+	self["text"].instance.resize(eSize(newTextSize[0], newTextSize[1]))
+	spacer = listPos[1] - textPos[1] - textSize[1]
+	self["list"].instance.move(ePoint(listPos[0], textPos[1] + newTextSize[1] + spacer))
+	height = newTextSize[1] + newListSize[1] + spacer
+else:
+	self["list"].instance.move(ePoint(listPos[0], textPos[1]))
+	height = newListSize[1]
+width = newListSize[0]
+width += 20
+height += 20
+self.instance.resize(eSize(width, height))
+self.instance.move(ePoint((screenSize[0] - width) // 2, (screenSize[1] - height) // 2))
 		</applet>
 	</screen>
 
