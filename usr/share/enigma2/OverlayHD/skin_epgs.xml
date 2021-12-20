@@ -4,9 +4,8 @@
 	<screen name="EPGExtensionsList" title="EPG Extensions" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/tv_epg.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<panel name="ScreenTemplateChoiceList0" />
-		<widget name="text" position="50,600" size="585,25" backgroundColor="TextBackground" conditional="text" font="Regular;20" foregroundColor="Text" transparent="1" />
-		<widget name="description" position="645,600" size="585,25" backgroundColor="TextBackground" conditional="description" font="Regular;20" foregroundColor="Text" transparent="1" />
+		<widget name="text" position="400,80" size="830,35" backgroundColor="TextBackground" font="DescriptionFont;25" foregroundColor="Text" transparent="1" valign="center" />
+		<widget name="list" position="400,115" size="830,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
 <!-- Panel To Display Wide EPG Event Information (1180 x 125 pixels) -->
