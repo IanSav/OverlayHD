@@ -148,11 +148,6 @@
 		<widget name="config" position="450,195" size="400,400" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
 	</screen>
 
-	<screen name="QuickSubtitlesConfigMenu" title="Subtitle settings" position="50,50" size="480,405" backgroundColor="#7f000000" flags="wfNoBorder">
-		<widget name="config" position="5,5" size="470,365" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="0" />
-		<widget name="videofps" position="5,380" size="470,20" backgroundColor="#41000000" font="Regular;16" foregroundColor="White" halign="left" transparent="1" valign="center" zPosition="2" />
-	</screen>
-
 	<screen name="PTSTimeshiftState" position="center,40" size="420,70" backgroundColor="background">
 		<widget name="statusicon" pixmaps="icons/play.png,icons/pause.png,icons/stop.png,icons/forward.png,icons/backward.png,icons/slow.png" position="12,5" size="20,20" alphatest="blend" zPosition="5" />
 		<widget name="speed" position="35,7" size="80,15" backgroundColor="background" font="Regular;17" foregroundColor="foreground" halign="left" transparent="1" zPosition="5" />

@@ -198,52 +198,6 @@
 		<widget name="list" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" />
 	</screen>
 
-<!-- AUDIO - Audio Selection Pop Up -->
-
-	<screen name="AudioSelection" title="Select Audio Track" position="center,center" size="610,305">
-		<widget source="key_red" render="Pixmap" pixmap="buttons/key_red.png" position="5,5" size="35,25" alphatest="blend" transparent="1">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="key_green" render="Pixmap" pixmap="buttons/key_green.png" position="5,40" size="35,25" alphatest="blend" transparent="1">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="key_yellow" render="Pixmap" pixmap="buttons/key_yellow.png" position="5,75" size="35,25" alphatest="blend" transparent="1">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="key_blue" render="Pixmap" pixmap="buttons/key_blue.png" position="5,110" size="35,25" alphatest="blend" transparent="1">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget name="config" position="40,0" size="580,140" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;22" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showNever" transparent="0" />
-		<eLabel position="0,142" size="680,2" backgroundColor="Pinstripe" />
-		<widget source="streams" render="Listbox" position="5,150" size="600,150" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand">
-			<convert type="TemplatedMultiContent">
-				{
-				"templates":
-					{
-					"default": (25,
-						[
-						# MultiContentEntryText(pos = (0, 0), size = (55, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),  # Key
-						MultiContentEntryText(pos = (5, 0),  size = (35, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2),  # Number
-						MultiContentEntryText(pos = (50, 0), size = (250, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3),  # Description
-						MultiContentEntryText(pos = (310, 0), size = (250, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4),  # Language
-						MultiContentEntryText(pos = (570, 0), size = (25, 25), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 5),  # Selection
-						], True, "showNever"),
-					"notselected": (25,
-						[
-						# MultiContentEntryText(pos = (0, 0), size = (55, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),  # Key
-						MultiContentEntryText(pos = (5, 0),  size = (35, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2),  # Number
-						MultiContentEntryText(pos = (50, 0), size = (250, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3),  # Description
-						MultiContentEntryText(pos = (310, 0), size = (250, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4),  # Language
-						MultiContentEntryText(pos = (570, 0), size = (25, 25), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 5),  # Selection
-						], False, "showNever")
-					},
-				"fonts": [parseFont("MenuFont;20")],
-				"itemHeight": 25
-				}
-			</convert>
-		</widget>
-	</screen>
-
 <!-- HbbTV -->
 
 	<screen name="HbbTVWindow" title="HbbTV Plugin" position="fill" backgroundColor="ScreenTransparent" flags="wfNoBorder" />

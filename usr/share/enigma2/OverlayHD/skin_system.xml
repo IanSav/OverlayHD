@@ -509,6 +509,81 @@
 		<widget name="ScrollLabel" position="400,80" size="830,550" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" />
 	</screen>
 
+<!-- AUDIO - Audio / Subtitle Selection Pop Up -->
+
+	<screen name="AudioSelection" title="Select Audio Track" position="center,center" size="610,305">
+		<widget source="key_red" render="Pixmap" pixmap="buttons/key_red.png" position="5,5" size="35,25" alphatest="blend" transparent="1">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_green" render="Pixmap" pixmap="buttons/key_green.png" position="5,40" size="35,25" alphatest="blend" transparent="1">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_yellow" render="Pixmap" pixmap="buttons/key_yellow.png" position="5,75" size="35,25" alphatest="blend" transparent="1">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_blue" render="Pixmap" pixmap="buttons/key_blue.png" position="5,110" size="35,25" alphatest="blend" transparent="1">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget name="config" position="45,0" size="560,140" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;22" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showNever" transparent="0" />
+		<eLabel position="0,142" size="680,2" backgroundColor="Pinstripe" />
+		<widget source="streams" render="Listbox" position="5,150" size="600,150" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{
+				"templates":
+					{
+					"default": (25,  # In top menu list.
+						[
+						# MultiContentEntryText(pos = (0, 0), size = (55, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),  # Key
+						MultiContentEntryText(pos = (5, 0),  size = (35, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2),  # Number
+						MultiContentEntryText(pos = (50, 0), size = (250, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3),  # Description
+						MultiContentEntryText(pos = (310, 0), size = (250, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4),  # Language
+						MultiContentEntryText(pos = (560, 0), size = (25, 25), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 5),  # Selection
+						], True, "showNever"),
+					"notselected": (25,  # In Audio / Subtitle list.
+						[
+						# MultiContentEntryText(pos = (0, 0), size = (55, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),  # Key
+						MultiContentEntryText(pos = (5, 0),  size = (35, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2),  # Number
+						MultiContentEntryText(pos = (50, 0), size = (250, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3),  # Description
+						MultiContentEntryText(pos = (310, 0), size = (250, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4),  # Language
+						MultiContentEntryText(pos = (560, 0), size = (25, 25), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 5),  # Selection
+						], False, "showNever")
+					},
+				"fonts": [parseFont("MenuFont;20")],
+				"itemHeight": 25
+				}
+			</convert>
+		</widget>
+		<widget name="HelpWindow" position="0,0" size="0,0" conditional="HelpWindow" transparent="1" />
+	</screen>
+
+<!-- Quick Subtitles Menu Screen -->
+
+	<screen name="QuickSubtitlesConfigMenu" title="Quick Subtitle Settings" position="62,92" size="500,345">
+		<widget name="config" position="5,5" size="490,300" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showNever" />
+		<widget name="videofps" position="5,315" size="490,25" backgroundColor="MenuBackground" font="MenuFont;20" foregroundColor="MenuText" valign="center" />
+		<widget name="HelpWindow" position="0,0" size="0,0" conditional="HelpWindow" transparent="1" />
+		<applet type="onLayoutFinish">
+try:
+	from enigma import ePoint, eSize
+	configPos = (self["config"].instance.position().x(), self["config"].instance.position().y())
+	configSize = (self["config"].instance.size().width(), self["config"].instance.size().height())
+	configLines = len(self["config"].getList())
+	itemHeight = self["config"].l.getItemSize().height()
+	videoPos = (self["videofps"].instance.position().x(), self["videofps"].instance.position().y())
+	videoSize = (self["videofps"].instance.size().width(), self["videofps"].instance.size().height())
+	spacer = videoPos[1] - configPos[1] - configSize[1]
+	self["config"].instance.resize(eSize(configSize[0], configLines * itemHeight))
+	if self["videofps"].text:
+		self["videofps"].instance.move(ePoint(videoPos[0], configPos[1] + (configLines * itemHeight) + spacer))
+		offset = videoSize[1] + spacer
+	else:
+		offset = 0
+	self.instance.resize(eSize((configPos[0] * 2) + configSize[0], (configPos[1] * 2) + (configLines * itemHeight) + offset))
+except Exception:
+	pass
+		</applet>
+	</screen>
+
 <!-- System Logs Screens -->
 
 	<screen name="LogManager" title="System Log" position="fill" flags="wfNoBorder">
@@ -529,7 +604,7 @@
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/plugins.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget name="text" position="400,80" size="830,35" backgroundColor="TextBackground" font="DescriptionFont;25" foregroundColor="Text" transparent="1" valign="center" />
-		<widget name="list" position="400,115" size="830,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="list" position="400,115" size="830,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" />
 	</screen>
 
 <!-- Console / Task List Screen -->
