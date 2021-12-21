@@ -1,31 +1,13 @@
 <skin>
 <!-- NUMBER - Direct Channel Number Zap -->
 
-	<screen name="NumberZap" title="Channel Zap..." position="center,center" size="260,79"> <!--460,300-->
-		<widget name="channel" position="10,15" size="110,25" backgroundColor="InfoBackground" font="Regular;22" foregroundColor="TextLabel" transparent="1" valign="center" />
-		<widget name="number" position="170,15" size="80,25" backgroundColor="InfoBackground" font="Regular;22" foregroundColor="InfoLCN" halign="right" transparent="1" valign="center" />
-		<widget name="servicename" position="10,45" size="240,25" backgroundColor="InfoBackground" font="Regular;22" foregroundColor="InfoChannel" halign="right" transparent="1" valign="center" />
+	<screen name="NumberZap" title="Channel Zap..." position="center,center" size="350,70">
+		<widget name="channel" position="5,5" size="115,30" backgroundColor="TextBackground" font="Regular;25" foregroundColor="Text" valign="center" />
+		<widget name="number" position="260,5" size="85,30" backgroundColor="TextBackground" font="Regular;25" foregroundColor="Text" halign="right" valign="center" />
+		<widget name="servicename" position="5,45" size="340,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" noWrap="1" halign="center" valign="center" />
 	</screen>
 
 <!-- BACK | PREV | NEXT - History Zap Menu -->
-
-	<!--
-	<screen name="HistoryZapSelector" title="History Zap..." position="center,center" size="350,240">
-		<widget source="menu" render="Listbox" position="0,0" size="350,240" scrollbarMode="showOnDemand" transparent="1" zPosition="2">
-			<convert type="TemplatedMultiContent">
-				{
-				"template":
-					[
-					MultiContentEntryText(pos = (10, 0), size = (20, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
-					MultiContentEntryText(pos = (40, 0), size = (290, 25), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2)
-					],
-				"fonts": [parseFont("Regular;18"), parseFont("Regular;20")],
-				"itemHeight": 25
-				}
-			</convert>
-		</widget>
-	</screen>
-	-->
 
 	<screen name="HistoryZapSelector" title="History Zap..." position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
@@ -201,7 +183,7 @@
 
 <!-- Channel selection - Radio -->
 
-	<screen name="ChannelSelectionRadio" title="Channel Selection" position="150,100" size="980,560" zPosition="-2">
+	<screen name="ChannelSelectionRadio" title="Channel Selection" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<!--
 		<ePixmap pixmap="buttons/button_200x60_red.png" position="90,500" size="200,60" alphatest="blend" zPosition="2" />
@@ -213,19 +195,12 @@
 		<widget name="key_yellow" position="490,500" size="200,36" backgroundColor="KeyYellow" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
 		<widget name="key_blue" position="690,500" size="200,36" backgroundColor="KeyBlue" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
 		-->
-		<eLabel position="0,20" size="980,2" backgroundColor="#003366cc" zPosition="1" />
-		<eLabel text="Channel Selection" position="520,40" size="440,35" font="Regular;28" transparent="1" zPosition="2" />
-		<eLabel position="520,80" size="440,2" backgroundColor="Pinstripe" zPosition="2" />
-		<widget name="list" position="520,95" size="440,395" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
-		<widget source="global.CurrentTime" render="Label" position="20,40" size="460,26" backgroundColor="TextBackground" font="Regular;28" foregroundColor="BannerClock" transparent="1" zPosition="1">
-			<convert type="ClockToText">Format:%H:%M %A %d %B %Y</convert>
-		</widget>
+		<widget name="list" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" />
 	</screen>
 
 <!-- AUDIO - Audio Selection Pop Up -->
 
-	<screen name="AudioSelection" title="Select Audio Track" position="center,center" size="680,280">
-		<widget name="config" position="50,0" size="630,140" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showNever" transparent="0" />
+	<screen name="AudioSelection" title="Select Audio Track" position="center,center" size="610,305">
 		<widget source="key_red" render="Pixmap" pixmap="buttons/key_red.png" position="5,5" size="35,25" alphatest="blend" transparent="1">
 			<convert type="ConditionalShowHide" />
 		</widget>
@@ -238,30 +213,31 @@
 		<widget source="key_blue" render="Pixmap" pixmap="buttons/key_blue.png" position="5,110" size="35,25" alphatest="blend" transparent="1">
 			<convert type="ConditionalShowHide" />
 		</widget>
+		<widget name="config" position="40,0" size="580,140" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;22" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showNever" transparent="0" />
 		<eLabel position="0,142" size="680,2" backgroundColor="Pinstripe" />
-		<widget source="streams" render="Listbox" position="0,145" size="680,100" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="streams" render="Listbox" position="5,150" size="600,150" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{
 				"templates":
 					{
 					"default": (25,
 						[
-						MultiContentEntryText(pos = (0, 0),  size = (35, 25), font = 0, flags = RT_HALIGN_LEFT, text = 1), # key,
-						MultiContentEntryText(pos = (50, 0), size = (55, 25), font = 0, flags = RT_HALIGN_LEFT, text = 2), # number,
-						MultiContentEntryText(pos = (115, 0), size = (200, 25), font = 0, flags = RT_HALIGN_LEFT, text = 3), # description,
-						MultiContentEntryText(pos = (325, 0), size = (200, 25), font = 0, flags = RT_HALIGN_LEFT, text = 4), # language,
-						MultiContentEntryText(pos = (535, 0), size = (105, 25), font = 1, flags = RT_HALIGN_RIGHT, text = 5), # selection,
+						# MultiContentEntryText(pos = (0, 0), size = (55, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),  # Key
+						MultiContentEntryText(pos = (5, 0),  size = (35, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2),  # Number
+						MultiContentEntryText(pos = (50, 0), size = (250, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3),  # Description
+						MultiContentEntryText(pos = (310, 0), size = (250, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4),  # Language
+						MultiContentEntryText(pos = (570, 0), size = (25, 25), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 5),  # Selection
 						], True, "showNever"),
 					"notselected": (25,
 						[
-						MultiContentEntryText(pos = (0, 0),  size = (35, 25), font = 0, flags = RT_HALIGN_LEFT, text = 1), # key,
-						MultiContentEntryText(pos = (50, 0), size = (55, 25), font = 0, flags = RT_HALIGN_LEFT, text = 2), # number,
-						MultiContentEntryText(pos = (115, 0), size = (200, 25), font = 0, flags = RT_HALIGN_LEFT, text = 3), # description,
-						MultiContentEntryText(pos = (325, 0), size = (200, 25), font = 0, flags = RT_HALIGN_LEFT, text = 4), # language,
-						MultiContentEntryText(pos = (535, 0), size = (105, 25), font = 1, flags = RT_HALIGN_RIGHT, text = 5), # selection,
+						# MultiContentEntryText(pos = (0, 0), size = (55, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),  # Key
+						MultiContentEntryText(pos = (5, 0),  size = (35, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2),  # Number
+						MultiContentEntryText(pos = (50, 0), size = (250, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3),  # Description
+						MultiContentEntryText(pos = (310, 0), size = (250, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4),  # Language
+						MultiContentEntryText(pos = (570, 0), size = (25, 25), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 5),  # Selection
 						], False, "showNever")
 					},
-				"fonts": [parseFont("Regular;20"), parseFont("Regular;20")],
+				"fonts": [parseFont("MenuFont;20")],
 				"itemHeight": 25
 				}
 			</convert>

@@ -600,7 +600,7 @@
 	</setups>
 
 	<windowstyle id="0" type="skinned">
-		<title font="TitleFont;23" offset="20,8" />
+		<title font="TitleFont;25" offset="12,8" />
 		<color name="Background" color="ScreenBackground" />
 		<color name="LabelForeground" color="Text" />
 		<color name="ListboxBackground" color="MenuBackground" />
@@ -2616,14 +2616,14 @@
 
 <!-- Message Box Pop Up -->
 
-	<screen name="MessageBox" title="Message..." position="center,center" size="700,235" zPosition="+90">
-		<widget name="ErrorPixmap" position="10,10" size="53,53" pixmap="icons/input_error.png" alphatest="blend" conditional="ErrorPixmap" scale="1" transparent="1" />
-		<widget name="QuestionPixmap" position="10,10" size="53,53" pixmap="icons/input_question.png" alphatest="blend" conditional="QuestionPixmap" scale="1" transparent="1" />
-		<widget name="InfoPixmap" position="10,10" size="53,53" pixmap="icons/input_info.png" alphatest="blend" conditional="InfoPixmap" scale="1" transparent="1" />
-		<widget name="WarningPixmap" position="10,10" size="53,53" pixmap="icons/input_warning.png" alphatest="blend" conditional="WarningPixmap" scale="1" transparent="1" />
-		<widget name="icon" position="10,10" size="53,53" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" alphatest="blend" conditional="icon" scale="1" transparent="1" />
-		<widget name="text" position="80,10" size="610,65" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1" />
-		<widget name="list" position="10,85" size="680,140" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="list" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+	<screen name="MessageBox" title="Message..." position="center,center" size="700,215" zPosition="+90">
+		<widget name="ErrorPixmap" position="0,0" size="53,53" pixmap="icons/input_error.png" alphatest="blend" conditional="ErrorPixmap" scale="1" transparent="1" />
+		<widget name="QuestionPixmap" position="0,0" size="53,53" pixmap="icons/input_question.png" alphatest="blend" conditional="QuestionPixmap" scale="1" transparent="1" />
+		<widget name="InfoPixmap" position="0,0" size="53,53" pixmap="icons/input_info.png" alphatest="blend" conditional="InfoPixmap" scale="1" transparent="1" />
+		<widget name="WarningPixmap" position="0,0" size="53,53" pixmap="icons/input_warning.png" alphatest="blend" conditional="WarningPixmap" scale="1" transparent="1" />
+		<widget name="icon" position="0,0" size="53,53" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" alphatest="blend" conditional="icon" scale="1" transparent="1" />
+		<widget name="text" position="70,0" size="630,50" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" valign="center" />
+		<widget name="list" position="0,75" size="700,140" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="list" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" />
 		<applet type="onLayoutFinish">
 def getScreenObjectSize(data, screenObject, maxWidth, maxHeight):
 	from enigma import eLabel, eSize
@@ -2637,9 +2637,9 @@ def getScreenObjectSize(data, screenObject, maxWidth, maxHeight):
 
 from enigma import ePoint, eSize, getDesktop
 screenSize = (getDesktop(0).size().width(), getDesktop(0).size().height())
-iconPos = (10, 10)
-listPos = (10, 85)
-listSize = (680, 140)
+iconPos = (0, 0)
+listPos = (0, 75)
+listSize = (700, 140)
 if self.list:
 	scrollbarWidth = 25  # self["list"].instance.getScrollbarOffset() + self["list"].instance.getScrollbarWidth()
 	itemHeight = 35
@@ -2652,8 +2652,8 @@ if self.list:
 	textAdjust = max(0, newListSize[0] - listSize[0])
 else:
 	textAdjust = 0
-textPos = (80, 10)
-textSize = (610, 65)
+textPos = (70, 0)
+textSize = (630, 50)
 maxWidth = textSize[0] + textAdjust + (0 if self.typeIcon else textPos[0] - iconPos[0])
 newTextWidth, newTextHeight = getScreenObjectSize(self.text, self["text"], maxWidth, screenSize[1])
 if newTextHeight > screenSize[1] - 100:
@@ -2674,8 +2674,6 @@ elif self.typeIcon:
 else:
 	width = newTextSize[0]
 	height = newTextSize[1]
-width += 20
-height += 20
 self.instance.resize(eSize(width, height))
 self.instance.move(ePoint((screenSize[0] - width) // 2, (screenSize[1] - height) // 2))
 		</applet>
@@ -2687,9 +2685,9 @@ self.instance.move(ePoint((screenSize[0] - width) // 2, (screenSize[1] - height)
 
 <!-- Choice Box Pop Up -->
 
-	<screen name="ChoiceBox" position="center,center" size="700,580" zPosition="+90">
-		<widget name="text" position="10,10" size="680,35" backgroundColor="TextBackground" conditional="text" font="DescriptionFont;25" foregroundColor="Text" transparent="1" />
-		<widget name="list" position="10,45" size="680,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+	<screen name="ChoiceBox" position="center,center" size="700,560" zPosition="+90">
+		<widget name="text" position="0,0" size="700,35" backgroundColor="TextBackground" conditional="text" font="DescriptionFont;25" foregroundColor="Text" />
+		<widget name="list" position="0,35" size="700,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" />
 		<applet type="onLayoutFinish">
 # [ChoiceBox] List Format:
 # [(('Text', 'Data'), (0, 50, 0, 780, 35, 0, 17, 'Text'))]
@@ -2708,8 +2706,8 @@ def getScreenObjectSize(data, font, maxWidth, maxHeight):
 from enigma import ePoint, eSize, getDesktop
 from skin import parseFont
 screenSize = (getDesktop(0).size().width(), getDesktop(0).size().height())
-listPos = (10, 45)
-listSize = (680, 525)
+listPos = (0, 35)
+listSize = (700, 525)
 scrollbarWidth = 25  # self["list"].instance.getScrollbarOffset() + self["list"].instance.getScrollbarWidth()
 itemHeight = 35
 skinLines = 15
@@ -2720,8 +2718,8 @@ newListWidth = max(listSize[0], min(screenSize[0] - 100, newListWidth + (scrollb
 newListSize = (newListWidth, itemHeight * (skinLines if listLines > skinLines else listLines))
 self["list"].instance.resize(eSize(newListSize[0], newListSize[1]))
 textAdjust = max(0, newListSize[0] - listSize[0])
-textPos = (10, 10)
-textSize = (680, 35)
+textPos = (0, 0)
+textSize = (700, 35)
 font = parseFont("DescriptionFont;25")
 if self.text:
 	maxWidth = textSize[0] + textAdjust
@@ -2738,8 +2736,6 @@ else:
 	self["list"].instance.move(ePoint(listPos[0], textPos[1]))
 	height = newListSize[1]
 width = newListSize[0]
-width += 20
-height += 20
 self.instance.resize(eSize(width, height))
 self.instance.move(ePoint((screenSize[0] - width) // 2, (screenSize[1] - height) // 2))
 		</applet>
@@ -2756,8 +2752,29 @@ self.instance.move(ePoint((screenSize[0] - width) // 2, (screenSize[1] - height)
 
 <!-- Text Box Pop Up -->
 
-	<screen name="TextBox" title="Message..." position="center,center" size="700,400">
-		<widget name="text" position="10,10" size="680,380" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" transparent="1" />
+	<screen name="TextBox" title="Message..." position="center,center" size="700,400" zPosition="+90">
+		<widget name="text" position="5,5" size="690,390" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" />
+		<applet type="onLayoutFinish">
+def getScreenObjectSize(data, screenObject, maxWidth, maxHeight):
+	from enigma import eLabel, eSize
+	font = screenObject.instance.getFont()
+	size = eSize(maxWidth, maxHeight)
+	width = eLabel.calculateTextSize(font, data, size, False).width()
+	height = eLabel.calculateTextSize(font, data, size, False).height()
+	return (width, height)
+
+from enigma import ePoint, eSize, getDesktop
+screenSize = (getDesktop(0).size().width(), getDesktop(0).size().height())
+textPos = (5, 5)
+textSize = (690, 390)
+newTextWidth, newTextHeight = getScreenObjectSize(self.text, self["text"], textSize[0], textSize[1])
+if textSize[1] > newTextHeight:
+	self["text"].instance.resize(eSize(textSize[0], newTextHeight))
+	width = 700
+	height += 10
+	self.instance.resize(eSize(width, height))
+	self.instance.move(ePoint((screenSize[0] - width) // 2, (screenSize[1] - height) // 2))
+		</applet>
 	</screen>
 
 <!-- Command Prompt Output -->
