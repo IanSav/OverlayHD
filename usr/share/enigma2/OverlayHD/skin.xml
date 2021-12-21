@@ -2635,47 +2635,51 @@ def getScreenObjectSize(data, screenObject, maxWidth, maxHeight):
 	height = max([eLabel.calculateTextSize(font, line[0], size, False).height() for line in data]) if data else 0
 	return (width, height)
 
-from enigma import ePoint, eSize, getDesktop
-screenSize = (getDesktop(0).size().width(), getDesktop(0).size().height())
-iconPos = (0, 0)
-listPos = (0, 75)
-listSize = (700, 140)
-if self.list:
-	scrollbarWidth = 25  # self["list"].instance.getScrollbarOffset() + self["list"].instance.getScrollbarWidth()
-	itemHeight = 35
-	skinLines = 4
-	listLines = len(self.list)
-	newListWidth, newListHeight = getScreenObjectSize(self.list, self["list"], screenSize[0], screenSize[1])
-	newListWidth = max(listSize[0], min(screenSize[0] - 100, newListWidth + (scrollbarWidth if listLines > skinLines else 0)))
-	newListSize = (newListWidth, itemHeight * (skinLines if listLines > skinLines else listLines))
-	self["list"].instance.resize(eSize(newListSize[0], newListSize[1]))
-	textAdjust = max(0, newListSize[0] - listSize[0])
-else:
-	textAdjust = 0
-textPos = (70, 0)
-textSize = (630, 50)
-maxWidth = textSize[0] + textAdjust + (0 if self.typeIcon else textPos[0] - iconPos[0])
-newTextWidth, newTextHeight = getScreenObjectSize(self.text, self["text"], maxWidth, screenSize[1])
-if newTextHeight > screenSize[1] - 100:
-	maxWidth += 300
-	newTextWidth, newTextHeight = getScreenObjectSize(self.text, self["text"], maxWidth, screenSize[1])
-newTextSize = (max(textSize[0], maxWidth), max(textSize[1], newTextHeight))
-self["text"].instance.resize(eSize(newTextSize[0], newTextSize[1]))
-if self.typeIcon == 0:
-	self["text"].instance.move(ePoint(iconPos[0], textPos[1]))
-if self.list:
-	spacer = listPos[1] - textPos[1] - textSize[1]
-	self["list"].instance.move(ePoint(listPos[0], textPos[1] + newTextSize[1] + spacer))
-	width = newListSize[0]
-	height = newTextSize[1] + newListSize[1] + spacer
-elif self.typeIcon:
-	width = textPos[0] - iconPos[0] + newTextSize[0]
-	height = newTextSize[1]
-else:
-	width = newTextSize[0]
-	height = newTextSize[1]
-self.instance.resize(eSize(width, height))
-self.instance.move(ePoint((screenSize[0] - width) // 2, (screenSize[1] - height) // 2))
+try:
+	from enigma import ePoint, eSize, getDesktop
+	screenSize = (getDesktop(0).size().width(), getDesktop(0).size().height())
+	iconPos = (self["icon"].instance.position().x(), self["icon"].instance.position().y())
+	iconSize = (self["icon"].instance.size().width(), self["icon"].instance.size().height())
+	if self.list:
+		listPos = (self["list"].instance.position().x(), self["list"].instance.position().y())
+		listSize = (self["list"].instance.size().width(), self["list"].instance.size().height())
+		scrollbarWidth = self["list"].instance.getScrollbarOffset() + self["list"].instance.getScrollbarWidth()
+		itemHeight = self["list"].l.getItemSize().height()
+		skinLines = listSize[1] // itemHeight
+		listLines = len(self.list)
+		newListWidth, newListHeight = getScreenObjectSize(self.list, self["list"], screenSize[0], screenSize[1])
+		newListWidth = max(listSize[0], min(screenSize[0] - 100, newListWidth + (scrollbarWidth if listLines > skinLines else 0)))
+		newListSize = (newListWidth, itemHeight * (skinLines if listLines > skinLines else listLines))
+		self["list"].instance.resize(eSize(newListSize[0], newListSize[1]))
+		textAdjust = max(0, newListSize[0] - listSize[0])
+	else:
+		textAdjust = 0
+	textPos = (self["text"].instance.position().x(), self["text"].instance.position().y())
+	textSize = (self["text"].instance.size().width(), self["text"].instance.size().height())
+	maxWidth = textSize[0] + textAdjust + (0 if self.typeIcon else textPos[0] - iconPos[0])
+	newTextWidth, newTextHeight = getScreenObjectSize(self["text"].getText(), self["text"], maxWidth, screenSize[1])
+	if newTextHeight > screenSize[1] - 100:
+		maxWidth += 300
+		newTextWidth, newTextHeight = getScreenObjectSize(self["text"].getText(), self["text"], maxWidth, screenSize[1])
+	newTextSize = (max(textSize[0], maxWidth), max(textSize[1], newTextHeight))
+	self["text"].instance.resize(eSize(newTextSize[0], newTextSize[1]))
+	if self.typeIcon == 0:
+		self["text"].instance.move(ePoint(iconPos[0], textPos[1]))
+	if self.list:
+		spacer = listPos[1] - textPos[1] - textSize[1]
+		self["list"].instance.move(ePoint(listPos[0], textPos[1] + newTextSize[1] + spacer))
+		width = newListSize[0]
+		height = newTextSize[1] + newListSize[1] + spacer
+	elif self.typeIcon:
+		width = textPos[0] - iconPos[0] + newTextSize[0]
+		height = newTextSize[1]
+	else:
+		width = newTextSize[0]
+		height = newTextSize[1]
+	self.instance.resize(eSize(width, height))
+	self.instance.move(ePoint((screenSize[0] - width) // 2, (screenSize[1] - height) // 2))
+except Exception:
+	pass
 		</applet>
 	</screen>
 
@@ -2703,41 +2707,44 @@ def getScreenObjectSize(data, font, maxWidth, maxHeight):
 	height = max([eLabel.calculateTextSize(font, line[0][0], size, False).height() for line in data]) if data else 0
 	return (width, height)
 
-from enigma import ePoint, eSize, getDesktop
-from skin import parseFont
-screenSize = (getDesktop(0).size().width(), getDesktop(0).size().height())
-listPos = (0, 35)
-listSize = (700, 525)
-scrollbarWidth = 25  # self["list"].instance.getScrollbarOffset() + self["list"].instance.getScrollbarWidth()
-itemHeight = 35
-skinLines = 15
-listLines = len(self.list)
-font = parseFont("ChoiceList;25")
-newListWidth, newListHeight = getScreenObjectSize(self.list, font, screenSize[0], screenSize[1])
-newListWidth = max(listSize[0], min(screenSize[0] - 100, newListWidth + (scrollbarWidth if listLines > skinLines else 0)))
-newListSize = (newListWidth, itemHeight * (skinLines if listLines > skinLines else listLines))
-self["list"].instance.resize(eSize(newListSize[0], newListSize[1]))
-textAdjust = max(0, newListSize[0] - listSize[0])
-textPos = (0, 0)
-textSize = (700, 35)
-font = parseFont("DescriptionFont;25")
-if self.text:
-	maxWidth = textSize[0] + textAdjust
-	newTextWidth, newTextHeight = getScreenObjectSize(self.text, font, maxWidth, screenSize[1])
-	if newTextHeight > screenSize[1] - 100:
-		maxWidth += 300
+try:
+	from enigma import ePoint, eSize, getDesktop
+	from skin import parseFont
+	screenSize = (getDesktop(0).size().width(), getDesktop(0).size().height())
+	listPos = (self["list"].instance.position().x(), self["list"].instance.position().y())
+	listSize = (self["list"].instance.size().width(), self["list"].instance.size().height())
+	scrollbarWidth = self["list"].instance.getScrollbarOffset() + self["list"].instance.getScrollbarWidth()
+	itemHeight = self["list"].l.getItemSize().height()
+	skinLines = listSize[1] // itemHeight
+	listLines = len(self.list)
+	font = parseFont("ChoiceList;25")
+	newListWidth, newListHeight = getScreenObjectSize(self.list, font, screenSize[0], screenSize[1])
+	newListWidth = max(listSize[0], min(screenSize[0] - 100, newListWidth + (scrollbarWidth if listLines > skinLines else 0)))
+	newListSize = (newListWidth, itemHeight * (skinLines if listLines > skinLines else listLines))
+	self["list"].instance.resize(eSize(newListSize[0], newListSize[1]))
+	textAdjust = max(0, newListSize[0] - listSize[0])
+	textPos = (self["text"].instance.position().x(), self["text"].instance.position().y())
+	textSize = (self["text"].instance.size().width(), self["text"].instance.size().height())
+	font = parseFont("DescriptionFont;25")
+	if self.text:
+		maxWidth = textSize[0] + textAdjust
 		newTextWidth, newTextHeight = getScreenObjectSize(self.text, font, maxWidth, screenSize[1])
-	newTextSize = (max(textSize[0], maxWidth), max(textSize[1], newTextHeight))
-	self["text"].instance.resize(eSize(newTextSize[0], newTextSize[1]))
-	spacer = listPos[1] - textPos[1] - textSize[1]
-	self["list"].instance.move(ePoint(listPos[0], textPos[1] + newTextSize[1] + spacer))
-	height = newTextSize[1] + newListSize[1] + spacer
-else:
-	self["list"].instance.move(ePoint(listPos[0], textPos[1]))
-	height = newListSize[1]
-width = newListSize[0]
-self.instance.resize(eSize(width, height))
-self.instance.move(ePoint((screenSize[0] - width) // 2, (screenSize[1] - height) // 2))
+		if newTextHeight > screenSize[1] - 100:
+			maxWidth += 300
+			newTextWidth, newTextHeight = getScreenObjectSize(self.text, font, maxWidth, screenSize[1])
+		newTextSize = (max(textSize[0], maxWidth), max(textSize[1], newTextHeight))
+		self["text"].instance.resize(eSize(newTextSize[0], newTextSize[1]))
+		spacer = listPos[1] - textPos[1] - textSize[1]
+		self["list"].instance.move(ePoint(listPos[0], textPos[1] + newTextSize[1] + spacer))
+		height = newTextSize[1] + newListSize[1] + spacer
+	else:
+		self["list"].instance.move(ePoint(listPos[0], textPos[1]))
+		height = newListSize[1]
+	width = newListSize[0]
+	self.instance.resize(eSize(width, height))
+	self.instance.move(ePoint((screenSize[0] - width) // 2, (screenSize[1] - height) // 2))
+except Exception:
+	pass
 		</applet>
 	</screen>
 
@@ -2763,17 +2770,20 @@ def getScreenObjectSize(data, screenObject, maxWidth, maxHeight):
 	height = eLabel.calculateTextSize(font, data, size, False).height()
 	return (width, height)
 
-from enigma import ePoint, eSize, getDesktop
-screenSize = (getDesktop(0).size().width(), getDesktop(0).size().height())
-textPos = (5, 5)
-textSize = (690, 390)
-newTextWidth, newTextHeight = getScreenObjectSize(self.text, self["text"], textSize[0], textSize[1])
-if textSize[1] > newTextHeight:
-	self["text"].instance.resize(eSize(textSize[0], newTextHeight))
-	width = 700
-	height += 10
-	self.instance.resize(eSize(width, height))
-	self.instance.move(ePoint((screenSize[0] - width) // 2, (screenSize[1] - height) // 2))
+try:
+	from enigma import ePoint, eSize, getDesktop
+	screenSize = (getDesktop(0).size().width(), getDesktop(0).size().height())
+	textPos = (self["text"].instance.position().x(), self["text"].instance.position().y())
+	textSize = (self["text"].instance.size().width(), self["text"].instance.size().height())
+	newTextWidth, newTextHeight = getScreenObjectSize(self["text".getText(), self["text"], textSize[0], textSize[1])
+	if textSize[1] > newTextHeight:
+		self["text"].instance.resize(eSize(textSize[0], newTextHeight))
+		width = (textPos[0] * 2) + textSize[0]
+		height += textPos[1] * 2
+		self.instance.resize(eSize(width, height))
+		self.instance.move(ePoint((screenSize[0] - width) // 2, (screenSize[1] - height) // 2))
+except Exception:
+	pass
 		</applet>
 	</screen>
 
