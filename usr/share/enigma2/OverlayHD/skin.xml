@@ -718,9 +718,13 @@
 		<panel name="ScreenTemplateBrandingEnigma2" base="ScreenTemplateBranding" />
 	</screen>
 
-	<screen name="ScreenTemplateBrandingBeyonwiz" />
+	<screen name="ScreenTemplateBrandingBeyonwiz">
+		<eLabel text="Beyonwiz" position="50,620" size="200,35" font="TextFont;25" foregroundColor="TextWaiting" transparent="1" valign="center" />
+	</screen>
 
-	<screen name="ScreenTemplateBrandingEnigma2" />
+	<screen name="ScreenTemplateBrandingEnigma2">
+		<eLabel text="Enigma2" position="50,620" size="200,35" font="TextFont;25" foregroundColor="TextWaiting" transparent="1" valign="center" />
+	</screen>
 
 	<screen name="ScreenTemplateBrandingOpenATV">
 		<eLabel text="openATV" position="50,620" size="200,35" font="TextFont;25" foregroundColor="TextWaiting" transparent="1" valign="center" />
