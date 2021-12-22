@@ -630,7 +630,6 @@
 		<!-- <scrollbar scrollbarMode="showOnDemand" scrollbarBackgroundPicture="borders/s_back.png" scrollbarSliderBorderColor="Blue" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="Red" scrollbarSliderPicture="borders/s_thumb.png" scrollbarWidth="10" /> -->
 		<!-- <scrollbar scrollbarSliderBorderColor="Blue" scrollbarSliderBorderWidth="2" scrollbarSliderForegroundColor="Red" scrollbarMode="showOnDemand" scrollbarWidth="10" /> -->
 		<!-- scrollbarbackgroundPixmap=scrollbarBackgroundPicture, sliderPixmap=scrollbarSliderPicture -->
-		<scrollbar scrollbarOffset="2" scrollbarWidth="5" />
 		<scrollbar scrollbarOffset="0" scrollbarWidth="10" />
 	</windowstyle>
 
@@ -2649,8 +2648,8 @@ try:
 		skinLines = listSize[1] // itemHeight
 		listLines = len(self.list)
 		newListWidth, newListHeight = getScreenObjectSize(self.list, self["list"], screenSize[0], screenSize[1])
-		newListWidth = max(listSize[0], min(screenSize[0] - 100, newListWidth + (scrollbarWidth if listLines > skinLines else 0)))
-		newListSize = (newListWidth, itemHeight * (skinLines if listLines > skinLines else listLines))
+		newListWidth = max(listSize[0], min(screenSize[0] - 100, newListWidth + (scrollbarWidth if listLines &gt; skinLines else 0)))
+		newListSize = (newListWidth, itemHeight * (skinLines if listLines &gt; skinLines else listLines))
 		self["list"].instance.resize(eSize(newListSize[0], newListSize[1]))
 		textAdjust = max(0, newListSize[0] - listSize[0])
 	else:
@@ -2659,7 +2658,7 @@ try:
 	textSize = (self["text"].instance.size().width(), self["text"].instance.size().height())
 	maxWidth = textSize[0] + textAdjust + (0 if self.typeIcon else textPos[0] - iconPos[0])
 	newTextWidth, newTextHeight = getScreenObjectSize(self["text"].getText(), self["text"], maxWidth, screenSize[1])
-	if newTextHeight > screenSize[1] - 100:
+	if newTextHeight &gt; screenSize[1] - 100:
 		maxWidth += 300
 		newTextWidth, newTextHeight = getScreenObjectSize(self["text"].getText(), self["text"], maxWidth, screenSize[1])
 	newTextSize = (max(textSize[0], maxWidth), max(textSize[1], newTextHeight))
@@ -2720,8 +2719,8 @@ try:
 	listLines = len(self.list)
 	font = parseFont("ChoiceList;25")
 	newListWidth, newListHeight = getScreenObjectSize(self.list, font, screenSize[0], screenSize[1])
-	newListWidth = max(listSize[0], min(screenSize[0] - 100, newListWidth + (scrollbarWidth if listLines > skinLines else 0)))
-	newListSize = (newListWidth, itemHeight * (skinLines if listLines > skinLines else listLines))
+	newListWidth = max(listSize[0], min(screenSize[0] - 100, newListWidth + (scrollbarWidth if listLines &gt; skinLines else 0)))
+	newListSize = (newListWidth, itemHeight * (skinLines if listLines &gt; skinLines else listLines))
 	self["list"].instance.resize(eSize(newListSize[0], newListSize[1]))
 	textAdjust = max(0, newListSize[0] - listSize[0])
 	textPos = (self["text"].instance.position().x(), self["text"].instance.position().y())
@@ -2730,7 +2729,7 @@ try:
 	if self.text:
 		maxWidth = textSize[0] + textAdjust
 		newTextWidth, newTextHeight = getScreenObjectSize(self.text, font, maxWidth, screenSize[1])
-		if newTextHeight > screenSize[1] - 100:
+		if newTextHeight &gt; screenSize[1] - 100:
 			maxWidth += 300
 			newTextWidth, newTextHeight = getScreenObjectSize(self.text, font, maxWidth, screenSize[1])
 		newTextSize = (max(textSize[0], maxWidth), max(textSize[1], newTextHeight))
@@ -2777,7 +2776,7 @@ try:
 	textPos = (self["text"].instance.position().x(), self["text"].instance.position().y())
 	textSize = (self["text"].instance.size().width(), self["text"].instance.size().height())
 	newTextWidth, newTextHeight = getScreenObjectSize(self["text".getText(), self["text"], textSize[0], textSize[1])
-	if textSize[1] > newTextHeight:
+	if textSize[1] &gt; newTextHeight:
 		self["text"].instance.resize(eSize(textSize[0], newTextHeight))
 		width = (textPos[0] * 2) + textSize[0]
 		height += textPos[1] * 2
