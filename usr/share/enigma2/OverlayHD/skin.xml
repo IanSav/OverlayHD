@@ -631,6 +631,7 @@
 		<!-- <scrollbar scrollbarSliderBorderColor="Blue" scrollbarSliderBorderWidth="2" scrollbarSliderForegroundColor="Red" scrollbarMode="showOnDemand" scrollbarWidth="10" /> -->
 		<!-- scrollbarbackgroundPixmap=scrollbarBackgroundPicture, sliderPixmap=scrollbarSliderPicture -->
 		<scrollbar scrollbarOffset="2" scrollbarWidth="5" />
+		<scrollbar scrollbarOffset="0" scrollbarWidth="10" />
 	</windowstyle>
 
 	<windowstyle id="1" type="skinned">
