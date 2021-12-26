@@ -2399,10 +2399,10 @@
 		</widget>
 		<!-- Display the software update available icon -->
 		<ePixmap pixmap="icons/info_update_off.png" position="39,0" size="20,20" alphatest="blend" />
-		<widget source="global.OnlineStableUpdateState" render="Pixmap" pixmap="icons/info_update_stable.png" position="39,0" size="20,20" alphatest="blend" zPosition="+1">
+		<widget source="global.OnlineStableUpdateState" render="Pixmap" pixmap="icons/info_update_stable.png" position="39,0" size="20,20" alphatest="blend" conditional="global.OnlineStableUpdateState" zPosition="+1">
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
-		<widget source="global.OnlineUnstableUpdateState" render="Pixmap" pixmap="icons/info_update_unstable.png" position="39,0" size="20,20" alphatest="blend" zPosition="+2">
+		<widget source="global.OnlineUnstableUpdateState" render="Pixmap" pixmap="icons/info_update_unstable.png" position="39,0" size="20,20" alphatest="blend" conditional="global.OnlineUnstableUpdateState" zPosition="+2">
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
 		<!-- Display the sub services available icon -->
