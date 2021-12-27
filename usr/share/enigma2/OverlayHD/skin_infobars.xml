@@ -605,6 +605,7 @@
 						])
 					},
 				"fonts": [parseFont("Regular;20"), parseFont("Regular;15"), parseFont("Regular;17"), parseFont("Regular;13")],
+				"itemHeight": None,
 				"scrollbarMode": "showNever",
 				"selectionEnabled": False
 				}
