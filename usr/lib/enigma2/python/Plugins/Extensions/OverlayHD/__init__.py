@@ -1,4 +1,4 @@
-from gettext import bindtextdomain, dgettext, gettext
+from gettext import bindtextdomain, dgettext, gettext, install, textdomain
 
 from Components.Language import language
 from Tools.Directories import SCOPE_PLUGINS, resolveFilename
@@ -8,7 +8,10 @@ PluginLanguagePath = "Extensions/OverlayHD/locale"
 
 
 def localeInit():
-	bindtextdomain(PluginLanguageDomain, resolveFilename(SCOPE_PLUGINS, PluginLanguagePath))
+	languagePath = resolveFilename(SCOPE_PLUGINS, PluginLanguagePath)
+	# install(PluginLanguageDomain, languagePath, names=("ngettext", "pgettext"))
+	bindtextdomain(PluginLanguageDomain, languagePath)
+	# textdomain(PluginLanguageDomain)
 
 
 def _(txt):

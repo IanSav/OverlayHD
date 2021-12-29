@@ -2,7 +2,7 @@
 #
 # OverlayHD Skin Manager
 #
-# Version Date - 23-Nov-2021
+# Version Date - 30-Dec-2021
 # Remember to change version number variable below!!!
 #
 # Repository - https://github.com/IanSav/OverlayHD
@@ -69,7 +69,7 @@ from Tools.BoundFunction import boundFunction
 from Tools.Directories import SCOPE_CONFIG, SCOPE_GUISKIN, SCOPE_MEDIA, SCOPE_PLUGIN, SCOPE_SKINS, fileReadXML, resolveFilename
 
 MODULE_NAME = __name__.split(".")[-1]
-PLUGIN_VERSION_NUMBER = "1.91"
+PLUGIN_VERSION_NUMBER = "1.92"
 
 DISTRO_MENU_IDVAL = 0
 DISTRO_SCREENLIST = 1
@@ -524,7 +524,7 @@ class OverlayHDSkinManager(Setup):
 		config.plugins.skin.OverlayHD.UseGroups.addNotifier(self.changeGrouping, initial_call=False, immediate_feedback=True)
 
 	def changeGrouping(self, configElement):
-		grouping = False if config.plugins.skin.OverlayHD.UseGroups.value else True
+		grouping = not config.plugins.skin.OverlayHD.UseGroups.value
 		for group in groups:
 			getattr(config.plugins.skin.OverlayHD, group).value = grouping
 
@@ -576,7 +576,6 @@ class OverlayHDSkinManager(Setup):
 				restart = True
 				break
 		config.plugins.skin.OverlayHD.UseGroups.removeNotifier(self.changeGrouping)
-		self.changeGrouping(None)
 		config.plugins.skin.OverlayHD.save()
 		configfile.save()
 		# self.applySettings()
