@@ -2620,14 +2620,14 @@
 
 <!-- Message Box Pop Up -->
 
-	<screen name="MessageBox" title="Message..." position="center,center" size="700,215" zPosition="+90">
+	<screen name="MessageBox" title="Message..." position="center,center" size="700,495" zPosition="+90">
 		<widget name="ErrorPixmap" position="0,0" size="53,53" pixmap="icons/input_error.png" alphatest="blend" conditional="ErrorPixmap" scale="1" transparent="1" />
 		<widget name="QuestionPixmap" position="0,0" size="53,53" pixmap="icons/input_question.png" alphatest="blend" conditional="QuestionPixmap" scale="1" transparent="1" />
 		<widget name="InfoPixmap" position="0,0" size="53,53" pixmap="icons/input_info.png" alphatest="blend" conditional="InfoPixmap" scale="1" transparent="1" />
 		<widget name="WarningPixmap" position="0,0" size="53,53" pixmap="icons/input_warning.png" alphatest="blend" conditional="WarningPixmap" scale="1" transparent="1" />
 		<widget name="icon" position="0,0" size="53,53" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" alphatest="blend" conditional="icon" scale="1" transparent="1" />
 		<widget name="text" position="70,0" size="630,50" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" valign="center" />
-		<widget name="list" position="0,75" size="700,140" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="list" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" />
+		<widget name="list" position="0,75" size="700,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="list" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" />
 		<applet type="onLayoutFinish">
 def getScreenObjectSize(data, screenObject, maxWidth, maxHeight):
 	from enigma import eLabel, eSize
