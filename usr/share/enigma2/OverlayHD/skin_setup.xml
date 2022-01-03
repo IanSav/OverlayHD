@@ -1272,6 +1272,41 @@
 		<widget source="introduction" render="Label" position="410,570" size="810,75" font="Regular;20" transparent="1" valign="center" />
 	</screen>
 
+<!-- MENU > Setup > System > Software Update -->
+
+	<screen name="SoftwareUpdate" title="Software Update" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<widget name="feedmessage" position="50,400" size="350,80" backgroundColor="TextBackground" font="Regular;22" foregroundColor="TextWaiting" valign="bottom" />
+		<widget name="traffic_off" position="50,500" size="36,97" alphatest="blend" pixmap="icons/traffic_off.png" />
+		<widget name="traffic_red" position="50,500" size="36,97" alphatest="blend" pixmap="icons/traffic_red.png" />
+		<widget name="traffic_yellow" position="50,500" size="36,97" alphatest="blend" pixmap="icons/traffic_yellow.png" />
+		<widget name="traffic_green" position="50,500" size="36,97" alphatest="blend" pixmap="icons/traffic_green.png" />
+		<widget name="feedstatus_off" position="100,533" size="200,35" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" valign="center" />
+		<widget name="feedstatus_red" position="100,500" size="200,35" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" valign="center" />
+		<widget name="feedstatus_yellow" position="100,533" size="200,35" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" valign="center" />
+		<widget name="feedstatus_green" position="100,566" size="200,35" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" valign="center" />
+		<widget name="package_text" position="50,615" size="250,35" backgroundColor="TextBackground" font="TextFont;25" foregroundColor="Text" valign="center" />
+		<widget name="package_count" position="310,615" size="50,35" backgroundColor="TextBackground" font="TextFont;25" halign="right" foregroundColor="Text" valign="center" />
+		<widget name="activity" position="400,645" size="830,5" />
+		<widget source="list" render="Listbox" position="400,80" size="830,550" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos = (20, 0), size = (730, 30), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0), # Index 0 is the name.
+					# MultiContentEntryText(pos = (20, 0), size = (730, 30), font=1, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 1), # Index 1 is the version.
+					MultiContentEntryText(pos = (40, 30), size = (710, 20), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2), # Index 2 is the description.
+					# MultiContentEntryText(pos = (40, 30), size = (710, 20), font=1, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 3), # Index 3 is the version state.
+					MultiContentEntryPixmapAlphaBlend(pos = (760, 1), size = (48, 48), flags = BT_SCALE, png = 4), # Index 4 is the status pixmap.
+					# MultiContentEntryPixmapAlphaBlend(pos = (5, 50), size = (610, 2), png = 5), # Index 5 is the div pixmap.
+					],
+				"fonts": [parseFont("MenuFont;24"), parseFont("MenuFont;15")],
+				"itemHeight": 50
+				}
+			</convert>
+		</widget>
+	</screen>
+
 <!-- MENU > Setup > Software Manager > Update Now - Uses Internal Screen -->
 
 	<screen name="UpdatePlugin" title="Software Update" position="fill" flags="wfNoBorder">
