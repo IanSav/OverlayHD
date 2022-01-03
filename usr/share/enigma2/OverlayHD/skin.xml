@@ -531,6 +531,7 @@
 		<menu key="standby" image="menus/standby.png" />
 		<menu key="standby_restart_list" image="menus/standby.png" /><!-- shutdown -->
 		<menu key="shutdown" image="menus/standby.png" /><!-- standby_restart_list -->
+		<menu key="software_update" image="menus/factory_reset_setup.png" />
 		<menu key="streaming_clients_info_screen" image="menus/menu.png" />
 		<menu key="system_selection" image="menus/factory_reset_setup.png" /><!-- system -->
 		<menu key="system" image="menus/factory_reset_setup.png" /><!-- system_selection -->
