@@ -864,11 +864,12 @@
 		<widget name="a_red" position="50,500" size="36,97" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/ared.png" />
 		<widget name="a_yellow" position="50,500" size="36,97" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/ayellow.png" />
 		<widget name="a_green" position="50,500" size="36,97" alphatest="blend" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/icons/agreen.png" />
-		<widget name="feedstatusRED" position="100,500" size="200,35" font="TextFont;25" transparent="1" valign="center" />
-		<widget name="feedstatusYELLOW" position="100,533" size="200,35" font="TextFont;25" transparent="1" valign="center" />
-		<widget name="feedstatusGREEN" position="100,566" size="200,35" font="TextFont;25" transparent="1" valign="center" />
-		<widget name="packagetext" position="50,615" size="250,30" font="TextFont;25" transparent="1" valign="center" />
-		<widget name="packagenr" position="300,615" size="50,35" font="TextFont;25" halign="right" transparent="1" valign="center" />
+		<widget name="feedstatusOFF" position="100,533" size="200,35" backgroundColor="TextBackground" conditional="feedstatusOFF" font="TextFont;20" foregroundColor="Text" valign="center" />
+		<widget name="feedstatusRED" position="100,500" size="200,35" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" valign="center" />
+		<widget name="feedstatusYELLOW" position="100,533" size="200,35" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" valign="center" />
+		<widget name="feedstatusGREEN" position="100,566" size="200,35" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" valign="center" />
+		<widget name="packagetext" position="50,615" size="250,35" backgroundColor="TextBackground" font="TextFont;25" foregroundColor="Text" valign="center" />
+		<widget name="packagenr" position="300,615" size="50,35" backgroundColor="TextBackground" font="TextFont;25" halign="right" foregroundColor="Text" valign="center" />
 		<widget source="list" render="Listbox" position="400,80" size="830,550" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{
