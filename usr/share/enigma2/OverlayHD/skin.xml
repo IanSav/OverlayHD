@@ -662,7 +662,7 @@
 		<panel position="50,35" size="305,25">
 			<panel name="ClockBannerPanel" />
 		</panel>
-		<widget source="ScreenPath" render="Label" position="360,5" size="870,20" borderColor="BannerBorder" borderWidth="1" conditional="ScreenPath" font="TitleFont;15" foregroundColor="BannerTitle" halign="right" transparent="1" />
+		<widget source="ScreenPath" render="Label" position="360,5" size="870,20" borderColor="BannerBorder" borderWidth="1" conditional="ScreenPath" font="TitleFont;17" foregroundColor="BannerTitle" halign="right" transparent="1" />
 		<widget source="Title" render="Label" position="360,30" size="870,35" borderColor="BannerBorder" borderWidth="1" font="TitleFont;25" foregroundColor="BannerTitle" halign="right" noWrap="1" transparent="1" />
 		<eLabel position="50,65" size="1180,2" backgroundColor="Pinstripe" />
 		<eLabel position="50,660" size="1180,2" backgroundColor="Pinstripe" />
