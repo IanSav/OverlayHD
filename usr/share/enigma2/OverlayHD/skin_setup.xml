@@ -1288,7 +1288,6 @@
 		<widget name="feedstatus_green" position="110,566" size="200,35" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" valign="center" />
 		<widget name="package_text" position="50,615" size="250,35" backgroundColor="TextBackground" font="TextFont;25" foregroundColor="Text" valign="center" />
 		<widget name="package_count" position="310,615" size="50,35" backgroundColor="TextBackground" font="TextFont;25" halign="right" foregroundColor="Text" valign="center" />
-		<widget name="activity" position="400,640" size="830,5" />
 		<widget source="list" render="Listbox" position="400,80" size="830,550" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{
@@ -1306,6 +1305,14 @@
 				}
 			</convert>
 		</widget>
+		<widget name="activity" position="400,640" size="830,5" />
+	</screen>
+
+	<screen name="RunSoftwareUpdate" title="Software Update" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<ePixmap pixmap="menus/factory_reset_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
+		<widget name="update" position="400,80" size="830,555" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" />
+		<widget name="activity" position="400,640" size="830,5" />
 	</screen>
 
 <!-- MENU > Setup > Software Manager > Update Now - Uses Internal Screen -->
