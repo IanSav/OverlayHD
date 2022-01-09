@@ -1359,6 +1359,31 @@
 		-->
 	</screen>
 
+<!-- Volume Adjust Plugin -->
+
+	<screen name="Volume_adjust" title="Volume Adjust" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateButtonMenu" />
+		<widget name="ServiceList.desc" position="415,80" size="800,25" font="Regular;20" />
+		<widget name="ServiceList" position="400,105" size="830,400" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" />
+		<panel name="ScreenTemplateFrame830x120" />
+		<widget source="press_menu" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" valign="center" />
+	</screen>
+
+	<screen name="Change_volume" title="Change Volume Offset" position="fill" flags="wfNoBorder">
+		<panel name="Setup" />
+	</screen>
+
+	<screen name="mySmallChannelSelection" title="Select Service To Add" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<widget name="list" position="400,80" size="830,575" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" />
+	</screen>
+
+	<screen name="Volume_Config" title="Volume Adjust Settings" position="fill" flags="wfNoBorder">
+		<panel name="Setup" />
+		<widget source="infotext" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" valign="center" />
+	</screen>
+
 <!-- VU+ DUO Fan Control Plugin -->
 
 	<screen name="FanSetupConfiguration" title="Standby Mode FanSetup Settings" position="fill" flags="wfNoBorder">
