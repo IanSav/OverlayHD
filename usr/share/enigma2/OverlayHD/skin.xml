@@ -566,38 +566,52 @@
 		<setup key="UserInterfacePositioner" image="menus/mainmenu_tasks_setup_tv.png" />
 		<setup key="ZapHistoryConfigurator" image="menus/mainmenu_tv_zaphistory.png" />
 		-->
-		<setup key="autolanguagesetup" image="menus/setup.png" />
-		<setup key="avsetup" image="menus/setup.png" />
+		<setup key="AccessLevel" image="menus/parental_control_setup.png" />
+		<setup key="AudioVideo" image="menus/setup.png" />
+		<setup key="AutoLanguage" image="menus/setup.png" />
 		<setup key="buttonsetup" image="menus/setup.png" />
-		<setup key="channelselection" image="menus/default_setup.png" />
+		<setup key="ChannelSelection" image="menus/default_setup.png" />
 		<setup key="display" image="menus/setup.png" />
-		<setup key="epgenhanced" image="menus/setup.png" />
-		<setup key="epggraphical" image="menus/setup.png" />
-		<setup key="epginfobar" image="menus/setup.png" />
-		<setup key="epginfobargraphical" image="menus/setup.png" />
-		<setup key="epgmulti" image="menus/setup.png" />
+		<setup key="EPG" image="menus/tv_epg.png" />
+		<setup key="epgenhanced" image="menus/tv_epg.png" />
+		<setup key="epggraphical" image="menus/tv_epg.png" />
+		<setup key="epginfobar" image="menus/tv_epg.png" />
+		<setup key="epginfobargraphical" image="menus/tv_epg.png" />
+		<setup key="epgmulti" image="menus/tv_epg.png" />
 		<setup key="epgsettings" image="menus/tv_epg.png" />
-		<setup key="epgsingle" image="menus/setup.png" />
-		<setup key="factoryreset" image="menus/factory_reset_setup.png" />
+		<setup key="epgsingle" image="menus/tv_epg.png" />
+		<setup key="FactoryReset" image="menus/factory_reset_setup.png" />
 		<setup key="fallback" image="menus/setup.png" />
 		<setup key="fanspeed" image="menus/setup.png" />
-		<setup key="harddisk" image="menus/setup.png" />
+		<setup key="FrontDisplay" image="menus/tv_live.png" />
+		<setup key="HardDisk" image="menus/setup.png" />
+		<setup key="HdmiCec" image="menus/setup.png" />
 		<setup key="hdmirecord" image="menus/setup.png" />
-		<setup key="keyboard" image="menus/setup.png" />
-		<setup key="logs" image="menus/setup.png" />
+		<setup key="InputDevices" image="menus/setup.png" />
+		<setup key="Keyboard" image="menus/setup.png" />
+		<setup key="LEDDisplay" image="menus/setup.png" />
+		<setup key="Locale" image="menus/setup.png" />
+		<setup key="Logs" image="menus/setup.png" />
+		<setup key="MACAddress" image="menus/setup.png" />
+		<setup key="MovieSelection" image="menus/tv_live.png" />
 		<setup key="network" image="menus/setup.png" />
-		<setup key="parentalcontrol" image="menus/parental_control_setup.png" />
-		<setup key="pluginbrowsersetup" image="menus/setup.png" />
-		<setup key="recording" image="menus/tv_live.png" />
-		<setup key="RFmod" image="menus/setup.png" />
+		<setup key="osd" image="menus/tv_live.png" />
+		<setup key="ParentalControl" image="menus/parental_control_setup.png" />
+		<setup key="Playback" image="menus/tv_live.png" />
+		<setup key="PluginBrowser" image="menus/plugins.png" />
+		<setup key="PowerTimer" image="menus/timer.png" />
+		<setup key="Recording" image="menus/tv_live.png" />
+		<setup key="RFModulator" image="menus/setup.png" />
 		<setup key="satconfig" image="menus/setup.png" />
-		<setup key="softcamsetup" image="menus/setup.png" />
-		<setup key="softwareupdate" image="menus/setup.png" />
-		<setup key="subtitlesetup" image="menus/setup.png" />
-		<setup key="time" image="menus/tv_live.png" />
-		<setup key="timeshift" image="menus/tv_live.png" />
+		<setup key="Softcam" image="menus/setup.png" />
+		<setup key="SoftwareUpdate" image="menus/setup.png" />
+		<setup key="Subtitle" image="menus/setup.png" />
+		<setup key="Time" image="menus/tv_live.png" />
+		<setup key="Timeshift" image="menus/tv_live.png" />
 		<setup key="tunersetup" image="menus/setup.png" />
-		<setup key="userinterface" image="menus/photo_setup.png" />
+		<setup key="Usage" image="menus/photo_setup.png" />
+		<setup key="UserInterface" image="menus/photo_setup.png" />
+		<setup key="Wizard" image="menus/setup.png" />
 	</setups>
 
 	<windowstyle id="0" type="skinned">
