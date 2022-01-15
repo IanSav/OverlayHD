@@ -1413,6 +1413,7 @@
 
 	<screen name="Menu" title="Menu" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateBranding" />
 		<panel name="MenuEnigma2" base="Menu" />
 	</screen>
 
