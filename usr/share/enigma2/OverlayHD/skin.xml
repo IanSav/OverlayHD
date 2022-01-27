@@ -528,6 +528,7 @@
 		<menu key="setup_selection" image="menus/setup.png" /><!-- setup -->
 		<menu key="setup" image="menus/setup.png" /><!-- setup_selection -->
 		<menu key="sleep" image="menus/sleeptimer.png" />
+		<menu key="sleep_edit" image="menus/timer.png" />
 		<menu key="standby" image="menus/standby.png" />
 		<menu key="standby_restart_list" image="menus/standby.png" /><!-- shutdown -->
 		<menu key="shutdown" image="menus/standby.png" /><!-- standby_restart_list -->
