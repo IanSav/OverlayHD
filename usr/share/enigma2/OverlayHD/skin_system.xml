@@ -368,7 +368,7 @@
 	</screen>
 
 	<screen name="DevicesOpenATV" title="Device Information" position="fill" flags="wfNoBorder">
-		<widget name="allinonedevices" position="400,80" size="830,550" backgroundColor="TextBackground" font="screen_text;20" foregroundColor="Text" scrollbarMode="showOnDemand" />
+		<widget name="allinonedevices" position="400,80" size="830,550" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" scrollbarMode="showOnDemand" />
 	</screen>
 
 	<!-- Memory Information (MENU > Information > Memory Information) Screen -->
