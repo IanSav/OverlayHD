@@ -2183,7 +2183,7 @@
 	</screen>
 
 	<screen name="ScreenTemplateTimerList4">
-		<widget name="timerlist" position="400,80" size="830,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="timerlist" position="400,80" size="830,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" bottomHeight="25" detailFont="MenuFont;16" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" iconMargin="10" indent="20" itemHeight="50" showSeparator="0" scrollbarMode="showOnDemand" statusFont="MenuFont;18" statusOffset="20" timerNameFont="MenuFont;20" topHeight="25" />
 	</screen>
 
 <!-- Text component of configuration items with a four line text window -->
