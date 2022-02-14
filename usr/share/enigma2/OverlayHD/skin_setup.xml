@@ -340,7 +340,7 @@
 	<screen name="CableScanStatus" title="Cable Scan" position="center,115" size="420,180">
 		<widget name="frontend" pixmap="icons/scan-c.png" position="5,5" size="64,64" transparent="1" alphatest="on" />
 		<widget name="scan_state" position="10,120" zPosition="2" size="400,30" font="Regular;18" />
-		<widget name="scan_progress" position="10,155" size="400,15" pixmap="progress_big.png" borderWidth="2" borderColor="#cccccc" />
+		<widget name="scan_progress" position="10,155" size="400,15" pixmap="progress_big.png" borderWidth="2" borderColor="#00cccccc" />
 	</screen>
 
 <!-- MENU > Setup > Tuners > Positioner Setup - NO LONGER ENABLED IN MENUS! -->
@@ -445,22 +445,22 @@
 			<convert type="FrontendInfo">SNRdB</convert>
 		</widget>
 		<widget source="pos" render="FixedLabel" text="Orb Pos:" position="930,460" size="100,25" font="Regular;20" transparent="1" valign="center">
-			<convert type="ConditionalShowHide"/>
+			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="pos" render="Label" position="1040,460" size="170,25" font="Regular;20" halign="right" transparent="1" valign="center">
-			<convert type="ConditionalShowHide"/>
+			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="onid" render="FixedLabel" text="ONID:" position="930,485" size="100,25" font="Regular;20" transparent="1" valign="center">
-			<convert type="ConditionalShowHide"/>
+			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="onid" render="Label" position="1040,485" size="170,25" font="Regular;20" halign="right" transparent="1" valign="center">
-			<convert type="ConditionalShowHide"/>
+			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="tsid" render="FixedLabel" text="TSID:" position="930,505" size="100,25" font="Regular;20" transparent="1" valign="center">
-			<convert type="ConditionalShowHide"/>
+			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="tsid" render="Label" position="1040,505" size="170,25" font="Regular;20" halign="right" transparent="1" valign="center">
-			<convert type="ConditionalShowHide"/>
+			<convert type="ConditionalShowHide" />
 		</widget>
 	</screen>
 
@@ -483,7 +483,7 @@
 		<panel name="ScreenTemplate" />
 
 		<widget source="CAidList_desc" render="Label" position="400,80" size="830,35" font="Regular;25" backgroundColor="#25062748" transparent="0" />
-		<widget source="CAidList" render="Label" position="400,115" size="830,45" font="Regular;20"  backgroundColor="#25062748" transparent="0" />
+		<widget source="CAidList" render="Label" position="400,115" size="830,45" font="Regular;20" backgroundColor="#25062748" transparent="0" />
 		<widget source="ServiceList_desc" render="Label" position="400,150" size="830,35" font="Regular;25" backgroundColor="#25062748" transparent="0" />
 		<widget name="ServiceList" position="400,185" size="830,250" scrollbarMode="showOnDemand" transparent="0" />
 		<widget source="ServiceList_info" render="Label" position="400,450" size="830,250" backgroundColor="#25062748" font="Regular;20" transparent="0" />
@@ -492,9 +492,9 @@
 	<screen name="easyCIconfigMenu" title="CI Assignment Settings" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 
-		<widget source="ServiceList_desc" render="Label" position="50,80" size="550,22" font="Regular;20" backgroundColor="#25062748" transparent="1"  />
+		<widget source="ServiceList_desc" render="Label" position="50,80" size="550,22" font="Regular;20" backgroundColor="#25062748" transparent="1" />
 		<widget name="ServiceList" position="50,110" size="550,300" zPosition="1" scrollbarMode="showOnDemand" />
-		<widget source="ServiceList_info" render="Label" position="50,110" size="550,300" zPosition="2" font="Regular;20" backgroundColor="#25062748" transparent="1"  />
+		<widget source="ServiceList_info" render="Label" position="50,110" size="550,300" zPosition="2" font="Regular;20" backgroundColor="#25062748" transparent="1" />
 	</screen>
 
 	<screen name="myChannelSelection" title="Select Service to add..." position="fill" flags="wfNoBorder">
@@ -1383,9 +1383,9 @@
 		<panel name="ScreenTemplateChosenShort" />
 		<panel name="ScreenTemplateDescription4" />
 		<!--
-		<widget name="list" position="0,45" size="580,300" scrollbarMode="showOnDemand"/>
-		<widget name="choosen" position="0,350" size="580,100" scrollbarMode="showOnDemand" foregroundColor="secondFG"/>
-		<widget name="description" position="0,480" size="580,60" font="Regular;18" halign="center" valign="center" transparent="0" zPosition="1"/>
+		<widget name="list" position="0,45" size="580,300" scrollbarMode="showOnDemand" />
+		<widget name="choosen" position="0,350" size="580,100" scrollbarMode="showOnDemand" foregroundColor="secondFG" />
+		<widget name="description" position="0,480" size="580,60" font="Regular;18" halign="center" valign="center" transparent="0" zPosition="1" />
 		-->
 	</screen>
 

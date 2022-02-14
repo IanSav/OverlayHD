@@ -131,7 +131,7 @@
 		<panel name="ScreenTemplateDeviceList4" />
 		<panel name="ScreenTemplateConnStatus4" />
 		<!--
-		<widget name="devicelist" position="0,50" size="600,300" foregroundColor="#ffffff" zPosition="10" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="devicelist" position="0,50" size="600,300" foregroundColor="#ffffff" zPosition="10" scrollbarMode="showOnDemand" transparent="1" />
 		<widget name="ConnStatus" position="0,330" size="600,150" zPosition="1" font="Regular;20" halign="center" valign="center" backgroundColor="#9f1313" foregroundColor="#ffffff" transparent="1" />
 		-->
 	</screen>
@@ -205,10 +205,10 @@
 			<convert type="ServicePosition">Position,Detailed</convert>
 		</widget>
 		<widget name="Timeline" position="462,590" size="768,25" backgroundColor="Grey" foregroundColor="Black" pointer="sliders/position_arrow.png:4,15" />
-		<eLabel position="462,625" size="210,25" backgroundColor="#004000" />
+		<eLabel position="462,625" size="210,25" backgroundColor="#00004000" />
 		<eLabel text="IN:" position="472,625" size="80,25" font="Regular;20" transparent="1" valign="center" zPosition="+1" />
 		<widget name="InLen" position="562,625" size="100,25" font="Regular;20" halign="right" transparent="1" valign="center" zPosition="+1" />
-		<eLabel position="1020,625" size="210,25" backgroundColor="#400000" />
+		<eLabel position="1020,625" size="210,25" backgroundColor="#00400000" />
 		<eLabel text="OUT:" position="1030,625" size="80,25" font="Regular;20" transparent="1" valign="center" zPosition="+1" />
 		<widget name="OutLen" position="1120,625" size="100,25" font="Regular;20" halign="right" transparent="1" valign="center" zPosition="+1" />
 	</screen>
@@ -469,31 +469,31 @@
 <!-- MSN Weather Plugin -->
 
 	<screen name="MSNWeatherPlugin" position="center,center" size="664,340" title="Weather Plugin">
-		<widget render="Label" source="caption" position="10,20" zPosition="1" size="600,28" font="Regular;24" transparent="1"/>
+		<widget render="Label" source="caption" position="10,20" zPosition="1" size="600,28" font="Regular;24" transparent="1" />
 		<widget render="Label" source="observationtime" position="374,45" zPosition="1" size="280,20" font="Regular;14" transparent="1" halign="right" />
 		<widget render="Label" source="observationpoint" position="204,65" zPosition="1" size="450,40" font="Regular;14" transparent="1" halign="right" />
-		<widget name="currenticon" position="10,95" zPosition="1" size="55,45" alphatest="blend"/>
-		<widget render="Label" source="currentTemp" position="90,95" zPosition="1" size="100,23" font="Regular;22" transparent="1"/>
-		<widget render="Label" source="feelsliketemp" position="90,120" zPosition="1" size="155,40" font="Regular;14" transparent="1"/>
-		<widget render="Label" source="condition" position="270,95" zPosition="1" size="300,20" font="Regular;18" transparent="1"/>
-		<widget render="Label" source="wind_condition" position="270,115" zPosition="1" size="300,20" font="Regular;18" transparent="1"/>
-		<widget render="Label" source="humidity" position="270,135" zPosition="1" size="300,20" font="Regular;18" valign="bottom" transparent="1"/>
-		<widget render="Label" source="weekday1" position="35,170" zPosition="1" size="105,40" halign="center" valign="center" font="Regular;18" transparent="1"/>
-		<widget name="weekday1_icon" position="60,215" zPosition="1" size="55,45" alphatest="blend"/>
-		<widget render="Label" source="weekday1_temp" position="35,270" zPosition="1" size="105,60" halign="center" valign="bottom" font="Regular;16" transparent="1"/>
-		<widget render="Label" source="weekday2" position="155,170" zPosition="1" size="105,40" halign="center" valign="center" font="Regular;18" transparent="1"/>
-		<widget name="weekday2_icon" position="180,215" zPosition="1" size="55,45" alphatest="blend"/>
-		<widget render="Label" source="weekday2_temp" position="155,270" zPosition="1" size="105,60" halign="center" valign="bottom" font="Regular;16" transparent="1"/>
-		<widget render="Label" source="weekday3" position="275,170" zPosition="1" size="105,40" halign="center" valign="center" font="Regular;18" transparent="1"/>
-		<widget name="weekday3_icon" position="300,215" zPosition="1" size="55,45" alphatest="blend"/>
-		<widget render="Label" source="weekday3_temp" position="275,270" zPosition="1" size="105,60" halign="center" valign="bottom" font="Regular;16" transparent="1"/>
-		<widget render="Label" source="weekday4" position="395,170" zPosition="1" size="105,40" halign="center" valign="center" font="Regular;18" transparent="1"/>
-		<widget name="weekday4_icon" position="420,215" zPosition="1" size="55,45" alphatest="blend"/>
-		<widget render="Label" source="weekday4_temp" position="395,270" zPosition="1" size="105,60" halign="center" valign="bottom" font="Regular;16" transparent="1"/>
-		<widget render="Label" source="weekday5" position="515,170" zPosition="1" size="105,40" halign="center" valign="center" font="Regular;18" transparent="1"/>
-		<widget name="weekday5_icon" position="540,215" zPosition="1" size="55,45" alphatest="blend"/>
-		<widget render="Label" source="weekday5_temp" position="515,270" zPosition="1" size="105,60" halign="center" valign="bottom" font="Regular;16" transparent="1"/>
-		<widget render="Label" source="statustext" position="0,0" zPosition="1" size="664,340" font="Regular;20" halign="center" valign="center" transparent="1"/>
+		<widget name="currenticon" position="10,95" zPosition="1" size="55,45" alphatest="blend" />
+		<widget render="Label" source="currentTemp" position="90,95" zPosition="1" size="100,23" font="Regular;22" transparent="1" />
+		<widget render="Label" source="feelsliketemp" position="90,120" zPosition="1" size="155,40" font="Regular;14" transparent="1" />
+		<widget render="Label" source="condition" position="270,95" zPosition="1" size="300,20" font="Regular;18" transparent="1" />
+		<widget render="Label" source="wind_condition" position="270,115" zPosition="1" size="300,20" font="Regular;18" transparent="1" />
+		<widget render="Label" source="humidity" position="270,135" zPosition="1" size="300,20" font="Regular;18" valign="bottom" transparent="1" />
+		<widget render="Label" source="weekday1" position="35,170" zPosition="1" size="105,40" halign="center" valign="center" font="Regular;18" transparent="1" />
+		<widget name="weekday1_icon" position="60,215" zPosition="1" size="55,45" alphatest="blend" />
+		<widget render="Label" source="weekday1_temp" position="35,270" zPosition="1" size="105,60" halign="center" valign="bottom" font="Regular;16" transparent="1" />
+		<widget render="Label" source="weekday2" position="155,170" zPosition="1" size="105,40" halign="center" valign="center" font="Regular;18" transparent="1" />
+		<widget name="weekday2_icon" position="180,215" zPosition="1" size="55,45" alphatest="blend" />
+		<widget render="Label" source="weekday2_temp" position="155,270" zPosition="1" size="105,60" halign="center" valign="bottom" font="Regular;16" transparent="1" />
+		<widget render="Label" source="weekday3" position="275,170" zPosition="1" size="105,40" halign="center" valign="center" font="Regular;18" transparent="1" />
+		<widget name="weekday3_icon" position="300,215" zPosition="1" size="55,45" alphatest="blend" />
+		<widget render="Label" source="weekday3_temp" position="275,270" zPosition="1" size="105,60" halign="center" valign="bottom" font="Regular;16" transparent="1" />
+		<widget render="Label" source="weekday4" position="395,170" zPosition="1" size="105,40" halign="center" valign="center" font="Regular;18" transparent="1" />
+		<widget name="weekday4_icon" position="420,215" zPosition="1" size="55,45" alphatest="blend" />
+		<widget render="Label" source="weekday4_temp" position="395,270" zPosition="1" size="105,60" halign="center" valign="bottom" font="Regular;16" transparent="1" />
+		<widget render="Label" source="weekday5" position="515,170" zPosition="1" size="105,40" halign="center" valign="center" font="Regular;18" transparent="1" />
+		<widget name="weekday5_icon" position="540,215" zPosition="1" size="55,45" alphatest="blend" />
+		<widget render="Label" source="weekday5_temp" position="515,270" zPosition="1" size="105,60" halign="center" valign="bottom" font="Regular;16" transparent="1" />
+		<widget render="Label" source="statustext" position="0,0" zPosition="1" size="664,340" font="Regular;20" halign="center" valign="center" transparent="1" />
 	</screen>
 
 	<screen name="MSNWeatherPluginEntryConfigScreen" title="Weather Plugin Configuration" position="fill" flags="wfNoBorder">
@@ -508,8 +508,8 @@
 
 	<screen name="MSNWeatherPluginEntriesListConfigScreen" title="Weather Plugin Configuration" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget render="Label" source="city" position="5,60" size="400,50" font="Regular;20" halign="left"/>
-		<widget render="Label" source="degreetype" position="410,60" size="130,50" font="Regular;20" halign="left"/>
+		<widget render="Label" source="city" position="5,60" size="400,50" font="Regular;20" halign="left" />
+		<widget render="Label" source="degreetype" position="410,60" size="130,50" font="Regular;20" halign="left" />
 		<panel name="ScreenTemplateEntryList0" />
 	</screen>
 
@@ -762,7 +762,7 @@
 	<screen name="DeviceMountSetup" title="Choose where to mount your device:" position="fill" flags="wfNoBorder">
 		<panel name="Setup" />
 		<panel name="ScreenTemplateBranding" />
-		<widget name="lab7" position="410,550" size="810,100" font="Regular;18" halign="center" valign="center" backgroundColor="#9f1313"/>
+		<widget name="lab7" position="410,550" size="810,100" font="Regular;18" halign="center" valign="center" backgroundColor="#009f1313" />
 	</screen>
 
 	<screen name="CommonDevicePanelConf" title="Choose where to mount your devices:" position="fill" flags="wfNoBorder">
@@ -943,9 +943,9 @@
 	<screen name="OperaBrowser" title="Opera Web Browser" position="fill" backgroundColor="ScreenTransparent" flags="wfNoBorder">
 		<widget name="topArea" position="50,30" size="1180,30" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
 		<widget name="bottomArea" position="810,30" size="410,30" backgroundColor="Black" font="Regular;20" halign="right" transparent="1" valign="center" zPosition="+1" />
-		<widget name="menuitemFile" position="60,30" size="150,30" backgroundColor="Black" font="Regular;20" foregroundColors="#9f1313,#a08500" transparent="1" valign="center" zPosition="+1" />
-		<widget name="menuitemTool" position="210,30" size="150,30" backgroundColor="Black" font="Regular;20" foregroundColors="#9f1313,#a08500" transparent="1" valign="center" zPosition="+1" />
-		<widget name="menuitemHelp" position="360,30" size="150,30" backgroundColor="Black" font="Regular;20" foregroundColors="#9f1313,#a08500" transparent="1" valign="center" zPosition="+1" />
+		<widget name="menuitemFile" position="60,30" size="150,30" backgroundColor="Black" font="Regular;20" foregroundColors="#009f1313,#00a08500" transparent="1" valign="center" zPosition="+1" />
+		<widget name="menuitemTool" position="210,30" size="150,30" backgroundColor="Black" font="Regular;20" foregroundColors="#009f1313,#00a08500" transparent="1" valign="center" zPosition="+1" />
+		<widget name="menuitemHelp" position="360,30" size="150,30" backgroundColor="Black" font="Regular;20" foregroundColors="#009f1313,#00a08500" transparent="1" valign="center" zPosition="+1" />
 		<widget name="menulist" position="100,540" size="200,150" backgroundColor="Black" scrollbarMode="showOnDemand" zPosition="+2" />
 		<widget name="submenulist" position="302,540" size="200,150" backgroundColor="Black" scrollbarMode="showOnDemand" zPosition="+2" />
 	</screen>
@@ -1053,7 +1053,7 @@
 				"template":
 					[
 					MultiContentEntryText(pos = (20, 0), size = (680, 35), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
-					MultiContentEntryText(pos = (740, 0), size = (50, 35), flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = ">")
+					MultiContentEntryText(pos = (740, 0), size = (50, 35), flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = "&gt;")
 					],
 				"fonts": [parseFont("Regular;25")],
 				"itemHeight": 35
@@ -1235,7 +1235,7 @@
 		<widget name="channel_icon" position="121,43" size="35,35" backgroundColor="ScreenBackground" />
 		<widget name="channel_name" position="250,20" size="650,40" font="Regular;36" backgroundColor="ScreenBackground" foregroundColor="White" halign="left" valign="center" />
 		<widget name="channel_uri" position="250,70" size="950,60" font="Regular;22" halign="left" valign="top" foregroundColor="White" backgroundColor="ScreenBackground" />
-		<widget source="session.CurrentService" render="Label" position="805,20" size="300,40" font="Regular;30" backgroundColor="#41000000" foregroundColor="#f4df8d" halign="right" transparent="1" valign="center">
+		<widget source="session.CurrentService" render="Label" position="805,20" size="300,40" font="Regular;30" backgroundColor="#41000000" foregroundColor="#00f4df8d" halign="right" transparent="1" valign="center">
 			<convert type="ServicePosition">Position</convert>
 		</widget>
 	</screen>
@@ -1252,67 +1252,67 @@
 		<eLabel position="1228,360" size="2,180" backgroundColor="Pinstripe" />
 		<widget source="SensorTempText0" render="Label" position="410,370" size="200,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
 		<widget source="SensorTemp0" render="Label" position="620,370" size="185,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
-			<convert type="SensorToText"></convert>
+			<convert type="SensorToText" />
 		</widget>
 		<widget source="SensorTempText1" render="Label" position="410,390" size="200,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
 		<widget source="SensorTemp1" render="Label" position="620,390" size="185,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
-			<convert type="SensorToText"></convert>
+			<convert type="SensorToText" />
 		</widget>
 		<widget source="SensorTempText2" render="Label" position="410,410" size="200,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
 		<widget source="SensorTemp2" render="Label" position="620,410" size="185,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
-			<convert type="SensorToText"></convert>
+			<convert type="SensorToText" />
 		</widget>
 		<widget source="SensorTempText3" render="Label" position="410,430" size="200,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
 		<widget source="SensorTemp3" render="Label" position="620,430" size="185,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
-			<convert type="SensorToText"></convert>
+			<convert type="SensorToText" />
 		</widget>
 		<widget source="SensorTempText4" render="Label" position="410,450" size="200,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
 		<widget source="SensorTemp4" render="Label" position="620,450" size="185,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
-			<convert type="SensorToText"></convert>
+			<convert type="SensorToText" />
 		</widget>
 		<widget source="SensorTempText5" render="Label" position="410,470" size="200,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
 		<widget source="SensorTemp5" render="Label" position="620,470" size="185,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
-			<convert type="SensorToText"></convert>
+			<convert type="SensorToText" />
 		</widget>
 		<widget source="SensorTempText6" render="Label" position="410,490" size="200,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
 		<widget source="SensorTemp6" render="Label" position="620,490" size="185,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
-			<convert type="SensorToText"></convert>
+			<convert type="SensorToText" />
 		</widget>
 		<widget source="SensorTempText7" render="Label" position="410,510" size="200,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
 		<widget source="SensorTemp7" render="Label" position="620,510" size="185,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
-			<convert type="SensorToText"></convert>
+			<convert type="SensorToText" />
 		</widget>
 		<widget source="SensorFanText0" render="Label" position="825,370" size="185,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
 		<widget source="SensorFan0" render="Label" position="1020,370" size="200,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
-			<convert type="SensorToText"></convert>
+			<convert type="SensorToText" />
 		</widget>
 		<widget source="SensorFanText1" render="Label" position="825,390" size="185,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
 		<widget source="SensorFan1" render="Label" position="1020,390" size="200,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
-			<convert type="SensorToText"></convert>
+			<convert type="SensorToText" />
 		</widget>
 		<widget source="SensorFanText2" render="Label" position="825,410" size="185,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
 		<widget source="SensorFan2" render="Label" position="1020,410" size="200,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
-			<convert type="SensorToText"></convert>
+			<convert type="SensorToText" />
 		</widget>
 		<widget source="SensorFanText3" render="Label" position="825,430" size="185,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
 		<widget source="SensorFan3" render="Label" position="1020,430" size="200,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
-			<convert type="SensorToText"></convert>
+			<convert type="SensorToText" />
 		</widget>
 		<widget source="SensorFanText4" render="Label" position="825,450" size="185,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
 		<widget source="SensorFan4" render="Label" position="1020,450" size="200,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
-			<convert type="SensorToText"></convert>
+			<convert type="SensorToText" />
 		</widget>
 		<widget source="SensorFanText5" render="Label" position="825,470" size="185,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
 		<widget source="SensorFan5" render="Label" position="1020,470" size="200,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
-			<convert type="SensorToText"></convert>
+			<convert type="SensorToText" />
 		</widget>
 		<widget source="SensorFanText6" render="Label" position="825,490" size="185,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
 		<widget source="SensorFan6" render="Label" position="1020,490" size="200,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
-			<convert type="SensorToText"></convert>
+			<convert type="SensorToText" />
 		</widget>
 		<widget source="SensorFanText7" render="Label" position="825,510" size="185,20" backgroundColor="TextBackground" font="TextFont;17" foregroundColor="Text" transparent="1" valign="center" />
 		<widget source="SensorFan7" render="Label" position="1020,510" size="200,20" backgroundColor="TextBackground" font="TextFont;17" halign="right" foregroundColor="Text" transparent="1" valign="center">
-			<convert type="SensorToText"></convert>
+			<convert type="SensorToText" />
 		</widget>
 		<panel name="ScreenTemplateFrame830x120" />
 	</screen>

@@ -283,14 +283,14 @@
 		<panel name="ScreenTemplateBranding" />
 		<eLabel text="Translation:" position="400,80" size="830,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
 		<widget source="TranslatorName" render="Label" position="400,105" size="830,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
-		<widget source="TranslationInfo" render="Label" position="400,130" size="830,450" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1"/>
+		<widget source="TranslationInfo" render="Label" position="400,130" size="830,450" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" />
 	</screen>
 
 	<!-- Software Updates (MENU > Information > System Information > Software Updates) Screen -->
 
 	<screen name="SoftwareUpdateChanges" title="Software Update Changes" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<!-- <widget source="Title" render="Label" position="20,25" size="800,43" font="Boldit;32" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1"/> -->
+		<!-- <widget source="Title" render="Label" position="20,25" size="800,43" font="Boldit;32" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1" /> -->
 		<widget name="text" position="50,80" size="1180,550" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" />
 	</screen>
 

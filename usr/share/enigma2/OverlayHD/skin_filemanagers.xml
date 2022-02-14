@@ -28,21 +28,21 @@
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonInfo" />
 		<panel name="ScreenTemplateButtonHelp" />
-		<panel name="FileCommanderFileListPanel"/>
+		<panel name="FileCommanderFileListPanel" />
 	</screen>
 
 	<screen name="FileCommanderScreenFileSelect" title="File Commander - File Selection" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonInfo" />
 		<panel name="ScreenTemplateButtonHelp" />
-		<panel name="FileCommanderFileListPanel"/>
+		<panel name="FileCommanderFileListPanel" />
 	</screen>
 
 	<screen name="FileCommanderFileListPanel" position="fill">
 		<eLabel position="640,66" size="2,595" backgroundColor="Pinstripe" />
 		<widget name="list_left_head" position="50,80" size="580,60" backgroundColor="TextBackground" conditional="list_left_head" font="Regular;18" foregroundColor="Text" transparent="1" valign="center" />
 		<widget name="list_left_head1" position="50,80" size="580,40" backgroundColor="TextBackground" conditional="list_left_head1" font="Regular;18" foregroundColor="Text" transparent="1" valign="center" />
-		<widget source="list_left_head2" render="Listbox" position="50,120" size="580,20" backgroundColor="TextBackground" conditional="list_left_head2" foregroundColor="Text" scrollbarMode="showNever" selectionDisabled="1" transparent="1" >
+		<widget source="list_left_head2" render="Listbox" position="50,120" size="580,20" backgroundColor="TextBackground" conditional="list_left_head2" foregroundColor="Text" scrollbarMode="showNever" selectionDisabled="1" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -60,7 +60,7 @@
 		<widget name="list_left" position="50,140" size="580,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 		<widget name="list_right_head" position="650,80" size="580,60" backgroundColor="TextBackground" conditional="list_right_head" font="Regular;18" foregroundColor="Text" transparent="1" valign="center" />
 		<widget name="list_right_head1" position="650,80" size="580,40" backgroundColor="TextBackground" conditional="list_right_head1" font="Regular;18" foregroundColor="Text" transparent="1" valign="center" />
-		<widget source="list_right_head2" render="Listbox" position="650,120" size="580,20" backgroundColor="TextBackground" conditional="list_right_head2" foregroundColor="Text" scrollbarMode="showNever" selectionDisabled="1" transparent="1" >
+		<widget source="list_right_head2" render="Listbox" position="650,120" size="580,20" backgroundColor="TextBackground" conditional="list_right_head2" foregroundColor="Text" scrollbarMode="showNever" selectionDisabled="1" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":

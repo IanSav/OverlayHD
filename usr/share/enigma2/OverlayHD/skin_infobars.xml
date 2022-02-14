@@ -157,14 +157,14 @@
 			<convert type="ServiceName">NameOnly</convert>
 		</widget>
 		<!-- Now Event Start & End Times, Event Name and Time Remaining Area -->
-		<widget source="session.Event_Now" render="Label" position="180,615" size="180,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" halign="center" noWrap="1" transparent="1" valign="bottom" >
+		<widget source="session.Event_Now" render="Label" position="180,615" size="180,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" halign="center" noWrap="1" transparent="1" valign="bottom">
 			<convert type="EventTime">Times</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="370,605" size="545,35" backgroundColor="InfoBackground" font="InfoEventFont;28" foregroundColor="InfoProgramNow" noWrap="1" transparent="1" valign="bottom" >
+		<widget source="session.Event_Now" render="Label" position="370,605" size="545,35" backgroundColor="InfoBackground" font="InfoEventFont;28" foregroundColor="InfoProgramNow" noWrap="1" transparent="1" valign="bottom">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="925,615" size="160,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" halign="right" noWrap="1" transparent="1" valign="bottom" >
+		<widget source="session.Event_Now" render="Label" position="925,615" size="160,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" halign="right" noWrap="1" transparent="1" valign="bottom">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
@@ -670,7 +670,7 @@
 		<widget name="chTuner" position="0,2" size="180,18" font="Regular;18" foregroundColor="Cyan" halign="left" noWrap="1" transparent="1" />
 		<widget name="chProv" position="190,2" size="250,18" font="Regular;18" foregroundColor="Yellow" halign="left" noWrap="1" transparent="1" />
 		<widget name="chBouq" position="450,2" size="300,18" font="Regular;18" foregroundColor="Yellow" halign="left" noWrap="1" transparent="1" />
-		<widget name="chNum" position="760,2"  size="50,18" font="Regular;18" foregroundColor="White" halign="right" noWrap="1" transparent="1" />
+		<widget name="chNum" position="760,2" size="50,18" font="Regular;18" foregroundColor="White" halign="right" noWrap="1" transparent="1" />
 		<widget name="chName" position="820,2" size="300,18" font="Regular;18" foregroundColor="White" halign="left" noWrap="1" transparent="1" />
 		<widget name="timelen" position="1130,2" size="150,18" font="Regular;18" foregroundColor="White" halign="right" noWrap="1" transparent="1" />
 		<widget name="chSnr" position="10,20" size="150,18" font="Regular;18" foregroundColor="Cyan" halign="left" noWrap="1" transparent="1" />
