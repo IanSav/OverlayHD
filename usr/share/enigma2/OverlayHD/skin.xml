@@ -743,19 +743,8 @@
 	</screen>
 
 	<screen name="ScreenTemplateBrandingOpenATV">
-		<eLabel text="openATV" position="50,620" size="200,35" font="TextFont;25" foregroundColor="TextWaiting" transparent="1" valign="center" />
+		<ePixmap pixmap="images/openatv.png" position="50,600" size="300,50" alphatest="blend" scale="1" transparent="1" />
 	</screen>
-
-	<!--
-	<screen name="ScreenTemplateBrandingOpenVisionOld">
-		<widget source="lab1" render="Label" position="50,500" size="350,25" conditional="lab1" font="TextFont;22" foregroundColor="TextWaiting" transparent="1" valign="center" />
-		<widget source="lab2" render="Label" position="50,525" size="350,25" conditional="lab2" font="TextFont;18" foregroundColor="Text" transparent="1" valign="center" />
-		<widget source="lab3" render="Label" position="50,550" size="350,25" conditional="lab3" font="TextFont;18" foregroundColor="TextIndentedSelected" transparent="1" valign="center" />
-		<widget source="lab4" render="Label" position="50,575" size="350,25" conditional="lab4" font="TextFont;18" foregroundColor="TextIndented" transparent="1" valign="center" />
-		<widget source="lab5" render="Label" position="50,600" size="350,25" conditional="lab5" font="TextFont;18" foregroundColor="TextIndentedSelected" transparent="1" valign="center" />
-		<widget source="lab6" render="Label" position="50,625" size="350,25" conditional="lab6" font="TextFont;18" foregroundColor="TextIndented" transparent="1" valign="center" />
-	</screen>
-	-->
 
 	<screen name="ScreenTemplateBrandingOpenVision">
 		<eLabel text="OpenVision" position="50,500" size="350,25" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="TextWaiting" transparent="1" valign="center" />
@@ -771,14 +760,6 @@
 		<widget source="lab5" render="Label" position="0,0" size="0,0" conditional="lab5" transparent="1" />
 		<widget source="lab6" render="Label" position="0,0" size="0,0" conditional="lab6" transparent="1" />
 	</screen>
-
-	<!--
-	<screen name="ScreenTemplateBrandingOpenViXOld">
-		<widget source="lab1" render="Label" position="50,575" size="458,25" conditional="lab1" font="Boldit;24" transparent="1" valign="center" />
-		<widget source="lab2" render="Label" position="50,600" size="458,25" conditional="lab2" font="Italic;19" transparent="1" valign="center" />
-		<widget source="lab3" render="Label" position="50,625" size="458,25" conditional="lab3" font="Italic;19" transparent="1" valign="center" />
-	</screen>
-	-->
 
 	<screen name="ScreenTemplateBrandingOpenViX">
 		<eLabel text="Virtuosso Image Xtreme" position="50,575" size="458,25" font="Boldit;24" transparent="1" valign="center" />
@@ -2598,7 +2579,11 @@
 		<widget name="picture" pixmap="images/beyonwiz.png" position="0,0" size="220,80" alphatest="blend" transparent="0" />
 	</screen>
 
-	<screen name="ScreensaverEnigma2" position="fill" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
+	<screen name="ScreensaverOpenATV" position="fill" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
+		<widget name="picture" pixmap="images/openatv.png" position="0,0" size="430,69" alphatest="blend" scale="1" transparent="0" />
+	</screen>
+
+	<screen name="ScreensaverOpenViX" position="fill" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
 		<widget name="picture" pixmap="images/openvix.png" position="0,0" size="220,84" alphatest="blend" transparent="0" />
 	</screen>
 
