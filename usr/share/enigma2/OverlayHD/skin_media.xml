@@ -375,7 +375,7 @@
 
 	<screen name="ChapterZap" title="Chapter" position="235,255" size="250,60">
 		<widget name="chapter" position="35,15" size="110,25" font="Regular;23" />
-		<widget name="number" position="145,15" size="80,25" halign="right" font="Regular;23" />
+		<widget name="number" position="145,15" size="80,25" font="Regular;23" halign="right" />
 	</screen>
 
 <!-- MyTubePlayer -->

@@ -818,7 +818,7 @@
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget name="key_red" position="0,0" size="225,35" backgroundColor="KeyRed" font="ButtonFont;20" foregroundColor="KeyText" halign="center" noWrap="1" objectTypes="key_red,Button,Label" transparent="1" valign="center" zPosition="+2" />
-		<widget source="key_red" render="Label" position="0,0" size="225,35" backgroundColor="KeyRed" font="ButtonFont;20" halign="center" foregroundColor="KeyText" noWrap="1" objectTypes="key_red,StaticText" transparent="1" valign="center" zPosition="+2" />
+		<widget source="key_red" render="Label" position="0,0" size="225,35" backgroundColor="KeyRed" font="ButtonFont;20" foregroundColor="KeyText" halign="center" noWrap="1" objectTypes="key_red,StaticText" transparent="1" valign="center" zPosition="+2" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonRedBox">
@@ -953,7 +953,7 @@
  			<convert type="ConditionalShowHide" />
  		</widget>
 		<widget name="key_green" position="0,0" size="225,35" backgroundColor="KeyGreen" font="ButtonFont;20" foregroundColor="KeyText" halign="center" noWrap="1" objectTypes="key_green,Button,Label" transparent="1" valign="center" zPosition="+2" />
-		<widget source="key_green" render="Label" position="0,0" size="225,35" backgroundColor="KeyGreen" font="ButtonFont;20" halign="center" foregroundColor="KeyText" noWrap="1" objectTypes="key_green,StaticText" transparent="1" valign="center" zPosition="+2" />
+		<widget source="key_green" render="Label" position="0,0" size="225,35" backgroundColor="KeyGreen" font="ButtonFont;20" foregroundColor="KeyText" halign="center" noWrap="1" objectTypes="key_green,StaticText" transparent="1" valign="center" zPosition="+2" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonGreenBox">
@@ -1088,7 +1088,7 @@
  			<convert type="ConditionalShowHide" />
  		</widget>
 		<widget name="key_yellow" position="0,0" size="225,35" backgroundColor="KeyYellow" font="ButtonFont;20" foregroundColor="KeyText" halign="center" noWrap="1" objectTypes="key_yellow,Button,Label" transparent="1" valign="center" zPosition="+2" />
-		<widget source="key_yellow" render="Label" position="0,0" size="225,35" backgroundColor="KeyYellow" font="ButtonFont;20" halign="center" foregroundColor="KeyText" noWrap="1" objectTypes="key_yellow,StaticText" transparent="1" valign="center" zPosition="+2" />
+		<widget source="key_yellow" render="Label" position="0,0" size="225,35" backgroundColor="KeyYellow" font="ButtonFont;20" foregroundColor="KeyText" halign="center" noWrap="1" objectTypes="key_yellow,StaticText" transparent="1" valign="center" zPosition="+2" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonYellowBox">
@@ -1223,7 +1223,7 @@
  			<convert type="ConditionalShowHide" />
  		</widget>
 		<widget name="key_blue" position="0,0" size="225,35" backgroundColor="KeyBlue" font="ButtonFont;20" foregroundColor="KeyText" halign="center" noWrap="1" objectTypes="key_blue,Button,Label" transparent="1" valign="center" zPosition="+2" />
-		<widget source="key_blue" render="Label" position="0,0" size="225,35" backgroundColor="KeyBlue" font="ButtonFont;20" halign="center" foregroundColor="KeyText" noWrap="1" objectTypes="key_blue,StaticText" transparent="1" valign="center" zPosition="+2" />
+		<widget source="key_blue" render="Label" position="0,0" size="225,35" backgroundColor="KeyBlue" font="ButtonFont;20" foregroundColor="KeyText" halign="center" noWrap="1" objectTypes="key_blue,StaticText" transparent="1" valign="center" zPosition="+2" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonBlueBox">
@@ -2164,7 +2164,7 @@
 	</screen>
 
 	<screen name="ScreenTemplateTimerList4">
-		<widget name="timerlist" position="400,80" size="830,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" bottomHeight="25" detailFont="MenuFont;16" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" iconMargin="10" indent="20" itemHeight="50" showSeparator="0" scrollbarMode="showOnDemand" statusFont="MenuFont;18" statusOffset="20" timerNameFont="MenuFont;20" topHeight="25" />
+		<widget name="timerlist" position="400,80" size="830,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" bottomHeight="25" detailFont="MenuFont;16" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" iconMargin="10" indent="20" itemHeight="50" scrollbarMode="showOnDemand" showSeparator="0" statusFont="MenuFont;18" statusOffset="20" timerNameFont="MenuFont;20" topHeight="25" />
 	</screen>
 
 <!-- Text component of configuration items with a four line text window -->

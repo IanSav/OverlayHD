@@ -104,7 +104,7 @@
 	</screen>
 
 	<screen name="EPGTimeLinePanelBeyonwiz" title="Time Line" flags="wfNoBorder">
-		<widget name="timeline_text" position="0,0" size="1180,30" TimelineTicksOn="yes" TimelineTickAlignment="center" TimelineTextPadding="2" backgroundColor="EPGBackground" borderWidth="0" font="EPGTimeLineFont;20" foregroundColor="EPGTimeLine" transparent="1" />
+		<widget name="timeline_text" position="0,0" size="1180,30" TimelineTextPadding="2" TimelineTickAlignment="center" TimelineTicksOn="yes" backgroundColor="EPGBackground" borderWidth="0" font="EPGTimeLineFont;20" foregroundColor="EPGTimeLine" transparent="1" />
 	</screen>
 
 	<screen name="EPGTimeLinePanelEnigma2" title="Time Line" flags="wfNoBorder">
@@ -258,7 +258,7 @@
 		<widget source="Service" render="Picon" position="52,547" size="100,60" alphatest="blend" transparent="1" zPosition="+1">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-		<widget name="list" position="165,525" size="1065,100" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" font="Regular;20" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showNever" transparent="0" />
+		<widget name="list" position="165,525" size="1065,100" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showNever" transparent="0" />
 		<widget name="number" position="165,525" size="1065,100" backgroundColor="TextBackground" font="Regular;50" foregroundColor="FindCharacter" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<panel position="50,625" size="160,30">
 			<panel name="TunerSignalPanel" />
@@ -292,7 +292,7 @@
 		<widget name="next_text" text="NEXT" position="210,80" size="154,34" backgroundColor="Grey" font="EPGTimeLineFont;20" foregroundColor="EPGTimeLine" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget name="more_text" text="LATER" position="370,80" size="154,34" backgroundColor="Grey" font="EPGTimeLineFont;20" foregroundColor="EPGTimeLine" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget name="date" position="530,80" size="200,34" backgroundColor="EPGBackground" font="EPGTimeLineFont;20" foregroundColor="EPGTimeLine" transparent="1" valign="center" />
-		<widget name="list" position="50,115" size="660,540" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" font="EPGServiceFont;20" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="list" position="50,115" size="660,540" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="EPGServiceFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
 		<widget source="session.VideoPicture" render="Pig" position="730,80" size="500,282" backgroundColor="TransparentBackground" />
 		<widget source="session.CurrentService" render="Label" position="730,80" size="500,20" borderColor="EPGOverlayBorder" borderWidth="1" font="InfoEventFont;17" foregroundColor="EPGOverlayColor" halign="center" noWrap="1" transparent="1" valign="top">
 			<convert type="ServiceName">Name</convert>
@@ -578,7 +578,7 @@
 	<screen name="YourTVRegion" title="YourTV Region" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/timer.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<widget name="list" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" font="Regular;25" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="list" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
 	<screen name="YourTV" title="YourTV Information" position="fill" flags="wfNoBorder">

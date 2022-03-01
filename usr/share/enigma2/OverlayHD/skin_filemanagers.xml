@@ -5,7 +5,7 @@
 	<screen name="FilebrowserScreen" title="File Browser" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
-		<widget name="red" position="172,670" size="225,35" backgroundColor="KeyRed" font="ButtonFont;20" conditional="red" foregroundColor="KeyText" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="red" position="172,670" size="225,35" backgroundColor="KeyRed" conditional="red" font="ButtonFont;20" foregroundColor="KeyText" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget name="green" position="409,670" size="225,35" backgroundColor="KeyGreen" conditional="green" font="ButtonFont;20" foregroundColor="KeyText" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget name="yellow" position="646,670" size="225,35" backgroundColor="KeyYellow" conditional="yellow" font="ButtonFont;20" foregroundColor="KeyText" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget name="blue" position="883,670" size="225,35" backgroundColor="KeyBlue" conditional="blue" font="ButtonFont;20" foregroundColor="KeyText" halign="center" transparent="1" valign="center" zPosition="+1" />
@@ -15,7 +15,7 @@
 
 	<screen name="FilebrowserConfigScreen" title="File Browser Settings" position="fill" flags="wfNoBorder">
 		<panel name="Setup" />
-		<widget name="buttonred" position="172,670" size="225,35" backgroundColor="KeyRed" font="ButtonFont;20" conditional="buttonred" foregroundColor="KeyText" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="buttonred" position="172,670" size="225,35" backgroundColor="KeyRed" conditional="buttonred" font="ButtonFont;20" foregroundColor="KeyText" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget name="buttongreen" position="409,670" size="225,35" backgroundColor="KeyGreen" conditional="buttongreen" font="ButtonFont;20" foregroundColor="KeyText" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget name="buttonyellow" position="646,670" size="225,35" backgroundColor="KeyYellow" conditional="buttonyellow" font="ButtonFont;20" foregroundColor="KeyText" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget name="buttonblue" position="883,670" size="225,35" backgroundColor="KeyBlue" conditional="buttonblue" font="ButtonFont;20" foregroundColor="KeyText" halign="center" transparent="1" valign="center" zPosition="+1" />

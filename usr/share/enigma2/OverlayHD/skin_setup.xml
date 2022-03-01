@@ -338,9 +338,9 @@
 	</screen>
 
 	<screen name="CableScanStatus" title="Cable Scan" position="center,115" size="420,180">
-		<widget name="frontend" pixmap="icons/scan-c.png" position="5,5" size="64,64" transparent="1" alphatest="on" />
-		<widget name="scan_state" position="10,120" zPosition="2" size="400,30" font="Regular;18" />
-		<widget name="scan_progress" position="10,155" size="400,15" pixmap="progress_big.png" borderWidth="2" borderColor="#00cccccc" />
+		<widget name="frontend" pixmap="icons/scan-c.png" position="5,5" size="64,64" alphatest="on" transparent="1" />
+		<widget name="scan_state" position="10,120" size="400,30" font="Regular;18" zPosition="2" />
+		<widget name="scan_progress" position="10,155" size="400,15" pixmap="progress_big.png" borderColor="#00cccccc" borderWidth="2" />
 	</screen>
 
 <!-- MENU > Setup > Tuners > Positioner Setup - NO LONGER ENABLED IN MENUS! -->
@@ -482,9 +482,9 @@
 	<screen name="CIconfigMenu" title="CI Assignment" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 
-		<widget source="CAidList_desc" render="Label" position="400,80" size="830,35" font="Regular;25" backgroundColor="#25062748" transparent="0" />
-		<widget source="CAidList" render="Label" position="400,115" size="830,45" font="Regular;20" backgroundColor="#25062748" transparent="0" />
-		<widget source="ServiceList_desc" render="Label" position="400,150" size="830,35" font="Regular;25" backgroundColor="#25062748" transparent="0" />
+		<widget source="CAidList_desc" render="Label" position="400,80" size="830,35" backgroundColor="#25062748" font="Regular;25" transparent="0" />
+		<widget source="CAidList" render="Label" position="400,115" size="830,45" backgroundColor="#25062748" font="Regular;20" transparent="0" />
+		<widget source="ServiceList_desc" render="Label" position="400,150" size="830,35" backgroundColor="#25062748" font="Regular;25" transparent="0" />
 		<widget name="ServiceList" position="400,185" size="830,250" scrollbarMode="showOnDemand" transparent="0" />
 		<widget source="ServiceList_info" render="Label" position="400,450" size="830,250" backgroundColor="#25062748" font="Regular;20" transparent="0" />
 	</screen>
@@ -492,9 +492,9 @@
 	<screen name="easyCIconfigMenu" title="CI Assignment Settings" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 
-		<widget source="ServiceList_desc" render="Label" position="50,80" size="550,22" font="Regular;20" backgroundColor="#25062748" transparent="1" />
-		<widget name="ServiceList" position="50,110" size="550,300" zPosition="1" scrollbarMode="showOnDemand" />
-		<widget source="ServiceList_info" render="Label" position="50,110" size="550,300" zPosition="2" font="Regular;20" backgroundColor="#25062748" transparent="1" />
+		<widget source="ServiceList_desc" render="Label" position="50,80" size="550,22" backgroundColor="#25062748" font="Regular;20" transparent="1" />
+		<widget name="ServiceList" position="50,110" size="550,300" scrollbarMode="showOnDemand" zPosition="1" />
+		<widget source="ServiceList_info" render="Label" position="50,110" size="550,300" backgroundColor="#25062748" font="Regular;20" transparent="1" zPosition="2" />
 	</screen>
 
 	<screen name="myChannelSelection" title="Select Service to add..." position="fill" flags="wfNoBorder">
@@ -975,7 +975,7 @@
 		<widget name="EditSettingsButton" position="1030,540" size="0,0" pixmaps="images/select300_45black.png,images/select600_50.png" transparent="1" />
 		<widget name="EditSettings_Text" position="1030,530" size="200,70" backgroundColor="TextBackground" font="Regular;25" foregroundColors="TextDisabled,TextDisabled,Text" halign="right" transparent="1" valign="center" zPosition="+1" />
 		<widget name="InfoTextBorder" position="50,80" size="910,570" backgroundColor="TextBackground" borderColor="Green" borderWidth="2" transparent="0" zPosition="+1" />
-		<widget name="InfoText" position="50,80" size="910,570" backgroundColor="TextBackground" font="TextFont;25" foregroundColor="Text" valign="center" transparent="0" zPosition="+2" />
+		<widget name="InfoText" position="50,80" size="910,570" backgroundColor="TextBackground" font="TextFont;25" foregroundColor="Text" transparent="0" valign="center" zPosition="+2" />
 	</screen>
 
 <!-- MENU > Setup > Network > Network Restart - Defined Elsewhere -->
@@ -1287,7 +1287,7 @@
 		<widget name="feedstatus_yellow" position="110,533" size="200,35" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" valign="center" />
 		<widget name="feedstatus_green" position="110,566" size="200,35" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" valign="center" />
 		<widget name="package_text" position="50,615" size="250,35" backgroundColor="TextBackground" font="TextFont;25" foregroundColor="Text" valign="center" />
-		<widget name="package_count" position="310,615" size="50,35" backgroundColor="TextBackground" font="TextFont;25" halign="right" foregroundColor="Text" valign="center" />
+		<widget name="package_count" position="310,615" size="50,35" backgroundColor="TextBackground" font="TextFont;25" foregroundColor="Text" halign="right" valign="center" />
 		<widget source="list" render="Listbox" position="400,80" size="830,550" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{

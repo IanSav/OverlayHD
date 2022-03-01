@@ -135,7 +135,7 @@
 		<widget source="session.CurrentService" render="Picon" position="30,580" size="100,60" alphatest="blend" transparent="1">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="10,640" size="140,30" backgroundColor="InfoBackground" font="InfoEventFont;30" foregroundColor="InfoLCN" halign="center" transparent="1" noWrap="1">
+		<widget source="session.CurrentService" render="Label" position="10,640" size="140,30" backgroundColor="InfoBackground" font="InfoEventFont;30" foregroundColor="InfoLCN" halign="center" noWrap="1" transparent="1">
 			<convert type="ServiceName2">Number</convert>
 		</widget>
 		<!--

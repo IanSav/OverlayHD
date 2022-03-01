@@ -4,7 +4,7 @@
 	<screen name="NumberZap" title="Channel Zap..." position="center,center" size="350,70">
 		<widget name="channel" position="5,5" size="115,30" backgroundColor="TextBackground" font="Regular;25" foregroundColor="Text" valign="center" />
 		<widget name="number" position="260,5" size="85,30" backgroundColor="TextBackground" font="Regular;25" foregroundColor="Text" halign="right" valign="center" />
-		<widget name="servicename" position="5,45" size="340,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" noWrap="1" halign="center" valign="center" />
+		<widget name="servicename" position="5,45" size="340,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" halign="center" noWrap="1" valign="center" />
 	</screen>
 
 <!-- BACK | PREV | NEXT - History Zap Menu -->
