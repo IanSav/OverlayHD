@@ -2580,7 +2580,7 @@
 	</screen>
 
 	<screen name="ScreensaverEnigma2" position="fill" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
-		<widget name="picture" pixmap="images/openatv.png" position="0,0" size="430,69" alphatest="blend" scale="1" transparent="1" />
+		<widget name="picture" pixmap="images/enigma.png" position="0,0" size="100,60" alphatest="blend" scale="1" transparent="1" />
 	</screen>
 
 	<screen name="ScreensaverOpenATV" position="fill" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
