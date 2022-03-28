@@ -2,7 +2,7 @@
 #
 # OverlayHD Skin Manager
 #
-# Version Date - 30-Dec-2021
+# Version Date - 28-Mar-2022
 # Remember to change version number variable below!!!
 #
 # Repository - https://github.com/IanSav/OverlayHD
@@ -69,7 +69,7 @@ from Tools.BoundFunction import boundFunction
 from Tools.Directories import SCOPE_CONFIG, SCOPE_GUISKIN, SCOPE_MEDIA, SCOPE_PLUGIN, SCOPE_SKINS, fileReadXML, resolveFilename
 
 MODULE_NAME = __name__.split(".")[-1]
-PLUGIN_VERSION_NUMBER = "1.92"
+PLUGIN_VERSION_NUMBER = "1.93"
 
 DISTRO_MENU_IDVAL = 0
 DISTRO_SCREENLIST = 1
@@ -1230,7 +1230,7 @@ def main(session, **kwargs):
 
 def setup(menuid, **kwargs):
 	if menuid == distroModes.get(distro, (None, None))[DISTRO_MENU_IDVAL]:
-		return [(_("OverlayHD Skin Setup"), main, "OverlayHD_setup", 1000)]
+		return [(_("OverlayHD Skin Settings"), main, "OverlayHD_setup", 1000)]
 	return []
 
 
@@ -1248,9 +1248,10 @@ def autostart(reason, **kwargs):
 def Plugins(**kwargs):
 	pluginList = []
 	if config.skin.primary_skin.value == "OverlayHD/skin.xml":
-		pluginList.append(PluginDescriptor(where=[PluginDescriptor.WHERE_MENU], needsRestart=False, fnc=setup))
+		description = _("Manage the configuration and settings of the OverlayHD skin.")
 		pluginList.append(PluginDescriptor(where=[PluginDescriptor.WHERE_AUTOSTART], fnc=autostart))
-		pluginList.append(PluginDescriptor(name=_("OverlayHD"), where=[PluginDescriptor.WHERE_PLUGINMENU], description="OverlayHD Skin Manager version %s" % PLUGIN_VERSION_NUMBER, icon="OverlayHD.png", fnc=main))
+		pluginList.append(PluginDescriptor(name=_("OverlayHD Skin Settings"), description=description, where=[PluginDescriptor.WHERE_MENU], needsRestart=False, fnc=setup))
+		pluginList.append(PluginDescriptor(name=_("OverlayHD"), description=_("OverlayHD Skin Manager version %s") % PLUGIN_VERSION_NUMBER, icon="OverlayHD.png", where=[PluginDescriptor.WHERE_PLUGINMENU], fnc=main))
 		if config.plugins.skin.OverlayHD.ShowInExtensions.value:
-			pluginList.append(PluginDescriptor(name=_("OverlayHD Skin Manager"), where=[PluginDescriptor.WHERE_EXTENSIONSMENU], description="OverlayHD Skin Manager version %s" % PLUGIN_VERSION_NUMBER, icon="OverlayHD.png", fnc=main))
+			pluginList.append(PluginDescriptor(name=_("OverlayHD Skin Settings"), description=description, where=[PluginDescriptor.WHERE_EXTENSIONSMENU], fnc=main))
 	return pluginList
