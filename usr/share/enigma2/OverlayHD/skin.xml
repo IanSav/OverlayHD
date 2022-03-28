@@ -1471,7 +1471,7 @@
 
 	<screen name="MenuEnigma2" title="Menu" position="fill" flags="wfNoBorder">
 		<widget name="menuimage" position="50,80" size="250,250" alphatest="blend" conditional="menuimage" scaleFlags="scaleLeftTop" transparent="1" />
-		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="menu" render="Listbox" position="400,80" size="830,455" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"templates":
@@ -1493,13 +1493,13 @@
 						]),
 					"Image": (35,
 						[
-						MultiContentEntryPixmapAlphaBlend(pos = (20, 2), size = (31, 31), png = 5, flags = BT_SCALE | BT_KEEP_ASPECT_RATIO | BT_HALIGN_CENTER | BT_VALIGN_CENTER),
+						MultiContentEntryPixmapAlphaBlend(pos = (20, 2), size = (31, 31), png = 6, flags = BT_SCALE | BT_KEEP_ASPECT_RATIO | BT_HALIGN_CENTER | BT_VALIGN_CENTER),
 						MultiContentEntryText(pos = (70, 0), size = (710, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4),
 						# MultiContentEntryText(pos = (790, 0), size = (20, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4)
 						]),
 					"Both": (35,
 						[
-						MultiContentEntryPixmapAlphaBlend(pos = (20, 2), size = (31, 31), png = 5, flags = BT_SCALE | BT_KEEP_ASPECT_RATIO | BT_HALIGN_CENTER | BT_VALIGN_CENTER),
+						MultiContentEntryPixmapAlphaBlend(pos = (20, 2), size = (31, 31), png = 6, flags = BT_SCALE | BT_KEEP_ASPECT_RATIO | BT_HALIGN_CENTER | BT_VALIGN_CENTER),
 						MultiContentEntryText(pos = (55, 0), size = (40, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 3),
 						MultiContentEntryText(pos = (115, 0), size = (665, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4),
 						# MultiContentEntryText(pos = (790, 0), size = (20, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4)
@@ -1511,6 +1511,7 @@
 				}
 			</convert>
 		</widget>
+		<panel name="ScreenTemplateDescription4" />
 	</screen>
 
 	<screen name="MenuEnhanced" title="Menu" position="fill" flags="wfNoBorder">
