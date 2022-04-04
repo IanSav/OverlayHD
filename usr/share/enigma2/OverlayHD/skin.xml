@@ -420,8 +420,8 @@
 		-->
 		<parameter name="ChoicelistDash" value="0,0,830,35" />
 		<parameter name="ChoicelistName" value="50,0,780,35" />
-		<parameter name="ChoicelistIcon" value="5,5,35,25" />
 		<parameter name="ChoicelistNameSingle" value="20,0,810,35" />
+		<parameter name="ChoicelistIcon" value="5,5,35,25" />
 		<parameter name="ConfigListSeperator" value="430" />
 		<parameter name="ConfigListSlider" value="17,0" />
 		<!--
@@ -2147,6 +2147,10 @@
 
 	<screen name="ScreenTemplateSkinList4OpenATV">
 		<widget name="SkinList" position="400,80" size="540,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+	</screen>
+
+	<screen name="ScreenTemplateSlotList4">
+		<widget name="slotlist" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateSoftwareList4">

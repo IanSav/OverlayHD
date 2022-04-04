@@ -103,17 +103,23 @@
 		<panel name="ScreenTemplateOverlayText0" />
 	</screen>
 
-	<!-- MultiBoot Image Selector (MENU > Standby and Reset > MultiBoot Image Selector) Screen -->
+	<!-- MultiBoot Image Manager (MENU > Standby and Reset > MultiBoot Image Manager) Screen -->
 
-	<screen name="MultiBootSelector" title="MultiBoot Image Selector" position="fill" flags="wfNoBorder">
+	<screen name="MultiBootManager" title="MultiBoot Image Manager" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateConfig4" />
-		<panel name="ScreenTemplateSDescription4" />
+		<panel name="ScreenTemplateSlotList4" />
+		<panel name="ScreenTemplateDescription4" />
 	</screen>
 
 	<screen name="MultibootSelection" title="MultiBoot Image Selector" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateList4" />
+		<panel name="ScreenTemplateSDescription4" />
+	</screen>
+
+	<screen name="MultiBootSelector" title="MultiBoot Image Selector" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateSDescription4" />
 	</screen>
 
