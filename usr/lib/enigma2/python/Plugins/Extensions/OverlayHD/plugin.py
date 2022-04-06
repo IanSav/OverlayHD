@@ -892,7 +892,7 @@ def applySkinSettings(fullInit=False):
 						print("[OverlayHD] Note: Image name '%s' (%s) is duplicated." % (name, file))
 					else:
 						data[name] = pathjoin(path, file)
-		for key in sorted(list(data.keys())):
+		for key in sorted(data.keys()):
 			choices.append((data.get(key), key))
 
 	initMsg = "C"
