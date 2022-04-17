@@ -1512,7 +1512,7 @@
 				}
 			</convert>
 		</widget>
-		<panel name="ScreenTemplateDescription4" />
+		<panel name="ScreenTemplateSDescription4" />
 	</screen>
 
 	<screen name="MenuEnhanced" title="Menu" position="fill" flags="wfNoBorder">
