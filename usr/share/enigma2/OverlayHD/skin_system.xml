@@ -223,10 +223,11 @@
 	<screen name="Information" title="Information" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateBranding" />
-		<widget name="information" position="400,80" size="830,555" colPosition="320" conditional="information" divideChar="|" font="TextFont;20" leftColAlign="left" noWrap="1" rightColAlign="left" split="1" transparent="1" />
+		<widget name="information" position="400,80" size="830,520" colPosition="320" conditional="information" divideChar="|" font="TextFont;20" leftColAlign="left" noWrap="1" rightColAlign="left" split="1" transparent="1" />
+		<widget name="description" position="400,600" size="830,25" conditional="description" font="TextFont;20" foregroundColor="TextDisabled" halign="center" noWrap="1" transparent="1" valign="center" />
 	</screen>
 
-	<screen name="InformationImage" title="Receiver Image" position="fill" flags="wfNoBorder">
+	<screen name="InformationImage" title="Receiver Images" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateBranding" />
 		<widget name="name" position="400,80" size="830,25" font="TextFont;20" halign="center" transparent="1" valign="center" />

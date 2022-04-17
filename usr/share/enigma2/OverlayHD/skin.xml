@@ -443,6 +443,7 @@
 		<parameter name="HelpMenuListExtHlp0" value="0,0,900,35" />
 		<parameter name="HelpMenuListExtHlp1" value="0,42,900,25" />
 		<!--
+		<parameter name="InformationColors" value="White,White,White,0x00cccccc,0x00cccccc,0x00ffff00,White" documentation="Normal, Headings, Subheadings, Prompts, Values, Messages, Features" />
 		<parameter name="PartnerBoxEntryListName" value="8,2,225,38" />
 		<parameter name="PartnerBoxEntryListIP" value="180,2,225,38" />
 		<parameter name="PartnerBoxEntryListPort" value="405,2,150,38" />
