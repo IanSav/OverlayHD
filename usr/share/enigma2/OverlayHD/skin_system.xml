@@ -761,6 +761,24 @@ except Exception:
 		<eLabel position="50,625" size="1160,1" backgroundColor="Pinstripe" />
 	</screen>
 
+<!-- VolumeAdjust Screen -->
+
+	<screen name="SmallChannelSelection" title="Volume Adjust Service Selection" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<ePixmap pixmap="menus/tv_channel.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
+		<widget name="list" position="400,80" size="830,575" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" />
+		<!-- 
+		<widget name="list" position="400,80" size="830,575" backgroundColor="MenuBackground" backgroundColorMarked="FAVMarkedBackground" backgroundColorMarkedSelected="FAVMarked" backgroundColorSelected="MenuSelected"
+			colorEventProgressbar="InfoProgressColor" colorEventProgressbarBorder="InfoProgressBorder" colorEventProgressbarBorderSelected="InfoProgressBorder" colorEventProgressbarSelected="InfoProgressColor"
+			colorFallbackItem="Magenta" colorServiceDescription="FAVService" colorServiceDescriptionFallback="FAVServiceFallback" colorServiceDescriptionSelected="FAVServiceSelected"
+			colorServiceDescriptionSelectedFallback="FAVServiceSelectedFallback" colorServiceRecorded="InfoRecordingColor" colorServiceSelectedFallback="FAVServiceSelectedFallback"
+			enableWrapAround="1" fieldMargins="10" foregroundColor="MenuText" foregroundColorEventborder="Red" foregroundColorEventborderSelected="Yellow" foregroundColorMarked="FAVServiceMarked"
+			foregroundColorMarkedSelected="FAVServiceMarkedSelected" foregroundColorSelected="MenuTextSelected" foregroundColorServiceNotAvail="FAVServiceNotAvailable"
+			progressbarHeight="6" progressbarBorderWidth="1" progressBarWidth="50" scrollbarMode="showOnDemand" serviceInfoFont="FAVEventFont;20" serviceItemHeight="25" serviceNameFont="FAVServiceFont;20" serviceNumberFont="FAVLCNFont;20" />
+		<widget name="chosenletter" position="400,80" size="830,575" font="FAVServiceFont;100" conditional="chosenletter" foregroundColor="FindCharacter" halign="center" transparent="1" valign="center" zPosition="+1" />
+		-->
+	</screen>
+
 <!-- AutoTimer Plugin Screens -->
 
 	<screen name="AutoTimerOverview" title="Auto Timer Overview" position="fill" flags="wfNoBorder">
