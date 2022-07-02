@@ -2343,7 +2343,7 @@
 			<convert type="ConditionalShowHide">Invert,Blink,375</convert>
 		</widget>
 		<ePixmap pixmap="icons/signal_strength.png" position="0,0" size="10,15" alphatest="blend" transparent="1" zPosition="+1" />
-		<widget source="session.FrontendStatus" render="Progress" pixmap="sliders/agc_snr.png" position="15,5" size="100,6" borderColor="TunerBorder" borderWidth="1" zPosition="+1">
+		<widget source="session.FrontendStatus" render="Progress" pixmap="sliders/agc_snr.png" position="15,5" size="100,6" backgroundColor="TunerBackground" borderColor="TunerBorder" borderWidth="1" zPosition="+1">
 			<convert type="FrontendInfo">AGC</convert>
 		</widget>
 		<widget source="session.FrontendStatus" render="Label" position="120,0" size="40,15" backgroundColor="TunerBackground" font="Regular;15" foregroundColor="TunerData" halign="right" transparent="1" valign="center" zPosition="+1">
@@ -2351,7 +2351,7 @@
 		</widget>
 		<!-- SNR label, bar and percentage -->
 		<ePixmap pixmap="icons/signal_quality.png" position="0,15" size="10,15" alphatest="blend" transparent="1" zPosition="+1" />
-		<widget source="session.FrontendStatus" render="Progress" pixmap="sliders/agc_snr.png" position="15,20" size="100,6" borderColor="TunerBorder" borderWidth="1" zPosition="+1">
+		<widget source="session.FrontendStatus" render="Progress" pixmap="sliders/agc_snr.png" position="15,20" size="100,6" backgroundColor="TunerBackground" borderColor="TunerBorder" borderWidth="1" zPosition="+1">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
 		<widget source="session.FrontendStatus" render="Label" position="120,15" size="40,15" backgroundColor="TunerBackground" font="Regular;15" foregroundColor="TunerData" halign="right" transparent="1" valign="center" zPosition="+1">
