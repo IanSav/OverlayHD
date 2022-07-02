@@ -28,11 +28,12 @@
 		<widget source="list" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
-				"template": [
-					# MultiContentEntryPixmapAlphaBlend(pos = (20, 4), size = (32, 32), png = 0),
-					# MultiContentEntryText(pos = (70, 0), size = (760, 40), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1)
-					MultiContentEntryText(pos = (20, 0), size = (810, 35), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1)
-				],
+				"template":
+					[
+					# MultiContentEntryPixmapAlphaBlend(pos=(20, 4), size=(32, 32), png=0),
+					# MultiContentEntryText(pos=(70, 0), size=(760, 40), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=1)
+					MultiContentEntryText(pos=(20, 0), size=(810, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=1)
+					],
 				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
 				}
@@ -55,9 +56,10 @@
 		<widget source="list" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
-				"template": [
-					MultiContentEntryText(pos = (20, 0), size = (810, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1)
-				],
+				"template":
+					[
+					MultiContentEntryText(pos=(20, 0), size=(810, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=1)
+					],
 				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
 				}
@@ -71,11 +73,12 @@
 		<widget source="list" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
-				"template": [
-					MultiContentEntryPixmapAlphaBlend(pos = (20, 2), size = (32, 32), png = 0),
-					MultiContentEntryText(pos = (70, 0), size = (370, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
-					MultiContentEntryText(pos = (460, 0), size = (370, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2)
-				],
+				"template":
+					[
+					MultiContentEntryPixmapAlphaBlend(pos=(20, 2), size=(32, 32), png=0),
+					MultiContentEntryText(pos=(70, 0), size=(370, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=1),
+					MultiContentEntryText(pos=(460, 0), size=(370, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=2)
+					],
 				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
 				}
@@ -111,11 +114,12 @@
 		<widget source="list" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
-				"template": [
-					MultiContentEntryPixmapAlphaBlend(pos = (20, 2), size = (32, 32), png = 0),
-					MultiContentEntryText(pos = (70, 0), size = (400, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
-					MultiContentEntryText(pos = (490, 0), size = (340, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2),
-				],
+				"template":
+					[
+					MultiContentEntryPixmapAlphaBlend(pos=(20, 2), size=(32, 32), png=0),
+					MultiContentEntryText(pos=(70, 0), size=(400, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=1),
+					MultiContentEntryText(pos=(490, 0), size=(340, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=2)
+					],
 				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
 				}
@@ -157,8 +161,8 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (10, 0), size = (80, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2, backcolor = MultiContentTemplateColor(3)),
-					MultiContentEntryText(pos = (110, 0), size = (170, 25), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 1, backcolor = MultiContentTemplateColor(3)),
+					MultiContentEntryText(pos=(10, 0), size=(80, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=2, backcolor=MultiContentTemplateColor(3)),
+					MultiContentEntryText(pos=(110, 0), size=(170, 25), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=1, backcolor=MultiContentTemplateColor(3))
 					],
 				"fonts": [parseFont("Regular;20")],
 				"itemHeight": 25
@@ -187,9 +191,9 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (10, 0), size = (80, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2, backcolor = MultiContentTemplateColor(4)),
-					MultiContentEntryText(pos = (110, 0), size = (170, 25), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 1, backcolor = MultiContentTemplateColor(4)),
-					MultiContentEntryText(pos = (300, 0), size = (80, 25), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 3, backcolor = MultiContentTemplateColor(4))
+					MultiContentEntryText(pos=(10, 0), size=(80, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=2, backcolor=MultiContentTemplateColor(4)),
+					MultiContentEntryText(pos=(110, 0), size=(170, 25), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=1, backcolor=MultiContentTemplateColor(4)),
+					MultiContentEntryText(pos=(300, 0), size=(80, 25), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=3, backcolor=MultiContentTemplateColor(4))
 					],
 				"fonts": [parseFont("Regular;20")],
 				"itemHeight": 25
@@ -525,7 +529,7 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (20, 0), size = (790, 35), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1)  # Index 0 is the MenuText.
+					MultiContentEntryText(pos=(20, 0), size=(790, 35), flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=1)  # Menu text.
 					],
 				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
@@ -538,7 +542,7 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (0, 0), size = (810, 100), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 2)  # Index 2 is the Description.
+					MultiContentEntryText(pos=(0, 0), size=(810, 100), flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text=2)  # Description.
 					],
 				"fonts": [parseFont("DescriptionFont;20")],
 				"itemHeight": 100
@@ -633,7 +637,7 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (20, 0), size = (810, 35), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),
+					MultiContentEntryText(pos=(20, 0), size=(810, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=0)
 					],
 				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
@@ -733,9 +737,9 @@
 				{
 				"template":
 					[
-					MultiContentEntryPixmapAlphaBlend(pos = (10, 5), size = (70, 70), flags = BT_SCALE, png = 2),
-					MultiContentEntryText(pos = (110, 0), size = (720, 30), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),
-					MultiContentEntryText(pos = (130, 30), size = (700, 50), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
+					MultiContentEntryPixmapAlphaBlend(pos=(10, 5), size=(70, 70), flags=BT_SCALE, png=2),
+					MultiContentEntryText(pos=(110, 0), size=(720, 30), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=0),
+					MultiContentEntryText(pos=(130, 30), size=(700, 50), font=1, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=1)
 					],
 				"fonts": [parseFont("TextFont;24"), parseFont("TextFont;20")],
 				"itemHeight": 80
@@ -875,10 +879,10 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (20, 0), size = (810, 30), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0), # index 0 is the name
-					MultiContentEntryText(pos = (40, 30), size = (790, 20), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2), # index 2 is the description
-					MultiContentEntryPixmapAlphaBlend(pos = (760, 1), size = (48, 48), flags = BT_SCALE, png = 4), # index 4 is the status pixmap
-					# MultiContentEntryPixmapAlphaBlend(pos = (5, 50), size = (610, 2), png = 5), # index 4 is the div pixmap
+					MultiContentEntryText(pos=(20, 0), size=(810, 30), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=0),  # Name.
+					MultiContentEntryText(pos=(40, 30), size=(790, 20), font=1, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=2),  # Description.
+					MultiContentEntryPixmapAlphaBlend(pos=(760, 1), size=(48, 48), flags=BT_SCALE, png=4)  # Status pixmap.
+					# MultiContentEntryPixmapAlphaBlend(pos=(5, 50), size=(610, 2), png=5)  # Div pixmap.
 					],
 				"fonts": [parseFont("MenuFont;24"), parseFont("MenuFont;15")],
 				"itemHeight": 50
@@ -1000,7 +1004,7 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (20, 0), size = (790, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),
+					MultiContentEntryText(pos=(20, 0), size=(790, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=0)
 					],
 				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
@@ -1052,10 +1056,10 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (20, 0), size = (680, 35), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
-					MultiContentEntryText(pos = (740, 0), size = (50, 35), flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = "&gt;")
+					MultiContentEntryText(pos=(15, 0), size=(735, 35), flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=1)
+					# MultiContentEntryText(pos=(760, 0), size=(30, 35), flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text="&gt;")
 					],
-				"fonts": [parseFont("Regular;25")],
+				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
 				}
 			</convert>
@@ -1066,9 +1070,9 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (0, 0), size = (810, 125), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 2), # index 0 is the MenuText,
+					MultiContentEntryText(pos=(0, 0), size=(810, 100), flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text=2)  # Menu text.
 					],
-				"fonts": [parseFont("Regular;20")],
+				"fonts": [parseFont("TextFont;20")],
 				"itemHeight": 125
 				}
 			</convert>
@@ -1102,16 +1106,16 @@
 					{
 					"default": (50,
 						[
-						MultiContentEntryText(pos = (20, 0), size = (740, 25), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0), # index 0 is the name
-						MultiContentEntryText(pos = (40, 25), size = (720, 25), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2, color = "TextIndented", color_sel = "TextIndentedSelected"), # index 2 is the description
-						MultiContentEntryPixmapAlphaBlend(pos = (760, 1), size = (48, 48), png = 5), # index 5 is the status pixmap
-						# MultiContentEntryPixmapAlphaBlend(pos = (0, 49), size = (650, 2), png = 6), # index 6 is the div pixmap
+						MultiContentEntryText(pos=(20, 0), size=(740, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=0),  # Name.
+						MultiContentEntryText(pos=(40, 25), size=(720, 25), font=1, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=2, color="TextIndented", color_sel="TextIndentedSelected"),  # Description.
+						MultiContentEntryPixmapAlphaBlend(pos=(760, 1), size=(48, 48), png=5)  # Status pixmap.
+						# MultiContentEntryPixmapAlphaBlend(pos=(0, 49), size=(650, 2), png=6)  # Div pixmap.
 						]),
 					"category": (50,
 						[
-						MultiContentEntryText(pos = (20, 0), size = (790, 25), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0), # index 0 is the name
-						MultiContentEntryText(pos = (40, 25), size = (770, 25), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1, color = "TextIndented", color_sel = "TextIndentedSelected"), # index 1 is the description
-						# MultiContentEntryPixmapAlphaBlend(pos = (0, 38), size = (650, 2), png = 3), # index 3 is the div pixmap
+						MultiContentEntryText(pos=(20, 0), size=(790, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=0),  # Name.
+						MultiContentEntryText(pos=(40, 25), size=(770, 25), font=1, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=1, color="TextIndented", color_sel="TextIndentedSelected")  # Description.
+						# MultiContentEntryPixmapAlphaBlend(pos=(0, 38), size=(650, 2), png=3)  # Div pixmap.
 						])
 					},
 				"fonts": [parseFont("Regular;22"), parseFont("Regular;18")],
@@ -1130,10 +1134,10 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (80, 0), size = (740, 25), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0), # index 0 is the name
-					MultiContentEntryText(pos = (100, 25), size = (720, 25), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1, color = "TextIndented", color_sel = "TextIndentedSelected"), # index 1 is the state
-					MultiContentEntryPixmapAlphaBlend(pos = (20, 1), size = (48, 48), png = 2), # index 2 is the status pixmap
-					# MultiContentEntryPixmapAlphaBlend(pos = (0, 49), size = (550, 2), png = 3), # index 3 is the div pixmap
+					MultiContentEntryText(pos=(80, 0), size=(740, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=0),  # Name.
+					MultiContentEntryText(pos=(100, 25), size=(720, 25), font=1, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=1, color="TextIndented", color_sel="TextIndentedSelected"),  # State.
+					MultiContentEntryPixmapAlphaBlend(pos=(20, 1), size=(48, 48), png=2)  # Status pixmap.
+					# MultiContentEntryPixmapAlphaBlend(pos=(0, 49), size=(550, 2), png=3)  # Div pixmap.
 					],
 				"fonts": [parseFont("Regular;22"), parseFont("Regular;18")],
 				"itemHeight": 50
@@ -1169,11 +1173,12 @@
 		<widget source="list" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0"><!-- scrollbarMode="showNever" selectionDisabled="1" -->
 			<convert type="TemplatedMultiContent">
 				{
-				"template": [
-					MultiContentEntryText(pos = (20, 0), size = (740, 25), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0), # index 0 is the name
-					MultiContentEntryText(pos = (40, 25), size = (720, 25), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2, color = "TextIndented", color_sel = "TextIndentedSelected"), # index 2 is the description
-					MultiContentEntryPixmapAlphaBlend(pos = (760, 1), size = (48, 48), png = 4), # index 4 is the status pixmap
-					# MultiContentEntryPixmapAlphaBlend(pos = (5, 58), size = (0, 0), png = 5), # index 4 is the div pixmap
+				"template":
+					[
+					MultiContentEntryText(pos=(20, 0), size=(740, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=0),  # Name.
+					MultiContentEntryText(pos=(40, 25), size=(720, 25), font=1, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=2, color="TextIndented", color_sel="TextIndentedSelected"),  # Description.
+					MultiContentEntryPixmapAlphaBlend(pos=(760, 1), size=(48, 48), png=4)  # Status pixmap.
+					# MultiContentEntryPixmapAlphaBlend(pos=(5, 58), size=(0, 0), png=5)  # Div pixmap.
 					],
 				"fonts": [parseFont("Regular;22"), parseFont("Regular;18")],
 				"itemHeight": 50
@@ -1189,10 +1194,10 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (60, 0), size = (250, 24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
-					MultiContentEntryText(pos = (60, 25), size = (640, 24), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the state
-					MultiContentEntryPixmapAlphaBlend(pos = (0, 1), size = (48, 48), png = 2), # index 2 is the status pixmap
-					# MultiContentEntryPixmapAlphaBlend(pos = (0, 49), size = (650, 2), png = 3), # index 3 is the div pixmap
+					MultiContentEntryText(pos=(60, 0), size=(250, 24), font=0, flags=RT_HALIGN_LEFT, text=0),  # Name.
+					MultiContentEntryText(pos=(60, 25), size=(640, 24), font=1, flags=RT_HALIGN_LEFT, text=1),  # State.
+					MultiContentEntryPixmapAlphaBlend(pos=(0, 1), size=(48, 48), png=2)  # Status pixmap.
+					# MultiContentEntryPixmapAlphaBlend(pos=(0, 49), size=(650, 2), png=3)  # Div pixmap.
 					],
 				"fonts": [parseFont("Regular;22"), parseFont("Regular;18")],
 				"itemHeight": 50

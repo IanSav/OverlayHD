@@ -416,10 +416,11 @@
 		<widget source="list" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
-				"template": [
-					# MultiContentEntryPixmapAlphaBlend(pos = (20, 2), size = (32, 32), png = 0),
-					MultiContentEntryText(pos = (20, 0), size = (810, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1)
-				],
+				"template":
+					[
+					# MultiContentEntryPixmapAlphaBlend(pos=(20, 2), size=(32, 32), png=0),
+					MultiContentEntryText(pos=(20, 0), size=(810, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=1)
+					],
 				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
 				}
@@ -433,10 +434,11 @@
 		<widget source="list" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
-				"template": [
-					MultiContentEntryText(pos = (20, 0), size = (720, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),
-					MultiContentEntryPixmapAlphaBlend(pos = (760, 2), size = (32, 32), png = 1)
-				],
+				"template":
+					[
+					MultiContentEntryText(pos=(20, 0), size=(720, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=0),
+					MultiContentEntryPixmapAlphaBlend(pos=(760, 2), size=(32, 32), png=1)
+					],
 				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
 				}
@@ -450,10 +452,11 @@
 		<widget source="list" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
-				"template": [
-					MultiContentEntryText(pos = (20, 0), size = (720, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),
-					MultiContentEntryPixmapAlphaBlend(pos = (760, 2), size = (32, 32), png = 1)
-				],
+				"template":
+					[
+					MultiContentEntryText(pos=(20, 0), size=(720, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=0),
+					MultiContentEntryPixmapAlphaBlend(pos=(760, 2), size=(32, 32), png=1)
+					],
 				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
 				}
@@ -532,11 +535,12 @@
 		<widget source="list" render="Listbox" position="400,80" size="830,560" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{
-				"template": [
-					MultiContentEntryText(pos = (10, 5), size = (420, 23), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),
-					MultiContentEntryText(pos = (50, 25), size = (380, 20), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
-					MultiContentEntryText(pos = (100, 47), size = (400, 17), font = 2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2)
-				],
+				"template":
+					[
+					MultiContentEntryText(pos=(10, 5), size=(420, 23), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=0),
+					MultiContentEntryText(pos=(50, 25), size=(380, 20), font=1, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=1),
+					MultiContentEntryText(pos=(100, 47), size=(400, 17), font=2, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=2)
+					],
 				"fonts": [parseFont("MenuFont;21"), parseFont("MenuFont;19"), parseFont("MenuFont;16")],
 				"itemHeight": 70
 				}

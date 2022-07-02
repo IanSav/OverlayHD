@@ -1458,8 +1458,8 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (20, 0), size = (790, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),
-					MultiContentEntryText(pos = (740, 0), size = (50, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4),
+					MultiContentEntryText(pos=(20, 0), size=(790, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=0),
+					MultiContentEntryText(pos=(740, 0), size=(50, 35), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=4)
 					],
 				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
@@ -1473,63 +1473,51 @@
 	<screen name="MenuEnigma2" title="Menu" position="fill" flags="wfNoBorder">
 		<widget name="menuimage" position="50,80" size="250,250" alphatest="blend" conditional="menuimage" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget source="menu" render="Listbox" position="400,80" size="830,455" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+			<!--
+			WIDGET_NUMBER_TEXT = 0
+			WIDGET_IMAGE = 1
+			WIDGET_NUMBER = 2
+			WIDGET_TEXT = 3
+			WIDGET_DESCRIPTION = 4
+			WIDGET_KEY = 5
+			WIDGET_WEIGHT = 6
+			WIDGET_MODULE = 7
+			-->
 			<convert type="TemplatedMultiContent">
 				{
 				"templates":
 					{
 					"default": (35,
 						[
-						MultiContentEntryText(pos = (20, 0), size = (810, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0)
+						MultiContentEntryText(pos=(15, 0), size=(810, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=0)
 						]),
-					"Text": (35,
+					"text": (35,
 						[
-						MultiContentEntryText(pos = (20, 0), size = (760, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4),
-						# MultiContentEntryText(pos = (790, 0), size = (20, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4)
+						MultiContentEntryText(pos=(15, 0), size=(760, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=3)
 						]),
-					"Number": (35,
+					"number": (35,
 						[
-						MultiContentEntryText(pos = (20, 0), size = (40, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 3),
-						MultiContentEntryText(pos = (80, 0), size = (700, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4),
-						# MultiContentEntryText(pos = (790, 0), size = (20, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4)
+						MultiContentEntryText(pos=(15, 0), size=(40, 35), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=2),
+						MultiContentEntryText(pos=(75, 0), size=(700, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=3)
 						]),
-					"Image": (35,
+					"image": (35,
 						[
-						MultiContentEntryPixmapAlphaBlend(pos = (20, 2), size = (31, 31), png = 6, flags = BT_SCALE | BT_KEEP_ASPECT_RATIO | BT_HALIGN_CENTER | BT_VALIGN_CENTER),
-						MultiContentEntryText(pos = (70, 0), size = (710, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4),
-						# MultiContentEntryText(pos = (790, 0), size = (20, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4)
+						MultiContentEntryPixmapAlphaBlend(pos=(15, 2), size=(31, 31), png=1, flags=BT_SCALE | BT_KEEP_ASPECT_RATIO | BT_HALIGN_CENTER | BT_VALIGN_CENTER),
+						MultiContentEntryText(pos=(65, 0), size=(710, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=3)
 						]),
-					"Both": (35,
+					"both": (35,
 						[
-						MultiContentEntryPixmapAlphaBlend(pos = (20, 2), size = (31, 31), png = 6, flags = BT_SCALE | BT_KEEP_ASPECT_RATIO | BT_HALIGN_CENTER | BT_VALIGN_CENTER),
-						MultiContentEntryText(pos = (55, 0), size = (40, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 3),
-						MultiContentEntryText(pos = (115, 0), size = (665, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4),
-						# MultiContentEntryText(pos = (790, 0), size = (20, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4)
+						MultiContentEntryPixmapAlphaBlend(pos=(15, 2), size=(31, 31), png=1, flags=BT_SCALE | BT_KEEP_ASPECT_RATIO | BT_HALIGN_CENTER | BT_VALIGN_CENTER),
+						MultiContentEntryText(pos=(50, 0), size=(40, 35), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=2),
+						MultiContentEntryText(pos=(110, 0), size=(665, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=3)
 						])
 					},
 				"fonts": [parseFont("MenuFont;25")],
-				"scrollbarMode": "showOnDemand",
-				"itemHeight": 35
+				"scrollbarMode": "showOnDemand"
 				}
 			</convert>
 		</widget>
 		<panel name="ScreenTemplateSDescription4" />
-	</screen>
-
-	<screen name="MenuEnhanced" title="Menu" position="fill" flags="wfNoBorder">
-		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
-			<convert type="TemplatedMultiContent">
-				{
-				"template":
-					[
-					MultiContentEntryText(pos = (65, 0), size = (655, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),
-					MultiContentEntryText(pos = (740, 0), size = (50, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4),
-					MultiContentEntryPixmapAlphaBlend(pos = (20, 5), size = (35, 25), png = 5)
-					],
-				"fonts": [parseFont("MenuFont;25")],
-				"itemHeight": 35
-				}
-			</convert>
-		</widget>
 	</screen>
 
 <!-- MENU - Beyonwiz Main Menu -->
@@ -1605,31 +1593,31 @@
 					# data[1:] = [helpText]
 					"default": (25,  # itemHeight
 						[
-						MultiContentEntryText(pos = (20, 0), size = (790, 25), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1)
+						MultiContentEntryText(pos=(20, 0), size=(790, 25), font=1, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=1)
 						]),
 					# Simple help with headings
 					# data[1:] = [heading, None]  # For heading entries
 					# data[1:] = [None, helpText]  # For help entries
 					"default+headings": (25,  # itemHeight
 						[
-						MultiContentEntryText(pos = (0, 0), size = (810, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
-						MultiContentEntryText(pos = (20, 0), size = (790, 25), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2)
+						MultiContentEntryText(pos=(0, 0), size=(810, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=1),
+						MultiContentEntryText(pos=(20, 0), size=(790, 25), font=1, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=2)
 						]),
 					# Extended help with no headings
 					# data[1:] = [helpText, extendedHelpText]
 					"extended": (25,  # itemHeight
 						[
-						MultiContentEntryText(pos = (20, 0), size = (790, 25), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1)
-						# MultiContentEntryText(pos = (50, 25), size = (760, 25), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2)
+						MultiContentEntryText(pos=(20, 0), size=(790, 25), font=1, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=1)
+						# MultiContentEntryText(pos=(50, 25), size=(760, 25), font=1, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=2)
 						]),
 					# Extended help with headings
 					# data[1:] = [heading, None, None]  # For heading entries
 					# data[1:] = [None, helpText, extendedHelpText]  # For help entries
 					"extended+headings": (25,  # itemHeight
 						[
-						MultiContentEntryText(pos = (0, 0), size = (810, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
-						MultiContentEntryText(pos = (20, 0), size = (790, 25), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2)
-						# MultiContentEntryText(pos = (50, 25), size = (760, 25), font = 2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3)
+						MultiContentEntryText(pos=(0, 0), size=(810, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=1),
+						MultiContentEntryText(pos=(20, 0), size=(790, 25), font=1, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=2)
+						# MultiContentEntryText(pos=(50, 25), size=(760, 25), font=2, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=3)
 						]),
 					},
 				"fonts": [parseFont("HelpFont;20"), parseFont("HelpFont;20"), parseFont("HelpFont;20")],
@@ -1653,15 +1641,15 @@
 					{
 					"default": (25,
 						[
-						MultiContentEntryText(pos = (0, 0), size = (810, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),  # Help label
-						MultiContentEntryText(pos = (20, 0), size = (790, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2)  # Help item
+						MultiContentEntryText(pos=(0, 0), size=(810, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=1),  # Help label.
+						MultiContentEntryText(pos=(20, 0), size=(790, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=2)  # Help item.
 						]),
 					"extended": (50,
 						[
-						MultiContentEntryText(pos = (0, 0), size = (810, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),  # Help label
-						MultiContentEntryText(pos = (20, 0), size = (790, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2),  # Help item
-						MultiContentEntryText(pos = (0, 25), size = (810, 25), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, color = "DarkGrey", color_sel = "Silver", text = 3),  # Help label (tupple with 1)
-						MultiContentEntryText(pos = (20, 25), size = (790, 25), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, color = "DarkGrey", color_sel = "Silver", text = 4),  # Help item (tupple with 2)
+						MultiContentEntryText(pos=(0, 0), size=(810, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=1),  # Help label.
+						MultiContentEntryText(pos=(20, 0), size=(790, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=2),  # Help item.
+						MultiContentEntryText(pos=(0, 25), size=(810, 25), font=1, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, color="DarkGrey", color_sel="Silver", text=3),  # Help label (tupple with 1).
+						MultiContentEntryText(pos=(20, 25), size=(790, 25), font=1, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, color="DarkGrey", color_sel="Silver", text=4)  # Help item (tupple with 2).
 						])
 					},
 				"fonts": [parseFont("HelpFont;20"), parseFont("HelpFont;20")],
@@ -1789,9 +1777,9 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (20, 0), size = (300, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
-					MultiContentEntryText(pos = (320, 0), size = (35, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 2),
-					# MultiContentEntryText(pos = (40, 35), size = (310, 20), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3)
+					MultiContentEntryText(pos=(20, 0), size=(300, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=1),
+					MultiContentEntryText(pos=(320, 0), size=(35, 35), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=2),
+					# MultiContentEntryText(pos=(40, 35), size=(310, 20), font=1, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=3)
 					],
 				"fonts": [parseFont("MenuFont;25"), parseFont("MenuFont;15")],
 				"itemHeight": 35,
@@ -1806,8 +1794,8 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (20, 0), size = (365, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
-					# MultiContentEntryText(pos = (40, 35), size = (345, 20), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2)
+					MultiContentEntryText(pos=(20, 0), size=(365, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=1)
+					# MultiContentEntryText(pos=(40, 35), size=(345, 20), font=1, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=2)
 					],
 				"fonts": [parseFont("MenuFont;25"), parseFont("MenuFont;15")],
 				"itemHeight": 35
@@ -1832,7 +1820,7 @@
 	</screen>
 
 <!--
- |	When the menu list and help text variables are rationalized the the Config 
+ |	When the menu list and help text variables are rationalized the the Config
  |	and Help blocks can be simplified and folded into the base templates.
  +-->
 
@@ -1908,7 +1896,7 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (20, 0), size = (790, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1)
+					MultiContentEntryText(pos=(20, 0), size=(790, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=1)
 					],
 				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
@@ -1927,7 +1915,7 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (20, 0), size = (790, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0)
+					MultiContentEntryText(pos=(20, 0), size=(790, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=0)
 					],
 				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
@@ -1946,10 +1934,10 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (20, 0), size = (400, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2, color = "Text", color_sel = "TextSelected"),  # Timer name
-					MultiContentEntryText(pos = (440, 0), size = (360, 25), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 3, color = "InfoChannel", color_sel = "InfoChannelSelected"),  # Service name
-					MultiContentEntryText(pos = (20, 25), size = (400, 25), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0, color = "InfoProgramNow", color_sel = "InfoProgramSelected"),  # Event name
-					MultiContentEntryText(pos = (440, 25), size = (360, 25), font = 1, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4, color = "InfoTimesNow", color_sel = "InfoTimesSelected")  # Event time
+					MultiContentEntryText(pos=(20, 0), size=(400, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=2, color="Text", color_sel="TextSelected"),  # Timer name.
+					MultiContentEntryText(pos=(440, 0), size=(360, 25), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=3, color="InfoChannel", color_sel="InfoChannelSelected"),  # Service name.
+					MultiContentEntryText(pos=(20, 25), size=(400, 25), font=1, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=0, color="InfoProgramNow", color_sel="InfoProgramSelected"),  # Event name.
+					MultiContentEntryText(pos=(440, 25), size=(360, 25), font=1, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=4, color="InfoTimesNow", color_sel="InfoTimesSelected")  # Event time.
 					],
 				"fonts": [parseFont("Regular;20"), parseFont("Regular;18")],
 				"itemHeight": 50
@@ -1961,7 +1949,7 @@
 	<screen name="ScreenTemplateOverlayText0">
 		<widget name="text" position="400,80" size="830,550" backgroundColor="TextBackground" font="Regular;25" foregroundColor="TextWaiting" halign="center" transparent="1" valign="center" zPosition="-1" />
 	</screen>
-	
+
 <!-- Configuration items with a two line text window -->
 
 	<screen name="ScreenTemplateConfig2">
@@ -2086,8 +2074,8 @@
 				{
 				"template":
 					[
-					MultiContentEntryPixmapAlphaBlend(pos = (20, 2), size = (31, 31), png = 1),
-					MultiContentEntryText(pos = (70, 0), size = (720, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0)
+					MultiContentEntryPixmapAlphaBlend(pos=(20, 2), size=(31, 31), png=1),
+					MultiContentEntryText(pos=(70, 0), size=(720, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=0)
 					],
 				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
@@ -2106,9 +2094,9 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (75, 0), size = (715, 35), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0), # index 0 is the Menu Title
-					MultiContentEntryText(pos = (95, 35), size = (695, 25), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2, color = "TextIndented", color_sel = "TextIndentedSelected"), # index 2 is the Description
-					MultiContentEntryPixmapAlphaBlend(pos = (20, 6), size = (48, 48), png = 3), # index 3 is the pixmap
+					MultiContentEntryText(pos=(75, 0), size=(715, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=0),  # Menu Title.
+					MultiContentEntryText(pos=(95, 35), size=(695, 25), font=1, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=2, color="TextIndented", color_sel="TextIndentedSelected"),  # Description.
+					MultiContentEntryPixmapAlphaBlend(pos=(20, 6), size=(48, 48), png=3)  # Pixmap.
 					],
 				"fonts": [parseFont("MenuFont;25"), parseFont("MenuFont;20")],
 				"itemHeight": 60
@@ -2127,13 +2115,13 @@
 				{
 				"template":
 					[
-					# MultiContentEntryText(pos = (20, 0), size = (280, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
-					# MultiContentEntryText(pos = (320, 0), size = (200, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 2)
+					# MultiContentEntryText(pos=(20, 0), size=(280, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=1),
+					# MultiContentEntryText(pos=(320, 0), size=(200, 35), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=2)
 					# 0=SortKey, 1=Label, 2=Flag, 3=Directory, 4=Skin, 5=Resolution, 6=Preview, 7=Label + Flag
-					MultiContentEntryText(pos = (20, 0), size = (250, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),
-					MultiContentEntryText(pos = (280, 0), size = (180, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 2),
-					MultiContentEntryText(pos = (470, 0), size = (50, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 5)
-					# MultiContentEntryText(pos = (20, 0), size = (440, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 7)
+					MultiContentEntryText(pos=(20, 0), size=(250, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=1),
+					MultiContentEntryText(pos=(280, 0), size=(180, 35), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=2),
+					MultiContentEntryText(pos=(470, 0), size=(50, 35), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=5)
+					# MultiContentEntryText(pos=(20, 0), size=(440, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=7)
 					],
 				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
@@ -2160,7 +2148,7 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (20, 0), size = (790, 35), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0), # index 0 is the name
+					MultiContentEntryText(pos=(20, 0), size=(790, 35), flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=0)  # Name.
 					],
 				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35

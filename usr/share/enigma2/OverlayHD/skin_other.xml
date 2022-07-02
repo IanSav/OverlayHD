@@ -25,8 +25,9 @@
 		<widget name="menu" position="0,0" size="580,233" backgroundColor="window-bg" foregroundColor="window-fg" render="Listbox" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
-				"template": [
-					MultiContentEntryText(pos = (20,0), size = (560,38), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0	)
+				"template":
+					[
+					MultiContentEntryText(pos=(20,0), size=(560,38), flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER, text=0)
 					],
 				"fonts": [parseFont("Regular;28")],
 				"itemHeight": 38
@@ -183,9 +184,10 @@
 		<widget source="menu" render="Listbox" position="10,10" size="1080,440" scrollbarMode="showOnDemand" transparent="1" zPosition="3">
 			<convert type="TemplatedMultiContent">
 				{
-				"template": [
-					MultiContentEntryText(pos = (80, 5), size = (990, 100), flags = RT_HALIGN_LEFT, text = 0, border_width=1),
-					MultiContentEntryPixmapAlphaBlend(pos = (5, 20), size = (64, 64), png = 1)
+				"template":
+					[
+					MultiContentEntryText(pos=(80, 5), size=(990, 100), flags=RT_HALIGN_LEFT, text=0, border_width=1),
+					MultiContentEntryPixmapAlphaBlend(pos=(5, 20), size=(64, 64), png=1)
 					],
 				"fonts": [parseFont("Regular;18")],
 				"itemHeight": 110
@@ -280,8 +282,9 @@
 		<widget source="content" render="Listbox" position="155,153" size="1060,383" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
-				"template": [
-					MultiContentEntryText(pos=(0, 3), size=(460, 294), font=0, flags = RT_HALIGN_LEFT|RT_WRAP, text = 0)
+				"template":
+					[
+					MultiContentEntryText(pos=(0, 3), size=(460, 294), font=0, flags=RT_HALIGN_LEFT|RT_WRAP, text=0)
 					],
 				"fonts": [parseFont("Regular;22")],
 				"itemHeight": 50
@@ -328,10 +331,11 @@
 		<widget source="menu" render="Listbox" position="150,50" size="780,450" scrollbarMode="showOnDemand" transparent="1" zPosition="3">
 			<convert type="TemplatedMultiContent">
 				{
-				"template": [
-					MultiContentEntryPixmapAlphaBlend(pos = (10, 8), size = (64, 64), png = 0),
-					MultiContentEntryText(pos = (90, 5), size = (660, 35), flags = RT_HALIGN_CENTER, text = 1, border_width=1),
-					MultiContentEntryText(pos = (90, 40), size = (660, 35), flags = RT_VALIGN_CENTER|RT_HALIGN_LEFT, text = 2, font=1)
+				"template":
+					[
+					MultiContentEntryPixmapAlphaBlend(pos=(10, 8), size=(64, 64), png=0),
+					MultiContentEntryText(pos=(90, 5), size=(660, 35), flags=RT_HALIGN_CENTER, text=1, border_width=1),
+					MultiContentEntryText(pos=(90, 40), size=(660, 35), flags=RT_VALIGN_CENTER|RT_HALIGN_LEFT, text=2, font=1)
 					],
 				"fonts": [parseFont("Regular;28"), parseFont("Regular;18")],
 				"itemHeight": 75

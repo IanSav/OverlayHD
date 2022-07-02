@@ -22,8 +22,8 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (20, 0), size = (700, 35), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),
-					MultiContentEntryText(pos = (740, 0), size = (50, 35), flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4),
+					MultiContentEntryText(pos=(20, 0), size=(700, 35), flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=0),
+					MultiContentEntryText(pos=(740, 0), size=(50, 35), flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=4)
 					],
 				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
@@ -63,7 +63,7 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (20, 0), size = (810, 35), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0)
+					MultiContentEntryText(pos=(20, 0), size=(810, 35), flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=0)
 					],
 				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
@@ -147,8 +147,8 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (20, 0), size = (700, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),
-					MultiContentEntryText(pos = (740, 0), size = (50, 35), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4),
+					MultiContentEntryText(pos=(20, 0), size=(700, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=0),
+					MultiContentEntryText(pos=(740, 0), size=(50, 35), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=4)
 					],
 				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
@@ -188,7 +188,7 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (20, 0), size = (810, 35), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0)
+					MultiContentEntryText(pos=(20, 0), size=(810, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=0)
 					],
 				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
@@ -253,11 +253,11 @@
 					# 00000000000000000000000000000 Heading
 					#  1111111 22222222222222222222 Indented Label / Value (Not wanted here so same as next)
 					# 33333333 44444444444444444444 Label / Value
-					MultiContentEntryText(pos = (20, 0), size = (790, 25), font = 0, flags = RT_HALIGN_LEFT, text = 0), # Index 0
-					MultiContentEntryText(pos = (20, 0), size = (215, 25), font = 0, flags = RT_HALIGN_LEFT, text = 1), # Index 1
-					MultiContentEntryText(pos = (260, 0), size = (530, 25), font = 0, flags = RT_HALIGN_LEFT, text = 2), # Index 2
-					MultiContentEntryText(pos = (20, 0), size = (215, 25), font = 0, flags = RT_HALIGN_LEFT, text = 3), # Index 3
-					MultiContentEntryText(pos = (260, 0), size = (530, 25), font = 0, flags = RT_HALIGN_LEFT, text = 4) # Index 4
+					MultiContentEntryText(pos=(20, 0), size=(790, 25), font=0, flags=RT_HALIGN_LEFT, text=0),
+					MultiContentEntryText(pos=(20, 0), size=(215, 25), font=0, flags=RT_HALIGN_LEFT, text=1),
+					MultiContentEntryText(pos=(260, 0), size=(530, 25), font=0, flags=RT_HALIGN_LEFT, text=2),
+					MultiContentEntryText(pos=(20, 0), size=(215, 25), font=0, flags=RT_HALIGN_LEFT, text=3),
+					MultiContentEntryText(pos=(260, 0), size=(530, 25), font=0, flags=RT_HALIGN_LEFT, text=4)
 					],
 				"fonts": [parseFont("Regular;20")],
 				"itemHeight": 25,
@@ -338,20 +338,20 @@
 					#   888888 9999 AAAAAA BBBBBBBB Filesystem Name / Filesystem Type / Filesystem Size / Filesystem Free
 					#  CCCCCCCCCCCCCCCCCCCCCCCCCCCC Wide Filesystem Name
 					#  DDDDDDDDDDDDDDDDDDDDDDDDDDDD Wide DLNA Name
-					MultiContentEntryText(pos = (20, 0), size = (790, 25), font = 0, flags = RT_HALIGN_LEFT, text = 0), # Index 0
-					MultiContentEntryText(pos = (45, 0), size = (195, 25), font = 0, flags = RT_HALIGN_LEFT, text = 1, color = "TextIndented"), # Index 1
-					MultiContentEntryText(pos = (260, 0), size = (530, 25), font = 0, flags = RT_HALIGN_LEFT, text = 2, color = "TextIndented"), # Index 2
-					MultiContentEntryText(pos = (20, 0), size = (215, 25), font = 0, flags = RT_HALIGN_LEFT, text = 3), # Index 3
-					MultiContentEntryText(pos = (260, 0), size = (530, 25), font = 0, flags = RT_HALIGN_LEFT, text = 4), # Index 4
-					MultiContentEntryText(pos = (45, 0), size = (195, 25), font = 0, flags = RT_HALIGN_LEFT, text = 5, color = "TextIndented"), # Index 5
-					MultiContentEntryText(pos = (260, 0), size = (310, 25), font = 0, flags = RT_HALIGN_LEFT, text = 6, color = "TextIndented"), # Index 6
-					MultiContentEntryText(pos = (590, 0), size = (200, 25), font = 0, flags = RT_HALIGN_RIGHT, text = 7, color = "TextIndented"), # Index 7
-					MultiContentEntryText(pos = (70, 0), size = (170, 25), font = 0, flags = RT_HALIGN_LEFT, text = 8, color = "TextIndented"), # Index 8
-					MultiContentEntryText(pos = (260, 0), size = (110, 25), font = 0, flags = RT_HALIGN_LEFT, text = 9, color = "TextIndented"), # Index 9
-					MultiContentEntryText(pos = (390, 0), size = (190, 25), font = 0, flags = RT_HALIGN_RIGHT, text = 10, color = "TextIndented"), # Index A
-					MultiContentEntryText(pos = (600, 0), size = (190, 25), font = 0, flags = RT_HALIGN_RIGHT, text = 11, color = "TextIndented"), # Index B
-					MultiContentEntryText(pos = (45, 0), size = (745, 25), font = 0, flags = RT_HALIGN_LEFT, text = 12, color = "TextIndented"), # Index C
-					MultiContentEntryText(pos = (45, 0), size = (745, 25), font = 0, flags = RT_HALIGN_LEFT, text = 13, color = "TextIndented") # Index D
+					MultiContentEntryText(pos=(20, 0), size=(790, 25), font=0, flags=RT_HALIGN_LEFT, text=0),
+					MultiContentEntryText(pos=(45, 0), size=(195, 25), font=0, flags=RT_HALIGN_LEFT, text=1, color="TextIndented"),
+					MultiContentEntryText(pos=(260, 0), size=(530, 25), font=0, flags=RT_HALIGN_LEFT, text=2, color="TextIndented"),
+					MultiContentEntryText(pos=(20, 0), size=(215, 25), font=0, flags=RT_HALIGN_LEFT, text=3),
+					MultiContentEntryText(pos=(260, 0), size=(530, 25), font=0, flags=RT_HALIGN_LEFT, text=4),
+					MultiContentEntryText(pos=(45, 0), size=(195, 25), font=0, flags=RT_HALIGN_LEFT, text=5, color="TextIndented"),
+					MultiContentEntryText(pos=(260, 0), size=(310, 25), font=0, flags=RT_HALIGN_LEFT, text=6, color="TextIndented"),
+					MultiContentEntryText(pos=(590, 0), size=(200, 25), font=0, flags=RT_HALIGN_RIGHT, text=7, color="TextIndented"),
+					MultiContentEntryText(pos=(70, 0), size=(170, 25), font=0, flags=RT_HALIGN_LEFT, text=8, color="TextIndented"),
+					MultiContentEntryText(pos=(260, 0), size=(110, 25), font=0, flags=RT_HALIGN_LEFT, text=9, color="TextIndented"),
+					MultiContentEntryText(pos=(390, 0), size=(190, 25), font=0, flags=RT_HALIGN_RIGHT, text=10, color="TextIndented"),
+					MultiContentEntryText(pos=(600, 0), size=(190, 25), font=0, flags=RT_HALIGN_RIGHT, text=11, color="TextIndented"),
+					MultiContentEntryText(pos=(45, 0), size=(745, 25), font=0, flags=RT_HALIGN_LEFT, text=12, color="TextIndented"),
+					MultiContentEntryText(pos=(45, 0), size=(745, 25), font=0, flags=RT_HALIGN_LEFT, text=13, color="TextIndented")
 					],
 				"fonts": [parseFont("Regular;20")],
 				"itemHeight": 25,
@@ -402,9 +402,9 @@
 					[
 					# 00000000000000000000000000000 Heading
 					#  1111111 22222222222222222222 Indented Label / Value
-					MultiContentEntryText(pos = (20, 0), size = (790, 25), font = 0, flags = RT_HALIGN_LEFT, text = 0), # Index 0
-					MultiContentEntryText(pos = (45, 0), size = (195, 25), font = 0, flags = RT_HALIGN_LEFT, text = 1, color = "TextIndented"), # Index 1
-					MultiContentEntryText(pos = (260, 0), size = (530, 25), font = 0, flags = RT_HALIGN_LEFT, text = 2, color = "TextIndented") # Index 2
+					MultiContentEntryText(pos=(20, 0), size=(790, 25), font=0, flags=RT_HALIGN_LEFT, text=0),
+					MultiContentEntryText(pos=(45, 0), size=(195, 25), font=0, flags=RT_HALIGN_LEFT, text=1, color="TextIndented"),
+					MultiContentEntryText(pos=(260, 0), size=(530, 25), font=0, flags=RT_HALIGN_LEFT, text=2, color="TextIndented")
 					],
 				"fonts": [parseFont("Regular;20")],
 				"itemHeight": 25,
@@ -457,17 +457,17 @@
 					# 33333333 44444444444444444444 Label / Value
 					#  1111111 555555555 6666666666 Gateway Label / Gateway IP / Gateway Destination
 					# 33333333 777777777 888 9      Network Label / Interface Type / Link Label / Link Status Pixmap
-					MultiContentEntryText(pos = (20, 0), size = (790, 25), font = 0, flags = RT_HALIGN_LEFT, text = 0), # Index 0
-					MultiContentEntryText(pos = (45, 0), size = (195, 25), font = 0, flags = RT_HALIGN_LEFT, text = 1, color = "TextIndented"), # Index 1
-					MultiContentEntryText(pos = (260, 0), size = (530, 25), font = 0, flags = RT_HALIGN_LEFT, text = 2, color = "TextIndented"), # Index 2
-					MultiContentEntryText(pos = (20, 0), size = (215, 25), font = 0, flags = RT_HALIGN_LEFT, text = 3), # Index 3
-					MultiContentEntryText(pos = (260, 0), size = (530, 25), font = 0, flags = RT_HALIGN_LEFT, text = 4), # Index 4
-					MultiContentEntryText(pos = (260, 0), size = (270, 25), font = 0, flags = RT_HALIGN_LEFT, text = 5, color = "TextIndented"), # Index 5
-					MultiContentEntryText(pos = (550, 0), size = (240, 25), font = 0, flags = RT_HALIGN_LEFT, text = 6, color = "TextIndented"), # Index 6
-					MultiContentEntryText(pos = (260, 0), size = (270, 25), font = 0, flags = RT_HALIGN_LEFT, text = 7), # Index 7
-					MultiContentEntryText(pos = (550, 0), size = (150, 25), font = 0, flags = RT_HALIGN_LEFT, text = 8), # Index 8
-					# MultiContentEntryPixmapAlphaBlend(pos = (750, 6), size = (15, 16), png = 9) # Index 9
-					MultiContentEntryPixmapAlphaBlend(pos = (750, 3), size = (22, 22), png = 9) # Index 9
+					MultiContentEntryText(pos=(20, 0), size=(790, 25), font=0, flags=RT_HALIGN_LEFT, text=0),
+					MultiContentEntryText(pos=(45, 0), size=(195, 25), font=0, flags=RT_HALIGN_LEFT, text=1, color="TextIndented"),
+					MultiContentEntryText(pos=(260, 0), size=(530, 25), font=0, flags=RT_HALIGN_LEFT, text=2, color="TextIndented"),
+					MultiContentEntryText(pos=(20, 0), size=(215, 25), font=0, flags=RT_HALIGN_LEFT, text=3),
+					MultiContentEntryText(pos=(260, 0), size=(530, 25), font=0, flags=RT_HALIGN_LEFT, text=4),
+					MultiContentEntryText(pos=(260, 0), size=(270, 25), font=0, flags=RT_HALIGN_LEFT, text=5, color="TextIndented"),
+					MultiContentEntryText(pos=(550, 0), size=(240, 25), font=0, flags=RT_HALIGN_LEFT, text=6, color="TextIndented"),
+					MultiContentEntryText(pos=(260, 0), size=(270, 25), font=0, flags=RT_HALIGN_LEFT, text=7),
+					MultiContentEntryText(pos=(550, 0), size=(150, 25), font=0, flags=RT_HALIGN_LEFT, text=8),
+					# MultiContentEntryPixmapAlphaBlend(pos=(750, 6), size=(15, 16), png=9)
+					MultiContentEntryPixmapAlphaBlend(pos=(750, 3), size=(22, 22), png=9)
 					],
 				"fonts": [parseFont("Regular;20")],
 				"itemHeight": 25,
@@ -505,8 +505,8 @@
 				"template":
 					[
 					# 0000000000 111111111111111111 Label / Value
-					MultiContentEntryText(pos = (20, 0), size = (215, 25), font = 0, flags = RT_HALIGN_LEFT, text = 0), # Index 0
-					MultiContentEntryText(pos = (260, 0), size = (530, 25), font = 0, flags = RT_HALIGN_LEFT, text = 1) # Index 1
+					MultiContentEntryText(pos=(20, 0), size=(215, 25), font=0, flags=RT_HALIGN_LEFT, text=0),
+					MultiContentEntryText(pos=(260, 0), size=(530, 25), font=0, flags=RT_HALIGN_LEFT, text=1)
 					],
 				"fonts": [parseFont("Regular;20")],
 				"itemHeight": 25,
@@ -552,19 +552,19 @@
 					{
 					"default": (25,  # In top menu list.
 						[
-						# MultiContentEntryText(pos = (0, 0), size = (55, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),  # Key
-						MultiContentEntryText(pos = (5, 0),  size = (35, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2),  # Number
-						MultiContentEntryText(pos = (50, 0), size = (250, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3),  # Description
-						MultiContentEntryText(pos = (310, 0), size = (250, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4),  # Language
-						MultiContentEntryText(pos = (560, 0), size = (25, 25), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 5),  # Selection
+						# MultiContentEntryText(pos=(0, 0), size=(55, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=1),  # Key.
+						MultiContentEntryText(pos=(5, 0), size=(35, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=2),  # Number.
+						MultiContentEntryText(pos=(50, 0), size=(250, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=3),  # Description.
+						MultiContentEntryText(pos=(310, 0), size=(250, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=4),  # Language.
+						MultiContentEntryText(pos=(560, 0), size=(25, 25), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=5),  # Selection.
 						], True, "showNever"),
 					"notselected": (25,  # In Audio / Subtitle list.
 						[
-						# MultiContentEntryText(pos = (0, 0), size = (55, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),  # Key
-						MultiContentEntryText(pos = (5, 0),  size = (35, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2),  # Number
-						MultiContentEntryText(pos = (50, 0), size = (250, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3),  # Description
-						MultiContentEntryText(pos = (310, 0), size = (250, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 4),  # Language
-						MultiContentEntryText(pos = (560, 0), size = (25, 25), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 5),  # Selection
+						# MultiContentEntryText(pos=(0, 0), size=(55, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=1),  # Key.
+						MultiContentEntryText(pos=(5, 0), size=(35, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=2),  # Number.
+						MultiContentEntryText(pos=(50, 0), size=(250, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=3),  # Description.
+						MultiContentEntryText(pos=(310, 0), size=(250, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=4),  # Language.
+						MultiContentEntryText(pos=(560, 0), size=(25, 25), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=5),  # Selection.
 						], False, "showNever")
 					},
 				"fonts": [parseFont("MenuFont;20")],
@@ -636,10 +636,10 @@ except Exception:
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (20, 0), size = (790, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1), # Name
-					MultiContentEntryText(pos = (160, 25), size = (150, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2), # State
-					MultiContentEntryProgress(pos = (320, 28), size = (400, 19), percent = -3), # Progress
-					MultiContentEntryText(pos = (730, 25), size = (80, 25), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4), # Percentage
+					MultiContentEntryText(pos=(20, 0), size=(790, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=1),  # Name.
+					MultiContentEntryText(pos=(160, 25), size=(150, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=2),  # State.
+					MultiContentEntryProgress(pos=(320, 28), size=(400, 19), percent=-3),  # Progress.
+					MultiContentEntryText(pos=(730, 25), size=(80, 25), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=4)  # Percentage.
 					],
 				"fonts": [parseFont("Regular;20")],
 				"itemHeight": 50
@@ -904,8 +904,9 @@ except Exception:
 		<widget name="serverlist" position="240,130" size="800,370" scrollbarMode="showOnDemand" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
-				"template": [
-					MultiContentEntryText(pos = (25, 7), size = (550, 30), flags = RT_HALIGN_LEFT, text = 0)
+				"template":
+					[
+					MultiContentEntryText(pos=(25, 7), size=(550, 30), flags=RT_HALIGN_LEFT, text=0)
 					],
 				"fonts": [parseFont("Regular;24")],
 				"itemHeight": 40

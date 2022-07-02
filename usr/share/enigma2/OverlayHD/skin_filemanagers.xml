@@ -47,9 +47,9 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (0, 0), size = (150, 20), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2),  # index 2 is a octal (symbolic) mode
-					MultiContentEntryText(pos = (160, 0), size = (290, 20), font = 0, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 13),  # index 13 is the modification time
-					MultiContentEntryText(pos = (460, 0), size = (105, 20), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 11),  # index 11 is the scaled size
+					MultiContentEntryText(pos=(0, 0), size=(150, 20), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=2),  # Octal (symbolic) mode.
+					MultiContentEntryText(pos=(160, 0), size=(290, 20), font=0, flags=RT_HALIGN_CENTER | RT_VALIGN_CENTER, text=13),  # Modification time.
+					MultiContentEntryText(pos=(460, 0), size=(105, 20), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=11)  # Scaled size.
 					],
 				"fonts": [parseFont("Regular;18")],
 				"itemHeight": 20,
@@ -65,9 +65,9 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (0, 0), size = (150, 20), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 2),  # index 2 is a octal (symbolic) mode
-					MultiContentEntryText(pos = (160, 0), size = (290, 20), font = 0, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 13),  # index 13 is the modification time
-					MultiContentEntryText(pos = (460, 0), size = (105, 20), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 11),  # index 11 is the scaled size
+					MultiContentEntryText(pos=(0, 0), size=(150, 20), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=2),  # Octal (symbolic) mode.
+					MultiContentEntryText(pos=(160, 0), size=(290, 20), font=0, flags=RT_HALIGN_CENTER | RT_VALIGN_CENTER, text=13),  # Modification time.
+					MultiContentEntryText(pos=(460, 0), size=(105, 20), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=11)  # Scaled size.
 					],
 				"fonts": [parseFont("Regular;18")],
 				"itemHeight": 20,
@@ -93,8 +93,8 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (0, 0), size = (200, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0),  # index 0 is a label
-					MultiContentEntryText(pos = (220, 0), size = (590, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1),  # index 1 is the information
+					MultiContentEntryText(pos=(0, 0), size=(200, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=0),  # Label.
+					MultiContentEntryText(pos=(220, 0), size=(590, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=1)  # Information.
 					],
 				"fonts": [parseFont("Regular;20")],
 				"itemHeight": 25,

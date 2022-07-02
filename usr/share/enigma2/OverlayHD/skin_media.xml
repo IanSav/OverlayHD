@@ -149,8 +149,8 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (20, 0), size = (320, 30), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, font = 0, text = 0),
-					MultiContentEntryText(pos = (360, 0), size = (450, 30), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, font = 0, text = 1)
+					MultiContentEntryText(pos=(20, 0), size=(320, 30), flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, font=0, text=0),
+					MultiContentEntryText(pos=(360, 0), size=(450, 30), flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, font=0, text=1)
 					],
 				"fonts": [parseFont("Regular;20")],
 				"itemHeight": 30
@@ -298,11 +298,11 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (0, 0), size = (540, 20), font = 0, flags = RT_HALIGN_LEFT, text = 1), # index 1 Title,
-					MultiContentEntryText(pos = (0, 20), size = (430, 17), font = 1, flags = RT_HALIGN_LEFT, text = 2), # index 2 description,
-					MultiContentEntryText(pos = (560, 6), size = (120, 20), font = 1, flags = RT_HALIGN_LEFT, text = 3), # index 3 channel,
-					MultiContentEntryText(pos = (450, 20), size = (160, 17), font = 1, flags = RT_HALIGN_RIGHT, text = 4), # index 4 date,
-					MultiContentEntryText(pos = (620, 20), size = (58, 20), font = 1, flags = RT_HALIGN_LEFT, text = 5), # index 4 time,
+					MultiContentEntryText(pos=(0, 0), size=(540, 20), font=0, flags=RT_HALIGN_LEFT, text=1),  # Title.
+					MultiContentEntryText(pos=(0, 20), size=(430, 17), font=1, flags=RT_HALIGN_LEFT, text=2),  # Description.
+					MultiContentEntryText(pos=(560, 6), size=(120, 20), font=1, flags=RT_HALIGN_LEFT, text=3),  # Channel.
+					MultiContentEntryText(pos=(450, 20), size=(160, 17), font=1, flags=RT_HALIGN_RIGHT, text=4),  # Date.
+					MultiContentEntryText(pos=(620, 20), size=(58, 20), font=1, flags=RT_HALIGN_LEFT, text=5)  # Time.
 					],
 				"fonts": [parseFont("Regular;20"), parseFont("Regular;14")],
 				"itemHeight": 37
@@ -446,14 +446,14 @@
 					{
 					"default": (135,
 						[
-						MultiContentEntryPixmapAlphaBlend(pos = (10, 0), size = (180, 135), png = 0), # index 0 is the thumbnail
-						MultiContentEntryPixmapAlphaBlend(pos = (190, 0), size = (180, 135), png = 1), # index 0 is the thumbnail
-						MultiContentEntryPixmapAlphaBlend(pos = (370, 0), size = (180, 135), png = 2), # index 0 is the thumbnail
-						MultiContentEntryPixmapAlphaBlend(pos = (550, 0), size = (180, 135), png = 3), # index 0 is the thumbnail
+						MultiContentEntryPixmapAlphaBlend(pos=(10, 0), size=(180, 135), png=0),  # Thumbnail.
+						MultiContentEntryPixmapAlphaBlend(pos=(190, 0), size=(180, 135), png=1),  # Thumbnail.
+						MultiContentEntryPixmapAlphaBlend(pos=(370, 0), size=(180, 135), png=2),  # Thumbnail.
+						MultiContentEntryPixmapAlphaBlend(pos=(550, 0), size=(180, 135), png=3)  # Thumbnail.
 						]),
 					"state": (135,
 						[
-						MultiContentEntryText(pos = (0, 35), size = (740, 65), font=2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER| RT_WRAP, text = 0), # index 0 is the name
+						MultiContentEntryText(pos=(0, 35), size=(740, 65), font=2, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER| RT_WRAP, text=0)  # Name.
 						])
 					},
 				"fonts": [parseFont("Regular;20"), parseFont("Regular;14"), parseFont("Regular;28")],
@@ -482,10 +482,10 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (10, 3), size = (230, 24), font=1, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the name
-					MultiContentEntryText(pos = (250, 3), size = (180, 24), font=1, flags = RT_HALIGN_RIGHT, text = 2), # index 2 is the state
-					MultiContentEntryProgress(pos = (440, 3), size = (100, 24), percent = -3), # index 3 should be progress
-					MultiContentEntryText(pos = (550, 3), size = (70, 24), font=1, flags = RT_HALIGN_RIGHT, text = 4), # index 4 is the percentage
+					MultiContentEntryText(pos=(10, 3), size=(230, 24), font=1, flags=RT_HALIGN_LEFT, text=1),  # Name.
+					MultiContentEntryText(pos=(250, 3), size=(180, 24), font=1, flags=RT_HALIGN_RIGHT, text=2),  # State.
+					MultiContentEntryProgress(pos=(440, 3), size=(100, 24), percent=-3),  # Progress.
+					MultiContentEntryText(pos=(550, 3), size=(70, 24), font=1, flags=RT_HALIGN_RIGHT, text=4)  # Percentage.
 					],
 				"fonts": [parseFont("Regular;22"), parseFont("Regular;18")],
 				"itemHeight": 30
@@ -511,17 +511,17 @@
 					{
 					"default": (85,
 						[
-						MultiContentEntryPixmapAlphaBlend(pos = (5, 1), size = (100, 75), png = 4),
-						MultiContentEntryText(pos = (110, 1), size = (590, 25), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 1),
-						MultiContentEntryText(pos = (110, 27), size = (300, 20), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 5),
-						MultiContentEntryText(pos = (110, 48), size = (300, 20), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 6),
-						MultiContentEntryText(pos = (400, 27), size = (200, 20), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 7),
-						MultiContentEntryText(pos = (400, 48), size = (200, 20), font=1, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 8),
+						MultiContentEntryPixmapAlphaBlend(pos=(5, 1), size=(100, 75), png=4),
+						MultiContentEntryText(pos=(110, 1), size=(590, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text=1),
+						MultiContentEntryText(pos=(110, 27), size=(300, 20), font=1, flags=RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text=5),
+						MultiContentEntryText(pos=(110, 48), size=(300, 20), font=1, flags=RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text=6),
+						MultiContentEntryText(pos=(400, 27), size=(200, 20), font=1, flags=RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text=7),
+						MultiContentEntryText(pos=(400, 48), size=(200, 20), font=1, flags=RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text=8)
 						]),
 					"state": (85,
 						[
-						MultiContentEntryText(pos = (20, 1), size = (560, 40), font=2, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 0),
-						MultiContentEntryText(pos = (20, 43), size = (560, 30), font=3, flags = RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text = 1),
+						MultiContentEntryText(pos=(20, 1), size=(560, 40), font=2, flags=RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text=0),
+						MultiContentEntryText(pos=(20, 43), size=(560, 30), font=3, flags=RT_HALIGN_LEFT | RT_VALIGN_TOP| RT_WRAP, text=1)
 						])
 					},
 				"fonts": [parseFont("Regular;20"), parseFont("Regular;16"), parseFont("Regular;22"), parseFont("Regular;18")],
@@ -542,8 +542,8 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (10, 1), size = (380, 24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
-					MultiContentEntryText(pos = (390, 1), size = (180, 24), font=1, flags = RT_HALIGN_RIGHT, text = 1), # index 1 are the rtesults
+					MultiContentEntryText(pos=(10, 1), size=(380, 24), font=0, flags=RT_HALIGN_LEFT, text=0),  # Name.
+					MultiContentEntryText(pos=(390, 1), size=(180, 24), font=1, flags=RT_HALIGN_RIGHT, text=1)  # Results.
 					],
 				"fonts": [parseFont("Regular;22"), parseFont("Regular;18")],
 				"itemHeight": 25
@@ -558,7 +558,7 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (10, 1), size = (340, 24), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+					MultiContentEntryText(pos=(10, 1), size=(340, 24), font=0, flags=RT_HALIGN_LEFT, text=0)  # Name.
 					],
 				"fonts": [parseFont("Regular;22"), parseFont("Regular;18")],
 				"itemHeight": 25
@@ -577,7 +577,7 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (20, 0), size = (790, 35), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, font = 0, text = 0)
+					MultiContentEntryText(pos=(20, 0), size=(790, 35), flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, font=0, text=0)
 					],
 				"fonts": [parseFont("Regular;25")],
 				"itemHeight": 35
@@ -596,17 +596,17 @@
 					{
 					"default": (75,
 						[
-						MultiContentEntryPixmapAlphaBlend(pos = (0, 0), size = (100, 75), png = 4), # index 4 is the thumbnail
-						MultiContentEntryText(pos = (120, 0), size = (670, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 1), # index 1 is the Title
-						MultiContentEntryText(pos = (120, 25), size = (320, 25), font = 1, color = "TextIndented", color_sel = "TextIndentedSelected", flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 5), # index 5 is the Published Date
-						MultiContentEntryText(pos = (120, 50), size = (320, 25), font = 1, color = "TextIndented", color_sel = "TextIndentedSelected", flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 6), # index 6 is the Views Count
-						MultiContentEntryText(pos = (460, 25), size = (330, 25), font = 1, color = "TextIndented", color_sel = "TextIndentedSelected", flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 7), # index 7 is the duration
-						MultiContentEntryText(pos = (460, 50), size = (330, 25), font = 1, color = "TextIndented", color_sel = "TextIndentedSelected", flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 8), # index 8 is the ratingcount
+						MultiContentEntryPixmapAlphaBlend(pos=(0, 0), size=(100, 75), png=4),  # index 4 is the thumbnail
+						MultiContentEntryText(pos=(120, 0), size=(670, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text=1),  # index 1 is the Title
+						MultiContentEntryText(pos=(120, 25), size=(320, 25), font=1, color="TextIndented", color_sel="TextIndentedSelected", flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text=5),  # Published date.
+						MultiContentEntryText(pos=(120, 50), size=(320, 25), font=1, color="TextIndented", color_sel="TextIndentedSelected", flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text=6),  # Views count.
+						MultiContentEntryText(pos=(460, 25), size=(330, 25), font=1, color="TextIndented", color_sel="TextIndentedSelected", flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text=7),  # Duration.
+						MultiContentEntryText(pos=(460, 50), size=(330, 25), font=1, color="TextIndented", color_sel="TextIndentedSelected", flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text=8)  # Rating count.
 						]),
 					"status": (75,
 						[
-						MultiContentEntryText(pos = (20, 0), size = (790, 50), font=2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 0), # index 0 is the name
-						MultiContentEntryText(pos = (20, 50), size = (790, 25), font=3, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 1), # index 2 is the description
+						MultiContentEntryText(pos=(20, 0), size=(790, 50), font=2, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text=0),  # Name.
+						MultiContentEntryText(pos=(20, 50), size=(790, 25), font=3, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text=1)  # Description.
 						])
 					},
 				"fonts": [parseFont("Regular;22"), parseFont("Regular;18"), parseFont("Regular;25"), parseFont("Regular;20")],
@@ -638,10 +638,10 @@
 				{
 				"template":
 					[
-					MultiContentEntryPixmapAlphaBlend(pos = (0, 1), size = (100, 72), png = 2), # Thumbnail
-					MultiContentEntryText(pos = (110, 5), size = (730, 45), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text = 3), # Title
-					MultiContentEntryText(pos = (610, 50), size = (200, 20), font = 1, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4), # Views
-					MultiContentEntryText(pos = (400, 50), size = (200, 20), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 5), # Duration
+					MultiContentEntryPixmapAlphaBlend(pos=(0, 1), size=(100, 72), png=2),  # Thumbnail
+					MultiContentEntryText(pos=(110, 5), size=(730, 45), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text=3),  # Title.
+					MultiContentEntryText(pos=(610, 50), size=(200, 20), font=1, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=4),  # Views.
+					MultiContentEntryText(pos=(400, 50), size=(200, 20), font=1, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=5)  # Duration.
 					],
 				"fonts": [parseFont("Regular;20"), parseFont("Regular;18")],
 				"itemHeight": 75
@@ -675,7 +675,7 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (20, 0), size = (810, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0)
+					MultiContentEntryText(pos=(20, 0), size=(810, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=0)
 					],
 				"fonts": [parseFont("Regular;20")],
 				"itemHeight": 25
@@ -698,10 +698,10 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos = (20, 0), size = (360, 25), font = 0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 1), # Title
-					MultiContentEntryText(pos = (390, 0), size = (120, 25), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 2), # State
-					MultiContentEntryProgress( pos = (520, 3), size = (200, 19), percent = -3), # Progress
-					MultiContentEntryText(pos = (730, 0), size = (80, 25), font = 0, flags = RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text = 4), # Percentage
+					MultiContentEntryText(pos=(20, 0), size=(360, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=1),  # Title.
+					MultiContentEntryText(pos=(390, 0), size=(120, 25), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=2),  # State.
+					MultiContentEntryProgress( pos=(520, 3), size=(200, 19), percent=-3),  # Progress.
+					MultiContentEntryText(pos=(730, 0), size=(80, 25), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=4)  # Percentage.
 					],
 				"fonts": [parseFont("Regular;20")],
 				"itemHeight": 25
