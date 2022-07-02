@@ -537,7 +537,7 @@
 			</convert>
 		</widget>
 		<panel name="ScreenTemplateFrame830x120" />
-		<widget source="menu" render="Listbox" position="410,550" size="810,100" scrollbarMode="showNever" selectionDisabled="1">
+		<widget source="menu" render="Listbox" position="410,550" size="810,100" scrollbarMode="showNever" selection="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":

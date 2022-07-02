@@ -2610,7 +2610,7 @@
 		<eLabel position="415,200" size="2,45" backgroundColor="Pinstripe" />
 		<eLabel position="1229,200" size="2,45" backgroundColor="Pinstripe" />
 		<widget name="text" position="420,210" size="800,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" noWrap="1" transparent="1" valign="center" />
-		<widget name="list" position="500,300" size="630,225" selectionDisabled="1" transparent="1" />
+		<widget name="list" position="500,300" size="630,225" selection="0" transparent="1" />
 		<widget name="mode" position="1170,400" size="60,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" halign="right" transparent="1" valign="center" />
 		<widget name="locale" position="420,630" size="600,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
 		<widget name="language" position="1030,630" size="200,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" halign="right" transparent="1" valign="center" />
@@ -2624,7 +2624,7 @@
 		<eLabel position="15,80" size="2,45" backgroundColor="Pinstripe" />
 		<eLabel position="644,80" size="2,45" backgroundColor="Pinstripe" />
 		<widget name="text" position="20,90" size="620,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" noWrap="1" transparent="1" valign="center" />
-		<widget name="list" position="15,140" size="630,225" selectionDisabled="1" transparent="1" />
+		<widget name="list" position="15,140" size="630,225" selection="0" transparent="1" />
 		<widget name="locale" position="15,375" size="570,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
 		<widget name="mode" position="585,375" size="60,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" halign="right" transparent="1" valign="center" />
 		<widget name="language" position="0,0" size="0,0" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" halign="right" transparent="1" valign="center" />

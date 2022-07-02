@@ -144,7 +144,7 @@
 	<screen name="Pic_Exif" title="Picture Information" position="fill" backgroundColor="PictureBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_photos_albums_user.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<widget source="menu" render="Listbox" position="400,80" size="830,540" backgroundColor="TextBackground" foregroundColor="Text" selectionDisabled="1" transparent="1">
+		<widget source="menu" render="Listbox" position="400,80" size="830,540" backgroundColor="TextBackground" foregroundColor="Text" selection="0" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -439,7 +439,7 @@
 		<widget name="tags" position="20,200" size="300,195" font="Regular;22" halign="left" transparent="1" valign="top" zPosition="10" />
 		<widget name="starsbg" pixmap="images/starsbar_empty.png" position="125,425" size="100,20" alphatest="blend" transparent="1" zPosition="5" />
 		<widget name="stars" pixmap="images/starsbar_filled.png" position="125,425" size="100,20" transparent="1" zPosition="6" />
-		<widget source="infolist" render="Listbox" position="350,60" size="740,135" scrollbarMode="showNever" selectionDisabled="1" transparent="1" zPosition="6">
+		<widget source="infolist" render="Listbox" position="350,60" size="740,135" scrollbarMode="showNever" selection="0" transparent="1" zPosition="6">
 			<convert type="TemplatedMultiContent">
 				{
 				"templates":
