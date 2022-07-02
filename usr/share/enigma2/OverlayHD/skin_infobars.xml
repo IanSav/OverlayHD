@@ -169,7 +169,7 @@
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
 		<!-- Now Event Progress Bar Area -->
-		<widget source="session.Event_Now" render="Progress" position="370,643" size="715,6" backgroundColor="InfoProgressBackground" borderColor="InfoProgressBorder" borderWidth="1" foregroundColor="InfoProgressColor" transparent="0">
+		<widget source="session.Event_Now" render="Progress" position="370,643" size="715,6" backgroundColor="InfoProgressBackground" borderColor="InfoProgressBorder" borderWidth="1" foregroundColor="InfoProgressColor">
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<!-- Next Event Start & End Times, Event Name and Duration Area -->
