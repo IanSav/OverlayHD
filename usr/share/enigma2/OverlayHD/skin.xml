@@ -1418,13 +1418,23 @@
 
 	<screen name="AnimMain" title="Menu" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget name="menuimage" position="490,100" size="300,250" alphatest="blend" conditional="menuimage" transparent="1" />
-		<widget name="title" position="286,515" size="708,35" backgroundColor="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" halign="center" noWrap="1" transparent="0" valign="center" />
-		<widget source="label1" render="Label" position="50,550" size="236,100" backgroundColor="MenuBackground" font="MenuFont;17" foregroundColor="MenuText" halign="center" transparent="1" valign="center" />
-		<widget source="label2" render="Label" position="286,550" size="236,100" backgroundColor="MenuBackground" font="MenuFont;21" foregroundColor="MenuText" halign="center" transparent="1" valign="center" />
-		<widget source="label3" render="Label" position="522,550" size="236,100" backgroundColor="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" halign="center" transparent="0" valign="center" />
-		<widget source="label4" render="Label" position="758,550" size="236,100" backgroundColor="MenuBackground" font="MenuFont;21" foregroundColor="MenuText" halign="center" transparent="1" valign="center" />
-		<widget source="label5" render="Label" position="994,550" size="236,100" backgroundColor="MenuBackground" font="MenuFont;17" foregroundColor="MenuText" halign="center" transparent="1" valign="center" />
+		<widget name="menuimage" position="50,80" size="150,150" alphatest="blend" conditional="menuimage" scaleFlags="scaleLeftTop" transparent="1" />
+		<widget source="label1" render="Label" position="50,550" size="160,50" backgroundColor="MenuSelected" font="MenuFont;17" foregroundColor="MenuDisabled" halign="center" valign="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="label2" render="Label" position="220,538" size="220,74" backgroundColor="MenuSelected" font="MenuFont;21" foregroundColor="MenuText" halign="center" valign="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="label3" render="Label" position="455,525" size="360,100" backgroundColor="MenuSelected" font="MenuFont;29" foregroundColor="MenuTextSelected" halign="center" valign="center" />
+		<widget source="label4" render="Label" position="830,538" size="220,74" backgroundColor="MenuSelected" font="MenuFont;21" foregroundColor="MenuText" halign="center" valign="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="label5" render="Label" position="1060,550" size="160,50" backgroundColor="MenuSelected" font="MenuFont;17" foregroundColor="MenuDisabled" halign="center" valign="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="description" render="Label" position="50,625" size="1180,25" backgroundColor="TextBackground" conditional="description" font="TextFont;20" foregroundColor="Text" halign="center" valign="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
 	</screen>
 
 	<screen name="Animmain" title="Menu" position="fill" flags="wfNoBorder">
@@ -1436,25 +1446,24 @@
 	<screen name="IconMain" title="Menu" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="menuimage" position="490,100" size="300,250" alphatest="blend" conditional="menuimage" transparent="1" />
-		<widget name="title" position="286,505" size="708,35" backgroundColor="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" halign="center" noWrap="1" transparent="0" valign="center" />
-		<widget source="label1" render="Label" position="50,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" halign="center" transparent="1" valign="center" />
+		<widget source="label1" render="Label" position="50,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" halign="center" valign="center" />
 		<widget source="label1s" render="Label" position="50,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuSelected" halign="center" transparent="1" valign="center" />
-		<widget source="label2" render="Label" position="248,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" halign="center" transparent="1" valign="center" />
+		<widget source="label2" render="Label" position="248,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" halign="center" valign="center" />
 		<widget source="label2s" render="Label" position="248,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuSelected" halign="center" transparent="1" valign="center" />
-		<widget source="label3" render="Label" position="446,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" halign="center" transparent="1" valign="center" />
+		<widget source="label3" render="Label" position="446,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" halign="center" valign="center" />
 		<widget source="label3s" render="Label" position="446,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuSelected" halign="center" transparent="1" valign="center" />
-		<widget source="label4" render="Label" position="644,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" halign="center" transparent="1" valign="center" />
+		<widget source="label4" render="Label" position="644,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" halign="center" valign="center" />
 		<widget source="label4s" render="Label" position="644,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuSelected" halign="center" transparent="1" valign="center" />
-		<widget source="label5" render="Label" position="842,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" halign="center" transparent="1" valign="center" />
+		<widget source="label5" render="Label" position="842,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" halign="center" valign="center" />
 		<widget source="label5s" render="Label" position="842,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuSelected" halign="center" transparent="1" valign="center" />
-		<widget source="label6" render="Label" position="1040,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" halign="center" transparent="1" valign="center" />
+		<widget source="label6" render="Label" position="1040,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" halign="center" valign="center" />
 		<widget source="label6s" render="Label" position="1040,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuSelected" halign="center" transparent="1" valign="center" />
-		<widget name="pixmap1" position="0,0" size="0,0" alphatest="blend" transparent="1" />
-		<widget name="pixmap2" position="0,0" size="0,0" alphatest="blend" transparent="1" />
-		<widget name="pixmap3" position="0,0" size="0,0" alphatest="blend" transparent="1" />
-		<widget name="pixmap4" position="0,0" size="0,0" alphatest="blend" transparent="1" />
-		<widget name="pixmap5" position="0,0" size="0,0" alphatest="blend" transparent="1" />
-		<widget name="pixmap6" position="0,0" size="0,0" alphatest="blend" transparent="1" />
+		<widget name="pixmap1" position="50,500" size="50,50" alphatest="blend" scale="1" transparent="1" />
+		<widget name="pixmap2" position="248,500" size="50,50" alphatest="blend" scale="1" transparent="1" />
+		<widget name="pixmap3" position="446,500" size="50,50" alphatest="blend" scale="1" transparent="1" />
+		<widget name="pixmap4" position="644,500" size="50,50" alphatest="blend" scale="1" transparent="1" />
+		<widget name="pixmap5" position="842,500" size="50,50" alphatest="blend" scale="1" transparent="1" />
+		<widget name="pixmap6" position="1040,500" size="50,50" alphatest="blend" scale="1" transparent="1" />
 	</screen>
 
 	<screen name="Iconmain" title="Menu" position="fill" flags="wfNoBorder">
