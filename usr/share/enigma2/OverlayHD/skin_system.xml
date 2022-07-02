@@ -907,6 +907,7 @@ except Exception:
 			<convert type="StringList" />
 		</widget>
 		<panel name="ScreenTemplateFrame830x120" />
+		<widget name="key" position="410,550" size="810,100" backgroundColor="TextBackground" conditional="key" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 <!-- VLC Transcoding Server Screens -->
