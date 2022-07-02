@@ -123,6 +123,25 @@
 		<panel name="ScreenTemplateSDescription4" />
 	</screen>
 
+<!-- Flash Image Screens -->
+
+	<screen name="FlashManager" title="Flash Manager" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateBranding" />
+		<widget name="list" position="400,80" size="830,455" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" />
+		<panel name="ScreenTemplateSDescription4" />
+	</screen>
+
+	<screen name="FlashOnline" title="Flash Manager" position="fill" flags="wfNoBorder">
+		<panel name="FlashManager" />
+	</screen>
+
+	<screen name="FlashImage" title="Flash Image" position="center,center" size="640,225" resolution="1280,720">
+		<widget name="header" position="0,0" size="e,50" font="Regular;35" valign="center" />
+		<widget name="info" position="0,60" size="e,130" font="Regular;25" valign="center" />
+		<widget name="progress" position="0,e-25" size="e,25" />
+	</screen>
+
 <!-- Information Menus and Screens -->
 
 	<!-- Information (MENU > Information) Menu -->
