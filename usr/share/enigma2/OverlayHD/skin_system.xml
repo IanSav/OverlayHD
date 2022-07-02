@@ -17,7 +17,7 @@
 	</screen>
 
 	<screen name="ShutdownBeyonwiz">
-		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -58,7 +58,7 @@
 		<panel name="Menu" />
 		<!--
 		<widget name="menuimage" position="50,80" size="250,250" alphatest="blend" conditional="menuimage" scaleFlags="scaleLeftTop" transparent="1" />
-		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -142,7 +142,7 @@
 	</screen>
 
 	<screen name="InformationBeyonwiz" title="Information(Skin)" position="fill" flags="wfNoBorder">
-		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -183,7 +183,7 @@
 		<panel name="Menu" />
 		<!--
 		<widget name="menuimage" position="50,100" size="300,500" alphatest="blend" conditional="menuimage" transparent="1" />
-		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -245,7 +245,7 @@
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/information.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateBranding" />
-		<widget source="list" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
+		<widget source="list" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -290,7 +290,7 @@
 		<panel name="ScreenTemplateBranding" />
 		<eLabel text="Translation:" position="400,80" size="830,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
 		<widget source="TranslatorName" render="Label" position="400,105" size="830,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
-		<widget source="TranslationInfo" render="Label" position="400,130" size="830,450" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" />
+		<widget source="TranslationInfo" render="Label" position="400,130" size="830,450" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" selectionDisabled="1" transparent="1" />
 	</screen>
 
 	<!-- Software Updates (MENU > Information > System Information > Software Updates) Screen -->
@@ -298,7 +298,7 @@
 	<screen name="SoftwareUpdateChanges" title="Software Update Changes" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<!-- <widget source="Title" render="Label" position="20,25" size="800,43" font="Boldit;32" transparent="1" foregroundColor="fullscreen-topbar-frgrnd" backgroundColor="fullscreen-topbar-bkgrnd" zPosition="1" /> -->
-		<widget name="text" position="50,80" size="1180,550" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" />
+		<widget name="text" position="50,80" size="1180,550" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" selectionDisabled="1" transparent="1" />
 	</screen>
 
 	<!-- Release Notes (MENU > Information > System Information > Release Notes) Screen -->
@@ -306,7 +306,7 @@
 	<screen name="AboutReleaseNotes" title="Release Notes" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateBranding" />
-		<widget name="list" position="400,80" size="830,560" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" />
+		<widget name="list" position="400,80" size="830,560" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" selectionDisabled="1" transparent="1" />
 	</screen>
 
 	<!-- Device Information (MENU > Information > Device Information) Screen -->
@@ -326,7 +326,7 @@
 	</screen>
 
 	<screen name="DevicesBeyonwiz" title="Device Information" position="fill" flags="wfNoBorder">
-		<widget source="list" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
+		<widget source="list" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -375,7 +375,7 @@
 	</screen>
 
 	<screen name="DevicesOpenATV" title="Device Information" position="fill" flags="wfNoBorder">
-		<widget name="allinonedevices" position="400,80" size="830,550" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" scrollbarMode="showOnDemand" />
+		<widget name="allinonedevices" position="400,80" size="830,550" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" />
 	</screen>
 
 	<!-- Memory Information (MENU > Information > Memory Information) Screen -->
@@ -395,7 +395,7 @@
 	</screen>
 
 	<screen name="SystemMemoryInfoBeyonwiz" title="Memory Information" position="fill" flags="wfNoBorder">
-		<widget source="list" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
+		<widget source="list" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -415,7 +415,7 @@
 	</screen>
 
 	<screen name="SystemMemoryInfoEnigma2" title="Memory Information" position="fill" flags="wfNoBorder">
-		<widget name="AboutScrollLabel" position="400,80" size="830,400" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="AboutScrollLabel" position="400,80" size="830,400" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" />
 	</screen>
 
 	<!-- Network Information (MENU > Information > Network Information) Screen -->
@@ -447,7 +447,7 @@
 		<eLabel text="Internet:" position="950,80" size="150,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
 		<widget name="inetstatus" pixmaps="buttons/button_small_green_off.png,buttons/button_small_green.png" position="1150,86" size="15,16" alphatest="blend" transparent="1" />
 		<eLabel position="400,124" size="830,2" backgroundColor="Pinstripe" />
-		<widget source="list" render="Listbox" position="400,150" size="830,475" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
+		<widget source="list" render="Listbox" position="400,150" size="830,475" backgroundColor="TextBackground" foregroundColor="Text" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -482,7 +482,7 @@
 		<widget source="IF" render="Label" position="560,80" size="450,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
 		<widget source="Statustext" render="Label" position="400,105" size="150,25" backgroundColor="TextBackground" font="Regular;22" foregroundColor="Text" transparent="1" />
 		<widget name="statuspic" position="562,111" size="15,16" pixmaps="buttons/button_small_green.png,buttons/button_small_green_off.png" alphatest="blend" transparent="1" />
-		<widget name="AboutScrollLabel" position="400,155" size="830,440" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="AboutScrollLabel" position="400,155" size="830,440" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" />
 	</screen>
 
 	<!-- Service Information (MENU > Information > Service Information) Screens -->
@@ -499,7 +499,7 @@
 	</screen>
 
 	<screen name="ServiceInfoBeyonwiz" title="Service Information" position="fill" flags="wfNoBorder">
-		<widget source="list" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
+		<widget source="list" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -517,7 +517,7 @@
 	</screen>
 
 	<screen name="ServiceInfoEnigma2" title="Service Information" position="fill" flags="wfNoBorder">
-		<widget name="infolist" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" />
+		<widget name="infolist" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" selectionDisabled="1" transparent="1" />
 	</screen>
 
 	<!-- Streaming Clients (MENU > Information > Streaming Clients) Screen -->
@@ -525,7 +525,7 @@
 	<screen name="StreamingClientsInfo" title="Streaming Client Information" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateBranding" />
-		<widget name="ScrollLabel" position="400,80" size="830,550" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" />
+		<widget name="ScrollLabel" position="400,80" size="830,550" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" selectionDisabled="1" transparent="1" />
 	</screen>
 
 <!-- AUDIO - Audio / Subtitle Selection Pop Up -->
@@ -543,9 +543,9 @@
 		<widget source="key_blue" render="Pixmap" pixmap="buttons/key_blue.png" position="5,110" size="35,25" alphatest="blend" transparent="1">
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget name="config" position="45,0" size="560,140" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;22" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showNever" transparent="0" />
+		<widget name="config" position="45,0" size="560,140" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;22" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showNever" transparent="0" />
 		<eLabel position="0,142" size="680,2" backgroundColor="Pinstripe" />
-		<widget source="streams" render="Listbox" position="5,150" size="600,150" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand">
+		<widget source="streams" render="Listbox" position="5,150" size="600,150" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected">
 			<convert type="TemplatedMultiContent">
 				{
 				"templates":
@@ -578,7 +578,7 @@
 <!-- Quick Subtitles Menu Screen -->
 
 	<screen name="QuickSubtitlesConfigMenu" title="Quick Subtitle Settings" position="62,92" size="500,345">
-		<widget name="config" position="5,5" size="490,300" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showNever" />
+		<widget name="config" position="5,5" size="490,300" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showNever" />
 		<widget name="videofps" position="5,315" size="490,25" backgroundColor="MenuBackground" font="MenuFont;20" foregroundColor="MenuText" valign="center" />
 		<widget name="HelpWindow" position="0,0" size="0,0" conditional="HelpWindow" transparent="1" />
 		<applet type="onLayoutFinish">
@@ -607,14 +607,14 @@ except Exception:
 
 	<screen name="LogManager" title="System Log" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget name="list" position="400,80" size="830,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="list" position="400,80" size="830,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" transparent="0" />
 		<panel name="ScreenTemplateFrame830x120" />
 		<widget name="LogsSize" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="LogManagerViewLog" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget name="list" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="list" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" transparent="1" />
 	</screen>
 
 <!-- Extension List Screen -->
@@ -623,7 +623,7 @@ except Exception:
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/plugins.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget name="text" position="400,80" size="830,35" backgroundColor="TextBackground" font="DescriptionFont;25" foregroundColor="Text" transparent="1" valign="center" />
-		<widget name="list" position="400,115" size="830,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" />
+		<widget name="list" position="400,115" size="830,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" />
 	</screen>
 
 <!-- Console / Task List Screen -->
@@ -631,7 +631,7 @@ except Exception:
 	<screen name="TaskListScreen" title="Task List" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_scan.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<widget source="tasklist" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1">
+		<widget source="tasklist" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -766,15 +766,15 @@ except Exception:
 	<screen name="SmallChannelSelection" title="Volume Adjust Service Selection" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/tv_channel.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<widget name="list" position="400,80" size="830,575" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" />
-		<!-- 
+		<widget name="list" position="400,80" size="830,575" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" />
+		<!--
 		<widget name="list" position="400,80" size="830,575" backgroundColor="MenuBackground" backgroundColorMarked="FAVMarkedBackground" backgroundColorMarkedSelected="FAVMarked" backgroundColorSelected="MenuSelected"
 			colorEventProgressbar="InfoProgressColor" colorEventProgressbarBorder="InfoProgressBorder" colorEventProgressbarBorderSelected="InfoProgressBorder" colorEventProgressbarSelected="InfoProgressColor"
 			colorFallbackItem="Magenta" colorServiceDescription="FAVService" colorServiceDescriptionFallback="FAVServiceFallback" colorServiceDescriptionSelected="FAVServiceSelected"
 			colorServiceDescriptionSelectedFallback="FAVServiceSelectedFallback" colorServiceRecorded="InfoRecordingColor" colorServiceSelectedFallback="FAVServiceSelectedFallback"
 			enableWrapAround="1" fieldMargins="10" foregroundColor="MenuText" foregroundColorEventborder="Red" foregroundColorEventborderSelected="Yellow" foregroundColorMarked="FAVServiceMarked"
 			foregroundColorMarkedSelected="FAVServiceMarkedSelected" foregroundColorSelected="MenuTextSelected" foregroundColorServiceNotAvail="FAVServiceNotAvailable"
-			progressbarHeight="6" progressbarBorderWidth="1" progressBarWidth="50" scrollbarMode="showOnDemand" serviceInfoFont="FAVEventFont;20" serviceItemHeight="25" serviceNameFont="FAVServiceFont;20" serviceNumberFont="FAVLCNFont;20" />
+			progressbarHeight="6" progressbarBorderWidth="1" progressBarWidth="50" serviceInfoFont="FAVEventFont;20" serviceItemHeight="25" serviceNameFont="FAVServiceFont;20" serviceNumberFont="FAVLCNFont;20" />
 		<widget name="chosenletter" position="400,80" size="830,575" font="FAVServiceFont;100" conditional="chosenletter" foregroundColor="FindCharacter" halign="center" transparent="1" valign="center" zPosition="+1" />
 		-->
 	</screen>
@@ -842,10 +842,10 @@ except Exception:
 	<!-- Default Wizard code - Actual code is in skin_wizards.xml
 	<screen name="AutoTimerWizard" position="0,0" size="720,576" title="Welcome..." flags="wfNoBorder" >
 		<widget name="text" position="153,40" size="340,300" font="Regular;22" />
-		<widget source="list" render="Listbox" position="53,340" size="440,180" scrollbarMode="showOnDemand" >
+		<widget source="list" render="Listbox" position="53,340" size="440,180" >
 			<convert type="StringList" />
 		</widget>
-		<widget name="config" position="53,340" zPosition="1" size="440,180" transparent="1" scrollbarMode="showOnDemand" />
+		<widget name="config" position="53,340" zPosition="1" size="440,180" transparent="1" />
 		<ePixmap pixmap="skin_default/buttons/button_red.png" position="40,225" zPosition="0" size="15,16" transparent="1" alphatest="blend" />
 		<widget name="languagetext" position="55,225" size="95,30" font="Regular;18" />
 		<widget name="wizard" pixmap="skin_default/wizard.png" position="40,50" zPosition="10" size="110,174" alphatest="blend" />
@@ -873,7 +873,7 @@ except Exception:
 		<widget name="lab2" position="420,115" size="360,35" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" transparent="0" valign="center" />
 		<widget name="labstop" position="790,115" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="Red" halign="right" transparent="0" valign="center" />
 		<widget name="labrun" position="790,115" size="420,35" backgroundColor="MenuBackground" font="MenuFont;22" foregroundColor="Green" halign="right" transparent="0" valign="center" />
-		<widget source="list" render="Listbox" position="400,150" size="830,350" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="list" render="Listbox" position="400,150" size="830,350" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" transparent="0">
 			<convert type="StringList" />
 		</widget>
 		<panel name="ScreenTemplateFrame830x120" />
@@ -889,8 +889,8 @@ except Exception:
 		<widget name="filelist_text" position="192,107" size="185,25" backgroundColor="TextBackground" font="Regular;20" halign="center" transparent="1" zPosition="4" />
 		<widget name="playlist_text" position="442,107" size="185,25" backgroundColor="TextBackground" font="Regular;20" halign="center" transparent="1" zPosition="4" />
 		<eLabel position="740,133" size="540,2" backgroundColor="Pinstripe" />
-		<widget name="filelist" position="140,145" size="500,375" scrollbarMode="showOnDemand" transparent="1" zPosition="3" />
-		<widget name="playlist" position="640,145" size="460,375" scrollbarMode="showOnDemand" transparent="1" zPosition="3" />
+		<widget name="filelist" position="140,145" size="500,375" transparent="1" zPosition="3" />
+		<widget name="playlist" position="640,145" size="460,375" transparent="1" zPosition="3" />
 		<widget name="key_red" position="240,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="KeyRed" halign="center" transparent="1" valign="center" zPosition="3" />
 		<widget name="key_green" position="440,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="KeyGreen" halign="center" transparent="1" valign="center" zPosition="3" />
 		<widget name="key_yellow" position="640,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="KeyYellow" halign="center" transparent="1" valign="center" zPosition="3" />
@@ -901,7 +901,7 @@ except Exception:
 	<screen name="VlcServerListScreen" title="Select a VLC-Server Profile" position="90,90" size="1100,576">
 		<widget name="serverlabel" position="250,80" size="850,22" font="Regular;20" transparent="1" />
 		<eLabel position="235,110" size="860,2" backgroundColor="Pinstripe" />
-		<widget name="serverlist" position="240,130" size="800,370" scrollbarMode="showOnDemand" transparent="1">
+		<widget name="serverlist" position="240,130" size="800,370" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -923,7 +923,7 @@ except Exception:
 	<screen name="VlcServerConfigScreen" title="Edit VLC Server" position="90,90" size="1100,576">
 		<eLabel text="vlc server config" position="800,25" size="300,22" font="Regular;20" halign="right" />
 		<eLabel position="180,47" size="920,2" backgroundColor="Pinstripe" />
-		<widget name="config" position="200,110" size="880,400" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="config" position="200,110" size="880,400" transparent="1" />
 		<widget name="key_red" position="240,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="KeyRed" halign="center" transparent="1" valign="center" zPosition="3" />
 		<widget name="key_green" position="440,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="KeyGreen" halign="center" transparent="1" valign="center" zPosition="3" />
 		<widget name="key_yellow" position="640,535" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="KeyYellow" halign="center" transparent="1" valign="center" zPosition="3" />

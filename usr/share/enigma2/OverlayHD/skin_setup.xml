@@ -11,7 +11,7 @@
 
 	<screen name="AnimationSetupScreen" title="Animation Setup" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget name="list" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="list" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" transparent="0" />
 		<panel name="ScreenTemplateSIntroduction4" />
 	</screen>
 
@@ -41,7 +41,7 @@
 		<!--
 		<widget source="key_red" render="Label" position="85,125" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="KeyRed" halign="center" transparent="1" valign="center" zPosition="3" />
 		<widget source="key_green" render="Label" position="300,125" size="200,36" backgroundColor="TextBackground" font="Regular;20" foregroundColor="KeyGreen" halign="center" transparent="1" valign="center" zPosition="3" />
-		<widget name="config" position="5,0" size="550,60" scrollbarMode="showOnDemand" />
+		<widget name="config" position="5,0" size="550,60" />
 		<widget source="introduction" render="Label" position="5,80" size="550,25" backgroundColor="TextBackground" font="Regular;21" halign="center" transparent="1" valign="center" zPosition="10" />
 		<eLabel position="0,115" size="560,2" backgroundColor="Pinstripe" />
 		-->
@@ -126,7 +126,7 @@
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/software_manager_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget name="icons" position="0,0" size="30,27" pixmaps="icons/lock_off.png,icons/lock_on.png,icons/lock_error.png" alphatest="blend" />
-		<widget source="locales" render="Listbox" position="400,80" size="830,455" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="locales" render="Listbox" position="400,80" size="830,455" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -151,7 +151,7 @@
 	<screen name="LanguageSelection" title="Language Selection" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/software_manager_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<widget source="languages" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="languages" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -195,7 +195,7 @@
 	<screen name="InputDeviceSelection" title="Select Input Device" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/tv_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<widget source="list" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="list" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -244,7 +244,7 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonInfo" />
 		<ePixmap pixmap="menus/tv_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<widget source="nimlist" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="nimlist" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -326,7 +326,7 @@
 		<widget name="pass" position="50,450" size="300,25" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" />
 		<eLabel text="Services found:" position="400,80" size="830,35" backgroundColor="TextBackground" font="DescriptionFont;25" foregroundColor="Text" transparent="1" />
 		<eLabel position="400,113" size="830,2" backgroundColor="Pinstripe" />
-		<widget name="servicelist" position="400,115" size="830,400" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="0" />
+		<widget name="servicelist" position="400,115" size="830,400" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" selection="0" transparent="0" />
 		<panel name="ScreenTemplateFrame830x120" />
 		<widget name="done_text" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
@@ -359,7 +359,7 @@
 		<eLabel text="Positioner setup" position="890,80" size="320,22" backgroundColor="TextBackground" font="Named;20" foregroundColor="bluette" halign="right" transparent="1" zPosition="2" />
 		<eLabel position="50,101" size="1160,1" backgroundColor="Pinstripe" zPosition="2" />
 		-->
-		<widget name="list" position="650,195" size="510,384" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" zPosition="2" />
+		<widget name="list" position="650,195" size="510,384" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" zPosition="2" />
 		<!--
 		<eLabel position="50,101" size="1160,1" backgroundColor="Pinstripe" zPosition="2" />
 		<ePixmap pixmap="buttons/button_200x60_red.png" position="123,635" size="200,60" alphatest="blend" zPosition="1" />
@@ -391,7 +391,7 @@
 	<screen name="FastScanScreen" title="FastScanScreen" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<eLabel position="50,102" size="1160,1" backgroundColor="Pinstripe" zPosition="2" />
-		<widget name="config" position="590,170" size="610,418" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="0" zPosition="2" />
+		<widget name="config" position="590,170" size="610,418" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" transparent="0" zPosition="2" />
 <!--####-->		<!-- <ePixmap name="textborder" pixmap="frame/frame_400x200.png" position="150,195" size="400,200" alphatest="blend" zPosition="2" /> -->
 		<widget name="introduction" position="170,270" size="360,50" font="Regular;24" halign="center" transparent="1" zPosition="3" />
 		<eLabel position="50,625" size="1160,1" backgroundColor="Pinstripe" />
@@ -400,7 +400,7 @@
 	<screen name="AutoDiseqc" title=" " position="c-250,c-100" size="500,250">
 		<widget source="statusbar" render="Label" position="10,5" size="e-10,60" font="Regular;22" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="10" />
 		<widget source="tunerstatusbar" render="Label" position="10,60" size="e-10,30" font="Regular;22" halign="center" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="center" zPosition="10" />
-		<widget name="config" position="10,100" size="e-10,100" scrollbarMode="showOnDemand" />
+		<widget name="config" position="10,100" size="e-10,100" />
 		<!-- red.png not found - FIXED DEBUG - Replace with normal RED button -->
 		<!-- <ePixmap pixmap="buttons/red.png" position="c-140,e-45" size="140,40" alphatest="blend" /> -->
 		<widget source="key_red" render="Label" position="c-140,e-45" size="140,40" backgroundColor="KeyRed" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="1" />
@@ -485,7 +485,7 @@
 		<widget source="CAidList_desc" render="Label" position="400,80" size="830,35" backgroundColor="#25062748" font="Regular;25" transparent="0" />
 		<widget source="CAidList" render="Label" position="400,115" size="830,45" backgroundColor="#25062748" font="Regular;20" transparent="0" />
 		<widget source="ServiceList_desc" render="Label" position="400,150" size="830,35" backgroundColor="#25062748" font="Regular;25" transparent="0" />
-		<widget name="ServiceList" position="400,185" size="830,250" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="ServiceList" position="400,185" size="830,250" transparent="0" />
 		<widget source="ServiceList_info" render="Label" position="400,450" size="830,250" backgroundColor="#25062748" font="Regular;20" transparent="0" />
 	</screen>
 
@@ -493,7 +493,7 @@
 		<panel name="ScreenTemplate" />
 
 		<widget source="ServiceList_desc" render="Label" position="50,80" size="550,22" backgroundColor="#25062748" font="Regular;20" transparent="1" />
-		<widget name="ServiceList" position="50,110" size="550,300" scrollbarMode="showOnDemand" zPosition="1" />
+		<widget name="ServiceList" position="50,110" size="550,300" zPosition="1" />
 		<widget source="ServiceList_info" render="Label" position="50,110" size="550,300" backgroundColor="#25062748" font="Regular;20" transparent="1" zPosition="2" />
 	</screen>
 
@@ -595,7 +595,7 @@
 	<screen name="MMIDialog" title="Common interface - menu" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateEntries0" />
-		<!-- <widget name="entries" position="590,100" size="610,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="0" /> -->
+		<!-- <widget name="entries" position="590,100" size="610,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" transparent="0" /> -->
 		<widget name="title" position="100,170" size="300,30" font="Regular;20" halign="center" transparent="1" valign="center" />
 		<widget name="subtitle" position="100,200" size="300,30" font="Regular;20" halign="center" transparent="1" valign="center" />
 		<widget name="bottom" position="100,230" size="300,30" font="Regular;20" halign="center" transparent="1" valign="center" />
@@ -681,7 +681,7 @@
 	<screen name="NetworkBrowser" title="Network Neighbourhood" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/software_manager_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<widget source="list" render="Listbox" position="400,80" size="830,528" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="list" render="Listbox" position="400,80" size="830,528" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -739,7 +739,7 @@
 		<widget source="legend1" render="Label" position="410,80" size="130,60" backgroundColor="TextBackground" font="Regular;20" transparent="1" valign="center" />
 		<widget source="legend2" render="Label" position="560,80" size="310,60" backgroundColor="TextBackground" font="Regular;20" transparent="1" valign="center" />
 		<widget source="legend3" render="Label" position="1150,80" size="80,60" backgroundColor="TextBackground" font="Regular;20" transparent="1" valign="center" />
-		<widget source="config" render="Listbox" position="400,140" size="830,360" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="config" render="Listbox" position="400,140" size="830,360" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -762,7 +762,7 @@
 	<screen name="UserManager" title="Username Manager" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/parental_control_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<widget source="config" render="Listbox" position="400,80" size="830,430" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="config" render="Listbox" position="400,80" size="830,430" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -791,8 +791,8 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonHelp" />
 		<ePixmap pixmap="menus/software_manager_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<widget source="list" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" zPosition="10">
-			<convert type="TemplatedMultiContent"><!-- iface, name, description, interfacepng, defaultpng, activepng, divpng -->				
+		<widget source="list" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" zPosition="10">
+			<convert type="TemplatedMultiContent"><!-- iface, name, description, interfacepng, defaultpng, activepng, divpng -->
 				{
 				"template":
 					[
@@ -875,7 +875,7 @@
 	<screen name="WlanScan" title="Select Wireless Network" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/software_manager_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<widget source="list" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="list" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -1003,7 +1003,7 @@
 
 	<screen name="NetworkInadynLog" title="Network Service Log" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget name="infotext" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="infotext" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" transparent="1" />
 	</screen>
 
 	<!-- Generic Service Summary Screen -->
@@ -1117,7 +1117,7 @@
 
 	<screen name="NetworkSetPassword" title="Network Password" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget name="passwd" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="passwd" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" transparent="0" />
 		<panel name="ScreenTemplateFrame830x120" />
 	</screen>
 
@@ -1243,7 +1243,7 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<ePixmap pixmap="menus/plugins.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<widget name="list" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="list" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" />
 	</screen>
 
 	<!--
@@ -1268,7 +1268,7 @@
 	<screen name="IpkgInstaller" title="Package (IPkg) Installer" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/plugin_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<widget name="list" position="400,80" size="830,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="list" position="400,80" size="830,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" transparent="0" />
 		<widget source="introduction" render="Label" position="410,570" size="810,75" font="Regular;20" transparent="1" valign="center" />
 	</screen>
 
@@ -1288,7 +1288,7 @@
 		<widget name="feedstatus_green" position="110,566" size="200,35" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" valign="center" />
 		<widget name="package_text" position="50,615" size="250,35" backgroundColor="TextBackground" font="TextFont;25" foregroundColor="Text" valign="center" />
 		<widget name="package_count" position="310,615" size="50,35" backgroundColor="TextBackground" font="TextFont;25" foregroundColor="Text" halign="right" valign="center" />
-		<widget source="list" render="Listbox" position="400,80" size="830,550" scrollbarMode="showOnDemand">
+		<widget source="list" render="Listbox" position="400,80" size="830,550">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -1305,14 +1305,14 @@
 				}
 			</convert>
 		</widget>
-		<widget name="activity" position="400,640" size="830,5" />
+		<widget name="activity" position="400,640" size="830,10" />
 	</screen>
 
 	<screen name="RunSoftwareUpdate" title="Software Update" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/factory_reset_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget name="update" position="400,80" size="830,555" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" />
-		<widget name="activity" position="400,640" size="830,5" />
+		<widget name="activity" position="400,640" size="830,10" />
 	</screen>
 
 <!-- MENU > Setup > Software Manager > Update Now - Uses Internal Screen -->
@@ -1335,7 +1335,7 @@
 
 	<screen name="SoftwareUpdateChangeView" title="Software Changes" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget name="text" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="text" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" transparent="1" />
 	</screen>
 
 	<screen name="Ipkg" position="center,center" size="550,120">
@@ -1383,8 +1383,8 @@
 		<panel name="ScreenTemplateChosenShort" />
 		<panel name="ScreenTemplateDescription4" />
 		<!--
-		<widget name="list" position="0,45" size="580,300" scrollbarMode="showOnDemand" />
-		<widget name="choosen" position="0,350" size="580,100" scrollbarMode="showOnDemand" foregroundColor="secondFG" />
+		<widget name="list" position="0,45" size="580,300" />
+		<widget name="choosen" position="0,350" size="580,100" foregroundColor="secondFG" />
 		<widget name="description" position="0,480" size="580,60" font="Regular;18" halign="center" valign="center" transparent="0" zPosition="1" />
 		-->
 	</screen>
@@ -1397,6 +1397,6 @@
 	</screen>
 
 	<screen name="BackupScreen" title="Backup is running" position="135,144" size="350,310">
-		<widget name="config" position="10,10" size="330,250" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="config" position="10,10" size="330,250" transparent="1" />
 	</screen>
 </skin>

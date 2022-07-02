@@ -1,6 +1,6 @@
 <skin>
 	<screen name="BouquetSelector" position="center,center" size="560,550" backgroundColor="ScreenBackground">
-		<widget name="menu" position="0,0" size="560,512" backgroundColor="TextBackground" enableWrapAround="1" foregroundColor="White" itemHeight="30" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="menu" position="0,0" size="560,512" backgroundColor="TextBackground" foregroundColor="White" itemHeight="30" transparent="0" />
 	</screen>
 
 	<screen name="clockDisplay" position="center,center" size="300,300">
@@ -75,7 +75,7 @@
 		<ePixmap pixmap="icons/rass_logo.png" position="675,143" size="50,21" alphatest="blend" transparent="1" />
 		<eLabel text="Interactive" position="735,140" size="485,35" font="Regular;28" transparent="1" zPosition="2" />
 		<eLabel position="665,180" size="450,2" backgroundColor="White" zPosition="2" />
-		<widget name="Marker" position="650,195" size="510,400" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" zPosition="2" />
+		<widget name="Marker" position="650,195" size="510,400" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" zPosition="2" />
 		<eLabel text="0" position="670,210" size="16,25" font="Regular;21" transparent="1" zPosition="3" />
 		<eLabel text="Index" position="1065,210" size="60,25" font="Regular;21" transparent="1" zPosition="3" />
 		<eLabel text="1" position="670,260" size="16,25" font="Regular;21" transparent="1" zPosition="3" />
@@ -111,7 +111,7 @@
 	<screen name="SubserviceSelection" title="Subservices" position="fill" flags="wfNoBorder">
 		<eLabel text="Subservices" position="675,140" size="485,35" font="Regular;28" transparent="1" zPosition="2" />
 		<eLabel position="665,180" size="450,2" backgroundColor="White" zPosition="2" />
-		<widget name="subservices" position="650,195" size="510,400" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
+		<widget name="subservices" position="650,195" size="510,400" transparent="1" zPosition="2" />
 	</screen>
 
 <!-- Subservice quickzap -->
@@ -146,7 +146,7 @@
 		<eLabel text="Subtitle selection" position="600,135" size="320,22" backgroundColor="TextBackground" font="Named;20" foregroundColor="bluette" halign="right" transparent="1" zPosition="2" />
 		<eLabel position="455,155" size="465,2" backgroundColor="Pinstripe" zPosition="2" />
 		<ePixmap pixmap="menus/tv_channel.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<widget name="config" position="450,195" size="400,400" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
+		<widget name="config" position="450,195" size="400,400" transparent="1" zPosition="2" />
 	</screen>
 
 	<screen name="PTSTimeshiftState" position="center,40" size="420,70" backgroundColor="background">
@@ -169,7 +169,7 @@
 <!-- CI Interface -->
 
 	<screen name="ProjectSettings" title="Collection settings" position="90,100" size="1100,560">
-		<widget name="config" position="10,10" size="1080,350" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="config" position="10,10" size="1080,350" transparent="1" />
 		<widget source="info" render="Label" position="10,380" size="1080,130" font="Regular;20" />
 		<eLabel position="0,518" size="1100,2" backgroundColor="Pinstripe" />
 		<widget source="key_red" render="Label" position="20,525" size="250,30" font="Regular;24" foregroundColor="KeyRed" halign="center" valign="center" />
@@ -181,7 +181,7 @@
 <!-- Device Mount -->
 
 	<screen name="devicesMount" title="Devices" position="90,100" size="1100,560">
-		<widget source="menu" render="Listbox" position="10,10" size="1080,440" scrollbarMode="showOnDemand" transparent="1" zPosition="3">
+		<widget source="menu" render="Listbox" position="10,10" size="1080,440" transparent="1" zPosition="3">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -205,7 +205,7 @@
 		<widget name="icon" position="10,25" size="65,65" alphatest="blend" />
 		<widget name="info" position="100,10" size="470,100" font="Regular;20" />
 		<eLabel position="0,110" size="580,2" backgroundColor="Pinstripe" zPosition="2" />
-		<widget name="menu" position="10,120" size="560,160" scrollbarMode="showOnDemand" />
+		<widget name="menu" position="10,120" size="560,160" />
 		<widget name="border" position="0,0" size="0,0" />
 	</screen>
 
@@ -266,7 +266,7 @@
 		<eLabel position="50,625" size="1160,1" backgroundColor="Pinstripe" zPosition="1" />
 		-->
 		<ePixmap pixmap="menus/setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<widget name="config" position="400,170" size="810,421" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="2" />
+		<widget name="config" position="400,170" size="810,421" transparent="1" zPosition="2" />
 	</screen>
 
 	<screen name="RSSFeedView" title="Simple RSS Reader" position="fill" flags="wfNoBorder">
@@ -279,7 +279,7 @@
 		</widget>
 		<eLabel position="50,102" size="1160,1" backgroundColor="Pinstripe" zPosition="2" />
 		<widget source="info" render="Label" position="155,120" size="1060,30" backgroundColor="TextBackground" font="Regular;18" halign="right" transparent="1" />
-		<widget source="content" render="Listbox" position="155,153" size="1060,383" scrollbarMode="showOnDemand" transparent="1">
+		<widget source="content" render="Listbox" position="155,153" size="1060,383" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -328,7 +328,7 @@
  +-->
 
 	<screen name="browser_favo" title="Favourites" position="90,90" size="1100,576" backgroundColor="ScreenBackground">
-		<widget source="menu" render="Listbox" position="150,50" size="780,450" scrollbarMode="showOnDemand" transparent="1" zPosition="3">
+		<widget source="menu" render="Listbox" position="150,50" size="780,450" transparent="1" zPosition="3">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -362,12 +362,12 @@
 
 	<screen name="ServerEditor" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget name="config" position="590,145" size="610,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="config" position="590,145" size="610,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" transparent="0" />
 	</screen>
 
 	<screen name="StreamingChannelFromServerScreen" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget name="list" position="590,145" size="610,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="list" position="590,145" size="610,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" transparent="0" />
 <!--####-->		<!-- <ePixmap pixmap="frame/frame_400x200.png" position="50,195" size="400,200" alphatest="blend" /> -->
 		<widget source="statusbar" render="Label" position="60,205" size="380,180" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="2" />
 	</screen>

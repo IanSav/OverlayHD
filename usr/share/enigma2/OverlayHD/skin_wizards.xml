@@ -18,7 +18,7 @@
 		<widget name="text" position="420,100" size="790,215" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
 		<widget name="step" position="50,615" size="150,25" backgroundColor="TextBackground" conditional="step" font="SMSHelperFont;20" foregroundColor="Text" transparent="1" valign="center" />
 		<widget name="stepslider" position="50,645" size="200,10" backgroundColor="Black" borderColor="DavysGrey" borderWidth="2" conditional="stepslider" foregroundColor="White" transparent="0" />
-		<widget source="list" render="Listbox" position="400,350" size="830,280" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="list" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="list" render="Listbox" position="400,350" size="830,280" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="list" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<!-- <convert type="StringList" /> -->
 			<convert type="TemplatedMultiContent">
 				{
@@ -32,7 +32,7 @@
 				}
 			</convert>
 		</widget>
-		<widget name="config" position="400,350" size="830,280" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="config" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="config" position="400,350" size="830,280" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="config" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" transparent="0" />
 		<widget name="wizard" position="0,0" size="0,0" conditional="wizard" transparent="1" />
 		<widget name="localetext" position="0,0" size="0,0" conditional="localetext" transparent="1" />
 		<widget name="languagetext" position="0,0" size="0,0" conditional="languagetext" transparent="1" />
@@ -47,7 +47,7 @@
 
 	<screen name="WizardList" title="Welcome" position="fill" flags="wfNoBorder">
 		<panel name="WizardTemplate" />
-		<widget source="list" render="Listbox" position="400,350" size="830,280" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="list" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="list" render="Listbox" position="400,350" size="830,280" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="list" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<!-- <convert type="StringList" /> -->
 			<convert type="TemplatedMultiContent">
 				{
@@ -71,7 +71,7 @@
 
 	<screen name="WizardConfig" title="Welcome" position="fill" flags="wfNoBorder">
 		<panel name="WizardTemplate" />
-		<widget name="config" position="400,350" size="830,280" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="config" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="config" position="400,350" size="830,280" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="config" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" transparent="0" />
 	</screen>
 
 <!--	WizardMessage - Template for text message element in wizards
@@ -81,7 +81,7 @@
 
 	<screen name="WizardMessage" title="Welcome" position="fill" flags="wfNoBorder">
 		<panel name="WizardTemplate" />
-		<widget name="message" position="400,350" size="830,280" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="message" enableWrapAround="1" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="message" position="400,350" size="830,280" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="message" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" transparent="0" />
 	</screen>
 
 <!-- Default Wizard Screen -->
@@ -154,7 +154,7 @@
 	<screen name="LocaleWizard" title="Welcome: Locale/Language Selection" position="fill" flags="wfNoBorder">
 		<panel name="WizardTemplate" />
 		<widget name="icons" position="0,0" size="30,27" pixmaps="icons/lock_off.png,icons/lock_on.png,icons/lock_error.png" alphatest="blend" />
-		<widget source="locales" render="Listbox" position="400,350" size="830,280" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="locales" render="Listbox" position="400,350" size="830,280" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -176,7 +176,7 @@
 
 	<screen name="LanguageWizard" title="Welcome: Language Selection" position="fill" flags="wfNoBorder">
 		<panel name="WizardTemplate" />
-		<widget source="languages" render="Listbox" position="400,350" size="830,300" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="languages" render="Listbox" position="400,350" size="830,300" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -195,7 +195,7 @@
 
 	<screen name="WizardSkinSelector" title="Welcome: Skin Selection" position="fill" flags="wfNoBorder">
 		<panel name="WizardTemplate" />
-		<widget name="skins" position="600,230" size="450,240" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget name="skins" position="600,230" size="450,240" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -240,7 +240,7 @@
 
 	<screen name="StartHDDFormatWizard" title="Welcome" position="fill" flags="wfNoBorder">
 		<panel name="WizardTemplate" />
-		<widget name="errors" position="500,350" size="730,280" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" valign="top" />
+		<widget name="errors" position="500,350" size="730,280" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="top" />
 	</screen>
 
 <!-- Final "Congratulations" Setup Wizard -->

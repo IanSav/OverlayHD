@@ -618,18 +618,36 @@
 
 	<windowstyle id="0" type="skinned">
 		<title font="TitleFont;25" offset="12,8" />
-		<color name="Background" color="ScreenBackground" />
-		<color name="LabelForeground" color="Text" />
-		<color name="ListboxBackground" color="MenuBackground" />
-		<color name="ListboxForeground" color="MenuText" />
-		<color name="ListboxSelectedBackground" color="MenuSelected" />
-		<color name="ListboxSelectedForeground" color="MenuTextSelected" />
-		<color name="ListboxMarkedBackground" color="MenuBackground" />
-		<color name="ListboxMarkedForeground" color="MenuText" />
-		<color name="ListboxMarkedAndSelectedBackground" color="MenuSelected" />
-		<color name="ListboxMarkedAndSelectedForeground" color="MenuTextSelected" />
 		<color name="WindowTitleBackground" color="ScreenBackground" />
 		<color name="WindowTitleForeground" color="Gold" />
+		<color name="Background" color="ScreenBackground" />
+		<color name="LabelForeground" color="Text" /><!-- Deprecated -->
+		<color name="Foreground" color="Text" />
+		<color name="ListboxBackground" color="MenuBackground" />
+		<color name="ListboxForeground" color="MenuText" />
+		<color name="ListboxSelectedBackground" color="MenuSelected" /><!-- Deprecated -->
+		<color name="ListboxSelectedForeground" color="MenuTextSelected" /><!-- Deprecated -->
+		<color name="ListboxMarkedBackground" color="MenuBackground" /><!-- Deprecated -->
+		<color name="ListboxMarkedForeground" color="MenuText" /><!-- Deprecated -->
+		<color name="ListboxMarkedAndSelectedBackground" color="MenuSelected" /><!-- Deprecated -->
+		<color name="ListboxMarkedAndSelectedForeground" color="MenuTextSelected" /><!-- Deprecated -->
+		<color name="ListboxBackgroundSelected" color="MenuSelected" />
+		<color name="ListboxForegroundSelected" color="MenuTextSelected" />
+		<color name="ListboxBackgroundMarked" color="MenuBackground" />
+		<color name="ListboxForegroundMarked" color="MenuText" />
+		<color name="ListboxBackgroundMarkedSelected" color="MenuSelected" />
+		<color name="ListboxForegroundMarkedSelected" color="MenuTextSelected" />
+		<color name="ScrollbarBackground" color="Black" />
+		<color name="ScrollbarForeground" color="White" />
+		<color name="ScrollbarBorder" color="White" />
+		<color name="SliderBackground" color="Black" />
+		<color name="SliderForeground" color="White" />
+		<color name="SliderBorder" color="White" />
+		<configList entryFont="MenuFont;25" valueFont="MenuFont;25" />
+		<label font="TextFont;20" />
+		<listbox enableWrapAround="1" font="MenuFont;25" scrollbarBorderWidth="5" scrollbarMode="showOnDemand" scrollbarOffset="0" scrollbarScroll="byLine" scrollbarWidth="10" />
+		<scrolllabel scrollbarBorderWidth="1" scrollbarMode="showOnDemand" scrollbarOffset="10" scrollbarScroll="byLine" scrollbarWidth="10" />
+		<slider borderWidth="1" />
 		<borderset name="bsWindow">
 			<pixmap filename="borders/b_tl.png" pos="bpTopLeft" />
 			<pixmap filename="borders/b_t.png" pos="bpTop" />
@@ -644,10 +662,6 @@
 			<pixmap filename="borders/tib-v.png" pos="bpTop" />
 			<pixmap filename="borders/tib-v.png" pos="bpBottom" />
 		</borderset>
-		<!-- <scrollbar scrollbarMode="showOnDemand" scrollbarBackgroundPicture="borders/s_back.png" scrollbarSliderBorderColor="Blue" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="Red" scrollbarSliderPicture="borders/s_thumb.png" scrollbarWidth="10" /> -->
-		<!-- <scrollbar scrollbarSliderBorderColor="Blue" scrollbarSliderBorderWidth="2" scrollbarSliderForegroundColor="Red" scrollbarMode="showOnDemand" scrollbarWidth="10" /> -->
-		<!-- scrollbarbackgroundPixmap=scrollbarBackgroundPicture, sliderPixmap=scrollbarSliderPicture -->
-		<scrollbar scrollbarOffset="0" scrollbarWidth="10" />
 	</windowstyle>
 
 	<windowstyle id="1" type="skinned">
@@ -1453,7 +1467,7 @@
 
 	<screen name="MenuBeyonwiz" title="Menu" position="fill" flags="wfNoBorder">
 		<ePixmap pixmap="menus/menu.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -1472,7 +1486,7 @@
 
 	<screen name="MenuEnigma2" title="Menu" position="fill" flags="wfNoBorder">
 		<widget name="menuimage" position="50,80" size="250,250" alphatest="blend" conditional="menuimage" scaleFlags="scaleLeftTop" transparent="1" />
-		<widget source="menu" render="Listbox" position="400,80" size="830,455" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="menu" render="Listbox" position="400,80" size="830,455" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected">
 			<!--
 			WIDGET_NUMBER_TEXT = 0
 			WIDGET_IMAGE = 1
@@ -1512,8 +1526,7 @@
 						MultiContentEntryText(pos=(110, 0), size=(665, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=3)
 						])
 					},
-				"fonts": [parseFont("MenuFont;25")],
-				"scrollbarMode": "showOnDemand"
+				"fonts": [parseFont("MenuFont;25")]
 				}
 			</convert>
 		</widget>
@@ -1539,11 +1552,11 @@
 		<widget name="up_sub_2" pixmap="gmenu/gmenu_up.png" position="622,470" size="35,10" alphatest="blend" transparent="1" />
 		<widget name="up_sub_3" pixmap="gmenu/gmenu_up.png" position="872,470" size="35,10" alphatest="blend" transparent="1" />
 		<widget name="up_sub_4" pixmap="gmenu/gmenu_up.png" position="1122,470" size="35,10" alphatest="blend" transparent="1" />
-		<widget name="list_sub_0" position="15,480" size="250,210" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="0" />
-		<widget name="list_sub_1" position="265,480" size="250,210" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="0" />
-		<widget name="list_sub_2" position="515,480" size="250,210" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="0" />
-		<widget name="list_sub_3" position="765,480" size="250,210" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="0" />
-		<widget name="list_sub_4" position="1015,480" size="250,210" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="0" />
+		<widget name="list_sub_0" position="15,480" size="250,210" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="0" />
+		<widget name="list_sub_1" position="265,480" size="250,210" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="0" />
+		<widget name="list_sub_2" position="515,480" size="250,210" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="0" />
+		<widget name="list_sub_3" position="765,480" size="250,210" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="0" />
+		<widget name="list_sub_4" position="1015,480" size="250,210" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enabledColor="MenuText" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" offColor="MenuDisabled" scrollbarMode="showNever" selectedColor="MenuTextSelected" transparent="0" />
 		<widget name="down_sub_0" pixmap="gmenu/gmenu_down.png" position="122,690" size="35,10" alphatest="blend" transparent="1" />
 		<widget name="down_sub_1" pixmap="gmenu/gmenu_down.png" position="372,690" size="35,10" alphatest="blend" transparent="1" />
 		<widget name="down_sub_2" pixmap="gmenu/gmenu_down.png" position="622,690" size="35,10" alphatest="blend" transparent="1" />
@@ -1566,7 +1579,7 @@
 		<widget name="arrowdown2" pixmap="images/arrowdown.png" position="-100,-100" size="37,70" alphatest="blend" />
 		<widget name="arrowup" pixmap="images/arrowup.png" position="-100,-100" size="37,70" alphatest="blend" />
 		<widget name="arrowup2" pixmap="images/arrowup.png" position="-100,-100" size="37,70" alphatest="blend" />
-		<widget name="list" position="400,80" size="830,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="HelpFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="list" position="400,80" size="830,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="HelpFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" transparent="0" />
 		<widget name="long_key" position="400,620" size="830,30" backgroundColor="TextBackground" font="HelpFont;25" foregroundColor="HelpPress" halign="right" transparent="1" />
 	</screen>
 
@@ -1579,7 +1592,7 @@
 		 |	a second line in the help list, change the size of the description wizard to something
 		 |	appropriate (e.g. "280,44") and change over to the commented out "extended" template below.
 		 +-->
-		<widget source="list" render="Listbox" position="400,80" size="830,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="list" render="Listbox" position="400,80" size="830,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				# Template for use when "description" is used
@@ -1634,7 +1647,7 @@
 		<panel position="150,110" size="154,500">
 			<panel name="ScreenTemplateRemote" />
 		</panel>
-		<widget source="list" render="Listbox" position="400,80" size="830,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="list" render="Listbox" position="400,80" size="830,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"templates":
@@ -1772,7 +1785,7 @@
 		<panel position="400,80" size="405,485">
 			<panel name="ScreenTemplateFrame405x485" />
 		</panel>
-		<widget source="list" render="Listbox" position="410,90" size="385,455" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="list" render="Listbox" position="410,90" size="385,455" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -1789,7 +1802,7 @@
 		<panel position="825,80" size="405,485">
 			<panel name="ScreenTemplateFrame405x485" />
 		</panel>
-		<widget source="sublist" render="Listbox" position="835,90" size="385,455" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="sublist" render="Listbox" position="835,90" size="385,455" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -1833,11 +1846,11 @@
 <!-- Configuration items with no text window -->
 
 	<screen name="ScreenTemplateBookmarkList0">
-		<widget name="bookmarklist" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="bookmarklist" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateCheckList0">
-		<widget name="checkList" position="400,80" size="830,545" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="checkList" position="400,80" size="830,545" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateChoiceList0">
@@ -1845,31 +1858,31 @@
 		<widget name="text" position="360,30" size="870,35" borderColor="BannerBorder" borderWidth="1" conditional="text" font="TitleFont;25" foregroundColor="BannerTitle" halign="right" transparent="1" />
 		-->
 		<!-- Font and ItemHeight are taken from the font alias ChoiceList. -->
-		<widget name="list" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="list" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateConfig0">
-		<widget name="config" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="config" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateDetailText0">
-		<widget name="detailtext" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="detailtext" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateEntries0">
-		<widget name="entries" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="entries" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateEntriesTall0">
-		<widget name="entries" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="entries" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateEntryList0">
-		<widget name="entrylist" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="entrylist" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateFileList0">
-		<widget name="filelist" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="filelist" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateHelp0">
@@ -1878,20 +1891,20 @@
 
 	<screen name="ScreenTemplateListLeftData0">
 		<!-- Font and ItemHeight are taken from the font alias FileList (To be created! ####). -->
-		<widget name="list_left" position="50,115" size="1180,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="list_left" position="50,115" size="1180,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateMenu0">
 		<!-- Font and ItemHeight are taken from the font alias ChoiceList. -->
-		<widget name="menu" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="menu" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplatePlugList0">
-		<widget name="list" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="list" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="50" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateSConfig0">
-		<widget source="config" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="config" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -1906,11 +1919,11 @@
 	</screen>
 
 	<screen name="ScreenTemplateServiceList0">
-		<widget name="servicelist" position="400,80" size="830,535" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="servicelist" position="400,80" size="830,535" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateSMenu0">
-		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -1925,11 +1938,11 @@
 	</screen>
 
 	<screen name="ScreenTemplateTagList0">
-		<widget name="taglist" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="taglist" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateTimerList0">
-		<widget source="timerlist" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="timerlist" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -1953,11 +1966,11 @@
 <!-- Configuration items with a two line text window -->
 
 	<screen name="ScreenTemplateConfig2">
-		<widget name="config" position="400,80" size="830,490" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="config" position="400,80" size="830,490" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateEntries2">
-		<widget name="entries" position="400,80" size="830,490" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="entries" position="400,80" size="830,490" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" transparent="0" />
 	</screen>
 
 <!-- Text component of configuration items with a two line text window -->
@@ -2022,54 +2035,54 @@
 <!-- Configuration items with a four line text window -->
 
 	<screen name="ScreenTemplateCheckList4">
-		<widget name="checkList" position="400,80" size="830,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="checkList" position="400,80" size="830,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateChoiceList4">
 		<widget name="text" position="360,30" size="870,35" borderColor="BannerBorder" borderWidth="1" conditional="text" font="TitleFont;25" foregroundColor="BannerTitle" halign="right" transparent="1" />
 		<!-- Font and ItemHeight are taken from the font alias ChoiceList. -->
-		<widget name="list" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="list" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateCIList4">
-		<widget name="CiList" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="CiList" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateConfig4">
-		<widget name="config" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="config" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" secondFont="MenuFont;25" />
 	</screen>
 
 	<screen name="ScreenTemplateDeviceList4">
-		<widget name="devicelist" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="devicelist" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateEntries4">
-		<widget name="entries" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="entries" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateFileList4">
-		<widget name="file_list" position="400,80" size="830,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="file_list" position="400,80" size="830,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateHDDList4">
-		<widget name="hddlist" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="hddlist" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateListLeftMenu4">
 		<!-- Font and ItemHeight are taken from the font alias ChoiceList. -->
-		<widget name="list_left" position="400,115" size="830,385" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="list_left" position="400,115" size="830,385" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateList4">
-		<widget name="list" position="400,80" size="830,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="list" position="400,80" size="830,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateLogList4">
-		<widget name="loglist" position="400,80" size="830,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="loglist" position="400,80" size="830,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateMenuList4">
-		<widget source="list" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="list" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -2085,11 +2098,11 @@
 	</screen>
 
 	<screen name="ScreenTemplateMenuMenuList4">
-		<widget name="menulist" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="menulist" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateMountConfig4">
-		<widget source="config" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="config" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -2110,7 +2123,7 @@
 	</screen>
 
 	<screen name="ScreenTemplateSkinList4Enigma2">
-		<widget source="skins" render="Listbox" position="400,80" size="540,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0">
+		<widget source="skins" render="Listbox" position="400,80" size="540,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -2131,19 +2144,19 @@
 	</screen>
 
 	<screen name="ScreenTemplateSkinList4Beyonwiz">
-		<widget name="SkinList" position="400,80" size="540,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="SkinList" position="400,80" size="540,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateSkinList4OpenATV">
-		<widget name="SkinList" position="400,80" size="540,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="SkinList" position="400,80" size="540,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateSlotList4">
-		<widget name="slotlist" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="slotlist" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateSoftwareList4">
-		<widget source="list" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" selectionDisabled="0" transparent="0"> <!--  itemHeight="35" -->
+		<widget source="list" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" selection="1" transparent="0"> <!--  itemHeight="35" -->
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -2158,7 +2171,7 @@
 	</screen>
 
 	<screen name="ScreenTemplateTimerList4">
-		<widget name="timerlist" position="400,80" size="830,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" bottomHeight="25" detailFont="MenuFont;16" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" iconMargin="10" indent="20" itemHeight="50" scrollbarMode="showOnDemand" showSeparator="0" statusFont="MenuFont;18" statusOffset="20" timerNameFont="MenuFont;20" topHeight="25" />
+		<widget name="timerlist" position="400,80" size="830,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" bottomHeight="25" detailFont="MenuFont;16" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" iconMargin="10" indent="20" itemHeight="50" showSeparator="0" statusFont="MenuFont;18" statusOffset="20" timerNameFont="MenuFont;20" topHeight="25" />
 	</screen>
 
 <!-- Text component of configuration items with a four line text window -->
@@ -2286,20 +2299,20 @@
 	<screen name="ScreenTemplateChoiceShort">
 		<widget name="text" position="360,30" size="870,35" borderColor="BannerBorder" borderWidth="1" conditional="text" font="TitleFont;25" foregroundColor="BannerTitle" halign="right" transparent="1" />
 		<!-- Font and ItemHeight are taken from the font alias ChoiceList. -->
-		<widget name="list" position="400,80" size="830,210" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="list" position="400,80" size="830,210" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateChosenShort">
 		<!-- Font and ItemHeight are taken from the font alias ChoiceList. -->
-		<widget name="choosen" position="400,310" size="830,210" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="choosen" position="400,310" size="830,210" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateConfigShort">
-		<widget name="config" position="400,80" size="830,280" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="config" position="400,80" size="830,280" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" transparent="0" />
 	</screen>
 
 	<screen name="ScreenTemplateMenuListShort">
-		<widget name="menulist" position="400,80" size="830,375" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="menulist" position="400,80" size="830,375" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" transparent="0" />
 	</screen>
 
 <!-- Panel To Display The Banner Formatted Time (305 x 25 pixels) -->
@@ -2627,7 +2640,7 @@
 		<widget name="WarningPixmap" position="0,0" size="53,53" pixmap="icons/input_warning.png" alphatest="blend" conditional="WarningPixmap" scale="1" transparent="1" />
 		<widget name="icon" position="0,0" size="53,53" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" alphatest="blend" conditional="icon" scale="1" transparent="1" zPosition="+1" />
 		<widget name="text" position="70,0" size="630,50" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" valign="center" />
-		<widget name="list" position="0,75" size="700,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="list" enableWrapAround="1" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" scrollbarMode="showOnDemand" />
+		<widget name="list" position="0,75" size="700,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="list" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" />
 		<applet type="onLayoutFinish">
 def getScreenObjectSize(data, screenObject, maxWidth, maxHeight):
 	from enigma import eLabel, eSize
@@ -2658,11 +2671,12 @@ try:
 		listPos = (self["list"].instance.position().x(), self["list"].instance.position().y())
 		listSize = (self["list"].instance.size().width(), self["list"].instance.size().height())
 		scrollbarWidth = self["list"].instance.getScrollbarOffset() + self["list"].instance.getScrollbarWidth()
+		scrollbarMode = self["list"].instance.getScrollbarMode()
 		itemHeight = self["list"].l.getItemSize().height()
 		skinLines = listSize[1] // itemHeight
 		listLines = len(self.list)
 		newListWidth, newListHeight = getScreenObjectSize(self.list, self["list"], screenSize[0], screenSize[1])
-		newListWidth = max(listSize[0], min(screenSize[0] - 100, newListWidth + (scrollbarWidth if listLines &gt; skinLines else 0)))
+		newListWidth = max(listSize[0], min(screenSize[0] - 100, newListWidth + (scrollbarWidth if listLines &gt; skinLines or scrollbarMode == 1 else 0)))
 		newListSize = (newListWidth, itemHeight * (skinLines if listLines &gt; skinLines else listLines))
 		self["list"].instance.resize(eSize(newListSize[0], newListSize[1]))
 		textAdjust = max(0, newListSize[0] - listSize[0])
@@ -2705,7 +2719,7 @@ except Exception:
 
 	<screen name="ChoiceBox" position="center,center" size="700,560" zPosition="+90">
 		<widget name="text" position="0,0" size="700,35" backgroundColor="TextBackground" conditional="text" font="DescriptionFont;25" foregroundColor="Text" />
-		<widget name="list" position="0,35" size="700,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" />
+		<widget name="list" position="0,35" size="700,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" />
 		<applet type="onLayoutFinish">
 # [ChoiceBox] List Format:
 # [(('Text', 'Data'), (0, 50, 0, 780, 35, 0, 17, 'Text'))]
@@ -2728,12 +2742,13 @@ try:
 	listPos = (self["list"].instance.position().x(), self["list"].instance.position().y())
 	listSize = (self["list"].instance.size().width(), self["list"].instance.size().height())
 	scrollbarWidth = self["list"].instance.getScrollbarOffset() + self["list"].instance.getScrollbarWidth()
+	scrollbarMode = self["list"].instance.getScrollbarMode()
 	itemHeight = self["list"].l.getItemSize().height()
 	skinLines = listSize[1] // itemHeight
 	listLines = len(self.list)
 	font = parseFont("ChoiceList;25")
 	newListWidth, newListHeight = getScreenObjectSize(self.list, font, screenSize[0], screenSize[1])
-	newListWidth = max(listSize[0], min(screenSize[0] - 100, newListWidth + (scrollbarWidth if listLines &gt; skinLines else 0)))
+	newListWidth = max(listSize[0], min(screenSize[0] - 100, newListWidth + (scrollbarWidth if listLines &gt; skinLines or scrollbarMode == 1 else 0)))
 	newListSize = (newListWidth, itemHeight * (skinLines if listLines &gt; skinLines else listLines))
 	self["list"].instance.resize(eSize(newListSize[0], newListSize[1]))
 	textAdjust = max(0, newListSize[0] - listSize[0])
@@ -2805,7 +2820,7 @@ except Exception:
 
 	<screen name="Console" title="Command execution..." position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget name="text" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="text" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" transparent="1" />
 	</screen>
 
 <!-- Include files that define the rest of the UI -->

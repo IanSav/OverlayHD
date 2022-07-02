@@ -9,8 +9,8 @@
 		<widget name="green" position="409,670" size="225,35" backgroundColor="KeyGreen" conditional="green" font="ButtonFont;20" foregroundColor="KeyText" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget name="yellow" position="646,670" size="225,35" backgroundColor="KeyYellow" conditional="yellow" font="ButtonFont;20" foregroundColor="KeyText" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget name="blue" position="883,670" size="225,35" backgroundColor="KeyBlue" conditional="blue" font="ButtonFont;20" foregroundColor="KeyText" halign="center" transparent="1" valign="center" zPosition="+1" />
-		<widget name="list_left" position="50,80" size="580,555" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
-		<widget name="list_right" position="650,80" size="580,555" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="list_left" position="50,80" size="580,555" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" />
+		<widget name="list_right" position="650,80" size="580,555" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" />
 	</screen>
 
 	<screen name="FilebrowserConfigScreen" title="File Browser Settings" position="fill" flags="wfNoBorder">
@@ -57,7 +57,7 @@
 				}
 			</convert>
 		</widget>
-		<widget name="list_left" position="50,140" size="580,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="list_left" position="50,140" size="580,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" />
 		<widget name="list_right_head" position="650,80" size="580,60" backgroundColor="TextBackground" conditional="list_right_head" font="Regular;18" foregroundColor="Text" transparent="1" valign="center" />
 		<widget name="list_right_head1" position="650,80" size="580,40" backgroundColor="TextBackground" conditional="list_right_head1" font="Regular;18" foregroundColor="Text" transparent="1" valign="center" />
 		<widget source="list_right_head2" render="Listbox" position="650,120" size="580,20" backgroundColor="TextBackground" conditional="list_right_head2" foregroundColor="Text" scrollbarMode="showNever" selectionDisabled="1" transparent="1">
@@ -75,7 +75,7 @@
 				}
 			</convert>
 		</widget>
-		<widget name="list_right" position="650,140" size="580,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="list_right" position="650,140" size="580,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" />
 	</screen>
 
 	<screen name="FileCommanderContextMenu" title="File Commander - Context Menu" position="fill" flags="wfNoBorder">
@@ -88,7 +88,7 @@
 	<screen name="FileCommanderFileStatInfo" title="File Commander - File/Directory Information" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="filename" position="400,80" size="830,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" />
-		<widget source="list" render="Listbox" position="400,140" size="830,275" backgroundColor="TextBackground" foregroundColor="Text" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1">
+		<widget source="list" render="Listbox" position="400,140" size="830,275" backgroundColor="TextBackground" foregroundColor="Text" selectionDisabled="1" transparent="1">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
@@ -139,7 +139,7 @@
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonHelp" />
 		<widget name="list_head" position="50,80" size="1180,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" />
-		<widget name="filedata" position="50,115" size="1180,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
+		<widget name="filedata" position="50,115" size="1180,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" transparent="0" />
 	</screen>
 
 	<screen name="ArchiverMenuScreen" title="File Commander - Archiver" position="fill" flags="wfNoBorder">
@@ -235,7 +235,7 @@
 	</screen>
 
 	<screen name="MovieSelectionListBeyonwiz">
-		<widget name="list" position="50,80" size="760,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0"
+		<widget name="list" position="50,80" size="760,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0"
 			font="MovieSelectionFont;20" markWidth="20" listPos="30" pbarHeight="10" pbarLargeWidth="45" spaceIconeText="5" iconsWidth="25" spaceRight="5" dateWidthScale="9.0" lenWidthScale="4.0" sizeWidthScale="5.0" />
 			<!-- Other available attributes...
 			font="MovieSelectionFont;20" pbarHeight="10" pbarLargeWidth="45" spaceIconeText="5" iconsWidth="25" spaceRight="5" dateWidth="140" dateWidthScale="9.0" lenWidth="60" lenWidthScale="4.0" sizeWidth="70" sizeWidthScale="5.0"
@@ -253,7 +253,7 @@
 	</screen>
 
 	<screen name="MovieSelectionListEnigma2">
-		<widget name="list" position="50,80" size="760,540" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0"
+		<widget name="list" position="50,80" size="760,540" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0"
 			font="MovieSelectionFont;20" pbarHeight="10" pbarLargeWidth="45" spaceIconeText="5" iconsWidth="25" spaceRight="5" dateWidth="150" lenWidth="60" sizeWidth="70" />
 		<widget name="TrashcanSize" position="50,630" size="220,25" font="InfoOtherFont;20" foregroundColor="InfoDiskStats" transparent="1" />
 		<widget name="freeDiskSpace" position="450,630" size="270,25" font="InfoOtherFont;20" foregroundColor="InfoDiskStats" halign="right" transparent="1" />
@@ -308,12 +308,12 @@
 	</screen>
 
 	<screen name="MovieSelectionSlimListBeyonwiz">
-		<widget name="list" position="50,80" size="1180,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0"
+		<widget name="list" position="50,80" size="1180,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0"
 			font="MovieSelectionFont;20" markWidth="20" listPos="30" pbarHeight="10" pbarLargeWidth="45" spaceIconeText="5" iconsWidth="25" spaceRight="5" dateWidthScale="9.0" lenWidthScale="4.0" sizeWidthScale="5.0" />
 	</screen>
 
 	<screen name="MovieSelectionSlimListEnigma2">
-		<widget name="list" position="50,80" size="1180,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" scrollbarMode="showOnDemand" transparent="0"
+		<widget name="list" position="50,80" size="1180,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0"
 			font="MovieSelectionFont;20" pbarHeight="10" pbarLargeWidth="45" spaceIconeText="5" iconsWidth="25" spaceRight="5" dateWidth="140" lenWidth="60" sizeWidth="70" />
 	</screen>
 
@@ -377,11 +377,11 @@
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/browser.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget name="filetext" position="400,80" size="830,25" backgroundColor="DarkGrey" conditional="filetext" font="Regular;20" foregroundColor="Black" valign="center" />
-		<widget name="filelist" position="400,105" size="830,225" enableWrapAround="1" itemHeight="25" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="filelist" position="400,105" size="830,225" itemHeight="25" transparent="1" />
 		<widget name="quickselect" position="400,105" size="830,225" font="SMSHelperFont;100" foregroundColor="FindCharacter" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget name="booktext" position="400,340" size="830,25" backgroundColor="DarkGrey" conditional="booktext" font="Regular;20" foregroundColor="Black" valign="center" />
 		<widget name="textbook" position="400,340" size="830,25" backgroundColor="DarkGrey" conditional="textbook" font="Regular;20" foregroundColor="Black" valign="center" />
-		<widget name="booklist" position="400,365" size="830,200" font="FilePropFont;20" itemHeight="25" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" />
+		<widget name="booklist" position="400,365" size="830,200" font="FilePropFont;20" itemHeight="25" selectionDisabled="1" transparent="1" />
 		<panel name="ScreenTemplateFrame830x70" />
 		<widget name="text" position="410,600" size="810,25" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" zPosition="+1" />
 		<widget name="target" position="410,625" size="810,25" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" zPosition="+1" />
@@ -394,8 +394,8 @@
 		<panel name="ScreenTemplateButtonMenu" />
 		<widget name="list_left_text" position="90,70" size="150,35" backgroundColor="TextBackground" font="Regular;28" foregroundColor="White" transparent="1" zPosition="1" />
 		<widget name="list_right_text" position="655,70" size="150,35" backgroundColor="TextBackground" font="Regular;28" foregroundColor="White" transparent="1" zPosition="1" />
-		<widget name="list_left" position="40,120" size="590,490" backgroundColor="TextBackground" foregroundColor="White" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
-		<widget name="list_right" position="645,120" size="580,490" backgroundColor="TextBackground" foregroundColor="White" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
+		<widget name="list_left" position="40,120" size="590,490" backgroundColor="TextBackground" foregroundColor="White" transparent="1" zPosition="1" />
+		<widget name="list_right" position="645,120" size="580,490" backgroundColor="TextBackground" foregroundColor="White" transparent="1" zPosition="1" />
 	</screen>
 
 <!-- Movie Location Box -->
