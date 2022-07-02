@@ -1046,7 +1046,7 @@
 
 <!-- Software Management Plugin -->
 
-	<screen name="UpdatePluginMenu" title="Softwaremanager..." position="fill" flags="wfNoBorder">
+	<screen name="UpdatePluginMenu" title="Software Management" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<!-- <panel name="ScreenTemplateButtonInfo" /> -->
