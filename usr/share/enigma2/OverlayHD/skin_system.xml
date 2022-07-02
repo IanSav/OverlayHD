@@ -242,8 +242,11 @@
 	<screen name="Information" title="Information" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateBranding" />
-		<widget name="information" position="400,80" size="830,520" colPosition="320" conditional="information" divideChar="|" font="TextFont;20" leftColAlign="left" noWrap="1" rightColAlign="left" split="1" transparent="1" />
-		<widget name="description" position="400,600" size="830,25" conditional="description" font="TextFont;20" foregroundColor="TextDisabled" halign="center" noWrap="1" transparent="1" valign="center" />
+		<widget name="information" position="400,80" size="830,560" font="TextFont;20" splitPosition="320" />
+			<!-- ScrollLabel() extra attributes available...
+			leftColumnAlignment="left" rightColumnAlignment="left" split="1" splitCharacter="|"
+			splitMargin="5" splitPosition="320" splitSeparated="0" splitTrim="0"
+			-->
 	</screen>
 
 	<screen name="InformationImage" title="Receiver Images" position="fill" flags="wfNoBorder">
@@ -254,8 +257,16 @@
 	</screen>
 
 	<screen name="SystemInformation" title="System Information" position="fill" flags="wfNoBorder">
-		<panel name="Information" />
-		<ePixmap pixmap="menus/information.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
+		<panel name="ScreenTemplate" />
+		<widget name="information" position="50,80" size="1180,560" font="FixedFont;20" />
+	</screen>
+
+	<screen name="CommitInformation" title="Commit Log Information" position="fill" flags="wfNoBorder">
+		<panel name="SystemInformation" />
+	</screen>
+
+	<screen name="DebugInformation" title="Debug Log Information" position="fill" flags="wfNoBorder">
+		<panel name="SystemInformation" />
 	</screen>
 
 	<!-- About Information (MENU > Information > About) Screen -->
