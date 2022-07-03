@@ -637,15 +637,15 @@
 		<color name="ListboxForegroundMarked" color="MenuText" />
 		<color name="ListboxBackgroundMarkedSelected" color="MenuSelected" />
 		<color name="ListboxForegroundMarkedSelected" color="MenuTextSelected" />
-		<color name="ScrollbarBackground" color="Black" />
+		<color name="ScrollbarBackground" color="ScreenBackground" />
 		<color name="ScrollbarForeground" color="White" />
-		<color name="ScrollbarBorder" color="White" />
-		<color name="SliderBackground" color="Black" />
+		<color name="ScrollbarBorder" color="Grey" />
+		<color name="SliderBackground" color="ScreenBackground" />
 		<color name="SliderForeground" color="White" />
-		<color name="SliderBorder" color="White" />
+		<color name="SliderBorder" color="Grey" />
 		<configList entryFont="MenuFont;25" valueFont="MenuFont;25" />
 		<label font="TextFont;20" />
-		<listbox enableWrapAround="1" font="MenuFont;25" scrollbarBorderWidth="5" scrollbarMode="showOnDemand" scrollbarOffset="0" scrollbarScroll="byLine" scrollbarWidth="10" />
+		<listbox enableWrapAround="1" font="MenuFont;25" scrollbarBorderWidth="1" scrollbarMode="showOnDemand" scrollbarOffset="0" scrollbarScroll="byLine" scrollbarWidth="10" />
 		<scrolllabel scrollbarBorderWidth="1" scrollbarMode="showOnDemand" scrollbarOffset="10" scrollbarScroll="byLine" scrollbarWidth="10" />
 		<slider borderWidth="1" />
 		<borderset name="bsWindow">
