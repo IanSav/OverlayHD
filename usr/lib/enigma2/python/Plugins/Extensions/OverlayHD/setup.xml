@@ -4,8 +4,15 @@
 		<item level="1" text="Sort OverlayHD themes by name" description="Setting this to Yes causes the themes in the OverlayHD Theme Manager list to be sorted by the theme name.">config.plugins.skin.OverlayHD.SortThemes</item>
 		<item level="0" text="OverlayHD uses grouped settings" description="Setting this to Yes causes the OverlayHD Skin Manager plugin to group selected settings into blocks that can be hidden or displayed as required. Setting this to No makes the plugin display all options as one long list.">config.plugins.skin.OverlayHD.UseGroups</item>
 		<item level="0" text="Show general settings" description="Setting this to Yes causes the configuration options for general settings to be displayed." requires="config.plugins.skin.OverlayHD.UseGroups">config.plugins.skin.OverlayHD.GeneralSettings</item>
+		<item level="0" text="Show menu color settings" description="Setting this to Yes causes the configuration options for menus to be displayed." requires="config.plugins.skin.OverlayHD.UseGroups">config.plugins.skin.OverlayHD.MenuSettings</item>
+		<item level="0" text="Show text color settings" description="Setting this to Yes causes the configuration options for text messages to be displayed." requires="config.plugins.skin.OverlayHD.UseGroups">config.plugins.skin.OverlayHD.TextSettings</item>
+		<item level="0" text="Show Info color settings" description="Setting this to Yes causes the configuration options for the Info screens to be displayed." requires="config.plugins.skin.OverlayHD.UseGroups">config.plugins.skin.OverlayHD.InfoSettings</item>
+		<item level="0" text="Show FAV color settings" description="Setting this to Yes causes the configuration options for the FAV service selection screens to be displayed." requires="config.plugins.skin.OverlayHD.UseGroups">config.plugins.skin.OverlayHD.FAVSettings</item>
+		<item level="0" text="Show EPG color settings" description="Setting this to Yes causes the configuration options for the EPG screens to be displayed." requires="config.plugins.skin.OverlayHD.UseGroups">config.plugins.skin.OverlayHD.EPGSettings</item>
+		<item level="0" text="Show panel and plugin color settings" description="Setting this to Yes causes the configuration options for panels and plugins to be displayed." requires="config.plugins.skin.OverlayHD.UseGroups">config.plugins.skin.OverlayHD.PanelSettings</item>
+		<item level="0" text="Show font settings" description="Setting this to Yes causes the configuration options for font selection to be displayed." requires="config.plugins.skin.OverlayHD.UseGroups">config.plugins.skin.OverlayHD.FontSettings</item>
 		<if requires="config.plugins.skin.OverlayHD.GeneralSettings">
-			<item level="1" text="--- Start of General Settings ---" />
+			<item level="1" text="--- General Settings ---" />
 			<item level="0" text="Boot image" description="Choose a background image to be used while the system boots.">config.plugins.skin.OverlayHD.BootImage</item>
 			<item level="0" text="Background image" description="Choose a background image to be used while the system UI starts.">config.plugins.skin.OverlayHD.BackgroundImage</item>
 			<item level="3" text="Radio image" description="Choose a background image to be used while listening to radio services.">config.plugins.skin.OverlayHD.RadioImage</item>
@@ -19,7 +26,6 @@
 			<item level="1" text="Color button background color" description="Choose a color for the color button background.">config.plugins.skin.OverlayHD.KeyBackColor</item>
 			<item level="1" text="Color button background transparency" description="Choose the level of screen saver screen background transparency.">config.plugins.skin.OverlayHD.KeyBackTransparency</item>
 			<item level="0" text="Always show color buttons" description="Setting this to Yes forces all the color buttons to be displayed even if they don't currently have a purpose.">config.plugins.skin.OverlayHD.AlwaysShowButtons</item>
-			<item level="3" text="Use Enhanced Menu" description="Enable to display menus with the numeric fast access button on the left of each menu item. (The numbers are always available even if not shown.)">config.plugins.skin.OverlayHD.EnhancedMenu</item>
 			<item level="0" text="REC icon blinks" description="Enable to display the REC icon blinking.">config.plugins.skin.OverlayHD.RecordBlink</item>
 			<item level="0" text="Firmware update icon blinks" description="Enable to display the firmware update available icon blinking.">config.plugins.skin.OverlayHD.UpdateBlink</item>
 			<item level="1" text="Show EPG time line tick marks" description="Setting this to Yes causes the time line tick marks to be displayed.">config.plugins.skin.OverlayHD.EPGShowTicks</item>
@@ -48,12 +54,10 @@
 			<item level="0" text="SMS Helper label color" description="Choose a color for the SMS helper text labels.">config.plugins.skin.OverlayHD.SMSHelperLabel</item>
 			<item level="0" text="SMS Helper text color" description="Choose a color for the SMS helper text.">config.plugins.skin.OverlayHD.SMSHelperText</item>
 			<item level="0" text="Help information text color" description="Choose a color for help menu additional button help text.">config.plugins.skin.OverlayHD.HelpPress</item>
-			<item level="0" text="Movie selection find character color" description="Choose a color for the search letter pop up in Media Player.">config.plugins.skin.OverlayHD.FindCharacter</item>
-			<item level="1" text="--- End of General Settings ---" />
+			<item level="0" text="QuickSelect character color" description="Choose a color for the QuickSelect search letter(s) that pop up in screens that offer QuickSelect searches like Media Player.">config.plugins.skin.OverlayHD.FindCharacter</item>
 		</if>
-		<item level="0" text="Show menu color settings" description="Setting this to Yes causes the configuration options for menus to be displayed." requires="config.plugins.skin.OverlayHD.UseGroups">config.plugins.skin.OverlayHD.MenuSettings</item>
 		<if requires="config.plugins.skin.OverlayHD.MenuSettings">
-			<item level="1" text="--- Start of Menu Color Settings ---" />
+			<item level="1" text="--- Menu Color Settings ---" />
 			<item level="1" text="Menu background color" description="Choose a color for menu backgrounds.">config.plugins.skin.OverlayHD.MenuBackgroundColor</item>
 			<item level="1" text="Menu background transparency" description="Choose the level of menu background transparency.">config.plugins.skin.OverlayHD.MenuBackgroundTransparency</item>
 			<item level="1" text="Menu item highlight color" description="Choose a color for menu item selection highlights.">config.plugins.skin.OverlayHD.MenuSelectedColor</item>
@@ -64,11 +68,9 @@
 			<item level="3" text="Menu footnote background color" description="Choose a color for the menu footnote backgrounds.">config.plugins.skin.OverlayHD.FootnoteBackgroundColor</item>
 			<item level="3" text="Menu footnote background transparency" description="Choose the level of menu footnote background transparency.">config.plugins.skin.OverlayHD.FootnoteBackgroundTransparency</item>
 			<item level="1" text="Menu footnote color" description="Choose a color for Setup menu footnote text. (e.g. Restart Required)">config.plugins.skin.OverlayHD.FootnoteText</item>
-			<item level="1" text="--- End of Menu Color Settings ---" />
 		</if>
-		<item level="0" text="Show text color settings" description="Setting this to Yes causes the configuration options for text messages to be displayed." requires="config.plugins.skin.OverlayHD.UseGroups">config.plugins.skin.OverlayHD.TextSettings</item>
 		<if requires="config.plugins.skin.OverlayHD.TextSettings">
-			<item level="0" text="--- Start of Text Color Settings ---" />
+			<item level="0" text="--- Text Color Settings ---" />
 			<item level="3" text="Text background color" description="Choose a color for text backgrounds.">config.plugins.skin.OverlayHD.TextBackgroundColor</item>
 			<item level="3" text="Text background transparency" description="Choose the level of text background transparency.">config.plugins.skin.OverlayHD.TextBackgroundTransparency</item>
 			<item level="0" text="Text color" description="Choose a text color for general descriptions and help.">config.plugins.skin.OverlayHD.Text</item>
@@ -78,11 +80,9 @@
 			<item level="0" text="Text label color" description="Choose a text color for labels.">config.plugins.skin.OverlayHD.TextLabel</item>
 			<item level="0" text="Text disabled color" description="Choose a text color for disabled labels.">config.plugins.skin.OverlayHD.TextDisabled</item>
 			<item level="0" text="Text waiting color" description="Choose a text color for content loading screens.">config.plugins.skin.OverlayHD.TextWaiting</item>
-			<item level="0" text="--- End of Text Color Settings ---" />
 		</if>
-		<item level="0" text="Show Info color settings" description="Setting this to Yes causes the configuration options for the Info screens to be displayed." requires="config.plugins.skin.OverlayHD.UseGroups">config.plugins.skin.OverlayHD.InfoSettings</item>
 		<if requires="config.plugins.skin.OverlayHD.InfoSettings">
-			<item level="0" text="--- Start of Info Color Settings ---" />
+			<item level="0" text="--- Info Color Settings ---" />
 			<item level="3" text="Info background color" description="Choose a color for info background.">config.plugins.skin.OverlayHD.InfoBackgroundColor</item>
 			<item level="3" text="Info background transparency" description="Choose the level of info background transparency.">config.plugins.skin.OverlayHD.InfoBackgroundTransparency</item>
 			<item level="3" text="Media Infobar background color" description="Choose a color for the Media Player infobar background.">config.plugins.skin.OverlayHD.InfobarMediaBackgroundColor</item>
@@ -121,11 +121,9 @@
 			<item level="0" text="Info media remaining color" description="Choose a color for displaying a media file's remaining time in Media Player.">config.plugins.skin.OverlayHD.InfoMediaRemaining</item>
 			<item level="0" text="Info media file size color" description="Choose a color for displaying a media file's file size.">config.plugins.skin.OverlayHD.InfoMediaFileSize</item>
 			<item level="0" text="Info disk information color" description="Choose a color for displaying the disk information in Media Player.">config.plugins.skin.OverlayHD.InfoDiskStats</item>
-			<item level="0" text="--- End of Info Color Settings ---" />
 		</if>
-		<item level="0" text="Show FAV color settings" description="Setting this to Yes causes the configuration options for the FAV service selection screens to be displayed." requires="config.plugins.skin.OverlayHD.UseGroups">config.plugins.skin.OverlayHD.FAVSettings</item>
 		<if requires="config.plugins.skin.OverlayHD.FAVSettings">
-			<item level="0" text="--- Start of FAV Color Settings ---" />
+			<item level="0" text="--- FAV Color Settings ---" />
 			<item level="0" text="FAV menu marked color" description="Choose a color for the FAV marked item selection highlights.">config.plugins.skin.OverlayHD.FAVMarkedColor</item>
 			<item level="0" text="FAV menu marked transparency" description="Choose the level of FAV marked item selection highlight transparency.">config.plugins.skin.OverlayHD.FAVMarkedTransparency</item>
 			<item level="0" text="FAV menu marked background color" description="Choose a color for the FAV marked item background transparency.">config.plugins.skin.OverlayHD.FAVMarkedBackgroundColor</item>
@@ -137,11 +135,9 @@
 			<item level="0" text="FAV service not available color" description="Choose a color for any FAV LCNs and services that are not currently available.">config.plugins.skin.OverlayHD.FAVServiceNotAvailable</item>
 			<item level="0" text="FAV service selected color" description="Choose a color for any selected FAV LCNs and services.">config.plugins.skin.OverlayHD.FAVServiceSelected</item>
 			<item level="0" text="FAV service selected fallback color" description="Choose a color for any selected FAV LCNs and services that are not currently available.">config.plugins.skin.OverlayHD.FAVServiceSelectedFallback</item>
-			<item level="0" text="--- End of FAV Color Settings ---" />
 		</if>
-		<item level="0" text="Show EPG color settings" description="Setting this to Yes causes the configuration options for the EPG screens to be displayed." requires="config.plugins.skin.OverlayHD.UseGroups">config.plugins.skin.OverlayHD.EPGSettings</item>
 		<if requires="config.plugins.skin.OverlayHD.EPGSettings">
-			<item level="0" text="--- Start of EPG Color Settings ---" />
+			<item level="0" text="--- EPG Color Settings ---" />
 			<item level="0" text="EPG time line color" description="Choose a color for the EPG grid time line.">config.plugins.skin.OverlayHD.EPGTimeLine</item>
 			<item level="3" text="EPG grid background color" description="Choose a color for the EPG grid background.">config.plugins.skin.OverlayHD.EPGGridBackground</item>
 			<item level="1" text="EPG grid transparency" description="Choose the level of background transparency for text based EPG grid data.">config.plugins.skin.OverlayHD.EPGTransparency</item>
@@ -172,11 +168,9 @@
 			<item level="0" text="EPG PIG progress bar background color" description="Choose a background color for the PIG current program progress bar.">config.plugins.skin.OverlayHD.EPGProgressBackground</item>
 			<item level="0" text="EPG PIG progress bar border color" description="Choose a border color for the PIG current program progress bar.">config.plugins.skin.OverlayHD.EPGProgressBorder</item>
 			<item level="0" text="EPG PIG progress bar color" description="Choose a color for the PIG current program progress bar.">config.plugins.skin.OverlayHD.EPGProgressColor</item>
-			<item level="0" text="--- End of EPG Color Settings ---" />
 		</if>
-		<item level="0" text="Show panel and plugin color settings" description="Setting this to Yes causes the configuration options for panels and plugins to be displayed." requires="config.plugins.skin.OverlayHD.UseGroups">config.plugins.skin.OverlayHD.PanelSettings</item>
 		<if requires="config.plugins.skin.OverlayHD.PanelSettings">
-			<item level="0" text="--- Start of Panel and Plugin Color Settings ---" />
+			<item level="0" text="--- Panel and Plugin Color Settings ---" />
 			<item level="3" text="Picture display background color" description="Choose a color for the picture display background.">config.plugins.skin.OverlayHD.PictureBackgroundColor</item>
 			<item level="1" text="Picture display background transparency" description="Choose the level of picture display background transparency.">config.plugins.skin.OverlayHD.PictureBackgroundTransparency</item>
 			<item level="0" text="Picture label color" description="Choose a color for displaying picture labels.">config.plugins.skin.OverlayHD.PictureLabel</item>
@@ -200,11 +194,9 @@
 			<item level="0" text="Weather data text color" description="Choose a color for the weather text.">config.plugins.skin.OverlayHD.WeatherData</item>
 			<item level="0" text="Weather data label text color" description="Choose a color for the weather labels.">config.plugins.skin.OverlayHD.WeatherLabel</item>
 			<item level="0" text="Weather data provider text color" description="Choose a color for the weather data provider.">config.plugins.skin.OverlayHD.WeatherProvider</item>
-			<item level="0" text="--- End of Panel and Plugin Color Settings ---" />
 		</if>
-		<item level="0" text="Show font settings" description="Setting this to Yes causes the configuration options for font selection to be displayed." requires="config.plugins.skin.OverlayHD.UseGroups">config.plugins.skin.OverlayHD.FontSettings</item>
 		<if requires="config.plugins.skin.OverlayHD.FontSettings">
-			<item level="0" text="--- Start of Font Settings ---" />
+			<item level="0" text="--- Font Settings ---" />
 			<item level="0" text="Title font" description="Choose a font for the heading title text.">config.plugins.skin.OverlayHD.TitleFont</item>
 			<item level="0" text="Clock font" description="Choose a font for the heading clock text.">config.plugins.skin.OverlayHD.ClockFont</item>
 			<item level="0" text="Button font" description="Choose a font for the button bar text.">config.plugins.skin.OverlayHD.ButtonFont</item>
@@ -229,7 +221,6 @@
 			<item level="0" text="Text font" description="Choose a font for general text.">config.plugins.skin.OverlayHD.TextFont</item>
 			<item level="0" text="Body font" description="Choose a font for body text.">config.plugins.skin.OverlayHD.Body</item>
 			<item level="0" text="Fixed font" description="Choose a font for fixed pitch / mono spaced text.">config.plugins.skin.OverlayHD.FixedFont</item>
-			<item level="0" text="--- End of Font Settings ---" />
 		</if>
 	</setup>
 </setupxml>
