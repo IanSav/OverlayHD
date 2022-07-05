@@ -249,7 +249,15 @@
 			-->
 	</screen>
 
-	<screen name="InformationImage" title="Receiver Images" position="fill" flags="wfNoBorder">
+	<screen name="CommitInformation" title="Commit Log Information" position="fill" flags="wfNoBorder">
+		<panel name="SystemInformation" />
+	</screen>
+
+	<screen name="DebugInformation" title="Debug Log Information" position="fill" flags="wfNoBorder">
+		<panel name="SystemInformation" />
+	</screen>
+
+	<screen name="ImageInformation" title="Receiver Images" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateBranding" />
 		<widget name="name" position="400,80" size="830,25" font="TextFont;20" halign="center" transparent="1" valign="center" />
@@ -259,14 +267,6 @@
 	<screen name="SystemInformation" title="System Information" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="information" position="50,80" size="1180,560" font="FixedFont;20" />
-	</screen>
-
-	<screen name="CommitInformation" title="Commit Log Information" position="fill" flags="wfNoBorder">
-		<panel name="SystemInformation" />
-	</screen>
-
-	<screen name="DebugInformation" title="Debug Log Information" position="fill" flags="wfNoBorder">
-		<panel name="SystemInformation" />
 	</screen>
 
 	<!-- About Information (MENU > Information > About) Screen -->
