@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
     - name: install prerequisites
       run: |
@@ -17,8 +17,14 @@ jobs:
         sudo apt-get install git
         sudo apt-get install build-essential
         sudo apt-get install gettext
-    - name: compile modskins python
+        sudo apt-get install python2-dev
+    - name: compile python2
       run: |
-        python -m compileall .
+        python2 -m compileall .
+    - name: compile python3
+      run: |
+        python3 -m compileall .
+    - name: compile po files
+      run: |
         find . -type f -name "*.po" -exec msgfmt {} -o {}.mo \;
         echo done!
