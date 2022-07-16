@@ -603,8 +603,10 @@
 		<setup key="PluginBrowser" image="menus/plugins.png" />
 		<setup key="PowerTimer" image="menus/timer.png" />
 		<setup key="Recording" image="menus/tv_live.png" />
+		<setup key="RecordTimer" image="menus/timer.png" />
 		<setup key="RFModulator" image="menus/setup.png" />
 		<setup key="satconfig" image="menus/setup.png" />
+		<setup key="SleepTimer" image="menus/sleeptimer.png" />
 		<setup key="Softcam" image="menus/setup.png" />
 		<setup key="SoftwareUpdate" image="menus/setup.png" />
 		<setup key="Subtitle" image="menus/setup.png" />
