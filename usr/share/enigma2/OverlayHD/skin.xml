@@ -2060,7 +2060,7 @@
 	</screen>
 
 	<screen name="ScreenTemplateConfig4">
-		<widget name="config" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" secondFont="MenuFont;25" />
+		<widget name="config" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" valueFont="MenuFont;25" />
 	</screen>
 
 	<screen name="ScreenTemplateDeviceList4">
