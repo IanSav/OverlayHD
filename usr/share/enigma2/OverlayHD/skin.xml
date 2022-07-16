@@ -432,12 +432,12 @@
 		<parameter name="EPGSingleColumnScales" value="5.7,6.0,1.5" />
 		<parameter name="EPGSingleColumnSpecs" value="0,125,5,135,20" />
 		-->
-		<parameter name="FileListIcon" value="10,2,20,20" />
-		<parameter name="FileListName" value="35,0,795,25" />
+		<parameter name="FileListIcon" value="15,1,25,23" />
+		<parameter name="FileListName" value="55,0,755,25" />
 		<parameter name="FileListBookmark" value="10,0,820,25" />
-		<parameter name="FileListMultiName" value="55,0,470,25" />
-		<parameter name="FileListMultiIcon" value="30,2,20,20" />
-		<parameter name="FileListMultiLock" value="2,0,25,25" />
+		<parameter name="FileListMultiName" value="90,0,720,25" />
+		<parameter name="FileListMultiIcon" value="50,1,25,23" />
+		<parameter name="FileListMultiLock" value="15,1,25,23" />
 		<parameter name="FrontendInfoColors" value="TunerCurrent,TunerRecording,TunerIdle" />
 		<parameter name="HelpMenuListHlp" value="0,0,900,25" />
 		<parameter name="HelpMenuListExtHlp0" value="0,0,900,35" />
