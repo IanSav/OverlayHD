@@ -687,108 +687,67 @@ except Exception:
 
 <!-- Timer Screens -->
 
-	<!-- TIMER | SLEEP - Sleep / PowerTimer Timer List Menu -->
+	<!-- TIMER - Timer Edit Screen - This is only required for the old TimerEntry screen! -->
 
-	<screen name="TimerEditList" title="Timer List" position="fill" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonInfo" />
-		<ePixmap pixmap="menus/timer.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<panel name="ScreenTemplateTimerList4" />
-		<panel name="ScreenTemplateDescription4" />
+	<screen name="TimerEdit" title="Timer Settings" position="fill" flags="wfNoBorder">
+		<panel name="Setup" />
 	</screen>
 
-	<!-- Timer Log -->
-
-	<screen name="TimerLogDefault" title="Timer Log" position="fill" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/timer.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<panel name="ScreenTemplateLogList4" />
-		<panel name="ScreenTemplateLogEntry4" />
-		<!--
-		<widget name="loglist" position="50,80" size="1180,400" enableWrapAround="1" font="Regular;20" itemHeight="50" scrollbarMode="showOnDemand" transparent="1" valign="center" />
-		<widget name="logentry" position="50,540" size="1180,60" font="Console;20" transparent="1" />
-		-->
+	<screen name="TimerEntry" title="Timer Settings" position="fill" flags="wfNoBorder">
+		<panel name="Setup" />
 	</screen>
 
-	<screen name="TimerLog" title="Timer Log" position="fill" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/timer.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<panel name="ScreenTemplateLogList4" />
-		<panel name="ScreenTemplateLogEntry4" />
+	<!-- Power Timer Edit Screen - This is only required for the old TimerEntry screen! -->
+
+	<screen name="PowerTimerEdit" title="Power Timer Settings" position="fill" flags="wfNoBorder">
+		<panel name="Setup" />
 	</screen>
 
-	<!-- Timer Entry -->
-
-	<screen name="TimerEntry" title="Timer Entry" position="fill" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonHelp" />
-		<ePixmap pixmap="menus/timer.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<panel name="ScreenTemplateConfig4" />
-		<panel name="ScreenTemplateDescription4" />
+	<screen name="PowerTimerEntry" title="Power Timer Settings" position="fill" flags="wfNoBorder">
+		<panel name="Setup" />
 	</screen>
 
-	<!-- Timer Sanity Conflict -->
+	<!-- SLEEP - Sleep Timer Edit Screen -->
+
+	<screen name="SleepTimerEdit" title="Sleep Timer Settings" position="fill" flags="wfNoBorder">
+		<panel name="Setup" />
+	</screen>
+
+	<!-- Timer Sanity Conflict Screen -->
 
 	<screen name="TimerSanityConflict" title="Timer Sanity Error" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget source="lab1" render="Label" position="120,85" size="510,24" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" halign="center" transparent="1" valign="center" />
 		<widget source="lab2" render="Label" position="650,85" size="510,24" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" halign="center" transparent="1" valign="center" />
-		<widget name="timer1" position="120,115" size="510,500" scrollbarMode="showOnDemand" transparent="1" />
-		<widget name="timer2" position="650,115" size="510,500" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="timer1" position="120,115" size="510,500" transparent="1" />
+		<widget name="timer2" position="650,115" size="510,500" transparent="1" />
 	</screen>
 
-	<!-- Timer Selection ??? -->
+	<!-- Timer / PowerTimer Log Screen -->
+
+	<screen name="TimerLog" title="Timer Log" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<ePixmap pixmap="menus/timer.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
+		<panel name="ScreenTemplateLog0" conditional="log" />
+		<panel name="ScreenTemplateLogList4" conditional="loglist" />
+		<panel name="ScreenTemplateLogEntry4" conditional="logentry" />
+	</screen>
+
+	<!-- TIMER - Timer / PowerTimer List Screen -->
 
 	<screen name="TimerSelection" title="Timer Selection" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
+		<ePixmap pixmap="menus/timer.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateTimerList4" />
 		<panel name="ScreenTemplateDescription4" />
 	</screen>
 
-	<!-- Timer Screens ??? -->
-
-	<screen name="TimerEdit" position="70,130" size="590,335">
-		<widget name="description" position="10,10" size="580,40" font="Regular;25" transparent="1" />
-		<widget name="lbegin" position="405,102" size="103,30" font="Regular;25" foregroundColor="LightRed" transparent="1" />
-		<widget name="lend" position="405,158" size="103,30" font="Regular;25" foregroundColor="DullGreen" transparent="1" />
-		<widget name="begin" position="508,105" size="72,35" font="Regular;25" transparent="1" />
-		<widget name="end" position="508,150" size="72,35" font="Regular;25" transparent="1" />
-		<widget name="apply" position="10,240" size="250,35" transparent="1" />
+	<screen name="PowerTimerSelection" title="Power Timer Selection" position="fill" flags="wfNoBorder">
+		<panel name="TimerSelection" />
 	</screen>
 
-	<!-- Power Timer Entry -->
-
-	<screen name="PowerTimerEntry" title="Power Timer Entry" position="fill" flags="wfNoBorder">
-		<panel name="TimerEntry" />
-	</screen>
-
-	<!-- Original Sleep Timer List Menu ??? - Unused -->
-
-	<screen name="SleepTimerEdit" title="Power / Sleep Timer" position="fill" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<!--
-		<ePixmap pixmap="icons/clock.png" position="50,30" size="14,14" alphatest="blend" zPosition="3" />
-		<widget source="global.CurrentTime" render="Label" position="75,30" size="80,22" backgroundColor="Black" font="Named;16" foregroundColor="White" halign="left" transparent="1">
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="155,30" size="500,22" backgroundColor="Black" font="Named;16" foregroundColor="White" halign="left" transparent="1">
-			<convert type="ClockToText">Date</convert>
-		</widget>
-		<eLabel position="50,102" size="1160,1" backgroundColor="Pinstripe" zPosition="2" />
-		<ePixmap pixmap="frame/frame_400x200.png" position="150,195" size="400,200" alphatest="blend" zPosition="2" />
-		-->
-		<!--
-		<ePixmap pixmap="buttons/button_200x60_red.png" position="123,635" size="200,60" alphatest="blend" zPosition="1" />
-		<ePixmap pixmap="buttons/button_200x60_green.png" position="398,635" size="200,60" alphatest="blend" zPosition="1" />
-		<ePixmap pixmap="buttons/button_200x60_yellow.png" position="673,635" size="200,60" alphatest="blend" zPosition="1" />
-		<ePixmap pixmap="buttons/button_200x60_blue.png" position="948,635" size="200,60" alphatest="blend" zPosition="1" />
-		<widget name="key_red" position="123,635" size="200,36" backgroundColor="KeyRed" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
-		<widget name="key_green" position="398,635" size="200,36" backgroundColor="KeyGreen" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
-		<widget name="key_blue" position="948,635" size="200,36" backgroundColor="KeyBlue" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
-		-->
-		<widget name="config" position="650,195" size="510,384" backgroundColor="background" font="Regular;20" halign="center" transparent="1" zPosition="2" />
-		<widget name="current_status" position="200,210" size="300,170" backgroundColor="#31000000" font="Regular;20" halign="center" transparent="1" valign="center" zPosition="3" />
-		<eLabel position="50,625" size="1160,1" backgroundColor="Pinstripe" />
+	<screen name="TimerEditList" title="Timer Selection" position="fill" flags="wfNoBorder">
+		<panel name="TimerSelection" />
 	</screen>
 
 <!-- VolumeAdjust Screen -->

@@ -1905,6 +1905,11 @@
 		<widget name="list_left" position="50,115" size="1180,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" />
 	</screen>
 
+	<screen name="ScreenTemplateLog0">
+		<!-- This is the new style timer log. -->
+		<widget name="log" position="415,80" size="815,560" font="Regular;20" />
+	</screen>
+
 	<screen name="ScreenTemplateMenu0">
 		<!-- Font and ItemHeight are taken from the font alias ChoiceList. -->
 		<widget name="menu" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" />
@@ -2089,7 +2094,8 @@
 	</screen>
 
 	<screen name="ScreenTemplateLogList4">
-		<widget name="loglist" position="400,80" size="830,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" transparent="0" />
+		<!-- This is the old style timer log. -->
+		<widget name="loglist" position="400,80" size="830,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="FixedFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" />
 	</screen>
 
 	<screen name="ScreenTemplateMenuList4">
@@ -2245,8 +2251,9 @@
 	</screen>
 
 	<screen name="ScreenTemplateLogEntry4">
+		<!-- This is the old style timer log. -->
 		<panel name="ScreenTemplateFrame830x120" />
-		<widget name="logentry" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" /><!--Console-->
+		<widget name="logentry" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateSDescription4">
