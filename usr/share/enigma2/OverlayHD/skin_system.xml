@@ -687,9 +687,34 @@ except Exception:
 
 <!-- Timer Screens -->
 
-	<!-- TIMER - Timer Edit Screen - This is only required for the old TimerEntry screen! -->
+	<!-- TIMER - Record / Power Timer Overview Screen -->
 
-	<screen name="TimerEdit" title="Timer Settings" position="fill" flags="wfNoBorder">
+	<screen name="TimerSelection" title="Timer Selection" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<ePixmap pixmap="menus/timer.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
+		<panel name="ScreenTemplateTimerList4" />
+		<panel name="ScreenTemplateDescription4" />
+	</screen>
+
+	<screen name="RecordTimerOverview" title="Timer Selection" position="fill" flags="wfNoBorder">
+		<panel name="TimerSelection" />
+	</screen>
+
+	<screen name="PowerTimerOverview" title="Timer Selection" position="fill" flags="wfNoBorder">
+		<panel name="TimerSelection" />
+	</screen>
+
+	<screen name="PowerTimerEditList" title="Power Timer Selection" position="fill" flags="wfNoBorder">
+		<panel name="TimerSelection" />
+	</screen>
+
+	<screen name="TimerEditList" title="Timer Selection" position="fill" flags="wfNoBorder">
+		<panel name="TimerSelection" />
+	</screen>
+
+	<!-- TIMER - Record Timer Edit Screen - This is only required for the old TimerEntry screen! -->
+
+	<screen name="RecordTimerEdit" title="Timer Settings" position="fill" flags="wfNoBorder">
 		<panel name="Setup" />
 	</screen>
 
@@ -731,23 +756,6 @@ except Exception:
 		<panel name="ScreenTemplateLog0" conditional="log" />
 		<panel name="ScreenTemplateLogList4" conditional="loglist" />
 		<panel name="ScreenTemplateLogEntry4" conditional="logentry" />
-	</screen>
-
-	<!-- TIMER - Timer / PowerTimer List Screen -->
-
-	<screen name="TimerSelection" title="Timer Selection" position="fill" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/timer.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<panel name="ScreenTemplateTimerList4" />
-		<panel name="ScreenTemplateDescription4" />
-	</screen>
-
-	<screen name="PowerTimerSelection" title="Power Timer Selection" position="fill" flags="wfNoBorder">
-		<panel name="TimerSelection" />
-	</screen>
-
-	<screen name="TimerEditList" title="Timer Selection" position="fill" flags="wfNoBorder">
-		<panel name="TimerSelection" />
 	</screen>
 
 <!-- VolumeAdjust Screen -->
