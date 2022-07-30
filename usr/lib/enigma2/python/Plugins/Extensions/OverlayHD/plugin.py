@@ -2,11 +2,11 @@
 #
 # OverlayHD Skin Manager
 #
-# Version Date - 28-Mar-2022
+# Version Date - 31-Jul-2022
 # Remember to change version number variable below!!!
 #
 # Repository - https://github.com/IanSav/OverlayHD
-# Coding by IanSav (c) 2015-2021
+# Coding by IanSav (c) 2015-2022
 #
 # This skin and plugin were originally developed for the Beyonwiz Australia
 # distribution of Enigma2.  This skin and code is free to use and may be
@@ -34,27 +34,13 @@ from random import randrange
 from shutil import copy2, move, rmtree
 from xml.etree.cElementTree import Element, ElementTree, SubElement
 
-try:
-	from Components.SystemInfo import BoxInfo
-	distro = BoxInfo.getItem("distro", "enigma2").lower()
-	displayDistro = BoxInfo.getItem("displaydistro", "Enigma2")
-except ImportError as err:
-	print("[OverlayHD] Note: BoxInfo is not available.")
-	try:
-		from boxbranding import getImageDistro
-		distro = getImageDistro().lower()
-		displayDistro = distro
-	except ImportError as err:
-		print("[OverlayHD] Note: Boxbranding is not available, OpenPLi assumed.")
-		distro = "openpli"
-		displayDistro = "OpenPLi"
-
 from enigma import eEnv, gRGB
 
-from skin import colors, domScreens, fonts, reloadWindowStyles
+from skin import colors, domScreens, fonts, reloadWindowStyles, windowStyles
 from Components.ActionMap import HelpableActionMap
 from Components.config import ConfigEnableDisable, ConfigSelection, ConfigSubsection, ConfigYesNo, config, configfile
 from Components.Label import Label
+from Components.SystemInfo import BoxInfo
 from Components.Sources.List import List
 from Components.Sources.StaticText import StaticText
 from Plugins.Plugin import PluginDescriptor
@@ -69,7 +55,10 @@ from Tools.BoundFunction import boundFunction
 from Tools.Directories import SCOPE_CONFIG, SCOPE_GUISKIN, SCOPE_MEDIA, SCOPE_PLUGIN, SCOPE_SKINS, fileReadXML, resolveFilename
 
 MODULE_NAME = __name__.split(".")[-1]
-PLUGIN_VERSION_NUMBER = "1.93"
+PLUGIN_VERSION_NUMBER = "1.94"
+
+DISPLAY_DISTRO = BoxInfo.getItem("displaydistro", "Enigma2")
+DISTRO = BoxInfo.getItem("distro", "enigma2").lower()
 
 DISTRO_MENU_IDVAL = 0
 DISTRO_SCREENLIST = 1
@@ -459,22 +448,38 @@ buttonChoices = [
 	("Pill", _("Pill"))
 ]
 
+modeChoices = [
+	("showOnDemand", _("When required (Right)")),
+	("showAlways", _("Always (Right)")),
+	("showNever", _("Never")),
+	("showLeftOnDemand", _("When required (Left)")),
+	("showLeftAlways", _("Always (Left)"))
+]
+
+scrollChoices = [
+	("byPage", _("Page mode")),
+	("byLine", _("Line mode"))
+]
+
 optionElements = [
 	("ButtonStyle", "Block", ConfigSelection, buttonChoices),  # As this is used by can AlwaysShowButtons it must be processed first!
 	("AlwaysShowButtons", False, ConfigYesNo, None),
 	("BackgroundImage", "", ConfigSelection, imageChoices),
 	("BootImage", "", ConfigSelection, imageChoices),
-	("EnhancedMenu", False, ConfigEnableDisable, None),
 	("EPGSettings", False, ConfigYesNo, None),
 	("EPGShowTicks", True, ConfigYesNo, None),
 	("FAVSettings", False, ConfigYesNo, None),
 	("FontSettings", False, ConfigYesNo, None),
 	("GeneralSettings", False, ConfigYesNo, None),
 	("InfoSettings", False, ConfigYesNo, None),
+	("ListboxMode", "showOnDemand", ConfigSelection, modeChoices),
+	("ListboxScroll", "byLine", ConfigSelection, scrollChoices),
 	("MenuSettings", False, ConfigYesNo, None),
 	("PanelSettings", False, ConfigYesNo, None),
 	("RadioImage", "", ConfigSelection, imageChoices),
 	("RecordBlink", True, ConfigYesNo, None),
+	("ScrollLabelMode", "showOnDemand", ConfigSelection, modeChoices),
+	("ScrollLabelScroll", "byLine", ConfigSelection, scrollChoices),
 	("SortThemes", False, ConfigYesNo, None),
 	("Spinner", "", ConfigSelection, spinnerChoices),
 	("TextSettings", False, ConfigYesNo, None),
@@ -956,7 +961,7 @@ def applySkinSettings(fullInit=False):
 				setattr(config.plugins.skin.OverlayHD, label, configType(default=default))
 			if debugSkin:
 				print("[OverlayHD] Setting ption '%s' to '%s'." % (label, default))
-		modes = distroModes.get(distro, (None, "Enigma2"))[DISTRO_SCREENLIST]
+		modes = distroModes.get(DISTRO, (None, "Enigma2"))[DISTRO_SCREENLIST]
 		for screen in domScreens:
 			element, path = domScreens.get(screen, (None, None))
 			if element is not None:
@@ -1027,9 +1032,21 @@ def applySkinSettings(fullInit=False):
 		elif label == "EPGShowTicks":
 			result = applyShowTicks(optionValue)
 			msg = "EPG tick marks to '%s'" % optionValue
+		elif label == "ListboxMode":
+			result = applyWindowStyle("listbox", "scrollbarMode", optionValue)
+			msg = "eListbox mode to '%s'" % optionValue
+		elif label == "ListboxScroll":
+			result = applyWindowStyle("listbox", "scrollbarScroll", optionValue)
+			msg = "eListbox scroll to '%s'" % optionValue
 		elif label == "RecordBlink":
 			result = applyBlink(["session.RecordState"], optionValue)
 			msg = "recording indicator blink to '%s'" % optionValue
+		elif label == "ScrollLabelMode":
+			result = applyWindowStyle("scrolllabel", "scrollbarMode", optionValue)
+			msg = "ScrollLabel mode to '%s'" % optionValue
+		elif label == "ScrollLabelScroll":
+			result = applyWindowStyle("scrolllabel", "scrollbarScroll", optionValue)
+			msg = "ScrollLabel scroll to '%s'" % optionValue
 		elif label == "Spinner":
 			result = applySpinner(optionValue)
 			optionValue = "'%s'" % optionValue if optionValue else "default"
@@ -1093,7 +1110,7 @@ def applyLogoImage(logo, image):
 			unlink(target)
 		else:
 			remove(target)
-	except (IOError, OSError) as err:
+	except OSError as err:
 		if err.errno != ENOENT:
 			print("[OverlayHD] Error %d: Unable to delete the old %s image '%s'!  (%s)" % (err.errno, logo, target, err.strerror))
 			status = err.errno
@@ -1101,7 +1118,7 @@ def applyLogoImage(logo, image):
 		try:
 			# shutil.copy2(image, target)
 			symlink(image, target)
-		except (IOError, OSError) as err:
+		except OSError as err:
 			print("[OverlayHD] Error %d: Unable to link the %s image to '%s'!  (%s)" % (err.errno, logo, target, err.strerror))
 			status = err.errno
 	return status
@@ -1189,10 +1206,18 @@ def applySpinner(spinner):
 	if spinner:
 		try:
 			symlink(spinner, currentSpinner)
-		except (IOError, OSError) as err:
+		except OSError as err:
 			print("[OverlayHD] Error %d: Unable to link '%s' spinner directory as '%s'!  (%s)" % (err.errno, spinner, currentSpinner, err.strerror))
 			status = err.errno
 	return status
+
+
+def applyWindowStyle(widget, attribute, value):
+	desktop, screenID, domSkin, pathSkin, scope = windowStyles[0]
+	windowStyle = domSkin.find("windowstyle")
+	if windowStyle:
+		for widget in windowStyle.findall(widget):
+			widget.set(attribute, value)
 
 
 def clearSkinSettings():
@@ -1229,7 +1254,7 @@ def main(session, **kwargs):
 
 
 def setup(menuid, **kwargs):
-	if menuid == distroModes.get(distro, (None, None))[DISTRO_MENU_IDVAL]:
+	if menuid == distroModes.get(DISTRO, (None, None))[DISTRO_MENU_IDVAL]:
 		return [(_("OverlayHD Skin Settings"), main, "OverlayHD_setup", 1000)]
 	return []
 
@@ -1237,11 +1262,11 @@ def setup(menuid, **kwargs):
 def autostart(reason, **kwargs):
 	if reason == 0:
 		print("[OverlayHD] OverlayHD Skin Manager version %s." % PLUGIN_VERSION_NUMBER)
-		print("[OverlayHD] Configuring to run on '%s' in '%s' mode." % (displayDistro, "' then '".join(distroModes.get(distro, (None, "Unknown"))[DISTRO_SCREENLIST])))
+		print("[OverlayHD] Configuring to run on '%s' in '%s' mode." % (DISPLAY_DISTRO, "' then '".join(distroModes.get(DISTRO, (None, "Unknown"))[DISTRO_SCREENLIST])))
 		updateOverlayHD()
 		applySkinSettings(fullInit=True)
 	elif reason == 1:
-		print("[OverlayHD] OverlayHD Skin Manager version %s, preparing to unload from '%s'." % (PLUGIN_VERSION_NUMBER, displayDistro))
+		print("[OverlayHD] OverlayHD Skin Manager version %s, preparing to unload from '%s'." % (PLUGIN_VERSION_NUMBER, DISPLAY_DISTRO))
 		clearSkinSettings()
 
 

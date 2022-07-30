@@ -26,6 +26,10 @@
 			<item level="1" text="Color button background color" description="Choose a color for the color button background.">config.plugins.skin.OverlayHD.KeyBackColor</item>
 			<item level="1" text="Color button background transparency" description="Choose the level of screen saver screen background transparency.">config.plugins.skin.OverlayHD.KeyBackTransparency</item>
 			<item level="0" text="Always show color buttons" description="Setting this to Yes forces all the color buttons to be displayed even if they don't currently have a purpose.">config.plugins.skin.OverlayHD.AlwaysShowButtons</item>
+			<item level="0" text="Listbox scroll mode" description="Choose when and where scroll bars are shown in all list boxes.">config.plugins.skin.OverlayHD.ListboxMode</item>
+			<item level="0" text="Listbox scroll style" description="Choose how all list boxes will scroll.  With 'Page mode' the cursor will jump to the previous/next screen.  With 'Line mode' the previous/next line will be scrolled into view.">config.plugins.skin.OverlayHD.ListboxScroll</item>
+			<item level="0" text="ScrollLabel scroll mode" description="Choose when and where scroll bars are shown in all ScrollLabels.">config.plugins.skin.OverlayHD.ScrollLabelMode</item>
+			<item level="0" text="ScrollLabel scroll style" description="Choose how all ScrollLabels will scroll.  With 'Page mode' the cursor will jump to the previous/next screen.  With 'Line mode' the previous/next line will be scrolled into view.">config.plugins.skin.OverlayHD.ScrollLabelScroll</item>
 			<item level="0" text="REC icon blinks" description="Enable to display the REC icon blinking.">config.plugins.skin.OverlayHD.RecordBlink</item>
 			<item level="0" text="Firmware update icon blinks" description="Enable to display the firmware update available icon blinking.">config.plugins.skin.OverlayHD.UpdateBlink</item>
 			<item level="1" text="Show EPG time line tick marks" description="Setting this to Yes causes the time line tick marks to be displayed.">config.plugins.skin.OverlayHD.EPGShowTicks</item>
