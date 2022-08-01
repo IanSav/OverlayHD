@@ -15,11 +15,11 @@
 			<convert type="EventName">Name</convert>
 		</widget>
 		<widget source="Event" render="Pixmap" pixmap="epg/fta.png" position="1125,0" size="55,25" alphatest="blend">
-			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,False</convert>
+			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True,Invert,Ignore</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="Event" render="Pixmap" pixmap="epg/icetv.png" position="1125,0" size="55,25" alphatest="blend">
-			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True</convert>
+			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True,Ignore</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="Event" render="Label" position="0,30" size="180,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" noWrap="1" transparent="1">
@@ -58,11 +58,11 @@
 			<convert type="EventName">Name</convert>
 		</widget>
 		<widget source="Event" render="Pixmap" pixmap="epg/fta.png" position="805,0" size="55,25" alphatest="blend">
-			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,False</convert>
+			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True,Invert,Ignore</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="Event" render="Pixmap" pixmap="epg/icetv.png" position="805,0" size="55,25" alphatest="blend">
-			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True</convert>
+			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True,Ignore</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="Event" render="Label" position="0,30" size="180,25" backgroundColor="EPGBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" noWrap="1" transparent="1">
@@ -327,11 +327,11 @@
 			<convert type="EventName">Genre,Trimmed</convert>
 		</widget>
 		<widget source="Event" render="Pixmap" pixmap="epg/fta.png" position="1175,625" size="55,25" alphatest="blend">
-			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,False</convert>
+			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True,Invert,Ignore</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="Event" render="Pixmap" pixmap="epg/icetv.png" position="1175,625" size="55,25" alphatest="blend">
-			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True</convert>
+			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True,Ignore</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
 	</screen>
