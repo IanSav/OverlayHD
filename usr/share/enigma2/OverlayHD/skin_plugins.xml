@@ -223,6 +223,55 @@
 		<panel name="ScreenTemplateSMenu0" />
 	</screen>
 
+<!-- Digital Living Network Alliance (DLNA) Client / Server Plugins -->
+
+	<screen name="DLNAServer" title="DLNA Server Settings" position="fill" flags="wfNoBorder">
+		<panel name="Setup" />
+		<ePixmap pixmap="menus/storage.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
+		<panel name="ScreenTemplateInformation4" />
+	</screen>
+
+	<screen name="DLNAClientConfig" title="DLNA ClientSettings" position="fill" flags="wfNoBorder">
+		<panel name="Setup" />
+		<ePixmap pixmap="menus/storage.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
+	</screen>
+
+	<screen name="DLNADeviceBrowser" title="Device Browser" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<ePixmap pixmap="menus/storage.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
+		<widget name="devicelist" position="400,80" size="830,550" />
+	</screen>
+
+	<screen name="DLNAFileBrowser" title="File Browser" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<ePixmap pixmap="menus/storage.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
+		<widget name="filelist" position="400,80" size="830,425" />
+		<panel name="ScreenTemplateFrame830x120" />
+		<widget name="directory" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="SelectDirectoryWindow" title="Select Directory" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<widget name="filelist" position="400,80" size="830,425" />
+		<panel name="ScreenTemplateFrame830x120" />
+		<widget name="currentDir" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
+	</screen>
+
+	<screen name="DLNAStreamPlayer" flags="wfNoBorder" position="center,620" size="455,53" title="DLNAStreamPlayer" backgroundColor="transparent">
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/DLNABrowser/icons/mp_wb_background.png" position="0,0" zPosition="-1" size="455,53" />
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/DLNABrowser/icons/mp_wb_buttons.png" position="40,23" size="30,13" alphatest="on" />
+		<widget source="session.CurrentService" render="PositionGauge" position="80,25" size="220,10" zPosition="2" pointer="skin_default/position_pointer.png:540,0" transparent="1" foregroundColor="#20224f">
+			<convert type="ServicePosition">Gauge</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="310,20" size="50,20" font="Regular;18" halign="center" valign="center" backgroundColor="#4e5a74" transparent="1" >
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<widget name="sidebar" position="362,20" size="10,20" font="Regular;18" halign="center" valign="center" backgroundColor="#4e5a74" transparent="1" />
+		<widget source="session.CurrentService" render="Label" position="374,20" size="50,20" font="Regular;18" halign="center" valign="center" backgroundColor="#4e5a74" transparent="1" >
+			<convert type="ServicePosition">Length</convert>
+		</widget>
+	</screen>
+
 <!-- Fan Control 2 Plugin -->
 
 	<screen name="FanControl2" title="FanControl2" position="100,100" size="300,300" />
