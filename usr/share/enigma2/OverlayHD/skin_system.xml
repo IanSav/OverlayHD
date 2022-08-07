@@ -687,43 +687,37 @@ except Exception:
 
 <!-- Timer Screens -->
 
-	<!-- TIMER - Record / Power Timer Overview Screen -->
+	<!-- RecordTimer / ConflictTimer / PowerTimer Overview Screens -->
 
-	<screen name="TimerSelection" title="Timer Selection" position="fill" flags="wfNoBorder">
+	<screen name="TimerOverview" title="Timer Overview" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/timer.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateTimerList4" />
 		<panel name="ScreenTemplateDescription4" />
 	</screen>
 
-	<screen name="RecordTimerOverview" title="Timer Selection" position="fill" flags="wfNoBorder">
-		<panel name="TimerSelection" />
+	<!--
+	<screen name="PowerTimerOverview" title="PowerTimer Overview" position="fill" flags="wfNoBorder">
+		<panel name="TimerOverview" />
 	</screen>
 
-	<screen name="PowerTimerOverview" title="Timer Selection" position="fill" flags="wfNoBorder">
-		<panel name="TimerSelection" />
+	<screen name="RecordTimerOverview" title="RecordTimer Overview" position="fill" flags="wfNoBorder">
+		<panel name="TimerOverview" />
 	</screen>
 
-	<screen name="PowerTimerEditList" title="Power Timer Selection" position="fill" flags="wfNoBorder">
-		<panel name="TimerSelection" />
+	<screen name="ConflictTimerOverview" title="ConflictTimer Overview" position="fill" flags="wfNoBorder">
+		<panel name="TimerOverview" />
 	</screen>
+	-->
 
+	<!-- Deprecated PowerTimer / RecordTimer Edit Screen -->
 	<screen name="TimerEditList" title="Timer Selection" position="fill" flags="wfNoBorder">
-		<panel name="TimerSelection" />
+		<panel name="TimerOverview" />
 	</screen>
 
-	<!-- TIMER - Record Timer Edit Screen - This is only required for the old TimerEntry screen! -->
+	<!-- RecordTimer / PowerTimer Edit Screens -->
 
-	<screen name="RecordTimerEdit" title="Timer Settings" position="fill" flags="wfNoBorder">
-		<panel name="Setup" />
-	</screen>
-
-	<screen name="TimerEntry" title="Timer Settings" position="fill" flags="wfNoBorder">
-		<panel name="Setup" />
-	</screen>
-
-	<!-- Power Timer Edit Screen - This is only required for the old TimerEntry screen! -->
-
+	<!--
 	<screen name="PowerTimerEdit" title="Power Timer Settings" position="fill" flags="wfNoBorder">
 		<panel name="Setup" />
 	</screen>
@@ -732,13 +726,27 @@ except Exception:
 		<panel name="Setup" />
 	</screen>
 
-	<!-- SLEEP - Sleep Timer Edit Screen -->
+	<screen name="RecordTimerEdit" title="Timer Settings" position="fill" flags="wfNoBorder">
+		<panel name="Setup" />
+	</screen>
+	-->
 
-	<screen name="SleepTimerEdit" title="Sleep Timer Settings" position="fill" flags="wfNoBorder">
+	<!-- Deprecated PowerTimer / RecordTimer Entry Screen -->
+	<screen name="TimerEntry" title="Timer Settings" position="fill" flags="wfNoBorder">
 		<panel name="Setup" />
 	</screen>
 
-	<!-- Timer Sanity Conflict Screen -->
+	<!-- RecordTimer / ConflictTimer / PowerTimer Log Screen -->
+
+	<screen name="TimerLog" title="Timer Log" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<ePixmap pixmap="menus/timer.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
+		<panel name="ScreenTemplateLog0" conditional="log" />
+		<panel name="ScreenTemplateLogList4" conditional="loglist" /><!-- Deprecated -->
+		<panel name="ScreenTemplateLogEntry4" conditional="logentry" /><!-- Deprecated -->
+	</screen>
+
+	<!-- Deprecated Timer Sanity Conflict Screen -->
 
 	<screen name="TimerSanityConflict" title="Timer Sanity Error" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
@@ -748,15 +756,13 @@ except Exception:
 		<widget name="timer2" position="650,115" size="510,500" transparent="1" />
 	</screen>
 
-	<!-- Timer / PowerTimer Log Screen -->
+	<!-- SLEEP - Sleep Timer Edit Screen -->
 
-	<screen name="TimerLog" title="Timer Log" position="fill" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/timer.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<panel name="ScreenTemplateLog0" conditional="log" />
-		<panel name="ScreenTemplateLogList4" conditional="loglist" />
-		<panel name="ScreenTemplateLogEntry4" conditional="logentry" />
+	<!--
+	<screen name="SleepTimerEdit" title="Sleep Timer Settings" position="fill" flags="wfNoBorder">
+		<panel name="Setup" />
 	</screen>
+	-->
 
 <!-- VolumeAdjust Screen -->
 
