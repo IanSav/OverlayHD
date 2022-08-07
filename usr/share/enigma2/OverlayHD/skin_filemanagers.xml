@@ -180,6 +180,96 @@
 		<panel name="ArchiverInfoScreen" />
 	</screen>
 
+<!-- MEDIA - Media Selection Screen -->
+
+	<screen name="MediaSelection" title="Media Selection" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<eLabel position="820,66" size="2,595" backgroundColor="Pinstripe" />
+		<widget name="media" position="50,80" size="760,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" colorData="Cyan" colorDate="Cyan" colorSize="Cyan" foregroundColor="Gold" foregroundColorSelected="MenuTextSelected" />
+			<!-- Other available attributes...
+			colorData="0x00ffffff" colorDataSelected="0x00ffffff" colorDirectory="0x00ffffff" colorDirectorySelected="0x00ffffff"
+			colorName="0x00ffffff" colorNameSelected="0x00ffffff colorDate="0x00ffffff" colorDateSelected="0x00ffffff"
+			colorDuration="0x00ffffff" colorDurationSelected="0x00ffffff" colorSize="0x00ffffff" colorSizeSelected="0x00ffffff"
+			font="Regular;20" fontDate="Regular;20" fontDuration="Regular;20" fontSize="Regular;20"
+			iconSeparator="5"
+			progressColour="0x00206333" progressColourSelected="0x0020a333" progressColourRec="0x00ff001d" progressColourRecSelected="0x00ff001d"
+			progressColourSeen="0x00ffc71d" progressColourSeenSelected="000xffc71d" progressSize="50,11"
+			spaceLeft="5" spaceRight="10" textSeparator="20"
+			-->
+		<widget name="quickSelect" position="50,80" size="760,525" backgroundColor="TextBackground" font="SMSHelperFont;100" foregroundColor="FindCharacter" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="waiting" position="50,80" size="760,525" backgroundColor="TextBackground" font="MovieSelectionFont;25" foregroundColor="TextWaiting" halign="center" transparent="1" valign="center" zPosition="+2" />
+		<widget name="numFolders" position="50,605" size="220,25" font="InfoOtherFont;20" foregroundColor="InfoDiskStats" transparent="1" />
+		<widget name="numFiles" position="50,630" size="220,25" font="InfoOtherFont;20" foregroundColor="InfoDiskStats" transparent="1" />
+		<widget name="trashSize" position="270,630" size="220,25" font="InfoOtherFont;20" foregroundColor="InfoDiskStats" transparent="1" />
+		<widget name="diskSize" position="540,605" size="220,25" font="InfoOtherFont;20" foregroundColor="InfoDiskStats" halign="right" transparent="1" />
+		<widget name="freeSpace" position="490,630" size="270,25" font="InfoOtherFont;20" foregroundColor="InfoDiskStats" halign="right" transparent="1" />
+		<widget name="mediaSort" position="775,607" size="35,20" pixmaps="icons/ms_rec.png,icons/ms_az_no.png,icons/ms_az_on.png,icons/ms_za_on.png,icons/ms_za_no.png,icons/ms_faz.png,icons/ms_faz.png,icons/ms_fza.png,icons/ms_fza.png,icons/ms_no_az.png,icons/me_ask.png,icons/me_ask.png,icons/ms_on_za.png,icons/ms_sl.png,icons/ms_ls.png,icons/ms_sb.png,icons/ms_bs.png,icons/ms_daz.png,icons/ms_shuffle.png" alphatest="blend" transparent="1" />
+		<widget name="mediaEnd" position="775,630" size="35,20" pixmaps="icons/me_ask.png,icons/me_movielist.png,icons/me_quit.png,icons/me_pause.png,icons/me_playlist.png,icons/me_playlistquit.png,icons/me_loop.png,icons/me_rep.png" alphatest="blend" transparent="1" />
+		<eLabel text="Date:" position="830,80" size="100,25" font="InfoOtherFont;20" foregroundColor="InfoMediaFileSize" transparent="1" />
+		<widget source="mediainfo" render="Label" position="930,80" size="300,25" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" halign="right" transparent="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">LongFullDate</convert>
+		</widget>
+		<eLabel text="Duration:" position="830,105" size="100,25" font="InfoOtherFont;20" foregroundColor="InfoDurationNow" transparent="1" />
+		<widget source="mediainfo" render="Label" position="930,105" size="300,25" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" halign="right" transparent="1">
+			<convert type="EventTime">Duration</convert>
+			<convert type="ClockToText">AsLength</convert>
+		</widget>
+		<eLabel text="Size:" position="830,130" size="100,25" font="InfoOtherFont;20" foregroundColor="InfoMediaFileSize" transparent="1" />
+		<widget source="mediainfo" render="Label" position="930,130" size="300,25" font="InfoOtherFont;20" foregroundColor="InfoMediaFileSize" halign="right" transparent="1">
+			<convert type="Event">FileSize</convert>
+		</widget>
+		<widget source="mediainfo" render="Label" position="830,160" size="400,25" font="InfoEventFont;20" foregroundColor="InfoChannel" halign="center" transparent="1">
+			<convert type="Event">ServiceName,Trimmed</convert>
+		</widget>
+		<widget source="mediainfo" render="Label" position="830,185" size="400,50" font="InfoEventFont;20" foregroundColor="InfoProgramNow" halign="center" transparent="1" valign="center">
+			<convert type="Event">Name,Trimmed</convert>
+		</widget>
+		<widget source="mediainfo" render="Label" position="830,245" size="400,340" font="InfoDescriptionFont;20" foregroundColor="InfoDetailsNow" halign="block" transparent="1">
+			<convert type="Event">FullDescription,Separated,Trimmed</convert>
+		</widget>
+		<widget source="mediainfo" render="Label" position="830,605" size="400,25" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" transparent="1">
+			<convert type="Event">Genre,Trimmed</convert>
+		</widget>
+		<widget source="mediainfo" render="Pixmap" position="830,630" size="40,20" alphatest="blend">
+			<convert type="Event">RatingIcon</convert>
+			<convert type="ValueToPixmap">Path</convert>
+		</widget>
+		<!--
+		<widget source="mediainfo" render="Label" position="830,630" size="50,25" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
+			<convert type="Event">SmallRating,Trimmed</convert>
+		</widget>
+		-->
+		<widget source="mediainfo" render="Label" position="880,630" size="350,25" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" halign="right" transparent="1">
+			<convert type="Event">Rating,Trimmed</convert>
+		</widget>
+		<!-- widget name="debug" position="0,0" size="1280,25" font="TextFont;20" foregroundColor="TextWaiting" valign="center" / -->
+	</screen>
+
+	<screen name="MediaSelectionSmall" title="Media Selection" position="fill" flags="wfNoBorder">
+		<!-- This will be the alternative screen that will use less screen space then the default screen.  Yet to be designed. -->
+		<panel name="MediaSelection" />
+	</screen>
+
+	<screen name="MediaSelectionContextMenu" title="Media Selection Context Menu" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateBranding" />
+		<ePixmap pixmap="menus/movie_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
+		<widget source="menu" render="Listbox" position="400,80" size="830,455" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryText(pos=(15, 0), size=(800, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=0)
+					],
+				"fonts": [parseFont("MenuFont;25")],
+				"itemHeight": 35
+				}
+			</convert>
+		</widget>
+		<panel name="ScreenTemplateSDescription4" />
+	</screen>
+
 <!-- MEDIA - Movie Selection Menu -->
 
 	<screen name="MovieSelection" title="Media Selection" position="fill" flags="wfNoBorder">
