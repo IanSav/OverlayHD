@@ -2596,24 +2596,29 @@
 
 <!-- Screen Saver -->
 
-	<screen name="Screensaver" title="Screen Saver" position="fill" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
-		<panel name="ScreensaverEnigma2" base="Screensaver" />
+	<screen name="ScreenSaver" title="Screen Saver" position="fill" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
+		<panel name="ScreenSaverEnigma2" base="ScreenSaver" />
 	</screen>
 
-	<screen name="ScreensaverBeyonwiz" position="fill" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
+	<screen name="ScreenSaverBeyonwiz" position="fill" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
 		<widget name="picture" pixmap="images/beyonwiz.png" position="0,0" size="220,80" alphatest="blend" transparent="1" />
 	</screen>
 
-	<screen name="ScreensaverEnigma2" position="fill" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
+	<screen name="ScreenSaverEnigma2" position="fill" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
 		<widget name="picture" pixmap="images/enigma.png" position="0,0" size="100,60" alphatest="blend" scale="1" transparent="1" />
 	</screen>
 
-	<screen name="ScreensaverOpenATV" position="fill" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
+	<screen name="ScreenSaverOpenATV" position="fill" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
 		<widget name="picture" pixmap="images/openatv.png" position="0,0" size="430,69" alphatest="blend" scale="1" transparent="1" />
 	</screen>
 
-	<screen name="ScreensaverOpenViX" position="fill" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
+	<screen name="ScreenSaverOpenViX" position="fill" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
 		<widget name="picture" pixmap="images/openvix.png" position="0,0" size="220,84" alphatest="blend" transparent="1" />
+	</screen>
+
+	<!-- Legacy screen saver screen name -->
+	<screen name="Screensaver" title="Screen Saver" position="fill" backgroundColor="ScreenSaverBackground" flags="wfNoBorder">
+		<panel name="ScreenSaver" />
 	</screen>
 
 <!-- Virtual Keyboard -->
