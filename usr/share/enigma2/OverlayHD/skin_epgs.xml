@@ -14,6 +14,12 @@
 		<widget source="Event" render="Label" position="0,0" size="1115,30" backgroundColor="InfoBackground" font="InfoEventFont;25" foregroundColor="InfoProgramNow" noWrap="1" transparent="1">
 			<convert type="EventName">Name</convert>
 		</widget>
+		<widget source="Event" render="Label" position="765,0" size="350,15" backgroundColor="InfoBackground" font="InfoEventFont;15" foregroundColor="InfoProgramNow" noWrap="1">
+			<convert type="EventName">CRIDSeries</convert>
+		</widget>
+		<widget source="Event" render="Label" position="765,15" size="350,15" backgroundColor="InfoBackground" font="InfoEventFont;15" foregroundColor="InfoProgramNow" noWrap="1">
+			<convert type="EventName">CRIDEpisode</convert>
+		</widget>
 		<widget source="Event" render="Pixmap" pixmap="epg/fta.png" position="1125,0" size="55,25" alphatest="blend">
 			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True,Invert,Ignore</convert>
 			<convert type="ConditionalShowHide" />
