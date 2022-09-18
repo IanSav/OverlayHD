@@ -1,5 +1,29 @@
 <skin>
 <!--
+ |	OverlayHD skin based on easy-skin-aus-hd
+ |
+ |	Repository - https://github.com/IanSav/OverlayHD/
+ |	Coding by IanSav (c) 2015-2022
+ |
+ |	This skin and plugin were originally developed for the Beyonwiz Australia
+ |	distribution of Enigma2.  This skin and code is free to use and may be
+ |	distributed and used on Beyonwiz and other Enigma2 based firmware.
+ |
+ |	This skin and plugin are NOT free software, they are open source.  You are
+ |	allowed to use and modify them so long as you attribute and acknowledge the
+ |	source and original author.  That is, the license and original author
+ |	details must be retained at all times.
+ |
+ |	This skin and plugin was developed and enhanced as open source software
+ |	they may not be commercially distributed or included in any commercial
+ |	software or used for commercial benefit.
+ |
+ |	If you wish to contribute fixes or enhancements to the skin or plugin then
+ |	please drop me a line at IS.OzPVR (at) gmail.com.  If you wish to use this
+ |	skin or plugin as part of a commercial product please contact me.
+ +-->
+
+<!--
  |	WizardTemplate - Template for all wizards except
  |	LanguageWizard and TutorialWizard.
  +-->
