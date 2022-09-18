@@ -650,6 +650,7 @@
 		<listbox enableWrapAround="1" font="MenuFont;25" scrollbarBorderWidth="1" scrollbarMode="showOnDemand" scrollbarOffset="0" scrollbarScroll="byLine" scrollbarWidth="10" />
 		<scrolllabel scrollbarBorderWidth="1" scrollbarMode="showOnDemand" scrollbarOffset="10" scrollbarScroll="byLine" scrollbarWidth="10" />
 		<slider borderWidth="1" />
+		<stringList textPadding="15,0" />
 		<borderset name="bsWindow">
 			<pixmap filename="borders/b_tl.png" pos="bpTopLeft" />
 			<pixmap filename="borders/b_t.png" pos="bpTop" />
