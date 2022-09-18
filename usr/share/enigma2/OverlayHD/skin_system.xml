@@ -720,6 +720,10 @@ except Exception:
 		<panel name="ScreenTemplateDescription4" />
 	</screen>
 
+	<screen name="TimerSelection" title="Timer Selection" position="fill" flags="wfNoBorder">
+		<panel name="TimerOverview" />
+	</screen>
+
 	<!--
 	<screen name="PowerTimerOverview" title="PowerTimer Overview" position="fill" flags="wfNoBorder">
 		<panel name="TimerOverview" />
