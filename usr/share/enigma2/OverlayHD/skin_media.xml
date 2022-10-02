@@ -62,6 +62,14 @@
 		<panel name="ScreenTemplateFileList0" />
 	</screen>
 
+	<screen name="MediaPlayerLCDScreen" title="File Browser" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<widget name="text1" position="0,0" size="100,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TextLabel" transparent="1" valign="center" />
+		<widget name="text2" position="0,25" size="100,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TextLabel" transparent="1" valign="center" />
+		<widget name="text3" position="0,50" size="100,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TextLabel" transparent="1" valign="center" />
+		<widget name="text4" position="0,75" size="100,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TextLabel" transparent="1" valign="center" />
+	</screen>
+
 <!--
  |	Music
  +-->
