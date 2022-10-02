@@ -29,12 +29,10 @@
 
 <!-- MediaPlayer -->
 
-	<screen name="MediaPlayer" title="MediaPlayer" position="fill" flags="wfNoBorder">
+	<screen name="MediaPlayer" title="Media Player" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
-		<panel name="ScreenTemplateButtonInfo" />
 		<panel name="ScreenTemplateButtonText" />
-		<panel name="ScreenTemplateButtonHelp" />
 		<widget name="filelist" position="50,80" size="580,325" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" />
 		<widget name="playlist" position="650,80" size="580,325" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" />
 		<widget name="currenttext" position="50,410" size="1180,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" halign="center" transparent="1" valign="center" />
