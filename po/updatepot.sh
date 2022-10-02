@@ -67,9 +67,9 @@ $localgsed --in-place OverlayHD-py.pot --expression=s/CHARSET/UTF-8/
 printf "Creating temporary file OverlayHD-xml.pot\n"
 which python
 if [ $? -eq 0 ]; then
-	find $findoptions ../usr -name "*.xml" -exec python xml2po.py {} \+ > OverlayHD-xml.pot
+	find $findoptions ../usr -name "setup.xml" -exec python xml2po.py {} \+ > OverlayHD-xml.pot
 else
-	find $findoptions ../usr -name "*.xml" -exec python3 xml2po.py {} \+ > OverlayHD-xml.pot
+	find $findoptions ../usr -name "setup.xml" -exec python3 xml2po.py {} \+ > OverlayHD-xml.pot
 fi
 printf "Merging pot files to create: OverlayHD.pot\n"
 cat OverlayHD-py.pot OverlayHD-xml.pot | msguniq -s --no-wrap --no-location -o OverlayHD.pot -
