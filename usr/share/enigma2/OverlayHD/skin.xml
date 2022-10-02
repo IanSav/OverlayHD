@@ -1914,7 +1914,7 @@
 
 	<screen name="ScreenTemplateMenu0">
 		<!-- Font and ItemHeight are taken from the font alias ChoiceList. -->
-		<widget name="menu" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" />
+		<widget name="menu" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" />
 	</screen>
 
 	<screen name="ScreenTemplatePlugList0">
