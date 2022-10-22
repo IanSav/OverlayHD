@@ -463,8 +463,8 @@
 		<parameter name="PartnerBoxChannelListTime" value="0,78,225,30" />
 		<parameter name="PicturePlayerThumb" value="30,285,45,300,30,25" />
 		-->
-		<parameter name="PlayListIcon" value="10,0,24,24" />
-		<parameter name="PlayListName" value="40,0,1000,34" />
+		<parameter name="PlayListIcon" value="15,5,16,16" />
+		<parameter name="PlayListName" value="40,0,1000,25" />
 		<parameter name="PluginBrowserName" value="120,5,25" />
 		<parameter name="PluginBrowserDescr" value="140,28,25" />
 		<parameter name="PluginBrowserIcon" value="10,5,100,40" />
