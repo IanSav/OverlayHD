@@ -680,9 +680,9 @@ except Exception:
 		<widget name="list" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" />
 	</screen>
 
-<!-- Console / Task List Screen -->
+<!-- Task List Screens -->
 
-	<screen name="TaskListScreen" title="Task List" position="fill" flags="wfNoBorder">
+	<screen name="TaskList" title="Task List" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/mainmenu_tasks_scan.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget source="tasklist" render="Listbox" position="400,80" size="830,550" backgroundColor="TextBackground" foregroundColor="Text" transparent="1">
@@ -699,6 +699,60 @@ except Exception:
 				"itemHeight": 50
 				}
 			</convert>
+		</widget>
+	</screen>
+
+	<screen name="TaskListScreen" title="Task List" position="fill" flags="wfNoBorder">
+		<panel name="TaskList" />
+	</screen>
+
+	<screen name="TaskView" title="Task View" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<ePixmap pixmap="menus/mainmenu_tasks_scan.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
+		<widget source="name" render="Label" position="400,80" size="830,35" font="TextFont;25" />
+		<widget source="task" render="Label" position="420,115" size="810,35" font="TextFont;25" />
+		<widget source="progress" render="Progress" position="420,160" size="810,35" backgroundColor="#254f7497" borderWidth="2" />
+		<widget source="progress" render="Label" position="420,160" size="810,35" borderColor="Black" borderWidth="2" font="TextFont;25" foregroundColor="Gold" halign="center" transparent="1" valign="center" zPosition="+1">
+			<convert type="ProgressToText" />
+		</widget>
+		<widget source="status" render="Label" position="420,205" size="810,35" font="TextFont;25" />
+		<widget name="config" position="420,250" size="810,35" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" valueFont="MenuFont;25" />
+	</screen>
+
+	<screen name="JobView" title="Job View" position="fill" flags="wfNoBorder">
+		<panel name="TaskView" conditional="name" />
+		<panel name="JobViewOld" conditional="job_name" />
+	</screen>
+
+	<screen name="JobViewOld" title="Job View" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<ePixmap pixmap="menus/mainmenu_tasks_scan.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
+		<widget source="job_name" render="Label" position="400,80" size="830,35" font="TextFont;25" />
+		<widget source="job_task" render="Label" position="420,115" size="810,35" font="TextFont;25" />
+		<widget source="job_progress" render="Progress" position="420,160" size="810,35" backgroundColor="#254f7497" borderWidth="2" />
+		<widget source="job_progress" render="Label" position="420,160" size="810,35" borderColor="Black" borderWidth="2" font="TextFont;25" foregroundColor="Gold" halign="center" transparent="1" valign="center" zPosition="+1">
+			<convert type="ProgressToText" />
+		</widget>
+		<widget source="job_status" render="Label" position="420,205" size="810,35" font="TextFont;25" />
+		<widget name="config" position="420,250" size="810,35" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" valueFont="MenuFont;25" />
+
+		<widget source="cancelable" render="Pixmap" pixmap="buttons/button_block_red.png" position="20,200" size="225,60" alphatest="blend">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="cancelable" render="FixedLabel" text="Cancel" position="20,203" size="200,25" font="Regular;20" halign="center" transparent="1" valign="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="finished" render="Pixmap" pixmap="buttons/button_block_green.png" position="240,200" size="225,60" alphatest="blend">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="finished" render="FixedLabel" text="OK" position="240,203" size="200,25" font="Regular;20" halign="center" transparent="1" valign="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="backgroundable" render="Pixmap" pixmap="buttons/button_block_blue.png" position="250,200" size="225,60" alphatest="blend">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="backgroundable" render="FixedLabel" text="In background" position="250,203" size="200,25" font="Regular;20" halign="center" transparent="1" valign="center">
+			<convert type="ConditionalShowHide" />
 		</widget>
 	</screen>
 

@@ -60,35 +60,6 @@
 		</widget>
 	</screen>
 
-	<screen name="JobView" position="center,center" size="520,250">
-		<widget source="job_name" render="Label" position="20,0" size="480,60" font="Regular;28" />
-		<widget source="job_task" render="Label" position="20,30" size="480,50" font="Regular;23" />
-		<widget source="job_progress" render="Progress" position="20,62" size="480,36" backgroundColor="#254f7497" borderWidth="2" />
-		<widget source="job_progress" render="Label" position="120,66" size="280,32" font="Regular;28" foregroundColor="Black" halign="center" transparent="1" zPosition="2">
-			<convert type="ProgressToText" />
-		</widget>
-		<widget source="job_status" render="Label" position="20,112" size="480,26" font="Regular;23" />
-		<widget name="config" position="20,154" size="480,20" />
-		<widget source="cancelable" render="Pixmap" pixmap="buttons/button_block_red.png" position="20,200" size="225,60" alphatest="blend">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="cancelable" render="FixedLabel" text="Cancel" position="20,203" size="200,25" font="Regular;20" halign="center" transparent="1" valign="center">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="finished" render="Pixmap" pixmap="buttons/button_block_green.png" position="240,200" size="225,60" alphatest="blend">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="finished" render="FixedLabel" text="OK" position="240,203" size="200,25" font="Regular;20" halign="center" transparent="1" valign="center">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="backgroundable" render="Pixmap" pixmap="buttons/button_block_blue.png" position="250,200" size="225,60" alphatest="blend">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="backgroundable" render="FixedLabel" text="In background" position="250,203" size="200,25" font="Regular;20" halign="center" transparent="1" valign="center">
-			<convert type="ConditionalShowHide" />
-		</widget>
-	</screen>
-
 	<screen name="MinuteInput" position="center,center" size="280,60">
 		<widget name="minutes" position="80,15" size="160,25" font="Regular;23" halign="right" transparent="1" />
 	</screen>
