@@ -59,7 +59,7 @@
 <!-- OK - Main TV InfoBar Timeshift Status -->
 
 	<screen name="TimeshiftState" position="10,10" size="270,80" backgroundColor="InfobarMediaBackground" flags="wfNoBorder">
-		<widget name="statusicon" pixmaps="icons/play.png,icons/pause.png,icons/stop.png,icons/forward.png,icons/backward.png,icons/slow.png" position="10,10" size="20,20" alphatest="blend" transparent="1" />
+		<widget name="statusicon" position="10,10" size="20,20" pixmaps="icons/play.png,icons/pause.png,icons/stop.png,icons/forward.png,icons/backward.png,icons/slow.png" alphatest="blend" transparent="1" />
 		<widget name="speed" position="35,10" size="70,20" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TimeShiftData" transparent="1" />
 		<widget source="session.CurrentService" render="Label" position="100,10" size="70,20" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TimeShiftData" halign="center" transparent="1">
 			<convert type="ServicePosition">Remaining</convert>
@@ -78,10 +78,12 @@
 		</widget>
 		<widget name="eventname" position="10,50" size="250,20" backgroundColor="TextBackground" font="Regular;16" foregroundColor="TimeShiftData" transparent="1" />
 		<!-- This is a text version of the statusicon and speed information.  Already displayed so not needed here but must be defined to avoid skin errors!  -->
-		<widget name="state" position="0,0" size="0,0" font="Regular;20" transparent="1" />
-		<!-- These are position pointers.  Already displayed so not needed here but must be defined to avoid skin errors!  -->
-		<widget name="PTSSeekBack" position="0,0" size="0,0" pixmap="sliders/sliderdef_back.png" alphatest="blend" transparent="1" />
-		<widget name="PTSSeekPointer" position="0,0" size="0,0" pixmap="sliders/position_pointer2.png" alphatest="blend" transparent="1" zPosition="+1" />
+		<widget name="state" position="0,0" size="0,0" backgroundColor="TextBackground" font="Regular;16" foregroundColor="TimeShiftData" halign="right" transparent="1" />
+		<!-- These are position pointers.  Already displayed as a progress bar but must be defined so show it outside of the displayed window.
+			For now just omit the widgets and tolerate the skin error as this allows "0" to exit timeshift without a question!
+		<widget name="PTSSeekBack" position="10,80" size="250,20" pixmap="sliders/sliderdef_back.png" alphatest="blend" transparent="1" />
+		<widget name="PTSSeekPointer" position="10,80" size="250,20" pixmap="sliders/position_pointer2.png" alphatest="blend" transparent="1" zPosition="+1" />
+		-->
 	</screen>
 
 <!-- OK / Media - Seekbar -->
