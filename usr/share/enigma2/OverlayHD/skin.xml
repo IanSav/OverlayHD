@@ -2100,6 +2100,11 @@
 		<widget name="loglist" position="400,80" size="830,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="FixedFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" />
 	</screen>
 
+	<screen name="ScreenTemplateMenu4">
+		<!-- Font and ItemHeight are taken from the font alias ChoiceList. -->
+		<widget name="menu" position="400,80" size="830,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" />
+	</screen>
+
 	<screen name="ScreenTemplateMenuList4">
 		<widget source="list" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<convert type="TemplatedMultiContent">

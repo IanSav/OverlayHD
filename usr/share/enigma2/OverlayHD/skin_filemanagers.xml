@@ -94,7 +94,8 @@
 	<screen name="FileCommanderContextMenu" title="File Commander - Context Menu" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/browser.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<panel name="ScreenTemplateMenu0" />
+		<panel name="ScreenTemplateMenu4" />
+		<panel name="ScreenTemplateDescription4" />
 	</screen>
 
 	<screen name="FileCommanderData" title="File Commander Data" position="fill" flags="wfNoBorder">
