@@ -219,13 +219,27 @@
 	<screen name="InputDeviceSelection" title="Select Input Device" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/tv_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<widget source="list" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
+		<widget source="devices" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="devices" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
 					[
-					MultiContentEntryPixmapAlphaBlend(pos=(20, 0), size=(35, 35), flags=BT_SCALE, png=2),  # Device/interface pixmap.
-					MultiContentEntryText(pos=(70, 0), size=(610, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=1),  # Description.
+					MultiContentEntryPixmapAlphaBlend(pos=(15, 0), size=(35, 35), flags=BT_SCALE, png=2),  # Device/interface pixmap.
+					MultiContentEntryText(pos=(65, 0), size=(610, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=1),  # Description.
+					MultiContentEntryText(pos=(300, 0), size=(500, 35), font=1, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=0)  # Device/interface.
+					],
+				"fonts": [parseFont("MenuFont;25"), parseFont("MenuFont;22")],
+				"itemHeight": 35
+				}
+			</convert>
+		</widget>
+		<widget source="list" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="list" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryPixmapAlphaBlend(pos=(15, 0), size=(35, 35), flags=BT_SCALE, png=2),  # Device/interface pixmap.
+					MultiContentEntryText(pos=(65, 0), size=(615, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=1),  # Description.
 					MultiContentEntryText(pos=(700, 0), size=(100, 35), font=1, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=0)  # Device/interface.
 					],
 				"fonts": [parseFont("MenuFont;25"), parseFont("MenuFont;20")],
@@ -233,9 +247,11 @@
 				}
 			</convert>
 		</widget>
-		<panel name="ScreenTemplateSIntroduction4" />
+		<panel name="ScreenTemplateDescription4" conditional="description" />
+		<panel name="ScreenTemplateSIntroduction4" conditional="introduction" />
 	</screen>
 
+	<!-- This screen is not used by recent versions of the code.  The standard Setup screen is used instead. -->
 	<screen name="InputDeviceSetup" title="Input Device Setup" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/tv_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
@@ -244,8 +260,9 @@
 		<panel name="ScreenTemplateSIntroduction4" />
 	</screen>
 
-<!-- MENU > Setup > System > Remote Control Code Settings -->
+	<!-- MENU > Setup > System > Remote Control Code Settings -->
 
+	<!-- This screen is not used by recent versions of the code.  The standard Setup screen is used instead. -->
 	<screen name="RCSetupScreen" title="Remote Control Settings" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="Preview" position="100,100" size="200,500" alphatest="blend" conditional="Preview" transparent="1" />
