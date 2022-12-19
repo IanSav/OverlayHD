@@ -226,9 +226,9 @@
 					[
 					MultiContentEntryPixmapAlphaBlend(pos=(15, 0), size=(35, 35), flags=BT_SCALE, png=2),  # Device/interface pixmap.
 					MultiContentEntryText(pos=(65, 0), size=(200, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=0),  # Device/interface.
-					MultiContentEntryText(pos=(275, 0), size=(535, 35), font=1, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=1)  # Description.
+					MultiContentEntryText(pos=(275, 0), size=(535, 35), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=1)  # Description.
 					],
-				"fonts": [parseFont("MenuFont;25"), parseFont("MenuFont;22")],
+				"fonts": [parseFont("MenuFont;25")],
 				"itemHeight": 35
 				}
 			</convert>
