@@ -1597,7 +1597,7 @@
 	</screen>
 
 	<screen name="HelpMenuNew" title="Help" position="fill" flags="wfNoBorder">
-		<panel position="150,110" size="154,500">
+		<panel position="150,110" size="154,535">
 			<panel name="ScreenTemplateRemote" />
 		</panel>
 		<!--
@@ -1657,7 +1657,7 @@
 
 	<screen name="HelpMenuBeyonwiz" title="Help" position="0,0" size="1280,720" backgroundColor="ScreenBackground" flags="wfNoBorder">
 		<panel name="ScreenTemplateButtonHelp" />
-		<panel position="150,110" size="154,500">
+		<panel position="150,110" size="154,535">
 			<panel name="ScreenTemplateRemote" />
 		</panel>
 		<widget source="list" render="Listbox" position="400,80" size="830,500" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
@@ -1697,6 +1697,7 @@
 
 	<screen name="ScreenTemplateRemote">
 		<panel name="ScreenTemplateRemoteEnigma2" base="ScreenTemplateRemote" />
+		<widget name="label" position="0,500" size="154,35" backgroundColor="TextBackground" font="HelpFont;15" foregroundColor="HelpPress" noWrap="1" transparent="1" valign="center" />
 	</screen>
 
 	<screen name="ScreenTemplateRemoteEnigma2">
