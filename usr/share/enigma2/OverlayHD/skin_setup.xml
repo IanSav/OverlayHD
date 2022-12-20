@@ -252,12 +252,16 @@
 	</screen>
 
 	<!-- This screen is not used by recent versions of the code.  The standard Setup screen is used instead. -->
-	<screen name="InputDeviceSetup" title="Input Device Setup" position="fill" flags="wfNoBorder">
+	<screen name="InputDeviceSettings" title="Input Device Settings" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/tv_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateFootnote4" />
 		<panel name="ScreenTemplateSIntroduction4" />
+	</screen>
+
+	<screen name="InputDeviceSetup" title="Input Device Settings" position="fill" flags="wfNoBorder">
+		<panel name="InputDeviceSettings" />
 	</screen>
 
 	<!-- MENU > Setup > System > Remote Control Code Settings -->
