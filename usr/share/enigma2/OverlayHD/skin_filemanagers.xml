@@ -54,7 +54,7 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos=(0, 0), size=(580, 50), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text=17),  # Index 17 is the path.
+					MultiContentEntryText(pos=(0, 0), size=(580, 50), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text=25),  # Index 25 is the path with split for current/parent.
 					MultiContentEntryText(pos=(0, 50), size=(150, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=2),  # Index 2 is the octal (symbolic) mode.
 					MultiContentEntryText(pos=(160, 50), size=(105, 25), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=11),  # Index 11 is the scaled size.
 					MultiContentEntryText(pos=(290, 50), size=(290, 25), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=13),  # Index 13 is the modification time.
@@ -73,7 +73,7 @@
 				{
 				"template":
 					[
-					MultiContentEntryText(pos=(0, 0), size=(580, 50), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text=17),  # Index 17 is the path.
+					MultiContentEntryText(pos=(0, 0), size=(580, 50), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text=25),  # Index 25 is the path with split for current/parent.
 					MultiContentEntryText(pos=(0, 50), size=(150, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=2),  # Index 2 is the octal (symbolic) mode.
 					MultiContentEntryText(pos=(160, 50), size=(105, 25), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=11),  # Index 11 is the scaled size.
 					MultiContentEntryText(pos=(290, 50), size=(290, 25), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=13),  # Index 13 is the modification time.
