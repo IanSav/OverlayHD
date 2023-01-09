@@ -66,7 +66,6 @@
 			</convert>
 		</widget>
 		<widget name="listleft" position="50,165" size="580,450" backgroundColor="TextBackground" backgroundColorSelected="MenuSelected" foregroundColor="Text" foregroundColorSelected="MenuTextSelected" />
-		<widget name="multileft" position="50,165" size="580,450" backgroundColor="TextBackground" backgroundColorSelected="MenuSelected" foregroundColor="Text" foregroundColorSelected="MenuTextSelected" />
 		<widget name="sortleft" position="50,630" size="580,25" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="TextWaiting" halign="center" valign="center" />
 		<widget source="headright" render="Listbox" position="650,80" size="580,75" backgroundColor="TextBackground" foregroundColor="TextWaiting" scrollbarMode="showNever" selection="0">
 			<convert type="TemplatedMultiContent">
@@ -85,7 +84,6 @@
 			</convert>
 		</widget>
 		<widget name="listright" position="650,165" size="580,450" backgroundColor="TextBackground" backgroundColorSelected="MenuSelected" foregroundColor="Text" foregroundColorSelected="MenuTextSelected" />
-		<widget name="multiright" position="650,165" size="580,450" backgroundColor="TextBackground" backgroundColorSelected="MenuSelected" foregroundColor="Text" foregroundColorSelected="MenuTextSelected" />
 		<widget name="sortright" position="650,630" size="580,25" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="TextWaiting" halign="center" valign="center" />
 		<widget name="quickselect" position="50,165" size="580,450" font="Regular;100" foregroundColor="TextWaiting" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget name="status" position="50,620" size="1180,35" font="Regular;25" backgroundColor="TextWaiting" borderColor="Black" borderWidth="2" foregroundColor="White" halign="center" valign="center" zPosition="+1" />
