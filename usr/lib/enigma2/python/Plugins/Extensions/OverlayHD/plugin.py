@@ -2,11 +2,11 @@
 #
 # OverlayHD Skin Manager
 #
-# Version Date - 31-Jul-2022
+# Version Date - 17-Apr-2023
 # Remember to change version number variable below!!!
 #
 # Repository - https://github.com/IanSav/OverlayHD
-# Coding by IanSav (c) 2015-2022
+# Coding by IanSav (c) 2015-2023
 #
 # This skin and plugin were originally developed for the Beyonwiz Australia
 # distribution of Enigma2.  This skin and code is free to use and may be
@@ -55,7 +55,7 @@ from Tools.BoundFunction import boundFunction
 from Tools.Directories import SCOPE_CONFIG, SCOPE_GUISKIN, SCOPE_MEDIA, SCOPE_PLUGIN, SCOPE_SKINS, fileReadXML, resolveFilename
 
 MODULE_NAME = __name__.split(".")[-1]
-PLUGIN_VERSION_NUMBER = "1.94"
+PLUGIN_VERSION_NUMBER = "1.95"
 
 DISPLAY_DISTRO = BoxInfo.getItem("displaydistro", "Enigma2")
 DISTRO = BoxInfo.getItem("distro", "enigma2").lower()
@@ -238,6 +238,7 @@ colorElements = [
 	("InfoChannelSelected", "Blue", None),
 	("InfoDetailsNext", "White", None),
 	("InfoDetailsNow", "White", None),
+	("InfoDetailsSelected", "White", None),
 	("InfoDiskStats", "DullYellow", None),
 	("InfoDurationNext", "LightBlue", None),
 	("InfoDurationNow", "LightBlue", None),

@@ -33,22 +33,23 @@
 
 <!-- BACK | PREV | NEXT - History Zap Menu -->
 
-	<screen name="HistoryZapSelector" title="History Zap..." position="fill" flags="wfNoBorder">
+	<screen name="HistoryZapSelector" title="History Zap" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/tv_zap_history.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<widget source="menu" render="Listbox" position="400,80" size="830,560" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
+		<widget source="menu" render="Listbox" position="400,80" size="830,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
 					[
-					MultiContentEntryPixmapAlphaBlend(pos=(20, 10), size=(100, 60), png=6, flags=BT_SCALE),
-					MultiContentEntryText(pos=(140, 10), size=(670, 22), font=1, flags=RT_HALIGN_LEFT | RT_VALIGN_TOP, text=2, color="InfoChannel", color_sel="InfoChannelSelected"),
-					MultiContentEntryText(pos=(125, 32), size=(10, 20), font=2, flags=RT_HALIGN_CENTER | RT_VALIGN_CENTER, text=1),
-					MultiContentEntryText(pos=(140, 32), size=(670, 20), font=2, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=3, color="InfoProgramNow", color_sel="InfoProgramSelected"),
-					MultiContentEntryText(pos=(140, 52), size=(670, 20), font=3, flags=RT_HALIGN_LEFT, text=5, color="InfoTimesNow", color_sel="InfoTimesSelected")
+					MultiContentEntryPixmapAlphaBlend(pos=(15, 5), size=(100, 60), png=6, flags=BT_SCALE),  # Picon.
+					MultiContentEntryText(pos=(125, 0), size=(25, 65), font=4, flags=RT_HALIGN_CENTER | RT_VALIGN_CENTER, text=1),  # Marked entry.
+					MultiContentEntryText(pos=(160, 5), size=(650, 20), font=2, flags=RT_HALIGN_LEFT | RT_VALIGN_TOP, text=2, color="InfoChannel", color_sel="InfoChannelSelected"),  # Service Name
+					MultiContentEntryText(pos=(160, 5), size=(650, 20), font=3, flags=RT_HALIGN_RIGHT | RT_VALIGN_TOP, text=5, color="InfoTimesNow", color_sel="InfoTimesSelected"),  # Event duration.
+					MultiContentEntryText(pos=(160, 25), size=(650, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=3, color="InfoProgramNow", color_sel="InfoProgramSelected"),  # Event Name.
+					MultiContentEntryText(pos=(160, 50), size=(650, 20), font=1, flags=RT_HALIGN_LEFT | RT_VALIGN_BOTTOM, text=4, color="InfoDetailsNow", color_sel="InfoDetailsSelected")  # Event Description.
 					],
-				"fonts": [parseFont("Regular;22"), parseFont("Regular;20"), parseFont("Regular;17"), parseFont("Regular;16")],
-				"itemHeight": 80
+				"fonts": [parseFont("InfoEventFont;20"), parseFont("InfoDescriptionFont;17"), parseFont("InfoOtherFont;17"), parseFont("InfoTimeFont;17"), parseFont("SMSHelperFont;50")],
+				"itemHeight": 75
 				}
 			</convert>
 		</widget>
@@ -180,6 +181,12 @@
 	<screen name="ChannelContextMenu" title="Channel Selection Context Menu" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
+		<ePixmap pixmap="menus/tv_live.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
+		<panel name="ScreenTemplateContextMenu0" />
+	</screen>
+
+	<screen name="BouquetSelector" title="Bouquet Selector" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/tv_live.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateMenu0" />
 	</screen>

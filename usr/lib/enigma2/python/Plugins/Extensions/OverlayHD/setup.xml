@@ -109,6 +109,7 @@
 			<item level="0" text="Info Next program duration color" description="Choose a color for displaying the next or later program's duration.">config.plugins.skin.OverlayHD.InfoDurationNext</item>
 			<item level="0" text="Info Now program details color" description="Choose a color for displaying a current program's details.">config.plugins.skin.OverlayHD.InfoDetailsNow</item>
 			<item level="0" text="Info Next program details color" description="Choose a color for displaying the next or later program's details.">config.plugins.skin.OverlayHD.InfoDetailsNext</item>
+			<item level="0" text="Info selected program details color" description="Choose a color for displaying the selected program's details.">config.plugins.skin.OverlayHD.InfoDetailsSelected</item>
 			<item level="0" text="Info Now program ratings color" description="Choose a color for displaying a current program's rating.">config.plugins.skin.OverlayHD.InfoRatingNow</item>
 			<item level="0" text="Info Next program ratings color" description="Choose a color for displaying the next or later program's rating.">config.plugins.skin.OverlayHD.InfoRatingNext</item>
 			<item level="0" text="Info Now program genre color" description="Choose a color for displaying a current program's genre.">config.plugins.skin.OverlayHD.InfoGenreNow</item>
