@@ -424,6 +424,7 @@
 		<parameter name="ChoicelistName" value="50,0,780,35" />
 		<parameter name="ChoicelistNameSingle" value="20,0,810,35" />
 		<parameter name="ChoicelistIcon" value="5,5,35,25" />
+		<parameter name="ChoicelistVerticalAlignment" value="*center" />
 		<parameter name="ConfigListSeperator" value="430" />
 		<parameter name="ConfigListSlider" value="12,1" />
 		<!--
