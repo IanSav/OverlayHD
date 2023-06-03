@@ -1,0 +1,1771 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-02 12:42+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+msgid "--- EPG Color Settings ---"
+msgstr ""
+
+msgid "--- FAV Color Settings ---"
+msgstr ""
+
+msgid "--- Font Settings ---"
+msgstr ""
+
+msgid "--- General Settings ---"
+msgstr ""
+
+msgid "--- Info Color Settings ---"
+msgstr ""
+
+msgid "--- Menu Color Settings ---"
+msgstr ""
+
+msgid "--- Panel and Plugin Color Settings ---"
+msgstr ""
+
+msgid "--- Text Color Settings ---"
+msgstr ""
+
+msgid "0% (Opaque)"
+msgstr ""
+
+msgid "10%"
+msgstr ""
+
+msgid "100% (Transparent)"
+msgstr ""
+
+msgid "15%"
+msgstr ""
+
+msgid "20%"
+msgstr ""
+
+msgid "25%"
+msgstr ""
+
+msgid "30%"
+msgstr ""
+
+msgid "35%"
+msgstr ""
+
+msgid "40%"
+msgstr ""
+
+msgid "45%"
+msgstr ""
+
+msgid "5%"
+msgstr ""
+
+msgid "50%"
+msgstr ""
+
+msgid "55%"
+msgstr ""
+
+msgid "60%"
+msgstr ""
+
+msgid "65%"
+msgstr ""
+
+msgid "70%"
+msgstr ""
+
+msgid "75%"
+msgstr ""
+
+msgid "80%"
+msgstr ""
+
+msgid "85%"
+msgstr ""
+
+msgid "90%"
+msgstr ""
+
+msgid "95%"
+msgstr ""
+
+msgid "Always (Left)"
+msgstr ""
+
+msgid "Always (Right)"
+msgstr ""
+
+msgid "Always show color buttons"
+msgstr ""
+
+msgid "Andale Mono"
+msgstr ""
+
+msgid "Apply"
+msgstr ""
+
+msgid "Apply the currently highlighted theme, return to OverlayHD Skin Manager"
+msgstr ""
+
+msgid "Apply the default skin settings"
+msgstr ""
+
+msgid "Arial Narrow"
+msgstr ""
+
+msgid "Arsenic"
+msgstr ""
+
+msgid "Background"
+msgstr ""
+
+msgid "Background image"
+msgstr ""
+
+msgid "Banner clock color"
+msgstr ""
+
+msgid "Banner title color"
+msgstr ""
+
+msgid "Bar"
+msgstr ""
+
+msgid "Black"
+msgstr ""
+
+msgid "Block"
+msgstr ""
+
+msgid "Blue"
+msgstr ""
+
+msgid "Blue button color"
+msgstr ""
+
+msgid "Body font"
+msgstr ""
+
+msgid "Boot image"
+msgstr ""
+
+msgid "Box"
+msgstr ""
+
+msgid "Button"
+msgstr ""
+
+msgid "Button Background"
+msgstr ""
+
+msgid "Button Blue"
+msgstr ""
+
+msgid "Button Green"
+msgstr ""
+
+msgid "Button Red"
+msgstr ""
+
+msgid "Button Yellow"
+msgstr ""
+
+msgid "Button font"
+msgstr ""
+
+msgid "Button style"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Cancel theme selection, return to OverlayHD Skin Manager"
+msgstr ""
+
+msgid "Charcoal"
+msgstr ""
+
+msgid "Choice list font"
+msgstr ""
+
+msgid "Choose a background color for EPG current service."
+msgstr ""
+
+msgid "Choose a background color for EPG grid programs currently in progress and selected."
+msgstr ""
+
+msgid "Choose a background color for EPG grid programs currently in progress."
+msgstr ""
+
+msgid "Choose a background color for EPG grid programs currently selected."
+msgstr ""
+
+msgid "Choose a background color for EPG grid programs."
+msgstr ""
+
+msgid "Choose a background color for EPG grid recordings."
+msgstr ""
+
+msgid "Choose a background color for EPG grid selected recordings."
+msgstr ""
+
+msgid "Choose a background color for EPG grid selected zap recordings."
+msgstr ""
+
+msgid "Choose a background color for EPG grid services."
+msgstr ""
+
+msgid "Choose a background color for EPG grid zap recordings."
+msgstr ""
+
+msgid "Choose a background color for EPG screens using a Picture In Graphic (PIG)."
+msgstr ""
+
+msgid "Choose a background color for non-specific progress bars."
+msgstr ""
+
+msgid "Choose a background color for the PIG current program progress bar."
+msgstr ""
+
+msgid "Choose a background color for the progress bar."
+msgstr ""
+
+msgid "Choose a background color for the recording progress bar."
+msgstr ""
+
+msgid "Choose a background color for the timeshift progress bar."
+msgstr ""
+
+msgid "Choose a background color to indicate poor tuner signal quality (BER > 0)."
+msgstr ""
+
+msgid "Choose a background image to be used while listening to radio services."
+msgstr ""
+
+msgid "Choose a background image to be used while the system UI starts."
+msgstr ""
+
+msgid "Choose a background image to be used while the system boots."
+msgstr ""
+
+msgid "Choose a border color for PIG text overlays."
+msgstr ""
+
+msgid "Choose a border color for displaying picture labels."
+msgstr ""
+
+msgid "Choose a border color for non-specific progress bars."
+msgstr ""
+
+msgid "Choose a border color for the PIG current program progress bar."
+msgstr ""
+
+msgid "Choose a border color for the progress bar."
+msgstr ""
+
+msgid "Choose a border color for the recording progress bar."
+msgstr ""
+
+msgid "Choose a border color for the timeshift progress bar."
+msgstr ""
+
+msgid "Choose a border color for the tuner signal and quality bar graphs."
+msgstr ""
+
+msgid "Choose a button style for the color button bar."
+msgstr ""
+
+msgid "Choose a color for FAV LCNs and services."
+msgstr ""
+
+msgid "Choose a color for PIG text overlays."
+msgstr ""
+
+msgid "Choose a color for Setup menu footnote text. (e.g. Restart Required)"
+msgstr ""
+
+msgid "Choose a color for active tuners."
+msgstr ""
+
+msgid "Choose a color for all pinstripes."
+msgstr ""
+
+msgid "Choose a color for all scrollbars."
+msgstr ""
+
+msgid "Choose a color for any FAV LCNs and services that are not currently available."
+msgstr ""
+
+msgid "Choose a color for any FAV fallback LCNs and services."
+msgstr ""
+
+msgid "Choose a color for any marked FAV LCNs and services."
+msgstr ""
+
+msgid "Choose a color for any marked and selected FAV LCNs and services."
+msgstr ""
+
+msgid "Choose a color for any selected FAV LCNs and services that are not currently available."
+msgstr ""
+
+msgid "Choose a color for any selected FAV LCNs and services."
+msgstr ""
+
+msgid "Choose a color for disabled item menu text."
+msgstr ""
+
+msgid "Choose a color for displaying a LCN."
+msgstr ""
+
+msgid "Choose a color for displaying a bouquet name."
+msgstr ""
+
+msgid "Choose a color for displaying a broadcaster's name."
+msgstr ""
+
+msgid "Choose a color for displaying a channel name."
+msgstr ""
+
+msgid "Choose a color for displaying a current program's details."
+msgstr ""
+
+msgid "Choose a color for displaying a current program's duration."
+msgstr ""
+
+msgid "Choose a color for displaying a current program's genre."
+msgstr ""
+
+msgid "Choose a color for displaying a current program's name."
+msgstr ""
+
+msgid "Choose a color for displaying a current program's rating."
+msgstr ""
+
+msgid "Choose a color for displaying a current program's start and/or end times."
+msgstr ""
+
+msgid "Choose a color for displaying a media file's file size."
+msgstr ""
+
+msgid "Choose a color for displaying a media file's length in Media Player."
+msgstr ""
+
+msgid "Choose a color for displaying a media file's name in Media Player."
+msgstr ""
+
+msgid "Choose a color for displaying a media file's position time in Media Player."
+msgstr ""
+
+msgid "Choose a color for displaying a media file's remaining time in Media Player."
+msgstr ""
+
+msgid "Choose a color for displaying a selected channel name."
+msgstr ""
+
+msgid "Choose a color for displaying a selected program's name."
+msgstr ""
+
+msgid "Choose a color for displaying any service data."
+msgstr ""
+
+msgid "Choose a color for displaying picture labels."
+msgstr ""
+
+msgid "Choose a color for displaying the disk information in Media Player."
+msgstr ""
+
+msgid "Choose a color for displaying the next or later program's details."
+msgstr ""
+
+msgid "Choose a color for displaying the next or later program's duration."
+msgstr ""
+
+msgid "Choose a color for displaying the next or later program's genre."
+msgstr ""
+
+msgid "Choose a color for displaying the next or later program's name."
+msgstr ""
+
+msgid "Choose a color for displaying the next or later program's rating."
+msgstr ""
+
+msgid "Choose a color for displaying the next or later program's start and/or end times."
+msgstr ""
+
+msgid "Choose a color for displaying the progress bar."
+msgstr ""
+
+msgid "Choose a color for displaying the recording details and progress bar."
+msgstr ""
+
+msgid "Choose a color for displaying the selected program's start and/or end times."
+msgstr ""
+
+msgid "Choose a color for displaying the timeshift progress bar."
+msgstr ""
+
+msgid "Choose a color for help menu additional button help text."
+msgstr ""
+
+msgid "Choose a color for idle tuners."
+msgstr ""
+
+msgid "Choose a color for info background."
+msgstr ""
+
+msgid "Choose a color for menu backgrounds."
+msgstr ""
+
+msgid "Choose a color for menu item selection highlights."
+msgstr ""
+
+msgid "Choose a color for menu item text."
+msgstr ""
+
+msgid "Choose a color for non-specific progress bars."
+msgstr ""
+
+msgid "Choose a color for text backgrounds."
+msgstr ""
+
+msgid "Choose a color for the BLUE button."
+msgstr ""
+
+msgid "Choose a color for the EPG grid background."
+msgstr ""
+
+msgid "Choose a color for the EPG grid lines."
+msgstr ""
+
+msgid "Choose a color for the EPG grid time line."
+msgstr ""
+
+msgid "Choose a color for the FAV marked item background transparency."
+msgstr ""
+
+msgid "Choose a color for the FAV marked item selection highlights."
+msgstr ""
+
+msgid "Choose a color for the GREEN button."
+msgstr ""
+
+msgid "Choose a color for the KeyError pop up pinstripe."
+msgstr ""
+
+msgid "Choose a color for the Media Player infobar background."
+msgstr ""
+
+msgid "Choose a color for the Mute pop up pinstripe."
+msgstr ""
+
+msgid "Choose a color for the PIG current program progress bar."
+msgstr ""
+
+msgid "Choose a color for the QuickSelect search letter(s) that pop up in screens that offer QuickSelect searches like Media Player."
+msgstr ""
+
+msgid "Choose a color for the RED button."
+msgstr ""
+
+msgid "Choose a color for the SMS helper background."
+msgstr ""
+
+msgid "Choose a color for the SMS helper text labels."
+msgstr ""
+
+msgid "Choose a color for the SMS helper text."
+msgstr ""
+
+msgid "Choose a color for the TV infobar background."
+msgstr ""
+
+msgid "Choose a color for the Volume control pop up pinstripe."
+msgstr ""
+
+msgid "Choose a color for the YELLOW button."
+msgstr ""
+
+msgid "Choose a color for the banner clock display."
+msgstr ""
+
+msgid "Choose a color for the banner title display."
+msgstr ""
+
+msgid "Choose a color for the color button background."
+msgstr ""
+
+msgid "Choose a color for the color button text."
+msgstr ""
+
+msgid "Choose a color for the currently selected item menu text."
+msgstr ""
+
+msgid "Choose a color for the menu footnote backgrounds."
+msgstr ""
+
+msgid "Choose a color for the picture display background."
+msgstr ""
+
+msgid "Choose a color for the pop up clock background transparency."
+msgstr ""
+
+msgid "Choose a color for the pop up clock background."
+msgstr ""
+
+msgid "Choose a color for the pop up clock date display."
+msgstr ""
+
+msgid "Choose a color for the pop up clock time display."
+msgstr ""
+
+msgid "Choose a color for the screen resolution background."
+msgstr ""
+
+msgid "Choose a color for the screen resolution text."
+msgstr ""
+
+msgid "Choose a color for the screen saver screen background."
+msgstr ""
+
+msgid "Choose a color for the timeshift data text."
+msgstr ""
+
+msgid "Choose a color for the tuner signal and quality levels."
+msgstr ""
+
+msgid "Choose a color for the tuner type label."
+msgstr ""
+
+msgid "Choose a color for the user interface screen background."
+msgstr ""
+
+msgid "Choose a color for the volume control background."
+msgstr ""
+
+msgid "Choose a color for the volume control slider bar."
+msgstr ""
+
+msgid "Choose a color for the weather data provider."
+msgstr ""
+
+msgid "Choose a color for the weather labels."
+msgstr ""
+
+msgid "Choose a color for the weather text."
+msgstr ""
+
+msgid "Choose a color for tuner info background."
+msgstr ""
+
+msgid "Choose a color for tuners used during recordings."
+msgstr ""
+
+msgid "Choose a font for body text."
+msgstr ""
+
+msgid "Choose a font for file listing (multi) text."
+msgstr ""
+
+msgid "Choose a font for file listing text."
+msgstr ""
+
+msgid "Choose a font for fixed pitch / mono spaced text."
+msgstr ""
+
+msgid "Choose a font for general text."
+msgstr ""
+
+msgid "Choose a font for info description text."
+msgstr ""
+
+msgid "Choose a font for info event text."
+msgstr ""
+
+msgid "Choose a font for info time text."
+msgstr ""
+
+msgid "Choose a font for other info text not covered by the above options."
+msgstr ""
+
+msgid "Choose a font for the EPG event text."
+msgstr ""
+
+msgid "Choose a font for the EPG service text."
+msgstr ""
+
+msgid "Choose a font for the EPG time line text."
+msgstr ""
+
+msgid "Choose a font for the FAV LCN text."
+msgstr ""
+
+msgid "Choose a font for the FAV event text."
+msgstr ""
+
+msgid "Choose a font for the FAV service text."
+msgstr ""
+
+msgid "Choose a font for the button bar text."
+msgstr ""
+
+msgid "Choose a font for the choice list item text."
+msgstr ""
+
+msgid "Choose a font for the description and information box text."
+msgstr ""
+
+msgid "Choose a font for the heading clock text."
+msgstr ""
+
+msgid "Choose a font for the heading title text."
+msgstr ""
+
+msgid "Choose a font for the help text."
+msgstr ""
+
+msgid "Choose a font for the menu item text."
+msgstr ""
+
+msgid "Choose a font for the movie selection list text."
+msgstr ""
+
+msgid "Choose a font for the selection list item text."
+msgstr ""
+
+msgid "Choose a foreground color for EPG grid current service."
+msgstr ""
+
+msgid "Choose a foreground color for EPG grid programs currently in progress and selected."
+msgstr ""
+
+msgid "Choose a foreground color for EPG grid programs currently selected."
+msgstr ""
+
+msgid "Choose a foreground color for EPG grid programs."
+msgstr ""
+
+msgid "Choose a foreground color for EPG grid recordings."
+msgstr ""
+
+msgid "Choose a foreground color for EPG grid selected recordings."
+msgstr ""
+
+msgid "Choose a foreground color for EPG grid selected zap recordings."
+msgstr ""
+
+msgid "Choose a foreground color for EPG grid services."
+msgstr ""
+
+msgid "Choose a foreground color for EPG grid zap recordings."
+msgstr ""
+
+msgid "Choose a spinner animation for the system busy spinner."
+msgstr ""
+
+msgid "Choose a text color for content loading screens."
+msgstr ""
+
+msgid "Choose a text color for disabled labels."
+msgstr ""
+
+msgid "Choose a text color for general descriptions and help."
+msgstr ""
+
+msgid "Choose a text color for indented and selected descriptions and help."
+msgstr ""
+
+msgid "Choose a text color for indented descriptions and help."
+msgstr ""
+
+msgid "Choose a text color for labels."
+msgstr ""
+
+msgid "Choose a text color for selected descriptions and help."
+msgstr ""
+
+msgid "Choose how all ScrollLabels will scroll.  With 'Page mode' the cursor will jump to the previous/next screen.  With 'Line mode' the previous/next line will be scrolled into view."
+msgstr ""
+
+msgid "Choose how all list boxes will scroll.  With 'Page mode' the cursor will jump to the previous/next screen.  With 'Line mode' the previous/next line will be scrolled into view."
+msgstr ""
+
+msgid "Choose the level of FAV marked item background transparency."
+msgstr ""
+
+msgid "Choose the level of FAV marked item selection highlight transparency."
+msgstr ""
+
+msgid "Choose the level of Media Player infobar background transparency."
+msgstr ""
+
+msgid "Choose the level of SMS helper background transparency."
+msgstr ""
+
+msgid "Choose the level of TV infobar background transparency."
+msgstr ""
+
+msgid "Choose the level of background transparency for text based EPG grid data."
+msgstr ""
+
+msgid "Choose the level of info background transparency."
+msgstr ""
+
+msgid "Choose the level of menu background transparency."
+msgstr ""
+
+msgid "Choose the level of menu footnote background transparency."
+msgstr ""
+
+msgid "Choose the level of menu item selection highlight transparency."
+msgstr ""
+
+msgid "Choose the level of picture display background transparency."
+msgstr ""
+
+msgid "Choose the level of screen resolution background transparency."
+msgstr ""
+
+msgid "Choose the level of screen saver screen background transparency."
+msgstr ""
+
+msgid "Choose the level of text background transparency."
+msgstr ""
+
+msgid "Choose the level of tuner info background transparency."
+msgstr ""
+
+msgid "Choose the level of user interface screen background transparency."
+msgstr ""
+
+msgid "Choose when and where scroll bars are shown in all ScrollLabels."
+msgstr ""
+
+msgid "Choose when and where scroll bars are shown in all list boxes."
+msgstr ""
+
+msgid "Circle"
+msgstr ""
+
+msgid "Clock font"
+msgstr ""
+
+msgid "Color button background color"
+msgstr ""
+
+msgid "Color button background transparency"
+msgstr ""
+
+msgid "Color button text color"
+msgstr ""
+
+msgid "Coral"
+msgstr ""
+
+msgid "Create"
+msgstr ""
+
+msgid "Create a new theme using the current skin settings"
+msgstr ""
+
+msgid "Create new theme"
+msgstr ""
+
+msgid "Cyan"
+msgstr ""
+
+msgid "Dark Grey"
+msgstr ""
+
+msgid "Darker Blue"
+msgstr ""
+
+msgid "Davy's Grey"
+msgstr ""
+
+msgid "Deep Blue"
+msgstr ""
+
+msgid "Deep Grey"
+msgstr ""
+
+msgid "Deep Pink"
+msgstr ""
+
+msgid "Default"
+msgstr ""
+
+msgid "Default OverlayHD skin settings applied."
+msgstr ""
+
+msgid "DejaVu Sans"
+msgstr ""
+
+msgid "DejaVu Sans Bold"
+msgstr ""
+
+msgid "DejaVu Sans Condensed"
+msgstr ""
+
+msgid "DejaVu Sans Condensed Bold"
+msgstr ""
+
+msgid "DejaVu Sans Mono"
+msgstr ""
+
+msgid "DejaVu Sans Mono Bold"
+msgstr ""
+
+msgid "DejaVu Serif Condensed"
+msgstr ""
+
+msgid "DejaVu Serif Condensed Bold"
+msgstr ""
+
+msgid "Delete theme"
+msgstr ""
+
+msgid "Description font"
+msgstr ""
+
+msgid "Dim Grey"
+msgstr ""
+
+#, python-format
+msgid "Do you really want to delete the '%s' theme?"
+msgstr ""
+
+msgid "Dodger Blue"
+msgstr ""
+
+msgid "DroidSans Bold"
+msgstr ""
+
+msgid "Dull Blue"
+msgstr ""
+
+msgid "Dull Green"
+msgstr ""
+
+msgid "Dull Red"
+msgstr ""
+
+msgid "Dull Yellow"
+msgstr ""
+
+msgid "EPG PIG background color"
+msgstr ""
+
+msgid "EPG PIG overlay text border color"
+msgstr ""
+
+msgid "EPG PIG overlay text color"
+msgstr ""
+
+msgid "EPG PIG progress bar background color"
+msgstr ""
+
+msgid "EPG PIG progress bar border color"
+msgstr ""
+
+msgid "EPG PIG progress bar color"
+msgstr ""
+
+msgid "EPG event font"
+msgstr ""
+
+msgid "EPG grid background color"
+msgstr ""
+
+msgid "EPG grid background color now"
+msgstr ""
+
+msgid "EPG grid background selected color"
+msgstr ""
+
+msgid "EPG grid background selected now color"
+msgstr ""
+
+msgid "EPG grid border color"
+msgstr ""
+
+msgid "EPG grid current service background color"
+msgstr ""
+
+msgid "EPG grid current service foreground color"
+msgstr ""
+
+msgid "EPG grid foreground color"
+msgstr ""
+
+msgid "EPG grid foreground color now"
+msgstr ""
+
+msgid "EPG grid foreground selected color"
+msgstr ""
+
+msgid "EPG grid foreground selected now color"
+msgstr ""
+
+msgid "EPG grid recording background color"
+msgstr ""
+
+msgid "EPG grid recording foreground color"
+msgstr ""
+
+msgid "EPG grid recording selected background color"
+msgstr ""
+
+msgid "EPG grid recording selected foreground color"
+msgstr ""
+
+msgid "EPG grid service background color"
+msgstr ""
+
+msgid "EPG grid service foreground color"
+msgstr ""
+
+msgid "EPG grid transparency"
+msgstr ""
+
+msgid "EPG grid zap recording background color"
+msgstr ""
+
+msgid "EPG grid zap recording foreground color"
+msgstr ""
+
+msgid "EPG grid zap recording selected background color"
+msgstr ""
+
+msgid "EPG grid zap recording selected foreground color"
+msgstr ""
+
+msgid "EPG service font"
+msgstr ""
+
+msgid "EPG time line color"
+msgstr ""
+
+msgid "EPG time line font"
+msgstr ""
+
+msgid "Eerie Black"
+msgstr ""
+
+msgid "Egyptian Blue"
+msgstr ""
+
+msgid "Enable to display the REC icon blinking."
+msgstr ""
+
+msgid "Enable to display the firmware update available icon blinking."
+msgstr ""
+
+msgid "Enter a name for this new theme:"
+msgstr ""
+
+#, python-format
+msgid "Enter new name for the '%s' theme:"
+msgstr ""
+
+msgid "Export theme"
+msgstr ""
+
+msgid "FAV LCN font"
+msgstr ""
+
+msgid "FAV event font"
+msgstr ""
+
+msgid "FAV menu marked background color"
+msgstr ""
+
+msgid "FAV menu marked background transparency"
+msgstr ""
+
+msgid "FAV menu marked color"
+msgstr ""
+
+msgid "FAV menu marked transparency"
+msgstr ""
+
+msgid "FAV service color"
+msgstr ""
+
+msgid "FAV service fallback color"
+msgstr ""
+
+msgid "FAV service font"
+msgstr ""
+
+msgid "FAV service marked color"
+msgstr ""
+
+msgid "FAV service marked selected color"
+msgstr ""
+
+msgid "FAV service not available color"
+msgstr ""
+
+msgid "FAV service selected color"
+msgstr ""
+
+msgid "FAV service selected fallback color"
+msgstr ""
+
+msgid "File listing (multi) font"
+msgstr ""
+
+msgid "File listing font"
+msgstr ""
+
+msgid "Firmware update icon blinks"
+msgstr ""
+
+msgid "Fixed font"
+msgstr ""
+
+msgid "Gainsboro"
+msgstr ""
+
+msgid "Gold"
+msgstr ""
+
+msgid "Good Times"
+msgstr ""
+
+msgid "Green"
+msgstr ""
+
+msgid "Green button color"
+msgstr ""
+
+msgid "Grey"
+msgstr ""
+
+msgid "Grey Blue"
+msgstr ""
+
+msgid "Gunmetal"
+msgstr ""
+
+msgid "HELP"
+msgstr ""
+
+msgid "Help font"
+msgstr ""
+
+msgid "Help information text color"
+msgstr ""
+
+msgid "Import theme"
+msgstr ""
+
+msgid "Indigo"
+msgstr ""
+
+msgid "Info LCN color"
+msgstr ""
+
+msgid "Info Next program details color"
+msgstr ""
+
+msgid "Info Next program duration color"
+msgstr ""
+
+msgid "Info Next program genre color"
+msgstr ""
+
+msgid "Info Next program name color"
+msgstr ""
+
+msgid "Info Next program ratings color"
+msgstr ""
+
+msgid "Info Next program times color"
+msgstr ""
+
+msgid "Info Now program details color"
+msgstr ""
+
+msgid "Info Now program duration color"
+msgstr ""
+
+msgid "Info Now program genre color"
+msgstr ""
+
+msgid "Info Now program name color"
+msgstr ""
+
+msgid "Info Now program ratings color"
+msgstr ""
+
+msgid "Info Now program times color"
+msgstr ""
+
+msgid "Info background color"
+msgstr ""
+
+msgid "Info background transparency"
+msgstr ""
+
+msgid "Info bouquet color"
+msgstr ""
+
+msgid "Info broadcaster name color"
+msgstr ""
+
+msgid "Info channel name color"
+msgstr ""
+
+msgid "Info description font"
+msgstr ""
+
+msgid "Info disk information color"
+msgstr ""
+
+msgid "Info event font"
+msgstr ""
+
+msgid "Info media file size color"
+msgstr ""
+
+msgid "Info media length color"
+msgstr ""
+
+msgid "Info media name color"
+msgstr ""
+
+msgid "Info media position color"
+msgstr ""
+
+msgid "Info media remaining color"
+msgstr ""
+
+msgid "Info other font"
+msgstr ""
+
+msgid "Info progress bar background color"
+msgstr ""
+
+msgid "Info progress bar border color"
+msgstr ""
+
+msgid "Info progress bar color"
+msgstr ""
+
+msgid "Info recording details and progress bar color"
+msgstr ""
+
+msgid "Info recording progress bar background color"
+msgstr ""
+
+msgid "Info recording progress bar border color"
+msgstr ""
+
+msgid "Info selected channel name color"
+msgstr ""
+
+msgid "Info selected program name color"
+msgstr ""
+
+msgid "Info selected program times color"
+msgstr ""
+
+msgid "Info service data color"
+msgstr ""
+
+msgid "Info time font"
+msgstr ""
+
+msgid "Jet"
+msgstr ""
+
+msgid "Khammu Rabi"
+msgstr ""
+
+msgid "Legacy"
+msgstr ""
+
+msgid "Licorice"
+msgstr ""
+
+msgid "Light Blue"
+msgstr ""
+
+msgid "Light Grey"
+msgstr ""
+
+msgid "Light Red"
+msgstr ""
+
+msgid "Light Slate Blue"
+msgstr ""
+
+msgid "Line Bottom"
+msgstr ""
+
+msgid "Line Left"
+msgstr ""
+
+msgid "Line Right"
+msgstr ""
+
+msgid "Line Top"
+msgstr ""
+
+msgid "Line mode"
+msgstr ""
+
+msgid "Listbox scroll mode"
+msgstr ""
+
+msgid "Listbox scroll style"
+msgstr ""
+
+msgid "M+ 1M"
+msgstr ""
+
+msgid "MENU"
+msgstr ""
+
+msgid "Magenta"
+msgstr ""
+
+msgid "Manage the configuration and settings of the OverlayHD skin."
+msgstr ""
+
+msgid "Manage themes"
+msgstr ""
+
+msgid "Maroon"
+msgstr ""
+
+msgid "Media Infobar background color"
+msgstr ""
+
+msgid "Media Infobar background transparency"
+msgstr ""
+
+msgid "Medium Blue"
+msgstr ""
+
+msgid "Menu background color"
+msgstr ""
+
+msgid "Menu background transparency"
+msgstr ""
+
+msgid "Menu font"
+msgstr ""
+
+msgid "Menu footnote background color"
+msgstr ""
+
+msgid "Menu footnote background transparency"
+msgstr ""
+
+msgid "Menu footnote color"
+msgstr ""
+
+msgid "Menu item disabled text color"
+msgstr ""
+
+msgid "Menu item highlight color"
+msgstr ""
+
+msgid "Menu item highlight transparency"
+msgstr ""
+
+msgid "Menu item selected text color"
+msgstr ""
+
+msgid "Menu item text color"
+msgstr ""
+
+msgid "Menu of actions applicable to the currently highlighted theme"
+msgstr ""
+
+msgid "Mid Black"
+msgstr ""
+
+msgid "Midnight Blue"
+msgstr ""
+
+msgid "Movie selection font"
+msgstr ""
+
+msgid "Mustard"
+msgstr ""
+
+msgid "Navy"
+msgstr ""
+
+msgid "Nemesis Flatline"
+msgstr ""
+
+msgid "Never"
+msgstr ""
+
+msgid "Off Black"
+msgstr ""
+
+msgid "Onyx"
+msgstr ""
+
+msgid "Orange"
+msgstr ""
+
+msgid "Orange Red"
+msgstr ""
+
+msgid "Outer Space"
+msgstr ""
+
+msgid "OverlayHD"
+msgstr ""
+
+msgid "OverlayHD Actions"
+msgstr ""
+
+msgid "OverlayHD Skin Manager"
+msgstr ""
+
+#, python-format
+msgid "OverlayHD Skin Manager version %s"
+msgstr ""
+
+msgid "OverlayHD Skin Settings"
+msgstr ""
+
+msgid "OverlayHD Theme Actions"
+msgstr ""
+
+msgid "OverlayHD Theme Manager"
+msgstr ""
+
+#, python-format
+msgid "OverlayHD Theme: '%s'"
+msgstr ""
+
+msgid "OverlayHD uses grouped settings"
+msgstr ""
+
+msgid "Oxford Blue"
+msgstr ""
+
+msgid "Page mode"
+msgstr ""
+
+msgid "Picture display background color"
+msgstr ""
+
+msgid "Picture display background transparency"
+msgstr ""
+
+msgid "Picture label border color"
+msgstr ""
+
+msgid "Picture label color"
+msgstr ""
+
+msgid "Pill"
+msgstr ""
+
+msgid "Pink"
+msgstr ""
+
+msgid "Pinstripe color"
+msgstr ""
+
+msgid "Pinstripe on KeyError color"
+msgstr ""
+
+msgid "Pinstripe on Mute color"
+msgstr ""
+
+msgid "Pinstripe on Volume color"
+msgstr ""
+
+msgid "Pop up clock background color"
+msgstr ""
+
+msgid "Pop up clock background transparency"
+msgstr ""
+
+msgid "Pop up clock date color"
+msgstr ""
+
+msgid "Pop up clock time color"
+msgstr ""
+
+msgid "Powder Blue"
+msgstr ""
+
+msgid "Progress bar background color"
+msgstr ""
+
+msgid "Progress bar border color"
+msgstr ""
+
+msgid "Progress bar color"
+msgstr ""
+
+msgid "Purple"
+msgstr ""
+
+msgid "QuickSelect character color"
+msgstr ""
+
+msgid "REC icon blinks"
+msgstr ""
+
+msgid "Radio image"
+msgstr ""
+
+msgid "Random"
+msgstr ""
+
+msgid "Raven"
+msgstr ""
+
+msgid "Red"
+msgstr ""
+
+msgid "Red button color"
+msgstr ""
+
+msgid "Rename theme"
+msgstr ""
+
+msgid "Roboto Black"
+msgstr ""
+
+msgid "Roboto Bold"
+msgstr ""
+
+msgid "Royal Blue"
+msgstr ""
+
+msgid "SMS Helper background color"
+msgstr ""
+
+msgid "SMS Helper background transparency"
+msgstr ""
+
+msgid "SMS Helper label color"
+msgstr ""
+
+msgid "SMS Helper text color"
+msgstr ""
+
+msgid "Saddle Brown"
+msgstr ""
+
+msgid "Screen background color"
+msgstr ""
+
+msgid "Screen background transparency"
+msgstr ""
+
+msgid "Screen resolution background color"
+msgstr ""
+
+msgid "Screen resolution background transparency"
+msgstr ""
+
+msgid "Screen resolution text color"
+msgstr ""
+
+msgid "Screen saver color"
+msgstr ""
+
+msgid "Screen saver transparency"
+msgstr ""
+
+msgid "ScrollLabel scroll mode"
+msgstr ""
+
+msgid "ScrollLabel scroll style"
+msgstr ""
+
+msgid "Scrollbar color"
+msgstr ""
+
+msgid "Selection list font"
+msgstr ""
+
+msgid "Setting this to Yes causes the OverlayHD Skin Manager plugin to group selected settings into blocks that can be hidden or displayed as required. Setting this to No makes the plugin display all options as one long list."
+msgstr ""
+
+msgid "Setting this to Yes causes the OverlayHD Skin Manager plugin, if active, to also be listed in the Extensions menu."
+msgstr ""
+
+msgid "Setting this to Yes causes the configuration options for font selection to be displayed."
+msgstr ""
+
+msgid "Setting this to Yes causes the configuration options for general settings to be displayed."
+msgstr ""
+
+msgid "Setting this to Yes causes the configuration options for menus to be displayed."
+msgstr ""
+
+msgid "Setting this to Yes causes the configuration options for panels and plugins to be displayed."
+msgstr ""
+
+msgid "Setting this to Yes causes the configuration options for text messages to be displayed."
+msgstr ""
+
+msgid "Setting this to Yes causes the configuration options for the EPG screens to be displayed."
+msgstr ""
+
+msgid "Setting this to Yes causes the configuration options for the FAV service selection screens to be displayed."
+msgstr ""
+
+msgid "Setting this to Yes causes the configuration options for the Info screens to be displayed."
+msgstr ""
+
+msgid "Setting this to Yes causes the themes in the OverlayHD Theme Manager list to be sorted by the theme name."
+msgstr ""
+
+msgid "Setting this to Yes causes the time line tick marks to be displayed."
+msgstr ""
+
+msgid "Setting this to Yes forces all the color buttons to be displayed even if they don't currently have a purpose."
+msgstr ""
+
+msgid "Show EPG color settings"
+msgstr ""
+
+msgid "Show EPG time line tick marks"
+msgstr ""
+
+msgid "Show FAV color settings"
+msgstr ""
+
+msgid "Show Info color settings"
+msgstr ""
+
+msgid "Show OverlayHD in Extensions menu"
+msgstr ""
+
+msgid "Show font settings"
+msgstr ""
+
+msgid "Show general settings"
+msgstr ""
+
+msgid "Show menu color settings"
+msgstr ""
+
+msgid "Show panel and plugin color settings"
+msgstr ""
+
+msgid "Show text color settings"
+msgstr ""
+
+msgid "Silver"
+msgstr ""
+
+msgid "Smoky Black"
+msgstr ""
+
+msgid "Sort OverlayHD themes by name"
+msgstr ""
+
+msgid "Spinner style"
+msgstr ""
+
+msgid "TV Infobar background color"
+msgstr ""
+
+msgid "TV Infobar background transparency"
+msgstr ""
+
+msgid "Tan"
+msgstr ""
+
+msgid "Teal"
+msgstr ""
+
+msgid "Text background color"
+msgstr ""
+
+msgid "Text background transparency"
+msgstr ""
+
+msgid "Text color"
+msgstr ""
+
+msgid "Text disabled color"
+msgstr ""
+
+msgid "Text font"
+msgstr ""
+
+msgid "Text indented color"
+msgstr ""
+
+msgid "Text indented selected color"
+msgstr ""
+
+msgid "Text label color"
+msgstr ""
+
+msgid "Text selected color"
+msgstr ""
+
+msgid "Text waiting color"
+msgstr ""
+
+#, python-format
+msgid "The '%s' theme may not be deleted!"
+msgstr ""
+
+#, python-format
+msgid "Theme '%s' created."
+msgstr ""
+
+#, python-format
+msgid "Theme '%s' deleted."
+msgstr ""
+
+#, python-format
+msgid "Theme '%s' renamed to '%s'."
+msgstr ""
+
+#, python-format
+msgid "Theme '%s' updated."
+msgstr ""
+
+msgid "Theme export not yet available!"
+msgstr ""
+
+msgid "Theme import not yet available!"
+msgstr ""
+
+#, python-format
+msgid "Theme name '%s' already exists!"
+msgstr ""
+
+msgid "Theme name can not be blank!"
+msgstr ""
+
+msgid "Themes"
+msgstr ""
+
+msgid "There are no themes to apply!"
+msgstr ""
+
+msgid "Timeshift data text color"
+msgstr ""
+
+msgid "Timeshift progress bar background color"
+msgstr ""
+
+msgid "Timeshift progress bar border color"
+msgstr ""
+
+msgid "Timeshift progress bar color"
+msgstr ""
+
+msgid "Title font"
+msgstr ""
+
+msgid "Tuner active color"
+msgstr ""
+
+msgid "Tuner background color"
+msgstr ""
+
+msgid "Tuner background transparency"
+msgstr ""
+
+msgid "Tuner idle color"
+msgstr ""
+
+msgid "Tuner recording color"
+msgstr ""
+
+msgid "Tuner signal border color"
+msgstr ""
+
+msgid "Tuner signal error color"
+msgstr ""
+
+msgid "Tuner signal levels color"
+msgstr ""
+
+msgid "Tuner type label color"
+msgstr ""
+
+msgid "Undefined"
+msgstr ""
+
+msgid "Update"
+msgstr ""
+
+msgid "Update the currently highlighted theme with the current skin settings"
+msgstr ""
+
+msgid "Update theme"
+msgstr ""
+
+msgid "Valis Enigma"
+msgstr ""
+
+msgid "Vera Sans Mono"
+msgstr ""
+
+msgid "Volume control background color"
+msgstr ""
+
+msgid "Volume control color"
+msgstr ""
+
+msgid "Warm Yellow"
+msgstr ""
+
+msgid "Weather data label text color"
+msgstr ""
+
+msgid "Weather data provider text color"
+msgstr ""
+
+msgid "Weather data text color"
+msgstr ""
+
+msgid "When required (Left)"
+msgstr ""
+
+msgid "When required (Right)"
+msgstr ""
+
+msgid "White"
+msgstr ""
+
+msgid "Yellow"
+msgstr ""
+
+msgid "Yellow button color"
+msgstr ""
+
+msgid "theme"
+msgid_plural "themes"
+msgstr[0] ""
+msgstr[1] ""
