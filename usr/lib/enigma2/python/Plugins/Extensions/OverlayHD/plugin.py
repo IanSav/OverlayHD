@@ -2,7 +2,7 @@
 #
 # OverlayHD Skin Manager
 #
-# Version Date - 17-Apr-2023
+# Version Date - 3-Jun-2023
 # Remember to change version number variable below!!!
 #
 # Repository - https://github.com/IanSav/OverlayHD
@@ -55,7 +55,7 @@ from Tools.BoundFunction import boundFunction
 from Tools.Directories import SCOPE_CONFIG, SCOPE_GUISKIN, SCOPE_MEDIA, SCOPE_PLUGIN, SCOPE_SKINS, fileReadXML, resolveFilename
 
 MODULE_NAME = __name__.split(".")[-1]
-PLUGIN_VERSION_NUMBER = "1.95"
+PLUGIN_VERSION_NUMBER = "1.96"
 
 DISPLAY_DISTRO = BoxInfo.getItem("displaydistro", "Enigma2")
 DISTRO = BoxInfo.getItem("distro", "enigma2").lower()
@@ -153,25 +153,25 @@ backgroundChoice = [("Background", _("Background"))]
 
 transparencyChoices = [
 	("0x00000000", _("0% (Opaque)")),
-	("0x0c000000", _("5%")),
-	("0x19000000", _("10%")),
-	("0x26000000", _("15%")),
-	("0x33000000", _("20%")),
-	("0x3f000000", _("25%")),
-	("0x4c000000", _("30%")),
-	("0x59000000", _("35%")),
-	("0x66000000", _("40%")),
-	("0x72000000", _("45%")),
-	("0x7f000000", _("50%")),
-	("0x8c000000", _("55%")),
-	("0x99000000", _("60%")),
-	("0xa5000000", _("65%")),
-	("0xb2000000", _("70%")),
-	("0xbf000000", _("75%")),
-	("0xcc000000", _("80%")),
-	("0xd8000000", _("85%")),
-	("0xe5000000", _("90%")),
-	("0xf2000000", _("95%")),
+	("0x0c000000", "%d%%" % 5),
+	("0x19000000", "%d%%" % 10),
+	("0x26000000", "%d%%" % 15),
+	("0x33000000", "%d%%" % 20),
+	("0x3f000000", "%d%%" % 25),
+	("0x4c000000", "%d%%" % 30),
+	("0x59000000", "%d%%" % 35),
+	("0x66000000", "%d%%" % 40),
+	("0x72000000", "%d%%" % 45),
+	("0x7f000000", "%d%%" % 50),
+	("0x8c000000", "%d%%" % 55),
+	("0x99000000", "%d%%" % 60),
+	("0xa5000000", "%d%%" % 65),
+	("0xb2000000", "%d%%" % 70),
+	("0xbf000000", "%d%%" % 75),
+	("0xcc000000", "%d%%" % 80),
+	("0xd8000000", "%d%%" % 85),
+	("0xe5000000", "%d%%" % 90),
+	("0xf2000000", "%d%%" % 95),
 	("0xff000000", _("100% (Transparent)"))
 ]
 
