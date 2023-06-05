@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-03 12:48+0200\n"
-"PO-Revision-Date: 2022-10-02 11:09+0200\n"
+"PO-Revision-Date: 2023-06-03 13:54+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: de\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.3.1\n"
 
 msgid "--- EPG Color Settings ---"
 msgstr "--- EPG Farbeinstellungen ---"
@@ -42,10 +43,10 @@ msgid "--- Text Color Settings ---"
 msgstr "--- Text Farbeinstellungen ---"
 
 msgid "0% (Opaque)"
-msgstr ""
+msgstr "0% (Undurchsichtig)"
 
 msgid "100% (Transparent)"
-msgstr ""
+msgstr "100% (Transparent)"
 
 msgid "Always (Left)"
 msgstr "Immer (Links)"
@@ -54,25 +55,25 @@ msgid "Always (Right)"
 msgstr "Immer (Rechts)"
 
 msgid "Always show color buttons"
-msgstr "Zeige immer Farb-Buttons"
+msgstr "Farb-Buttons immer zeigen"
 
 msgid "Andale Mono"
-msgstr ""
+msgstr "Andale Mono"
 
 msgid "Apply"
 msgstr "Aktivieren"
 
 msgid "Apply the currently highlighted theme, return to OverlayHD Skin Manager"
-msgstr "Aktiviere das gewählte Theme, zurück zum OverlayHD Skin Manager"
+msgstr "Aktiviere das gewählte Thema, dann zurück zum OverlayHD Skin Manager"
 
 msgid "Apply the default skin settings"
-msgstr "Aktiviere die standard Einstellungen"
+msgstr "Aktiviere die Standardeinstellungen"
 
 msgid "Arial Narrow"
-msgstr ""
+msgstr "Arial Schmal"
 
 msgid "Arsenic"
-msgstr ""
+msgstr "Arsenik"
 
 msgid "Background"
 msgstr "Hintergrund"
@@ -81,40 +82,40 @@ msgid "Background image"
 msgstr "Hintergrundbild"
 
 msgid "Banner clock color"
-msgstr "Banner Uhr-Farbe"
+msgstr "Banner Uhrfarbe"
 
 msgid "Banner title color"
 msgstr "Banner Titelfarbe"
 
 msgid "Bar"
-msgstr ""
+msgstr "Bar"
 
 msgid "Black"
 msgstr "Schwarz"
 
 msgid "Block"
-msgstr ""
+msgstr "Block"
 
 msgid "Blue"
 msgstr "Blau"
 
 msgid "Blue button color"
-msgstr "Farbe vom Blauen Button"
+msgstr "Textfarbe am blauen Button"
 
 msgid "Body font"
-msgstr ""
+msgstr "Body Font"
 
 msgid "Boot image"
-msgstr ""
+msgstr "Bootimage"
 
 msgid "Box"
-msgstr ""
+msgstr "Box"
 
 msgid "Button"
-msgstr ""
+msgstr "Button"
 
 msgid "Button Background"
-msgstr "Buttonhintergrund"
+msgstr "Button Hintergrund"
 
 msgid "Button Blue"
 msgstr "Button Blau"
@@ -132,22 +133,22 @@ msgid "Button font"
 msgstr "Button Schriftart"
 
 msgid "Button style"
-msgstr ""
+msgstr "Button Stil"
 
 msgid "Cancel"
 msgstr "Abbruch"
 
 msgid "Cancel theme selection, return to OverlayHD Skin Manager"
-msgstr ""
+msgstr "Themenauswahl abbrechen und zurück zum OverlayHD Skin Manager"
 
 msgid "Charcoal"
-msgstr ""
+msgstr "Holzkohle"
 
 msgid "Choice list font"
-msgstr ""
+msgstr "Choice List Font"
 
 msgid "Choose a background color for EPG current service."
-msgstr ""
+msgstr "Hintergrundfarbe für aktuellen Sender im EPG wählen."
 
 msgid "Choose a background color for EPG grid programs currently in progress and selected."
 msgstr ""
@@ -177,34 +178,34 @@ msgid "Choose a background color for EPG grid zap recordings."
 msgstr ""
 
 msgid "Choose a background color for EPG screens using a Picture In Graphic (PIG)."
-msgstr ""
+msgstr "Hintergrundfarbe für EPG mit Picture In Graphic (PIG) wählen."
 
 msgid "Choose a background color for non-specific progress bars."
-msgstr ""
+msgstr "Hintergrundfarbe für unspezifische Fortschrittsanzeigen wählen."
 
 msgid "Choose a background color for the PIG current program progress bar."
-msgstr ""
+msgstr "Hintergrundfarbe der Fortschrittsanzeige für Picture In Graphic (PIG) wählen."
 
 msgid "Choose a background color for the progress bar."
-msgstr ""
+msgstr "Hintergrundfarbe der Fortschrittsanzeige wählen."
 
 msgid "Choose a background color for the recording progress bar."
-msgstr ""
+msgstr "Hintergrundfarbe der Fortschrittsanzeige bei Aufnahmen wählen."
 
 msgid "Choose a background color for the timeshift progress bar."
-msgstr ""
+msgstr "Hintergrundfarbe der Fortschrittsanzeige bei Timeshift-Aufnahmen wählen."
 
 msgid "Choose a background color to indicate poor tuner signal quality (BER > 0)."
-msgstr ""
+msgstr "Hintergrundfarbe bei schlechtem Tunersignal (BER > 0) wählen."
 
 msgid "Choose a background image to be used while listening to radio services."
-msgstr ""
+msgstr "Hintergrundbild bei Radioempfang wählen."
 
 msgid "Choose a background image to be used while the system UI starts."
-msgstr ""
+msgstr "Hintergrundbild beim Start des Userinterfaces wählen."
 
 msgid "Choose a background image to be used while the system boots."
-msgstr ""
+msgstr "Hintergrundbild beim Neustart des Systems wählen. "
 
 msgid "Choose a border color for PIG text overlays."
 msgstr ""
@@ -213,25 +214,25 @@ msgid "Choose a border color for displaying picture labels."
 msgstr ""
 
 msgid "Choose a border color for non-specific progress bars."
-msgstr ""
+msgstr "Rahmenfarbe für unspezifische Fortschrittsanzeigen wählen."
 
 msgid "Choose a border color for the PIG current program progress bar."
-msgstr ""
+msgstr "Rahmenfarbe der Fortschrittsanzeige für Picture In Graphic (PIG) wählen."
 
 msgid "Choose a border color for the progress bar."
-msgstr ""
+msgstr "Rahmenfarbe der Fortschrittsanzeige wählen."
 
 msgid "Choose a border color for the recording progress bar."
-msgstr ""
+msgstr "Rahmenfarbe der Fortschrittsanzeige bei Aufnahmen wählen."
 
 msgid "Choose a border color for the timeshift progress bar."
-msgstr ""
+msgstr "Rahmenfarbe der Fortschrittsanzeige bei Timeshift-Aufnahmen wählen."
 
 msgid "Choose a border color for the tuner signal and quality bar graphs."
 msgstr ""
 
 msgid "Choose a button style for the color button bar."
-msgstr ""
+msgstr "Button Stil für die Buttonzeile wählen."
 
 msgid "Choose a color for FAV LCNs and services."
 msgstr ""
@@ -243,7 +244,7 @@ msgid "Choose a color for Setup menu footnote text. (e.g. Restart Required)"
 msgstr ""
 
 msgid "Choose a color for active tuners."
-msgstr ""
+msgstr "Farbe des aktiven Tuners wählen."
 
 msgid "Choose a color for all pinstripes."
 msgstr ""
@@ -276,25 +277,25 @@ msgid "Choose a color for displaying a LCN."
 msgstr ""
 
 msgid "Choose a color for displaying a bouquet name."
-msgstr ""
+msgstr "Farbe der Bouquetnamen wählen."
 
 msgid "Choose a color for displaying a broadcaster's name."
 msgstr ""
 
 msgid "Choose a color for displaying a channel name."
-msgstr ""
+msgstr "Farbe der Sendernamen wählen."
 
 msgid "Choose a color for displaying a current program's details."
 msgstr ""
 
 msgid "Choose a color for displaying a current program's duration."
-msgstr ""
+msgstr "Farbe der aktuellen Progammdauer wählen."
 
 msgid "Choose a color for displaying a current program's genre."
-msgstr ""
+msgstr "Farbe des aktuellen Progammgenres wählen."
 
 msgid "Choose a color for displaying a current program's name."
-msgstr ""
+msgstr "Farbe des aktuellen Progammnamens wählen."
 
 msgid "Choose a color for displaying a current program's rating."
 msgstr ""
@@ -318,10 +319,10 @@ msgid "Choose a color for displaying a media file's remaining time in Media Play
 msgstr ""
 
 msgid "Choose a color for displaying a selected channel name."
-msgstr ""
+msgstr "Farbe des markierten Senders wählen."
 
 msgid "Choose a color for displaying a selected program's name."
-msgstr ""
+msgstr "Farbe des gewählten Progammnamens wählen."
 
 msgid "Choose a color for displaying any service data."
 msgstr ""
@@ -351,7 +352,7 @@ msgid "Choose a color for displaying the next or later program's start and/or en
 msgstr ""
 
 msgid "Choose a color for displaying the progress bar."
-msgstr ""
+msgstr "Farbe der Fortschrittsanzeige wählen."
 
 msgid "Choose a color for displaying the recording details and progress bar."
 msgstr ""
@@ -363,7 +364,7 @@ msgid "Choose a color for displaying the selected program's start and/or end tim
 msgstr ""
 
 msgid "Choose a color for displaying the timeshift progress bar."
-msgstr ""
+msgstr "Farbe der Fortschrittsanzeige bei Timeshift-Aufnahmen wählen."
 
 msgid "Choose a color for help menu additional button help text."
 msgstr ""
@@ -372,25 +373,25 @@ msgid "Choose a color for idle tuners."
 msgstr ""
 
 msgid "Choose a color for info background."
-msgstr ""
+msgstr "Farbe des Infointergrundes wählen."
 
 msgid "Choose a color for menu backgrounds."
-msgstr ""
+msgstr "Farbe des Menühintergrundes wählen."
 
 msgid "Choose a color for menu item selection highlights."
 msgstr ""
 
 msgid "Choose a color for menu item text."
-msgstr ""
+msgstr "Farbe des Menüpunktes wählen."
 
 msgid "Choose a color for non-specific progress bars."
 msgstr ""
 
 msgid "Choose a color for text backgrounds."
-msgstr ""
+msgstr "Farbe für Texthintergründe wählen."
 
 msgid "Choose a color for the BLUE button."
-msgstr ""
+msgstr "Farbe für Text am blauen Button wählen."
 
 msgid "Choose a color for the EPG grid background."
 msgstr ""
@@ -408,7 +409,7 @@ msgid "Choose a color for the FAV marked item selection highlights."
 msgstr ""
 
 msgid "Choose a color for the GREEN button."
-msgstr ""
+msgstr "Farbe für Text am grünen Button wählen."
 
 msgid "Choose a color for the KeyError pop up pinstripe."
 msgstr ""
@@ -426,7 +427,7 @@ msgid "Choose a color for the QuickSelect search letter(s) that pop up in screen
 msgstr ""
 
 msgid "Choose a color for the RED button."
-msgstr ""
+msgstr "Farbe für Text am roten Button wählen."
 
 msgid "Choose a color for the SMS helper background."
 msgstr ""
@@ -444,7 +445,7 @@ msgid "Choose a color for the Volume control pop up pinstripe."
 msgstr ""
 
 msgid "Choose a color for the YELLOW button."
-msgstr ""
+msgstr "Farbe für Text am gelben Button wählen."
 
 msgid "Choose a color for the banner clock display."
 msgstr ""
@@ -534,7 +535,7 @@ msgid "Choose a font for fixed pitch / mono spaced text."
 msgstr ""
 
 msgid "Choose a font for general text."
-msgstr ""
+msgstr "Schriftart für allgemeinen Text wählen."
 
 msgid "Choose a font for info description text."
 msgstr ""
@@ -567,7 +568,7 @@ msgid "Choose a font for the FAV service text."
 msgstr ""
 
 msgid "Choose a font for the button bar text."
-msgstr ""
+msgstr "Schriftart für die Button-Zeile wählen."
 
 msgid "Choose a font for the choice list item text."
 msgstr ""
@@ -582,7 +583,7 @@ msgid "Choose a font for the heading title text."
 msgstr ""
 
 msgid "Choose a font for the help text."
-msgstr ""
+msgstr "Schriftart für den Hilfstext wählen."
 
 msgid "Choose a font for the menu item text."
 msgstr ""
@@ -711,107 +712,107 @@ msgid "Clock font"
 msgstr ""
 
 msgid "Color button background color"
-msgstr ""
+msgstr "Button Hintergrundfarbe"
 
 msgid "Color button background transparency"
-msgstr ""
+msgstr "Button Hintergrundtransparens"
 
 msgid "Color button text color"
-msgstr ""
+msgstr "Button Textfarbe"
 
 msgid "Coral"
 msgstr ""
 
 msgid "Create"
-msgstr ""
+msgstr "Erzeugen"
 
 msgid "Create a new theme using the current skin settings"
-msgstr ""
+msgstr "Erzeuge ein neues Thema unter Verwendung der Skin-Einstellungen"
 
 msgid "Create new theme"
-msgstr ""
+msgstr "Erzeuge ein neues Thema"
 
 msgid "Cyan"
-msgstr ""
+msgstr "Cyan"
 
 msgid "Dark Grey"
-msgstr ""
+msgstr "Dunkelgrau"
 
 msgid "Darker Blue"
-msgstr ""
+msgstr "Dunkleres Blau"
 
 msgid "Davy's Grey"
-msgstr ""
+msgstr "Davy's Grau"
 
 msgid "Deep Blue"
-msgstr ""
+msgstr "Tiefes Blau"
 
 msgid "Deep Grey"
-msgstr ""
+msgstr "Tiefes Grau"
 
 msgid "Deep Pink"
-msgstr ""
+msgstr "Tiefes Lila"
 
 msgid "Default"
-msgstr ""
+msgstr "Standard"
 
 msgid "Default OverlayHD skin settings applied."
-msgstr ""
+msgstr "Standard OverlayHD Skin Einstellungen angewandt."
 
 msgid "DejaVu Sans"
-msgstr ""
+msgstr "DejaVu Sans"
 
 msgid "DejaVu Sans Bold"
-msgstr ""
+msgstr "DejaVu Sans Fett"
 
 msgid "DejaVu Sans Condensed"
-msgstr ""
+msgstr "DejaVu Sans Schmal"
 
 msgid "DejaVu Sans Condensed Bold"
-msgstr ""
+msgstr "DejaVu Sans Schmal Fett"
 
 msgid "DejaVu Sans Mono"
-msgstr ""
+msgstr "DejaVu Sans Nichtproportional"
 
 msgid "DejaVu Sans Mono Bold"
-msgstr ""
+msgstr "DejaVu Sans Nichtproportional Fett"
 
 msgid "DejaVu Serif Condensed"
-msgstr ""
+msgstr "DejaVu Serif Schmal"
 
 msgid "DejaVu Serif Condensed Bold"
-msgstr ""
+msgstr "DejaVu Serif Schmal Fett"
 
 msgid "Delete theme"
-msgstr ""
+msgstr "Thema Löschen"
 
 msgid "Description font"
-msgstr ""
+msgstr "Beschreibungs Font"
 
 msgid "Dim Grey"
 msgstr ""
 
 #, python-format
 msgid "Do you really want to delete the '%s' theme?"
-msgstr ""
+msgstr "Soll das Thema '%s' wirklich gelöscht werden?"
 
 msgid "Dodger Blue"
 msgstr ""
 
 msgid "DroidSans Bold"
-msgstr ""
+msgstr "DroidSans Fett"
 
 msgid "Dull Blue"
-msgstr ""
+msgstr "Mattblau"
 
 msgid "Dull Green"
-msgstr ""
+msgstr "Mattgrün"
 
 msgid "Dull Red"
-msgstr ""
+msgstr "Mattrot"
 
 msgid "Dull Yellow"
-msgstr ""
+msgstr "Mattgelb"
 
 msgid "EPG PIG background color"
 msgstr ""
@@ -916,20 +917,20 @@ msgid "Egyptian Blue"
 msgstr ""
 
 msgid "Enable to display the REC icon blinking."
-msgstr ""
+msgstr "Blinkendes Icon bei Aufnahmen aktivieren."
 
 msgid "Enable to display the firmware update available icon blinking."
 msgstr ""
 
 msgid "Enter a name for this new theme:"
-msgstr ""
+msgstr "Namen des neuen Themas eingeben:"
 
 #, python-format
 msgid "Enter new name for the '%s' theme:"
-msgstr ""
+msgstr "Neuen Namen für Thema '%s' eingeben:"
 
 msgid "Export theme"
-msgstr ""
+msgstr "Thema Exportieren"
 
 msgid "FAV LCN font"
 msgstr ""
@@ -980,49 +981,49 @@ msgid "File listing font"
 msgstr ""
 
 msgid "Firmware update icon blinks"
-msgstr ""
+msgstr "Blinkendes Icon bei Firmware Update"
 
 msgid "Fixed font"
-msgstr ""
+msgstr "Nichtproportionale Schriftart"
 
 msgid "Gainsboro"
 msgstr ""
 
 msgid "Gold"
-msgstr ""
+msgstr "Gold"
 
 msgid "Good Times"
 msgstr ""
 
 msgid "Green"
-msgstr ""
+msgstr "Grün"
 
 msgid "Green button color"
-msgstr ""
+msgstr "Textfarbe am grünen Button"
 
 msgid "Grey"
-msgstr ""
+msgstr "Grau"
 
 msgid "Grey Blue"
-msgstr ""
+msgstr "Graublau"
 
 msgid "Gunmetal"
 msgstr ""
 
 msgid "HELP"
-msgstr ""
+msgstr "HELP"
 
 msgid "Help font"
-msgstr ""
+msgstr "Hilfe Font"
 
 msgid "Help information text color"
 msgstr ""
 
 msgid "Import theme"
-msgstr ""
+msgstr "Thema importieren"
 
 msgid "Indigo"
-msgstr ""
+msgstr "Indigo"
 
 msgid "Info LCN color"
 msgstr ""
@@ -1154,55 +1155,55 @@ msgid "Licorice"
 msgstr ""
 
 msgid "Light Blue"
-msgstr ""
+msgstr "Hellblau"
 
 msgid "Light Grey"
-msgstr ""
+msgstr "Hellgrau"
 
 msgid "Light Red"
-msgstr ""
+msgstr "Hellrot"
 
 msgid "Light Slate Blue"
-msgstr ""
+msgstr "Helles Schieferblau"
 
 msgid "Line Bottom"
-msgstr ""
+msgstr "Linie Unten"
 
 msgid "Line Left"
-msgstr ""
+msgstr "Linie Links"
 
 msgid "Line Right"
-msgstr ""
+msgstr "Linie Rechts"
 
 msgid "Line Top"
-msgstr ""
+msgstr "Linie Oben"
 
 msgid "Line mode"
-msgstr ""
+msgstr "Linienmodus"
 
 msgid "Listbox scroll mode"
-msgstr ""
+msgstr "ListBox Scrollmodus"
 
 msgid "Listbox scroll style"
-msgstr ""
+msgstr "Listbox Scrollstyle"
 
 msgid "M+ 1M"
 msgstr ""
 
 msgid "MENU"
-msgstr ""
+msgstr "MENU"
 
 msgid "Magenta"
-msgstr ""
+msgstr "Magenta"
 
 msgid "Manage the configuration and settings of the OverlayHD skin."
 msgstr ""
 
 msgid "Manage themes"
-msgstr ""
+msgstr "Thema bearbeiten"
 
 msgid "Maroon"
-msgstr ""
+msgstr "Kastanienbraun"
 
 msgid "Media Infobar background color"
 msgstr ""
@@ -1211,16 +1212,16 @@ msgid "Media Infobar background transparency"
 msgstr ""
 
 msgid "Medium Blue"
-msgstr ""
+msgstr "Mittelblau"
 
 msgid "Menu background color"
-msgstr ""
+msgstr "Menühintergrundfarbe"
 
 msgid "Menu background transparency"
-msgstr ""
+msgstr "Menü Hintergrundtransparenz"
 
 msgid "Menu font"
-msgstr ""
+msgstr "Menü Schriftart"
 
 msgid "Menu footnote background color"
 msgstr ""
@@ -1241,10 +1242,10 @@ msgid "Menu item highlight transparency"
 msgstr ""
 
 msgid "Menu item selected text color"
-msgstr ""
+msgstr "Menüpunkt gewählt Textfarbe"
 
 msgid "Menu item text color"
-msgstr ""
+msgstr "Menüpunkt Textfarbe"
 
 msgid "Menu of actions applicable to the currently highlighted theme"
 msgstr ""
@@ -1253,7 +1254,7 @@ msgid "Mid Black"
 msgstr ""
 
 msgid "Midnight Blue"
-msgstr ""
+msgstr "Mitternachtsblau"
 
 msgid "Movie selection font"
 msgstr ""
@@ -1268,63 +1269,63 @@ msgid "Nemesis Flatline"
 msgstr ""
 
 msgid "Never"
-msgstr ""
+msgstr "Nie"
 
 msgid "Off Black"
 msgstr ""
 
 msgid "Onyx"
-msgstr ""
+msgstr "Onyx"
 
 msgid "Orange"
-msgstr ""
+msgstr "Orange"
 
 msgid "Orange Red"
-msgstr ""
+msgstr "Orangerot"
 
 msgid "Outer Space"
-msgstr ""
+msgstr "Weltraum"
 
 msgid "OverlayHD"
-msgstr ""
+msgstr "OverlayHD"
 
 msgid "OverlayHD Actions"
-msgstr ""
+msgstr "OverlayHD-Aktionen"
 
 msgid "OverlayHD Skin Manager"
-msgstr ""
+msgstr "OverlayHD Skin Manager"
 
 #, python-format
 msgid "OverlayHD Skin Manager version %s"
-msgstr ""
+msgstr "OverlayHD Skin Manager Version %s"
 
 msgid "OverlayHD Skin Settings"
-msgstr ""
+msgstr "OverlayHD Skin Einstellungen"
 
 msgid "OverlayHD Theme Actions"
-msgstr ""
+msgstr "OverlayHD Thema Aktionen"
 
 msgid "OverlayHD Theme Manager"
-msgstr ""
+msgstr "OverlayHD Thema Manager"
 
 #, python-format
 msgid "OverlayHD Theme: '%s'"
-msgstr ""
+msgstr "OverlayHD Thema: '%s'"
 
 msgid "OverlayHD uses grouped settings"
 msgstr ""
 
 msgid "Oxford Blue"
-msgstr ""
+msgstr "Oxfordblau"
 
 msgid "Page mode"
 msgstr ""
 
 msgid "Picture display background color"
-msgstr ""
+msgstr "Bildanzeige Hintergrundfarbe"
 
 msgid "Picture display background transparency"
-msgstr ""
+msgstr "Bildanzeige Hintergrundtransparenz"
 
 msgid "Picture label border color"
 msgstr ""
@@ -1336,7 +1337,7 @@ msgid "Pill"
 msgstr ""
 
 msgid "Pink"
-msgstr ""
+msgstr "Rosa"
 
 msgid "Pinstripe color"
 msgstr ""
@@ -1366,16 +1367,16 @@ msgid "Powder Blue"
 msgstr ""
 
 msgid "Progress bar background color"
-msgstr ""
+msgstr "Hintergrundfarbe der Fortschrittsanzeige"
 
 msgid "Progress bar border color"
-msgstr ""
+msgstr "Rahmenfarbe der Fortschrittsanzeige"
 
 msgid "Progress bar color"
-msgstr ""
+msgstr "Farbe der Fortschrittsanzeige"
 
 msgid "Purple"
-msgstr ""
+msgstr "Lila"
 
 msgid "QuickSelect character color"
 msgstr ""
@@ -1387,19 +1388,19 @@ msgid "Radio image"
 msgstr ""
 
 msgid "Random"
-msgstr ""
+msgstr "Zufall"
 
 msgid "Raven"
 msgstr ""
 
 msgid "Red"
-msgstr ""
+msgstr "Rot"
 
 msgid "Red button color"
-msgstr ""
+msgstr "Textfarbe am roten Button"
 
 msgid "Rename theme"
-msgstr ""
+msgstr "Thema umbenennen"
 
 msgid "Roboto Black"
 msgstr ""
@@ -1408,7 +1409,7 @@ msgid "Roboto Bold"
 msgstr ""
 
 msgid "Royal Blue"
-msgstr ""
+msgstr "Königsblau"
 
 msgid "SMS Helper background color"
 msgstr ""
@@ -1441,10 +1442,10 @@ msgid "Screen resolution text color"
 msgstr ""
 
 msgid "Screen saver color"
-msgstr ""
+msgstr "Bildschirmschoner Farbe"
 
 msgid "Screen saver transparency"
-msgstr ""
+msgstr "Bildschirmschoner Transparens"
 
 msgid "ScrollLabel scroll mode"
 msgstr ""
@@ -1453,7 +1454,7 @@ msgid "ScrollLabel scroll style"
 msgstr ""
 
 msgid "Scrollbar color"
-msgstr ""
+msgstr "Scrollbarfarbe"
 
 msgid "Selection list font"
 msgstr ""
@@ -1498,7 +1499,7 @@ msgid "Setting this to Yes forces all the color buttons to be displayed even if 
 msgstr ""
 
 msgid "Show EPG color settings"
-msgstr ""
+msgstr "Zeige EPG Farbeinstellungen"
 
 msgid "Show EPG time line tick marks"
 msgstr ""
@@ -1507,13 +1508,13 @@ msgid "Show FAV color settings"
 msgstr ""
 
 msgid "Show Info color settings"
-msgstr ""
+msgstr "Zeige Info Farbeinstellungen"
 
 msgid "Show OverlayHD in Extensions menu"
-msgstr ""
+msgstr "OverlayHD im Erweiterungsmenü anzeigen"
 
 msgid "Show font settings"
-msgstr ""
+msgstr "Zeige Schriftart Einstellungen"
 
 msgid "Show general settings"
 msgstr ""
@@ -1528,7 +1529,7 @@ msgid "Show text color settings"
 msgstr ""
 
 msgid "Silver"
-msgstr ""
+msgstr "Silber"
 
 msgid "Smoky Black"
 msgstr ""
@@ -1537,7 +1538,7 @@ msgid "Sort OverlayHD themes by name"
 msgstr ""
 
 msgid "Spinner style"
-msgstr ""
+msgstr "Spinner Style"
 
 msgid "TV Infobar background color"
 msgstr ""
@@ -1552,19 +1553,19 @@ msgid "Teal"
 msgstr ""
 
 msgid "Text background color"
-msgstr ""
+msgstr "Text Hintergrundfarbe"
 
 msgid "Text background transparency"
-msgstr ""
+msgstr "Text Hintergrundtransparenz"
 
 msgid "Text color"
-msgstr ""
+msgstr "Textfarbe"
 
 msgid "Text disabled color"
 msgstr ""
 
 msgid "Text font"
-msgstr ""
+msgstr "Text Schriftart"
 
 msgid "Text indented color"
 msgstr ""
@@ -1576,64 +1577,64 @@ msgid "Text label color"
 msgstr ""
 
 msgid "Text selected color"
-msgstr ""
+msgstr "Farbe ausgewählter Text"
 
 msgid "Text waiting color"
 msgstr ""
 
 #, python-format
 msgid "The '%s' theme may not be deleted!"
-msgstr ""
+msgstr "Thema '%s' vielleicht nicht gelöscht!"
 
 #, python-format
 msgid "Theme '%s' created."
-msgstr ""
+msgstr "Thema '%s' erzeugt."
 
 #, python-format
 msgid "Theme '%s' deleted."
-msgstr ""
+msgstr "Thema '%s' gelöscht."
 
 #, python-format
 msgid "Theme '%s' renamed to '%s'."
-msgstr ""
+msgstr "Thema '%s' in '%s' umbenannt."
 
 #, python-format
 msgid "Theme '%s' updated."
-msgstr ""
+msgstr "Thema '%s' aktualisiert"
 
 msgid "Theme export not yet available!"
-msgstr ""
+msgstr "Thema exportieren noch nicht verfügbar!"
 
 msgid "Theme import not yet available!"
-msgstr ""
+msgstr "Thema importieren noch nicht verfügbar!"
 
 #, python-format
 msgid "Theme name '%s' already exists!"
-msgstr ""
+msgstr "Thema '%s' schon vorhanden!"
 
 msgid "Theme name can not be blank!"
-msgstr ""
+msgstr "Themaname darf nicht leer sein!"
 
 msgid "Themes"
-msgstr ""
+msgstr "Themen"
 
 msgid "There are no themes to apply!"
-msgstr ""
+msgstr "Keine Themen anwendbar!"
 
 msgid "Timeshift data text color"
 msgstr ""
 
 msgid "Timeshift progress bar background color"
-msgstr ""
+msgstr "Hintergrundfarbe der Timeshift Fortschrittsanzeige"
 
 msgid "Timeshift progress bar border color"
-msgstr ""
+msgstr "Rahmenfarbe der Timeshift Fortschrittsanzeige"
 
 msgid "Timeshift progress bar color"
-msgstr ""
+msgstr "Farbe der Fortschrittsanzeige"
 
 msgid "Title font"
-msgstr ""
+msgstr "Titel Schriftart"
 
 msgid "Tuner active color"
 msgstr ""
@@ -1663,55 +1664,55 @@ msgid "Tuner type label color"
 msgstr ""
 
 msgid "Undefined"
-msgstr ""
+msgstr "Undefiniert"
 
 msgid "Update"
-msgstr ""
+msgstr "Update"
 
 msgid "Update the currently highlighted theme with the current skin settings"
-msgstr ""
+msgstr "Das gewählte Thema unter Verwendung der Skin-Einstellungen aktualisieren"
 
 msgid "Update theme"
-msgstr ""
+msgstr "Thema updaten"
 
 msgid "Valis Enigma"
-msgstr ""
+msgstr "Valis Enigma"
 
 msgid "Vera Sans Mono"
-msgstr ""
+msgstr "Vera Sans Mono"
 
 msgid "Volume control background color"
-msgstr ""
+msgstr "Hintergrundfarbe des Lautstärkereglers"
 
 msgid "Volume control color"
-msgstr ""
+msgstr "Farbe des Lautstärkereglers"
 
 msgid "Warm Yellow"
-msgstr ""
+msgstr "Warm Gelb"
 
 msgid "Weather data label text color"
-msgstr ""
+msgstr "Farbe des Wetterdaten-Labels"
 
 msgid "Weather data provider text color"
-msgstr ""
+msgstr "Farbe des Wetterdaten-Providertextes"
 
 msgid "Weather data text color"
-msgstr ""
+msgstr "Farbe des Wetterdatentextes"
 
 msgid "When required (Left)"
-msgstr ""
+msgstr "Wenn nötig (Links)"
 
 msgid "When required (Right)"
-msgstr ""
+msgstr "Wenn nötig (Rechts)"
 
 msgid "White"
-msgstr ""
+msgstr "Weiss"
 
 msgid "Yellow"
-msgstr ""
+msgstr "Gelb"
 
 msgid "Yellow button color"
-msgstr ""
+msgstr "Textfarbe am gelben Button"
 
 msgid "theme"
 msgid_plural "themes"
