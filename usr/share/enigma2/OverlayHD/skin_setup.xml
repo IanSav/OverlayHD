@@ -1312,12 +1312,12 @@
 				}
 			</convert>
 		</widget>
-		<widget source="pluginGrid" render="Listbox" position="400,80" size="830,470" conditional="pluginGrid" itemSpacing="10,10" listOrientation="grid" moveBackgroundColor="MenuSelectedMove" moveFontColor="TextWaiting" scrollbarLength="450" selectionZoom="0">
+		<widget source="pluginGrid" render="Listbox" position="400,80" size="830,470" conditional="pluginGrid" itemSpacing="10,10" listOrientation="grid" moveBackgroundColor="MenuSelectedMove" moveFontColor="Text" scrollbarLength="450" selectionZoom="0">
 			<convert type="TemplatedMultiContent">
 				{
 				"template":
 					[
-					MultiContentEntryText(pos=(0, 0), size=(154, 105), font=0, backcolor=0x37404040),
+					MultiContentEntryText(pos=(0, 0), size=(154, 105), font=0, backcolor="GridBackground"),
 					MultiContentEntryPixmapAlphaBlend(pos=(27, 10), size=(100, 40), png=3, flags=BT_SCALE),
 					MultiContentEntryText(pos=(1, 54), size=(152, 45), font=0, flags=RT_VALIGN_CENTER | RT_HALIGN_CENTER | RT_WRAP, text=1)
 					],

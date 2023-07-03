@@ -190,6 +190,8 @@
 		<color name="FootnoteBackground" value="ScreenBackground" />
 		<color name="FootnoteText" value="LightBlue" />
 
+		<color name="GridBackground" value="#3f414a4c" />
+
 		<color name="HelpPress" value="Yellow" />
 
 		<color name="InfoBackground" value="ScreenBackground" />
@@ -239,7 +241,7 @@
 		<color name="MenuBackground" value="ScreenBackground" />
 		<color name="MenuDisabled" value="Grey" />
 		<color name="MenuSelected" value="DodgerBlue" />
-		<color name="MenuSelectedMove" value="MediumBlue" />
+		<color name="MenuSelectedMove" value="OrangeRed" />
 		<color name="MenuText" value="White" />
 		<color name="MenuTextSelected" value="White" />
 
