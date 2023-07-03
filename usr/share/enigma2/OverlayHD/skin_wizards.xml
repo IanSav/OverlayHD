@@ -57,7 +57,6 @@
 			</convert>
 		</widget>
 		<widget name="config" position="400,350" size="830,280" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="config" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" transparent="0" />
-		<widget name="wizard" position="0,0" size="0,0" conditional="wizard" transparent="1" />
 		<widget name="localetext" position="0,0" size="0,0" conditional="localetext" transparent="1" />
 		<widget name="languagetext" position="0,0" size="0,0" conditional="languagetext" transparent="1" />
 	</screen>
@@ -271,10 +270,6 @@
 
 	<screen name="IniEndWizard" title="Welcome" position="fill" flags="wfNoBorder">
 		<panel name="WizardTemplate" />
-	</screen>
-
-	<screen name="WizardSummary" title="Welcome" position="fill" flags="wfNoBorder">
-		<widget name="text" position="0,0" size="1280,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Orange" transparent="1" valign="center" />
 	</screen>
 
 <!-- Remote IP Tuner Scanner Wizard -->

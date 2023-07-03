@@ -271,7 +271,7 @@
 			progressColourSeen="0x00ffc71d" progressColourSeenSelected="000xffc71d" progressSize="50,11"
 			spaceLeft="5" spaceRight="10" textSeparator="20"
 			-->
-		<widget name="quickSelect" position="50,80" size="760,525" backgroundColor="TextBackground" font="SMSHelperFont;100" foregroundColor="FindCharacter" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="quickselect" position="50,80" size="760,525" backgroundColor="TextBackground" font="SMSHelperFont;100" foregroundColor="FindCharacter" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget name="waiting" position="50,80" size="760,525" backgroundColor="TextBackground" font="MovieSelectionFont;25" foregroundColor="TextWaiting" halign="center" transparent="1" valign="center" zPosition="+2" />
 		<widget name="numFolders" position="50,605" size="220,25" font="InfoOtherFont;20" foregroundColor="InfoDiskStats" transparent="1" />
 		<widget name="numFiles" position="50,630" size="220,25" font="InfoOtherFont;20" foregroundColor="InfoDiskStats" transparent="1" />

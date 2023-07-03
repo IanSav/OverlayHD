@@ -239,6 +239,7 @@
 		<color name="MenuBackground" value="ScreenBackground" />
 		<color name="MenuDisabled" value="Grey" />
 		<color name="MenuSelected" value="DodgerBlue" />
+		<color name="MenuSelectedMove" value="MediumBlue" />
 		<color name="MenuText" value="White" />
 		<color name="MenuTextSelected" value="White" />
 
@@ -467,6 +468,7 @@
 		-->
 		<parameter name="PlayListIcon" value="15,5,16,16" />
 		<parameter name="PlayListName" value="40,0,1000,25" />
+		<!-- No longer required in the new PluginBrowser as it is now skinable!
 		<parameter name="PluginBrowserName" value="120,5,25" />
 		<parameter name="PluginBrowserDescr" value="140,28,25" />
 		<parameter name="PluginBrowserIcon" value="10,5,100,40" />
@@ -474,6 +476,7 @@
 		<parameter name="PluginBrowserDownloadName" value="70,2,25" />
 		<parameter name="PluginBrowserDownloadDescr" value="90,28,25" />
 		<parameter name="PluginBrowserDownloadIcon" value="5,0,60,50" />
+		-->
 		<!--
 		<parameter name="ServiceInfo" value="0,0,450,50" />
 		<parameter name="ServiceInfoLeft" value="0,0,450,45" />
@@ -604,9 +607,9 @@
 		<setup key="ParentalControl" image="menus/parental_control_setup.png" />
 		<setup key="Playback" image="menus/tv_live.png" />
 		<setup key="PluginBrowser" image="menus/plugins.png" />
-		<setup key="PowerTimer" image="menus/timer.png" />
+		<setup key="PowerTimer" image="menus/timer_setup.png" />
 		<setup key="Recording" image="menus/tv_live.png" />
-		<setup key="RecordTimer" image="menus/timer.png" />
+		<setup key="RecordTimer" image="menus/timer_setup.png" />
 		<setup key="RFModulator" image="menus/setup.png" />
 		<setup key="satconfig" image="menus/setup.png" />
 		<setup key="SleepTimer" image="menus/sleeptimer.png" />
@@ -651,7 +654,7 @@
 		<configList entryFont="MenuFont;25" valueFont="MenuFont;25" />
 		<label font="TextFont;20" />
 		<listbox enableWrapAround="1" font="MenuFont;25" scrollbarBorderWidth="1" scrollbarMode="showOnDemand" scrollbarOffset="0" scrollbarScroll="byLine" scrollbarWidth="10" />
-		<scrolllabel scrollbarBorderWidth="1" scrollbarMode="showOnDemand" scrollbarOffset="10" scrollbarScroll="byLine" scrollbarWidth="10" />
+		<scrolllabel scrollbarBorderWidth="1" scrollbarMode="showOnDemand" scrollbarOffset="0" scrollbarScroll="byLine" scrollbarWidth="10" />
 		<slider borderWidth="1" />
 		<stringList textPadding="15,0" />
 		<borderset name="bsWindow">
