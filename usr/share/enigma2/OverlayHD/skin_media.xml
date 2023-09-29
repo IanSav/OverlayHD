@@ -168,7 +168,7 @@
 		<widget name="pic" position="30,30" size="1220,660" alphatest="blend" zPosition="+1" />
 		<widget name="point" position="20,22" size="20,20" pixmap="icons/record.png" alphatest="blend" transparent="1" zPosition="+2" />
 		<widget name="play_icon" position="40,22" size="20,20" pixmap="icons/ico_mp_play.png" alphatest="blend" transparent="1" zPosition="+2" />
-		<widget source="file" render="Label" position="60,20" size="1170,25" borderColor="PictureLabelBorder" borderWidth="1" font="Regular;20" foregroundColor="PictureLabel" noWrap="1" transparent="1" zPosition="+2" />
+		<widget source="file" render="Label" position="60,20" size="1170,25" font="Regular;20" foregroundColor="PictureLabel" noWrap="1" textBorderColor="PictureLabelBorder" textBorderWidth="1" transparent="1" zPosition="+2" />
 	</screen> -->
 
 	<screen name="Pic_Exif" title="Picture Information" position="fill" backgroundColor="PictureBackground" flags="wfNoBorder">

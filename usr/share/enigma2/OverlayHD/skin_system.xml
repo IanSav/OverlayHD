@@ -712,7 +712,7 @@ except Exception:
 		<widget source="name" render="Label" position="400,80" size="830,35" font="TextFont;25" />
 		<widget source="task" render="Label" position="420,115" size="810,35" font="TextFont;25" />
 		<widget source="progress" render="Progress" position="420,160" size="810,35" backgroundColor="#254f7497" borderWidth="2" />
-		<widget source="progress" render="Label" position="420,160" size="810,35" borderColor="Black" borderWidth="2" font="TextFont;25" foregroundColor="Gold" halign="center" transparent="1" valign="center" zPosition="+1">
+		<widget source="progress" render="Label" position="420,160" size="810,35" font="TextFont;25" foregroundColor="Gold" halign="center" textBorderColor="Black" textBorderWidth="2" transparent="1" valign="center" zPosition="+1">
 			<convert type="ProgressToText" />
 		</widget>
 		<widget source="status" render="Label" position="420,205" size="810,35" font="TextFont;25" />
@@ -730,7 +730,7 @@ except Exception:
 		<widget source="job_name" render="Label" position="400,80" size="830,35" font="TextFont;25" />
 		<widget source="job_task" render="Label" position="420,115" size="810,35" font="TextFont;25" />
 		<widget source="job_progress" render="Progress" position="420,160" size="810,35" backgroundColor="#254f7497" borderWidth="2" />
-		<widget source="job_progress" render="Label" position="420,160" size="810,35" borderColor="Black" borderWidth="2" font="TextFont;25" foregroundColor="Gold" halign="center" transparent="1" valign="center" zPosition="+1">
+		<widget source="job_progress" render="Label" position="420,160" size="810,35" font="TextFont;25" foregroundColor="Gold" halign="center" textBorderColor="Black" textBorderWidth="2" transparent="1" valign="center" zPosition="+1">
 			<convert type="ProgressToText" />
 		</widget>
 		<widget source="job_status" render="Label" position="420,205" size="810,35" font="TextFont;25" />

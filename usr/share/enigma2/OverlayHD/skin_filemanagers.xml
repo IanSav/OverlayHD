@@ -86,7 +86,7 @@
 		<widget name="listright" position="650,165" size="580,450" backgroundColor="TextBackground" backgroundColorSelected="MenuSelected" foregroundColor="Text" foregroundColorSelected="MenuTextSelected" />
 		<widget name="sortright" position="650,630" size="580,25" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="TextWaiting" halign="center" valign="center" />
 		<widget name="quickselect" position="50,165" size="580,450" font="Regular;100" foregroundColor="TextWaiting" halign="center" transparent="1" valign="center" zPosition="+1" />
-		<widget name="status" position="50,620" size="1180,35" font="Regular;25" backgroundColor="TextWaiting" borderColor="Black" borderWidth="2" foregroundColor="White" halign="center" valign="center" zPosition="+1" />
+		<widget name="status" position="50,620" size="1180,35" font="Regular;25" backgroundColor="TextWaiting" foregroundColor="White" halign="center" textBorderColor="Black" textBorderWidth="2" valign="center" zPosition="+1" />
 	</screen>
 
 	<screen name="FileCommanderContextMenu" title="File Commander - Context Menu" position="fill" flags="wfNoBorder">
@@ -122,11 +122,11 @@
 	<screen name="FileCommanderImageViewer" title="File Commander Image Viewer" position="fill" flags="wfNoBorder">
 		<eLabel position="fill" backgroundColor="Black" />
 		<widget name="image" position="0,0" size="1280,720" alphatest="on" zPosition="+1" />
-		<widget source="message" render="Label" position="10,685" size="1210,25" borderColor="Black" borderWidth="2" font="TextFont;20" foregroundColor="TextWaiting" noWrap="1" transparent="1" valign="bottom" zPosition="+2" />
+		<widget source="message" render="Label" position="10,685" size="1210,25" font="TextFont;20" foregroundColor="TextWaiting" noWrap="1" textBorderColor="Black" textBorderWidth="2" transparent="1" valign="bottom" zPosition="+2" />
 		<widget name="status" position="1220,690" size="20,20" pixmap="icons/record.png" alphatest="blend" scale="1" zPosition="+2" />
 		<widget name="icon" position="1250,690" size="20,20" pixmap="icons/ico_mp_play.png" alphatest="blend" scale="1" zPosition="+2" />
-		<widget name="infolabels" position="10,10" size="250,600" borderColor="Black" borderWidth="2" font="TextFont;20" foregroundColor="TextWaiting" halign="right" transparent="1" zPosition="+3" />
-		<widget name="infodata" position="270,10" size="1000,600" borderColor="Black" borderWidth="2" font="TextFont;20" foregroundColor="TextWaiting" halign="left" transparent="1" zPosition="+3" />
+		<widget name="infolabels" position="10,10" size="250,600" font="TextFont;20" foregroundColor="TextWaiting" halign="right" textBorderColor="Black" textBorderWidth="2" transparent="1" zPosition="+3" />
+		<widget name="infodata" position="270,10" size="1000,600" font="TextFont;20" foregroundColor="TextWaiting" halign="left" textBorderColor="Black" textBorderWidth="2" transparent="1" zPosition="+3" />
 	</screen>
 
 	<screen name="FileCommanderTextEditor" title="File Commander Text Editor" position="fill" flags="wfNoBorder">
