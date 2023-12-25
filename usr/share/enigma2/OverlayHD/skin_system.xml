@@ -224,41 +224,6 @@
 
 	<screen name="InformationEnigma2" title="Information(Skin)" position="fill" flags="wfNoBorder">
 		<panel name="Menu" />
-		<!--
-		<widget name="menuimage" position="50,100" size="300,500" alphatest="blend" conditional="menuimage" transparent="1" />
-		<widget source="menu" render="Listbox" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
-			<convert type="TemplatedMultiContent">
-				{
-				"template":
-					[
-					MultiContentEntryText(pos=(20, 0), size=(810, 35), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=0)
-					],
-				"fonts": [parseFont("MenuFont;25")],
-				"itemHeight": 35
-				}
-			</convert>
-		</widget>
-		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_info.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
-			<convert type="MenuEntryCompare">receiver_info_screen</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_backup.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
-			<convert type="MenuEntryCompare">device_info_screen</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tasks_browser.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
-			<convert type="MenuEntryCompare">memory_info_screen</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_source_radio.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
-			<convert type="MenuEntryCompare">network_info_screen</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="menu" render="Pixmap" pixmap="menus/mainmenu_tv_live.png" position="50,100" size="300,500" alphatest="blend" transparent="1">
-			<convert type="MenuEntryCompare">service_info_screen</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		-->
 	</screen>
 
 	<!-- System Information (MENU > Information > System Information) Screen -->
@@ -470,13 +435,6 @@
 
 	<screen name="SystemMemoryInfoEnigma2" title="Memory Information" position="fill" flags="wfNoBorder">
 		<widget name="AboutScrollLabel" position="400,80" size="830,400" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" />
-	</screen>
-
-	<!-- Network Information (MENU > Information > Network Information) Screen -->
-
-	<screen name="NetworkInformation" title="Network Information" position="fill" flags="wfNoBorder">
-		<panel name="Information" />
-		<ePixmap pixmap="menus/browser.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 	</screen>
 
 	<!-- Network Information (MENU > Information > Network) Screen -->
