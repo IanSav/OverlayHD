@@ -499,6 +499,28 @@
 		-->
 	</parameters>
 
+	<screens>
+		<!-- <screen key="default" image="" /> -->
+		<screen key="BenchmarkInformation" image="menus/information.png" />
+		<screen key="BuildInformation" image="menus/information.png" />
+		<!-- <screen key="CommitInformation" image="" /> -->
+		<!-- <screen key="DebugInformation" image="" /> -->
+		<screen key="DeviceInformation" image="menus/backup.png" />
+		<screen key="DistributionInformation" image="menus/information.png" />
+		<screen key="GeolocationInformation" image="menus/information.png" />
+		<screen key="MemoryInformation" image="menus/browser.png" />
+		<screen key="MultiBootInformation" image="menus/information.png" />
+		<screen key="NetworkInformation" image="menus/radio.png" />
+		<screen key="PictureInformation" image="menus/information.png" />
+		<screen key="ReceiverInformation" image="menus/information.png" />
+		<screen key="ServiceInformation" image="menus/tv_live.png" />
+		<screen key="StorageInformation" image="menus/information.png" />
+		<screen key="StreamingInformation" image="menus/information.png" />
+		<!-- <screen key="SystemInformation" image="" /> -->
+		<screen key="TranslationInformation" image="menus/information.png" />
+		<screen key="TunerInformation" image="menus/information.png" />
+	</screens>
+
 	<menus>
 		<menu key="default" image="menus/menu.png" />
 		<menu key="about_screen" image="menus/standby.png" />
@@ -631,16 +653,9 @@
 		<color name="WindowTitleBackground" color="ScreenBackground" />
 		<color name="WindowTitleForeground" color="Gold" />
 		<color name="Background" color="ScreenBackground" />
-		<color name="LabelForeground" color="Text" /><!-- Deprecated -->
 		<color name="Foreground" color="Text" />
 		<color name="ListboxBackground" color="MenuBackground" />
 		<color name="ListboxForeground" color="MenuText" />
-		<color name="ListboxSelectedBackground" color="MenuSelected" /><!-- Deprecated -->
-		<color name="ListboxSelectedForeground" color="MenuTextSelected" /><!-- Deprecated -->
-		<color name="ListboxMarkedBackground" color="MenuBackground" /><!-- Deprecated -->
-		<color name="ListboxMarkedForeground" color="MenuText" /><!-- Deprecated -->
-		<color name="ListboxMarkedAndSelectedBackground" color="MenuSelected" /><!-- Deprecated -->
-		<color name="ListboxMarkedAndSelectedForeground" color="MenuTextSelected" /><!-- Deprecated -->
 		<color name="ListboxBackgroundSelected" color="MenuSelected" />
 		<color name="ListboxForegroundSelected" color="MenuTextSelected" />
 		<color name="ListboxBackgroundMarked" color="MenuBackground" />
@@ -677,7 +692,7 @@
 
 	<windowstyle id="1" type="skinned">
 		<color name="Background" color="Black" />
-		<color name="LabelForeground" color="White" />
+		<color name="Foreground" color="White" />
 		<color name="ListboxBackground" color="Black" />
 		<color name="ListboxForeground" color="White" />
 		<color name="ListboxSelectedBackground" color="Black" />
@@ -706,6 +721,7 @@
 		<widget source="ScreenPath" render="Label" position="360,5" size="870,20" conditional="ScreenPath" font="TitleFont;17" foregroundColor="BannerTitle" halign="right" textBorderColor="BannerBorder" textBorderWidth="1" transparent="1" />
 		<widget source="Title" render="Label" position="360,30" size="870,35" font="TitleFont;25" foregroundColor="BannerTitle" halign="right" noWrap="1" textBorderColor="BannerBorder" textBorderWidth="1" transparent="1" />
 		<eLabel position="50,65" size="1180,2" backgroundColor="Pinstripe" />
+		<widget name="Image" position="50,80" size="250,250" alphatest="blend" conditional="Image" scaleFlags="scaleLeftTop" transparent="1" />
 		<eLabel position="50,660" size="1180,2" backgroundColor="Pinstripe" />
 		<widget source="key_menu" render="Pixmap" pixmap="buttons/button_block_menu.png" position="50,670" size="50,35" alphatest="blend" objectTypes="key_menu,StaticText" transparent="1">
 			<convert type="ConditionalShowHide" />
@@ -2759,7 +2775,7 @@ except Exception:
 
 <!-- Choice Box Pop Up -->
 
-	<screen name="ChoiceBox" position="center,center" size="700,560" zPosition="+90">
+	<screen name="ChoiceBox" title="Choose..." position="center,center" size="700,560" zPosition="+90">
 		<widget name="text" position="0,0" size="700,35" backgroundColor="TextBackground" conditional="text" font="DescriptionFont;25" foregroundColor="Text" />
 		<widget name="list" position="0,35" size="700,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" />
 		<applet type="onLayoutFinish">
