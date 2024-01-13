@@ -2692,10 +2692,6 @@
 <!-- Message Box Pop Up -->
 
 	<screen name="MessageBox" title="Message..." position="center,center" size="700,495" zPosition="+90">
-		<widget name="ErrorPixmap" position="0,0" size="53,53" pixmap="icons/input_error.png" alphatest="blend" conditional="ErrorPixmap" scale="1" transparent="1" />
-		<widget name="QuestionPixmap" position="0,0" size="53,53" pixmap="icons/input_question.png" alphatest="blend" conditional="QuestionPixmap" scale="1" transparent="1" />
-		<widget name="InfoPixmap" position="0,0" size="53,53" pixmap="icons/input_info.png" alphatest="blend" conditional="InfoPixmap" scale="1" transparent="1" />
-		<widget name="WarningPixmap" position="0,0" size="53,53" pixmap="icons/input_warning.png" alphatest="blend" conditional="WarningPixmap" scale="1" transparent="1" />
 		<widget name="icon" position="0,0" size="53,53" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" alphatest="blend" conditional="icon" scale="1" transparent="1" zPosition="+1" />
 		<widget name="text" position="70,0" size="630,50" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" valign="center" />
 		<widget name="list" position="0,75" size="700,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="list" font="MenuFont;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" />
@@ -2707,18 +2703,14 @@ def getScreenObjectSize(data, screenObject, maxWidth, maxHeight):
 	font = screenObject.instance.getFont()
 	size = eSize(maxWidth, maxHeight)
 	width = max([eLabel.calculateTextSize(font, line[0], size, False).width() for line in data]) if data else 0
+	# width += data[0][1][1]  # Text indent to allow for leading icon space.
 	height = max([eLabel.calculateTextSize(font, line[0], size, False).height() for line in data]) if data else 0
 	return (width, height)
 
 try:
 	from enigma import ePoint, eSize, getDesktop
 	screenSize = (getDesktop(0).size().width(), getDesktop(0).size().height())
-	icon = None
-	if hasattr(self, "QuestionPixmap"):
-		icon = self["QuestionPixmap"]
 	if hasattr(self, "icon"):
-		icon = self["icon"]
-	if icon:
 		iconPos = (icon.instance.position().x(), icon.instance.position().y())
 		iconSize = (icon.instance.size().width(), icon.instance.size().height())
 	else:
@@ -2764,8 +2756,8 @@ try:
 		height = newTextSize[1]
 	self.instance.resize(eSize(width, height))
 	self.instance.move(ePoint((screenSize[0] - width) // 2, (screenSize[1] - height) // 2))
-except Exception:
-	pass
+except Exception as err:
+	print(f"[MessageBoxSkin] DEBUG: The skin applet 'onLayoutFinish' crashed!  ({err})")
 		</applet>
 	</screen>
 
@@ -2775,63 +2767,85 @@ except Exception:
 
 <!-- Choice Box Pop Up -->
 
-	<screen name="ChoiceBox" title="Choose..." position="center,center" size="700,560" zPosition="+90">
-		<widget name="text" position="0,0" size="700,35" backgroundColor="TextBackground" conditional="text" font="DescriptionFont;25" foregroundColor="Text" />
-		<widget name="list" position="0,35" size="700,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" />
+	<screen name="ChoiceBox" title="Choose..." position="center,center" size="700,605" zPosition="+90">
+		<widget name="text" position="0,0" size="700,70" backgroundColor="TextBackground" conditional="text" font="DescriptionFont;25" foregroundColor="Text" />
+		<widget name="list" position="0,80" size="700,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" />
 		<applet type="onLayoutFinish">
-# [ChoiceBox] List Format:
-# [(('Text', 'Data'), (0, 50, 0, 780, 35, 0, 17, 'Text'))]
-# [(('Text', 'Data'), (Arg Index, X, Y, W, H, Font, Flags, 'Text'))]
-
-def getScreenObjectSize(data, font, maxWidth, maxHeight):
+def getScreenObjectSize(data, font, maxWidth, maxHeight):  # 625,525 235,140
 	from enigma import eLabel, eSize
 	if isinstance(data, str):
 		data = [((data, None), (0, 0, 0))]
 	size = eSize(maxWidth, maxHeight)
-	width = max([eLabel.calculateTextSize(font, line[0][0], size, False).width() for line in data]) if data else 0
-	width += data[0][1][1]  # Text indent to allow for leading icon space.
-	height = max([eLabel.calculateTextSize(font, line[0][0], size, False).height() for line in data]) if data else 0
+	width = max([eLabel.calculateTextSize(font, line[0][0], size, False).width() for line in data if line[0]]) if data else 0
+	height = max([eLabel.calculateTextSize(font, line[0][0], size, False).height() for line in data if line[0]]) if data else 0
 	return (width, height)
 
 try:
 	from enigma import ePoint, eSize, getDesktop
 	from skin import parseFont
+	textWidget = self["text"]
+	listWidget = self["list"]
+	textFont = parseFont("DescriptionFont;25")
+	listFont = parseFont("ChoiceList;25")
+	#
 	screenSize = (getDesktop(0).size().width(), getDesktop(0).size().height())
-	listPos = (self["list"].instance.position().x(), self["list"].instance.position().y())
-	listSize = (self["list"].instance.size().width(), self["list"].instance.size().height())
-	scrollbarWidth = self["list"].instance.getScrollbarOffset() + self["list"].instance.getScrollbarWidth()
-	scrollbarMode = self["list"].instance.getScrollbarMode()
-	itemHeight = self["list"].l.getItemSize().height()
-	skinLines = listSize[1] // itemHeight
-	listLines = len(self.list)
-	font = parseFont("ChoiceList;25")
-	newListWidth, newListHeight = getScreenObjectSize(self.list, font, screenSize[0], screenSize[1])
-	newListWidth = max(listSize[0], min(screenSize[0] - 100, newListWidth + (scrollbarWidth if listLines &gt; skinLines or scrollbarMode == 1 else 0)))
-	newListSize = (newListWidth, itemHeight * (skinLines if listLines &gt; skinLines else listLines))
-	self["list"].instance.resize(eSize(newListSize[0], newListSize[1]))
-	textAdjust = max(0, newListSize[0] - listSize[0])
-	textPos = (self["text"].instance.position().x(), self["text"].instance.position().y())
-	textSize = (self["text"].instance.size().width(), self["text"].instance.size().height())
-	font = parseFont("DescriptionFont;25")
-	if self.text:
-		maxWidth = textSize[0] + textAdjust
-		newTextWidth, newTextHeight = getScreenObjectSize(self.text, font, maxWidth, screenSize[1])
-		if newTextHeight &gt; screenSize[1] - 100:
-			maxWidth += 300
-			newTextWidth, newTextHeight = getScreenObjectSize(self.text, font, maxWidth, screenSize[1])
-		newTextSize = (max(textSize[0], maxWidth), max(textSize[1], newTextHeight))
-		self["text"].instance.resize(eSize(newTextSize[0], newTextSize[1]))
-		spacer = listPos[1] - textPos[1] - textSize[1]
-		self["list"].instance.move(ePoint(listPos[0], textPos[1] + newTextSize[1] + spacer))
-		height = newTextSize[1] + newListSize[1] + spacer
+	# windowPos = (self.instance.position().x(), self.instance.position().y())  # Not actually required other than debug logging!
+	windowSize = (self.instance.csize().width(), self.instance.csize().height())
+	textPos = (textWidget.instance.position().x(), textWidget.instance.position().y())
+	textSize = (textWidget.instance.size().width(), textWidget.instance.size().height())
+	textMargin = (textPos[0], windowSize[0] - textSize[0] - textPos[0])
+	listPos = (listWidget.instance.position().x(), listWidget.instance.position().y())
+	listSize = (listWidget.instance.size().width(), listWidget.instance.size().height())
+	listMargin = (listPos[0], windowSize[0] - listSize[0] - listPos[0])
+	textFirst = textPos[1] &lt; listPos[1]
+	# print(f"[ChoiceBoxSkin] Window DEBUG: Position=({windowPos[0]},{windowPos[1]}), Size=({windowSize[0]},{windowSize[1]}).")
+	# print(f"[ChoiceBoxSkin] Text DEBUG: Position=({textPos[0]},{textPos[1]}), Size=({textSize[0]},{textSize[1]}), Margin=({textMargin[0]},{textMargin[1]}).")
+	# print(f"[ChoiceBoxSkin] List DEBUG: Position=({listPos[0]},{listPos[1]}), Size=({listSize[0]},{listSize[1]}), Margin=({listMargin[0]},{listMargin[1]}).")
+	if textFirst:
+		spacerTop = textPos[1]
+		spacerMiddle = listPos[1] - textPos[1] - textSize[1]
+		spacerBottom = windowSize[1] - listPos[1] - listSize[1]
 	else:
-		self["list"].instance.move(ePoint(listPos[0], textPos[1]))
-		height = newListSize[1]
-	width = newListSize[0]
+		spacerTop = listPos[1]
+		spacerMiddle = textPos[1] - listPos[1] - listSize[1]
+		spacerBottom = windowSize[1] - textPos[1] - textSize[1]
+	# print(f"[ChoiceBoxSkin] Spacer DEBUG: Top={spacerTop}, Middle={spacerMiddle}, Bottom={spacerBottom}.")
+	scrollbarWidth = listWidget.instance.getScrollbarOffset() + listWidget.instance.getScrollbarWidth()
+	scrollbarMode = listWidget.instance.getScrollbarMode()
+	itemHeight = listWidget.l.getItemSize().height()
+	skinLines = listSize[1] // itemHeight
+	listData = listWidget.getList()
+	listLines = len(listData)
+	listWidth, listHeight = getScreenObjectSize(listData, listFont, screenSize[0] - 100, itemHeight)
+	listWidth = max(listSize[0], min(screenSize[0] - 100, listWidth + (scrollbarWidth if listLines &gt; skinLines or scrollbarMode == 1 else 0)))
+	listHeight = itemHeight * (skinLines if listLines &gt; skinLines else listLines)
+	# print(f"[ChoiceBoxSkin] Lines DEBUG: itemHeight={itemHeight}, skinLines={skinLines}, listLines={listLines}, scrollbarWidth={scrollbarWidth}, scrollbarMode={scrollbarMode}, listWidth={listWidth}, listHeight={listHeight}.")
+	textData = textWidget.getText()
+	if textData:
+		textWidth, textHeight = getScreenObjectSize(textData, textFont, listWidth, windowSize[1])
+		if textFirst:
+			textTop = spacerTop
+			listTop = spacerTop + textHeight + spacerMiddle
+		else:
+			listTop = spacerTop
+			textTop = spacerTop + listHeight + spacerMiddle
+	else:
+		textWidth, textHeight = (0, 0)
+		spacerMiddle = 0
+		textTop = 0
+		listTop = spacerTop
+	# print(f"[ChoiceBoxSkin] NewText DEBUG: Position=({textPos[0]},{textTop}), Size=({textWidth},{textHeight})")
+	textWidget.instance.resize(eSize(textWidth, textHeight))
+	textWidget.instance.move(ePoint(textPos[0], textTop))
+	# print(f"[ChoiceBoxSkin] NewList DEBUG: Position=({listPos[0]},{listTop}), Size=({listWidth},{listHeight})")
+	listWidget.instance.resize(eSize(listWidth, listHeight))
+	listWidget.instance.move(ePoint(listMargin[0], listTop))
+	width = listMargin[0] + listWidth + listMargin[1]
+	height = spacerTop + textHeight + spacerMiddle + listHeight + spacerBottom
 	self.instance.resize(eSize(width, height))
 	self.instance.move(ePoint((screenSize[0] - width) // 2, (screenSize[1] - height) // 2))
-except Exception:
-	pass
+except Exception as err:
+	print(f"[ChoiceBoxSkin] DEBUG: The skin applet 'onLayoutFinish' crashed!  ({err})")
 		</applet>
 	</screen>
 
@@ -2847,10 +2861,11 @@ except Exception:
 <!-- Text Box Pop Up -->
 
 	<screen name="TextBox" title="Message..." position="center,center" size="700,400" zPosition="+90">
-		<widget name="text" position="5,5" size="690,390" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" />
+		<widget name="text" position="0,0" size="700,400" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="Text" />
 		<applet type="onLayoutFinish">
-def getScreenObjectSize(data, screenObject, maxWidth, maxHeight):
+def getScreenObjectSize(screenObject, maxWidth, maxHeight):
 	from enigma import eLabel, eSize
+	data = screenObject.getText()
 	font = screenObject.instance.getFont()
 	size = eSize(maxWidth, maxHeight)
 	width = eLabel.calculateTextSize(font, data, size, False).width()
@@ -2859,18 +2874,23 @@ def getScreenObjectSize(data, screenObject, maxWidth, maxHeight):
 
 try:
 	from enigma import ePoint, eSize, getDesktop
+	textWidget = self["text"]
 	screenSize = (getDesktop(0).size().width(), getDesktop(0).size().height())
-	textPos = (self["text"].instance.position().x(), self["text"].instance.position().y())
-	textSize = (self["text"].instance.size().width(), self["text"].instance.size().height())
-	newTextWidth, newTextHeight = getScreenObjectSize(self["text".getText(), self["text"], textSize[0], textSize[1])
-	if textSize[1] &gt; newTextHeight:
-		self["text"].instance.resize(eSize(textSize[0], newTextHeight))
-		width = (textPos[0] * 2) + textSize[0]
-		height += textPos[1] * 2
+	windowSize = (self.instance.csize().width(), self.instance.csize().height())
+	textPos = (textWidget.instance.position().x(), textWidget.instance.position().y())
+	textSize = (textWidget.instance.size().width(), textWidget.instance.size().height())
+	textMargin = (textPos[0], windowSize[0] - textSize[0] - textPos[0])
+	spacerTop = textPos[1]
+	spacerBottom = windowSize[1] - textPos[1] - textSize[1]
+	textWidth, textHeight = getScreenObjectSize(textWidget, textSize[0], textSize[1])
+	if textSize[1] &gt; textHeight:
+		textWidget.instance.resize(eSize(textWidth, textHeight))
+		width = textMargin[0] + textWidth + textMargin[1]
+		height = spacerTop + textHeight + spacerBottom
 		self.instance.resize(eSize(width, height))
 		self.instance.move(ePoint((screenSize[0] - width) // 2, (screenSize[1] - height) // 2))
-except Exception:
-	pass
+except Exception as err:
+	print(f"[TextBoxSkin] DEBUG: The skin applet 'onLayoutFinish' crashed!  ({err})")
 		</applet>
 	</screen>
 
