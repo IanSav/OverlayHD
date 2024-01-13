@@ -229,6 +229,37 @@
 		<widget name="list" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" />
 	</screen>
 
+<!-- Subservice -->
+
+	<!-- Subservice Selection -->
+
+	<!--
+	<screen name="SubserviceSelection" title="Subservices" position="fill" flags="wfNoBorder">
+		<eLabel text="Subservices" position="675,140" size="485,35" font="Regular;28" transparent="1" zPosition="2" />
+		<eLabel position="665,180" size="450,2" backgroundColor="White" zPosition="2" />
+		<widget name="subservices" position="650,195" size="510,400" transparent="1" zPosition="2" />
+	</screen>
+	-->
+
+	<!-- Subservice Quickzap -->
+
+	<!--
+	<screen name="SubservicesQuickzap" title="Subservices" position="0,90" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+		<ePixmap pixmap="images/infobar.png" position="0,0" size="1280,720" zPosition="-1" />
+		<widget source="global.CurrentTime" render="Label" position="75,485" size="95,35" backgroundColor="#41000000" font="Regular;30" halign="center" transparent="1" valign="bottom">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<ePixmap pixmap="icons/picon_default.png" position="70,532" size="70,60" zPosition="2" />
+		<widget name="CurrentSubserviceNumber" position="185,485" size="50,34" backgroundColor="#33294a6b" font="Regular;30" halign="left" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="bottom" zPosition="2" />
+		<widget source="session.CurrentService" render="Label" position="235,485" size="600,34" backgroundColor="#33294a6b" font="Regular;30" halign="left" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="bottom" zPosition="2">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="session.RecordState" render="Pixmap" pixmap="icons/icon_rec.png" position="1150,556" size="48,48" zPosition="1">
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+	</screen>
+	-->
+
 <!-- HbbTV -->
 
 	<screen name="HbbTVWindow" title="HbbTV Plugin" position="fill" backgroundColor="ScreenTransparent" flags="wfNoBorder" />
