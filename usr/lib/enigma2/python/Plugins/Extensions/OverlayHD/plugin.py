@@ -55,7 +55,7 @@ from Tools.BoundFunction import boundFunction
 from Tools.Directories import SCOPE_CONFIG, SCOPE_GUISKIN, SCOPE_MEDIA, SCOPE_PLUGIN, SCOPE_SKINS, fileReadXML, resolveFilename
 
 MODULE_NAME = __name__.split(".")[-1]
-PLUGIN_VERSION_NUMBER = "1.96"
+PLUGIN_VERSION_NUMBER = "1.97"
 
 DISPLAY_DISTRO = BoxInfo.getItem("displaydistro", "Enigma2")
 DISTRO = BoxInfo.getItem("distro", "enigma2").lower()
@@ -1216,7 +1216,7 @@ def applySpinner(spinner):
 def applyWindowStyle(widget, attribute, value):
 	desktop, screenID, domSkin, pathSkin, scope = windowStyles[0]
 	windowStyle = domSkin.find("windowstyle")
-	if windowStyle:
+	if windowStyle is not None:
 		for widget in windowStyle.findall(widget):
 			widget.set(attribute, value)
 
