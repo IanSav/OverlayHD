@@ -35,7 +35,6 @@
 
 	<screen name="HistoryZapSelector" title="History Zap" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/tv_zap_history.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget source="menu" render="Listbox" position="400,80" size="830,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<convert type="TemplatedMultiContent">
 				{
@@ -110,7 +109,7 @@
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="980,175" size="250,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" halign="right" noWrap="1" transparent="1">
 			<convert type="EventTime">Remaining</convert>
-			<convert type="RemainingToText">InMinutes</convert>
+			<convert type="RemainingToText">Default</convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="730,205" size="500,215" backgroundColor="InfoBackground" font="InfoDescriptionFont;20" foregroundColor="InfoDetailsNow" halign="block" transparent="1"><!-- size="526,270" -->
 			<convert type="EventName">FullDescription,Trimmed,NotSeparated</convert>
@@ -228,37 +227,6 @@
 		-->
 		<widget name="list" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" />
 	</screen>
-
-<!-- Subservice -->
-
-	<!-- Subservice Selection -->
-
-	<!--
-	<screen name="SubserviceSelection" title="Subservices" position="fill" flags="wfNoBorder">
-		<eLabel text="Subservices" position="675,140" size="485,35" font="Regular;28" transparent="1" zPosition="2" />
-		<eLabel position="665,180" size="450,2" backgroundColor="White" zPosition="2" />
-		<widget name="subservices" position="650,195" size="510,400" transparent="1" zPosition="2" />
-	</screen>
-	-->
-
-	<!-- Subservice Quickzap -->
-
-	<!--
-	<screen name="SubservicesQuickzap" title="Subservices" position="0,90" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
-		<ePixmap pixmap="images/infobar.png" position="0,0" size="1280,720" zPosition="-1" />
-		<widget source="global.CurrentTime" render="Label" position="75,485" size="95,35" backgroundColor="#41000000" font="Regular;30" halign="center" transparent="1" valign="bottom">
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<ePixmap pixmap="icons/picon_default.png" position="70,532" size="70,60" zPosition="2" />
-		<widget name="CurrentSubserviceNumber" position="185,485" size="50,34" backgroundColor="#33294a6b" font="Regular;30" halign="left" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="bottom" zPosition="2" />
-		<widget source="session.CurrentService" render="Label" position="235,485" size="600,34" backgroundColor="#33294a6b" font="Regular;30" halign="left" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="bottom" zPosition="2">
-			<convert type="ServiceName">Name</convert>
-		</widget>
-		<widget source="session.RecordState" render="Pixmap" pixmap="icons/icon_rec.png" position="1150,556" size="48,48" zPosition="1">
-			<convert type="ConditionalShowHide">Blink</convert>
-		</widget>
-	</screen>
-	-->
 
 <!-- HbbTV -->
 

@@ -508,6 +508,7 @@
 		<screen key="DeviceInformation" image="menus/backup.png" />
 		<screen key="DistributionInformation" image="menus/information.png" />
 		<screen key="GeolocationInformation" image="menus/information.png" />
+		<screen key="HistoryZapSelector" image="menus/tv_zap_history.png" />
 		<screen key="MemoryInformation" image="menus/browser.png" />
 		<screen key="MultiBootInformation" image="menus/information.png" />
 		<screen key="NetworkInformation" image="menus/radio.png" />

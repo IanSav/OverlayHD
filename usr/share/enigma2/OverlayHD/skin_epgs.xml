@@ -58,7 +58,7 @@
 		</widget>
 		<widget source="Event" render="Label" position="200,30" size="180,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" halign="right" noWrap="1" transparent="1">
 			<convert type="EventTime">Remaining</convert>
-			<convert type="RemainingToText">InMinutes</convert>
+			<convert type="RemainingToText">Default</convert>
 		</widget>
 		<widget source="Event" render="Pixmap" position="400,30" size="40,20" alphatest="blend">
 			<convert type="EventName">RatingIcon</convert>
@@ -101,7 +101,7 @@
 		</widget>
 		<widget source="Event" render="Label" position="200,30" size="180,25" backgroundColor="EPGBackground" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" halign="right" noWrap="1" transparent="1">
 			<convert type="EventTime">Remaining</convert>
-			<convert type="RemainingToText">InMinutes</convert>
+			<convert type="RemainingToText">Default</convert>
 		</widget>
 		<widget source="Event" render="Pixmap" position="400,30" size="40,20" alphatest="blend">
 			<convert type="EventName">RatingIcon</convert>
@@ -402,7 +402,7 @@
 	<screen name="RecordTimerQuestion" title="Timer" position="center,center" size="240,80" flags="wfNoBorder" zPosition="+4">
 		<widget source="Title" render="Label" position="0,0" size="0,0" font="TitleFont;25" foregroundColor="BannerTitle" transparent="1" />
 		<widget name="text" position="0,0" size="0,0" font="Regular;25" foregroundColor="BannerTitle" transparent="1" />
-		<widget name="list" position="5,5" size="230,70" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" />
+		<widget name="list" position="5,5" size="230,75" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" />
 	</screen>
 
 	<screen name="RecordTimerQuestion1" title="Timer" position="center,center" size="240,115" flags="wfNoBorder" zPosition="+4">
