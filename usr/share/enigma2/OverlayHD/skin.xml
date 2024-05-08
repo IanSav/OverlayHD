@@ -98,7 +98,7 @@
 		<color name="User8" value="#00000000" />
 		<color name="User9" value="#00000000" />
 		<color name="User0" value="#00000000" />
-
+		<!-- These are the color buttons definitions. -->
 		<color name="ButtonBack" value="#00313131" />
 		<color name="ButtonBlue" value="#0018188b" />
 		<color name="ButtonGreen" value="#001f771f" />
@@ -112,21 +112,20 @@
 		<color name="key_red" value="ButtonRed" />
 		<color name="key_text" value="White" />
 		<color name="key_yellow" value="ButtonYellow" />
-
+		<!-- Background colors. -->
 		<color name="ScreenBackground" value="#3f000000" />
 		<color name="ScreenSaverBackground" value="#19000000" />
 		<color name="ScreenTransparent" value="#ffffffff" />
 		<color name="MediaBackground" value="Black" />
 		<color name="StatusBackground" value="#ff000000" />
 		<color name="TransparentBackground" value="#ff000000" />
-
+		<!-- Skinable colors. -->
 		<color name="BannerBorder" value="Black" />
 		<color name="BannerClock" value="White" />
 		<color name="BannerClockBackground" value="ScreenBackground" />
 		<color name="BannerClockDate" value="LightBlue" />
 		<color name="BannerClockTime" value="White" />
 		<color name="BannerTitle" value="White" />
-
 		<color name="EPGBackground" value="Black" />
 		<color name="EPGGridBackground" value="Orange" />
 		<color name="EPGGridBorder" value="Black" />
@@ -176,7 +175,6 @@
 		<color name="EPGPIGZapBackgroundColorSelected" value="Green" />
 		<color name="EPGPIGZapForegroundColor" value="White" />
 		<color name="EPGPIGZapForegroundColorSelected" value="Black" />
-
 		<color name="FAVMarked" value="DullGreen" />
 		<color name="FAVMarkedBackground" value="ScreenBackground" />
 		<color name="FAVService" value="White" />
@@ -189,11 +187,8 @@
 		<color name="FindCharacter" value="Gold" />
 		<color name="FootnoteBackground" value="ScreenBackground" />
 		<color name="FootnoteText" value="LightBlue" />
-
 		<color name="GridBackground" value="#3f414a4c" />
-
 		<color name="HelpPress" value="Yellow" />
-
 		<color name="InfoBackground" value="ScreenBackground" />
 		<color name="InfobarMediaBackground" value="ScreenBackground" />
 		<color name="InfobarTVBackground" value="ScreenBackground" />
@@ -230,21 +225,18 @@
 		<color name="InfoTimesNext" value="Grey" />
 		<color name="InfoTimesNow" value="Grey" />
 		<color name="InfoTimesSelected" value="Silver" />
-
 		<color name="KeyBack" value="ButtonBack" />
 		<color name="KeyBlue" value="ButtonBlue" />
 		<color name="KeyGreen" value="ButtonGreen" />
 		<color name="KeyRed" value="ButtonRed" />
 		<color name="KeyText" value="White" />
 		<color name="KeyYellow" value="ButtonYellow" />
-
 		<color name="MenuBackground" value="ScreenBackground" />
 		<color name="MenuDisabled" value="Grey" />
 		<color name="MenuSelected" value="DodgerBlue" />
 		<color name="MenuSelectedMove" value="OrangeRed" />
 		<color name="MenuText" value="White" />
 		<color name="MenuTextSelected" value="White" />
-
 		<color name="PictureBackground" value="ScreenBackground" />
 		<color name="PictureLabel" value="DullGreen" />
 		<color name="PictureLabelBorder" value="Black" />
@@ -255,15 +247,12 @@
 		<color name="ProgressBackground" value="DeepGrey" />
 		<color name="ProgressBorder" value="Grey" />
 		<color name="ProgressColor" value="White" />
-
 		<color name="Resolution" value="Silver" />
 		<color name="ResolutionBackground" value="ScreenBackground" />
-
 		<color name="Scrollbar" value="Gainsboro" />
 		<color name="SMSHelperBackground" value="ScreenBackground" />
 		<color name="SMSHelperLabel" value="Grey" />
 		<color name="SMSHelperText" value="White" />
-
 		<color name="Text" value="White" />
 		<color name="TextBackground" value="ScreenBackground" />
 		<color name="TextDisabled" value="DimGrey" />
@@ -284,15 +273,12 @@
 		<color name="TunerIdle" value="DimGrey" />
 		<color name="TunerLabel" value="PowderBlue" />
 		<color name="TunerRecording" value="Orange" />
-
 		<color name="VolumeBackground" value="Black" />
 		<color name="VolumeColor" value="LightBlue" />
-
 		<color name="WeatherData" value="White" />
 		<color name="WeatherLabel" value="Grey" />
 		<color name="WeatherProvider" value="Orange" />
-
-		<!-- Legacy Colors Yet To Be Updated / Integrated -->
+		<!-- Legacy colors yet to be updated/integrated. -->
 		<color name="background" value="#3f000000" />
 		<color name="black" value="Black" />
 		<color name="blue" value="Blue" />
@@ -312,8 +298,7 @@
 		<color name="window-bg" value="#00333333" />
 		<color name="window-fg" value="#00999999" />
 		<color name="yellow" value="Yellow" />
-
-		<!-- Unused colors - Kept here in case they are needed...
+		<!-- Unused colors - kept here in case they are needed.
 		<color name="abackground" value="#1300070d" />
 		<color name="background2" value="#25000000" />
 		<color name="border1" value="#004872a0" />	# DarkerLightBlue
@@ -368,9 +353,9 @@
 		<font name="RobotoBoldItalic" filename="fonts/Roboto-BoldItalic.ttf" scale="95" />
 		<font name="ValisEnigma" filename="fonts/valis_enigma.ttf" scale="98" />
 		<font name="VeraSansMono" filename="fonts/tuxtxt.ttf" scale="100" />
-
+		<!-- Replacement fonts. -->
 		<font name="Replacement" filename="fonts/ae_AlMateen.ttf" replacement="1" scale="100" />
-
+		<!-- Skinable fonts. -->
 		<alias name="Body" font="NemesisFlatline" size="20" height="25" width="18" />
 		<alias name="Bold" font="RobotoBlack" size="20" height="25" width="18" />
 		<alias name="Boldit" font="RobotoBlackItalic" size="20" height="25" width="18" />
