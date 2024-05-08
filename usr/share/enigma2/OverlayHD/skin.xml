@@ -487,7 +487,9 @@
 	<screens>
 		<!-- <screen key="default" image="" /> -->
 		<screen key="BenchmarkInformation" image="menus/information.png" />
+		<screen key="BouquetSelector" image="menus/tv_live.png" />
 		<screen key="BuildInformation" image="menus/information.png" />
+		<screen key="ChannelContextMenu" image="menus/tv_live.png" />
 		<!-- <screen key="CommitInformation" image="" /> -->
 		<!-- <screen key="DebugInformation" image="" /> -->
 		<screen key="DeviceInformation" image="menus/backup.png" />
@@ -500,11 +502,13 @@
 		<screen key="PictureInformation" image="menus/information.png" />
 		<screen key="ReceiverInformation" image="menus/information.png" />
 		<screen key="ServiceInformation" image="menus/tv_live.png" />
+		<screen key="SimpleChannelSelection" image="menus/tv_live.png" />
 		<screen key="StorageInformation" image="menus/information.png" />
 		<screen key="StreamingInformation" image="menus/information.png" />
 		<!-- <screen key="SystemInformation" image="" /> -->
 		<screen key="TranslationInformation" image="menus/information.png" />
 		<screen key="TunerInformation" image="menus/information.png" />
+		<screen key="ZapHistoryBrowser" image="menus/tv_zap_history.png" />
 	</screens>
 
 	<menus>
@@ -574,14 +578,11 @@
 		<setup key="MediaPlayerSettings" image="menus/mainmenu_tasks_setup_movie.png" />
 		<setup key="NimSelection" image="menus/mainmenu_tasks_setup_tv.png" />
 		<setup key="NimSetup" image="menus/mainmenu_tasks_setup_tv.png" />
-		<setup key="OSD3DSetupScreen" image="menus/mainmenu_tasks_setup_tv.png" />
 		<setup key="ParentalControlChangePin" image="menus/mainmenu_tasks_setup_parental.png" />
 		<setup key="ParentalControlEditor" image="menus/mainmenu_tasks_setup_parental.png" />
 		<setup key="ParentalControlSetup" image="menus/mainmenu_tasks_setup_parental.png" />
 		<setup key="PicturePlayerSetup" image="menus/mainmenu_tasks_setup_photo.png" />
 		<setup key="ScanSetup" image="menus/mainmenu_tasks_setup_tv.png" />
-		<setup key="SkinSelector" image="menus/mainmenu_tasks_setup_tv.png" />
-		<setup key="UserInterfacePositioner" image="menus/mainmenu_tasks_setup_tv.png" />
 		<setup key="ZapHistoryConfigurator" image="menus/mainmenu_tv_zaphistory.png" />
 		-->
 		<setup key="AccessLevel" image="menus/parental_control_setup.png" />
@@ -614,6 +615,8 @@
 		<setup key="MovieSelection" image="menus/tv_live.png" />
 		<setup key="network" image="menus/setup.png" />
 		<setup key="osd" image="menus/tv_live.png" />
+		<setup key="OSDCalibration" image="menus/tv_setup.png" />
+		<setup key="OSD3DCalibration" image="menus/tv_setup.png" />
 		<setup key="ParentalControl" image="menus/parental_control_setup.png" />
 		<setup key="Playback" image="menus/tv_live.png" />
 		<setup key="PluginBrowser" image="menus/plugins.png" />
@@ -622,6 +625,9 @@
 		<setup key="RecordTimer" image="menus/timer_setup.png" />
 		<setup key="RFModulator" image="menus/setup.png" />
 		<setup key="satconfig" image="menus/setup.png" />
+		<!--
+		<setup key="SkinSelection" image="" />
+		-->
 		<setup key="SleepTimer" image="menus/sleeptimer.png" />
 		<setup key="Softcam" image="menus/setup.png" />
 		<setup key="SoftwareUpdate" image="menus/setup.png" />
