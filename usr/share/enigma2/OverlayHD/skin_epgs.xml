@@ -370,12 +370,8 @@
 
 	<screen name="EPGSelection" title="Single Channel EPG" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonMenu" />
-		<panel name="ScreenTemplateButtonInfo" />
-		<panel name="ScreenTemplateButtonText" />
-		<panel name="ScreenTemplateButtonHelp" />
-		<widget name="list" position="50,80" size="1180,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" enableWrapAround="1" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showOnDemand" transparent="0" />
-		<widget name="number" position="50,80" size="1180,425" backgroundColor="TextBackground" font="Regular;50" foregroundColor="FindCharacter" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="list" position="50,80" size="1180,425" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="list" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" transparent="0" />
+		<widget name="number" position="50,80" size="1180,425" backgroundColor="TextBackground" conditional="number" font="Regular;50" foregroundColor="FindCharacter" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<eLabel position="50,515" size="1180,2" backgroundColor="Pinstripe" />
 		<panel position="50,525" size="1180,125">
 			<panel name="EPGEventInfoPanel" />
