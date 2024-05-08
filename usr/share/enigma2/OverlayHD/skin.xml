@@ -414,7 +414,7 @@
 		<alias name="TextFont" font="ValisEnigma" size="20" height="25" width="18" />
 		<alias name="TextNormal" font="NemesisFlatline" size="20" height="25" width="18" />
 		<alias name="TitleFont" font="RobotoBlack" size="25" height="35" width="20" />
-		<alias name="VirtualKeyBoard" font="DejaVuSansCondensed" size="28" height="45" width="20" />
+		<alias name="VirtualKeyboard" font="DejaVuSansCondensed" size="28" height="45" width="20" />
 	</fonts>
 
 	<parameters>
@@ -487,10 +487,10 @@
 		<parameter name="SelectionListDescr" value="50,0,780,35" />
 		<parameter name="SelectionListLock" value="10,4,30,27" />
 		<parameter name="SelectionListLockOff" value="10,4,30,27" />
-		<parameter name="VirtualKeyBoard" value="45,45" />
-		<parameter name="VirtualKeyBoardAlignment" value="0,0" />
-		<parameter name="VirtualKeyBoardPadding" value="4,4" />
-		<parameter name="VirtualKeyBoardShiftColors" value="White,White,Cyan,Magenta" />
+		<parameter name="VirtualKeyboard" value="45,45" />
+		<parameter name="VirtualKeyboardAlignment" value="0,0" />
+		<parameter name="VirtualKeyboardPadding" value="4,4" />
+		<parameter name="VirtualKeyboardShiftColors" value="White,White,Cyan,Magenta" />
 		<!--
 		<parameter name="SHOUTcastListItem" value="30,27,35,96,35,33,60,32" />
 		<parameter name="EPGImportFilterListDescr" value="30,3,500,30" />
@@ -2659,8 +2659,8 @@
 
 <!-- Virtual Keyboard -->
 
-	<!-- This is the full screen version of the VirtualKeyBoard... -->
-	<screen name="VirtualKeyBoard" title="Virtual Keyboard" position="fill" flags="wfNoBorder">
+	<!-- This is the full screen version of the VirtualKeyboard... -->
+	<screen name="VirtualKeyboard" title="Virtual Keyboard" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/shuffle.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget name="prompt" position="420,80" size="810,100" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
@@ -2676,7 +2676,7 @@
 	</screen>
 
 	<!-- This is the pop up window version of the VirtualKeyBoard... (Not currently in use!)
-	<screen name="VirtualKeyBoard" title="Virtual Keyboard" position="center,center" size="660,410" zPosition="99">
+	<screen name="VirtualKeyboard" title="Virtual Keyboard" position="center,center" size="660,410" zPosition="99">
 		<widget name="prompt" position="15,10" size="630,50" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" valign="center" />
 		<eLabel position="15,80" size="630,2" backgroundColor="Pinstripe" />
 		<eLabel position="15,124" size="630,2" backgroundColor="Pinstripe" />
