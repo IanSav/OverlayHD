@@ -2538,13 +2538,13 @@
 <!-- Panel To Display The Video Resolution (160 x 20 pixels) -->
 
 	<screen name="ResolutionPanel" title="Video Resolution" flags="wfNoBorder">
-		<widget source="session.CurrentService" render="Label" position="0,2" size="160,18" backgroundColor="ResolutionBackground" font="Regular;18" foregroundColor="Resolution" transparent="1">
+		<widget source="session.CurrentService" render="Label" position="0,0" size="160,20" backgroundColor="ResolutionBackground" font="Regular;18" foregroundColor="Resolution" transparent="1">
 			<convert type="ServiceInfo">VideoInfo</convert>
 		</widget>
 	</screen>
 
 	<screen name="ResolutionRightPanel" title="Video Resolution" flags="wfNoBorder">
-		<widget source="session.CurrentService" render="Label" position="0,2" size="160,18" backgroundColor="ResolutionBackground" font="Regular;18" foregroundColor="Resolution" halign="right" transparent="1">
+		<widget source="session.CurrentService" render="Label" position="0,0" size="160,20" backgroundColor="ResolutionBackground" font="Regular;18" foregroundColor="Resolution" halign="right" transparent="1">
 			<convert type="ServiceInfo">VideoInfo</convert>
 		</widget>
 	</screen>
@@ -2589,7 +2589,7 @@
 		<widget name="VolumeText" position="63,44" size="335,30" backgroundColor="VolumeBackground" conditional="VolumeText" font="LCD;30" foregroundColor="VolumeColor" halign="center" transparent="1" valign="center" zPosition="+2" />
 	</screen>
 
-<!-- Video Resolution -->
+<!-- Video Resolution - This screen may no longer exist! -->
 
 	<screen name="VideoResolution" title="Video Resolution" position="center,center" size="300,60" zPosition="+99">
 		<widget name="resolution" position="10,10" size="280,40" backgroundColor="TextBackground" font="TextFont;22" foregroundColor="Text" transparent="1" />
