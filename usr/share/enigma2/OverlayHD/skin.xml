@@ -3,7 +3,7 @@
  |	OverlayHD skin based on easy-skin-aus-hd
  |
  |	Repository - https://github.com/IanSav/OverlayHD/
- |	Coding by IanSav (c) 2015-2022
+ |	Coding by IanSav (c) 2015-2024
  |
  |	This skin and plugin were originally developed for the Beyonwiz Australia
  |	distribution of Enigma2.  This skin and code is free to use and may be
@@ -496,10 +496,12 @@
 		<screen key="DistributionInformation" image="menus/information.png" />
 		<screen key="GeolocationInformation" image="menus/information.png" />
 		<screen key="HistoryZapSelector" image="menus/tv_zap_history.png" />
+		<screen key="LocaleSelection" image="menus/software_manager_setup.png" />
 		<screen key="MemoryInformation" image="menus/browser.png" />
 		<screen key="MultiBootInformation" image="menus/information.png" />
 		<screen key="NetworkInformation" image="menus/radio.png" />
 		<screen key="PictureInformation" image="menus/information.png" />
+		<screen key="QuickMenu" image="menus/menu.png" />
 		<screen key="ReceiverInformation" image="menus/information.png" />
 		<screen key="ServiceInformation" image="menus/tv_live.png" />
 		<screen key="SimpleChannelSelection" image="menus/tv_live.png" />

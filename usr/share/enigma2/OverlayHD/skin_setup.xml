@@ -94,22 +94,6 @@
 		<widget name="preview" position="50,342" size="350,197" alphatest="blend" conditional="preview" transparent="0" />
 	</screen>
 
-<!-- MENU > Setup > AV Setup > Skin Setup -->
-
-	<screen name="SkinSelector" title="Skin Selector" position="fill" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/tv_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<panel name="ScreenTemplateSkinList4" />
-		<eLabel position="960,80" size="270,2" backgroundColor="Pinstripe" />
-		<eLabel position="960,524" size="270,2" backgroundColor="Pinstripe" />
-		<eLabel position="960,80" size="2,445" backgroundColor="Pinstripe" />
-		<eLabel position="1228,80" size="2,445" backgroundColor="Pinstripe" />
-		<widget name="preview" position="970,90" size="250,425" alphatest="blend" conditional="preview" transparent="1" />
-		<widget name="Preview" position="970,90" size="250,425" alphatest="blend" conditional="Preview" transparent="1" />
-		<panel name="ScreenTemplateSDescription4" conditional="description" />
-		<panel name="ScreenTemplateSIntroduction4" conditional="introduction" />
-	</screen>
-
 <!-- MENU > Setup > AV Setup > HDMI-CEC -->
 
 	<screen name="HDMICECSetup" title="HDMI-CEC Setup" position="fill" flags="wfNoBorder">
@@ -153,7 +137,6 @@
 
 	<screen name="LocaleSelection" title="Locale/Language Selection" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/software_manager_setup.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget name="icons" position="0,0" size="30,27" pixmaps="icons/lock_off.png,icons/lock_on.png,icons/lock_error.png" alphatest="blend" />
 		<widget source="locales" render="Listbox" position="400,80" size="830,455" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
 			<convert type="TemplatedMultiContent">
