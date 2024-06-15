@@ -660,7 +660,7 @@
 		<color name="SliderBackground" color="ScreenBackground" />
 		<color name="SliderForeground" color="White" />
 		<color name="SliderBorder" color="Grey" />
-		<configList entryFont="MenuFont;25" valueFont="MenuFont;25" />
+		<configList entryFont="MenuFont;25" entryLeftOffset="10" headerLeftOffset="10" valueFont="MenuFont;25" />
 		<label font="TextFont;20" />
 		<listbox enableWrapAround="1" font="MenuFont;25" scrollbarBorderWidth="1" scrollbarMode="showOnDemand" scrollbarOffset="0" scrollbarScroll="byLine" scrollbarWidth="10" />
 		<scrolllabel scrollbarBorderWidth="1" scrollbarMode="showOnDemand" scrollbarOffset="0" scrollbarScroll="byLine" scrollbarWidth="10" />
