@@ -2888,9 +2888,9 @@ except Exception as err:
 
 <!-- Command Prompt Output -->
 
-	<screen name="Console" title="Command execution..." position="fill" flags="wfNoBorder">
+	<screen name="Console" title="Console Output" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget name="text" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" transparent="1" />
+		<widget name="text" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" tabWidth="auto" transparent="1" />
 	</screen>
 
 <!-- Include files that define the rest of the UI -->
