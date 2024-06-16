@@ -2892,7 +2892,7 @@ except Exception as err:
 
 	<screen name="Console" title="Console Output" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget name="text" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" tabWidth="auto" transparent="1" />
+		<widget name="text" position="50,80" size="1180,565" backgroundColor="TextBackground" commandColor="Yellow" font="Console;16" foregroundColor="Text" scriptColor="Cyan" tabWidth="auto" transparent="1" />
 	</screen>
 
 <!-- Include files that define the rest of the UI -->
