@@ -133,7 +133,7 @@
 		<panel name="ScreenTemplate" />
 		<widget name="path" position="50,80" size="1020,50" font="TextFont;20" foregroundColor="TextWaiting" valign="center" />
 		<widget name="location" position="1080,105" size="150,25" font="TextFont;20" foregroundColor="TextWaiting" halign="right" valign="center" />
-		<widget name="data" position="50,140" size="1180,500" font="Console;20" />
+		<widget name="data" position="50,140" size="1180,500" font="Console;20" tabWidth="auto" />
 	</screen>
 
 	<screen name="FileCommanderScreen" title="File Commander" position="fill" flags="wfNoBorder">

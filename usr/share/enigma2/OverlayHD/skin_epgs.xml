@@ -546,7 +546,7 @@
 	<screen name="EPGImportLog" title="EPG Import Log" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<ePixmap pixmap="menus/tv_epg.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<widget name="list" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" transparent="1" />
+		<widget name="list" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" tabWidth="auto" transparent="1" />
 	</screen>
 
 	<screen name="filtersServicesSelection" title="Channel Selection" position="fill" flags="wfNoBorder">

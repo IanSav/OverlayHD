@@ -655,7 +655,7 @@ except Exception:
 
 	<screen name="LogManagerViewLog" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget name="list" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" transparent="1" />
+		<widget name="list" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" tabWidth="auto" transparent="1" />
 	</screen>
 
 <!-- Extension Menu Screen -->

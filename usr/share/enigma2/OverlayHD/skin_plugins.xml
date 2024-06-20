@@ -124,7 +124,7 @@
 
 	<screen name="AutoBouquetsMaker_Log" title="AutoBouquetsmaker Log" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget name="list" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" transparent="1" />
+		<widget name="list" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" tabWidth="auto" transparent="1" />
 	</screen>
 
 	<screen name="AutoBouquetsMaker_About" title="AutoBouquetsMaker About" position="fill" flags="wfNoBorder">
@@ -689,7 +689,7 @@
 
 	<screen name="CommonBackupManagerLogView" title="Backup Log" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget name="list" position="50,80" size="1180,570" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" transparent="1" />
+		<widget name="list" position="50,80" size="1180,570" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" tabWidth="auto" transparent="1" />
 	</screen>
 
 	<screen name="VISIONBackupManagerLogView" title="Vision Backup Log" position="fill" flags="wfNoBorder">
@@ -907,7 +907,7 @@
 
 	<screen name="VISIONSoftcamLog" title="ViX Softcam Log" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget name="list" position="400,80" size="830,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" transparent="1" />
+		<widget name="list" position="400,80" size="830,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" tabWidth="auto" transparent="1" />
 	</screen>
 
 	<screen name="VIXSoftcamManager" title="ViX Softcam Setup" position="fill" flags="wfNoBorder">
@@ -930,7 +930,7 @@
 
 	<screen name="VIXSoftcamLog" title="ViX Softcam Log" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget name="list" position="400,80" size="830,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" transparent="1" />
+		<widget name="list" position="400,80" size="830,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" tabWidth="auto" transparent="1" />
 	</screen>
 
 	<!-- Software Update -->

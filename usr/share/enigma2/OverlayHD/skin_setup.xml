@@ -1036,7 +1036,7 @@
 
 	<screen name="NetworkInadynLog" title="Network Service Log" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget name="infotext" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" transparent="1" />
+		<widget name="infotext" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" tabWidth="auto" transparent="1" />
 	</screen>
 
 	<!-- Generic Service Summary Screen -->
@@ -1468,7 +1468,7 @@
 
 	<screen name="SoftwareUpdateChangeView" title="Software Changes" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget name="text" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" transparent="1" />
+		<widget name="text" position="50,80" size="1180,565" backgroundColor="TextBackground" font="Console;16" foregroundColor="Text" tabWidth="auto" transparent="1" />
 	</screen>
 
 	<screen name="Ipkg" position="center,center" size="550,120">
