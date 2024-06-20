@@ -184,30 +184,30 @@
 		</widget>
 		<!-- Now Event Start & End Times, Event Name and Time Remaining Area -->
 		<widget source="session.Event_Now" render="Label" position="180,615" size="180,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" halign="center" noWrap="1" transparent="1" valign="bottom">
-			<convert type="EventTime">Times</convert>
+			<convert type="EventInfo">Times</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="370,605" size="545,35" backgroundColor="InfoBackground" font="InfoEventFont;28" foregroundColor="InfoProgramNow" noWrap="1" transparent="1" valign="bottom">
-			<convert type="EventName">Name</convert>
+			<convert type="EventInfo">Name</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="925,615" size="160,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" halign="right" noWrap="1" transparent="1" valign="bottom">
-			<convert type="EventTime">Remaining</convert>
+			<convert type="EventInfo">Remaining</convert>
 			<convert type="RemainingToText">Default</convert>
 		</widget>
 		<!-- Now Event Progress Bar Area -->
 		<widget source="session.Event_Now" render="Progress" position="370,643" size="715,6" backgroundColor="InfoProgressBackground" borderColor="InfoProgressBorder" borderWidth="1" foregroundColor="InfoProgressColor">
-			<convert type="EventTime">Progress</convert>
+			<convert type="EventInfo">Progress</convert>
 		</widget>
 		<!-- Next Event Start & End Times, Event Name and Duration Area -->
 		<widget source="session.Event_Next" render="Label" position="180,653" size="180,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNext" halign="center" noWrap="1" transparent="1" valign="top">
-			<convert type="EventTime">Times</convert>
+			<convert type="EventInfo">Times</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
 		<widget source="session.Event_Next" render="Label" position="370,653" size="545,25" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoProgramNext" noWrap="1" transparent="1" valign="top">
-			<convert type="EventName">Name</convert>
+			<convert type="EventInfo">Name</convert>
 		</widget>
 		<widget source="session.Event_Next" render="Label" position="925,653" size="160,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoDurationNext" halign="right" noWrap="1" transparent="1" valign="top">
-			<convert type="EventTime">Duration</convert>
+			<convert type="EventInfo">Duration</convert>
 			<convert type="ClockToText">InMinutes</convert>
 		</widget>
 		<!-- Service Provider and Transmission Technology Area -->
@@ -275,33 +275,33 @@
 		<eLabel position="0,0" size="580,360" backgroundColor="InfobarTVBackground" transparent="0" zPosition="-1" />
 		<!-- Event Name Area -->
 		<widget source="session.Event_Now" render="Label" position="10,10" size="560,25" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoProgramNow" noWrap="1" transparent="1">
-			<convert type="EventName">Name</convert>
+			<convert type="EventInfo">Name</convert>
 		</widget>
 		<!-- Event Start & End Times and Time Remaining Area -->
 		<widget source="session.Event_Now" render="Label" position="10,35" size="180,25" backgroundColor="InfoBackground" font="InfoTimeFont;18" foregroundColor="InfoTimesNow" noWrap="1" transparent="1">
-			<convert type="EventTime">Times</convert>
+			<convert type="EventInfo">Times</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="370,35" size="200,25" backgroundColor="InfoBackground" font="InfoTimeFont;18" foregroundColor="InfoDurationNow" halign="right" noWrap="1" transparent="1">
-			<convert type="EventTime">Remaining</convert>
+			<convert type="EventInfo">Remaining</convert>
 			<convert type="RemainingToText">Default</convert>
 		</widget>
 		<!-- Event Extended Description Area -->
 		<widget source="session.Event_Now" render="Label" position="25,70" size="530,260" backgroundColor="InfoBackground" font="InfoDescriptionFont;18" foregroundColor="InfoDetailsNow" halign="block" transparent="1">
-			<convert type="EventName">FullDescription,Separated,Trimmed</convert>
+			<convert type="EventInfo">FullDescription,Separated,Trimmed</convert>
 		</widget>
 		<!-- Event Rating and Genre Area -->
 		<widget source="session.Event_Now" render="Pixmap" position="10,330" size="40,20" alphatest="blend">
-			<convert type="EventName">RatingIcon</convert>
+			<convert type="EventInfo">RatingIcon</convert>
 			<convert type="ValueToPixmap">Path</convert>
 		</widget>
 		<!--
 		<widget source="session.Event_Now" render="Label" position="10,330" size="80,20" backgroundColor="InfoBackground" font="InfoOtherFont;18" foregroundColor="InfoRatingNow" transparent="1">
-			<convert type="EventName">SmallRating,Trimmed</convert>
+			<convert type="EventInfo">SmallRating,Trimmed</convert>
 		</widget>
 		-->
 		<widget source="session.Event_Now" render="Label" position="90,330" size="480,20" backgroundColor="InfoBackground" font="InfoOtherFont;18" foregroundColor="InfoGenreNow" halign="right" transparent="1">
-			<convert type="EventName">Genre,Trimmed</convert>
+			<convert type="EventInfo">Genre,Trimmed</convert>
 		</widget>
 	</screen>
 
@@ -311,33 +311,33 @@
 		<eLabel position="0,0" size="580,360" backgroundColor="InfobarTVBackground" transparent="0" zPosition="-1" />
 		<!-- Event Name Area -->
 		<widget source="session.Event_Next" render="Label" position="10,10" size="560,25" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoProgramNext" noWrap="1" transparent="1">
-			<convert type="EventName">Name</convert>
+			<convert type="EventInfo">Name</convert>
 		</widget>
 		<!-- Event Start & End Times and Duration Area -->
 		<widget source="session.Event_Next" render="Label" position="10,35" size="180,25" backgroundColor="InfoBackground" font="InfoTimeFont;18" foregroundColor="InfoTimesNext" noWrap="1" transparent="1">
-			<convert type="EventTime">Times</convert>
+			<convert type="EventInfo">Times</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
 		<widget source="session.Event_Next" render="Label" position="370,35" size="200,25" backgroundColor="InfoBackground" font="InfoTimeFont;18" foregroundColor="InfoDurationNext" halign="right" noWrap="1" transparent="1">
-			<convert type="EventTime">Remaining</convert>
+			<convert type="EventInfo">Remaining</convert>
 			<convert type="RemainingToText">Default</convert>
 		</widget>
 		<!-- Event Extended Description Area -->
 		<widget source="session.Event_Next" render="Label" position="25,70" size="530,260" backgroundColor="InfoBackground" font="InfoDescriptionFont;18" foregroundColor="InfoDetailsNext" halign="block" transparent="1">
-			<convert type="EventName">FullDescription,Separated,Trimmed</convert>
+			<convert type="EventInfo">FullDescription,Separated,Trimmed</convert>
 		</widget>
 		<!-- Event Rating and Genre Area -->
 		<widget source="session.Event_Next" render="Pixmap" position="10,330" size="40,20" alphatest="blend">
-			<convert type="EventName">RatingIcon</convert>
+			<convert type="EventInfo">RatingIcon</convert>
 			<convert type="ValueToPixmap">Path</convert>
 		</widget>
 		<!--
 		<widget source="session.Event_Next" render="Label" position="10,330" size="80,20" backgroundColor="InfoBackground" font="InfoOtherFont;18" foregroundColor="InfoRatingNext" transparent="1">
-			<convert type="EventName">SmallRating,Trimmed</convert>
+			<convert type="EventInfo">SmallRating,Trimmed</convert>
 		</widget>
 		-->
 		<widget source="session.Event_Next" render="Label" position="90,330" size="480,20" backgroundColor="InfoBackground" font="InfoOtherFont;18" foregroundColor="InfoGenreNext" halign="right" transparent="1">
-			<convert type="EventName">Genre,Trimmed</convert>
+			<convert type="EventInfo">Genre,Trimmed</convert>
 		</widget>
 	</screen>
 
@@ -402,14 +402,14 @@
 		</widget>
 		<widget name="epg_description" position="50,220" size="1180,403" backgroundColor="InfoBackground" font="InfoDescriptionFont;22" foregroundColor="InfoDetailsNow" halign="block" />
 		<widget source="Event" render="Pixmap" position="50,630" size="40,20" alphatest="blend">
-			<convert type="EventName">RatingIcon</convert>
+			<convert type="EventInfo">RatingIcon</convert>
 			<convert type="ValueToPixmap">Path</convert>
 		</widget>
 		<widget source="Event" render="Label" position="110,630" size="540,25" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
-			<convert type="EventName">Rating,Trimmed</convert>
+			<convert type="EventInfo">Rating,Trimmed</convert>
 		</widget>
 		<widget source="Event" render="Label" position="640,630" size="590,25" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" halign="right" transparent="1">
-			<convert type="EventName">Genre,Trimmed</convert>
+			<convert type="EventInfo">Genre,Trimmed</convert>
 		</widget>
 		<widget name="FullDescription" position="0,0" size="0,0" conditional="FullDescription" font="Regular;20" transparent="1" />
 	</screen>
@@ -420,16 +420,16 @@
 		<panel name="ScreenTemplateButtonInfo" />
 		<widget name="channel" position="50,80" size="280,25" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoChannel" transparent="1" />
 		<widget source="Event" render="Label" position="365,80" size="500,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" halign="center" transparent="1">
-			<convert type="EventTime">Times</convert>
+			<convert type="EventInfo">Times</convert>
 			<convert type="ClockToText">LongFullDate,Default</convert>
 		</widget>
 		<widget source="Event" render="Label" position="950,80" size="280,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" halign="right" transparent="1">
-			<convert type="EventTime">Duration</convert>
+			<convert type="EventInfo">Duration</convert>
 			<convert type="ClockToText">InMinutes</convert>
 		</widget>
 
 		<widget source="Event" render="Label" position="50,160" size="1115,30" backgroundColor="InfoBackground" font="InfoEventFont;25" foregroundColor="InfoProgramNow" transparent="1">
-			<convert type="EventName">Name</convert>
+			<convert type="EventInfo">Name</convert>
 		</widget>
 		<widget source="Event" render="Pixmap" pixmap="epg/fta.png" position="1175,160" size="55,25" alphatest="blend">
 			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True,Invert,Ignore</convert>
@@ -440,7 +440,7 @@
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="Event" render="Label" position="50,220" size="1180,403" backgroundColor="InfoBackground" font="InfoDescriptionFont;22" foregroundColor="InfoDetailsNow" halign="block" transparent="1">
-			<convert type="EventName">FullDescription,Trimmed,Separated</convert>
+			<convert type="EventInfo">FullDescription,Trimmed,Separated</convert>
 		</widget>
 		<!--
 		<widget source="CurrentService" render="Label" position="50,460" size="1180,30" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoChannel" transparent="1">
@@ -451,19 +451,19 @@
 		</widget>
 		-->
 		<widget source="Event" render="Pixmap" position="50,630" size="40,20" alphatest="blend">
-			<convert type="EventName">RatingIcon</convert>
+			<convert type="EventInfo">RatingIcon</convert>
 			<convert type="ValueToPixmap">Path</convert>
 		</widget>
 		<!--
 		<widget source="Event" render="Label" position="50,630" size="40,25" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
-			<convert type="EventName">SmallRating,Trimmed</convert>
+			<convert type="EventInfo">SmallRating,Trimmed</convert>
 		</widget>
 		-->
 		<widget source="Event" render="Label" position="110,630" size="540,25" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
-			<convert type="EventName">Rating,Trimmed</convert>
+			<convert type="EventInfo">Rating,Trimmed</convert>
 		</widget>
 		<widget source="Event" render="Label" position="640,630" size="590,25" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" halign="right" transparent="1">
-			<convert type="EventName">Genre,Trimmed</convert>
+			<convert type="EventInfo">Genre,Trimmed</convert>
 		</widget>
 		<widget name="datetime" position="0,0" size="0,0" conditional="datetime" font="Regular;20" transparent="1" />
 		<widget name="duration" position="0,0" size="0,0" conditional="duration" font="Regular;20" transparent="1" />
@@ -485,14 +485,14 @@
 			<convert type="ServiceName">Name</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="20,40" size="460,20" font="Regular;21" noWrap="1" transparent="1">
-			<convert type="EventName">Name</convert>
+			<convert type="EventInfo">Name</convert>
 		</widget>
 		<eLabel position="20,63" size="460,1" backgroundColor="#003366cc" zPosition="2" />
 		<widget source="session.Event_Now" render="Progress" position="190,81" size="300,14" transparent="1" zPosition="1">
-			<convert type="EventTime">Progress</convert>
+			<convert type="EventInfo">Progress</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="20,75" size="180,30" font="Regular;26" transparent="1">
-			<convert type="EventTime">Times</convert>
+			<convert type="EventInfo">Times</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
 		<widget source="RdsDecoder" render="Label" position="20,110" size="460,190" font="Regular;20" transparent="1">

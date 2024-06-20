@@ -36,13 +36,13 @@
 
 	<screen name="EPGEventInfoPanel" title="EPG Event Info" flags="wfNoBorder">
 		<widget source="Event" render="Label" position="0,0" size="1115,30" backgroundColor="InfoBackground" font="InfoEventFont;25" foregroundColor="InfoProgramNow" noWrap="1" transparent="1">
-			<convert type="EventName">Name</convert>
+			<convert type="EventInfo">Name</convert>
 		</widget>
 		<widget source="Event" render="Label" position="765,0" size="350,15" backgroundColor="InfoBackground" font="InfoEventFont;15" foregroundColor="InfoProgramNow" noWrap="1">
-			<convert type="EventName">CRIDSeries</convert>
+			<convert type="EventInfo">CRIDSeries</convert>
 		</widget>
 		<widget source="Event" render="Label" position="765,15" size="350,15" backgroundColor="InfoBackground" font="InfoEventFont;15" foregroundColor="InfoProgramNow" noWrap="1">
-			<convert type="EventName">CRIDEpisode</convert>
+			<convert type="EventInfo">CRIDEpisode</convert>
 		</widget>
 		<widget source="Event" render="Pixmap" pixmap="epg/fta.png" position="1125,0" size="55,25" alphatest="blend">
 			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True,Invert,Ignore</convert>
@@ -53,30 +53,30 @@
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="Event" render="Label" position="0,30" size="180,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" noWrap="1" transparent="1">
-			<convert type="EventTime">Times</convert>
+			<convert type="EventInfo">Times</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
 		<widget source="Event" render="Label" position="200,30" size="180,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" halign="right" noWrap="1" transparent="1">
-			<convert type="EventTime">Remaining</convert>
+			<convert type="EventInfo">Remaining</convert>
 			<convert type="RemainingToText">Default</convert>
 		</widget>
 		<widget source="Event" render="Pixmap" position="400,30" size="40,20" alphatest="blend">
-			<convert type="EventName">RatingIcon</convert>
+			<convert type="EventInfo">RatingIcon</convert>
 			<convert type="ValueToPixmap">Path</convert>
 		</widget>
 		<!--
 		<widget source="Event" render="Label" position="400,30" size="40,25" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
-			<convert type="EventName">SmallRating,Trimmed</convert>
+			<convert type="EventInfo">SmallRating,Trimmed</convert>
 		</widget>
 		-->
 		<widget source="Event" render="Label" position="460,30" size="340,25" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
-			<convert type="EventName">Rating,Trimmed</convert>
+			<convert type="EventInfo">Rating,Trimmed</convert>
 		</widget>
 		<widget source="Event" render="Label" position="800,30" size="380,25" backgroundColor="InfoBackground" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" halign="right" transparent="1">
-			<convert type="EventName">Genre,Trimmed</convert>
+			<convert type="EventInfo">Genre,Trimmed</convert>
 		</widget>
 		<widget source="Event" render="Label" position="0,55" size="1180,70" backgroundColor="InfoBackground" font="InfoDescriptionFont;20" foregroundColor="InfoDetailsNow" halign="block" transparent="1">
-			<convert type="EventName">FullDescription,Trimmed,NotSeparated</convert>
+			<convert type="EventInfo">FullDescription,Trimmed,NotSeparated</convert>
 		</widget>
 		<widget name="bouquetlist" position="0,0" size="1180,125" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="bouquetlist" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" zPosition="+1" />
 	</screen>
@@ -85,7 +85,7 @@
 
 	<screen name="EPGEventInfoPIGPanel" title="PIG EPG Event Info" flags="wfNoBorder">
 		<widget source="Event" render="Label" position="0,0" size="795,30" backgroundColor="EPGBackground" font="InfoEventFont;25" foregroundColor="InfoProgramNow" noWrap="1" transparent="1">
-			<convert type="EventName">Name</convert>
+			<convert type="EventInfo">Name</convert>
 		</widget>
 		<widget source="Event" render="Pixmap" pixmap="epg/fta.png" position="805,0" size="55,25" alphatest="blend">
 			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True,Invert,Ignore</convert>
@@ -96,27 +96,27 @@
 			<convert type="ConditionalShowHide" />
 		</widget>
 		<widget source="Event" render="Label" position="0,30" size="180,25" backgroundColor="EPGBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" noWrap="1" transparent="1">
-			<convert type="EventTime">Times</convert>
+			<convert type="EventInfo">Times</convert>
 			<convert type="ClockToText">Default</convert>
 		</widget>
 		<widget source="Event" render="Label" position="200,30" size="180,25" backgroundColor="EPGBackground" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" halign="right" noWrap="1" transparent="1">
-			<convert type="EventTime">Remaining</convert>
+			<convert type="EventInfo">Remaining</convert>
 			<convert type="RemainingToText">Default</convert>
 		</widget>
 		<widget source="Event" render="Pixmap" position="400,30" size="40,20" alphatest="blend">
-			<convert type="EventName">RatingIcon</convert>
+			<convert type="EventInfo">RatingIcon</convert>
 			<convert type="ValueToPixmap">Path</convert>
 		</widget>
 		<!--
 		<widget source="Event" render="Label" position="400,30" size="40,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
-			<convert type="EventName">SmallRating,Trimmed</convert>
+			<convert type="EventInfo">SmallRating,Trimmed</convert>
 		</widget>
 		-->
 		<widget source="Event" render="Label" position="460,30" size="400,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" halign="right" transparent="1">
-			<convert type="EventName">Genre,Trimmed</convert>
+			<convert type="EventInfo">Genre,Trimmed</convert>
 		</widget>
 		<widget source="Event" render="Label" position="0,55" size="860,118" backgroundColor="EPGBackground" font="InfoDescriptionFont;20" foregroundColor="InfoDetailsNow" halign="block" transparent="1">
-			<convert type="EventName">FullDescription,Trimmed,NotSeparated</convert>
+			<convert type="EventInfo">FullDescription,Trimmed,NotSeparated</convert>
 		</widget>
 		<widget name="bouquetlist" position="0,0" size="860,175" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" conditional="bouquetlist" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" zPosition="+1" />
 	</screen>
@@ -182,10 +182,10 @@
 			<convert type="ServiceName">Name</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="930,229" size="300,20" borderColor="EPGOverlayBorder" borderWidth="1" font="InfoEventFont;17" foregroundColor="EPGOverlayColor" halign="center" noWrap="1" transparent="1" valign="bottom">
-			<convert type="EventName">Name</convert>
+			<convert type="EventInfo">Name</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Progress" position="930,250" size="300,5" backgroundColor="EPGProgressBackground" borderColor="EPGProgressBorder" borderWidth="1" foregroundColor="EPGProgressColor" transparent="0">
-			<convert type="EventTime">Progress</convert>
+			<convert type="EventInfo">Progress</convert>
 		</widget>
 		<panel position="50,260" size="1180,30">
 			<panel name="EPGTimeLinePanel" />
@@ -220,10 +220,10 @@
 			<convert type="ServiceName">Name</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="930,229" size="300,20" borderColor="EPGOverlayBorder" borderWidth="1" font="InfoEventFont;17" foregroundColor="EPGOverlayColor" halign="center" noWrap="1" transparent="1" valign="bottom">
-			<convert type="EventName">Name</convert>
+			<convert type="EventInfo">Name</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Progress" position="930,250" size="300,5" backgroundColor="EPGProgressBackground" borderColor="EPGProgressBorder" borderWidth="1" foregroundColor="EPGProgressColor" transparent="0">
-			<convert type="EventTime">Progress</convert>
+			<convert type="EventInfo">Progress</convert>
 		</widget>
 		<panel position="50,260" size="1180,30">
 			<panel name="EPGTimeLinePanel" />
@@ -328,33 +328,33 @@
 			<convert type="ServiceName">Name</convert>
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="730,342" size="500,20" borderColor="EPGOverlayBorder" borderWidth="1" font="InfoEventFont;17" foregroundColor="EPGOverlayColor" halign="center" noWrap="1" transparent="1" valign="bottom">
-			<convert type="EventName">Name</convert>
+			<convert type="EventInfo">Name</convert>
 		</widget>
 		<widget name="bouquetlist" position="730,365" size="500,290" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" zPosition="+1" />
 		<widget source="Event" render="Label" position="730,365" size="500,30" backgroundColor="EPGBackground" font="InfoEventFont;25" foregroundColor="InfoProgramNow" noWrap="1" transparent="1">
-			<convert type="EventName">Name</convert>
+			<convert type="EventInfo">Name</convert>
 		</widget>
 		<widget source="Event" render="Label" position="730,395" size="500,185" backgroundColor="EPGBackground" font="InfoDescriptionFont;20" foregroundColor="InfoDetailsNow" transparent="1">
-			<convert type="EventName">FullDescription,Trimmed,NotSeparated</convert>
+			<convert type="EventInfo">FullDescription,Trimmed,NotSeparated</convert>
 		</widget>
 		<widget source="Service" render="PiconBg" position="730,590" size="104,64" alphatest="blend" transparent="1" />
 		<widget source="Service" render="Picon" position="732,592" size="100,60" alphatest="blend" transparent="1">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
 		<widget source="Event" render="Label" position="850,595" size="320,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
-			<convert type="EventName">Rating,Trimmed</convert>
+			<convert type="EventInfo">Rating,Trimmed</convert>
 		</widget>
 		<widget source="Event" render="Pixmap" position="1190,595" size="40,20" alphatest="blend">
-			<convert type="EventName">RatingIcon</convert>
+			<convert type="EventInfo">RatingIcon</convert>
 			<convert type="ValueToPixmap">Path</convert>
 		</widget>
 		<!--
 		<widget source="Event" render="Label" position="1190,595" size="40,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" halign="right" transparent="1">
-			<convert type="EventName">SmallRating,Trimmed</convert>
+			<convert type="EventInfo">SmallRating,Trimmed</convert>
 		</widget>
 		-->
 		<widget source="Event" render="Label" position="850,625" size="315,25" backgroundColor="EPGBackground" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" transparent="1">
-			<convert type="EventName">Genre,Trimmed</convert>
+			<convert type="EventInfo">Genre,Trimmed</convert>
 		</widget>
 		<widget source="Event" render="Pixmap" pixmap="epg/fta.png" position="1175,625" size="55,25" alphatest="blend">
 			<convert type="ConfigEntryTest">config.plugins.icetv.enable_epg,True,Invert,Ignore</convert>

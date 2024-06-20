@@ -116,7 +116,7 @@
 	<screen name="FileCommanderFileViewer" title="File Commander File Viewer" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="path" position="50,80" size="1180,50" font="TextFont;20" foregroundColor="TextWaiting" valign="center" />
-		<widget name="data" position="50,140" size="1180,500" font="Console;20" />
+		<widget name="data" position="50,140" size="1180,500" font="Console;20" tabWidth="auto" />
 	</screen>
 
 	<screen name="FileCommanderImageViewer" title="File Commander Image Viewer" position="fill" flags="wfNoBorder">
@@ -282,12 +282,12 @@
 		<widget name="mediaEnd" position="775,630" size="35,20" pixmaps="icons/me_ask.png,icons/me_movielist.png,icons/me_quit.png,icons/me_pause.png,icons/me_playlist.png,icons/me_playlistquit.png,icons/me_loop.png,icons/me_rep.png" alphatest="blend" transparent="1" />
 		<eLabel text="Date:" position="830,80" size="100,25" font="InfoOtherFont;20" foregroundColor="InfoMediaFileSize" transparent="1" />
 		<widget source="mediainfo" render="Label" position="930,80" size="300,25" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" halign="right" transparent="1">
-			<convert type="EventTime">StartTime</convert>
+			<convert type="EventInfo">StartTime</convert>
 			<convert type="ClockToText">LongFullDate</convert>
 		</widget>
 		<eLabel text="Duration:" position="830,105" size="100,25" font="InfoOtherFont;20" foregroundColor="InfoDurationNow" transparent="1" />
 		<widget source="mediainfo" render="Label" position="930,105" size="300,25" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" halign="right" transparent="1">
-			<convert type="EventTime">Duration</convert>
+			<convert type="EventInfo">Duration</convert>
 			<convert type="ClockToText">AsLength</convert>
 		</widget>
 		<eLabel text="Size:" position="830,130" size="100,25" font="InfoOtherFont;20" foregroundColor="InfoMediaFileSize" transparent="1" />
@@ -360,7 +360,7 @@
 		<widget name="movie_off" position="775,630" size="35,20" pixmaps="icons/me_ask.png,icons/me_movielist.png,icons/me_quit.png,icons/me_pause.png,icons/me_playlist.png,icons/me_playlistquit.png,icons/me_loop.png,icons/me_rep.png" alphatest="blend" transparent="1" />
 		<eLabel text="Date:" position="830,80" size="100,25" font="InfoOtherFont;20" foregroundColor="InfoMediaFileSize" transparent="1" />
 		<widget source="Service" render="Label" position="930,80" size="300,25" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" halign="right" transparent="1">
-			<convert type="EventTime">StartTime</convert>
+			<convert type="EventInfo">StartTime</convert>
 			<convert type="ClockToText">LongFullDate</convert>
 		</widget>
 		<eLabel text="Duration:" position="830,105" size="100,25" font="InfoOtherFont;20" foregroundColor="InfoDurationNow" transparent="1" />
@@ -376,25 +376,25 @@
 			<convert type="MovieInfo">RecordServiceName</convert>
 		</widget>
 		<widget source="Service" render="Label" position="830,185" size="400,50" font="InfoEventFont;20" foregroundColor="InfoProgramNow" halign="center" transparent="1" valign="center">
-			<convert type="EventName">Name</convert>
+			<convert type="EventInfo">Name</convert>
 		</widget>
 		<widget source="Service" render="Label" position="830,245" size="400,340" font="InfoDescriptionFont;20" foregroundColor="InfoDetailsNow" halign="block" transparent="1">
-			<convert type="MovieInfo">FullDescription,Separated,Trimmed</convert>
+			<convert type="EventInfo">FullDescription,Separated,Trimmed</convert>
 		</widget>
 		<widget source="Service" render="Label" position="830,605" size="400,25" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" transparent="1">
-			<convert type="EventName">Genre,Trimmed</convert>
+			<convert type="EventInfo">Genre,Trimmed</convert>
 		</widget>
 		<widget source="Service" render="Pixmap" position="830,630" size="40,20" alphatest="blend">
-			<convert type="EventName">RatingIcon</convert>
+			<convert type="EventInfo">RatingIcon</convert>
 			<convert type="ValueToPixmap">Path</convert>
 		</widget>
 		<!--
 		<widget source="Service" render="Label" position="830,630" size="50,25" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
-			<convert type="EventName">SmallRating,Trimmed</convert>
+			<convert type="EventInfo">SmallRating,Trimmed</convert>
 		</widget>
 		-->
 		<widget source="Service" render="Label" position="880,630" size="350,25" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" halign="right" transparent="1">
-			<convert type="EventName">Rating,Trimmed</convert>
+			<convert type="EventInfo">Rating,Trimmed</convert>
 		</widget>
 		<widget name="DescriptionBorder" position="0,0" size="0,0" backgroundColor="ScreenBackground" />
 	</screen>
@@ -445,7 +445,7 @@
 			<convert type="ClockToText">AsLength</convert>
 		</widget>
 		<widget source="Service" render="Label" position="50,560" size="705,95" backgroundColor="InfoBackground" font="InfoDescriptionFont;20" foregroundColor="InfoDetailsNow" halign="block" transparent="1">
-			<convert type="MovieInfo">FullDescription,NotSeparated,Trimmed</convert>
+			<convert type="EventInfo">FullDescription,NotSeparated,Trimmed</convert>
 		</widget>
 		<widget name="numFolders" position="775,530" size="220,25" conditional="numFolders" font="InfoOtherFont;20" foregroundColor="InfoDiskStats" transparent="1" />
 		<widget name="numFiles" position="775,555" size="220,25" conditional="numFiles" font="InfoOtherFont;20" foregroundColor="InfoDiskStats" transparent="1" />
@@ -453,19 +453,19 @@
 		<widget name="diskSize" position="1010,555" size="220,25" conditional="diskSize" font="InfoOtherFont;20" foregroundColor="InfoDiskStats" halign="right" transparent="1" />
 		<widget name="freeDiskSpace" position="775,580" size="455,25" font="InfoOtherFont;20" foregroundColor="InfoDiskStats" halign="right" transparent="1" />
 		<widget source="Service" render="Label" position="775,605" size="400,25" font="InfoOtherFont;20" foregroundColor="InfoGenreNow" transparent="1">
-			<convert type="EventName">Genre,Trimmed</convert>
+			<convert type="EventInfo">Genre,Trimmed</convert>
 		</widget>
 		<widget source="Service" render="Pixmap" position="775,630" size="40,20" alphatest="blend">
-			<convert type="EventName">RatingIcon</convert>
+			<convert type="EventInfo">RatingIcon</convert>
 			<convert type="ValueToPixmap">Path</convert>
 		</widget>
 		<!--
 		<widget source="Service" render="Label" position="775,630" size="50,25" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" transparent="1">
-			<convert type="EventName">SmallRating,Trimmed</convert>
+			<convert type="EventInfo">SmallRating,Trimmed</convert>
 		</widget>
 		-->
 		<widget source="Service" render="Label" position="825,630" size="350,25" font="InfoOtherFont;20" foregroundColor="InfoRatingNow" halign="right" transparent="1">
-			<convert type="EventName">Rating,Trimmed</convert>
+			<convert type="EventInfo">Rating,Trimmed</convert>
 		</widget>
 		<widget name="movie_sort" position="1195,607" size="35,20" pixmaps="icons/ms_az_no.png,icons/ms_no_az.png,icons/ms_shuffle.png,icons/ms_za_on.png,icons/ms_on_za.png,icons/ms_faz.png,icons/ms_fza.png,icons/ms_rec.png,icons/ms_az_on.png,icons/ms_za_no.png,icons/ms_sl.png,icons/ms_ls.png,icons/ms_sb.png,icons/ms_bs.png,icons/ms_daz.png" alphatest="blend" transparent="1" />
 		<widget name="movie_off" position="1195,630" size="35,20" pixmaps="icons/me_ask.png,icons/me_movielist.png,icons/me_quit.png,icons/me_pause.png,icons/me_playlist.png,icons/me_playlistquit.png,icons/me_loop.png,icons/me_rep.png" alphatest="blend" transparent="1" />
