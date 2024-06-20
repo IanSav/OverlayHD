@@ -1853,7 +1853,6 @@
 
 	<screen name="Setup" title="Setup" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget name="setupimage" position="50,80" size="250,250" alphatest="blend" conditional="setupimage" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateConfig4" />
 		<panel name="ScreenTemplateFootnote4" />
 		<panel name="ScreenTemplateDescription4" />
@@ -1864,7 +1863,7 @@
 	</screen>
 
 <!--
- |	When the menu list and help text variables are rationalized the the Config
+ |	When the menu list and help text variables are rationalized the Config
  |	and Help blocks can be simplified and folded into the base templates.
  +-->
 
