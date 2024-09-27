@@ -618,9 +618,9 @@
 
 <!-- Quick Subtitles Menu Screen -->
 
-	<screen name="QuickSubtitlesConfigMenu" title="Quick Subtitle Settings" position="62,92" size="500,345">
-		<widget name="config" position="5,5" size="490,300" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showNever" />
-		<widget name="videofps" position="5,315" size="490,25" backgroundColor="MenuBackground" font="MenuFont;20" foregroundColor="MenuText" valign="center" />
+	<screen name="QuickSubtitlesConfigMenu" title="Quick Subtitle Settings" position="62,92" size="500,335">
+		<widget name="config" position="0,0" size="500,300" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" entryFont="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" scrollbarMode="showNever" valueFont="MenuFont;20" />
+		<widget name="videofps" position="0,310" size="500,25" backgroundColor="MenuBackground" font="MenuFont;20" foregroundColor="MenuText" horizontalAlignment="center" verticalAlignment="center" />
 		<widget name="HelpWindow" position="0,0" size="0,0" conditional="HelpWindow" transparent="1" />
 		<applet type="onLayoutFinish">
 try:
