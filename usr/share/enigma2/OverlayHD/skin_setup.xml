@@ -337,31 +337,28 @@
 
 	<screen name="ServiceScan" title="Service Scan" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget source="FrontendInfo" render="Pixmap" pixmap="icons/scan-s.png" position="170,200" size="64,64" alphatest="blend" transparent="1">
+		<widget source="FrontendInfo" render="Pixmap" pixmap="icons/scan-s.png" position="170,570" size="64,64" alphatest="blend" transparent="1">
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">0,0</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="FrontendInfo" render="Pixmap" pixmap="icons/scan-c.png" position="170,200" size="64,64" alphatest="blend" transparent="1">
+		<widget source="FrontendInfo" render="Pixmap" pixmap="icons/scan-c.png" position="170,570" size="64,64" alphatest="blend" transparent="1">
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">1,1</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget source="FrontendInfo" render="Pixmap" pixmap="icons/scan-t.png" position="170,200" size="64,64" alphatest="blend" transparent="1">
+		<widget source="FrontendInfo" render="Pixmap" pixmap="icons/scan-t.png" position="170,570" size="64,64" alphatest="blend" transparent="1">
 			<convert type="FrontendInfo">TYPE</convert>
-			<convert type="ValueRange">2,2</convert>
+			<convert type="ValueRange">2,3</convert>
 			<convert type="ConditionalShowHide" />
 		</widget>
-		<widget name="network" position="50,290" size="300,25" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" halign="center" transparent="1" />
-		<widget name="scan_progress" position="50,325" size="300,15" backgroundColor="ProgressBackground" borderColor="ProgressBorder" borderWidth="2" foregroundColor="ProgressColor" transparent="1" />
-		<widget name="transponder" position="50,350" size="300,25" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" halign="center" transparent="1" />
-		<widget name="scan_state" position="50,400" size="300,45" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" />
-		<widget name="pass" position="50,450" size="300,25" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" />
-		<eLabel text="Services found:" position="400,80" size="830,35" backgroundColor="TextBackground" font="DescriptionFont;25" foregroundColor="Text" transparent="1" />
-		<eLabel position="400,113" size="830,2" backgroundColor="Pinstripe" />
-		<widget name="servicelist" position="400,115" size="830,400" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" selection="0" transparent="0" />
+		<widget name="servicelist" position="400,80" size="830,450" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" selection="0" transparent="0" />
+		<widget name="pass" position="410,550" size="400,25" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" />
+		<widget name="scan_progress" position="820,550" size="400,15" backgroundColor="ProgressBackground" borderColor="ProgressBorder" borderWidth="2" foregroundColor="ProgressColor" />
+		<widget name="network" position="410,575" size="810,25" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" />
+		<widget name="transponder" position="410,600" size="810,25" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" />
+		<widget name="scan_state" position="410,625" size="810,25" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" />
 		<panel name="ScreenTemplateFrame830x120" />
-		<widget name="done_text" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" valign="center" />
 	</screen>
 
 <!-- MENU > Setup > Tuners > Cable Scan -->
