@@ -569,6 +569,51 @@
 		<widget name="ScrollLabel" position="400,80" size="830,550" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" selection="0" transparent="1" />
 	</screen>
 
+<!-- Device Manager Screen -->
+
+	<screen name="DeviceManager" title="Device Manager" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<widget source="devicelist" render="Listbox" position="400,80" size="830,510">
+			<templates>
+				<template name="Default" fonts="Regular;20,Regular;25" itemHeight="30">
+					<mode name="default">
+						<pixmap index="Image" position="10,0" size="30,30" alpha="blend" scale="centerScaled" />
+						<text index="PartitionSeparator" position="16,6" size="30,30" font="1" verticalAlignment="center" />
+						<text index="Device" position="50,0" size="120,30" font="0" horizontalAlignment="left" verticalAlignment="center" />
+						<text index="DeviceIndent" position="70,0" size="100,30" font="0" horizontalAlignment="left" verticalAlignment="center" />
+						<text index="Description" position="190,0" size="400,30" font="0" horizontalAlignment="left" verticalAlignment="center" />
+						<text index="Size" position="630,0" size="180,30" font="0" horizontalAlignment="right" verticalAlignment="center" />
+					</mode>
+				</template>
+			</templates>
+		</widget>
+		<panel name="ScreenTemplateDescription4" />
+	</screen>
+
+	<!--
+	<screen name="MountManager" title="Mount Manager" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<widget source="devices" render="Listbox" position="400,80" size="830,510">
+			<templates>
+				<template name="Default" fonts="Regular;25,Regular;20" itemHeight="85" itemWidth="830">
+					<mode name="default">
+						<pixmap index="DevicePixmap" position="10,5" size="75,75" alpha="blend" scale="centerScaled" />
+						<text index="DeviceName" position="100,0" size="860,35" font="0" horizontalAlignment="left" verticalAlignment="center" />
+						<text index="DeviceLabel" position="120,35" size="150,25" font="1" horizontalAlignment="left" verticalAlignment="center" />
+						<text index="DevicePath" position="270,35" size="170,25" font="1" horizontalAlignment="right" verticalAlignment="center" />
+						<text index="MountLabel" position="480,35" size="150,25" font="1" horizontalAlignment="left" verticalAlignment="center" />
+						<text index="MountPoint" position="630,35" size="170,25" font="1" horizontalAlignment="right" verticalAlignment="center" />
+						<text index="SizeLabel" position="120,60" size="150,25" font="1" horizontalAlignment="left" verticalAlignment="center" />
+						<text index="DeviceSize" position="270,60" size="170,25" font="1" horizontalAlignment="right" verticalAlignment="center" />
+						<text index="FileSystemLabel" position="480,60" size="150,25" font="1" horizontalAlignment="left" verticalAlignment="center" />
+						<text index="FileSystem" position="630,60" size="170,25" font="1" horizontalAlignment="right" verticalAlignment="center" />
+					</mode>
+				</template>
+			</templates>
+		</widget>
+	</screen>
+	-->
+
 <!-- AUDIO - Audio / Subtitle Selection Pop Up -->
 
 	<screen name="AudioSelection" title="Select Audio Track" position="center,center" size="610,305">
