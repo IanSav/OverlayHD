@@ -50,38 +50,30 @@
 		<panel name="ScreenTemplate" />
 		<eLabel position="639,66" size="2,595" backgroundColor="Pinstripe" />
 		<widget source="headleft" render="Listbox" position="50,80" size="580,75" backgroundColor="TextBackground" foregroundColor="TextWaiting" scrollbarMode="showNever" selection="0">
-			<convert type="TemplatedMultiContent">
-				{
-				"template":
-					[
-					MultiContentEntryText(pos=(0, 0), size=(580, 50), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text=25),  # Index 25 is the path with split for current/parent.
-					MultiContentEntryText(pos=(0, 50), size=(150, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=2),  # Index 2 is the octal (symbolic) mode.
-					MultiContentEntryText(pos=(160, 50), size=(105, 25), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=11),  # Index 11 is the scaled size.
-					MultiContentEntryText(pos=(290, 50), size=(290, 25), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=13),  # Index 13 is the modification time.
-					],
-				"fonts": [parseFont("TextFont;20")],
-				"itemHeight": 75,
-				"selectionEnabled": False
-				}
-			</convert>
+			<templates>
+				<template name="Default" fonts="TextFont;20" itemHeight="75">
+					<mode name="default">
+						<text index="CurrentParentDirectory" position="0,0" size="580,50" font="0" horizontalAlignment="left" verticalAlignment="center" wrap="true" />
+						<text index="ModeBoth" position="0,50" size="150,25" font="0" horizontalAlignment="left" verticalAlignment="center" />
+						<text index="SizeScaled" position="160,50" size="105,25" font="0" horizontalAlignment="right" verticalAlignment="center" />
+						<text index="TimeModified" position="290,50" size="290,25" font="0" horizontalAlignment="right" verticalAlignment="center" />
+					</mode>
+				</template>
+			</templates>
 		</widget>
 		<widget name="listleft" position="50,165" size="580,450" backgroundColor="TextBackground" backgroundColorSelected="MenuSelected" foregroundColor="Text" foregroundColorSelected="MenuTextSelected" />
 		<widget name="sortleft" position="50,630" size="580,25" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="TextWaiting" halign="center" valign="center" />
 		<widget source="headright" render="Listbox" position="650,80" size="580,75" backgroundColor="TextBackground" foregroundColor="TextWaiting" scrollbarMode="showNever" selection="0">
-			<convert type="TemplatedMultiContent">
-				{
-				"template":
-					[
-					MultiContentEntryText(pos=(0, 0), size=(580, 50), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER | RT_WRAP, text=25),  # Index 25 is the path with split for current/parent.
-					MultiContentEntryText(pos=(0, 50), size=(150, 25), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=2),  # Index 2 is the octal (symbolic) mode.
-					MultiContentEntryText(pos=(160, 50), size=(105, 25), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=11),  # Index 11 is the scaled size.
-					MultiContentEntryText(pos=(290, 50), size=(290, 25), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=13),  # Index 13 is the modification time.
-					],
-				"fonts": [parseFont("TextFont;20")],
-				"itemHeight": 75,
-				"selectionEnabled": False
-				}
-			</convert>
+			<templates>
+				<template name="Default" fonts="TextFont;20" itemHeight="75">
+					<mode name="default">
+						<text index="CurrentParentDirectory" position="0,0" size="580,50" font="0" horizontalAlignment="left" verticalAlignment="center" wrap="true" />
+						<text index="ModeBoth" position="0,50" size="150,25" font="0" horizontalAlignment="left" verticalAlignment="center" />
+						<text index="SizeScaled" position="160,50" size="105,25" font="0" horizontalAlignment="right" verticalAlignment="center" />
+						<text index="TimeModified" position="290,50" size="290,25" font="0" horizontalAlignment="right" verticalAlignment="center" />
+					</mode>
+				</template>
+			</templates>
 		</widget>
 		<widget name="listright" position="650,165" size="580,450" backgroundColor="TextBackground" backgroundColorSelected="MenuSelected" foregroundColor="Text" foregroundColorSelected="MenuTextSelected" />
 		<widget name="sortright" position="650,630" size="580,25" backgroundColor="TextBackground" font="TextFont;20" foregroundColor="TextWaiting" halign="center" valign="center" />
@@ -91,7 +83,6 @@
 
 	<screen name="FileCommanderContextMenu" title="File Commander - Context Menu" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/browser.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateMenu4" />
 		<panel name="ScreenTemplateDescription4" />
 	</screen>
@@ -134,125 +125,6 @@
 		<widget name="path" position="50,80" size="1020,50" font="TextFont;20" foregroundColor="TextWaiting" valign="center" />
 		<widget name="location" position="1080,105" size="150,25" font="TextFont;20" foregroundColor="TextWaiting" halign="right" valign="center" />
 		<widget name="data" position="50,140" size="1180,500" font="Console;20" tabWidth="auto" />
-	</screen>
-
-	<screen name="FileCommanderScreen" title="File Commander" position="fill" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<eLabel position="639,66" size="2,595" backgroundColor="Pinstripe" />
-		<widget name="list_left_head" position="50,80" size="580,65" backgroundColor="TextBackground" conditional="list_left_head" font="TextFont;20" foregroundColor="Text" valign="center" />
-		<widget name="list_left_head1" position="50,80" size="580,40" backgroundColor="TextBackground" conditional="list_left_head1" font="TextFont;20" foregroundColor="Text" valign="center" />
-		<widget source="list_left_head2" render="Listbox" position="50,120" size="580,25" backgroundColor="TextBackground" conditional="list_left_head2" foregroundColor="Text" scrollbarMode="showNever" selection="0">
-			<convert type="TemplatedMultiContent">
-				{
-				"template":
-					[
-					MultiContentEntryText(pos=(0, 0), size=(150, 20), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=2),  # Octal (symbolic) mode.
-					MultiContentEntryText(pos=(160, 0), size=(290, 20), font=0, flags=RT_HALIGN_CENTER | RT_VALIGN_CENTER, text=13),  # Modification time.
-					MultiContentEntryText(pos=(475, 0), size=(105, 20), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=11)  # Scaled size.
-					],
-				"fonts": [parseFont("TextFont;20")],
-				"itemHeight": 25,
-				"selectionEnabled": False
-				}
-			</convert>
-		</widget>
-		<widget name="list_left" position="50,150" size="580,475" backgroundColor="TextBackground" backgroundColorSelected="MenuSelected" foregroundColor="Text" foregroundColorSelected="MenuTextSelected" />
-		<widget name="sort_left" position="50,630" size="580,25" backgroundColor="TextBackground" conditional="sort_left" font="TextFont;20" foregroundColor="Text" halign="center" valign="center" />
-		<widget name="list_right_head" position="650,80" size="580,65" backgroundColor="TextBackground" conditional="list_right_head" font="TextFont;20" foregroundColor="Text" valign="center" />
-		<widget name="list_right_head1" position="650,80" size="580,40" backgroundColor="TextBackground" conditional="list_right_head1" font="TextFont;20" foregroundColor="Text" valign="center" />
-		<widget source="list_right_head2" render="Listbox" position="650,120" size="580,25" backgroundColor="TextBackground" conditional="list_right_head2" foregroundColor="Text" scrollbarMode="showNever" selection="0">
-			<convert type="TemplatedMultiContent">
-				{
-				"template":
-					[
-					MultiContentEntryText(pos=(0, 0), size=(150, 20), font=0, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER, text=2),  # Octal (symbolic) mode.
-					MultiContentEntryText(pos=(160, 0), size=(290, 20), font=0, flags=RT_HALIGN_CENTER | RT_VALIGN_CENTER, text=13),  # Modification time.
-					MultiContentEntryText(pos=(475, 0), size=(105, 20), font=0, flags=RT_HALIGN_RIGHT | RT_VALIGN_CENTER, text=11)  # Scaled size.
-					],
-				"fonts": [parseFont("TextFont;20")],
-				"itemHeight": 25,
-				"selectionEnabled": False
-				}
-			</convert>
-		</widget>
-		<widget name="list_right" position="650,150" size="580,475" backgroundColor="TextBackground" backgroundColorSelected="MenuSelected" foregroundColor="Text" foregroundColorSelected="MenuTextSelected" />
-		<widget name="sort_right" position="650,630" size="580,25" backgroundColor="TextBackground" conditional="sort_right" font="TextFont;20" foregroundColor="Text" halign="center" valign="center" />
-	</screen>
-
-	<screen name="FileCommanderScreenFileSelect" title="File Commander - File Selection" position="fill" flags="wfNoBorder">
-		<panel name="FileCommanderScreen" />
-	</screen>
-
-	<screen name="FileCommanderFileStatInfo" title="File Commander - File/Directory Information" position="fill" flags="wfNoBorder">
-		<panel name="FileCommanderInformation" />
-	</screen>
-	
-	<!-- This screen is now handled by the built in Setup screen!
-	<screen name="FileCommanderSetup" title="File Commander Settings" position="fill" flags="wfNoBorder">
-		<panel name="Setup" />
-	</screen>
-
-	<screen name="FileCommanderConfigScreen" title="File Commander Settings" position="fill" flags="wfNoBorder">
-		<panel name="Setup" />
-	</screen>
-	-->
-
-	<!-- No longer used!
-		s, w, h = 30, getDesktop(0).size().width(), getDesktop(0).size().height()
-		(s, s, w - (s * 2), h - (s * 2), s + 5, s + 2, s + 25, s + 2, s + 45, s, w - (s * 2) - 50)
-	<screen name="ImageViewer" title="File Commander - Image Viewer" position="fill" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<eLabel position="0,0" size="1280,720" backgroundColor="Black" />
-		<widget name="image" position="%d,%d" size="%d,%d" alphatest="blend" zPosition="+1" />
-		<widget name="status" position="%d,%d" size="20,20" pixmap="icons/record.png" alphatest="blend" transparent="1" zPosition="+1" />
-		<widget name="icon" position="%d,%d" size="20,20" pixmap="icons/ico_mp_play.png" alphatest="blend" transparent="1" zPosition="+1" />
-		<widget source="message" render="Label" position="%d,%d" size="%d,25" font="Regular;20" foregroundColor="#0038FF48" noWrap="1" transparent="1" zPosition="+1" />
-	</screen>
-	-->
-
-	<screen name="vEditor" title="File Commander - Editor" position="fill" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateButtonHelp" />
-		<widget name="list_head" position="50,80" size="1180,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" transparent="1" />
-		<widget name="filedata" position="50,115" size="1180,525" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" transparent="0" />
-	</screen>
-
-	<screen name="ArchiverMenuScreen" title="File Commander - Archiver" position="fill" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/storage.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<panel name="ScreenTemplateListLeftHead" />
-		<panel name="ScreenTemplateListLeftMenu4" />
-		<panel name="ScreenTemplateUnpacking4" />
-	</screen>
-
-	<screen name="GunzipMenuScreen" title="File Commander - Archiver" position="fill" flags="wfNoBorder">
-		<panel name="ArchiverMenuScreen" />
-	</screen>
-
-	<screen name="ipkMenuScreen" title="File Commander - Archiver" position="fill" flags="wfNoBorder">
-		<panel name="ArchiverMenuScreen" />
-	</screen>
-
-	<screen name="RarMenuScreen" title="File Commander - Archiver" position="fill" flags="wfNoBorder">
-		<panel name="ArchiverMenuScreen" />
-	</screen>
-
-	<screen name="TarMenuScreen" title="File Commander - Archiver" position="fill" flags="wfNoBorder">
-		<panel name="ArchiverMenuScreen" />
-	</screen>
-
-	<screen name="UnzipMenuScreen" title="File Commander - Archiver" position="fill" flags="wfNoBorder">
-		<panel name="ArchiverMenuScreen" />
-	</screen>
-
-	<screen name="ArchiverInfoScreen" title="File Commander - Archiver" position="fill" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<panel name="ScreenTemplateListLeftHead" />
-		<panel name="ScreenTemplateListLeftData0" />
-	</screen>
-
-	<screen name="UnpackInfoScreen" title="File Commander - Archiver" position="fill" flags="wfNoBorder">
-		<panel name="ArchiverInfoScreen" />
 	</screen>
 
 <!-- MEDIA - Media Selection Screen -->

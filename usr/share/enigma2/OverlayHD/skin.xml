@@ -423,12 +423,12 @@
 		<parameter name="EPGSingleColumnScales" value="5.7,6.0,1.5" />
 		<parameter name="EPGSingleColumnSpecs" value="0,125,5,135,20" />
 		-->
-		<parameter name="FileListIcon" value="15,1,25,23" />
+		<parameter name="FileListIcon" value="15,1,23,23" />
 		<parameter name="FileListName" value="55,0,755,25" />
 		<parameter name="FileListBookmark" value="10,0,820,25" />
 		<parameter name="FileListMultiName" value="90,0,720,25" />
-		<parameter name="FileListMultiIcon" value="50,1,25,23" />
-		<parameter name="FileListMultiLock" value="15,1,25,23" />
+		<parameter name="FileListMultiIcon" value="50,1,23,23" />
+		<parameter name="FileListMultiLock" value="15,1,23,23" />
 		<parameter name="FrontendInfoColors" value="TunerCurrent,TunerRecording,TunerIdle" />
 		<parameter name="HelpMenuListHlp" value="0,0,900,25" />
 		<parameter name="HelpMenuListExtHlp0" value="0,0,900,35" />
@@ -494,6 +494,7 @@
 		<!-- <screen key="DebugInformation" image="" /> -->
 		<screen key="DeviceInformation" image="menus/backup.png" />
 		<screen key="DistributionInformation" image="menus/information.png" />
+		<screen key="FileCommanderContextMenu" image="menus/browser.png" />
 		<screen key="GeolocationInformation" image="menus/information.png" />
 		<screen key="HistoryZapSelector" image="menus/tv_zap_history.png" />
 		<screen key="LocaleSelection" image="menus/software_manager_setup.png" />
@@ -654,9 +655,9 @@
 		<color name="ListboxBackgroundSelected" color="MenuSelected" />
 		<color name="ListboxForegroundSelected" color="MenuTextSelected" />
 		<color name="ListboxBackgroundMarked" color="MenuBackground" />
-		<color name="ListboxForegroundMarked" color="MenuText" />
-		<color name="ListboxBackgroundMarkedSelected" color="MenuSelected" />
-		<color name="ListboxForegroundMarkedSelected" color="MenuTextSelected" />
+		<color name="ListboxForegroundMarked" color="MenuMarked" />
+		<color name="ListboxBackgroundMarkedSelected" color="MenuBackground" />
+		<color name="ListboxForegroundMarkedSelected" color="MenuMarkedSelected" />
 		<color name="ScrollbarBackground" color="ScreenBackground" />
 		<color name="ScrollbarForeground" color="White" />
 		<color name="ScrollbarBorder" color="Grey" />
