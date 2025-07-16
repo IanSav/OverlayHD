@@ -512,6 +512,7 @@
 		<!-- <screen key="SystemInformation" image="" /> -->
 		<screen key="TranslationInformation" image="menus/information.png" />
 		<screen key="TunerInformation" image="menus/information.png" />
+		<screen key="XMLHelp" image="menus/information.png" />
 		<screen key="ZapHistoryBrowser" image="menus/tv_zap_history.png" />
 	</screens>
 
@@ -1706,10 +1707,11 @@
 		<widget name="longshift_key1" position="400,620" size="830,30" backgroundColor="TextBackground" font="HelpFont;25" foregroundColor="HelpPress" transparent="1" valign="center" />
 	</screen>
 
-	<screen name="MPHelp" title="XML Help" position="fill" flags="wfNoBorder">
+	<screen name="XMLHelp" title="XML Help" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/help.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<panel name="ScreenTemplateHelp0" />
+		<widget source="heading" render="Label" position="400,80" size="830,35" backgroundColor="TextBackground" font="Regular;25" foregroundColor="TextWaiting" transparent="1" verticalAlignment="center" />
+		<widget name="text" position="400,125" size="830,515" backgroundColor="TextBackground" conditional="text" font="Regular;20" foregroundColor="Text" transparent="1" />
+		<widget name="detailtext" position="400,125" size="830,515" backgroundColor="TextBackground" conditional="detailtext" font="Regular;20" foregroundColor="Text" transparent="1" />
 	</screen>
 
 <!-- Panel To Display The Remote Control (154 x 500 pixels) -->
@@ -1920,10 +1922,6 @@
 
 	<screen name="ScreenTemplateFileList0">
 		<widget name="filelist" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="Regular;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" transparent="0" />
-	</screen>
-
-	<screen name="ScreenTemplateHelp0">
-		<widget name="detailtext" position="400,80" size="830,560" backgroundColor="TextBackground" font="Regular;25" foregroundColor="Text" transparent="1" />
 	</screen>
 
 	<screen name="ScreenTemplateListLeftData0">

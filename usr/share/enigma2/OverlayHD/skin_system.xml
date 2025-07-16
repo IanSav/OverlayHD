@@ -898,24 +898,14 @@ except Exception:
 
 <!-- AutoTimer Plugin Screens -->
 
+	<!-- The AutoTimeHelp and AutoTimerFAQ screens use the global XMLHelp screen! -->
+
 	<screen name="AutoTimerOverview" title="Auto Timer Overview" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateButtonMenu" />
 		<panel name="ScreenTemplateButtonHelp" />
 		<ePixmap pixmap="menus/timer.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<panel name="ScreenTemplateEntriesTall0" />
-	</screen>
-
-	<screen name="AutoTimerHelp" title="Auto Timer Help" position="fill" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/timer.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<panel name="ScreenTemplateHelp0" />
-	</screen>
-
-	<screen name="AutoTimerFAQ" title="Auto Timer Help" position="fill" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<ePixmap pixmap="menus/timer.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<panel name="ScreenTemplateHelp0" />
 	</screen>
 
 	<screen name="AutoTimerPreview" title="Auto Timer Overview" position="fill" flags="wfNoBorder">
