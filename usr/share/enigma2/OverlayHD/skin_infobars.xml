@@ -316,30 +316,30 @@
 
 	<!-- This panel is shown separated from MoviePlayer when "MENU > Setup > System > GUI Settings > Show PVR status in Movie Player infobar" is set to "No". -->
 
-	<screen name="PVRState" position="10,10" size="125,65" backgroundColor="InfobarMediaBackground" flags="wfNoBorder">
-		<widget name="statusicon" pixmaps="icons/play.png,icons/pause.png,icons/stop.png,icons/forward.png,icons/backward.png,icons/slow.png" position="10,10" size="20,20" alphatest="blend" transparent="1" />
-		<widget name="speed" position="35,10" size="70,20" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TimeShiftData" transparent="1" />
+	<screen name="PVRState" position="center,10" size="700,40" backgroundColor="InfobarMediaBackground" flags="wfNoBorder">
+		<widget name="statusicon" position="10,10" size="20,20" pixmaps="icons/play.png,icons/pause.png,icons/stop.png,icons/forward.png,icons/backward.png,icons/slow.png" alphatest="blend" />
+		<widget name="speed" position="35,10" size="70,20" font="TextFont;20" foregroundColor="TimeShiftData" transparent="1" verticalAlignment="center" />
 		<!-- The eventname always appears to be blank?!?! -->
-		<widget name="eventname" position="10,35" size="105,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="TimeShiftData" halign="center" />
+		<widget name="eventname" position="120,10" size="e-130,20" font="TextFont;17" foregroundColor="TimeShiftData" noWrap="1" transparent="1" verticalAlignment="center" />
 		<!-- This is a text version of the statusicon and speed information.  Already displayed so not needed here but must be defined to avoid skin errors!  -->
-		<widget name="state" position="0,0" size="0,0" font="Regular;20" transparent="1" />
+		<widget name="state" position="0,0" size="0,0" font="TextFont;20" foregroundColor="TimeShiftData" />
 	</screen>
 
 <!-- OK - Main TV InfoBar Timeshift Status -->
 
 	<screen name="TimeshiftState" position="center,10" size="700,80" backgroundColor="InfobarMediaBackground" flags="wfNoBorder">
 		<widget name="statusicon" position="10,10" size="20,20" pixmaps="icons/play.png,icons/pause.png,icons/stop.png,icons/forward.png,icons/backward.png,icons/slow.png" alphatest="blend" />
-		<widget name="speed" position="35,10" size="70,20" font="TextFont;20" foregroundColor="TimeShiftData" />
-		<widget source="session.CurrentService" render="Label" position="center,10" size="100,20" font="TextFont;20" foregroundColor="TimeShiftData" horizontalAlignment="center">
+		<widget name="speed" position="35,10" size="70,20" font="TextFont;20" foregroundColor="TimeShiftData" transparent="1" verticalAlignment="center" />
+		<widget source="session.CurrentService" render="Label" position="center,10" size="100,20" font="TextFont;20" foregroundColor="TimeShiftData" horizontalAlignment="center" transparent="1">
 			<convert type="ServicePosition">Remaining</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="e-110,10" size="100,20" font="TextFont;20" foregroundColor="TimeShiftData" horizontalAlignment="right">
+		<widget source="session.CurrentService" render="Label" position="e-110,10" size="100,20" font="TextFont;20" foregroundColor="TimeShiftData" horizontalAlignment="right" transparent="1">
 			<convert type="ServicePosition">Length</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Progress" position="10,35" size="e-20,6" backgroundColor="TimeShiftBackground" borderColor="TimeShiftBorder" borderWidth="1" foregroundColor="TimeShiftColor">
 			<convert type="ServicePosition">Position</convert>
 		</widget>
-		<widget name="eventname" position="10,45" size="e-20,25" font="TextFont;20" foregroundColor="TimeShiftData" noWrap="1" />
+		<widget name="eventname" position="10,45" size="e-20,25" font="TextFont;20" foregroundColor="TimeShiftData" noWrap="1" transparent="1" verticalAlignment="center" />
 		<!-- This is a text version of the statusicon and speed information.  Already displayed so not needed here but must be defined to avoid skin errors!  -->
 		<widget name="state" position="0,0" size="0,0" font="TextFont;20" foregroundColor="TimeShiftData" />
 		<!-- These are position pointers.  Already displayed as a progress bar but must be defined so show it outside of the displayed window.
@@ -352,7 +352,7 @@
 <!-- OK / Media - SeekBar -->
 
 	<screen name="SeekBar" position="center,10" size="700,40" backgroundColor="InfobarMediaBackground" flags="wfNoBorder">
-		<widget name="target" position="10,10" size="100,20" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" horizontalAlignment="right" verticalAlignment="center" />
+		<widget name="target" position="10,10" size="100,20" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" horizontalAlignment="right" transparent="1" verticalAlignment="center" />
 		<!--
 		<widget source="session.CurrentService" render="PositionGauge" position="120,15" size="460,20" foregroundColor="InfoProgressBackground" pointer="sliders/position_pointer.png:545,0">
 			<convert type="ServicePosition">Gauge</convert>
@@ -365,12 +365,12 @@
 			<convert type="ServicePosition">Position</convert>
 		</widget>
 		<widget name="cursor" position="0,0" size="7,20" pixmap="sliders/position_arrow.png" alphatest="blend" zPosition="+2" />
-		<widget name="length" position="590,10" size="100,20" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" verticalAlignment="center" />
+		<widget name="length" position="590,10" size="100,20" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" transparent="1" verticalAlignment="center" />
 	</screen>
 
 	<!-- This version of the Seekbar is a workaround to avoid the hard coded relationship between the cursor and progress bar (size and location)! -->
 	<screen name="Seekbar" position="center,10" size="570,40" backgroundColor="InfobarMediaBackground" flags="wfNoBorder">
-		<widget name="time" position="28,10" size="100,20" font="InfoTimeFont;20" horizontalAlignment="right" verticalAlignment="center" />
+		<widget name="time" position="28,10" size="100,20" font="InfoTimeFont;20" horizontalAlignment="right" transparent="1" verticalAlignment="center" />
 		<!--
 		<widget source="session.CurrentService" render="PositionGauge" position="148,10" size="272,20" foregroundColor="MediumBlue" pointer="sliders/position_pointer.png:545,0">
 			<convert type="ServicePosition">Gauge</convert>
@@ -383,7 +383,7 @@
 			<convert type="ServicePosition">Position</convert>
 		</widget>
 		<widget name="cursor" position="0,0" size="7,20" pixmap="sliders/position_arrow.png" alphatest="blend" zPosition="+2" />
-		<widget source="session.CurrentService" render="Label" position="440,10" size="100,20" font="InfoTimeFont;20" verticalAlignment="center">
+		<widget source="session.CurrentService" render="Label" position="440,10" size="100,20" font="InfoTimeFont;20" transparent="1" verticalAlignment="center">
 			<convert type="ServicePosition">Length</convert>
 		</widget>
 	</screen>
