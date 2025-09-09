@@ -61,6 +61,7 @@
 		<color name="LightGrey" value="#00d3d3d3" />
 		<color name="LightRed" value="#00ff2525" />
 		<color name="LightSlateBlue" value="#006565ff" />
+		<color name="LimeGreen" value="#0032cd32" />
 		<color name="Magenta" value="#00ff00ff" />
 		<color name="Maroon" value="#00800000" />
 		<color name="MediumBlue" value="#000000cd" />
@@ -233,6 +234,8 @@
 		<color name="KeyYellow" value="ButtonYellow" />
 		<color name="MenuBackground" value="ScreenBackground" />
 		<color name="MenuDisabled" value="Grey" />
+		<color name="MenuMarked" value="EgyptianBlue" />
+		<color name="MenuMarkedSelected" value="LightSlateBlue" />
 		<color name="MenuSelected" value="DodgerBlue" />
 		<color name="MenuSelectedMove" value="OrangeRed" />
 		<color name="MenuText" value="White" />
@@ -493,13 +496,13 @@
 		<!-- <screen key="CommitInformation" image="" /> -->
 		<!-- <screen key="DebugInformation" image="" /> -->
 		<screen key="DeviceInformation" image="menus/backup.png" />
+		<screen key="DeviceManager" image="menus/browser_setup.png" />
 		<screen key="DistributionInformation" image="menus/information.png" />
 		<screen key="FileCommanderContextMenu" image="menus/browser.png" />
 		<screen key="GeolocationInformation" image="menus/information.png" />
 		<screen key="HistoryZapSelector" image="menus/tv_zap_history.png" />
 		<screen key="LocaleSelection" image="menus/software_manager_setup.png" />
 		<screen key="MemoryInformation" image="menus/browser.png" />
-		<screen key="DeviceManager" image="menus/browser_setup.png" />
 		<screen key="MultiBootInformation" image="menus/information.png" />
 		<screen key="NetworkInformation" image="menus/radio.png" />
 		<screen key="PictureInformation" image="menus/information.png" />
