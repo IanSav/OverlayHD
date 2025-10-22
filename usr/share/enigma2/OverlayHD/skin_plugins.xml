@@ -1094,6 +1094,36 @@
 		<widget name="text" position="50,80" size="300,25" font="Regular;20" transparent="1" valign="center" />
 	</screen>
 
+<!-- Pluto TV Plugin -->
+
+	<screen name="PlutoTV" title="Pluto TV" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<widget name="loading" position="50,80" size="1180,570" font="TextFont;40" horizontalAlignment="center" verticalAlignment="center" zPosition="1" />
+		<widget source="menu" render="Listbox" position="50,80" size="400,510" itemHeight="30" transparent="1">
+			<templates>
+				<template name="Default" fonts="TextFont;20" itemHeight="30" itemWidth="440">
+					<mode name="default">
+						<pixmap index="Icon" position="0,0" size="30,30" alpha="blend" padding="5" scale="centerScaled" />
+						<text index="Name" position="30,0" size="310,30" font="0" horizontalAlignment="left" padding="5,0" verticalAlignment="center" />
+						<text index="Count" position="340,0" size="60,30" autoAlign="1" font="0" horizontalAlignment="right" padding="5,0,10,0" verticalAlignment="center" />
+					</mode>
+				</template>
+			</templates>
+		</widget>
+		<widget name="name" position="460,80" size="770,35" font="TextFont;25" foregroundColor="TextWaiting" horizontalAlignment="center" noWrap="1" verticalAlignment="center" />
+		<widget name="poster" position="460,125" size="299,435" alphatest="blend" />
+		<!-- The backgroundColor needs to be specified, as #00000000, because of an erroneous background color bleed from the last background color used in a previously drawn widget! -->
+		<widget name="details" position="770,125" size="460,570" backgroundColor="#00000000" font="TextFont;20" scrollText="direction=top,mode=bounce,startDelay=2500,stepSize=1,stepDelay=60,endDelay=2500,repeat=-1" transparent="1" />
+		<widget name="footnote" position="50,615" size="1180,25" font="TextFont;20" foregroundColor="TextWaiting" horizontalAlignment="center" noWrap="1" verticalAlignment="center" />
+	</screen>
+
+	<screen name="PlutoUpdate" title="Pluto TV Update" position="center,50" size="620,100" flags="wfNoBorder" ignoreWidgets="key_red,key_help">
+		<widget name="action" position="10,10" size="e-20,25" font="TextFont;20" noWrap="1" transparent="1" verticalAlignment="center" />
+		<widget name="progress" position="10,39" size="e-90,12" backgroundColor="#00333333" borderColor="#0000C000" borderWidth="1" foregroundColor="#0000C000" />
+		<widget name="percentage" position="e-90,35" size="70,20" font="TextFont;20" horizontalAlignment="right" transparent="1" verticalAlignment="center" />
+		<widget name="status" position="10,65" size="e,25" font="TextFont;20" noWrap="1" transparent="1" verticalAlignment="center" />
+	</screen>
+
 <!-- Shoot Your Screen Plugin -->
 
 	<!-- This screen is not compliant with current Enigma2 button or Setup standards! -->

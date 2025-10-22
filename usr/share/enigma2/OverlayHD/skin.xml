@@ -549,6 +549,7 @@
 		<menu key="osd_setup" image="menus/tv_setup.png" />
 		<menu key="osd_menu" image="menus/tv_setup.png" />
 		<menu key="plugin_selection" image="menus/plugins.png" />
+		<menu key="plutotv" image="menus/plutotv.png" />
 		<menu key="receiver_info_screen" image="menus/information.png" />
 		<menu key="restart" image="menus/reboot.png" />
 		<menu key="restart_enigma" image="menus/restart.png" />
