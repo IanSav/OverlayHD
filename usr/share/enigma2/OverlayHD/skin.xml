@@ -852,25 +852,8 @@
 	</screen>
 
 	<screen name="ScreenTemplateButtonRedBox">
-		<eLabel position="0,0" size="225,2" backgroundColor="KeyRed" objectTypes="key_red,Button,Label" />
-		<eLabel position="0,34" size="225,2" backgroundColor="KeyRed" objectTypes="key_red,Button,Label" />
-		<eLabel position="0,0" size="2,35" backgroundColor="KeyRed" objectTypes="key_red,Button,Label" />
-		<eLabel position="224,0" size="2,35" backgroundColor="KeyRed" objectTypes="key_red,Button,Label" />
-		<!-- eRectangle position="0,0" size="225,34" borderColor="KeyRed" borderWidth="2" objectTypes="key_red,Button,Label" / -->
-		<widget source="key_red" render="Label" position="0,0" size="225,2" backgroundColor="KeyRed" foregroundColor="KeyRed" objectTypes="key_red,StaticText">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="key_red" render="Label" position="0,34" size="225,2" backgroundColor="KeyRed" foregroundColor="KeyRed" objectTypes="key_red,StaticText">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="key_red" render="Label" position="0,0" size="2,35" backgroundColor="KeyRed" foregroundColor="KeyRed" objectTypes="key_red,StaticText">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="key_red" render="Label" position="224,0" size="2,35" backgroundColor="KeyRed" foregroundColor="KeyRed" objectTypes="key_red,StaticText">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget name="key_red" position="2,2" size="221,31" backgroundColor="KeyBack" font="ButtonFont;20" foregroundColor="KeyText" horizontalAlignment="center" noWrap="1" objectTypes="key_red,Button,Label" textBorderColor="BannerBorder" textBorderWidth="1" transparent="1" verticalAlignment="center" />
-		<widget source="key_red" render="Label" position="2,2" size="221,31" backgroundColor="KeyBack" font="ButtonFont;20" foregroundColor="KeyText" horizontalAlignment="center" noWrap="1" objectTypes="key_red,StaticText" textBorderColor="BannerBorder" textBorderWidth="1" transparent="1" verticalAlignment="center" />
+		<widget name="key_red" position="0,0" size="225,35" backgroundColor="TextBackground" font="ButtonFont;20" foregroundColor="KeyText" horizontalAlignment="center" noWrap="1" objectTypes="key_red,Button,Label" padding="2" verticalAlignment="center" widgetBorderColor="KeyRed" widgetBorderWidth="2" />
+		<widget source="key_red" render="Label" position="0,0" size="225,35" backgroundColor="TextBackground" font="ButtonFont;20" foregroundColor="KeyText" horizontalAlignment="center" noWrap="1" objectTypes="key_red,StaticText" padding="2" verticalAlignment="center" widgetBorderColor="KeyRed" widgetBorderWidth="2" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonRedButton">
@@ -988,25 +971,8 @@
 	</screen>
 
 	<screen name="ScreenTemplateButtonGreenBox">
-		<eLabel position="0,0" size="225,2" backgroundColor="KeyGreen" objectTypes="key_green,Button,Label" />
-		<eLabel position="0,34" size="225,2" backgroundColor="KeyGreen" objectTypes="key_green,Button,Label" />
-		<eLabel position="0,0" size="2,35" backgroundColor="KeyGreen" objectTypes="key_green,Button,Label" />
-		<eLabel position="224,0" size="2,35" backgroundColor="KeyGreen" objectTypes="key_green,Button,Label" />
-		<!-- eRectangle position="0,0" size="225,34" borderColor="KeyGreen" borderWidth="2" objectTypes="key_green,Button,Label" / -->
-		<widget source="key_green" render="Label" position="0,0" size="225,2" backgroundColor="KeyGreen" foregroundColor="KeyGreen" objectTypes="key_green,StaticText">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="key_green" render="Label" position="0,34" size="225,2" backgroundColor="KeyGreen" foregroundColor="KeyGreen" objectTypes="key_green,StaticText">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="key_green" render="Label" position="0,0" size="2,35" backgroundColor="KeyGreen" foregroundColor="KeyGreen" objectTypes="key_green,StaticText">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="key_green" render="Label" position="224,0" size="2,35" backgroundColor="KeyGreen" foregroundColor="KeyGreen" objectTypes="key_green,StaticText">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget name="key_green" position="2,2" size="221,31" backgroundColor="KeyBack" font="ButtonFont;20" foregroundColor="KeyText" horizontalAlignment="center" noWrap="1" objectTypes="key_green,Button,Label" textBorderColor="BannerBorder" textBorderWidth="1" transparent="1" verticalAlignment="center" />
-		<widget source="key_green" render="Label" position="2,2" size="221,31" backgroundColor="KeyBack" font="ButtonFont;20" foregroundColor="KeyText" horizontalAlignment="center" noWrap="1" objectTypes="key_green,StaticText" textBorderColor="BannerBorder" textBorderWidth="1" transparent="1" verticalAlignment="center" />
+		<widget name="key_green" position="0,0" size="225,35" backgroundColor="TextBackground" font="ButtonFont;20" foregroundColor="KeyText" horizontalAlignment="center" noWrap="1" objectTypes="key_green,Button,Label" padding="2" verticalAlignment="center" widgetBorderColor="KeyGreen" widgetBorderWidth="2" />
+		<widget source="key_green" render="Label" position="0,0" size="225,35" backgroundColor="TextBackground" font="ButtonFont;20" foregroundColor="KeyText" horizontalAlignment="center" noWrap="1" objectTypes="key_green,StaticText" padding="2" verticalAlignment="center" widgetBorderColor="KeyGreen" widgetBorderWidth="2" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonGreenButton">
@@ -1124,25 +1090,8 @@
 	</screen>
 
 	<screen name="ScreenTemplateButtonYellowBox">
-		<eLabel position="0,0" size="225,2" backgroundColor="KeyYellow" objectTypes="key_yellow,Button,Label" />
-		<eLabel position="0,34" size="225,2" backgroundColor="KeyYellow" objectTypes="key_yellow,Button,Label" />
-		<eLabel position="0,0" size="2,35" backgroundColor="KeyYellow" objectTypes="key_yellow,Button,Label" />
-		<eLabel position="224,0" size="2,35" backgroundColor="KeyYellow" objectTypes="key_yellow,Button,Label" />
-		<!-- eRectangle position="0,0" size="225,34" borderColor="KeyYellow" borderWidth="2" objectTypes="key_yellow,Button,Label" / -->
-		<widget source="key_yellow" render="Label" position="0,0" size="225,2" backgroundColor="KeyYellow" foregroundColor="KeyYellow" objectTypes="key_yellow,StaticText">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="key_yellow" render="Label" position="0,34" size="225,2" backgroundColor="KeyYellow" foregroundColor="KeyYellow" objectTypes="key_yellow,StaticText">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="key_yellow" render="Label" position="0,0" size="2,35" backgroundColor="KeyYellow" foregroundColor="KeyYellow" objectTypes="key_yellow,StaticText">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="key_yellow" render="Label" position="224,0" size="2,35" backgroundColor="KeyYellow" foregroundColor="KeyYellow" objectTypes="key_yellow,StaticText">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget name="key_yellow" position="2,2" size="221,31" backgroundColor="KeyBack" font="ButtonFont;20" foregroundColor="KeyText" horizontalAlignment="center" noWrap="1" objectTypes="key_yellow,Button,Label" textBorderColor="BannerBorder" textBorderWidth="1" transparent="1" verticalAlignment="center" />
-		<widget source="key_yellow" render="Label" position="2,2" size="221,31" backgroundColor="KeyBack" font="ButtonFont;20" foregroundColor="KeyText" horizontalAlignment="center" noWrap="1" objectTypes="key_yellow,StaticText" textBorderColor="BannerBorder" textBorderWidth="1" transparent="1" verticalAlignment="center" />
+		<widget name="key_yellow" position="0,0" size="225,35" backgroundColor="TextBackground" font="ButtonFont;20" foregroundColor="KeyText" horizontalAlignment="center" noWrap="1" objectTypes="key_yellow,Button,Label" padding="2" verticalAlignment="center" widgetBorderColor="KeyYellow" widgetBorderWidth="2" />
+		<widget source="key_yellow" render="Label" position="0,0" size="225,35" backgroundColor="TextBackground" font="ButtonFont;20" foregroundColor="KeyText" horizontalAlignment="center" noWrap="1" objectTypes="key_yellow,StaticText" padding="2" verticalAlignment="center" widgetBorderColor="KeyYellow" widgetBorderWidth="2" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonYellowButton">
@@ -1260,25 +1209,8 @@
 	</screen>
 
 	<screen name="ScreenTemplateButtonBlueBox">
-		<eLabel position="0,0" size="225,2" backgroundColor="KeyBlue" objectTypes="key_blue,Button,Label" />
-		<eLabel position="0,34" size="225,2" backgroundColor="KeyBlue" objectTypes="key_blue,Button,Label" />
-		<eLabel position="0,0" size="2,35" backgroundColor="KeyBlue" objectTypes="key_blue,Button,Label" />
-		<eLabel position="224,0" size="2,35" backgroundColor="KeyBlue" objectTypes="key_blue,Button,Label" />
-		<!-- eRectangle position="0,0" size="225,34" borderColor="KeyBlue" borderWidth="2" objectTypes="key_blue,Button,Label" / -->
-		<widget source="key_blue" render="Label" position="0,0" size="225,2" backgroundColor="KeyBlue" foregroundColor="KeyBlue" objectTypes="key_blue,StaticText">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="key_blue" render="Label" position="0,34" size="225,2" backgroundColor="KeyBlue" foregroundColor="KeyBlue" objectTypes="key_blue,StaticText">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="key_blue" render="Label" position="0,0" size="2,35" backgroundColor="KeyBlue" foregroundColor="KeyBlue" objectTypes="key_blue,StaticText">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="key_blue" render="Label" position="224,0" size="2,35" backgroundColor="KeyBlue" foregroundColor="KeyBlue" objectTypes="key_blue,StaticText">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget name="key_blue" position="2,2" size="221,31" backgroundColor="KeyBack" borderColor="Black" borderWidth="1" font="ButtonFont;20" foregroundColor="KeyText" horizontalAlignment="center" noWrap="1" objectTypes="key_blue,Button,Label" textBorderColor="BannerBorder" textBorderWidth="1" transparent="1" verticalAlignment="center" />
-		<widget source="key_blue" render="Label" position="2,2" size="221,31" backgroundColor="KeyBack" borderColor="Black" borderWidth="1" font="ButtonFont;20" foregroundColor="KeyText" horizontalAlignment="center" noWrap="1" objectTypes="key_blue,StaticText" textBorderColor="BannerBorder" textBorderWidth="1" transparent="1" verticalAlignment="center" />
+		<widget name="key_blue" position="0,0" size="225,35" backgroundColor="TextBackground" font="ButtonFont;20" foregroundColor="KeyText" horizontalAlignment="center" noWrap="1" objectTypes="key_blue,Button,Label" padding="2" verticalAlignment="center" widgetBorderColor="KeyBlue" widgetBorderWidth="2" />
+		<widget source="key_blue" render="Label" position="0,0" size="225,35" backgroundColor="TextBackground" font="ButtonFont;20" foregroundColor="KeyText" horizontalAlignment="center" noWrap="1" objectTypes="key_blue,StaticText" padding="2" verticalAlignment="center" widgetBorderColor="KeyBlue" widgetBorderWidth="2" />
 	</screen>
 
 	<screen name="ScreenTemplateButtonBlueButton">
@@ -1435,13 +1367,11 @@
 	</screen>
 
 	<screen name="ScreenTemplateDescription4">
-		<eRectangle position="400,540" size="830,122" borderColor="Pinstripe" borderWidth="2" />
-		<widget name="description" position="410,550" size="810,100" backgroundColor="TextBackground" conditional="description" font="DescriptionFont;20" foregroundColor="Text" transparent="1" verticalAlignment="center" zPosition="+1" />
+		<widget name="description" position="400,540" size="830,122" backgroundColor="TextBackground" conditional="description" font="DescriptionFont;20" foregroundColor="Text" padding="10" scrollText="direction=top,mode=bounce,startDelay=2500,stepSize=1,stepDelay=60,endDelay=2500,repeat=-1" verticalAlignment="center" widgetBorderColor="Pinstripe" widgetBorderWidth="2" />
 	</screen>
 
 	<screen name="ScreenTemplateSDescription4">
-		<eRectangle position="400,540" size="830,122" borderColor="Pinstripe" borderWidth="2" />
-		<widget source="description" render="Label" position="410,550" size="810,100" backgroundColor="TextBackground" font="DescriptionFont;20" foregroundColor="Text" transparent="1" verticalAlignment="center" zPosition="+1" />
+		<widget source="description" render="Label" position="400,540" size="830,122" backgroundColor="TextBackground" conditional="description" font="DescriptionFont;20" foregroundColor="Text" padding="10" scrollText="direction=top,mode=bounce,startDelay=2500,stepSize=1,stepDelay=60,endDelay=2500,repeat=-1" verticalAlignment="center" widgetBorderColor="Pinstripe" widgetBorderWidth="2" />
 	</screen>
 
 	<!-- Horizontal Menu -->
@@ -1518,7 +1448,7 @@
 	</screen>
 
 	<screen name="ScreenTemplateFootnote4">
-		<widget name="footnote" position="410,510" size="820,25" backgroundColor="FootnoteBackground" conditional="footnote" font="Regular;20" foregroundColor="FootnoteText" transparent="1" verticalAlignment="center" />
+		<widget name="footnote" position="410,510" size="820,25" backgroundColor="FootnoteBackground" conditional="footnote" font="TextFont;20" foregroundColor="FootnoteText" verticalAlignment="center" />
 	</screen>
 
 <!-- HELP - Generic Help Menu -->
@@ -1620,42 +1550,38 @@
 	</screen>
 
 	<screen name="NumericalTextInputHelpDialog" position="50,350" size="330,270" flags="wfNoBorder" zPosition="+1">
-		<eLabel position="0,0" size="330,2" backgroundColor="Pinstripe" />
-		<eLabel position="0,268" size="330,2" backgroundColor="Pinstripe" />
-		<eLabel position="0,0" size="2,270" backgroundColor="Pinstripe" />
-		<eLabel position="328,0" size="2,270" backgroundColor="Pinstripe" />
-		<!-- eRectangle position="0,0" size="330,270" borderColor="Pinstripe" borderWidth="2" / -->
-		<eLabel text="1:" position="10,10" size="30,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperLabel" verticalAlignment="center" />
-		<widget name="key1" position="40,10" size="280,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperText" noWrap="1" verticalAlignment="center" />
-		<eLabel text="2:" position="10,35" size="30,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperLabel" verticalAlignment="center" />
-		<widget name="key2" position="40,35" size="280,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperText" noWrap="1" verticalAlignment="center" />
-		<eLabel text="3:" position="10,60" size="30,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperLabel" verticalAlignment="center" />
-		<widget name="key3" position="40,60" size="280,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperText" noWrap="1" verticalAlignment="center" />
-		<eLabel text="4:" position="10,85" size="30,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperLabel" verticalAlignment="center" />
-		<widget name="key4" position="40,85" size="280,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperText" noWrap="1" verticalAlignment="center" />
-		<eLabel text="5:" position="10,110" size="30,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperLabel" verticalAlignment="center" />
-		<widget name="key5" position="40,110" size="280,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperText" noWrap="1" verticalAlignment="center" />
-		<eLabel text="6:" position="10,135" size="30,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperLabel" verticalAlignment="center" />
-		<widget name="key6" position="40,135" size="280,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperText" noWrap="1" verticalAlignment="center" />
-		<eLabel text="7:" position="10,160" size="30,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperLabel" verticalAlignment="center" />
-		<widget name="key7" position="40,160" size="280,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperText" noWrap="1" verticalAlignment="center" />
-		<eLabel text="8:" position="10,185" size="30,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperLabel" verticalAlignment="center" />
-		<widget name="key8" position="40,185" size="280,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperText" noWrap="1" verticalAlignment="center" />
-		<eLabel text="9:" position="10,210" size="30,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperLabel" verticalAlignment="center" />
-		<widget name="key9" position="40,210" size="280,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperText" noWrap="1" verticalAlignment="center" />
-		<eLabel text="0:" position="10,235" size="30,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperLabel" verticalAlignment="center" />
-		<widget name="key0" position="40,235" size="280,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperText" noWrap="1" verticalAlignment="center" />
-		<widget name="help1" position="0,0" size="0,0" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperText" noWrap="1" verticalAlignment="center" />
-		<widget name="help2" position="0,0" size="0,0" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperText" noWrap="1" verticalAlignment="center" />
+		<eRectangle position="0,0" size="330,270" borderColor="Pinstripe" borderWidth="2" />
+		<eLabel text="1:" position="10,10" size="30,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperLabel" verticalAlignment="center" zPosition="+1" />
+		<widget name="key1" position="40,10" size="280,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperText" noWrap="1" verticalAlignment="center" zPosition="+1" />
+		<eLabel text="2:" position="10,35" size="30,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperLabel" verticalAlignment="center" zPosition="+1" />
+		<widget name="key2" position="40,35" size="280,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperText" noWrap="1" verticalAlignment="center" zPosition="+1" />
+		<eLabel text="3:" position="10,60" size="30,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperLabel" verticalAlignment="center" zPosition="+1" />
+		<widget name="key3" position="40,60" size="280,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperText" noWrap="1" verticalAlignment="center" zPosition="+1" />
+		<eLabel text="4:" position="10,85" size="30,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperLabel" verticalAlignment="center" zPosition="+1" />
+		<widget name="key4" position="40,85" size="280,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperText" noWrap="1" verticalAlignment="center" zPosition="+1" />
+		<eLabel text="5:" position="10,110" size="30,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperLabel" verticalAlignment="center" zPosition="+1" />
+		<widget name="key5" position="40,110" size="280,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperText" noWrap="1" verticalAlignment="center" zPosition="+1" />
+		<eLabel text="6:" position="10,135" size="30,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperLabel" verticalAlignment="center" zPosition="+1" />
+		<widget name="key6" position="40,135" size="280,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperText" noWrap="1" verticalAlignment="center" zPosition="+1" />
+		<eLabel text="7:" position="10,160" size="30,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperLabel" verticalAlignment="center" zPosition="+1" />
+		<widget name="key7" position="40,160" size="280,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperText" noWrap="1" verticalAlignment="center" zPosition="+1" />
+		<eLabel text="8:" position="10,185" size="30,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperLabel" verticalAlignment="center" zPosition="+1" />
+		<widget name="key8" position="40,185" size="280,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperText" noWrap="1" verticalAlignment="center" zPosition="+1" />
+		<eLabel text="9:" position="10,210" size="30,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperLabel" verticalAlignment="center" zPosition="+1" />
+		<widget name="key9" position="40,210" size="280,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperText" noWrap="1" verticalAlignment="center" zPosition="+1" />
+		<eLabel text="0:" position="10,235" size="30,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperLabel" verticalAlignment="center" zPosition="+1" />
+		<widget name="key0" position="40,235" size="280,25" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperText" noWrap="1" verticalAlignment="center" zPosition="+1" />
+		<widget name="help1" position="0,0" size="0,0" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperText" noWrap="1" verticalAlignment="center" zPosition="+1" />
+		<widget name="help2" position="0,0" size="0,0" backgroundColor="SMSHelperBackground" font="SMSHelperFont;20" foregroundColor="SMSHelperText" noWrap="1" verticalAlignment="center" zPosition="+1" />
 	</screen>
 
 <!-- Generic XML Help Screen -->
 
 	<screen name="XMLHelp" title="XML Help" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget source="heading" render="Label" position="400,80" size="830,35" backgroundColor="TextBackground" font="Regular;25" foregroundColor="TextWaiting" transparent="1" verticalAlignment="center" />
-		<widget name="text" position="400,125" size="830,515" backgroundColor="TextBackground" conditional="text" font="Regular;20" foregroundColor="Text" transparent="1" />
-		<widget name="detailtext" position="400,125" size="830,515" backgroundColor="TextBackground" conditional="detailtext" font="Regular;20" foregroundColor="Text" transparent="1" />
+		<widget source="heading" render="Label" position="400,80" size="830,35" backgroundColor="TextBackground" font="TextFont;25" foregroundColor="TextWaiting" transparent="1" verticalAlignment="center" />
+		<widget name="text" position="400,125" size="830,515" backgroundColor="TextBackground" conditional="text" font="TextFont;20" foregroundColor="Text" padding="10" scrollText="direction=top,mode=bounce,startDelay=2500,stepSize=1,stepDelay=60,endDelay=2500,repeat=-1" />
+		<widget name="detailtext" position="400,125" size="830,515" backgroundColor="TextBackground" conditional="detailtext" font="TextFont;20" foregroundColor="Text" padding="10" scrollText="direction=top,mode=bounce,startDelay=2500,stepSize=1,stepDelay=60,endDelay=2500,repeat=-1" />
 	</screen>
 
 <!--
