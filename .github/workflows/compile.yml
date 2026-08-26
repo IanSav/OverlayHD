@@ -1,0 +1,36 @@
+name: compile
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches:
+      - "*"
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        python: ['3.13']
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+
+      - name: Build plugins, python ${{ matrix.python }}
+        run: |
+          cd usr/lib/enigma2/python/Plugins/Extensions/OverlayHD
+          python -m compileall .
+
+      - name: Compile po files
+        run: |
+          cd po
+          find . -type f -name "*.po" -exec msgfmt {} -o {}.mo \;
+          echo done!
+

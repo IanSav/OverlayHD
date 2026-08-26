@@ -1,72 +1,76 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
-from __future__ import print_function
-import sys
-import os
-import six
-import re
+from sys import argv
+from os import listdir
+from os.path import basename, isdir, join
+from re import compile
 from xml.sax import make_parser
-from xml.sax.handler import ContentHandler, property_lexical_handler
-try:
-	from _xmlplus.sax.saxlib import LexicalHandler
-	no_comments = False
-except ImportError:
-	class LexicalHandler:
-		def __init__(self):
-			pass
-	no_comments = True
+from xml.sax.handler import ContentHandler, LexicalHandler, property_lexical_handler
 
 
-class parseXML(ContentHandler, LexicalHandler):
-	def __init__(self, attrlist):
-		self.isPointsElement, self.isReboundsElement = 0, 0
-		self.attrlist = attrlist
-		self.last_comment = None
-		self.ishex = re.compile('#[0-9a-fA-F]+\Z')
+class parse_xml(ContentHandler, LexicalHandler):
+	def __init__(self, attributes):
+		self.attributes = attributes
+		self.lastComment = None
+		self.isHex = compile(r'#[0-9a-fA-F]+\Z')
+		self.locator = None
+
+	def setDocumentLocator(self, locator):
+		self.locator = locator
 
 	def comment(self, comment):
 		if "TRANSLATORS:" in comment:
-			self.last_comment = comment
+			self.lastComment = comment
 
-	def startElement(self, name, attrs):
-		for x in ["text", "title", "value", "caption", "description"]:
+	def startElement(self, tag, attribs):
+		for attribute in ["text", "title", "value", "caption", "description", "red", "green", "yellow", "blue"]:  # Attributes that need to be translated.
 			try:
-				k = six.ensure_str(attrs[x])
-				if k.strip() != "" and not self.ishex.match(k):
-					attrlist.add((k, self.last_comment))
-					self.last_comment = None
+				value = attribs[attribute]
+				if value.strip() != "" and not self.isHex.match(value):
+					line = self.locator.getLineNumber() if self.locator else 0
+					context = "%s attribute '%s'" % (tag, attribute)
+					self.attributes.add((value, self.lastComment, context, line))
+					self.lastComment = None
 			except KeyError:
 				pass
 
 
-parser = make_parser()
+def po_escape(value):
+	return value.replace("\\", "\\\\").replace("\"", "\\\"").replace("\n", "\\n")
 
-attrlist = set()
 
-contentHandler = parseXML(attrlist)
-parser.setContentHandler(contentHandler)
-if not no_comments:
-	parser.setProperty(property_lexical_handler, contentHandler)
+excludeFiles = ["dnsservers.xml"]
 
-for arg in sys.argv[1:]:
-	if os.path.isdir(arg):
-		for file in os.listdir(arg):
-			if file.endswith(".xml"):
-				parser.parse(os.path.join(arg, file))
+
+def parse_file(file):
+	attributes = set()
+	parser = make_parser()
+	content_handler = parse_xml(attributes)
+	parser.setContentHandler(content_handler)
+	parser.setProperty(property_lexical_handler, content_handler)
+	parser.parse(file)
+	return attributes
+
+
+for arg in argv[1:]:
+	if isdir(arg):
+		files = [join(arg, f) for f in listdir(arg) if f.endswith(".xml")]
 	else:
-		parser.parse(arg)
-
-	attrlist = list(attrlist)
-	attrlist.sort(key=lambda a: a[0])
-
-	for (k, c) in attrlist:
+		files = [arg]
+	attributes = set()
+	for file in files:
+		if basename(file) not in excludeFiles:
+			attributes.update(parse_file(file))
+	attributes = list(attributes)
+	attributes.sort(key=lambda x: x[0])
+	for (key, translator_comment, context, line) in attributes:
 		print()
-		print('#: ' + arg)
-		k.replace("\\n", "\"\n\"")
-		if c:
-			for l in c.split('\n'):
-				print("#. ", l)
-		print('msgid "' + six.ensure_str(k) + '"')
-		print('msgstr ""')
-
-	attrlist = set()
+		if line:
+			print(f"#: {arg}:{line}")
+		else:
+			print(f"#: {arg}")
+		print(f"#. XML context: {context}")
+		if translator_comment:
+			for comment_line in translator_comment.split("\n"):
+				print(f"#. {comment_line.strip()}")
+		print(f"msgid \"{po_escape(key)}\"")
+		print("msgstr \"\"")
+	attributes = set()
