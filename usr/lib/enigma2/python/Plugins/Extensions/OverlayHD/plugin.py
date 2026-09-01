@@ -2,8 +2,8 @@
 #
 # OverlayHD Skin Manager
 #
-# Version Date - 26-Aug-2026
-# Remember to change version number variable below!!!
+# Version Date - 31-Aug-2026
+# Remember to change version number variable in __init__!!!
 #
 # Repository - https://github.com/IanSav/OverlayHD
 # Coding by IanSav (c) 2015-2026
@@ -1101,7 +1101,7 @@ def applySkinSettings(fullInit=False):
 			else:
 				setattr(config.plugins.skin.OverlayHD, label, configType(default=default))
 			if debugSkin:
-				print(f"[OverlayHD] Setting ption '{label}' to '{default}'.")
+				print(f"[OverlayHD] Setting option '{label}' to '{default}'.")
 		modes = distroModes.get(DISTRO, (None, "Enigma2"))[DISTRO_SCREENLIST]
 		for screen in domScreens:
 			element, path = domScreens.get(screen, (None, None))
@@ -1160,41 +1160,42 @@ def applySkinSettings(fullInit=False):
 	for (label, default, configType, optionsTable) in optionElements:
 		optionObject = getattr(config.plugins.skin.OverlayHD, label)
 		optionValue = optionObject.value
-		if label in imageNames.keys():
-			result = applyLogoImage(label, optionValue)
-			optionValue = f"'{optionValue}'" if optionValue else "default"
-			msg = f"'{label}' image to {optionValue}"
-		elif label == "AlwaysShowButtons":
-			result = applyShowButtons(optionValue)
-			msg = f"color button always on display to '{optionValue}'"
-		elif label == "ButtonStyle":
-			result = applyButtonStyle(optionValue)
-			msg = f"color button style to '{optionValue}'"
-		elif label == "EPGShowTicks":
-			result = applyShowTicks(optionValue)
-			msg = f"EPG tick marks to '{optionValue}'"
-		elif label == "ListboxMode":
-			result = applyWindowStyle("listbox", "scrollbarMode", optionValue)
-			msg = f"eListbox mode to '{optionValue}'"
-		elif label == "ListboxScroll":
-			result = applyWindowStyle("listbox", "scrollbarScroll", optionValue)
-			msg = f"eListbox scroll to '{optionValue}'"
-		elif label == "RecordBlink":
-			result = applyBlink(["session.RecordState"], optionValue)
-			msg = f"recording indicator blink to '{optionValue}'"
-		elif label == "ScrollLabelMode":
-			result = applyWindowStyle("scrolllabel", "scrollbarMode", optionValue)
-			msg = f"ScrollLabel mode to '{optionValue}'"
-		elif label == "ScrollLabelScroll":
-			result = applyWindowStyle("scrolllabel", "scrollbarScroll", optionValue)
-			msg = f"ScrollLabel scroll to '{optionValue}'"
-		elif label == "Spinner":
-			result = applySpinner(optionValue)
-			optionValue = f"'{optionValue}'" if optionValue else "default"
-			msg = f"spinner to {optionValue}"
-		elif label == "UpdateBlink":
-			result = applyBlink(["global.OnlineStableUpdateState", "global.OnlineUnstableUpdateState"], optionValue)
-			msg = f"update indicator blink to '{optionValue}'"
+		match label:
+			case key if key in imageNames.keys():
+				result = applyLogoImage(label, optionValue)
+				optionValue = f"'{optionValue}'" if optionValue else "default"
+				msg = f"'{label}' image to {optionValue}"
+			case "AlwaysShowButtons":
+				result = applyShowButtons(optionValue)
+				msg = f"color button always on display to '{optionValue}'"
+			case "ButtonStyle":
+				result = applyButtonStyle(optionValue)
+				msg = f"color button style to '{optionValue}'"
+			case "EPGShowTicks":
+				result = applyShowTicks(optionValue)
+				msg = f"EPG tick marks to '{optionValue}'"
+			case "ListboxMode":
+				result = applyWindowStyle("listbox", "scrollbarMode", optionValue)
+				msg = f"eListbox mode to '{optionValue}'"
+			case "ListboxScroll":
+				result = applyWindowStyle("listbox", "scrollbarScroll", optionValue)
+				msg = f"eListbox scroll to '{optionValue}'"
+			case "RecordBlink":
+				result = applyBlink(["session.RecordState"], optionValue)
+				msg = f"recording indicator blink to '{optionValue}'"
+			case "ScrollLabelMode":
+				result = applyWindowStyle("scrolllabel", "scrollbarMode", optionValue)
+				msg = f"ScrollLabel mode to '{optionValue}'"
+			case "ScrollLabelScroll":
+				result = applyWindowStyle("scrolllabel", "scrollbarScroll", optionValue)
+				msg = f"ScrollLabel scroll to '{optionValue}'"
+			case "Spinner":
+				result = applySpinner(optionValue)
+				optionValue = f"'{optionValue}'" if optionValue else "default"
+				msg = f"spinner to {optionValue}"
+			case "UpdateBlink":
+				result = applyBlink(["global.OnlineStableUpdateState", "global.OnlineUnstableUpdateState"], optionValue)
+				msg = f"update indicator blink to '{optionValue}'"
 		if result == 0 and ((fullInit and optionValue != optionObject.default) or optionObject.isChanged()):
 			print(f"[OverlayHD] Configuring skin {msg}.")
 	reloadWindowStyles()
@@ -1255,8 +1256,8 @@ def autostart(reason, **kwargs):
 			print(f"[OverlayHD] OverlayHD Skin Manager version {PLUGIN_VERSION_NUMBER}, preparing to unload from '{DISPLAY_DISTRO}'.")
 			clearSkinSettings()
 		case 2:
-			print(f"[OverlayHD] Configuring to reload on '{DISPLAY_DISTRO}' in '{"' then '".join(distroModes.get(DISTRO, (None, "Unknown"))[DISTRO_SCREENLIST])}' mode.")
-			updateOverlayHD()
+			print(f"[OverlayHD] Reloading to run on '{DISPLAY_DISTRO}' in '{"' then '".join(distroModes.get(DISTRO, (None, "Unknown"))[DISTRO_SCREENLIST])}' mode.")
+			# updateOverlayHD()
 			applySkinSettings(fullInit=True)
 
 
