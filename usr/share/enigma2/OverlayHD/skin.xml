@@ -1333,48 +1333,67 @@
 
 <!-- MENU - Generic Menus -->
 
-	<!-- Default vertical menu -->
+	<!-- Vertical Menu (Default) -->
 
 	<screen name="Menu" title="Menu" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<panel name="ScreenTemplateBranding" />
-		<widget name="menuimage" position="75,80" size="250,250" alphatest="blend" conditional="menuimage" scaleFlags="scaleLeftTop" transparent="1" />
-		<widget source="menu" render="Listbox" position="400,80" size="830,455" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected">
-			<templates>
-				<!--
-				WIDGET_NUMBER_TEXT = 0
-				WIDGET_IMAGE = 1
-				WIDGET_NUMBER = 2
-				WIDGET_TEXT = 3
-				WIDGET_DESCRIPTION = 4
-				WIDGET_KEY = 5
-				WIDGET_WEIGHT = 6
-				WIDGET_MODULE = 7
-				-->
-				<template name="Default" fonts="MenuFont;25" itemHeight="35" itemWidth="830">
-					<mode name="default">
-						<text index="0" position="0,0" size="830,35" font="0" autoAlign="1" padding="10,0,10,0" verticalAlignment="center" />
-					</mode>
-					<mode name="text">
-						<text index="3" position="0,0" size="830,35" font="0" autoAlign="1" padding="10,0,10,0" verticalAlignment="center" />
-					</mode>
-					<mode name="number">
-						<text index="2" position="0,0" size="55,35" font="0" horizontalAlignment="right" padding="10,0,10,0" verticalAlignment="center" />
-						<text index="3" position="55,0" size="775,35" font="0" autoAlign="1" padding="10,0,10,0" verticalAlignment="center" />
-					</mode>
-					<mode name="image">
-						<pixmap index="1" position="0,0" size="50,35" alpha="blend" padding="10,2,10,2" scale="centerScaled" />
-						<text index="3" position="50,0" size="780,35" font="0" autoAlign="1" padding="10,0,10,0" verticalAlignment="center" />
-					</mode>
-					<mode name="both">
-						<pixmap index="1" position="0,0" size="50,35" alpha="blend" padding="10,2,10,2" scale="centerScaled" />
-						<text index="2" position="50,0" size="50,35" font="0" horizontalAlignment="right" padding="5,0,10,0" verticalAlignment="center" />
-						<text index="3" position="100,0" size="730,35" font="0" autoAlign="1" padding="10,0,10,0" verticalAlignment="center" />
-					</mode>
-				</template>
-			</templates>
+		<widget name="menuimage" position="75,80" size="250,250" alphatest="blend" conditional="menuimage" scaleFlags="scaleLeftTop" transparent="yes" />
+		<widget source="menu" render="Listbox" position="400,80" size="e-450,455" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected">
+			<!-- NumberText, Image, Number, Text, Description, Key, Weight -->
+			<template name="Default" fonts="MenuFont;25" itemHeight="35">
+				<mode name="default">
+					<text index="NumberText" position="0,0" size="830,35" font="0" padding="10,0" verticalAlignment="center" />
+				</mode>
+				<mode name="text">
+					<text index="Text" position="0,0" size="830,35" font="0" padding="10,0" verticalAlignment="center" />
+				</mode>
+				<mode name="number">
+					<text index="Number" position="0,0" size="55,35" font="0" foregroundColor="TextIndented" foregroundColorSelected="TextIndentedSelected" horizontalAlignment="right" padding="10,0" verticalAlignment="center" />
+					<text index="Text" position="55,0" size="775,35" font="0" padding="10,0" verticalAlignment="center" />
+				</mode>
+				<mode name="image">
+					<pixmap index="Image" position="0,0" size="50,35" alpha="blend" padding="10,2" scale="centerScaled" />
+					<text index="Text" position="50,0" size="780,35" font="0" padding="10,0" verticalAlignment="center" />
+				</mode>
+				<mode name="both">
+					<pixmap index="Image" position="0,0" size="50,35" alpha="blend" padding="10,2" scale="centerScaled" />
+					<text index="Number" position="50,0" size="50,35" font="0" foregroundColor="TextIndented" foregroundColorSelected="TextIndentedSelected" horizontalAlignment="right" padding="5,0,10,0" verticalAlignment="center" />
+					<text index="Text" position="100,0" size="730,35" font="0" padding="10,0" verticalAlignment="center" />
+				</mode>
+			</template>
 		</widget>
 		<panel name="ScreenTemplateSDescription4" />
+	</screen>
+
+	<!-- Horizontal Menu -->
+
+	<screen name="MenuHorizontal" title="Menu" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<widget name="menuimage" position="50,e-240" size="100,100" alphaTest="blend" scaleFlags="scaleCenter" transparent="yes" />
+		<widget source="menu" render="Listbox" position="50,e-130" size="e-100,71" listOrientation="horizontal">
+			<!-- NumberText, Image, Number, Text, Description, Key, Weight -->
+			<template name="Default" fonts="MenuFont;25,MenuFont;20" itemHeight="61" itemWidth="236">
+				<mode name="default">
+					<text index="NumberText" position="0,0" size="236,60" font="0" horizontalAlignment="center" padding="5,0" scrollText="direction=left,mode=bounce,startDelay=2500,stepSize=1,stepDelay=60,endDelay=2500,repeat=-1" verticalAlignment="center" />
+				</mode>
+				<mode name="text">
+					<text index="Text" position="0,0" size="236,60" font="0" horizontalAlignment="center" padding="5,0" scrollText="direction=left,mode=bounce,startDelay=2500,stepSize=1,stepDelay=60,endDelay=2500,repeat=-1" verticalAlignment="center" />
+				</mode>
+				<mode name="number">
+					<text index="Number" position="0,0" size="236,25" font="1" foregroundColor="TextIndented" foregroundColorSelected="TextIndentedSelected" horizontalAlignment="center" padding="5,0" verticalAlignment="center" />
+					<text index="Text" position="0,25" size="236,35" font="0" horizontalAlignment="center" padding="5,0" scrollText="direction=left,mode=bounce,startDelay=2500,stepSize=1,stepDelay=60,endDelay=2500,repeat=-1" verticalAlignment="center" />
+				</mode>
+				<mode name="image">
+					<text index="Text" position="0,0" size="236,60" font="0" horizontalAlignment="center" padding="5,0" scrollText="direction=left,mode=bounce,startDelay=2500,stepSize=1,stepDelay=60,endDelay=2500,repeat=-1" verticalAlignment="center" />
+				</mode>
+				<mode name="both">
+					<text index="Number" position="0,0" size="236,25" font="1" foregroundColor="TextIndented" foregroundColorSelected="TextIndentedSelected" horizontalAlignment="center" padding="5,0" verticalAlignment="center" />
+					<text index="Text" position="0,25" size="236,35" font="0" horizontalAlignment="center" padding="5,0" scrollText="direction=left,mode=bounce,startDelay=2500,stepSize=1,stepDelay=60,endDelay=2500,repeat=-1" verticalAlignment="center" />
+				</mode>
+			</template>
+		</widget>
+		<!-- panel name="ScreenTemplateSDescription4" / -->
 	</screen>
 
 	<screen name="ScreenTemplateDescription4">
@@ -1385,64 +1404,29 @@
 		<widget source="description" render="Label" position="400,540" size="830,122" backgroundColor="TextBackground" conditional="description" font="DescriptionFont;20" foregroundColor="Text" padding="10" scrollText="direction=top,mode=bounce,startDelay=2500,stepSize=1,stepDelay=60,endDelay=2500,repeat=-1" verticalAlignment="center" widgetBorderColor="Pinstripe" widgetBorderWidth="2" />
 	</screen>
 
-	<!-- Horizontal Menu -->
+<!-- BLUE | Long BLUE - Quick Menu -->
 
-	<screen name="AnimMain" title="Menu" position="fill" flags="wfNoBorder">
+	<screen name="QuickMenu" title="Quick Menu" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget name="menuimage" position="50,80" size="150,150" alphatest="blend" conditional="menuimage" scaleFlags="scaleLeftTop" transparent="1" />
-		<widget source="label1" render="Label" position="50,550" size="160,50" backgroundColor="MenuSelected" font="MenuFont;17" foregroundColor="MenuDisabled" horizontalAlignment="center" verticalAlignment="center">
-			<convert type="ConditionalShowHide" />
+		<widget source="mainlist" render="Listbox" position="400,80" size="410,450" itemHeight="50">
+			<template name="Default" fonts="MenuFont;20,TextFont;16" itemHeight="50">
+				<mode name="default">
+					<pixmap index="2" position="0,5" size="60,40" alpha="blend" padding="10,0" scale="centerScaled"/>
+					<text index="0" position="60,0" size="e-60,28" font="0" padding="10,0" verticalAlignment="center" />
+					<text index="1" position="80,28" size="e-80,22" font="1" foregroundColor="TextIndented" foregroundColorSelected="TextIndentedSelected" padding="10,0" verticalAlignment="center" />
+				</mode>
+			</template>
 		</widget>
-		<widget source="label2" render="Label" position="220,538" size="220,74" backgroundColor="MenuSelected" font="MenuFont;21" foregroundColor="MenuText" horizontalAlignment="center" verticalAlignment="center">
-			<convert type="ConditionalShowHide" />
+		<eLabel position="819,80" size="2,450" backgroundColor="Pinstripe" />
+		<widget source="sublist" render="Listbox" position="830,80" size="400,450" itemHeight="50">
+			<template name="Default" fonts="MenuFont;20,TextFont;16" itemHeight="50">
+				<mode name="default">
+					<text index="0" position="0,0" size="e,28" font="0" padding="10,0" verticalAlignment="center" />
+					<text index="1" position="20,28" size="e-20,22" font="1" foregroundColor="TextIndented" foregroundColorSelected="TextIndentedSelected" padding="10,0" verticalAlignment="center" />
+				</mode>
+			</template>
 		</widget>
-		<widget source="label3" render="Label" position="455,525" size="360,100" backgroundColor="MenuSelected" font="MenuFont;29" foregroundColor="MenuTextSelected" horizontalAlignment="center" verticalAlignment="center" />
-		<widget source="label4" render="Label" position="830,538" size="220,74" backgroundColor="MenuSelected" font="MenuFont;21" foregroundColor="MenuText" horizontalAlignment="center" verticalAlignment="center">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="label5" render="Label" position="1060,550" size="160,50" backgroundColor="MenuSelected" font="MenuFont;17" foregroundColor="MenuDisabled" horizontalAlignment="center" verticalAlignment="center">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="description" render="Label" position="50,625" size="1180,25" backgroundColor="TextBackground" conditional="description" font="TextFont;20" foregroundColor="Text" horizontalAlignment="center" verticalAlignment="center">
-			<convert type="ConditionalShowHide" />
-		</widget>
-	</screen>
-
-	<screen name="Animmain" title="Menu" position="fill" flags="wfNoBorder">
-		<panel name="AnimMain" />
-	</screen>
-
-	<!-- Horizontal Icon Menu -->
-
-	<screen name="IconMain" title="Menu" position="fill" flags="wfNoBorder">
-		<panel name="ScreenTemplate" />
-		<widget name="menuimage" position="490,100" size="300,250" alphatest="blend" conditional="menuimage" transparent="1" />
-		<widget source="label1" render="Label" position="50,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" horizontalAlignment="center" verticalAlignment="center" />
-		<widget source="label1s" render="Label" position="50,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuSelected" horizontalAlignment="center" transparent="1" verticalAlignment="center" />
-		<widget source="label2" render="Label" position="248,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" horizontalAlignment="center" verticalAlignment="center" />
-		<widget source="label2s" render="Label" position="248,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuSelected" horizontalAlignment="center" transparent="1" verticalAlignment="center" />
-		<widget source="label3" render="Label" position="446,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" horizontalAlignment="center" verticalAlignment="center" />
-		<widget source="label3s" render="Label" position="446,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuSelected" horizontalAlignment="center" transparent="1" verticalAlignment="center" />
-		<widget source="label4" render="Label" position="644,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" horizontalAlignment="center" verticalAlignment="center" />
-		<widget source="label4s" render="Label" position="644,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuSelected" horizontalAlignment="center" transparent="1" verticalAlignment="center" />
-		<widget source="label5" render="Label" position="842,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" horizontalAlignment="center" verticalAlignment="center" />
-		<widget source="label5s" render="Label" position="842,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuSelected" horizontalAlignment="center" transparent="1" verticalAlignment="center" />
-		<widget source="label6" render="Label" position="1040,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuText" horizontalAlignment="center" verticalAlignment="center" />
-		<widget source="label6s" render="Label" position="1040,550" size="190,100" backgroundColor="MenuBackground" font="MenuFont;25" foregroundColor="MenuSelected" horizontalAlignment="center" transparent="1" verticalAlignment="center" />
-		<widget name="pixmap1" position="50,500" size="50,50" alphatest="blend" scale="1" transparent="1" />
-		<widget name="pixmap2" position="248,500" size="50,50" alphatest="blend" scale="1" transparent="1" />
-		<widget name="pixmap3" position="446,500" size="50,50" alphatest="blend" scale="1" transparent="1" />
-		<widget name="pixmap4" position="644,500" size="50,50" alphatest="blend" scale="1" transparent="1" />
-		<widget name="pixmap5" position="842,500" size="50,50" alphatest="blend" scale="1" transparent="1" />
-		<widget name="pixmap6" position="1040,500" size="50,50" alphatest="blend" scale="1" transparent="1" />
-	</screen>
-
-	<screen name="Iconmain" title="Menu" position="fill" flags="wfNoBorder">
-		<panel name="IconMain" />
-	</screen>
-
-	<screen name="MenuSort" title="Menu Sorter" position="fill" flags="wfNoBorder">
-		<panel name="Menu" />
+		<panel name="ScreenTemplateDescription4" />
 	</screen>
 
 <!-- MENU > Setup - Generic Setup Menus -->
