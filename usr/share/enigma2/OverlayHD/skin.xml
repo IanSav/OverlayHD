@@ -490,62 +490,95 @@
 
 	<screens>
 		<!-- <screen key="default" image="" /> -->
-		<screen key="BenchmarkInformation" image="menus/information.png" />
 		<screen key="BouquetSelector" image="menus/tv_live.png" />
-		<screen key="BuildInformation" image="menus/information.png" />
 		<screen key="ChannelContextMenu" image="menus/tv_live.png" />
-		<!-- <screen key="CommitInformation" image="" /> -->
-		<!-- <screen key="DebugInformation" image="" /> -->
-		<screen key="DeviceInformation" image="menus/backup.png" />
 		<screen key="DeviceManager" image="menus/browser_setup.png" />
-		<screen key="DistributionInformation" image="menus/information.png" />
+		<screen key="ExtensionList" image="menus/plugins.png" />
 		<screen key="FileCommanderContextMenu" image="menus/browser.png" />
-		<screen key="GeolocationInformation" image="menus/information.png" />
 		<screen key="HistoryZapSelector" image="menus/tv_zap_history.png" />
 		<screen key="InputDeviceSelection" image="menus/tv_setup.png" />
+		<screen key="InformationBenchmark" image="menus/information.png" />
+		<screen key="InformationBuild" image="menus/information.png" />
+		<screen key="InformationCommit" image="menus/browser.png" />
+		<screen key="InformationDebug" image="menus/browser.png" />
+		<screen key="InformationDistribution" image="menus/information.png" />
+		<screen key="InformationGeolocation" image="menus/information.png" />
+		<screen key="InformationMemory" image="menus/browser.png" />
+		<screen key="InformationMultiBoot" image="menus/information.png" />
+		<screen key="InformationNetwork" image="menus/radio.png" />
+		<screen key="InformationPicture" image="menus/information.png" />
+		<screen key="InformationReceiver" image="menus/information.png" />
+		<screen key="InformationService" image="menus/tv_live.png" />
+		<screen key="InformationStorage" image="menus/backup.png" />
+		<screen key="InformationStreaming" image="menus/information.png" />
+		<screen key="InformationSystem" image="menus/information.png" />
+		<screen key="InformationTranslation" image="menus/information.png" />
+		<screen key="InformationTuner" image="menus/information.png" />
 		<screen key="LocaleSelection" image="menus/software_manager_setup.png" />
-		<screen key="MemoryInformation" image="menus/browser.png" />
-		<screen key="MultiBootInformation" image="menus/information.png" />
-		<screen key="NetworkInformation" image="menus/radio.png" />
 		<screen key="PictureInformation" image="menus/information.png" />
 		<screen key="QuickMenu" image="menus/menu.png" />
 		<screen key="OverlayHDThemeManager" image="menus/mainmenu_tv_channel.png" />
-		<screen key="ReceiverInformation" image="menus/information.png" />
-		<screen key="ServiceInformation" image="menus/tv_live.png" />
 		<screen key="SimpleChannelSelection" image="menus/tv_live.png" />
-		<screen key="StorageInformation" image="menus/information.png" />
-		<screen key="StreamingInformation" image="menus/information.png" />
-		<!-- <screen key="SystemInformation" image="" /> -->
-		<screen key="TranslationInformation" image="menus/information.png" />
-		<screen key="TunerInformation" image="menus/information.png" />
 		<screen key="XMLHelp" image="menus/information.png" />
 		<screen key="ZapHistoryBrowser" image="menus/tv_zap_history.png" />
 	</screens>
 
 	<menus>
 		<menu key="default" image="menus/menu.png" />
+
+		<menu key="benchmark_info_screen" name="InformationBenchmark" image="menus/information.png" />
+		<menu key="build_info_screen" name="InformationBuild" image="menus/information.png" />
+		<menu key="commit_info_screen" name="InformationCommit" image="menus/browser.png" />
+		<menu key="debug_info_screen" name="InformationDebug" image="menus/browser.png" />
+		<menu key="distribution_info_screen" name="InformationDistribution" image="menus/information.png" />
+		<menu key="geolocation_info_screen" name="InformationGeolocation" image="menus/information.png" />
+		<menu key="memory_info_screen" name="InformationMemory" image="menus/browser.png" />
+		<menu key="multiboot_info_screen" name="InformationMultiBoot" image="menus/information.png" />
+		<menu key="network_info_screen" name="InformationNetwork" image="menus/radio.png" />
+		<menu key="picture_info_screen" name="InformationPicture" image="menus/information.png" />
+		<menu key="receiver_info_screen" name="InformationReceiver" image="menus/information.png" />
+		<menu key="service_info_screen" name="InformationService" image="menus/tv_live.png" />
+		<menu key="storage_info_screen" name="InformationStorage" image="menus/backup.png" />
+		<menu key="streaming_info_screen" name="InformationStreaming" image="menus/information.png" />
+		<menu key="system_info_screen" name="InformationSystem" image="menus/information.png" />
+		<menu key="translation_info_screen" name="InformationTranslation" image="menus/information.png" />
+		<menu key="tuner_info_screen" name="InformationTuner" image="menus/information.png" />
+
 		<menu key="about_screen" image="menus/standby.png" />
 		<menu key="android_mode" image="menus/menu.png" />
 		<menu key="boxbranding_screen" image="menus/restart.png" />
 		<menu key="deep_standby" image="menus/shutdown.png" />
-		<menu key="device_info_screen" image="menus/storage.png" />
+		<!-- menu key="device_info_screen" image="menus/storage.png" / -->
 		<menu key="device_screen" image="menus/restart.png" />
 		<menu key="dualboot" image="menus/shuffle.png" />
 		<menu key="epg_menu" image="menus/tv_epg.png" /><!-- epg -->
 		<menu key="epg" image="menus/tv_epg.png" /><!-- epg_menu -->
 		<menu key="harddisk_selection" image="menus/storage.png" /><!-- harddisk -->
 		<menu key="harddisk" image="menus/storage.png" /><!-- harddisk_selection -->
-		<menu key="info_screen" image="menus/information.png" /><!-- information -->
 		<menu key="information" image="menus/information.png" /><!-- info_screen -->
-		<menu key="main_menu" image="menus/tv_live.png" /> <!-- mainmenu -->
-		<menu key="mainmenu" image="menus/tv_live.png" /> <!-- main_menu -->
+		<menu key="information_benchmark" image="menus/information.png" />
+		<menu key="information_build" image="menus/information.png" />
+		<menu key="information_commit" image="menus/browser.png" />
+		<menu key="information_debug" image="menus/browser.png" />
+		<menu key="information_distribution" image="menus/information.png" />
+		<menu key="information_geolocation" image="menus/information.png" />
+		<menu key="information_memory" image="menus/browser.png" />
+		<menu key="information_multiboot" image="menus/information.png" />
+		<menu key="information_network" image="menus/radio.png" />
+		<menu key="information_picture" image="menus/information.png" />
+		<menu key="information_receiver" image="menus/information.png" />
+		<menu key="information_service" image="menus/tv_live.png" />
+		<menu key="information_storage" image="menus/backup.png" />
+		<menu key="information_streaming" image="menus/information.png" />
+		<menu key="information_system" image="menus/information.png" />
+		<menu key="information_translation" image="menus/information.png" />
+		<menu key="information_tuner" image="menus/information.png" />
+		<menu key="mainmenu" image="menus/tv_live.png" />
 		<menu key="maintenance_mode" image="menus/menu.png" />
 		<menu key="media_player" image="menus/movie.png" />
-		<menu key="memory_info_screen" image="menus/browser.png" />
 		<menu key="memory_screen" image="menus/shutdown.png" />
 		<menu key="multiboot" image="menus/shuffle.png" />
 		<menu key="multiboot_screen" image="menus/shuffle.png" />
-		<menu key="network_info_screen" image="menus/radio.png" />
 		<menu key="network_screen" image="menus/menu.png" />
 		<menu key="network_setup" image="menus/radio.png" /><!-- network -->
 		<menu key="network" image="menus/radio.png" /><!-- network_setup -->
@@ -553,11 +586,9 @@
 		<menu key="osd_menu" image="menus/tv_setup.png" />
 		<menu key="plugin_selection" image="menus/plugins.png" />
 		<menu key="plutotv" image="menus/plutotv.png" />
-		<menu key="receiver_info_screen" image="menus/information.png" />
 		<menu key="restart" image="menus/reboot.png" />
 		<menu key="restart_enigma" image="menus/restart.png" />
 		<!-- <menu key="scart_switch" image="menus/scart.png" /> -->
-		<menu key="service_info_screen" image="menus/tv_live.png" />
 		<menu key="setup_selection" image="menus/setup.png" /><!-- setup -->
 		<menu key="setup" image="menus/setup.png" /><!-- setup_selection -->
 		<menu key="sleep" image="menus/sleeptimer.png" />
@@ -566,7 +597,6 @@
 		<menu key="standby_restart_list" image="menus/standby.png" /><!-- shutdown -->
 		<menu key="shutdown" image="menus/standby.png" /><!-- standby_restart_list -->
 		<menu key="software_update" image="menus/factory_reset_setup.png" />
-		<menu key="streaming_clients_info_screen" image="menus/menu.png" />
 		<menu key="system_selection" image="menus/factory_reset_setup.png" /><!-- system -->
 		<menu key="system" image="menus/factory_reset_setup.png" /><!-- system_selection -->
 		<menu key="timer_menu" image="menus/timer.png" /><!-- timermenu -->
@@ -725,7 +755,7 @@
 		<widget source="ScreenPath" render="Label" position="360,5" size="870,20" conditional="ScreenPath" font="TitleFont;17" foregroundColor="BannerTitle" horizontalAlignment="right" textBorderColor="BannerBorder" textBorderWidth="1" transparent="1" />
 		<widget source="Title" render="Label" position="360,30" size="870,35" font="TitleFont;25" foregroundColor="BannerTitle" horizontalAlignment="right" noWrap="1" textBorderColor="BannerBorder" textBorderWidth="1" transparent="1" />
 		<eLabel position="50,65" size="1180,2" backgroundColor="Pinstripe" />
-		<widget name="Image" position="50,80" size="250,250" alphatest="blend" conditional="Image" scaleFlags="scaleLeftTop" transparent="1" />
+		<widget name="Image" position="75,80" size="250,250" alphatest="blend" conditional="Image" scaleFlags="scaleLeftTop" transparent="1" />
 		<eLabel position="50,660" size="1180,2" backgroundColor="Pinstripe" />
 		<widget source="key_menu" render="Pixmap" pixmap="buttons/button_block_menu.png" position="50,670" size="50,35" alphatest="blend" objectTypes="key_menu,StaticText" transparent="1">
 			<convert type="ConditionalShowHide" />
@@ -1493,6 +1523,48 @@
 		</widget>
 		<widget name="buttonlist" position="400,510" size="830,25" backgroundColor="TextBackground" conditional="buttonlist" font="HelpFont;20" foregroundColor="HelpPress" transparent="1" verticalAlignment="center" />
 		<panel name="ScreenTemplateDescription4" />
+	</screen>
+
+<!-- MENU > Information - Information Screens -->
+
+	<!-- The following screens are also handled by this base Information screen:
+		InformationBenchmark, InformationBuild, InformationDistribution, InformationGeolocation,
+		InformationMemory, InformationMultiBoot, InformationNetwork, InformationReceiver,
+		InformationService, InformationStorage, InformationStreaming, InformationTranslation,
+		InformationTuner.
+	-->
+	<screen name="Information" title="Information" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateBranding" />
+		<widget name="information" position="400,80" size="830,560" font="TextFont;20" splitPosition="320" />
+			<!-- ScrollLabel() extra attributes available...
+			leftColumnAlignment="left" rightColumnAlignment="left" split="1" splitCharacter="|"
+			splitMargin="5" splitPosition="320" splitSeparated="0" splitTrim="0"
+			-->
+	</screen>
+
+	<screen name="InformationCommit" title="Commit Log Information" position="fill" flags="wfNoBorder">
+		<panel name="InformationWide" />
+	</screen>
+
+	<screen name="InformationDebug" title="Debug Log Information" position="fill" flags="wfNoBorder">
+		<panel name="InformationWide" />
+	</screen>
+
+	<screen name="InformationPicture" title="Picture Information" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<panel name="ScreenTemplateBranding" />
+		<widget name="name" position="400,80" size="830,25" font="TextFont;20" horizontalAlignment="center" verticalAlignment="center" />
+		<widget name="picture" position="400,115" size="830,515" alphatest="blend" scaleFlags="scaleCenter" />
+	</screen>
+
+	<screen name="InformationSystem" title="System Information" position="fill" flags="wfNoBorder">
+		<panel name="InformationWide" />
+	</screen>
+
+	<screen name="InformationWide" title="Information" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<widget name="information" position="50,80" size="1180,560" font="FixedFont;20" />
 	</screen>
 
 <!-- Panel To Display The Remote Control (154 x 500 pixels) -->
