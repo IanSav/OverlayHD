@@ -1371,25 +1371,25 @@
 	<screen name="MenuHorizontal" title="Menu" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="menuimage" position="50,e-240" size="100,100" alphaTest="blend" scaleFlags="scaleCenter" transparent="yes" />
-		<widget source="menu" render="Listbox" position="50,e-130" size="e-100,71" listOrientation="horizontal">
+		<widget source="menu" render="Listbox" position="50,e-130" size="e-100,71" listOrientation="horizontal" scrollText="direction=left,mode=bounce,startDelay=1500,stepSize=1,stepDelay=60,endDelay=1500,repeat=-1">
 			<!-- NumberText, Image, Number, Text, Description, Key, Weight -->
 			<template name="Default" fonts="MenuFont;25,MenuFont;20" itemHeight="61" itemWidth="236">
 				<mode name="default">
-					<text index="NumberText" position="0,0" size="236,60" font="0" horizontalAlignment="center" padding="5,0" scrollText="direction=left,mode=bounce,startDelay=2500,stepSize=1,stepDelay=60,endDelay=2500,repeat=-1" verticalAlignment="center" />
+					<text index="NumberText" position="0,0" size="236,60" flags="scroll" font="0" horizontalAlignment="center" padding="5,0" verticalAlignment="center" />
 				</mode>
 				<mode name="text">
-					<text index="Text" position="0,0" size="236,60" font="0" horizontalAlignment="center" padding="5,0" scrollText="direction=left,mode=bounce,startDelay=2500,stepSize=1,stepDelay=60,endDelay=2500,repeat=-1" verticalAlignment="center" />
+					<text index="Text" position="0,0" size="236,60" flags="scroll" font="0" horizontalAlignment="center" padding="5,0" verticalAlignment="center" />
 				</mode>
 				<mode name="number">
 					<text index="Number" position="0,0" size="236,25" font="1" foregroundColor="TextIndented" foregroundColorSelected="TextIndentedSelected" horizontalAlignment="center" padding="5,0" verticalAlignment="center" />
-					<text index="Text" position="0,25" size="236,35" font="0" horizontalAlignment="center" padding="5,0" scrollText="direction=left,mode=bounce,startDelay=2500,stepSize=1,stepDelay=60,endDelay=2500,repeat=-1" verticalAlignment="center" />
+					<text index="Text" position="0,25" size="236,35" flags="scroll" font="0" horizontalAlignment="center" padding="5,0"  verticalAlignment="center" />
 				</mode>
 				<mode name="image">
-					<text index="Text" position="0,0" size="236,60" font="0" horizontalAlignment="center" padding="5,0" scrollText="direction=left,mode=bounce,startDelay=2500,stepSize=1,stepDelay=60,endDelay=2500,repeat=-1" verticalAlignment="center" />
+					<text index="Text" position="0,0" size="236,60" flags="scroll" font="0" horizontalAlignment="center" padding="5,0" verticalAlignment="center" />
 				</mode>
 				<mode name="both">
 					<text index="Number" position="0,0" size="236,25" font="1" foregroundColor="TextIndented" foregroundColorSelected="TextIndentedSelected" horizontalAlignment="center" padding="5,0" verticalAlignment="center" />
-					<text index="Text" position="0,25" size="236,35" font="0" horizontalAlignment="center" padding="5,0" scrollText="direction=left,mode=bounce,startDelay=2500,stepSize=1,stepDelay=60,endDelay=2500,repeat=-1" verticalAlignment="center" />
+					<text index="Text" position="0,25" size="236,35" flags="scroll" font="0" horizontalAlignment="center" padding="5,0" verticalAlignment="center" />
 				</mode>
 			</template>
 		</widget>
