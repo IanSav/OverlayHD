@@ -1434,6 +1434,15 @@
 		<widget source="description" render="Label" position="400,540" size="830,122" backgroundColor="TextBackground" conditional="description" font="DescriptionFont;20" foregroundColor="Text" padding="10" scrollText="direction=top,mode=bounce,startDelay=2500,stepSize=1,stepDelay=60,endDelay=2500,repeat=-1" verticalAlignment="center" widgetBorderColor="Pinstripe" widgetBorderWidth="2" />
 	</screen>
 
+<!-- BLUE | Long BLUE - Extension Menu (This is a ChoiceList control made to look like a standard menu.) -->
+
+	<screen name="ExtensionsList" title="Extension Menu" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<ePixmap pixmap="menus/plugins.png" position="75,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
+		<!-- widget name="text" position="400,80" size="830,35" backgroundColor="TextBackground" font="DescriptionFont;25" foregroundColor="Text" transparent="1" valign="center" / -->
+		<widget name="list" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" />
+	</screen>
+
 <!-- BLUE | Long BLUE - Quick Menu -->
 
 	<screen name="QuickMenu" title="Quick Menu" position="fill" flags="wfNoBorder">
