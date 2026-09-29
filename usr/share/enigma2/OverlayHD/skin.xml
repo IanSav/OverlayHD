@@ -489,7 +489,7 @@
 	</parameters>
 
 	<screens>
-		<!-- <screen key="default" image="" /> -->
+		<screen key="default" image="place_holder" />
 		<screen key="BouquetSelector" image="menus/tv_live.png" />
 		<screen key="ChannelContextMenu" image="menus/tv_live.png" />
 		<screen key="DeviceManager" image="menus/browser_setup.png" />
@@ -517,6 +517,7 @@
 		<screen key="LocaleSelection" image="menus/software_manager_setup.png" />
 		<screen key="PictureInformation" image="menus/information.png" />
 		<screen key="QuickMenu" image="menus/menu.png" />
+		<screen key="OverlayHDSkinManager" image="menus/mainmenu_tv_channel.png" />
 		<screen key="OverlayHDThemeManager" image="menus/mainmenu_tv_channel.png" />
 		<screen key="SimpleChannelSelection" image="menus/tv_live.png" />
 		<screen key="XMLHelp" image="menus/information.png" />
@@ -524,38 +525,56 @@
 	</screens>
 
 	<menus>
-		<menu key="default" image="menus/menu.png" />
-
-		<menu key="benchmark_info_screen" name="InformationBenchmark" image="menus/information.png" />
-		<menu key="build_info_screen" name="InformationBuild" image="menus/information.png" />
-		<menu key="commit_info_screen" name="InformationCommit" image="menus/browser.png" />
-		<menu key="debug_info_screen" name="InformationDebug" image="menus/browser.png" />
-		<menu key="distribution_info_screen" name="InformationDistribution" image="menus/information.png" />
-		<menu key="geolocation_info_screen" name="InformationGeolocation" image="menus/information.png" />
-		<menu key="memory_info_screen" name="InformationMemory" image="menus/browser.png" />
-		<menu key="multiboot_info_screen" name="InformationMultiBoot" image="menus/information.png" />
-		<menu key="network_info_screen" name="InformationNetwork" image="menus/radio.png" />
-		<menu key="picture_info_screen" name="InformationPicture" image="menus/information.png" />
-		<menu key="receiver_info_screen" name="InformationReceiver" image="menus/information.png" />
-		<menu key="service_info_screen" name="InformationService" image="menus/tv_live.png" />
-		<menu key="storage_info_screen" name="InformationStorage" image="menus/backup.png" />
-		<menu key="streaming_info_screen" name="InformationStreaming" image="menus/information.png" />
-		<menu key="system_info_screen" name="InformationSystem" image="menus/information.png" />
-		<menu key="translation_info_screen" name="InformationTranslation" image="menus/information.png" />
-		<menu key="tuner_info_screen" name="InformationTuner" image="menus/information.png" />
-
-		<menu key="about_screen" image="menus/standby.png" />
-		<menu key="android_mode" image="menus/menu.png" />
-		<menu key="boxbranding_screen" image="menus/restart.png" />
+		<menu key="default" image="menus/place_holder.png" />
+		<menu key="advanced_restore" image="menus/menu.png" />
+		<menu key="advanced_software" image="menus/menu.png" />
+		<menu key="audio_menu" image="menus/menu.png" />
+		<menu key="audio_setup" image="menus/menu.png" />
+		<menu key="auto_scan" image="menus/menu.png" />
+		<menu key="autocam_settings" image="menus/menu.png" />
+		<menu key="autolanguage_setup" image="menus/menu.png" />
+		<menu key="backup_additional" image="menus/menu.png" />
+		<menu key="backup_default" image="menus/menu.png" />
+		<menu key="backup_excluded" image="menus/menu.png" />
+		<menu key="backup_image" image="menus/menu.png" />
+		<menu key="backup_image_dbackup" image="menus/menu.png" />
+		<menu key="backup_image_dflash" image="menus/menu.png" />
+		<menu key="backup_system" image="menus/menu.png" />
+		<menu key="benchmark_info_screen" image="menus/information.png" />
+		<menu key="build_info_screen" image="menus/information.png" />
+		<menu key="buttonsetup_setup" image="menus/menu.png" />
+		<menu key="cam" image="menus/menu.png" />
+		<menu key="cardserver_settings" image="menus/menu.png" />
+		<menu key="cccam_info" image="menus/menu.png" />
+		<menu key="channelselection_setup" image="menus/menu.png" />
+		<menu key="chkroot_multiboot" image="menus/menu.png" />
+		<menu key="ci_selection" image="menus/menu.png" />
+		<menu key="commit_info_screen" image="menus/browser.png" />
+		<menu key="crontimer_edit" image="menus/timer.png" />
+		<menu key="dab_scan" image="menus/menu.png" />
+		<menu key="dab_usb_setup" image="menus/menu.png" />
+		<menu key="debug_info_screen" image="menus/browser.png" />
 		<menu key="deep_standby" image="menus/shutdown.png" />
-		<!-- menu key="device_info_screen" image="menus/storage.png" / -->
-		<menu key="device_screen" image="menus/restart.png" />
-		<menu key="dualboot" image="menus/shuffle.png" />
-		<menu key="epg_menu" image="menus/tv_epg.png" /><!-- epg -->
-		<menu key="epg" image="menus/tv_epg.png" /><!-- epg_menu -->
-		<menu key="harddisk_selection" image="menus/storage.png" /><!-- harddisk -->
-		<menu key="harddisk" image="menus/storage.png" /><!-- harddisk_selection -->
-		<menu key="information" image="menus/information.png" /><!-- info_screen -->
+		<menu key="deleteepgcache" image="menus/menu.png" />
+		<menu key="device_manager" image="menus/menu.png" />
+		<menu key="device_setup" image="menus/menu.png" />
+		<menu key="display_setup" image="menus/menu.png" />
+		<menu key="distribution_info_screen" image="menus/information.png" />
+		<menu key="dns_setup" image="menus/menu.png" />
+		<menu key="epg" image="menus/tv_epg.png" />
+		<menu key="epg_setup" image="menus/menu.png" />
+		<menu key="extended" image="menus/menu.png" />
+		<menu key="factory_reset" image="menus/menu.png" />
+		<menu key="fallbacktuner_settings" image="menus/menu.png" />
+		<menu key="flash_expander" image="menus/menu.png" />
+		<menu key="flash_online" image="menus/menu.png" />
+		<menu key="geolocation_info_screen" image="menus/information.png" />
+		<menu key="harddisk" image="menus/storage.png" />
+		<menu key="hdmicec" image="menus/menu.png" />
+		<menu key="hdmirecord_setup" image="menus/menu.png" />
+		<menu key="Inadyn_setup" image="menus/menu.png" />
+		<menu key="information" image="menus/information.png" />
+		<!-- These keys are reserved for a time when the Information keys are made sortable.
 		<menu key="information_benchmark" image="menus/information.png" />
 		<menu key="information_build" image="menus/information.png" />
 		<menu key="information_commit" image="menus/browser.png" />
@@ -573,37 +592,158 @@
 		<menu key="information_system" image="menus/information.png" />
 		<menu key="information_translation" image="menus/information.png" />
 		<menu key="information_tuner" image="menus/information.png" />
+		-->
+		<menu key="input_device_setup" image="menus/menu.png" />
+		<menu key="install_local" image="menus/menu.png" />
+		<menu key="kexec_multiboot" image="menus/menu.png" />
+		<menu key="keyboard" image="menus/menu.png" />
+		<menu key="led_setup" image="menus/menu.png" />
+		<menu key="loadepgcache" image="menus/menu.png" />
+		<menu key="locale_setup" image="menus/menu.png" />
+		<menu key="logs_setup" image="menus/menu.png" />
 		<menu key="mainmenu" image="menus/tv_live.png" />
 		<menu key="maintenance_mode" image="menus/menu.png" />
-		<menu key="media_player" image="menus/movie.png" />
-		<menu key="memory_screen" image="menus/shutdown.png" />
+		<menu key="manage_plugins" image="menus/menu.png" />
+		<menu key="manual_scan" image="menus/menu.png" />
+		<menu key="memory_info_screen" image="menus/browser.png" />
+		<menu key="minidlna_setup" image="menus/menu.png" />
+		<menu key="mount_setup" image="menus/menu.png" />
+		<menu key="movie_selection" image="menus/menu.png" />
 		<menu key="multiboot" image="menus/shuffle.png" />
-		<menu key="multiboot_screen" image="menus/shuffle.png" />
-		<menu key="network_screen" image="menus/menu.png" />
-		<menu key="network_setup" image="menus/radio.png" /><!-- network -->
-		<menu key="network" image="menus/radio.png" /><!-- network_setup -->
-		<menu key="osd_setup" image="menus/tv_setup.png" />
-		<menu key="osd_menu" image="menus/tv_setup.png" />
+		<menu key="multiboot_info_screen" image="menus/information.png" />
+		<menu key="netnfs_setup" image="menus/menu.png" />
+		<menu key="netsamba_setup" image="menus/menu.png" />
+		<menu key="netushare_setup" image="menus/menu.png" />
+		<menu key="network" image="menus/radio.png" />
+		<menu key="network_info_screen" image="menus/radio.png" />
+		<menu key="networkservices_setup" image="menus/menu.png" />
+		<menu key="oscam_info" image="menus/menu.png" />
+		<menu key="osdsetup" image="menus/menu.png" />
+		<menu key="package_manager" image="menus/menu.png" />
+		<menu key="parental_setup" image="menus/menu.png" />
+		<menu key="password_setup" image="menus/menu.png" />
+		<menu key="picon_setup" image="menus/menu.png" />
+		<menu key="picture_info_screen" image="menus/information.png" />
+		<menu key="playback_setup" image="menus/menu.png" />
 		<menu key="plugin_selection" image="menus/plugins.png" />
-		<menu key="plutotv" image="menus/plutotv.png" />
+		<menu key="powertimer_edit" image="menus/timer.png" />
+		<menu key="rec" image="menus/menu.png" />
+		<menu key="receiver_info_screen" image="menus/information.png" />
+		<menu key="recording_setup" image="menus/menu.png" />
+		<menu key="remote_setup" image="menus/menu.png" />
+		<menu key="remotecode" image="menus/menu.png" />
 		<menu key="restart" image="menus/reboot.png" />
 		<menu key="restart_enigma" image="menus/restart.png" />
-		<!-- <menu key="scart_switch" image="menus/scart.png" /> -->
-		<menu key="setup_selection" image="menus/setup.png" /><!-- setup -->
-		<menu key="setup" image="menus/setup.png" /><!-- setup_selection -->
+		<menu key="restore_system" image="menus/menu.png" />
+		<menu key="rfmod_setup" image="menus/menu.png" />
+		<menu key="saveepgcache" image="menus/menu.png" />
+		<menu key="scan" image="menus/menu.png" />
+		<menu key="scart_switch" image="menus/scart.png" />
+		<menu key="script_manager" image="menus/menu.png" />
+		<menu key="service_info_screen" image="menus/tv_live.png" />
+		<menu key="setup" image="menus/setup.png" />
+		<menu key="setup_epgenhanced" image="menus/menu.png" />
+		<menu key="setup_epggraphical" image="menus/menu.png" />
+		<menu key="setup_epginfobar" image="menus/menu.png" />
+		<menu key="setup_epginfobargraphical" image="menus/menu.png" />
+		<menu key="setup_epgmulti" image="menus/menu.png" />
+		<menu key="setup_epgvertical" image="menus/menu.png" />
+		<menu key="setup_osd3d" image="menus/menu.png" />
+		<menu key="shutdown" image="menus/standby.png" />
+		<menu key="skin_setup" image="menus/menu.png" />
 		<menu key="sleep" image="menus/sleeptimer.png" />
-		<menu key="sleep_edit" image="menus/timer.png" />
-		<menu key="standby" image="menus/standby.png" />
-		<menu key="standby_restart_list" image="menus/standby.png" /><!-- shutdown -->
-		<menu key="shutdown" image="menus/standby.png" /><!-- standby_restart_list -->
+		<menu key="softcam_settings" image="menus/menu.png" />
+		<menu key="softcsa_settings" image="menus/menu.png" />
+		<menu key="software_manager" image="menus/menu.png" />
 		<menu key="software_update" image="menus/factory_reset_setup.png" />
-		<menu key="system_selection" image="menus/factory_reset_setup.png" /><!-- system -->
-		<menu key="system" image="menus/factory_reset_setup.png" /><!-- system_selection -->
-		<menu key="timer_menu" image="menus/timer.png" /><!-- timermenu -->
-		<menu key="timermenu" image="menus/timer.png" /><!-- timer_menu -->
+		<menu key="standby" image="menus/standby.png" />
+		<menu key="storage_info_screen" image="menus/backup.png" />
+		<menu key="streaming_info_screen" image="menus/information.png" />
+		<menu key="streamrelay_settings" image="menus/menu.png" />
+		<menu key="subtitle_setup" image="menus/menu.png" />
+		<menu key="swap_manager" image="menus/menu.png" />
+		<menu key="system" image="menus/factory_reset_setup.png" />
+		<menu key="system_info_screen" image="menus/information.png" />
+		<menu key="time_setup" image="menus/menu.png" />
 		<menu key="timer_edit" image="menus/timer.png" />
-		<menu key="crontimer_edit" image="menus/timer.png" />
-		<menu key="powertimer_edit" image="menus/timer.png" />
+		<menu key="timermenu" image="menus/timer.png" />
+		<menu key="timshift_setup" image="menus/menu.png" />
+		<menu key="translation_info_screen" image="menus/information.png" />
+		<menu key="tuner_basic_settings" image="menus/menu.png" />
+		<menu key="tuner_info_screen" image="menus/information.png" />
+		<menu key="tuner_setup" image="menus/menu.png" />
+		<menu key="upgrade_settings" image="menus/menu.png" />
+		<menu key="upgrade_source" image="menus/menu.png" />
+		<menu key="usage_setup" image="menus/menu.png" />
+		<menu key="user_interface" image="menus/menu.png" />
+		<menu key="video_menu" image="menus/menu.png" />
+		<menu key="video_setup" image="menus/menu.png" />
+		<menu key="volume_adjust" image="menus/menu.png" />
+		<menu key="wol_standby" image="menus/menu.png" />
+		<menu key="zerotier_setup" image="menus/menu.png" />
+		<!-- Default Plugin Menu Items -->
+		<menu key="animation_setup" image="menus/menu.png" /><!-- Animation Setup -->
+		<menu key="atilehd_setup" image="menus/menu.png" /><!-- AtileHD -->
+		<menu key="autobouquetsmakermaker" image="menus/menu.png" /><!-- AutoBouquetsMaker -->
+		<menu key="autotimer_setup" image="menus/menu.png" /><!-- Auto Timer -->
+		<menu key="blindscan" image="menus/menu.png" /><!-- Blind Scan -->
+		<menu key="cablescan" image="menus/menu.png" /><!-- Cable Scan -->
+		<menu key="ci_assign" image="menus/menu.png" /><!-- Common Interface Assignment -->
+		<menu key="CPU Control" image="menus/menu.png" /><!-- CPU Control -->
+		<menu key="dvd_player" image="menus/menu.png" /><!-- DVD Player -->
+		<menu key="emc" image="menus/menu.png" /><!-- Enhanced Movie Center -->
+		<menu key="epgrefresh" image="menus/menu.png" /><!-- EPG Refresh -->
+		<menu key="fastscan" image="menus/menu.png" /><!-- Fast Scan -->
+		<menu key="FCCSetup" image="menus/menu.png" /><!-- Fast Channel Change -->
+		<menu key="filecommand" image="menus/browser.png" /><!-- File Commander -->
+		<menu key="fonttest" image="menus/menu.png" /><!-- Font Benchmark -->
+		<menu key="kodi" image="menus/menu.png" /><!-- Kodi -->
+		<menu key="LCNScanner" image="menus/menu.png" /><!-- LCN Scanner -->
+		<menu key="media_player" image="menus/menu.png" /><!-- Media Player -->
+		<menu key="openwebif" image="menus/menu.png" /><!-- OpenWebif -->
+		<menu key="positioner_setup" image="menus/menu.png" /><!-- Positioner Setup -->
+		<menu key="satellite_equipment_setup" image="menus/menu.png" /><!-- Satellite Equipment Control -->
+		<menu key="satfinder" image="menus/menu.png" /><!-- Satfinder / Signal Finder -->
+		<menu key="serviceapp_setup" image="menus/menu.png" /><!-- ServiceApp -->
+		<menu key="socket_mmi" image="menus/menu.png" /><!-- SocketMMI -->
+		<menu key="video_clipping" image="menus/menu.png" /><!-- Video Clipping Setup -->
+		<menu key="video_finetune" image="menus/menu.png" /><!-- Video Tune / Test Screens -->
+		<menu key="videoenhancement_setup" image="menus/menu.png" /><!-- Video Enhancement / Video Enhancement AML -->
+		<menu key="vps" image="menus/menu.png" /><!-- VPS Settings -->
+		<!-- Plugin Menu Items -->
+		<menu key="OverlayHD_setup" image="menus/menu.png" /><!-- OverlayHD -->
+		<menu key="plutotv" image="menus/plutotv.png" /><!-- Pluto TV -->
+		<!-- Test Menu Items -->
+		<menu key="hotkey_setup" image="menus/menu.png" />
+		<menu key="input_devices_setup" image="menus/menu.png" />
+		<menu key="media_selection" image="menus/menu.png" />
+		<menu key="parental_setup_new" image="menus/menu.png" />
+		<menu key="plugin_manager" image="menus/menu.png" />
+		<menu key="position_setup" image="menus/menu.png" />
+		<menu key="softcam_manager" image="menus/menu.png" />
+		<menu key="test" image="menus/menu.png" />
+		<menu key="test_screen" image="menus/menu.png" />
+		<menu key="testing_info_screen" image="menus/menu.png" />
+		<!-- Defunct Menu Items -->
+		<menu key="about_screen" image="menus/standby.png" />
+		<menu key="android_mode" image="menus/menu.png" />
+		<menu key="boxbranding_screen" image="menus/restart.png" />
+		<menu key="device_info_screen" image="menus/storage.png" />
+		<menu key="device_screen" image="menus/restart.png" />
+		<menu key="dualboot" image="menus/shuffle.png" />
+		<menu key="epg_menu" image="menus/tv_epg.png" /><!-- epg -->
+		<menu key="harddisk_selection" image="menus/storage.png" /><!-- harddisk -->
+		<menu key="media_player" image="menus/movie.png" />
+		<menu key="memory_screen" image="menus/shutdown.png" />
+		<menu key="network_screen" image="menus/menu.png" />
+		<menu key="network_setup" image="menus/radio.png" /><!-- network -->
+		<menu key="osd_setup" image="menus/tv_setup.png" />
+		<menu key="osd_menu" image="menus/tv_setup.png" />
+		<menu key="setup_selection" image="menus/setup.png" /><!-- setup -->
+		<menu key="sleep_edit" image="menus/timer.png" />
+		<menu key="standby_restart_list" image="menus/standby.png" /><!-- shutdown -->
+		<menu key="system_selection" image="menus/factory_reset_setup.png" /><!-- system -->
+		<menu key="timer_menu" image="menus/timer.png" /><!-- timermenu -->
 		<menu key="autotimer_setup" image="menus/timer.png" />
 		<menu key="video_selection" image="menus/tv_live.png" /><!-- video -->
 		<menu key="video" image="menus/tv_live.png" /><!-- video_selection -->
@@ -611,75 +751,129 @@
 	</menus>
 
 	<setups>
-		<setup key="default" image="menus/setup.png" />
-		<!-- Setup based screens that may eventually get subclassed to Setup.
-		<setup key="FileCommander" image="menus/mainmenu_tasks_setup_tv.png" />
-		<setup key="HdmiCECSetupScreen" image="menus/mainmenu_tasks_setup_tv.png" />
-		<setup key="IniTerrestrialLocation" image="menus/mainmenu_tasks_setup_tv.png" />
-		<setup key="LanguageSelection" image="menus/mainmenu_tasks_setup_softwaremanager.png" />
-		<setup key="MediaPlayerSettings" image="menus/mainmenu_tasks_setup_movie.png" />
-		<setup key="NimSelection" image="menus/mainmenu_tasks_setup_tv.png" />
-		<setup key="NimSetup" image="menus/mainmenu_tasks_setup_tv.png" />
-		<setup key="ParentalControlChangePin" image="menus/mainmenu_tasks_setup_parental.png" />
-		<setup key="ParentalControlEditor" image="menus/mainmenu_tasks_setup_parental.png" />
-		<setup key="ParentalControlSetup" image="menus/mainmenu_tasks_setup_parental.png" />
-		<setup key="PicturePlayerSetup" image="menus/mainmenu_tasks_setup_photo.png" />
-		<setup key="ScanSetup" image="menus/mainmenu_tasks_setup_tv.png" />
-		<setup key="ZapHistoryConfigurator" image="menus/mainmenu_tv_zaphistory.png" />
-		-->
-		<setup key="AccessLevel" image="menus/parental_control_setup.png" />
-		<setup key="AudioVideo" image="menus/setup.png" />
+		<setup key="default" image="menus/place_holder.png" />
+		<setup key="Audio" image="menus/setup.png" />
+		<setup key="audio_setup" image="menus/setup.png" />
+		<setup key="AutoCam" image="menus/setup.png" />
 		<setup key="AutoLanguage" image="menus/setup.png" />
-		<setup key="buttonsetup" image="menus/setup.png" />
+		<setup key="Cardserver" image="menus/setup.png" />
+		<setup key="CCcamLineEdit" image="menus/setup.png" />
+		<setup key="CCcamProfile" image="menus/setup.png" />
 		<setup key="ChannelSelection" image="menus/default_setup.png" />
-		<setup key="display" image="menus/setup.png" />
+		<setup key="ChkrootSlotManager" image="menus/setup.png" />
+		<setup key="CiSelection" image="menus/setup.png" />
+		<setup key="Display" image="menus/setup.png" />
+		<setup key="DNS" image="menus/setup.png" />
 		<setup key="EPG" image="menus/tv_epg.png" />
-		<setup key="epgenhanced" image="menus/tv_epg.png" />
-		<setup key="epggraphical" image="menus/tv_epg.png" />
-		<setup key="epginfobar" image="menus/tv_epg.png" />
-		<setup key="epginfobargraphical" image="menus/tv_epg.png" />
-		<setup key="epgmulti" image="menus/tv_epg.png" />
-		<setup key="epgsettings" image="menus/tv_epg.png" />
-		<setup key="epgsingle" image="menus/tv_epg.png" />
+		<setup key="EPGEnhanced" image="menus/tv_epg.png" />
+		<setup key="EPGGraphical" image="menus/tv_epg.png" />
+		<setup key="EPGInfobar" image="menus/tv_epg.png" />
+		<setup key="EPGInfobarGraphical" image="menus/tv_epg.png" />
+		<setup key="EPGMulti" image="menus/tv_epg.png" />
+		<setup key="EPGSingle" image="menus/tv_epg.png" />
+		<setup key="EPGVertical" image="menus/tv_epg.png" />
 		<setup key="FactoryReset" image="menus/factory_reset_setup.png" />
-		<setup key="fallback" image="menus/setup.png" />
-		<setup key="fanspeed" image="menus/setup.png" />
-		<setup key="FrontDisplay" image="menus/tv_live.png" />
+		<setup key="Fallbacktuner" image="menus/setup.png" />
+		<setup key="FlashExpander" image="menus/setup.png" />
+		<setup key="GPTSlotManager" image="menus/setup.png" />
 		<setup key="HardDisk" image="menus/setup.png" />
-		<setup key="HdmiCec" image="menus/setup.png" />
-		<setup key="hdmirecord" image="menus/setup.png" />
-		<setup key="InputDevices" image="menus/setup.png" />
+		<setup key="HDMICEC" image="menus/setup.png" />
+		<setup key="HDMIRecord" image="menus/setup.png" />
+		<setup key="InputDeviceSetup" image="menus/setup.png" />
+		<setup key="InputDevicesSetup" image="menus/setup.png" />
+		<setup key="KexecSlotManager" image="menus/setup.png" />
 		<setup key="Keyboard" image="menus/setup.png" />
-		<setup key="LEDDisplay" image="menus/setup.png" />
-		<setup key="Locale" image="menus/setup.png" />
+		<setup key="LEDs" image="menus/setup.png" />
+		<setup key="Locale" image="menus/mainmenu_tasks_setup_softwaremanager.png" />
 		<setup key="Logs" image="menus/setup.png" />
-		<setup key="MACAddress" image="menus/setup.png" />
 		<setup key="MovieSelection" image="menus/tv_live.png" />
-		<setup key="network" image="menus/setup.png" />
-		<setup key="osd" image="menus/tv_live.png" />
-		<setup key="OSDCalibration" image="menus/tv_setup.png" />
+		<setup key="NativeSlotManager" image="menus/setup.png" />
+		<setup key="NetworkAdapter" image="menus/setup.png" />
+		<setup key="NetworkCredentials" image="menus/setup.png" />
+		<setup key="NetworkMounts" image="menus/setup.png" />
+		<setup key="NetworkNFS" image="menus/setup.png" />
+		<setup key="NetworkSamba" image="menus/setup.png" />
+		<setup key="NetworkWiFi" image="menus/setup.png" />
+		<setup key="NetworkZeroTier" image="menus/setup.png" />
+		<setup key="OSCamInfoSetup" image="menus/setup.png" />
 		<setup key="OSD3DCalibration" image="menus/tv_setup.png" />
+		<setup key="OSDCalibration" image="menus/tv_setup.png" />
 		<setup key="ParentalControl" image="menus/parental_control_setup.png" />
+		<setup key="ParentalControlPin" image="menus/parental_control_setup.png" />
+		<setup key="Password" image="menus/setup.png" />
+		<setup key="Picon" image="menus/setup.png" />
 		<setup key="Playback" image="menus/tv_live.png" />
 		<setup key="PluginBrowser" image="menus/plugins.png" />
-		<setup key="PowerTimer" image="menus/timer_setup.png" />
 		<setup key="Recording" image="menus/tv_live.png" />
 		<setup key="RecordTimer" image="menus/timer_setup.png" />
+		<setup key="RemoteButton" image="menus/setup.png" />
+		<setup key="RemoteControl" image="menus/setup.png" />
 		<setup key="RFModulator" image="menus/setup.png" />
-		<setup key="satconfig" image="menus/setup.png" />
-		<!--
-		<setup key="SkinSelection" image="" />
-		-->
+		<setup key="RTLSDRSetup" image="menus/setup.png" />
+		<setup key="Satellite" image="menus/setup.png" />
+		<setup key="Scheduler" image="menus/timer_setup.png" />
+		<setup key="Skin" image="menus/setup.png" />
 		<setup key="SleepTimer" image="menus/sleeptimer.png" />
 		<setup key="Softcam" image="menus/setup.png" />
-		<setup key="SoftwareUpdate" image="menus/setup.png" />
+		<setup key="SoftCSA" image="menus/setup.png" />
+		<setup key="SoftwareManager" image="menus/setup.png" />
+		<setup key="SpecialFeatures" image="menus/setup.png" />
+		<setup key="StreamRelay" image="menus/setup.png" />
 		<setup key="Subtitle" image="menus/setup.png" />
 		<setup key="Time" image="menus/tv_live.png" />
 		<setup key="Timeshift" image="menus/tv_live.png" />
-		<setup key="tunersetup" image="menus/setup.png" />
+		<setup key="Tuner" image="menus/setup.png" />
+		<setup key="UBISlotManager" image="menus/setup.png" />
 		<setup key="Usage" image="menus/photo_setup.png" />
 		<setup key="UserInterface" image="menus/photo_setup.png" />
+		<setup key="video_setup" image="menus/setup.png" />
+		<setup key="VolumeAdjust" image="menus/setup.png" />
+		<!-- Default Plugin Setup Items -->
+		<setup key="autotimer" image="menus/setup.png" /><!-- AutoTimer -->
+		<setup key="CoverSearchSetup" image="menus/setup.png" /><!-- Enhanced Movie Center -->
+		<setup key="EMCPlaylistSetup" image="menus/setup.png" /><!-- Enhanced Movie Center -->
+		<setup key="epgsearch" image="menus/setup.png" /><!-- EPG Search -->
+		<setup key="FileCommander" image="menus/mainmenu_tasks_setup_tv.png" /><!-- File Commander -->
+		<setup key="MovieInfoSetup" image="menus/setup.png" /><!-- Enhanced Movie Center -->
+		<setup key="imdb" image="menus/setup.png" /><!-- IMDb -->
+		<setup key="MediaPlayer" image="menus/setup.png" /><!-- Media Player -->
+		<setup key="openwebif" image="menus/setup.png" /><!-- OpenWebif -->
+		<setup key="PicturePlayer" image="menus/setup.png" /><!-- Picture Player -->
+		<setup key="Umbra" image="menus/setup.png" /><!-- Umbra -->
+		<setup key="WeatherSettings" image="menus/setup.png" /><!-- MyMetrixLite -->
+		<setup key="WeatherSettings" image="menus/setup.png" /><!-- OAWeather -->
+		<!-- Plugin Setup Items -->
+		<setup key="InfoBarTimers" image="menus/setup.png" /><!-- InfoBar Timers -->
+		<setup key="LCNScanner" image="menus/setup.png" /><!-- LCN Scanner -->
+		<setup key="OverlayHDSkinManager" image="menus/setup.png" /><!-- OverlayHD -->
+		<setup key="plutotv" image="menus/plutotv.png" /><!-- Pluto TV -->
+		<setup key="Radio" image="menus/setup.png" /><!-- Radio (DAB+ Radio) -->
+		<!-- Defunct Setup Items -->
+		<setup key="AccessLevel" image="menus/parental_control_setup.png" />
+		<setup key="AudioVideo" image="menus/setup.png" />
+		<setup key="buttonsetup" image="menus/setup.png" />
+		<setup key="epgsettings" image="menus/tv_epg.png" />
+		<setup key="fallback" image="menus/setup.png" />
+		<setup key="fanspeed" image="menus/setup.png" />
+		<setup key="FrontDisplay" image="menus/tv_live.png" />
+		<setup key="InputDevices" image="menus/setup.png" />
+		<setup key="LEDDisplay" image="menus/setup.png" />
+		<setup key="MACAddress" image="menus/setup.png" />
+		<setup key="MediaPlayerSettings" image="menus/mainmenu_tasks_setup_movie.png" />
+		<setup key="network" image="menus/setup.png" />
+		<setup key="NimSelection" image="menus/mainmenu_tasks_setup_tv.png" />
+		<setup key="NimSetup" image="menus/mainmenu_tasks_setup_tv.png" />
+		<setup key="osd" image="menus/tv_live.png" />
+		<setup key="ParentalControlEditor" image="menus/mainmenu_tasks_setup_parental.png" />
+		<setup key="PicturePlayerSetup" image="menus/mainmenu_tasks_setup_photo.png" />
+		<setup key="PowerTimer" image="menus/timer_setup.png" />
+		<setup key="satconfig" image="menus/setup.png" />
+		<setup key="ScanSetup" image="menus/mainmenu_tasks_setup_tv.png" />
+		<setup key="SkinSelection" image="menus/setup.png" />
+		<setup key="SoftwareUpdate" image="menus/setup.png" />
+		<setup key="tunersetup" image="menus/setup.png" />
 		<setup key="Wizard" image="menus/setup.png" />
+		<setup key="ZapHistoryConfigurator" image="menus/mainmenu_tv_zaphistory.png" />
 	</setups>
 
 	<windowstyle id="0" type="skinned">
