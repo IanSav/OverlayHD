@@ -1,5 +1,5 @@
 <setupxml>
-	<setup key="OverlayHDSkinManager" title="OverlayHD Skin Manager" skin="OverlayHDSkinManager">
+	<setup key="OverlayHD" title="OverlayHD Skin Manager" skin="OverlayHDSkinManager">
 		<item level="2" text="Show OverlayHD in Extensions menu" description="Setting this to Yes causes the OverlayHD Skin Manager plugin, if active, to also be listed in the Extensions menu.">config.plugins.skin.OverlayHD.ShowInExtensions</item>
 		<item level="1" text="Sort OverlayHD themes by name" description="Setting this to Yes causes the themes in the OverlayHD Theme Manager list to be sorted by the theme name.">config.plugins.skin.OverlayHD.SortThemes</item>
 		<item level="1" text="General Settings" />

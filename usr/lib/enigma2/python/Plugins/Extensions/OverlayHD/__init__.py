@@ -6,7 +6,7 @@ from Tools.Directories import SCOPE_PLUGINS, resolveFilename
 PluginLocaleDomain = "OverlayHD"
 PluginLocalePath = "Extensions/OverlayHD/locale"
 
-__version__ = "2.01"
+__version__ = "2.02"
 
 
 def _(text):

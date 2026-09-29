@@ -504,7 +504,7 @@ config.plugins.skin.OverlayHD.ShowInExtensions = ConfigYesNo(default=False)
 
 class OverlayHDSkinManager(Setup):
 	def __init__(self, session):
-		Setup.__init__(self, session=session, setup="OverlayHDSkinManager", plugin="Extensions/OverlayHD")
+		Setup.__init__(self, session=session, setup="OverlayHD", plugin="Extensions/OverlayHD")
 		self["key_yellow"] = StaticText(_("Themes"))
 		self["key_blue"] = StaticText(_("Default"))
 		self["OverlayHDActions"] = HelpableActionMap(self, "ColorActions", {
