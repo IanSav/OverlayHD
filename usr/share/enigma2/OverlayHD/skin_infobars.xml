@@ -706,7 +706,7 @@
 
 	<screen name="TunerState" title="Tuner State" position="50,160" size="1180,25" flags="wfNoBorder" padding="20" spacing="15" zPosition="+1">
 		<widget name="Type" position="0,0" size="20,20" pixmaps="icons/timer_rec.png,icons/timer_zap.png,icons/timer_done.png,icons/timer_wait.png" alphatest="blend" transparent="1" />
-		<widget name="Progress" position="0,0" size="80,10" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/progress.png" backgroundColor="ScreenBackground" borderColor="Grey" borderWidth="2" transparent="1" />
+		<widget name="Progress" position="0,0" size="80,10" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/InfoBarTunerState/progress.png" backgroundColor="ScreenBackground" borderColor="Gray" borderWidth="2" transparent="1" />
 		<!-- nowrap=1 is essential for calculateSize -->
 		<widget name="Field0" font="Regular;20" foregroundColor="White" halign="left" noWrap="1" transparent="1" valign="center" />
 		<widget name="Field1" font="Regular;20" foregroundColor="Silver" halign="left" noWrap="1" transparent="1" valign="center" />
@@ -730,7 +730,7 @@
 		<widget name="chName" position="820,2" size="300,18" font="Regular;18" foregroundColor="White" halign="left" noWrap="1" transparent="1" />
 		<widget name="timelen" position="1130,2" size="150,18" font="Regular;18" foregroundColor="White" halign="right" noWrap="1" transparent="1" />
 		<widget name="chSnr" position="10,20" size="150,18" font="Regular;18" foregroundColor="Cyan" halign="left" noWrap="1" transparent="1" />
-		<widget name="remaining" position="160,20" size="480,18" font="Regular;18" foregroundColor="Grey" halign="center" noWrap="1" transparent="1" />
-		<widget name="recName" position="820,20" size="630,18" font="Regular;18" foregroundColor="Grey" halign="left" noWrap="1" transparent="1" />
+		<widget name="remaining" position="160,20" size="480,18" font="Regular;18" foregroundColor="Gray" halign="center" noWrap="1" transparent="1" />
+		<widget name="recName" position="820,20" size="630,18" font="Regular;18" foregroundColor="Gray" halign="left" noWrap="1" transparent="1" />
 	</screen>
 </skin>

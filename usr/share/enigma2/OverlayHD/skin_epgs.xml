@@ -318,9 +318,9 @@
 		<widget name="now_button_sel" pixmap="epg/now_next_more_on.png" position="50,80" size="152,34" alphatest="blend" />
 		<widget name="next_button_sel" pixmap="epg/now_next_more_on.png" position="210,80" size="152,34" alphatest="blend" />
 		<widget name="more_button_sel" pixmap="epg/now_next_more_on.png" position="370,80" size="152,34" alphatest="blend" />
-		<widget name="now_text" text="NOW" position="50,80" size="154,34" backgroundColor="Grey" font="EPGTimeLineFont;20" foregroundColor="EPGTimeLine" halign="center" transparent="1" valign="center" zPosition="+1" />
-		<widget name="next_text" text="NEXT" position="210,80" size="154,34" backgroundColor="Grey" font="EPGTimeLineFont;20" foregroundColor="EPGTimeLine" halign="center" transparent="1" valign="center" zPosition="+1" />
-		<widget name="more_text" text="LATER" position="370,80" size="154,34" backgroundColor="Grey" font="EPGTimeLineFont;20" foregroundColor="EPGTimeLine" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="now_text" text="NOW" position="50,80" size="154,34" backgroundColor="Gray" font="EPGTimeLineFont;20" foregroundColor="EPGTimeLine" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="next_text" text="NEXT" position="210,80" size="154,34" backgroundColor="Gray" font="EPGTimeLineFont;20" foregroundColor="EPGTimeLine" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="more_text" text="LATER" position="370,80" size="154,34" backgroundColor="Gray" font="EPGTimeLineFont;20" foregroundColor="EPGTimeLine" halign="center" transparent="1" valign="center" zPosition="+1" />
 		<widget name="date" position="530,80" size="200,34" backgroundColor="EPGBackground" font="EPGTimeLineFont;20" foregroundColor="EPGTimeLine" transparent="1" valign="center" />
 		<widget name="list" position="50,115" size="660,540" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="EPGServiceFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" />
 		<widget source="session.VideoPicture" render="Pig" position="730,80" size="500,282" backgroundColor="TransparentBackground" />

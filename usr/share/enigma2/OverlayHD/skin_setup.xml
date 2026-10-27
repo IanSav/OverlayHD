@@ -867,17 +867,17 @@
 		<panel name="ScreenTemplateConfigShort" />
 		<!--
 		<widget source="introduction" render="Label" position="970,90" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
-		<widget source="Adaptertext" render="Label" position="970,130" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="Adaptertext" render="Label" position="970,130" size="250,25" backgroundColor="Gray" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
 		<widget source="Adapter" render="Label" position="970,160" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
-		<widget source="IPtext" render="Label" position="970,200" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="IPtext" render="Label" position="970,200" size="250,25" backgroundColor="Gray" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
 		<widget source="IP" render="Label" position="970,230" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
-		<widget source="Netmasktext" render="Label" position="970,270" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="Netmasktext" render="Label" position="970,270" size="250,25" backgroundColor="Gray" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
 		<widget source="Mask" render="Label" position="970,300" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
-		<widget source="Gatewaytext" render="Label" position="970,340" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="Gatewaytext" render="Label" position="970,340" size="250,25" backgroundColor="Gray" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
 		<widget source="Gateway" render="Label" position="970,370" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
-		<widget source="DNS1text" render="Label" position="970,410" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="DNS1text" render="Label" position="970,410" size="250,25" backgroundColor="Gray" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
 		<widget source="DNS1" render="Label" position="970,440" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
-		<widget source="DNS2text" render="Label" position="970,480" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="DNS2text" render="Label" position="970,480" size="250,25" backgroundColor="Gray" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
 		<widget source="DNS2" render="Label" position="970,510" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
 		-->
 		<eLabel position="400,420" size="830,2" backgroundColor="Pinstripe" />
@@ -885,17 +885,17 @@
 		<eLabel position="400,420" size="2,120" backgroundColor="Pinstripe" />
 		<eLabel position="1228,420" size="2,120" backgroundColor="Pinstripe" />
 		<widget source="introduction" render="Label" position="0,0" size="1,1" font="Regular;20" transparent="1" />
-		<widget source="Adaptertext" render="Label" position="410,430" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="Adaptertext" render="Label" position="410,430" size="250,25" backgroundColor="Gray" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
 		<widget source="Adapter" render="Label" position="410,455" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
-		<widget source="IPtext" render="Label" position="410,480" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="IPtext" render="Label" position="410,480" size="250,25" backgroundColor="Gray" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
 		<widget source="IP" render="Label" position="410,505" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
-		<widget source="Netmasktext" render="Label" position="690,430" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="Netmasktext" render="Label" position="690,430" size="250,25" backgroundColor="Gray" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
 		<widget source="Mask" render="Label" position="690,455" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
-		<widget source="Gatewaytext" render="Label" position="690,480" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="Gatewaytext" render="Label" position="690,480" size="250,25" backgroundColor="Gray" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
 		<widget source="Gateway" render="Label" position="690,505" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
-		<widget source="DNS1text" render="Label" position="970,430" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="DNS1text" render="Label" position="970,430" size="250,25" backgroundColor="Gray" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
 		<widget source="DNS1" render="Label" position="970,455" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
-		<widget source="DNS2text" render="Label" position="970,480" size="250,25" backgroundColor="Grey" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
+		<widget source="DNS2text" render="Label" position="970,480" size="250,25" backgroundColor="Gray" font="Regular;20" foregroundColor="Black" halign="center" valign="center" />
 		<widget source="DNS2" render="Label" position="970,505" size="250,25" backgroundColor="Black" font="Regular;20" halign="center" valign="center" />
 		<panel name="ScreenTemplateSIntroduction24" />
 	</screen>
@@ -1366,7 +1366,7 @@
 					MultiContentEntryText(pos=(70, 0), size=(740, 50), font=0, flags=RT_VALIGN_CENTER, text=2),
 					MultiContentEntryText(pos=(70, 2), size=(460, 25), font=1, flags=RT_VALIGN_CENTER, text=3),
 					MultiContentEntryText(pos=(540, 2), size=(210, 25), font=1, flags=RT_VALIGN_CENTER, text=5),
-					MultiContentEntryText(pos=(70, 28), size=(680, 20), font=2, flags=RT_VALIGN_CENTER, text=4, color="DarkGrey"),
+					MultiContentEntryText(pos=(70, 28), size=(680, 20), font=2, flags=RT_VALIGN_CENTER, text=4, color="DarkGray"),
 					MultiContentEntryPixmapAlphaBlend(pos=(760, 1), size=(48, 48), png=7, flags=BT_SCALE)
 					],
 				"fonts": [parseFont("Regular;25"), parseFont("Regular;20"), parseFont("Regular;16")],

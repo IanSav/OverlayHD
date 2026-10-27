@@ -206,7 +206,7 @@
 		<widget source="session.CurrentService" render="Label" position="730,590" size="500,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" halign="right" transparent="1" valign="center">
 			<convert type="ServicePosition">Position,Detailed</convert>
 		</widget>
-		<widget name="Timeline" position="400,625" size="830,25" backgroundColor="Grey" foregroundColor="Black" pointer="sliders/position_arrow.png:4,15" />
+		<widget name="Timeline" position="400,625" size="830,25" backgroundColor="Gray" foregroundColor="Black" pointer="sliders/position_arrow.png:4,15" />
 	</screen>
 
 	<screen name="CutListEditorBeyonwiz" title="CutList Editor" position="fill" backgroundColor="Black" flags="wfNoBorder">
@@ -232,7 +232,7 @@
 		<widget source="session.CurrentService" render="Label" position="730,550" size="500,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Text" halign="right" transparent="1" valign="center">
 			<convert type="ServicePosition">Position,Detailed</convert>
 		</widget>
-		<widget name="Timeline" position="462,590" size="768,25" backgroundColor="Grey" foregroundColor="Black" pointer="sliders/position_arrow.png:4,15" />
+		<widget name="Timeline" position="462,590" size="768,25" backgroundColor="Gray" foregroundColor="Black" pointer="sliders/position_arrow.png:4,15" />
 		<eLabel position="462,625" size="210,25" backgroundColor="#00004000" />
 		<eLabel text="IN:" position="472,625" size="80,25" font="Regular;20" transparent="1" valign="center" zPosition="+1" />
 		<widget name="InLen" position="562,625" size="100,25" font="Regular;20" halign="right" transparent="1" valign="center" zPosition="+1" />
@@ -471,7 +471,7 @@
 		<widget name="starsbg" pixmap="images/starsbar_empty.png" position="1020,80" size="210,21" alphatest="blend" transparent="1" />
 		<widget name="stars" pixmap="images/starsbar_filled.png" position="1020,80" size="210,21" alphatest="blend" transparent="1" zPosition="+1" />
 		<widget name="ratinglabel" position="1020,105" size="210,25" backgroundColor="TextBackground" font="Regular;20" foregroundColor="Gold" halign="right" transparent="1" />
-		<widget name="statusbar" position="50,630" size="1180,20" backgroundColor="TextBackground" font="Regular;16" foregroundColor="Grey" transparent="1" />
+		<widget name="statusbar" position="50,630" size="1180,20" backgroundColor="TextBackground" font="Regular;16" foregroundColor="Gray" transparent="1" />
 	</screen>
 
 	<!--
@@ -1139,10 +1139,10 @@
 	<screen name="SimpleUmount" title="Simple Umount" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="wdg_config" position="400,80" size="830,35" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="Regular;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" transparent="0" valign="center" />
-		<widget name="wdg_label_legend_1" position="400,150" size="130,35" backgroundColor="TextBackground" font="Regular;25" foregroundColor="Grey" transparent="1" valign="center" />
-		<widget name="wdg_label_legend_2" position="565,150" size="180,35" backgroundColor="TextBackground" font="Regular;25" foregroundColor="Grey" transparent="1" valign="center" />
-		<widget name="wdg_label_legend_3" position="790,150" size="180,35" backgroundColor="TextBackground" font="Regular;25" foregroundColor="Grey" transparent="1" valign="center" />
-		<widget name="wdg_label_legend_4" position="1000,150" size="130,35" backgroundColor="TextBackground" font="Regular;25" foregroundColor="Grey" transparent="1" valign="center" />
+		<widget name="wdg_label_legend_1" position="400,150" size="130,35" backgroundColor="TextBackground" font="Regular;25" foregroundColor="Gray" transparent="1" valign="center" />
+		<widget name="wdg_label_legend_2" position="565,150" size="180,35" backgroundColor="TextBackground" font="Regular;25" foregroundColor="Gray" transparent="1" valign="center" />
+		<widget name="wdg_label_legend_3" position="790,150" size="180,35" backgroundColor="TextBackground" font="Regular;25" foregroundColor="Gray" transparent="1" valign="center" />
+		<widget name="wdg_label_legend_4" position="1000,150" size="130,35" backgroundColor="TextBackground" font="Regular;25" foregroundColor="Gray" transparent="1" valign="center" />
 		<widget name="wdg_menulist_device" position="400,185" size="830,350" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="Console;25" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="35" transparent="0" valign="center" />
 		<panel name="ScreenTemplateWDG4" />
 	</screen>

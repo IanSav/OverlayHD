@@ -339,7 +339,7 @@
 				}
 			</convert>
 		</widget>
-		<widget source="space_bar" render="Progress" position="10,480" size="900,26" backgroundColor="grey" borderWidth="1" />
+		<widget source="space_bar" render="Progress" position="10,480" size="900,26" backgroundColor="gray" borderWidth="1" />
 		<widget source="space_label" render="Label" position="20,483" size="880,22" font="Regular;18" foregroundColor="Black" halign="center" transparent="1" zPosition="2" />
 		<widget source="key_red" render="Label" position="20,535" size="195,35" backgroundColor="TextBackground" font="Regular;20" foregroundColor="KeyRed" halign="center" transparent="1" valign="center" zPosition="3" />
 		<widget source="key_green" render="Label" position="245,535" size="195,35" backgroundColor="TextBackground" font="Regular;20" foregroundColor="KeyGreen" halign="center" transparent="1" valign="center" zPosition="3" />
@@ -350,7 +350,7 @@
 
 	<screen name="DVDMovieSelection" title="Select a movie" position="fill" flags="wfNoBorder">
 		<widget name="waitingtext" position="55,135" size="760,448" font="Regular;22" halign="center" valign="center" zPosition="4" />
-		<widget source="Service" render="Label" position="280,95" size="190,22" backgroundColor="TextBackground" font="Named;18" foregroundColor="grey" halign="center" transparent="1" zPosition="1">
+		<widget source="Service" render="Label" position="280,95" size="190,22" backgroundColor="TextBackground" font="Named;18" foregroundColor="gray" halign="center" transparent="1" zPosition="1">
 			<convert type="MovieInfo">FileSize</convert>
 		</widget>
 		<widget name="list" position="55,135" size="760,450" />
@@ -358,7 +358,7 @@
 		<widget source="Service" render="Label" position="825,102" size="320,44" font="Regular;19" foregroundColor="White" halign="center" zPosition="1">
 			<convert type="MovieInfo">RecordServiceName</convert>
 		</widget>
-		<widget source="Service" render="Label" position="830,150" size="320,220" font="Regular;17" foregroundColor="grey" halign="left" zPosition="1">
+		<widget source="Service" render="Label" position="830,150" size="320,220" font="Regular;17" foregroundColor="gray" halign="left" zPosition="1">
 			<convert type="MovieInfo">ShortDescription</convert>
 		</widget>
 		<widget source="Service" render="Label" position="825,374" size="320,22" font="Regular;20" foregroundColor="White" halign="center" zPosition="1">
@@ -383,7 +383,7 @@
 	<screen name="DVDToolbox" title="DVD media toolbox" position="90,100" size="1100,560">
 		<widget source="info" render="Label" position="20,60" size="1060,100" font="Regular;22" />
 		<widget name="details" position="20,200" size="1060,200" font="Regular;20" />
-		<widget source="space_bar" render="Progress" position="10,480" size="1080,26" backgroundColor="grey" borderWidth="1" />
+		<widget source="space_bar" render="Progress" position="10,480" size="1080,26" backgroundColor="gray" borderWidth="1" />
 		<widget source="space_label" render="Label" position="20,482" size="1060,22" font="Regular;18" foregroundColor="Black" halign="center" transparent="1" zPosition="2" />
 		<eLabel position="0,518" size="1100,2" backgroundColor="Pinstripe" />
 		<widget source="key_red" render="Label" position="20,525" size="250,30" font="Regular;24" foregroundColor="KeyRed" halign="center" valign="center" />
@@ -420,7 +420,7 @@
 		<widget source="session.CurrentService" render="Label" position="93,665" size="57,20" backgroundColor="TextBackground" font="Regular;18" foregroundColor="White" halign="right" transparent="1">
 			<convert type="ServiceInfo">VideoWidth</convert>
 		</widget>
-		<eLabel text="x" position="154,665" size="15,20" backgroundColor="TextBackground" font="Regular;18" foregroundColor="grey" halign="center" transparent="1" />
+		<eLabel text="x" position="154,665" size="15,20" backgroundColor="TextBackground" font="Regular;18" foregroundColor="gray" halign="center" transparent="1" />
 		<widget source="session.CurrentService" render="Label" position="172,665" size="57,20" backgroundColor="TextBackground" font="Regular;18" foregroundColor="White" halign="left" transparent="1">
 			<convert type="ServiceInfo">VideoHeight</convert>
 		</widget>

@@ -75,7 +75,7 @@
 			foregroundColorMarkedSelected="FAVServiceMarkedSelected" foregroundColorSelected="MenuTextSelected" foregroundColorServiceNotAvail="FAVServiceNotAvailable"
 			progressbarHeight="6" progressbarBorderWidth="1" progressBarWidth="50" serviceInfoFont="FAVEventFont;20" serviceItemHeight="25" serviceNameFont="FAVServiceFont;20" serviceNumberFont="FAVLCNFont;20" transparent="0" />
 		<widget name="chosenletter" position="50,80" size="640,550" font="FAVServiceFont;100" conditional="chosenletter" foregroundColor="FindCharacter" halign="center" transparent="1" valign="center" zPosition="+1" />
-		<widget source="ServiceEvent" render="Picon" position="710,80" size="100,60" alphatest="blend" borderColor="grey" borderWidth="1" transparent="1">
+		<widget source="ServiceEvent" render="Picon" position="710,80" size="100,60" alphatest="blend" borderColor="gray" borderWidth="1" transparent="1">
 			<convert type="ServiceName2">Reference</convert>
 		</widget>
 		<widget source="ServiceEvent" render="Label" position="820,80" size="320,25" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoChannel" transparent="1" valign="top">

@@ -35,12 +35,12 @@
 		<color name="Charcoal" value="#0036454F" />
 		<color name="Cyan" value="#0000FFFF" />
 		<color name="DarkerBlue" value="#0000022B" />
-		<color name="DarkGrey" value="#00A9A9A9" />
-		<color name="DavysGrey" value="#00555555" />
+		<color name="DarkGray" value="#00A9A9A9" />
+		<color name="DavysGray" value="#00555555" />
 		<color name="DeepBlue" value="#00000636" />
-		<color name="DeepGrey" value="#00363636" />
+		<color name="DeepGray" value="#00363636" />
 		<color name="DeepPink" value="#00FF1493" />
-		<color name="DimGrey" value="#00696969" />
+		<color name="DimGray" value="#00696969" />
 		<color name="DodgerBlue" value="#001E90FF" />
 		<color name="DullBlue" value="#0000056F" />
 		<color name="DullGreen" value="#00389416" />
@@ -51,14 +51,14 @@
 		<color name="Gainsboro" value="#00DCDCDC" />
 		<color name="Gold" value="#00F0B400" />
 		<color name="Green" value="#0000FF00" />
-		<color name="Grey" value="#00A0A0A0" />
-		<color name="GreyBlue" value="#004D5375" />
+		<color name="Gray" value="#00A0A0A0" />
+		<color name="GrayBlue" value="#004D5375" />
 		<color name="Gunmetal" value="#002A3439" />
 		<color name="Indigo" value="#004B0082" />
 		<color name="Jet" value="#00343434" />
 		<color name="Licorice" value="#001A1110" />
 		<color name="LightBlue" value="#0053A9FF" />
-		<color name="LightGrey" value="#00D3D3D3" />
+		<color name="LightGray" value="#00D3D3D3" />
 		<color name="LightRed" value="#00FF2525" />
 		<color name="LightSlateBlue" value="#006565FF" />
 		<color name="LimeGreen" value="#0032CD32" />
@@ -132,14 +132,14 @@
 		<color name="EPGGridBorder" value="Black" />
 		<color name="EPGOverlayBorder" value="Black" />
 		<color name="EPGOverlayColor" value="WarmYellow" />
-		<color name="EPGProgressBackground" value="DeepGrey" />
+		<color name="EPGProgressBackground" value="DeepGray" />
 		<color name="EPGProgressBorder" value="WarmYellow" />
 		<color name="EPGProgressColor" value="WarmYellow" />
 		<color name="EPGTimeLine" value="Yellow" />
 		<color name="EPGEntryBackgroundColor" value="MidBlack" />
 		<color name="EPGEntryBackgroundColorNow" value="Jet" />
 		<color name="EPGEntryBackgroundColorNowSelected" value="Silver" />
-		<color name="EPGEntryBackgroundColorSelected" value="Grey" />
+		<color name="EPGEntryBackgroundColorSelected" value="Gray" />
 		<color name="EPGEntryForegroundColor" value="White" />
 		<color name="EPGEntryForegroundColorNow" value="White" />
 		<color name="EPGEntryForegroundColorNowSelected" value="Black" />
@@ -149,7 +149,7 @@
 		<color name="EPGRecordForegroundColor" value="White" />
 		<color name="EPGRecordForegroundColorSelected" value="Black" />
 		<color name="EPGServiceBackgroundColor" value="OffBlack" />
-		<color name="EPGServiceBackgroundColorNow" value="DavysGrey" />
+		<color name="EPGServiceBackgroundColorNow" value="DavysGray" />
 		<color name="EPGServiceForegroundColor" value="White" />
 		<color name="EPGServiceForegroundColorNow" value="White" />
 		<color name="EPGZapBackgroundColor" value="DullGreen" />
@@ -159,7 +159,7 @@
 		<color name="EPGPIGEntryBackgroundColor" value="MidBlack" />
 		<color name="EPGPIGEntryBackgroundColorNow" value="Jet" />
 		<color name="EPGPIGEntryBackgroundColorNowSelected" value="Silver" />
-		<color name="EPGPIGEntryBackgroundColorSelected" value="Grey" />
+		<color name="EPGPIGEntryBackgroundColorSelected" value="Gray" />
 		<color name="EPGPIGEntryForegroundColor" value="White" />
 		<color name="EPGPIGEntryForegroundColorNow" value="White" />
 		<color name="EPGPIGEntryForegroundColorNowSelected" value="Black" />
@@ -169,7 +169,7 @@
 		<color name="EPGPIGRecordForegroundColor" value="White" />
 		<color name="EPGPIGRecordForegroundColorSelected" value="Black" />
 		<color name="EPGPIGServiceBackgroundColor" value="OffBlack" />
-		<color name="EPGPIGServiceBackgroundColorNow" value="DavysGrey" />
+		<color name="EPGPIGServiceBackgroundColorNow" value="DavysGray" />
 		<color name="EPGPIGServiceForegroundColor" value="White" />
 		<color name="EPGPIGServiceForegroundColorNow" value="White" />
 		<color name="EPGPIGZapBackgroundColor" value="DullGreen" />
@@ -182,7 +182,7 @@
 		<color name="FAVServiceFallback" value="Blue" />
 		<color name="FAVServiceMarked" value="Green" />
 		<color name="FAVServiceMarkedSelected" value="White" />
-		<color name="FAVServiceNotAvailable" value="Grey" />
+		<color name="FAVServiceNotAvailable" value="Gray" />
 		<color name="FAVServiceSelected" value="White" />
 		<color name="FAVServiceSelectedFallback" value="Cyan" />
 		<color name="FindCharacter" value="Gold" />
@@ -203,8 +203,8 @@
 		<color name="InfoDiskStats" value="DullYellow" />
 		<color name="InfoDurationNext" value="LightBlue" />
 		<color name="InfoDurationNow" value="LightBlue" />
-		<color name="InfoGenreNext" value="Grey" />
-		<color name="InfoGenreNow" value="Grey" />
+		<color name="InfoGenreNext" value="Gray" />
+		<color name="InfoGenreNow" value="Gray" />
 		<color name="InfoLCN" value="LightBlue" />
 		<color name="InfoMediaFileSize" value="LightBlue" />
 		<color name="InfoMediaLength" value="LightBlue" />
@@ -214,17 +214,17 @@
 		<color name="InfoProgramNext" value="White" />
 		<color name="InfoProgramNow" value="White" />
 		<color name="InfoProgramSelected" value="White" />
-		<color name="InfoProgressBackground" value="DeepGrey" />
-		<color name="InfoProgressBorder" value="Grey" />
+		<color name="InfoProgressBackground" value="DeepGray" />
+		<color name="InfoProgressBorder" value="Gray" />
 		<color name="InfoProgressColor" value="Green" />
-		<color name="InfoRatingNext" value="Grey" />
-		<color name="InfoRatingNow" value="Grey" />
-		<color name="InfoRecordingBackground" value="DeepGrey" />
-		<color name="InfoRecordingBorder" value="Grey" />
+		<color name="InfoRatingNext" value="Gray" />
+		<color name="InfoRatingNow" value="Gray" />
+		<color name="InfoRecordingBackground" value="DeepGray" />
+		<color name="InfoRecordingBorder" value="Gray" />
 		<color name="InfoRecordingColor" value="OrangeRed" />
 		<color name="InfoServiceData" value="LightBlue" />
-		<color name="InfoTimesNext" value="Grey" />
-		<color name="InfoTimesNow" value="Grey" />
+		<color name="InfoTimesNext" value="Gray" />
+		<color name="InfoTimesNow" value="Gray" />
 		<color name="InfoTimesSelected" value="Silver" />
 		<color name="KeyBack" value="ButtonBack" />
 		<color name="KeyBlue" value="ButtonBlue" />
@@ -233,7 +233,7 @@
 		<color name="KeyText" value="White" />
 		<color name="KeyYellow" value="ButtonYellow" />
 		<color name="MenuBackground" value="ScreenBackground" />
-		<color name="MenuDisabled" value="Grey" />
+		<color name="MenuDisabled" value="Gray" />
 		<color name="MenuMarked" value="EgyptianBlue" />
 		<color name="MenuMarkedSelected" value="LightSlateBlue" />
 		<color name="MenuSelected" value="DodgerBlue" />
@@ -243,34 +243,34 @@
 		<color name="PictureBackground" value="ScreenBackground" />
 		<color name="PictureLabel" value="DullGreen" />
 		<color name="PictureLabelBorder" value="Black" />
-		<color name="Pinstripe" value="DavysGrey" />
-		<color name="PinstripeKeyError" value="DavysGrey" />
-		<color name="PinstripeMute" value="DavysGrey" />
-		<color name="PinstripeVolume" value="DavysGrey" />
-		<color name="ProgressBackground" value="DeepGrey" />
-		<color name="ProgressBorder" value="Grey" />
+		<color name="Pinstripe" value="DavysGray" />
+		<color name="PinstripeKeyError" value="DavysGray" />
+		<color name="PinstripeMute" value="DavysGray" />
+		<color name="PinstripeVolume" value="DavysGray" />
+		<color name="ProgressBackground" value="DeepGray" />
+		<color name="ProgressBorder" value="Gray" />
 		<color name="ProgressColor" value="White" />
 		<color name="Resolution" value="Silver" />
 		<color name="ResolutionBackground" value="ScreenBackground" />
 		<color name="Scrollbar" value="Gainsboro" />
 		<color name="SMSHelperBackground" value="ScreenBackground" />
-		<color name="SMSHelperLabel" value="Grey" />
+		<color name="SMSHelperLabel" value="Gray" />
 		<color name="SMSHelperText" value="White" />
 		<color name="Text" value="White" />
 		<color name="TextBackground" value="ScreenBackground" />
-		<color name="TextDisabled" value="DimGrey" />
+		<color name="TextDisabled" value="DimGray" />
 		<color name="TextSelected" value="White" />
-		<color name="TextIndented" value="Grey" />
+		<color name="TextIndented" value="Gray" />
 		<color name="TextIndentedSelected" value="Silver" />
-		<color name="TextLabel" value="Grey" />
+		<color name="TextLabel" value="Gray" />
 		<color name="TextWaiting" value="Gold" />
 		<color name="TimeShiftData" value="Silver" />
-		<color name="TimeShiftBackground" value="DeepGrey" />
-		<color name="TimeShiftBorder" value="Grey" />
+		<color name="TimeShiftBackground" value="DeepGray" />
+		<color name="TimeShiftBorder" value="Gray" />
 		<color name="TimeShiftColor" value="Green" />
 		<color name="TunerBackground" value="ScreenBackground" />
 		<color name="TunerBER" value="OrangeRed" />
-		<color name="TunerBorder" value="Grey" />
+		<color name="TunerBorder" value="Gray" />
 		<color name="TunerCurrent" value="DullGreen" />
 		<color name="TunerData" value="Silver" />
 		<color name="TunerDisabled" value="MidnightBlue" />
@@ -280,7 +280,7 @@
 		<color name="VolumeBackground" value="Black" />
 		<color name="VolumeColor" value="LightBlue" />
 		<color name="WeatherData" value="White" />
-		<color name="WeatherLabel" value="Grey" />
+		<color name="WeatherLabel" value="Gray" />
 		<color name="WeatherProvider" value="Orange" />
 		<!-- Legacy colors yet to be updated/integrated. -->
 		<color name="background" value="#3f000000" />
@@ -288,10 +288,10 @@
 		<color name="blue" value="Blue" />
 		<color name="bluette" value="#006565FF" />
 		<color name="crypt_emm" value="#0C1A58A5" />
-		<color name="darkgrey" value="#00666666" />
+		<color name="darkgray" value="#00666666" />
 		<color name="foreground" value="#00DDDDDD" />
 		<color name="green" value="Green" />
-		<color name="grey" value="#00999999" />
+		<color name="gray" value="#00999999" />
 		<color name="red" value="Red" />
 		<color name="transparent" value="#FFFFFFFF" />
 		<color name="transparent2" value="#FF000000" />
@@ -892,10 +892,10 @@
 		<color name="ListboxForegroundMarkedSelected" color="MenuMarkedSelected" />
 		<color name="ScrollbarBackground" color="ScreenBackground" />
 		<color name="ScrollbarForeground" color="White" />
-		<color name="ScrollbarBorder" color="Grey" />
+		<color name="ScrollbarBorder" color="Gray" />
 		<color name="SliderBackground" color="ScreenBackground" />
 		<color name="SliderForeground" color="White" />
-		<color name="SliderBorder" color="Grey" />
+		<color name="SliderBorder" color="Gray" />
 		<configList entryFont="MenuFont;25" entryLeftOffset="10" headerLeftOffset="10" valueFont="MenuFont;25" />
 		<label font="TextFont;20" />
 		<listbox enableWrapAround="1" font="MenuFont;25" scrollbarBorderWidth="1" scrollbarMode="showOnDemand" scrollbarOffset="0" scrollbarScroll="byLine" scrollbarWidth="10" />

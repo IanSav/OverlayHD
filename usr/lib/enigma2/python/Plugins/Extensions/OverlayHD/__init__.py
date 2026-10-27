@@ -3,25 +3,22 @@ from gettext import bindtextdomain, dgettext, gettext  # , install, textdomain
 from Components.International import international
 from Tools.Directories import SCOPE_PLUGINS, resolveFilename
 
+__version__ = "2.03"
+
 PluginLocaleDomain = "OverlayHD"
 PluginLocalePath = "Extensions/OverlayHD/locale"
 
-__version__ = "2.02"
-
 
 def _(text):
-	translation = dgettext(PluginLocaleDomain, text)
-	if translation == text:
+	if (translation := dgettext(PluginLocaleDomain, text)) == text:
 		translation = gettext(text)
-		print("[%s] Falling back to default translation for '%s'." % (PluginLocaleDomain, text))
+		# print("[%s] Falling back to default translation for '%s'." % (PluginLocaleDomain, text))
 	return translation
 
 
 def localeInit():
-	localePath = resolveFilename(SCOPE_PLUGINS, PluginLocalePath)
-	# install(PluginLocaleDomain, localePath, names=("ngettext", "pgettext"))
-	bindtextdomain(PluginLocaleDomain, localePath)
-	# textdomain(PluginLocaleDomain)
+	bindtextdomain(PluginLocaleDomain, resolveFilename(SCOPE_PLUGINS, PluginLocalePath))
 
 
+localeInit()
 international.addCallback(localeInit)

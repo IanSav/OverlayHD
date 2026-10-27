@@ -423,7 +423,7 @@
 		<panel name="ScreenTemplateButtonMenu" />
 		<ePixmap pixmap="menus/mainmenu_tasks_browser.png" position="50,100" size="300,500" alphatest="blend" transparent="1" />
 		<widget name="filelist" position="400,140" size="830,250" itemHeight="25" transparent="1" />
-		<widget name="textbook" position="400,400" size="830,25" backgroundColor="DarkGrey" font="TextFont;20" foregroundColor="Black" valign="center" />
+		<widget name="textbook" position="400,400" size="830,25" backgroundColor="DarkGray" font="TextFont;20" foregroundColor="Black" valign="center" />
 		<widget name="booklist" position="400,425" size="830,225" font="FilePropFont;20" itemHeight="25" selection="0" transparent="1" />
 		<widget name="red" position="0,0" size="0,0" />
 		<widget name="green" position="0,0" size="0,0" />
@@ -433,10 +433,10 @@
 
 	<screen name="LocationBoxNew" position="fill" flags="wfNoBorder">
 		<ePixmap pixmap="menus/browser.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
-		<widget name="fileheading" position="400,140" size="830,25" backgroundColor="DarkGrey" font="TextFont;20" foregroundColor="Black" textPadding="15,0" valign="center" />
+		<widget name="fileheading" position="400,140" size="830,25" backgroundColor="DarkGray" font="TextFont;20" foregroundColor="Black" textPadding="15,0" valign="center" />
 		<widget name="filelist" position="400,165" size="830,225" itemHeight="25" transparent="1" />
 		<widget name="quickselect" position="400,165" size="830,225" font="SMSHelperFont;100" foregroundColor="FindCharacter" halign="center" transparent="1" valign="center" zPosition="+1" />
-		<widget name="bookmarkheading" position="400,400" size="830,25" backgroundColor="DarkGrey" font="TextFont;20" foregroundColor="Black" textPadding="15,0" valign="center" />
+		<widget name="bookmarkheading" position="400,400" size="830,25" backgroundColor="DarkGray" font="TextFont;20" foregroundColor="Black" textPadding="15,0" valign="center" />
 		<widget name="bookmarklist" position="400,425" size="830,225" font="FilePropFont;20" itemHeight="25" selection="0" transparent="0" />
 	</screen>
 
