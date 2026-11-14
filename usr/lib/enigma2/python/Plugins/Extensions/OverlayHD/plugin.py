@@ -2,7 +2,7 @@
 #
 # OverlayHD Skin Manager
 #
-# Version Date - 24-Oct-2026
+# Version Date - 14-Nov-2026
 # Remember to change version number variable in __init__!!!
 #
 # Repository - https://github.com/IanSav/OverlayHD
@@ -37,7 +37,7 @@ from xml.etree.cElementTree import Element, ElementTree, SubElement
 from enigma import gRGB
 
 from Components.ActionMap import HelpableActionMap
-from Components.config import ConfigSelection, ConfigSubsection, ConfigYesNo, config, configfile
+from Components.config import ConfigSelection, ConfigSubsection, ConfigYesNo, config
 from Components.Label import Label
 from Components.SystemInfo import BoxInfo
 from Components.Sources.List import List
@@ -547,20 +547,6 @@ class OverlayHD(Setup):
 	def changedEntry(self):
 		self.applySettings()
 		Setup.changedEntry(self)
-
-	# def saveAll(self):  # Save all entries, both displayed and not currently displayed.
-	# 	restart = False
-	# 	for item in config.plugins.skin.OverlayHD.dict():
-	# 		if item in dontRestart:
-	# 			continue
-	# 		if getattr(config.plugins.skin.OverlayHD, item).isChanged():
-	# 			restart = True
-	# 			break
-	# 	config.plugins.skin.OverlayHD.save()
-	# 	configfile.save()
-	# 	# self.applySettings()
-	# 	return restart
-	# 	# Setup.saveAll(self, restart)
 
 	def cancelConfirm(self, result):  # Cancel all changed entries, both displayed and not currently displayed.
 		if not result:
