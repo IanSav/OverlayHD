@@ -60,45 +60,8 @@
 		<widget name="minutes" position="80,15" size="160,25" font="Regular;23" halign="right" transparent="1" />
 	</screen>
 
-<!-- RASS -->
-
-	<screen name="RassInteractive" title="RassInteractive" position="fill" flags="wfNoBorder">
-		<ePixmap pixmap="icons/rass_logo.png" position="675,143" size="50,21" alphatest="blend" transparent="1" />
-		<eLabel text="Interactive" position="735,140" size="485,35" font="Regular;28" transparent="1" zPosition="2" />
-		<eLabel position="665,180" size="450,2" backgroundColor="White" zPosition="2" />
-		<widget name="Marker" position="650,195" size="510,400" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0" zPosition="2" />
-		<eLabel text="0" position="670,210" size="16,25" font="Regular;21" transparent="1" zPosition="3" />
-		<eLabel text="Index" position="1065,210" size="60,25" font="Regular;21" transparent="1" zPosition="3" />
-		<eLabel text="1" position="670,260" size="16,25" font="Regular;21" transparent="1" zPosition="3" />
-		<widget name="subpages_1" position="1080,260" size="36,20" alphatest="blend" zPosition="3" />
-		<eLabel text="2" position="670,310" size="16,195" font="Regular;21" transparent="1" zPosition="3" />
-		<widget name="subpages_2" position="1080,310" size="36,20" alphatest="blend" zPosition="3" />
-		<eLabel text="3" position="670,360" size="16,195" font="Regular;21" transparent="1" zPosition="3" />
-		<widget name="subpages_3" position="1080,360" size="36,20" alphatest="blend" zPosition="3" />
-		<eLabel text="4" position="670,410" size="16,25" font="Regular;21" transparent="1" zPosition="3" />
-		<widget name="subpages_4" position="1080,410" size="36,20" alphatest="blend" zPosition="3" />
-		<eLabel text="5" position="670,460" size="16,25" font="Regular;21" transparent="1" zPosition="3" />
-		<widget name="subpages_5" position="1080,460" size="36,20" alphatest="blend" zPosition="3" />
-		<eLabel text="6" position="670,510" size="16,25" font="Regular;21" transparent="1" zPosition="3" />
-		<widget name="subpages_6" position="1080,510" size="36,20" alphatest="blend" zPosition="3" />
-		<eLabel text="7" position="670,560" size="16,25" font="Regular;21" transparent="1" zPosition="3" />
-		<widget name="subpages_7" position="1080,560" size="36,20" alphatest="blend" zPosition="3" />
-		<eLabel text="8" position="670,610" size="16,25" font="Regular;21" transparent="1" zPosition="3" />
-		<widget name="subpages_8" position="1080,610" size="36,20" alphatest="blend" zPosition="3" />
-		<eLabel text="9" position="670,660" size="16,25" font="Regular;21" transparent="1" zPosition="3" />
-		<widget name="subpages_9" position="1080,660" size="36,20" alphatest="blend" zPosition="3" />
-	</screen>
-
-<!-- RDS info -->
-
-	<screen name="RdsInfoDisplay" backgroundColor="transparent" flags="wfNoBorder" size="1280,720" zPosition="-2">
-		<widget name="RassLogo" pixmap="icons/rass_logo.png" position="97,630" size="70,53" alphatest="blend" transparent="1" zPosition="2" />
-		<widget name="RtpText" position="185,565" size="850,53" backgroundColor="Black" font="Regular;28" halign="left" noWrap="1" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="bottom" />
-		<widget name="RadioText" position="185,630" size="850,53" backgroundColor="Black" font="Regular;22" halign="left" noWrap="1" shadowColor="Black" shadowOffset="-1,-1" transparent="1" valign="bottom" />
-	</screen>
-
 	<screen name="Subtitles" title="Subtitle selection" position="fill" flags="wfNoBorder">
-		<ePixmap pixmap="icons/clock.png" position="50,30" size="14,14" alphatest="blend" zPosition="3" />
+		<!-- ePixmap pixmap="icons/clock.png" position="50,30" size="14,14" alphatest="blend" zPosition="3" / -->
 		<widget source="global.CurrentTime" render="Label" position="75,30" size="80,20" backgroundColor="TextBackground" font="Named;16" foregroundColor="White" halign="left" transparent="1">
 			<convert type="ClockToText">Default</convert>
 		</widget>
@@ -232,7 +195,7 @@
 	</screen>
 
 	<screen name="RSSFeedView" title="Simple RSS Reader" position="fill" flags="wfNoBorder">
-		<ePixmap pixmap="icons/clock.png" position="50,30" size="14,14" alphatest="blend" zPosition="3" />
+		<!-- ePixmap pixmap="icons/clock.png" position="50,30" size="14,14" alphatest="blend" zPosition="3" / -->
 		<widget source="global.CurrentTime" render="Label" position="75,30" size="80,20" backgroundColor="TextBackground" font="Named;16" foregroundColor="White" halign="left" transparent="1">
 			<convert type="ClockToText">Default</convert>
 		</widget>
@@ -257,7 +220,7 @@
 	</screen>
 
 	<screen name="RSSEntryView" title="Simple RSS Reader" position="fill" flags="wfNoBorder">
-		<ePixmap pixmap="icons/clock.png" position="50,30" size="14,14" alphatest="blend" zPosition="3" />
+		<!-- ePixmap pixmap="icons/clock.png" position="50,30" size="14,14" alphatest="blend" zPosition="3" / -->
 		<widget source="global.CurrentTime" render="Label" position="75,30" size="80,20" backgroundColor="TextBackground" font="Named;16" foregroundColor="White" halign="left" transparent="1">
 			<convert type="ClockToText">Default</convert>
 		</widget>
@@ -271,7 +234,7 @@
 	</screen>
 
 	<screen name="RSSOverview" title="Simple RSS Reader" position="fill" flags="wfNoBorder">
-		<ePixmap pixmap="icons/clock.png" position="50,30" size="14,14" alphatest="blend" zPosition="3" />
+		<!-- ePixmap pixmap="icons/clock.png" position="50,30" size="14,14" alphatest="blend" zPosition="3" / -->
 		<widget source="global.CurrentTime" render="Label" position="75,30" size="80,20" backgroundColor="TextBackground" font="Named;16" foregroundColor="White" halign="left" transparent="1">
 			<convert type="ClockToText">Default</convert>
 		</widget>

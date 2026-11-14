@@ -135,7 +135,7 @@
 
 <!-- MENU > Setup > System > Locale/Language Settings -->
 
-	<screen name="LocaleSelection" title="Locale/Language Selection" position="fill" flags="wfNoBorder">
+	<screen name="LocaleSelectionOriginal" title="Locale/Language Selection" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<widget name="icons" position="0,0" size="30,27" pixmaps="icons/lock_off.png,icons/lock_on.png,icons/lock_error.png" alphatest="blend" />
 		<widget source="locales" render="Listbox" position="400,80" size="830,455" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
@@ -154,6 +154,26 @@
 				"itemHeight": 35
 				}
 			</convert>
+		</widget>
+		<panel name="ScreenTemplateSDescription4" />
+	</screen>
+
+	<screen name="LocaleSelection" title="Locale/Language Selection" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<widget name="icons" position="0,0" size="30,27" pixmaps="icons/lock_off.png,icons/lock_on.png,icons/lock_error.png" alphatest="blend" />
+		<widget source="locales" render="Listbox" position="400,80" size="830,455" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
+			<templates>
+				<template name="Default" fonts="SMSHelperFont;23" itemHeight="35" itemWidth="830">
+					<mode name="default">
+						<pixmap index="Flag" position="10,3" size="60,30" alpha="blend" scale="centerScaled" />
+						<text index="Native" position="80,0" size="320,35" font="0" horizontalAlignment="left" verticalAlignment="center" />
+						<text index="Name" position="410,0" size="290,35" font="0" horizontalAlignment="left" verticalAlignment="center" />
+						<!-- text index="Locale" position="710,0" size="60,35" font="0" horizontalAlignment="left" verticalAlignment="center" / -->
+						<text index="Package" position="710,0" size="60,35" font="0" horizontalAlignment="left" verticalAlignment="center" />
+						<pixmap index="Status" position="780,3" size="30,27" alpha="blend" scale="centerScaled" />
+					</mode>
+				</template>
+			</templates>
 		</widget>
 		<panel name="ScreenTemplateSDescription4" />
 	</screen>
@@ -237,6 +257,22 @@
 		</widget>
 		<panel name="ScreenTemplateDescription4" conditional="description" />
 		<panel name="ScreenTemplateSIntroduction4" conditional="introduction" />
+	</screen>
+
+	<screen name="InputDevicesSelection" title="Input Devices" position="fill" flags="wfNoBorder">
+		<panel name="ScreenTemplate" />
+		<widget source="devices" render="Listbox" position="400,80" size="830,420" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" transparent="0">
+			<templates>
+				<template name="Default" fonts="MenuFont;25" itemHeight="35" itemWidth="830">
+					<mode name="default">
+						<pixmap index="deviceIcon" position="10,0" size="35,35" alpha="blend" scale="centerScaled" />
+						<text index="deviceLabel" position="65,0" size="200,35" font="0" horizontalAlignment="left" verticalAlignment="center" />
+						<text index="deviceName" position="275,0" size="535,35" font="0" horizontalAlignment="right" verticalAlignment="center" />
+					</mode>
+				</template>
+			</templates>
+		</widget>
+		<panel name="ScreenTemplateDescription4" conditional="description" />
 	</screen>
 
 	<!-- This screen is not used by recent versions of the code.  The standard Setup screen is used instead. -->

@@ -45,45 +45,32 @@
 
 <!-- OK - Main TV InfoBar -->
 
-	<screen name="InfoBar" title="TV Information Bar" position="fill" backgroundColor="TransparentBackground" flags="wfNoBorder">
-		<panel name="InfoBarCommon" />
+	<screen name="InfoBar" title="Information Bar" position="fill" backgroundColor="TransparentBackground" flags="wfNoBorder" ignoreWidgets="FullDescription,channel,epg_description,key_red,key_green,key_yellow,key_blue">
+		<panel name="InfoBarCommonPanel" />
 		<widget name="serviceName" position="0,0" size="0,0" conditional="serviceName" transparent="1" />
 		<widget name="serviceName1" position="0,0" size="0,0" conditional="serviceName1" transparent="1" />
 		<widget name="serviceNumber" position="0,0" size="0,0" conditional="serviceNumber" transparent="1" />
 		<widget name="serviceNumber1" position="0,0" size="0,0" conditional="serviceNumber1" transparent="1" />
-		<widget name="key_red" position="0,0" size="0,0" conditional="key_red" transparent="1" />
-		<widget name="key_green" position="0,0" size="0,0" conditional="key_green" transparent="1" />
-		<widget name="key_yellow" position="0,0" size="0,0" conditional="key_yellow" transparent="1" />
-		<widget name="key_blue" position="0,0" size="0,0" conditional="key_blue" transparent="1" />
 	</screen>
 
 <!-- OK > OK - Second TV InfoBar With Now/Next Extended Information -->
 
-	<screen name="SecondInfoBar" title="Detailed Information Bar" position="fill" backgroundColor="TransparentBackground" flags="wfNoBorder">
-		<panel name="InfoBarCommon" />
+	<!-- "SecondInfoBarECM" is used instead of "SecondInfoBar" when "config.usage.show_second_infobar" is 3. -->
+	<screen name="SecondInfoBar" title="Information Bar Details" position="fill" backgroundColor="TransparentBackground" flags="wfNoBorder" ignoreWidgets="FullDescription,channel,epg_description,key_red,key_green,key_yellow,key_blue">
+		<panel name="InfoBarCommonPanel" />
 		<panel position="50,160" size="580,380">
-			<panel name="SecondInfoBarNow" />
+			<panel name="SecondInfoBarNowPanel" />
 		</panel>
 		<panel position="650,160" size="580,380">
-			<panel name="SecondInfoBarNext" />
+			<panel name="SecondInfoBarNextPanel" />
 		</panel>
-		<widget name="serviceName" position="0,0" size="0,0" conditional="serviceName" transparent="1" />
-		<widget name="serviceName1" position="0,0" size="0,0" conditional="serviceName1" transparent="1" />
-		<widget name="serviceNumber" position="0,0" size="0,0" conditional="serviceNumber" transparent="1" />
-		<widget name="serviceNumber1" position="0,0" size="0,0" conditional="serviceNumber1" transparent="1" />
-		<widget name="channel" position="0,0" size="0,0" conditional="channel" transparent="1" />
-		<widget name="epg_description" position="0,0" size="0,0" conditional="epg_description" transparent="1" />
-		<widget name="key_red" position="0,0" size="0,0" conditional="key_red" transparent="1" />
-		<widget name="key_green" position="0,0" size="0,0" conditional="key_green" transparent="1" />
-		<widget name="key_yellow" position="0,0" size="0,0" conditional="key_yellow" transparent="1" />
-		<widget name="key_blue" position="0,0" size="0,0" conditional="key_blue" transparent="1" />
 	</screen>
 
-<!-- Common parts of TV infobars -->
+	<!-- Common parts of TV infobars -->
 
-	<screen name="InfoBarCommon">
+	<screen name="InfoBarCommonPanel">
 		<!-- Clock Panel Area -->
-		<panel name="ScreenTemplateClock" />
+		<panel name="ScreenTemplateClock" position="950,10" size="320,70" />
 		<!-- InfoBar Area Background -->
 		<eLabel position="0,570" size="1280,720" backgroundColor="InfobarTVBackground" transparent="0" zPosition="-1" />
 		<eLabel position="172,580" size="2,130" backgroundColor="Pinstripe" />
@@ -173,35 +160,9 @@
 		</panel>
 	</screen>
 
-	<screen name="RecordingInfoPanel" title="Recording Information" flags="wfNoBorder">
-		<panel name="RecordingInfoPanelEnigma2" base="RecordingInfoPanel" />
-	</screen>
+	<!-- Second TV InfoBar "Now" Extended Information -->
 
-	<screen name="RecordingInfoPanelBeyonwiz" title="Recording Information" flags="wfNoBorder">
-		<widget source="session.RecordState" render="Label" position="0,0" size="270,20" backgroundColor="InfoBackground" font="Regular;15" foregroundColor="InfoRecordingColor" noWrap="1" transparent="1" valign="center">
-			<convert type="infoRecBm">NombreyCanal</convert>
-		</widget>
-		<!--
-		<widget source="session.RecordState" render="FixedLabel" text=" " position="0,21" size="270,4" backgroundColor="InfoRecordingBackground">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.RecordState" render="Progress" pixmap="images/progress_rec.png" position="0,21" size="270,4" borderWidth="0" transparent="1" zPosition="+1">
-			<convert type="infoRecBm">Progress</convert>
-		</widget>
-		-->
-		<widget source="session.RecordState" render="FixedLabel" text=" " position="0,20" size="270,5" backgroundColor="InfoRecordingBackground" textBorderColor="InfoRecordingBorder" textBorderWidth="1" transparent="0">
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.RecordState" render="Progress" position="1,21" size="268,3" foregroundColor="InfoRecordingColor" transparent="1" zPosition="+1">
-			<convert type="infoRecBm">Progress</convert>
-		</widget>
-	</screen>
-
-	<screen name="RecordingInfoPanelEnigma2" title="Recording Information" flags="wfNoBorder" />
-
-<!-- Second TV InfoBar "Now" Extended Information -->
-
-	<screen name="SecondInfoBarNow">
+	<screen name="SecondInfoBarNowPanel">
 		<eLabel position="0,0" size="580,360" backgroundColor="InfobarTVBackground" transparent="0" zPosition="-1" />
 		<!-- Event Name Area -->
 		<widget source="session.Event_Now" render="Label" position="10,10" size="560,25" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoProgramNow" noWrap="1" transparent="1">
@@ -235,9 +196,9 @@
 		</widget>
 	</screen>
 
-<!-- Second TV InfoBar "Next" Extended Information -->
+	<!-- Second TV InfoBar "Next" Extended Information -->
 
-	<screen name="SecondInfoBarNext">
+	<screen name="SecondInfoBarNextPanel">
 		<eLabel position="0,0" size="580,360" backgroundColor="InfobarTVBackground" transparent="0" zPosition="-1" />
 		<!-- Event Name Area -->
 		<widget source="session.Event_Next" render="Label" position="10,10" size="560,25" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoProgramNext" noWrap="1" transparent="1">
@@ -271,10 +232,66 @@
 		</widget>
 	</screen>
 
+	<!-- OK - Radio InfoBar -->
+
+	<screen name="RadioInfoBar" title="Radio Information Bar" position="150,180" size="480,390" flags="wfNoBorder" zPosition="2">
+		<widget source="session.CurrentService" render="Label" position="20,0" size="480,30" font="Regular;28" noWrap="1" transparent="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="20,40" size="460,20" font="Regular;21" noWrap="1" transparent="1">
+			<convert type="EventInfo">Name</convert>
+		</widget>
+		<eLabel position="20,63" size="460,1" backgroundColor="#003366cc" zPosition="2" />
+		<widget source="session.Event_Now" render="Progress" position="190,81" size="300,14" transparent="1" zPosition="1">
+			<convert type="EventInfo">Progress</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="20,75" size="180,30" font="Regular;26" transparent="1">
+			<convert type="EventInfo">Times</convert>
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget source="RdsDecoder" render="Label" position="20,110" size="460,190" font="Regular;20" transparent="1">
+			<convert type="RdsInfo">RadioText</convert>
+		</widget>
+		<!-- i_rass.png icon is missing!!! -->
+		<widget source="RdsDecoder" render="Pixmap" pixmap="icons/i_rass.png" position="70,310" size="48,48" alphatest="blend">
+			<convert type="RdsInfo">RasInteractiveAvailable</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.RecordState" render="Pixmap" pixmap="icons/i_rec.png" position="20,310" size="48,48" alphatest="blend">
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+	</screen>
+
+	<screen name="RecordingInfoPanel" title="Recording Information" flags="wfNoBorder">
+		<panel name="RecordingInfoPanelEnigma2" base="RecordingInfoPanel" />
+	</screen>
+
+	<screen name="RecordingInfoPanelBeyonwiz" title="Recording Information" flags="wfNoBorder">
+		<widget source="session.RecordState" render="Label" position="0,0" size="270,20" backgroundColor="InfoBackground" font="Regular;15" foregroundColor="InfoRecordingColor" noWrap="1" transparent="1" valign="center">
+			<convert type="infoRecBm">NombreyCanal</convert>
+		</widget>
+		<!--
+		<widget source="session.RecordState" render="FixedLabel" text=" " position="0,21" size="270,4" backgroundColor="InfoRecordingBackground">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.RecordState" render="Progress" pixmap="images/progress_rec.png" position="0,21" size="270,4" borderWidth="0" transparent="1" zPosition="+1">
+			<convert type="infoRecBm">Progress</convert>
+		</widget>
+		-->
+		<widget source="session.RecordState" render="FixedLabel" text=" " position="0,20" size="270,5" backgroundColor="InfoRecordingBackground" textBorderColor="InfoRecordingBorder" textBorderWidth="1" transparent="0">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.RecordState" render="Progress" position="1,21" size="268,3" foregroundColor="InfoRecordingColor" transparent="1" zPosition="+1">
+			<convert type="infoRecBm">Progress</convert>
+		</widget>
+	</screen>
+
+	<screen name="RecordingInfoPanelEnigma2" title="Recording Information" flags="wfNoBorder" />
+
 <!-- MEDIA > OK - Media Player InfoBar -->
 
 	<screen name="MoviePlayer" title="Media Player" position="fill" backgroundColor="TransparentBackground" flags="wfNoBorder">
-		<panel name="ScreenTemplateClock" />
+		<panel name="ScreenTemplateClock" position="950,10" size="320,70" />
 		<eLabel position="0,650" size="1280,70" backgroundColor="InfobarMediaBackground" transparent="0" zPosition="-1" />
 		<eLabel position="172,660" size="2,50" backgroundColor="Pinstripe" />
 		<!-- Playback state and speed indicator -->
@@ -327,7 +344,7 @@
 
 <!-- OK - Main TV InfoBar Timeshift Status -->
 
-	<screen name="TimeshiftState" position="center,10" size="700,80" backgroundColor="InfobarMediaBackground" flags="wfNoBorder">
+	<screen name="TimeshiftState" position="center,10" size="700,80" backgroundColor="InfobarMediaBackground" flags="wfNoBorder" ignoreWidgets="PTSSeekBack,PTSSeekPointer">
 		<widget name="statusicon" position="10,10" size="20,20" pixmaps="icons/play.png,icons/pause.png,icons/stop.png,icons/forward.png,icons/backward.png,icons/slow.png" alphatest="blend" />
 		<widget name="speed" position="35,10" size="70,20" font="TextFont;20" foregroundColor="TimeShiftData" transparent="1" verticalAlignment="center" />
 		<widget source="session.CurrentService" render="Label" position="center,10" size="100,20" font="TextFont;20" foregroundColor="TimeShiftData" horizontalAlignment="center" transparent="1">
@@ -358,7 +375,7 @@
 			<convert type="ServicePosition">Gauge</convert>
 		</widget>
 		-->
-		<widget source="session.CurrentService" render="PositionGauge" position="120,10" size="460,20" foregroundColor="InfoProgressBorder">
+		<widget source="session.CurrentService" render="PositionGauge" position="120,10" size="460,20" foregroundColor="InfoProgressBorder" transparent="1">
 			<convert type="ServicePosition">Gauge</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Progress" position="120,18" size="460,4" backgroundColor="InfoProgressBorder" borderWidth="0" foregroundColor="InfoProgressColor" zPosition="+1">
@@ -425,7 +442,7 @@
 		<widget name="channel" position="50,80" size="280,25" backgroundColor="InfoBackground" font="InfoEventFont;20" foregroundColor="InfoChannel" transparent="1" />
 		<widget source="Event" render="Label" position="365,80" size="500,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoTimesNow" halign="center" transparent="1">
 			<convert type="EventInfo">Times</convert>
-			<convert type="ClockToText">LongFullDate,Default</convert>
+			<convert type="ClockToText">Default</convert>
 		</widget>
 		<widget source="Event" render="Label" position="950,80" size="280,25" backgroundColor="InfoBackground" font="InfoTimeFont;20" foregroundColor="InfoDurationNow" halign="right" transparent="1">
 			<convert type="EventInfo">Duration</convert>
@@ -480,36 +497,6 @@
 
 	<screen name="EventViewSimple" title="Simple Event View" position="fill" flags="wfNoBorder">
 		<panel name="EventView" />
-	</screen>
-
-<!-- OK - Radio InfoBar -->
-
-	<screen name="RadioInfoBar" title="Radio Information Bar" position="150,180" size="480,390" flags="wfNoBorder" zPosition="2">
-		<widget source="session.CurrentService" render="Label" position="20,0" size="480,30" font="Regular;28" noWrap="1" transparent="1">
-			<convert type="ServiceName">Name</convert>
-		</widget>
-		<widget source="session.Event_Now" render="Label" position="20,40" size="460,20" font="Regular;21" noWrap="1" transparent="1">
-			<convert type="EventInfo">Name</convert>
-		</widget>
-		<eLabel position="20,63" size="460,1" backgroundColor="#003366cc" zPosition="2" />
-		<widget source="session.Event_Now" render="Progress" position="190,81" size="300,14" transparent="1" zPosition="1">
-			<convert type="EventInfo">Progress</convert>
-		</widget>
-		<widget source="session.Event_Now" render="Label" position="20,75" size="180,30" font="Regular;26" transparent="1">
-			<convert type="EventInfo">Times</convert>
-			<convert type="ClockToText">Default</convert>
-		</widget>
-		<widget source="RdsDecoder" render="Label" position="20,110" size="460,190" font="Regular;20" transparent="1">
-			<convert type="RdsInfo">RadioText</convert>
-		</widget>
-		<!-- i_rass.png icon is missing!!! -->
-		<widget source="RdsDecoder" render="Pixmap" pixmap="icons/i_rass.png" position="70,310" size="48,48" alphatest="blend">
-			<convert type="RdsInfo">RasInteractiveAvailable</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
-		<widget source="session.RecordState" render="Pixmap" pixmap="icons/i_rec.png" position="20,310" size="48,48" alphatest="blend">
-			<convert type="ConditionalShowHide">Blink</convert>
-		</widget>
 	</screen>
 
 <!-- Sub-Service -->

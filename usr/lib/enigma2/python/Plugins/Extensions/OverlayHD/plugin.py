@@ -2,7 +2,7 @@
 #
 # OverlayHD Skin Manager
 #
-# Version Date - 31-Aug-2026
+# Version Date - 24-Oct-2026
 # Remember to change version number variable in __init__!!!
 #
 # Repository - https://github.com/IanSav/OverlayHD
@@ -150,25 +150,25 @@ backgroundChoice = [("Background", _("Background"))]
 
 transparencyChoices = [
 	("0x00000000", _("0% (Opaque)")),
-	("0x0c000000", "5%%"),
-	("0x19000000", "10%%"),
-	("0x26000000", "15%%"),
-	("0x33000000", "20%%"),
-	("0x3f000000", "25%%"),
-	("0x4c000000", "30%%"),
-	("0x59000000", "35%%"),
-	("0x66000000", "40%%"),
-	("0x72000000", "45%%"),
-	("0x7f000000", "50%%"),
-	("0x8c000000", "55%%"),
-	("0x99000000", "60%%"),
-	("0xa5000000", "65%%"),
-	("0xb2000000", "70%%"),
-	("0xbf000000", "75%%"),
-	("0xcc000000", "80%%"),
-	("0xd8000000", "85%%"),
-	("0xe5000000", "90%%"),
-	("0xf2000000", "95%%"),
+	("0x0c000000", "5%"),
+	("0x19000000", "10%"),
+	("0x26000000", "15%"),
+	("0x33000000", "20%"),
+	("0x3f000000", "25%"),
+	("0x4c000000", "30%"),
+	("0x59000000", "35%"),
+	("0x66000000", "40%"),
+	("0x72000000", "45%"),
+	("0x7f000000", "50%"),
+	("0x8c000000", "55%"),
+	("0x99000000", "60%"),
+	("0xa5000000", "65%"),
+	("0xb2000000", "70%"),
+	("0xbf000000", "75%"),
+	("0xcc000000", "80%"),
+	("0xd8000000", "85%"),
+	("0xe5000000", "90%"),
+	("0xf2000000", "95%"),
 	("0xff000000", _("100% (Transparent)"))
 ]
 
@@ -177,9 +177,9 @@ transparencyChoices = [
 #
 colorElements = [
 	("ScreenBackground", "Black", "0x3f000000"),  # As this can be used by other elements it must be processed first!
+	("BannerBackground", "Background", "Background"),
 	("BannerBorder", "Black", None),
 	("BannerClock", "White", None),
-	("BannerClockBackground", "Background", "Background"),
 	("BannerClockDate", "LightBlue", None),
 	("BannerClockTime", "White", None),
 	("BannerTitle", "White", None),
@@ -205,6 +205,7 @@ colorElements = [
 	("EPGRecordBackgroundColorSelected", "Red", None),
 	("EPGRecordForegroundColor", "White", None),
 	("EPGRecordForegroundColorSelected", "Black", None),
+	("EPGRecordTimerQuestionColor", "Yellow", None),
 	("EPGServiceBackgroundColor", "OffBlack", None),
 	("EPGServiceBackgroundColorNow", "DavysGray", None),
 	("EPGServiceForegroundColor", "White", None),
@@ -213,15 +214,15 @@ colorElements = [
 	("EPGZapBackgroundColorSelected", "Green", None),
 	("EPGZapForegroundColor", "White", None),
 	("EPGZapForegroundColorSelected", "Black", None),
-	("FAVMarked", "DullGreen", "0x26000000"),
-	("FAVMarkedBackground", "Background", "Background"),
-	("FAVService", "White", None),
-	("FAVServiceFallback", "Blue", None),
-	("FAVServiceMarked", "Green", None),
-	("FAVServiceMarkedSelected", "White", None),
-	("FAVServiceNotAvailable", "Gray", None),
-	("FAVServiceSelected", "White", None),
-	("FAVServiceSelectedFallback", "Cyan", None),
+	("CSMarked", "DullGreen", "0x26000000"),
+	("CSMarkedBackground", "Background", "Background"),
+	("CSService", "White", None),
+	("CSServiceFallback", "Blue", None),
+	("CSServiceMarked", "Green", None),
+	("CSServiceMarkedSelected", "White", None),
+	("CSServiceNotAvailable", "Gray", None),
+	("CSServiceSelected", "White", None),
+	("CSServiceSelectedFallback", "Cyan", None),
 	("FindCharacter", "Gold", None),
 	("FootnoteBackground", "Background", "Background"),
 	("FootnoteText", "LightBlue", None),
@@ -388,9 +389,9 @@ fontElements = [
 	("EPGEventFont", "NemesisFlatline", textFontChoices),
 	("EPGServiceFont", "NemesisFlatline", textFontChoices),
 	("EPGTimeLineFont", "NemesisFlatline", textFontChoices),
-	("FAVEventFont", "NemesisFlatline", textFontChoices),
-	("FAVLCNFont", "NemesisFlatline", textFontChoices),
-	("FAVServiceFont", "NemesisFlatline", textFontChoices),
+	("CSEventFont", "NemesisFlatline", textFontChoices),
+	("CSLCNFont", "NemesisFlatline", textFontChoices),
+	("CSServiceFont", "NemesisFlatline", textFontChoices),
 	("FileListFont", "NemesisFlatline", textFontChoices),
 	("FileListMultiFont", "NemesisFlatline", textFontChoices),
 	("FixedFont", "MPluss1M", fixedFontChoices),
@@ -401,9 +402,10 @@ fontElements = [
 	("InfoTimeFont", "NemesisFlatline", textFontChoices),
 	("MenuFont", "NemesisFlatline", textFontChoices),
 	("MovieSelectionFont", "NemesisFlatline", textFontChoices),
-	("SMSHelperFont", "DejaVuSansCondensed", textFontChoices),
+	("PathFont", "RobotoBlack", bannerFontChoices),
 	("Regular", "NemesisFlatline", textFontChoices),
 	("SelectionList", "NemesisFlatline", textFontChoices),
+	("SMSHelperFont", "DejaVuSansCondensed", textFontChoices),
 	("TextFont", "NemesisFlatline", textFontChoices),
 	("TitleFont", "RobotoBlack", bannerFontChoices)
 ]
@@ -451,7 +453,10 @@ modeChoices = [
 	("showAlways", _("Always (Right)")),
 	("showNever", _("Never")),
 	("showLeftOnDemand", _("When required (Left)")),
-	("showLeftAlways", _("Always (Left)"))
+	("showLeftAlways", _("Always (Left)")),
+	("showTopOnDemand", _("When required (Top)")),
+	("showTopAlways", _("Always (Top)")),
+	("showOnDemandShrink", _("When required, move right edge left"))
 ]
 
 scrollChoices = [
@@ -460,27 +465,19 @@ scrollChoices = [
 ]
 
 optionElements = [
-	("ButtonStyle", "Block", ConfigSelection, buttonChoices),  # As this is used by can AlwaysShowButtons it must be processed first!
+	("ButtonStyle", "Block", ConfigSelection, buttonChoices),  # As this is used by AlwaysShowButtons it must be processed first!
 	("AlwaysShowButtons", False, ConfigYesNo, None),
 	("BackgroundImage", "", ConfigSelection, imageChoices),
 	("BootImage", "", ConfigSelection, imageChoices),
-	("EPGSettings", False, ConfigYesNo, None),
 	("EPGShowTicks", True, ConfigYesNo, None),
-	("FAVSettings", False, ConfigYesNo, None),
-	("FontSettings", False, ConfigYesNo, None),
-	("GeneralSettings", False, ConfigYesNo, None),
-	("InfoSettings", False, ConfigYesNo, None),
-	("ListboxMode", "showOnDemand", ConfigSelection, modeChoices),
+	("ListboxMode", "showOnDemandShrink", ConfigSelection, modeChoices),
 	("ListboxScroll", "byLine", ConfigSelection, scrollChoices),
-	("MenuSettings", False, ConfigYesNo, None),
-	("PanelSettings", False, ConfigYesNo, None),
 	("RadioImage", "", ConfigSelection, imageChoices),
 	("RecordBlink", True, ConfigYesNo, None),
-	("ScrollLabelMode", "showOnDemand", ConfigSelection, modeChoices),
+	("ScrollLabelMode", "showOnDemandShrink", ConfigSelection, modeChoices),
 	("ScrollLabelScroll", "byLine", ConfigSelection, scrollChoices),
 	("SortThemes", False, ConfigYesNo, None),
 	("Spinner", "", ConfigSelection, spinnerChoices),
-	("TextSettings", False, ConfigYesNo, None),
 	("UpdateBlink", True, ConfigYesNo, None)
 ]
 
@@ -502,7 +499,7 @@ config.plugins.skin.OverlayHD = ConfigSubsection()
 config.plugins.skin.OverlayHD.ShowInExtensions = ConfigYesNo(default=False)
 
 
-class OverlayHDSkinManager(Setup):
+class OverlayHD(Setup):
 	def __init__(self, session):
 		Setup.__init__(self, session=session, setup="OverlayHD", plugin="Extensions/OverlayHD")
 		self["key_yellow"] = StaticText(_("Themes"))
@@ -516,7 +513,7 @@ class OverlayHDSkinManager(Setup):
 		def themeCallback():
 			self.applySettings()
 
-		self.session.openWithCallback(themeCallback, OverlayHDThemeManager)
+		self.session.openWithCallback(themeCallback, OverlayHDThemes)
 
 	def default(self):
 		print("[OverlayHD] Setting OverlayHD skin to default settings.")
@@ -551,19 +548,19 @@ class OverlayHDSkinManager(Setup):
 		self.applySettings()
 		Setup.changedEntry(self)
 
-	def saveAll(self):  # Save all entries, both displayed and not currently displayed.
-		restart = False
-		for item in config.plugins.skin.OverlayHD.dict():
-			if item in dontRestart:
-				continue
-			if getattr(config.plugins.skin.OverlayHD, item).isChanged():
-				restart = True
-				break
-		config.plugins.skin.OverlayHD.save()
-		configfile.save()
-		# self.applySettings()
-		return restart
-		# Setup.saveAll(self, restart)
+	# def saveAll(self):  # Save all entries, both displayed and not currently displayed.
+	# 	restart = False
+	# 	for item in config.plugins.skin.OverlayHD.dict():
+	# 		if item in dontRestart:
+	# 			continue
+	# 		if getattr(config.plugins.skin.OverlayHD, item).isChanged():
+	# 			restart = True
+	# 			break
+	# 	config.plugins.skin.OverlayHD.save()
+	# 	configfile.save()
+	# 	# self.applySettings()
+	# 	return restart
+	# 	# Setup.saveAll(self, restart)
 
 	def cancelConfirm(self, result):  # Cancel all changed entries, both displayed and not currently displayed.
 		if not result:
@@ -580,9 +577,9 @@ class OverlayHDSkinManager(Setup):
 		self["config"].setCurrentIndex(index)
 
 
-class OverlayHDThemeManager(Screen):
+class OverlayHDThemes(Screen):
 	skin = """
-	<screen name="OverlayHDThemeManager" title="OverlayHD Theme Manager" position="center,center" size="970,455" resolution="1280,720">
+	<screen name="OverlayHDThemes" title="OverlayHD Themes Manager" position="center,center" size="970,455" resolution="1280,720">
 		<widget source="themes" render="Listbox" position="10,10" size="e-20,e-105">
 			<templates>
 				<template name="Default" fonts="Regular;25" itemHeight="35">
@@ -615,7 +612,7 @@ class OverlayHDThemeManager(Screen):
 
 	def __init__(self, session):
 		Screen.__init__(self, session, enableHelp=True)
-		self.skin = OverlayHDThemeManager.skin
+		# self.skin = OverlayHDThemeManager.skin
 		# self.skinName = ["OverlayHDThemeManager"]
 		self.setTitle(_("OverlayHD Theme Manager"))
 		self.filename = resolveFilename(SCOPE_CONFIG, "OverlayHD_themes.xml")
@@ -645,7 +642,7 @@ class OverlayHDThemeManager(Screen):
 			"green": (self.applyTheme, _("Apply the currently highlighted theme, return to OverlayHD Skin Manager")),
 			"yellow": (self.createTheme, _("Create a new theme using the current skin settings")),
 			"blue": (self.updateTheme, _("Update the currently highlighted theme with the current skin settings"))
-		}, prio=0, description=_("OverlayHD Theme Actions"))
+		}, prio=0, description=_("OverlayHD Themes Actions"))
 
 	def createUpdateTheme(self, themeName=None):
 		if themeName is None:
@@ -1133,18 +1130,18 @@ def applySkinSettings(fullInit=False):
 			if (fullInit and color != colorObject.value or transparency != transObject.value) or colorObject.isChanged() or transObject.isChanged():
 				print(f"[OverlayHD] Configuring skin color '{label}' to '{findListItem(colorValue, 1, colorChoices)}' + '{findListItem(transValue, 1, transparencyChoices)}'   (0x{colors[label].argb():08X}).")
 		elif color:
-			labelPIG = f"{label[0:3]}PIG{label[3:]}"
+			labelPiG = f"{label[0:3]}PiG{label[3:]}"
 			colorObject = getattr(config.plugins.skin.OverlayHD, label)
 			colorValue = colorObject.value
 			if colorValue == "Background":
 				colorValue = config.plugins.skin.OverlayHD.ScreenBackgroundColor.value
 			if label in derivedForegroundElements:
 				colors[label] = colors[colorValue]
-				colors[labelPIG] = colors[colorValue]
+				colors[labelPiG] = colors[colorValue]
 			elif label in derivedBackgroundElements:
 				transValue = config.plugins.skin.OverlayHD.ScreenBackgroundTransparency.value if config.plugins.skin.OverlayHD.EPGTransparency.value == "Background" else config.plugins.skin.OverlayHD.EPGTransparency.value
 				colors[label] = gRGB(colors[colorValue].argb() | int(transValue, 16))
-				colors[labelPIG] = colors[colorValue]
+				colors[labelPiG] = colors[colorValue]
 			else:
 				colors[label] = colors[colorValue]
 			if (fullInit and color != colorObject.value) or colorObject.isChanged():
@@ -1232,12 +1229,12 @@ def updateOverlayHD():
 
 
 def main(session, **kwargs):
-	session.open(OverlayHDSkinManager)
+	session.open(OverlayHD)
 
 
 def setup(menuid, **kwargs):
 	if menuid == distroModes.get(DISTRO, (None, None))[DISTRO_MENU_IDVAL]:
-		return [(_("OverlayHD Skin Settings"), main, "OverlayHD_setup", 1000)]
+		return [(_("OverlayHD Skin Settings"), main, "OverlayHD", 1000)]
 	return []
 
 
