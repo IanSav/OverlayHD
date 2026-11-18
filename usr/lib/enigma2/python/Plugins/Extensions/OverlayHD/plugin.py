@@ -2,7 +2,7 @@
 #
 # OverlayHD Skin Manager
 #
-# Version Date - 14-Nov-2026
+# Version Date - 18-Nov-2026
 # Remember to change version number variable in __init__!!!
 #
 # Repository - https://github.com/IanSav/OverlayHD
@@ -32,7 +32,7 @@ from os import listdir, remove, symlink, unlink
 from os.path import exists, isdir, isfile, islink, join, splitext
 from random import randrange
 from shutil import move, rmtree  # copy2
-from xml.etree.cElementTree import Element, ElementTree, SubElement
+from xml.etree.ElementTree import Element, ElementTree, SubElement
 
 from enigma import gRGB
 
@@ -55,18 +55,6 @@ from . import __version__ as PLUGIN_VERSION_NUMBER
 MODULE_NAME = __name__.split(".")[-1]
 
 DISPLAY_DISTRO = BoxInfo.getItem("displaydistro", "Enigma2")
-DISTRO = BoxInfo.getItem("distro", "enigma2").lower()
-
-DISTRO_MENU_IDVAL = 0
-DISTRO_SCREENLIST = 1
-
-distroModes = {
-	"beyonwiz": ("osd_menu", ("Beyonwiz")),
-	"openatv": ("system", ("OpenATV", "Enigma2")),
-	"openpli": ("gui", ("OpenPLi", "Enigma2")),
-	"openvision": ("osd_menu", ("OpenVision", "Enigma2")),
-	"openvix": ("skinsetup", ("OpenViX", "Enigma2"))
-}
 
 colorChoices = [
 	("Arsenic", _("Arsenic")),
@@ -183,6 +171,15 @@ colorElements = [
 	("BannerClockDate", "LightBlue", None),
 	("BannerClockTime", "White", None),
 	("BannerTitle", "White", None),
+	("CSMarked", "DullGreen", "0x26000000"),
+	("CSMarkedBackground", "Background", "Background"),
+	("CSService", "White", None),
+	("CSServiceFallback", "Blue", None),
+	("CSServiceMarked", "Green", None),
+	("CSServiceMarkedSelected", "White", None),
+	("CSServiceNotAvailable", "Gray", None),
+	("CSServiceSelected", "White", None),
+	("CSServiceSelectedFallback", "Cyan", None),
 	("EPGBackground", "Black", None),
 	("EPGGridBackground", "Orange", None),
 	("EPGGridBorder", "Black", None),
@@ -214,15 +211,6 @@ colorElements = [
 	("EPGZapBackgroundColorSelected", "Green", None),
 	("EPGZapForegroundColor", "White", None),
 	("EPGZapForegroundColorSelected", "Black", None),
-	("CSMarked", "DullGreen", "0x26000000"),
-	("CSMarkedBackground", "Background", "Background"),
-	("CSService", "White", None),
-	("CSServiceFallback", "Blue", None),
-	("CSServiceMarked", "Green", None),
-	("CSServiceMarkedSelected", "White", None),
-	("CSServiceNotAvailable", "Gray", None),
-	("CSServiceSelected", "White", None),
-	("CSServiceSelectedFallback", "Cyan", None),
 	("FindCharacter", "Gold", None),
 	("FootnoteBackground", "Background", "Background"),
 	("FootnoteText", "LightBlue", None),
@@ -385,13 +373,13 @@ fontElements = [
 	("ButtonFont", "NemesisFlatline", textFontChoices),
 	("ChoiceList", "NemesisFlatline", textFontChoices),
 	("ClockFont", "RobotoBlack", bannerFontChoices),
+	("CSEventFont", "NemesisFlatline", textFontChoices),
+	("CSLCNFont", "NemesisFlatline", textFontChoices),
+	("CSServiceFont", "NemesisFlatline", textFontChoices),
 	("DescriptionFont", "NemesisFlatline", textFontChoices),
 	("EPGEventFont", "NemesisFlatline", textFontChoices),
 	("EPGServiceFont", "NemesisFlatline", textFontChoices),
 	("EPGTimeLineFont", "NemesisFlatline", textFontChoices),
-	("CSEventFont", "NemesisFlatline", textFontChoices),
-	("CSLCNFont", "NemesisFlatline", textFontChoices),
-	("CSServiceFont", "NemesisFlatline", textFontChoices),
 	("FileListFont", "NemesisFlatline", textFontChoices),
 	("FileListMultiFont", "NemesisFlatline", textFontChoices),
 	("FixedFont", "MPluss1M", fixedFontChoices),
@@ -460,8 +448,9 @@ modeChoices = [
 ]
 
 scrollChoices = [
-	("byPage", _("Page mode")),
-	("byLine", _("Line mode"))
+	("byCenter", _("Center mode")),
+	("byLine", _("Line mode")),
+	("byPage", _("Page mode"))
 ]
 
 optionElements = [
@@ -598,8 +587,6 @@ class OverlayHDThemes(Screen):
 
 	def __init__(self, session):
 		Screen.__init__(self, session, enableHelp=True)
-		# self.skin = OverlayHDThemeManager.skin
-		# self.skinName = ["OverlayHDThemeManager"]
 		self.setTitle(_("OverlayHD Theme Manager"))
 		self.filename = resolveFilename(SCOPE_CONFIG, "OverlayHD_themes.xml")
 		self.domThemes = Element("themes")
@@ -1085,22 +1072,22 @@ def applySkinSettings(fullInit=False):
 				setattr(config.plugins.skin.OverlayHD, label, configType(default=default))
 			if debugSkin:
 				print(f"[OverlayHD] Setting option '{label}' to '{default}'.")
-		modes = distroModes.get(DISTRO, (None, "Enigma2"))[DISTRO_SCREENLIST]
-		for screen in domScreens:
-			element, path = domScreens.get(screen, (None, None))
-			if element is not None:
-				panels = element.findall("panel")
-				if panels is not None:
-					for panel in panels:
-						base = panel.get("base")
-						if base is not None:
-							for mode in modes:
-								newScreen = f"{base}{mode}"
-								data, path = domScreens.get(newScreen, (None, None))
-								if data is not None:
-									panel.set("name", newScreen)
-									print(f"[OverlayHD] Configuring screen '{screen}', panel '{base}', for '{mode}'.")
-									break
+		# modes = distroModes.get(DISTRO, (None, "Enigma2"))[DISTRO_SCREENLIST]
+		# for screen in domScreens:
+		# 	element, path = domScreens.get(screen, (None, None))
+		# 	if element is not None:
+		# 		panels = element.findall("panel")
+		# 		if panels is not None:
+		# 			for panel in panels:
+		# 				base = panel.get("base")
+		# 				if base is not None:
+		# 					for mode in modes:
+		# 						newScreen = f"{base}{mode}"
+		# 						data, path = domScreens.get(newScreen, (None, None))
+		# 						if data is not None:
+		# 							panel.set("name", newScreen)
+		# 							print(f"[OverlayHD] Configuring screen '{screen}', panel '{base}', for '{mode}'.")
+		# 							break
 	print("[OverlayHD] Configuring skin settings.")
 	for (label, color, transparency) in colorElements:
 		if color and transparency:
@@ -1219,9 +1206,7 @@ def main(session, **kwargs):
 
 
 def setup(menuid, **kwargs):
-	if menuid == distroModes.get(DISTRO, (None, None))[DISTRO_MENU_IDVAL]:
-		return [(_("OverlayHD Skin Settings"), main, "OverlayHD", 1000)]
-	return []
+	return [(_("OverlayHD Skin Settings"), main, "OverlayHD", 1000)] if menuid == "system" else []
 
 
 def skinchange(session, **kwargs):
@@ -1231,15 +1216,14 @@ def skinchange(session, **kwargs):
 def autostart(reason, **kwargs):
 	match reason:
 		case 0:
-			print(f"[OverlayHD] OverlayHD Skin Manager version {PLUGIN_VERSION_NUMBER}.")
-			print(f"[OverlayHD] Configuring to run on '{DISPLAY_DISTRO}' in '{"' then '".join(distroModes.get(DISTRO, (None, "Unknown"))[DISTRO_SCREENLIST])}' mode.")
+			print(f"[OverlayHD] OverlayHD Skin Manager version {PLUGIN_VERSION_NUMBER} running on '{DISPLAY_DISTRO}'.")
 			updateOverlayHD()
 			applySkinSettings(fullInit=True)
 		case 1:
 			print(f"[OverlayHD] OverlayHD Skin Manager version {PLUGIN_VERSION_NUMBER}, preparing to unload from '{DISPLAY_DISTRO}'.")
 			clearSkinSettings()
 		case 2:
-			print(f"[OverlayHD] Reloading to run on '{DISPLAY_DISTRO}' in '{"' then '".join(distroModes.get(DISTRO, (None, "Unknown"))[DISTRO_SCREENLIST])}' mode.")
+			print(f"[OverlayHD] OverlayHD Skin Manager version {PLUGIN_VERSION_NUMBER} reloading on '{DISPLAY_DISTRO}'.")
 			# updateOverlayHD()
 			applySkinSettings(fullInit=True)
 

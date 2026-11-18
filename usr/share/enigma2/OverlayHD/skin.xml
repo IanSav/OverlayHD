@@ -186,6 +186,28 @@
 		<color name="BannerClockTime" value="White" />
 		<color name="BannerTitle" value="White" />
 		<color name="BannerTitlePath" value="LightGray" />
+		<color name="CSFallback" value="Silver" />
+		<color name="CSFallbackBackground" value="ScreenBackground" />
+		<color name="CSFolder" value="White" />
+		<color name="CSLCN" value="LightBlue" />
+		<color name="CSMarked" value="DullGreen" />
+		<color name="CSMarkedBackground" value="ScreenBackground" />
+		<color name="CSMarker" value="LimeGreen" />
+		<color name="CSProgress" value="Green" />
+		<color name="CSProgressBackground" value="DeepGray" />
+		<color name="CSProgressBorder" value="Gray" />
+		<color name="CSPseudo" value="Green" />
+		<color name="CSRecord" value="Red" />
+		<color name="CSService" value="White" />
+		<color name="CSServiceFallback" value="Blue" />
+		<color name="CSServiceMarked" value="Green" />
+		<color name="CSServiceMarkedSelected" value="White" />
+		<color name="CSServiceNotAvailable" value="Gray" />
+		<color name="CSServiceSelected" value="White" />
+		<color name="CSServiceSelectedFallback" value="Cyan" />
+		<color name="CSStream" value="Orange" />
+		<color name="CSTimes" value="Gray" />
+		<color name="CSTitle" value="Gray" />
 		<color name="EPGBackground" value="Black" />
 		<color name="EPGGridBackground" value="Orange" />
 		<color name="EPGGridBorder" value="Black" />
@@ -236,28 +258,6 @@
 		<color name="EPGPiGZapBackgroundColorSelected" value="Green" />
 		<color name="EPGPiGZapForegroundColor" value="White" />
 		<color name="EPGPiGZapForegroundColorSelected" value="Black" />
-		<color name="CSFallback" value="Silver" />
-		<color name="CSFallbackBackground" value="ScreenBackground" />
-		<color name="CSFolder" value="White" />
-		<color name="CSLCN" value="LightBlue" />
-		<color name="CSMarked" value="DullGreen" />
-		<color name="CSMarkedBackground" value="ScreenBackground" />
-		<color name="CSMarker" value="LimeGreen" />
-		<color name="CSProgress" value="Green" />
-		<color name="CSProgressBackground" value="DeepGray" />
-		<color name="CSProgressBorder" value="Gray" />
-		<color name="CSPseudo" value="Green" />
-		<color name="CSRecord" value="Red" />
-		<color name="CSService" value="White" />
-		<color name="CSServiceFallback" value="Blue" />
-		<color name="CSServiceMarked" value="Green" />
-		<color name="CSServiceMarkedSelected" value="White" />
-		<color name="CSServiceNotAvailable" value="Gray" />
-		<color name="CSServiceSelected" value="White" />
-		<color name="CSServiceSelectedFallback" value="Cyan" />
-		<color name="CSStream" value="Orange" />
-		<color name="CSTimes" value="Gray" />
-		<color name="CSTitle" value="Gray" />
 		<color name="FindCharacter" value="Gold" />
 		<color name="FootnoteBackground" value="ScreenBackground" />
 		<color name="FootnoteText" value="LightBlue" />
@@ -441,13 +441,13 @@
 		<alias name="ChoiceList" font="NemesisFlatline" size="25" height="35" width="20" />
 		<alias name="ClockFont" font="RobotoBlack" size="20" height="25" width="18" />
 		<alias name="Console" font="VeraSansMono" size="20" height="25" width="18" />
+		<alias name="CSEventFont" font="NemesisFlatline" size="20" height="25" width="18" />
+		<alias name="CSLCNFont" font="NemesisFlatline" size="20" height="25" width="18" />
+		<alias name="CSServiceFont" font="NemesisFlatline" size="20" height="25" width="18" />
 		<alias name="DescriptionFont" font="NemesisFlatline" size="20" height="25" width="18" />
 		<alias name="EPGEventFont" font="NemesisFlatline" size="20" height="25" width="18" />
 		<alias name="EPGServiceFont" font="NemesisFlatline" size="20" height="25" width="18" />
 		<alias name="EPGTimeLineFont" font="NemesisFlatline" size="20" height="25" width="18" />
-		<alias name="CSEventFont" font="NemesisFlatline" size="20" height="25" width="18" />
-		<alias name="CSLCNFont" font="NemesisFlatline" size="20" height="25" width="18" />
-		<alias name="CSServiceFont" font="NemesisFlatline" size="20" height="25" width="18" />
 		<alias name="FileListFont" font="NemesisFlatline" size="20" height="25" width="18" />
 		<alias name="FileListMultiFont" font="NemesisFlatline" size="20" height="25" width="18" />
 		<alias name="FileMonoFont" font="MPluss1M" size="20" height="25" width="18" />
@@ -2373,49 +2373,49 @@
 		<panel name="ScreenTemplate" />
 		<eLabel position="698,66" size="2,595" backgroundColor="Pinstripe" />
 		<widget name="list" position="50,80" size="640,550" colorServiceRecorded="InfoRecordingColor" colorServicePseudoRecorded="Teal"
-			colorServiceStreamed="Purple" colorFallbackItem="Magenta" colorServiceSelectedFallback="FAVServiceSelectedFallback"
-			foregroundColorServiceNotAvail="FAVServiceNotAvailable">
+			colorServiceStreamed="Purple" colorFallbackItem="Magenta" colorServiceSelectedFallback="CSServiceSelectedFallback"
+			foregroundColorServiceNotAvail="CSServiceNotAvailable">
 			<templates>
-				<template component="serviceList" name="Vertical List" fonts="FAVLCNFont;20,FAVServiceFont;20,FAVEventFont;20">
+				<template component="serviceList" name="Vertical List" fonts="CSLCNFont;20,CSServiceFont;20,CSEventFont;20">
 					<mode name="services" itemHeight="25">
 						<panel position="10,0" size="e-25,25" layout="horizontal" spacing="10">
 							<pixmap index="Picon" position="left,1" size="38,23" alpha="blend" scale="centerScaled"/>
-							<text index="Number" position="left" size="30,25" font="0" foregroundColor="FAVLCN" horizontalAlignment="right" verticalAlignment="center"/>
+							<text index="Number" position="left" size="30,25" font="0" foregroundColor="CSLCN" horizontalAlignment="right" verticalAlignment="center"/>
 							<pixmap index="IsInBouquetImage" position="left,7" size="11,11" alpha="blend" scale="centerScaled"/>
-							<text index="ServiceName" position="left" size="160,25" font="1" foregroundColor="FAVService" verticalAlignment="center" wrap="noWrap"/>
-							<text index="Title1" position="left" size="276,25" font="2" autoGrow="1" foregroundColor="FAVTitle" verticalAlignment="center" wrap="noWrap"/>
-							<progress index="Progress" position="right,9" size="50,7" backgroundColor="FAVProgressBackground" borderColor="FAVProgressBorder" borderWidth="1" foregroundColor="FAVProgress"/>
+							<text index="ServiceName" position="left" size="160,25" font="1" foregroundColor="CSService" verticalAlignment="center" wrap="noWrap"/>
+							<text index="Title1" position="left" size="276,25" font="2" autoGrow="1" foregroundColor="CSTitle" verticalAlignment="center" wrap="noWrap"/>
+							<progress index="Progress" position="right,9" size="50,7" backgroundColor="CSProgressBackground" borderColor="CSProgressBorder" borderWidth="1" foregroundColor="CSProgress"/>
 						</panel>
 					</mode>
 					<mode name="bouquets" itemHeight="25">
 						<panel position="10,0" size="e-25,25" layout="horizontal" spacing="10">
 							<pixmap index="FolderImage" position="left,1" size="25,25" alpha="blend" scale="centerScaled"/>
-							<text index="FolderName" position="left" size="e-35,25" font="1" foregroundColor="FAVFolder" verticalAlignment="center" wrap="noWrap"/>
+							<text index="FolderName" position="left" size="e-35,25" font="1" foregroundColor="CSFolder" verticalAlignment="center" wrap="noWrap"/>
 							<pixmap index="MarkerImage" position="left,2" size="21,22" alpha="blend" scale="centerScaled"/>
-							<text index="MarkerName" position="left" size="e-30,25" font="1" foregroundColor="FAVMarker" verticalAlignment="center" wrap="noWrap"/>
-							<text index="Number" position="left" size="30,25" font="0" foregroundColor="FAVLCN" horizontalAlignment="right" verticalAlignment="center"/>
+							<text index="MarkerName" position="left" size="e-30,25" font="1" foregroundColor="CSMarker" verticalAlignment="center" wrap="noWrap"/>
+							<text index="Number" position="left" size="30,25" font="0" foregroundColor="CSLCN" horizontalAlignment="right" verticalAlignment="center"/>
 							<pixmap index="Picon" position="left,1" size="38,23" alpha="blend" scale="centerScaled"/>
 							<pixmap index="CryptoImage" position="left,3" size="20,20" alpha="blend" scale="centerScaled"/>
 							<pixmap index="ServiceTypeImage" position="left,1" size="22,22" alpha="blend" scale="centerScaled"/>
 							<pixmap index="RecordingIndicator" position="left,1" size="22,22" alpha="blend" scale="centerScaled"/>
-							<text index="ServiceName" position="left" size="160,25" font="1" foregroundColor="FAVService" verticalAlignment="center" wrap="noWrap"/>
-							<text index="Title1" position="left" size="297,25" font="2" autoGrow="1" foregroundColor="FAVTitle" verticalAlignment="center" wrap="noWrap"/>
-							<progress index="Progress" position="right,9" size="50,7" backgroundColor="FAVProgressBackground" borderColor="FAVProgressBorder" borderWidth="1" foregroundColor="FAVProgress"/>
+							<text index="ServiceName" position="left" size="160,25" font="1" foregroundColor="CSService" verticalAlignment="center" wrap="noWrap"/>
+							<text index="Title1" position="left" size="297,25" font="2" autoGrow="1" foregroundColor="CSTitle" verticalAlignment="center" wrap="noWrap"/>
+							<progress index="Progress" position="right,9" size="50,7" backgroundColor="CSProgressBackground" borderColor="CSProgressBorder" borderWidth="1" foregroundColor="CSProgress"/>
 						</panel>
 					</mode>
 					<mode name="other" itemHeight="25">
 						<panel position="10,0" size="e-25,25" layout="horizontal" spacing="10">
 							<pixmap index="FolderImage" position="left,1" size="25,25" alpha="blend" scale="centerScaled"/>
-							<text index="FolderName" position="left" size="e-35,25" font="1" foregroundColor="FAVFolder" verticalAlignment="center" wrap="noWrap"/>
+							<text index="FolderName" position="left" size="e-35,25" font="1" foregroundColor="CSFolder" verticalAlignment="center" wrap="noWrap"/>
 							<pixmap index="MarkerImage" position="left,2" size="21,22" alpha="blend" scale="centerScaled"/>
-							<text index="MarkerName" position="left" size="e-30,25" font="1" foregroundColor="FAVMarker" verticalAlignment="center" wrap="noWrap"/>
+							<text index="MarkerName" position="left" size="e-30,25" font="1" foregroundColor="CSMarker" verticalAlignment="center" wrap="noWrap"/>
 							<text index="EntryName" position="left" size="526,25" font="1" verticalAlignment="center" wrap="noWrap"/>
 						</panel>
 					</mode>
 				</template>
 			</templates>
 		</widget>
-		<widget name="chosenletter" position="50,80" size="640,550" font="FAVServiceFont;100" conditional="chosenletter" foregroundColor="FindCharacter" horizontalAlignment="center" transparent="1" verticalAlignment="center" zPosition="+1" />
+		<widget name="chosenletter" position="50,80" size="640,550" font="CSServiceFont;100" conditional="chosenletter" foregroundColor="FindCharacter" horizontalAlignment="center" transparent="1" verticalAlignment="center" zPosition="+1" />
 		<widget source="ServiceEvent" render="Picon" position="710,80" size="100,60" alphaTest="blend" borderColor="Pinstripe" borderWidth="2">
 			<convert type="ServiceName2">Reference</convert>
 		</widget>
@@ -2515,14 +2515,14 @@
 	<screen name="OldChannelSelection" title="Channel Selection" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
 		<eLabel position="698,66" size="2,595" backgroundColor="Pinstripe" />
-		<widget name="list" position="50,80" size="640,550" backgroundColor="MenuBackground" backgroundColorMarked="FAVMarkedBackground" backgroundColorMarkedSelected="FAVMarked" backgroundColorSelected="MenuSelected"
+		<widget name="list" position="50,80" size="640,550" backgroundColor="MenuBackground" backgroundColorMarked="CSMarkedBackground" backgroundColorMarkedSelected="CSMarked" backgroundColorSelected="MenuSelected"
 			colorEventProgressbar="InfoProgressColor" colorEventProgressbarBorder="InfoProgressBorder" colorEventProgressbarBorderSelected="InfoProgressBorder" colorEventProgressbarSelected="InfoProgressColor"
-			colorFallbackItem="Magenta" colorServiceDescription="FAVService" colorServiceDescriptionFallback="FAVServiceFallback" colorServiceDescriptionSelected="FAVServiceSelected"
-			colorServiceDescriptionSelectedFallback="FAVServiceSelectedFallback" colorServiceRecorded="InfoRecordingColor" colorServiceSelectedFallback="FAVServiceSelectedFallback"
-			enableWrapAround="1" fieldMargins="10" foregroundColor="MenuText" foregroundColorEventborder="Red" foregroundColorEventborderSelected="Yellow" foregroundColorMarked="FAVServiceMarked"
-			foregroundColorMarkedSelected="FAVServiceMarkedSelected" foregroundColorSelected="MenuTextSelected" foregroundColorServiceNotAvail="FAVServiceNotAvailable"
-			progressbarHeight="6" progressbarBorderWidth="1" progressBarWidth="50" serviceInfoFont="FAVEventFont;20" serviceItemHeight="25" serviceNameFont="FAVServiceFont;20" serviceNumberFont="FAVLCNFont;20" transparent="0" />
-		<widget name="chosenletter" position="50,80" size="640,550" font="FAVServiceFont;100" conditional="chosenletter" foregroundColor="FindCharacter" halign="center" transparent="1" valign="center" zPosition="+1" />
+			colorFallbackItem="Magenta" colorServiceDescription="CSService" colorServiceDescriptionFallback="CSServiceFallback" colorServiceDescriptionSelected="CSServiceSelected"
+			colorServiceDescriptionSelectedFallback="CSServiceSelectedFallback" colorServiceRecorded="InfoRecordingColor" colorServiceSelectedFallback="CSServiceSelectedFallback"
+			enableWrapAround="1" fieldMargins="10" foregroundColor="MenuText" foregroundColorEventborder="Red" foregroundColorEventborderSelected="Yellow" foregroundColorMarked="CSServiceMarked"
+			foregroundColorMarkedSelected="CSServiceMarkedSelected" foregroundColorSelected="MenuTextSelected" foregroundColorServiceNotAvail="CSServiceNotAvailable"
+			progressbarHeight="6" progressbarBorderWidth="1" progressBarWidth="50" serviceInfoFont="CSEventFont;20" serviceItemHeight="25" serviceNameFont="CSServiceFont;20" serviceNumberFont="CSLCNFont;20" transparent="0" />
+		<widget name="chosenletter" position="50,80" size="640,550" font="CSServiceFont;100" conditional="chosenletter" foregroundColor="FindCharacter" halign="center" transparent="1" valign="center" zPosition="+1" />
 
 		<widget source="ServiceEvent" render="Picon" position="710,80" size="100,60" alphaTest="blend" borderColor="Pinstripe" borderWidth="2">
 			<convert type="ServiceName2">Reference</convert>
@@ -2632,13 +2632,13 @@
 
 	<screen name="SlimChannelSelection" title="Channel Selection" position="fill" flags="wfNoBorder">
 		<panel name="ScreenTemplate" />
-		<widget name="list" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorMarked="FAVMarkedBackground" backgroundColorMarkedSelected="FAVMarked" backgroundColorSelected="MenuSelected"
+		<widget name="list" position="400,80" size="830,550" backgroundColor="MenuBackground" backgroundColorMarked="CSMarkedBackground" backgroundColorMarkedSelected="CSMarked" backgroundColorSelected="MenuSelected"
 			colorEventProgressbar="InfoProgressColor" colorEventProgressbarBorder="InfoProgressBorder" colorEventProgressbarBorderSelected="InfoProgressBorder" colorEventProgressbarSelected="InfoProgressColor"
-			colorFallbackItem="Magenta" colorServiceDescription="FAVService" colorServiceDescriptionFallback="FAVServiceFallback" colorServiceDescriptionSelected="FAVServiceSelected"
-			colorServiceDescriptionSelectedFallback="FAVServiceSelectedFallback" colorServiceRecorded="InfoRecordingColor" colorServiceSelectedFallback="FAVServiceSelectedFallback"
-			enableWrapAround="1" fieldMargins="10" foregroundColor="MenuText" foregroundColorEventborder="Red" foregroundColorEventborderSelected="Yellow" foregroundColorMarked="FAVServiceMarked"
-			foregroundColorMarkedSelected="FAVServiceMarkedSelected" foregroundColorSelected="MenuTextSelected" foregroundColorServiceNotAvail="FAVServiceNotAvailable"
-			progressbarHeight="6" progressbarBorderWidth="1" progressBarWidth="50" serviceInfoFont="FAVEventFont;20" serviceItemHeight="25" serviceNameFont="FAVServiceFont;20" serviceNumberFont="FAVLCNFont;20" transparent="0" />
+			colorFallbackItem="Magenta" colorServiceDescription="CSService" colorServiceDescriptionFallback="CSServiceFallback" colorServiceDescriptionSelected="CSServiceSelected"
+			colorServiceDescriptionSelectedFallback="CSServiceSelectedFallback" colorServiceRecorded="InfoRecordingColor" colorServiceSelectedFallback="CSServiceSelectedFallback"
+			enableWrapAround="1" fieldMargins="10" foregroundColor="MenuText" foregroundColorEventborder="Red" foregroundColorEventborderSelected="Yellow" foregroundColorMarked="CSServiceMarked"
+			foregroundColorMarkedSelected="CSServiceMarkedSelected" foregroundColorSelected="MenuTextSelected" foregroundColorServiceNotAvail="CSServiceNotAvailable"
+			progressbarHeight="6" progressbarBorderWidth="1" progressBarWidth="50" serviceInfoFont="CSEventFont;20" serviceItemHeight="25" serviceNameFont="CSServiceFont;20" serviceNumberFont="CSLCNFont;20" transparent="0" />
 	</screen>
 
 	<screen name="SimpleChannelSelection" title="Channel Selection" position="fill" flags="wfNoBorder">

@@ -375,14 +375,14 @@ except Exception:
 		<ePixmap pixmap="menus/tv_channel.png" position="50,80" size="250,250" alphatest="blend" scaleFlags="scaleLeftTop" transparent="1" />
 		<widget name="list" position="400,80" size="830,575" backgroundColor="MenuBackground" backgroundColorSelected="MenuSelected" font="MenuFont;20" foregroundColor="MenuText" foregroundColorSelected="MenuTextSelected" itemHeight="25" />
 		<!--
-		<widget name="list" position="400,80" size="830,575" backgroundColor="MenuBackground" backgroundColorMarked="FAVMarkedBackground" backgroundColorMarkedSelected="FAVMarked" backgroundColorSelected="MenuSelected"
+		<widget name="list" position="400,80" size="830,575" backgroundColor="MenuBackground" backgroundColorMarked="CSMarkedBackground" backgroundColorMarkedSelected="CSMarked" backgroundColorSelected="MenuSelected"
 			colorEventProgressbar="InfoProgressColor" colorEventProgressbarBorder="InfoProgressBorder" colorEventProgressbarBorderSelected="InfoProgressBorder" colorEventProgressbarSelected="InfoProgressColor"
-			colorFallbackItem="Magenta" colorServiceDescription="FAVService" colorServiceDescriptionFallback="FAVServiceFallback" colorServiceDescriptionSelected="FAVServiceSelected"
-			colorServiceDescriptionSelectedFallback="FAVServiceSelectedFallback" colorServiceRecorded="InfoRecordingColor" colorServiceSelectedFallback="FAVServiceSelectedFallback"
-			enableWrapAround="1" fieldMargins="10" foregroundColor="MenuText" foregroundColorEventborder="Red" foregroundColorEventborderSelected="Yellow" foregroundColorMarked="FAVServiceMarked"
-			foregroundColorMarkedSelected="FAVServiceMarkedSelected" foregroundColorSelected="MenuTextSelected" foregroundColorServiceNotAvail="FAVServiceNotAvailable"
-			progressbarHeight="6" progressbarBorderWidth="1" progressBarWidth="50" serviceInfoFont="FAVEventFont;20" serviceItemHeight="25" serviceNameFont="FAVServiceFont;20" serviceNumberFont="FAVLCNFont;20" />
-		<widget name="chosenletter" position="400,80" size="830,575" font="FAVServiceFont;100" conditional="chosenletter" foregroundColor="FindCharacter" halign="center" transparent="1" valign="center" zPosition="+1" />
+			colorFallbackItem="Magenta" colorServiceDescription="CSService" colorServiceDescriptionFallback="CSServiceFallback" colorServiceDescriptionSelected="CSServiceSelected"
+			colorServiceDescriptionSelectedFallback="CSServiceSelectedFallback" colorServiceRecorded="InfoRecordingColor" colorServiceSelectedFallback="CSServiceSelectedFallback"
+			enableWrapAround="1" fieldMargins="10" foregroundColor="MenuText" foregroundColorEventborder="Red" foregroundColorEventborderSelected="Yellow" foregroundColorMarked="CSServiceMarked"
+			foregroundColorMarkedSelected="CSServiceMarkedSelected" foregroundColorSelected="MenuTextSelected" foregroundColorServiceNotAvail="CSServiceNotAvailable"
+			progressbarHeight="6" progressbarBorderWidth="1" progressBarWidth="50" serviceInfoFont="CSEventFont;20" serviceItemHeight="25" serviceNameFont="CSServiceFont;20" serviceNumberFont="CSLCNFont;20" />
+		<widget name="chosenletter" position="400,80" size="830,575" font="CSServiceFont;100" conditional="chosenletter" foregroundColor="FindCharacter" halign="center" transparent="1" valign="center" zPosition="+1" />
 		-->
 	</screen>
 
